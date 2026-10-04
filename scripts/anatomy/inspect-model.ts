@@ -23,11 +23,14 @@ async function main() {
   const doc = await io.read(path);
   const root = doc.getRoot();
 
-  const meshNodes = root.listNodes().filter((node) => node.getMesh() !== null);
+  const meshNodes = root.listNodes().flatMap((node) => {
+    const mesh = node.getMesh();
+    return mesh ? [{ node, mesh }] : [];
+  });
   let vertices = 0;
   let triangles = 0;
-  for (const node of meshNodes) {
-    for (const primitive of node.getMesh()!.listPrimitives()) {
+  for (const { mesh } of meshNodes) {
+    for (const primitive of mesh.listPrimitives()) {
       const count = primitive.getAttribute("POSITION")?.getCount() ?? 0;
       vertices += count;
       triangles += (primitive.getIndices()?.getCount() ?? count) / 3;
@@ -35,7 +38,7 @@ async function main() {
   }
 
   const names = meshNodes.map(
-    (node) => node.getName() || node.getMesh()!.getName(),
+    ({ node, mesh }) => node.getName() || mesh.getName(),
   );
   const unnamed = names.filter((name) => name.trim() === "").length;
   const counts = new Map<string, number>();

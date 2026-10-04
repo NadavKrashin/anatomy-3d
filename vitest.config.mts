@@ -6,7 +6,11 @@ export default defineConfig({
     alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) },
   },
   test: {
+    // Pure logic runs in node; component tests opt into jsdom with a
+    // `// @vitest-environment jsdom` pragma at the top of the file.
     environment: "node",
-    include: ["src/**/*.test.ts", "scripts/**/*.test.ts"],
+    include: ["src/**/*.test.{ts,tsx}", "scripts/**/*.test.ts"],
+    setupFiles: ["src/test/setup.ts"],
+    restoreMocks: true,
   },
 });

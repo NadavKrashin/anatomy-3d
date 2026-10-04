@@ -66,7 +66,7 @@ describe("MaterialStateController", () => {
     const m = mesh("m");
     const controller = new MaterialStateController();
     controller.apply(m, "ghosted");
-    const material = m.material as MeshStandardMaterial;
+    const material = m.material;
     expect(material.transparent).toBe(true);
     expect(material.depthWrite).toBe(false);
     expect(m.userData.interactive).toBe(false);

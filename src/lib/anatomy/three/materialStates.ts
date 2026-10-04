@@ -22,8 +22,11 @@ export class MaterialStateController {
   private readonly variants = new Map<string, Material>();
 
   apply(mesh: Mesh, state: MeshVisualState): void {
-    if (!this.originals.has(mesh)) this.originals.set(mesh, mesh.material);
-    const original = this.originals.get(mesh)!;
+    let original = this.originals.get(mesh);
+    if (original === undefined) {
+      original = mesh.material;
+      this.originals.set(mesh, original);
+    }
 
     mesh.visible = state !== "hidden";
     mesh.userData.interactive = state !== "hidden" && state !== "ghosted";

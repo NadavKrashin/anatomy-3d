@@ -88,8 +88,9 @@ async function main() {
   await desktop.waitForSelector('[role="option"]');
   await desktop.keyboard.press("Enter");
   await desktop.waitForTimeout(1200);
-  const panel = (await desktop.locator("aside").boundingBox())!;
-  const box = (await desktop.locator("canvas").boundingBox())!;
+  const panel = await desktop.locator("aside").boundingBox();
+  const box = await desktop.locator("canvas").boundingBox();
+  assert(panel && box, "info panel and canvas are laid out");
   await desktop.keyboard.press("Escape");
   assert((await infoTitle(desktop)) === null, "Escape deselects");
   await desktop.mouse.click(

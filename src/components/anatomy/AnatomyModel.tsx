@@ -3,7 +3,6 @@
 import { useGLTF } from "@react-three/drei";
 import { useThree, type ThreeEvent } from "@react-three/fiber";
 import { useEffect, useMemo } from "react";
-import type { Mesh } from "three";
 import { useAnatomyData } from "@/components/providers/AnatomyDataProvider";
 import {
   MaterialStateController,
@@ -77,7 +76,7 @@ export function AnatomyModel({ url }: { url: string }) {
     const controller = new MaterialStateController();
     const apply = (state: ViewerSnapshot) => {
       for (const [mesh, structure] of index.structureByMesh) {
-        controller.apply(mesh as Mesh, visualStateFor(structure, state));
+        controller.apply(mesh, visualStateFor(structure, state));
       }
       getThree().gl.domElement.style.cursor = state.hoveredStructureId
         ? "pointer"

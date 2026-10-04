@@ -3,8 +3,16 @@
 > Learn the body by exploring it.
 
 A web-based 3D anatomy learning app for medical students, Hebrew-first (RTL) with
-English and Latin terminology. Product spec: [`docs/SPEC.md`](docs/SPEC.md).
-Architecture decisions: [`docs/DECISIONS.md`](docs/DECISIONS.md).
+English and Latin terminology.
+
+| Doc                                                | What's in it                                             |
+| -------------------------------------------------- | -------------------------------------------------------- |
+| [`docs/STATUS.md`](docs/STATUS.md)                 | **Start here** — current phase, next steps, known issues |
+| [`docs/SPEC.md`](docs/SPEC.md)                     | Product brief                                            |
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)     | Layers, boundaries, data flow, how-to recipes            |
+| [`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md)     | Conventions and definition of done                       |
+| [`docs/DECISIONS.md`](docs/DECISIONS.md)           | Why things are the way they are                          |
+| [`docs/CONTENT_REVIEW.md`](docs/CONTENT_REVIEW.md) | Medical terms awaiting human verification                |
 
 **Status:** first vertical slice — landing page → 3D viewer → demo model →
 rotate/zoom/pan → click a structure → names + details → search (Hebrew, English,

@@ -1,16 +1,30 @@
 @AGENTS.md
 
-# Project notes for Claude
+# Anatomy — notes for Claude sessions
 
-- Product spec: `docs/SPEC.md` (read it before planning a phase). Decisions log:
-  `docs/DECISIONS.md` — append when making a non-obvious choice.
-- UI is Hebrew/RTL first. Use logical Tailwind classes (`ms-`, `me-`, `start-`,
-  `end-`, `text-start`), never `left`/`right` for layout. Wrap anatomical terms in
-  `TermText` (bidi isolation). Every user-facing string goes in both
-  `src/lib/i18n/messages.he.ts` and `messages.en.ts`.
-- Never invent medical content or Hebrew terms as fact. New terms start
-  `verified: false` and get a row in `docs/CONTENT_REVIEW.md`.
-- Only `src/lib/anatomy/modelAdapter.ts` + dataset `meshMap.json` know raw model
+3D anatomy learning web app (Next.js 16 + React Three Fiber) for a Hebrew-speaking
+medical student. Hebrew/RTL UI first; English/Latin terminology alongside.
+
+**Start every session by reading `docs/STATUS.md`** — it has the current phase,
+the ordered next steps, known issues and how to verify. Then, as needed:
+`docs/SPEC.md` (product brief, §-numbered), `docs/ARCHITECTURE.md` (layers,
+boundaries, recipes), `docs/CONTRIBUTING.md` (conventions + definition of
+done), `docs/DECISIONS.md` (rationale log).
+
+Non-negotiables (details in CONTRIBUTING):
+
+- `npm run verify` must pass before you report work as done; for UI changes also
+  run `npm run e2e:smoke` against a fresh `next start -p 3100` and look at the
+  screenshots.
+- Domain logic goes in `src/lib` as pure, unit-tested code; components orchestrate.
+- Only the model adapter / scene index / dataset `meshMap.json` know raw model
   node names.
-- Before reporting work done: `npm run check` and `npm run build`; for viewer
-  changes also run the e2e smoke test (see README) and look at the screenshots.
+- Logical (RTL-safe) Tailwind utilities only; strings in both `messages.he.ts`
+  and `messages.en.ts`; anatomical names via `TermText`.
+- Never invent medical facts or Hebrew terms; new terms are `verified: false`
+  and Hebrew ones are listed in `docs/CONTENT_REVIEW.md`.
+- Before finishing: update `docs/STATUS.md` (phase table, next steps, session
+  log) and append to `docs/DECISIONS.md` for non-obvious choices.
+- Don't kill dev servers with `pkill -f next` from a compound shell command — it
+  matches the shell itself. Run `next start` as a background task and stop it
+  by task id.

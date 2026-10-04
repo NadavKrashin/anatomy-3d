@@ -9,7 +9,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { Document, NodeIO, type Material } from "@gltf-transform/core";
 import {
-  BufferGeometry,
+  type BufferGeometry,
   CapsuleGeometry,
   CatmullRomCurve3,
   Matrix4,
@@ -266,7 +266,10 @@ function addPart(
   materials: Map<MaterialKey, Material>,
   part: DemoPart,
 ) {
-  const buffer = doc.getRoot().listBuffers()[0]!;
+  const buffer = doc.getRoot().listBuffers()[0];
+  const material = materials.get(part.material);
+  if (!buffer || !material)
+    throw new Error(`${part.name}: buffer/material missing`);
   const { geometry } = part;
   const position = geometry.getAttribute("position");
   const normal = geometry.getAttribute("normal");
@@ -298,7 +301,7 @@ function addPart(
         .setArray(new Uint32Array(index.array))
         .setBuffer(buffer),
     )
-    .setMaterial(materials.get(part.material)!);
+    .setMaterial(material);
 
   const mesh = doc.createMesh(part.name).addPrimitive(primitive);
   return doc.createNode(part.name).setMesh(mesh);
