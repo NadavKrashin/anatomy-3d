@@ -1,0 +1,122 @@
+import type { Messages } from "./messages.he";
+
+export const en: Messages = {
+  appName: "ANATOMY",
+  tagline: "Learn the body by exploring it.",
+  disclaimer:
+    "For educational purposes. Anatomy content should be verified against your institution's required resources.",
+  demoModelNotice: "Development demo model — not anatomically accurate.",
+  nav: {
+    home: "Home",
+    explore: "Explore",
+    quiz: "Quiz",
+    progress: "Progress",
+    comingSoon: "Soon",
+  },
+  home: {
+    welcomeTitle: "Welcome to Anatomy",
+    welcomeBody:
+      "Learn human anatomy by exploring it in 3D: rotate, select structures, peel away layers and practise.",
+    startExploring: "Start exploring",
+    whatToStudy: "What are you studying?",
+    structuresCount: (n: number) =>
+      n === 1 ? "1 structure" : `${n} structures`,
+    features: {
+      explore: {
+        title: "3D exploration",
+        body: "Rotate, zoom and focus on any structure.",
+      },
+      identify: {
+        title: "Identify structures",
+        body: "Tap a structure to see its English, Latin and Hebrew names.",
+      },
+      quiz: {
+        title: "Active recall",
+        body: "Quizzes and weak-structure tracking — coming next.",
+      },
+    },
+  },
+  viewer: {
+    loading: "Loading anatomy…",
+    loadFailed: "Unable to load anatomy model.",
+    retry: "Retry",
+    webglUnavailable:
+      "Your browser or device does not support WebGL, so the 3D model can't be displayed.",
+    resetCamera: "Reset camera",
+    showAll: "Show all",
+    exitIsolate: "Exit isolate",
+    systems: "Systems",
+    shortcuts: "Keyboard shortcuts",
+    settings: "Settings",
+    close: "Close",
+    hiddenCount: (n: number) => `${n} hidden`,
+    isolating: "Isolate mode",
+  },
+  search: {
+    placeholder: "Search structures…",
+    label: "Search structures",
+    noResults: "No structures found",
+  },
+  structure: {
+    focus: "Focus",
+    isolate: "Isolate",
+    hide: "Hide",
+    studyThis: "Study this",
+    unverified: "Unverified",
+    unverifiedHint:
+      "This term has not yet been checked against an authoritative source",
+    noDetails: "No verified information for this structure yet.",
+    contentLanguageNote: "",
+    sections: {
+      function: "Function",
+      origin: "Origin",
+      insertion: "Insertion",
+      innervation: "Innervation",
+      bloodSupply: "Blood supply",
+      articulations: "Articulations",
+    },
+    clinicalNote: "Clinical note",
+  },
+  shortcuts: {
+    search: "Search",
+    escape: "Close / deselect",
+    focus: "Focus selected structure",
+    isolate: "Isolate selected structure",
+    hide: "Hide selected structure",
+    reset: "Reset camera",
+    help: "Show shortcuts",
+  },
+  settings: {
+    interfaceLanguage: "Interface language",
+    primaryTerm: "Primary name language",
+    secondaryTerm: "Secondary name language",
+    none: "None",
+  },
+  termLanguages: { en: "English", la: "Latin", he: "Hebrew" },
+  systems: {
+    skeletal: "Skeletal",
+    muscular: "Muscular",
+    nervous: "Nervous",
+    cardiovascular: "Cardiovascular",
+    respiratory: "Respiratory",
+    digestive: "Digestive",
+    urinary: "Urinary",
+    reproductive: "Reproductive",
+    lymphatic: "Lymphatic",
+    endocrine: "Endocrine",
+    integumentary: "Integumentary",
+    other: "Other",
+  },
+  regions: {
+    head: "Head",
+    neck: "Neck",
+    thorax: "Thorax",
+    abdomen: "Abdomen",
+    pelvis: "Pelvis",
+    back: "Back",
+    "upper-limb": "Upper limb",
+    "lower-limb": "Lower limb",
+    "whole-body": "Whole body",
+    other: "Other",
+  },
+};

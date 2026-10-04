@@ -1,0 +1,122 @@
+export const ANATOMY_SYSTEMS = [
+  "skeletal",
+  "muscular",
+  "nervous",
+  "cardiovascular",
+  "respiratory",
+  "digestive",
+  "urinary",
+  "reproductive",
+  "lymphatic",
+  "endocrine",
+  "integumentary",
+  "other",
+] as const;
+export type AnatomySystem = (typeof ANATOMY_SYSTEMS)[number];
+
+export const ANATOMY_REGIONS = [
+  "head",
+  "neck",
+  "thorax",
+  "abdomen",
+  "pelvis",
+  "back",
+  "upper-limb",
+  "lower-limb",
+  "whole-body",
+  "other",
+] as const;
+export type AnatomyRegion = (typeof ANATOMY_REGIONS)[number];
+
+export type BodySide = "left" | "right" | "midline";
+
+/** Languages an anatomical term can be expressed in. */
+export const TERM_LANGUAGES = ["en", "la", "he"] as const;
+export type TermLanguage = (typeof TERM_LANGUAGES)[number];
+
+/**
+ * A single anatomical name. `verified` means a human checked it against an
+ * authoritative source (course material, Terminologia Anatomica, the Academy
+ * of the Hebrew Language). Unverified terms are shown with a marker.
+ */
+export interface Term {
+  text: string;
+  verified: boolean;
+  source?: string;
+}
+
+/** English is required because it is the lingua franca of the datasets. */
+export type StructureNames = { en: Term } & Partial<
+  Record<Exclude<TermLanguage, "en">, Term>
+>;
+
+/**
+ * Educational prose. English is required; Hebrew is filled in as it gets
+ * written/verified. The UI falls back to English.
+ */
+export type LocalizedText = { en: string } & Partial<
+  Record<Exclude<TermLanguage, "en">, string>
+>;
+
+/**
+ * Optional per-structure medical details. Each list item is one bullet.
+ * Fields are absent when unknown — never filled with guesses.
+ */
+export interface StructureDetails {
+  description?: LocalizedText;
+  clinicalNote?: LocalizedText;
+  function?: LocalizedText[];
+  origin?: LocalizedText[];
+  insertion?: LocalizedText[];
+  innervation?: LocalizedText[];
+  bloodSupply?: LocalizedText[];
+  articulations?: LocalizedText[];
+}
+
+export const DETAIL_SECTIONS = [
+  "function",
+  "origin",
+  "insertion",
+  "innervation",
+  "bloodSupply",
+  "articulations",
+] as const satisfies readonly (keyof StructureDetails)[];
+export type DetailSection = (typeof DETAIL_SECTIONS)[number];
+
+export interface AnatomicalStructure {
+  /** Stable, model-independent id, e.g. "biceps-brachii-left". */
+  id: string;
+  /** Names of the structure without the side ("Biceps brachii"). */
+  names: StructureNames;
+  aliases: Partial<Record<TermLanguage, string[]>>;
+  system: AnatomySystem;
+  region: AnatomyRegion;
+  side?: BodySide;
+  /**
+   * Shared by the left/right instances of a paired structure, so a quiz can
+   * accept either side when the side is not what is being tested.
+   */
+  bilateralGroupId?: string;
+  parentId?: string;
+  details?: StructureDetails;
+  tags: string[];
+  modelSource?: string;
+  sourceLicense?: string;
+  sourceAttribution?: string;
+}
+
+/** Maps raw mesh/node names in a model file to structure ids. */
+export type MeshMap = Record<string, string>;
+
+export interface AnatomyDatasetInfo {
+  id: string;
+  modelUrl: string;
+  isDemo: boolean;
+  attribution?: string;
+}
+
+export interface AnatomyDataset {
+  info: AnatomyDatasetInfo;
+  structures: AnatomicalStructure[];
+  meshMap: MeshMap;
+}
