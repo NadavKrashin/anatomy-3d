@@ -109,14 +109,15 @@ export function AnatomyModel({ url }: { url: string }) {
       onPointerLeave={() => setHovered(null)}
       onClick={(event: ThreeEvent<MouseEvent>) => {
         event.stopPropagation();
-        useViewerStore.getState().select(pickStructureId(event));
+        useViewerStore.getState().pick(pickStructureId(event));
       }}
       onDoubleClick={(event: ThreeEvent<MouseEvent>) => {
         event.stopPropagation();
         const id = pickStructureId(event);
         if (!id) return;
-        const { select, focus } = useViewerStore.getState();
-        select(id);
+        const { pick, focus, selectionLocked } = useViewerStore.getState();
+        if (selectionLocked) return;
+        pick(id);
         focus(id);
       }}
     />

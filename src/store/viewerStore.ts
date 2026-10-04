@@ -16,12 +16,21 @@ interface ViewerState {
   hiddenSystems: ReadonlySet<AnatomySystem>;
   isolatedStructureId: string | null;
   cameraCommand: CameraCommand | null;
+  /** While true, clicks in the 3D view don't change the selection (quiz highlights). */
+  selectionLocked: boolean;
 
   select: (structureId: string | null) => void;
+  /** Selection from a click in the 3D view; ignored while the selection is locked. */
+  pick: (structureId: string | null) => void;
+  setSelectionLocked: (locked: boolean) => void;
   hover: (structureId: string | null) => void;
   hide: (structureId: string) => void;
   hideMany: (structureIds: Iterable<string>) => void;
   showAll: () => void;
+  /** Show exactly `visibleIds` (of `allIds`), clearing every other filter and the selection. */
+  showOnly: (visibleIds: Iterable<string>, allIds: Iterable<string>) => void;
+  /** Back to the initial state (used when leaving a quiz). */
+  reset: () => void;
   isolate: (structureId: string) => void;
   exitIsolate: () => void;
   toggleSystem: (system: AnatomySystem) => void;
@@ -39,15 +48,24 @@ const without = <T>(set: ReadonlySet<T>, value: T): Set<T> => {
   return next;
 };
 
-export const useViewerStore = create<ViewerState>()((set) => ({
+const initialState = {
   selectedStructureId: null,
   hoveredStructureId: null,
-  hiddenStructureIds: new Set(),
-  hiddenSystems: new Set(),
+  hiddenStructureIds: new Set<string>(),
+  hiddenSystems: new Set<AnatomySystem>(),
   isolatedStructureId: null,
   cameraCommand: null,
+  selectionLocked: false,
+} satisfies Partial<ViewerState>;
+
+export const useViewerStore = create<ViewerState>()((set, get) => ({
+  ...initialState,
 
   select: (selectedStructureId) => set({ selectedStructureId }),
+  pick: (structureId) => {
+    if (!get().selectionLocked) set({ selectedStructureId: structureId });
+  },
+  setSelectionLocked: (selectionLocked) => set({ selectionLocked }),
   hover: (hoveredStructureId) => set({ hoveredStructureId }),
 
   hide: (structureId) =>
@@ -80,6 +98,23 @@ export const useViewerStore = create<ViewerState>()((set) => ({
       hiddenStructureIds: new Set(),
       hiddenSystems: new Set(),
       isolatedStructureId: null,
+    }),
+
+  showOnly: (visibleIds, allIds) => {
+    const visible = new Set(visibleIds);
+    set({
+      hiddenStructureIds: new Set([...allIds].filter((id) => !visible.has(id))),
+      hiddenSystems: new Set(),
+      isolatedStructureId: null,
+      selectedStructureId: null,
+    });
+  },
+
+  reset: () =>
+    set({
+      ...initialState,
+      hiddenStructureIds: new Set(),
+      hiddenSystems: new Set(),
     }),
 
   isolate: (structureId) =>

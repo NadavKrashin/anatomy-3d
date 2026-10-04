@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Heebo } from "next/font/google";
 import { AnatomyDataProvider } from "@/components/providers/AnatomyDataProvider";
+import { ProgressProvider } from "@/components/providers/ProgressProvider";
 import { SettingsProvider } from "@/components/providers/SettingsProvider";
 import "./globals.css";
 
@@ -32,7 +33,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full font-sans">
         <SettingsProvider>
-          <AnatomyDataProvider>{children}</AnatomyDataProvider>
+          <AnatomyDataProvider>
+            <ProgressProvider>{children}</ProgressProvider>
+          </AnatomyDataProvider>
         </SettingsProvider>
       </body>
     </html>

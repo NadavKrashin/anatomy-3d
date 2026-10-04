@@ -10,12 +10,16 @@ import { useMessages } from "@/hooks/useMessages";
 export function TermText({
   name,
   className,
+  showVerification = true,
 }: {
   name: ResolvedName;
   className?: string;
+  /** Lists (quiz options, progress rows) hide the badge to reduce noise. */
+  showVerification?: boolean;
 }) {
   const t = useMessages();
-  const showUnverified = !name.verified && name.language !== "en";
+  const showUnverified =
+    showVerification && !name.verified && name.language !== "en";
   return (
     <span
       className={clsx(

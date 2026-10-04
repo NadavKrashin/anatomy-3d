@@ -48,6 +48,7 @@ function LoadingOverlay() {
     <div
       className="pointer-events-none absolute inset-0 flex items-center justify-center"
       role="status"
+      data-viewer-loading=""
     >
       <div className="flex w-56 flex-col items-center gap-3">
         <p className="text-muted text-sm">{t.viewer.loading}</p>
@@ -118,7 +119,7 @@ export default function AnatomyCanvas() {
         gl={{ antialias: true, powerPreference: "high-performance" }}
         onPointerMissed={(event) => {
           // Only plain clicks on empty space deselect; ignore right-click pans.
-          if (event.button === 0) useViewerStore.getState().select(null);
+          if (event.button === 0) useViewerStore.getState().pick(null);
         }}
       >
         <Suspense fallback={null}>

@@ -51,4 +51,45 @@ describe("viewer store", () => {
     focus("heart");
     expect(useViewerStore.getState().cameraCommand).not.toEqual(first);
   });
+
+  it("pick changes the selection unless it is locked", () => {
+    const { pick, setSelectionLocked, select } = useViewerStore.getState();
+    pick("heart");
+    expect(useViewerStore.getState().selectedStructureId).toBe("heart");
+    setSelectionLocked(true);
+    pick("liver");
+    expect(useViewerStore.getState().selectedStructureId).toBe("heart");
+    select("liver"); // programmatic selection still works
+    expect(useViewerStore.getState().selectedStructureId).toBe("liver");
+  });
+
+  it("showOnly hides everything else and clears other filters", () => {
+    const { toggleSystem, isolate, select, showOnly } =
+      useViewerStore.getState();
+    toggleSystem("skeletal");
+    isolate("heart");
+    select("heart");
+    showOnly(["heart", "liver"], ["heart", "liver", "skull", "femur-left"]);
+    const state = useViewerStore.getState();
+    expect([...state.hiddenStructureIds].sort()).toEqual([
+      "femur-left",
+      "skull",
+    ]);
+    expect(state.hiddenSystems.size).toBe(0);
+    expect(state.isolatedStructureId).toBeNull();
+    expect(state.selectedStructureId).toBeNull();
+  });
+
+  it("reset returns to the initial state", () => {
+    const { hide, setSelectionLocked, select, reset } =
+      useViewerStore.getState();
+    hide("heart");
+    setSelectionLocked(true);
+    select("liver");
+    reset();
+    const state = useViewerStore.getState();
+    expect(state.hiddenStructureIds.size).toBe(0);
+    expect(state.selectionLocked).toBe(false);
+    expect(state.selectedStructureId).toBeNull();
+  });
 });

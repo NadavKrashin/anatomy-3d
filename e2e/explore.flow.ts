@@ -1,30 +1,10 @@
 /**
- * End-to-end smoke test of the explore vertical slice against a running app.
- *
- *   npm run build && npm run start -- -p 3100
- *   BASE_URL=http://localhost:3100 npm run e2e:smoke
- *
- * Writes screenshots to docs/screenshots/.
+ * Explore flow: RTL home, viewer, Hebrew search + focus, click selection,
+ * isolate / hide / systems, language switch persistence, iPad and phone
+ * layouts. Screenshots go to docs/screenshots/.
  */
-import { chromium, type Page } from "playwright";
-
-const BASE_URL = process.env.BASE_URL ?? "http://localhost:3100";
-const SHOTS = "docs/screenshots";
-
-function assert(condition: unknown, message: string): asserts condition {
-  if (!condition) throw new Error(`✗ ${message}`);
-  console.log(`✓ ${message}`);
-}
-
-async function waitForModel(page: Page) {
-  await page.waitForFunction(
-    () => !document.querySelector('[role="status"]'),
-    null,
-    { timeout: 30_000 },
-  );
-  // Give the camera a moment to settle after the initial framing.
-  await page.waitForTimeout(800);
-}
+import type { Browser, Page } from "playwright";
+import { assert, BASE_URL, openPage, SHOTS, waitForModel } from "./helpers";
 
 async function infoTitle(page: Page) {
   const panel = page.locator("aside h2");
@@ -33,21 +13,8 @@ async function infoTitle(page: Page) {
     : null;
 }
 
-async function main() {
-  const browser = await chromium.launch({
-    args: [
-      "--use-angle=swiftshader",
-      "--enable-unsafe-swiftshader",
-      "--ignore-gpu-blocklist",
-    ],
-  });
-  const errors: string[] = [];
-
-  const desktop = await browser.newPage({
-    viewport: { width: 1440, height: 900 },
-  });
-  desktop.on("pageerror", (e) => errors.push(e.message));
-  desktop.on("console", (m) => m.type() === "error" && errors.push(m.text()));
+export async function exploreFlow(browser: Browser, errors: string[]) {
+  const desktop = await openPage(browser, errors);
 
   await desktop.goto(BASE_URL);
   assert(
@@ -152,11 +119,10 @@ async function main() {
   await desktop.screenshot({ path: `${SHOTS}/explore-en.png` });
 
   // iPad landscape, Hebrew, region scope.
-  const ipad = await browser.newPage({
+  const ipad = await openPage(browser, errors, {
     viewport: { width: 1180, height: 820 },
     hasTouch: true,
   });
-  ipad.on("pageerror", (e) => errors.push(e.message));
   await ipad.goto(`${BASE_URL}/explore?region=upper-limb`);
   await waitForModel(ipad);
   await ipad.locator("#structure-search").fill("ביספס");
@@ -166,7 +132,7 @@ async function main() {
   await ipad.screenshot({ path: `${SHOTS}/ipad-upper-limb.png` });
 
   // Phone portrait.
-  const phone = await browser.newPage({
+  const phone = await openPage(browser, errors, {
     viewport: { width: 390, height: 844 },
     hasTouch: true,
     isMobile: true,
@@ -179,15 +145,5 @@ async function main() {
   await phone.waitForTimeout(900);
   await phone.screenshot({ path: `${SHOTS}/phone-liver.png` });
 
-  await browser.close();
-  const relevant = errors.filter((e) => !/GPU stall|WebGL-|GL Driver/i.test(e));
-  assert(
-    relevant.length === 0,
-    `no page errors${relevant.length ? `: ${relevant.join(" | ")}` : ""}`,
-  );
+  await Promise.all([desktop.close(), ipad.close(), phone.close()]);
 }
-
-main().catch((error: unknown) => {
-  console.error(error);
-  process.exit(1);
-});

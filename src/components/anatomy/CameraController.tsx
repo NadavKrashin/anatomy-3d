@@ -96,7 +96,13 @@ export function CameraController() {
     };
 
     // Frame the model once it is indexed (initial load or dataset swap).
-    if (useSceneIndexStore.getState().objectsByStructure) reset(false);
+    // A command issued before this controller mounted (e.g. a quiz or deep
+    // link reacting to the same index update) is applied after framing.
+    if (useSceneIndexStore.getState().objectsByStructure) {
+      reset(false);
+      const pending = useViewerStore.getState().cameraCommand;
+      if (pending) run(pending);
+    }
     const unsubscribeIndex = useSceneIndexStore.subscribe((state, previous) => {
       if (
         state.objectsByStructure &&

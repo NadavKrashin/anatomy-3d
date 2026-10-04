@@ -72,11 +72,54 @@ lucide-react · Vitest 5 · Playwright 1.56 · gltf-transform 4.5.
 - Route is `/explore` (spec sketched `/learn`) to match the "Explore" nav item.
 - `/explore?region=upper-limb` starts with only that region visible — the home
   page's "What are you studying?" cards use it; full study scopes come later.
-- Quiz/Progress appear in the nav as disabled "soon" items.
+- `TermText` shows the "unverified" badge in the info panel only; lists
+  (quiz options, progress rows, search) hide it to reduce noise.
+
+## Quiz (Phase 5)
+
+- **Engine is a pure reducer** (`lib/quiz/quizEngine.ts`): `startQuiz` +
+  `quizReducer(run, action)` with `answer` / `reveal` / `next`. Time is passed
+  in (`now`), never read inside. `store/quizStore.ts` only holds the current
+  run; `hooks/useQuizRun.ts` wires it to the viewer.
+- **Scoring:** the score is _first-try correct_ (honest recall). A find
+  question solved after wrong clicks counts as "correct after retry" and is
+  listed for review; a revealed answer or a wrong identify choice is "missed".
+- **Find questions** allow retries; "Show answer" appears after 2 wrong clicks
+  (`REVEAL_AFTER_WRONG_ATTEMPTS`). **Identify questions** are one-shot.
+- **Clicks become answers via the selection:** in a find question, a change of
+  `selectedStructureId` is dispatched as an answer — no special click plumbing
+  in the 3D layer. During identify questions and after answering, the
+  selection is locked (`viewerStore.selectionLocked` + `pick()`), so the
+  highlighted target can't be clicked away.
+- **Question generation:** only structures in the scope _and_ selectable in
+  the loaded model (scene index) are asked. Distractors are chosen from all
+  selectable structures, preferring same system + region, never the other side
+  of the target or two sides of one pair. Seeded RNG (`lib/quiz/random.ts`).
+- Correct answers auto-advance after 1.1 s; wrong/revealed wait for "Next" so
+  the student can look. Camera returns to the scope overview before a find
+  question that follows a focused one, and when the quiz ends.
+- The quiz shows exactly its scope (`viewerStore.showOnly`).
+- Quiz keys: `1–4` answer, `Enter` next, `R` reset camera, `Q` back to explore.
+
+## Progress (Phase 6)
+
+- `ProgressRepository` interface (`load`/`save` of one `ProgressData`
+  document) with a localStorage implementation. Data is **validated with zod**
+  on load; unreadable data is **copied to a backup key** (`anatomy.progress.corrupt.<ts>`)
+  rather than discarded. `version` field for future migrations.
+- `recordSession` is **idempotent** by session id.
+- Review scheduler (`lib/progress/reviewScheduler.ts`): again → 10 min,
+  hard → ×1.2 (≥1 day), good → 1 day then ×2.5 (≤60 days). Confidence = EMA
+  (weight 0.4) of grade scores (again 0, hard 0.6, good 1). "Learned" =
+  confidence ≥ 0.8.
+- "Due for review" is offered as a quiz scope (`/quiz?scope=due`) on home,
+  quiz setup and progress pages.
 
 ## Deferred
 
 - No persistence of viewer state (hidden/isolated) across reloads — only
-  settings persist. Progress persistence arrives with the quiz.
+  settings and progress persist.
+- No custom study lists yet ("Exam 1"); `StudyScope` already has a `custom`
+  kind for them.
 - No performance overlay yet; the demo model is ~23k triangles. Add
   instrumentation when the real model lands.

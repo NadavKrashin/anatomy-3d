@@ -1,14 +1,7 @@
 import { useEffect } from "react";
 import { STRUCTURE_SEARCH_INPUT_ID } from "@/components/anatomy/StructureSearch";
 import { useViewerStore } from "@/store/viewerStore";
-
-function isTypingTarget(target: EventTarget | null): boolean {
-  if (!(target instanceof HTMLElement)) return false;
-  return (
-    target.isContentEditable ||
-    ["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName)
-  );
-}
+import { isTypingTarget } from "./isTypingTarget";
 
 /**
  * Viewer keyboard shortcuts. Matched on `event.code` (physical key) rather
@@ -16,8 +9,10 @@ function isTypingTarget(target: EventTarget | null): boolean {
  */
 export function useViewerShortcuts({
   onToggleHelp,
+  onQuiz,
 }: {
   onToggleHelp: () => void;
+  onQuiz: () => void;
 }) {
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -52,9 +47,12 @@ export function useViewerShortcuts({
         case "KeyR":
           viewer.resetCamera();
           break;
+        case "KeyQ":
+          onQuiz();
+          break;
       }
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [onToggleHelp]);
+  }, [onToggleHelp, onQuiz]);
 }

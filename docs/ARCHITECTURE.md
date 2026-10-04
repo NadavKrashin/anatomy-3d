@@ -12,7 +12,7 @@ _what to do next_ see `STATUS.md`.
 ├─────────────────────────────────────────────────────────────────────┤
 │ components/          React UI. Reads stores + context, calls lib/.  │
 │   anatomy/           3D canvas + viewer overlays                    │
-│   quiz/ progress/    (feature UIs)                                  │
+│   quiz/ progress/    quiz setup/run/summary, progress page          │
 │   home/ layout/ ui/  landing, top bar pieces, primitives            │
 ├─────────────────────────────────────────────────────────────────────┤
 │ store/ (zustand)     small, single-purpose client state stores      │
@@ -23,6 +23,8 @@ _what to do next_ see `STATUS.md`.
 │                      visibility, dataset validation                 │
 │   anatomy/three/     three.js helpers (materials, scene index,      │
 │                      camera framing) — no React either              │
+│   quiz/ progress/    quiz engine, scheduler, stats, persistence     │
+│   study/             study scopes                                   │
 │   i18n/              UI string dictionaries (he, en)                │
 ├─────────────────────────────────────────────────────────────────────┤
 │ data/anatomy/        datasets: structures + mesh map (+ GLB in      │
@@ -80,11 +82,13 @@ ancestors are tried (multi-primitive meshes load as a group of meshes).
 
 ## 4. State
 
-| Store                      | Holds                                                                     | Persisted                         |
-| -------------------------- | ------------------------------------------------------------------------- | --------------------------------- |
-| `store/viewerStore.ts`     | selection, hover, hidden ids, hidden systems, isolated id, camera command | no                                |
-| `store/settingsStore.ts`   | UI locale, term-language preference                                       | localStorage (`anatomy.settings`) |
-| `store/sceneIndexStore.ts` | structure id → three.js meshes of the loaded model                        | no (runtime objects)              |
+| Store                      | Holds                                                                                     | Persisted                                                    |
+| -------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| `store/viewerStore.ts`     | selection, hover, hidden ids, hidden systems, isolated id, camera command, selection lock | no                                                           |
+| `store/settingsStore.ts`   | UI locale, term-language preference                                                       | localStorage (`anatomy.settings`)                            |
+| `store/sceneIndexStore.ts` | structure id → three.js meshes of the loaded model                                        | no (runtime objects)                                         |
+| `store/quizStore.ts`       | the active `QuizRun` (state of the pure quiz engine)                                      | no                                                           |
+| `store/progressStore.ts`   | `ProgressData`: per-structure progress + session history                                  | via `ProgressRepository` → localStorage (`anatomy.progress`) |
 
 Conventions:
 
@@ -124,7 +128,38 @@ AnatomyModel.apply()
 - `AnatomyCanvas` is loaded with `next/dynamic({ ssr: false })`, wrapped in an
   error boundary with retry, a WebGL capability check and a loading overlay.
 
-## 6. Internationalization & RTL
+## 6. Quiz & progress flow
+
+```
+/quiz  QuizView ── setup ──► QuizRunView (ViewerFrame + quiz panels)
+                                 │
+                       useQuizRun(config)
+ scene index ready ─► eligibleStructures ─► generateQuiz ─► startQuiz ─► quizStore
+                                 │
+ click in 3D ─► viewerStore.pick ─► selectedStructureId ─► dispatch(answer)
+ option button / keys 1–4 ─────────────────────────────► dispatch(answer)
+                                 ▼
+             quizReducer (pure) ─► new QuizRun ─► syncViewer: highlight, lock,
+                                                  camera; auto-advance on correct
+                                 │ phase "complete"
+                                 ▼
+          progressStore.recordSession ─► recordSession (pure) ─► repository.save
+```
+
+- `lib/quiz/` — `eligibility`, `questionGenerator`, `quizEngine`, `summary`,
+  `random`. `lib/study/scopes.ts` — built-in scopes (whole body, regions,
+  systems); `hooks/useStudyScopes.ts` adds the dynamic "due for review" scope.
+- `lib/progress/` — `reviewScheduler`, `progressUpdates` (`applyAttempt`,
+  `recordSession`), `progressStats` (overview, weakest, recent, due),
+  `progressRepository` (interface) + `localProgressRepository`.
+- Viewer pages share `components/anatomy/ViewerFrame.tsx` (canvas + top bar
+  with a page-specific centre) and `ViewerPanel.tsx` (side card / bottom
+  sheet, marked as a viewer obstruction). Regular pages use
+  `components/layout/PageShell.tsx`.
+- `CameraController` also applies a camera command issued just before it
+  mounted (quiz start and deep links react to the same index update).
+
+## 7. Internationalization & RTL
 
 - UI strings: `lib/i18n/messages.he.ts` defines the shape (`Messages`);
   `messages.en.ts` must satisfy it, so missing translations fail type-checking.
@@ -138,21 +173,21 @@ AnatomyModel.apply()
   geresh, maqaf, leading ה) and Latin diacritics on both sides.
 - Keyboard shortcuts match `event.code` so they work on a Hebrew layout.
 
-## 7. Testing strategy
+## 8. Testing strategy
 
-| Level            | Where                                                                                 | Runs with                                   |
-| ---------------- | ------------------------------------------------------------------------------------- | ------------------------------------------- |
-| Pure logic       | `src/lib/**/*.test.ts`, `src/store/*.test.ts`                                         | `npm test` (node)                           |
-| Data integrity   | `lib/anatomy/validateDataset.test.ts`                                                 | `npm test`                                  |
-| Style invariants | `src/test/rtlLayout.test.ts`                                                          | `npm test`                                  |
-| Components       | `src/components/**/*.test.tsx` (jsdom pragma, Testing Library, `renderWithProviders`) | `npm test`                                  |
-| End-to-end       | `e2e/*.ts` (Playwright, real WebGL via SwiftShader)                                   | `npm run e2e:smoke` against a running build |
+| Level            | Where                                                                                                                                       | Runs with                                   |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| Pure logic       | `src/lib/**/*.test.ts`, `src/store/*.test.ts`                                                                                               | `npm test` (node)                           |
+| Data integrity   | `lib/anatomy/validateDataset.test.ts`                                                                                                       | `npm test`                                  |
+| Style invariants | `src/test/rtlLayout.test.ts`                                                                                                                | `npm test`                                  |
+| Components       | `src/components/**/*.test.tsx` (jsdom pragma, Testing Library, `renderWithProviders`)                                                       | `npm test`                                  |
+| End-to-end       | `e2e/smoke.ts` → `explore.flow.ts`, `quiz.flow.ts` (Playwright, real WebGL via SwiftShader; UI strings imported from the real dictionaries) | `npm run e2e:smoke` against a running build |
 
 Test behaviour (what a student would observe or what a function returns), not
 implementation details. Inject randomness and time (seeded RNG, `now`
 parameters) so logic is deterministic.
 
-## 8. Recipes
+## 9. Recipes
 
 **Add a structure to a dataset** — add it to `data/anatomy/<ds>/structures.ts`
 (names with `verified: false`, only facts you are sure of), map its mesh in
@@ -168,5 +203,13 @@ demand it in `messages.en.ts`), use via `useMessages()`.
 **Add a viewer action** — add an intent-named action to `viewerStore`, test
 it in `viewerStore.test.ts`; if it affects rendering, make sure
 `affectsVisuals` in `AnatomyModel.tsx` covers the field.
+
+**Add a quiz question type** — extend `QuizQuestion` in `types/quiz.ts`,
+generate it in `questionGenerator.ts`, handle it in `quizEngine.ts` (tests
+first), render it in `QuizQuestionPanel.tsx`, and define its viewer behaviour
+in `useQuizRun.ts` → `syncViewer`.
+
+**Change persistence** — implement `ProgressRepository` (e.g. Supabase) and
+pass it to `createProgressStore` in `store/progressStore.ts`.
 
 **Add a page** — `app/<route>/page.tsx` (thin) + `components/<feature>/<Name>View.tsx`.

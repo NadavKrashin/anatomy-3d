@@ -14,10 +14,10 @@ English and Latin terminology.
 | [`docs/DECISIONS.md`](docs/DECISIONS.md)           | Why things are the way they are                          |
 | [`docs/CONTENT_REVIEW.md`](docs/CONTENT_REVIEW.md) | Medical terms awaiting human verification                |
 
-**Status:** first vertical slice — landing page → 3D viewer → demo model →
-rotate/zoom/pan → click a structure → names + details → search (Hebrew, English,
-Latin) → camera focus → hide / isolate / system toggles. Quiz and progress are
-next.
+**Status:** MVP v0 complete — explore the 3D model (select, search in
+Hebrew/English/Latin, focus, hide, isolate, systems), quiz yourself ("find the
+structure" by clicking in 3D, or "identify the highlighted structure"), and
+track progress with simple spaced review. See `docs/STATUS.md` for what's next.
 
 > The bundled model is a **development demo — not anatomically accurate**.
 > For educational purposes. Anatomy content should be verified against your
@@ -52,19 +52,22 @@ npm run build && npx next start -p 3100 &
 npm run e2e:smoke
 ```
 
-## Keyboard shortcuts (explore)
+## Keyboard shortcuts
 
-`/` search · `Esc` close/deselect · `F` focus · `I` isolate · `H` hide ·
-`R` reset camera · `?` help. Shortcuts use physical keys, so they work with a
-Hebrew keyboard layout too.
+- Explore: `/` search · `Esc` close/deselect · `F` focus · `I` isolate ·
+  `H` hide · `R` reset camera · `Q` quiz · `?` help.
+- Quiz: `1–4` answer · `Enter` next · `R` reset camera · `Q` back to explore.
+
+Shortcuts use physical keys, so they work with a Hebrew keyboard layout too.
 
 ## Project layout
 
 ```
 src/
-  app/                    routes: / (home), /explore
+  app/                    routes: / (home), /explore, /quiz, /progress
   components/
-    anatomy/              viewer: canvas, model, camera, search, panels, toolbar
+    anatomy/              viewer: frame, canvas, model, camera, search, panels
+    quiz/  progress/      quiz setup / run / results, progress page
     home/  layout/  ui/   landing page, top-bar pieces, small primitives
     providers/            dataset context, settings (locale + <html dir>)
   data/anatomy/           datasets — demo/{structures.ts, meshMap.json}
@@ -72,11 +75,14 @@ src/
   lib/
     anatomy/              registry, model adapter, names, search, visibility
     anatomy/three/        material states, scene index, camera framing
+    quiz/                 question generation, quiz engine (reducer), summary
+    progress/             review scheduler, progress updates/stats, repository
+    study/                study scopes
     i18n/                 Hebrew + English UI strings
-  store/                  zustand: viewer, settings, scene index
-  types/anatomy.ts        the normalized anatomy data model
+  store/                  zustand: viewer, settings, scene index, quiz, progress
+  types/                  anatomy, quiz, progress, study scope types
 scripts/anatomy/          inspect / validate / generate-demo
-e2e/                      Playwright smoke test
+e2e/                      Playwright flows (explore, quiz) + runner
 docs/                     spec, decisions, content review, screenshots
 ```
 
