@@ -103,11 +103,8 @@ All verified by `npm run e2e:smoke` against a production build.
 
 ## Next steps (in order)
 
-1. **Post-deploy check** of https://ors-anatomy.vercel.app — run the
-   checklist in `docs/DEPLOYMENT.md` on the iPad. Cloud Claude sessions can't
-   reach `*.vercel.app` (network policy), so this is done by the user; a
-   session with access can run `BASE_URL=https://ors-anatomy.vercel.app npm
-run e2e:smoke`.
+1. ~~Post-deploy check~~ — user reported production "looks good"
+   (2026-10-05). Keep an eye out for iPad performance feedback.
 2. **Real-device check on iPad:** load time and frame rate with the 1.35M
    triangle model. If sluggish: simplify non-upper-limb bones
    (`optimize-glb.ts --simplify 0.5`), or split the GLB per system/region and
@@ -165,3 +162,5 @@ run e2e:smoke`.
   (CI green) so Vercel can deploy production from `main`.
 - **2026-10-05 · session 2 (cont.)** — User connected the repo in Vercel and
   deployed: https://ors-anatomy.vercel.app. Recorded in STATUS/DEPLOYMENT.
+- **2026-10-05 · session 2 (cont.)** — User checked production: "looks
+  good". Awaiting the user's pick of the next feature.
