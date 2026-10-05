@@ -44,7 +44,7 @@ Expected today: **171 unit/component tests, 31 e2e checks, all passing; CI green
 | 2026-10-05 | Next: **deploy the first version to Vercel** (user does the Vercel side — see `docs/DEPLOYMENT.md`).                                                                                                                                                         |
 | 2026-10-05 | Next features chosen by the user: **muscle parts**, then **origins & insertions**.                                                                                                                                                                           |
 | 2026-10-05 | **Whole body next**: add all remaining body parts. More quizzes, Hebrew names and study tools wait until the user has her course's study sources.                                                                                                            |
-| 2026-10-05 | Wants to **easily switch between a male and a female model**. Z-Anatomy is male-only; a female source is being researched. |
+| 2026-10-05 | Wants to **switch between a male and a female model** — **deferred** ("document the options, future addition"). Options and research: `docs/DECISIONS.md` → "Male/female model switch".                                                                      |
 | 2026-10-05 | **Docs must be kept updated continuously** as work happens (every commit), not at the end of a session. Enforced by the docs-gate hook.                                                                                                                      |
 | 2026-10-05 | **Deployed** by the user on Vercel: production URL **https://ors-anatomy.vercel.app** (production branch `main`).                                                                                                                                            |
 
@@ -140,6 +140,10 @@ All verified by `npm run e2e:smoke` against a production build.
    her course's term list; add to curated concepts + `docs/CONTENT_REVIEW.md`.
 5. ~~Muscle heads as sub-structures~~ — done (52 parts); quizzing on parts
    is a possible follow-up.
+   5b. **Male/female switch** — deferred by the user; options, source (Human
+   Reference Atlas female set, CC BY 4.0) and how to fetch it are in
+   `docs/DECISIONS.md` → "Male/female model switch". Ask which option before
+   building.
 6. When the user has her study sources: more quiz types (origins/insertions,
    parts), custom study lists (§27), progress export/import, first-run tutorial,
    ~~origins/insertions mode~~ (done; verify kinds + Hebrew terms per
@@ -230,3 +234,6 @@ All verified by `npm run e2e:smoke` against a production build.
   pill); quizzes hide bones for encased targets; detail tags for nuclei/
   tracts/nodes; attachments for every muscle with a whole-body review (28
   muscles "not confirmed").
+- **2026-10-05 · session 2 (cont.)** — Researched a female model for a
+  male/female switch; user deferred the feature — options documented in
+  DECISIONS.
