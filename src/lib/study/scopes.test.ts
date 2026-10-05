@@ -17,6 +17,7 @@ describe("builtInScopes", () => {
     expect(ids).toContain("system:nervous");
     expect(ids).not.toContain("region:pelvis");
     expect(ids).not.toContain("system:urinary");
+    expect(ids.filter((id) => id.endsWith(":other"))).toEqual([]);
   });
 
   it("region scopes contain exactly that region's structures", () => {

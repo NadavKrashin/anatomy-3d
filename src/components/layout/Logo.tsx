@@ -1,17 +1,17 @@
-import Link from "next/link";
+"use client";
 
+import Link from "next/link";
+import { useMessages } from "@/hooks/useMessages";
+
+/** Serif wordmark, in the interface language. */
 export function Logo() {
+  const t = useMessages();
   return (
     <Link
       href="/"
-      className="text-ink flex shrink-0 items-center gap-2 text-sm font-semibold tracking-[0.22em]"
-      dir="ltr"
+      className="text-ink shrink-0 font-serif text-[22px] leading-none font-medium"
     >
-      <span
-        aria-hidden
-        className="bg-accent size-2.5 rounded-full shadow-[0_0_12px_var(--color-accent)]"
-      />
-      ANATOMY
+      {t.appName}
     </Link>
   );
 }

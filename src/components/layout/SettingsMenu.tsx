@@ -19,7 +19,7 @@ function Field({
   children: React.ReactNode;
 }) {
   return (
-    <label className="text-muted flex flex-col gap-1.5 text-xs">
+    <label className="text-graphite flex flex-col gap-1.5 text-[13px]">
       {label}
       {children}
     </label>
@@ -27,7 +27,7 @@ function Field({
 }
 
 const selectClass =
-  "h-10 rounded-[9px] border border-line bg-surface-solid px-2 text-sm text-ink";
+  "bg-wash text-ink h-10 rounded-full px-4 text-[14px] outline-none focus-visible:ring-2 focus-visible:ring-scrub/40";
 
 export function SettingsMenu() {
   const t = useMessages();
@@ -65,7 +65,7 @@ export function SettingsMenu() {
         onClick={() => setOpen((v) => !v)}
       />
       {open && (
-        <div className="panel absolute end-0 top-12 z-40 flex w-64 flex-col gap-3 p-4">
+        <div className="sheet absolute end-0 top-12 z-40 flex w-64 flex-col gap-4 p-5 shadow-[var(--shadow-pop)]">
           <Field label={t.settings.interfaceLanguage}>
             <select
               className={selectClass}

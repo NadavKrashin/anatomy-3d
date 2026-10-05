@@ -20,10 +20,10 @@ describe("<StructureInfoPanel>", () => {
     selectStructure("biceps-brachii-left");
 
     expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent(
-      "Biceps brachii — left",
+      "Biceps brachii (left)",
     );
-    expect(screen.getByText("השריר הדו־ראשי של הזרוע — שמאל")).toBeDefined();
-    expect(screen.getByText("Musculus biceps brachii — sin.")).toBeDefined();
+    expect(screen.getByText("השריר הדו־ראשי של הזרוע (שמאל)")).toBeDefined();
+    expect(screen.getByText("Musculus biceps brachii (sin.)")).toBeDefined();
     expect(screen.getByText("Radial tuberosity")).toBeDefined();
     expect(screen.getByText("Musculocutaneous nerve (C5–C6)")).toBeDefined();
   });

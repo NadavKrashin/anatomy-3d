@@ -66,6 +66,7 @@ export async function quizFlow(browser: Browser, errors: string[]) {
 
 async function runQuizFlow(page: Page) {
   await page.goto(`${BASE_URL}/quiz`);
+  await page.screenshot({ path: `${SHOTS}/quiz-setup.png` });
   await page.getByRole("button", { name: he.quiz.start }).click();
   await waitForModel(page);
   assert(
@@ -101,8 +102,12 @@ async function runQuizFlow(page: Page) {
   assert(sawFeedback, "clicking a structure gives right/wrong feedback");
 
   await page.getByText(he.quiz.complete).first().waitFor({ timeout: 5000 });
+  // The score is a sentence ("3 of 10 correct on the first try").
+  const scoreLine = new RegExp(
+    he.quiz.scoreLine(999, QUESTIONS).replace("999", "\\d+"),
+  );
   assert(
-    await page.getByText(/\d+%/).first().isVisible(),
+    await page.getByText(scoreLine).isVisible(),
     "results show a score after 10 questions",
   );
   await page.waitForTimeout(1500); // let the camera glide back to the overview

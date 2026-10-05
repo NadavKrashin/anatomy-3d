@@ -11,10 +11,10 @@ const get = (id: string) => {
 describe("structure names", () => {
   it("appends a side label in the term's language", () => {
     expect(resolveName(get("biceps-brachii-left"), "en").text).toBe(
-      "Biceps brachii — left",
+      "Biceps brachii (left)",
     );
     expect(resolveName(get("humerus-right"), "he").text).toBe(
-      "עצם הזרוע — ימין",
+      "עצם הזרוע (ימין)",
     );
     expect(resolveName(get("heart"), "en").text).toBe("Heart");
   });

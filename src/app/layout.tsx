@@ -1,13 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Heebo } from "next/font/google";
+import { Frank_Ruhl_Libre, IBM_Plex_Sans_Hebrew } from "next/font/google";
 import { AnatomyDataProvider } from "@/components/providers/AnatomyDataProvider";
 import { ProgressProvider } from "@/components/providers/ProgressProvider";
 import { SettingsProvider } from "@/components/providers/SettingsProvider";
 import "./globals.css";
 
-const heebo = Heebo({
-  variable: "--font-heebo",
+// Serif for structure names and titles (atlas labels), sans for the UI.
+const frank = Frank_Ruhl_Libre({
+  variable: "--font-frank",
   subsets: ["hebrew", "latin"],
+  weight: ["400", "500", "700"],
+});
+
+const plex = IBM_Plex_Sans_Hebrew({
+  variable: "--font-plex",
+  subsets: ["hebrew", "latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -17,7 +25,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0b0d10",
+  themeColor: "#e9edef",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
@@ -28,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="he"
       dir="rtl"
-      className={`${heebo.variable} h-full antialiased`}
+      className={`${frank.variable} ${plex.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <body className="min-h-full font-sans">

@@ -1,9 +1,9 @@
-import { BookOpen, EyeOff, Focus, Layers } from "lucide-react";
+import { EyeOff, Focus, Layers } from "lucide-react";
 import { IconButton } from "@/components/ui/IconButton";
 import { useMessages } from "@/hooks/useMessages";
 import { useViewerStore } from "@/store/viewerStore";
 
-/** Focus / isolate / hide / study actions for the selected structure. */
+/** Focus / isolate / hide for the selected structure — quiet controls, no boxes. */
 export function StructureActions({ structureId }: { structureId: string }) {
   const t = useMessages();
   const isIsolated = useViewerStore(
@@ -12,7 +12,7 @@ export function StructureActions({ structureId }: { structureId: string }) {
   const { focus, hide, isolate, exitIsolate } = useViewerStore.getState();
 
   return (
-    <div className="border-line flex flex-wrap gap-1 border-b px-2 py-2">
+    <div className="border-rule flex flex-wrap gap-1 border-y px-3 py-1.5">
       <IconButton
         showLabel
         label={t.structure.focus}
@@ -31,12 +31,6 @@ export function StructureActions({ structureId }: { structureId: string }) {
         label={t.structure.hide}
         icon={<EyeOff />}
         onClick={() => hide(structureId)}
-      />
-      <IconButton
-        showLabel
-        label={`${t.structure.studyThis} · ${t.nav.comingSoon}`}
-        icon={<BookOpen />}
-        disabled
       />
     </div>
   );

@@ -24,7 +24,7 @@ export function IdentifyOptions({
   const chosenWrong = feedback?.kind === "incorrect" ? feedback.chosenId : null;
 
   return (
-    <ol className="flex flex-col gap-2">
+    <ol className="divide-rule border-rule divide-y border-y">
       {question.optionIds.map((id, index) => {
         const isAnswer = answered && id === question.structureId;
         const isWrongPick = answered && id === chosenWrong;
@@ -35,24 +35,22 @@ export function IdentifyOptions({
               disabled={answered}
               onClick={() => onChoose(id)}
               className={clsx(
-                "flex w-full items-center gap-3 rounded-[10px] border p-3 text-start transition-colors",
-                !answered && "border-line bg-raised hover:border-accent/50",
-                isAnswer && "border-emerald-400/50 bg-emerald-400/10",
-                isWrongPick && "border-rose-400/50 bg-rose-400/10",
-                answered &&
-                  !isAnswer &&
-                  !isWrongPick &&
-                  "border-line opacity-50",
+                "flex w-full items-center gap-3 px-1 py-3 text-start transition-colors",
+                !answered && "hover:bg-wash rounded-lg",
+                isAnswer && "bg-correct-soft rounded-lg",
+                isWrongPick && "bg-wrong-soft rounded-lg",
+                answered && !isAnswer && !isWrongPick && "opacity-45",
               )}
             >
               <Kbd>{index + 1}</Kbd>
-              <StructureLabel structureId={id} className="flex-1 text-sm" />
+              <StructureLabel
+                structureId={id}
+                className="flex-1 font-serif text-[17px]"
+              />
               {isAnswer && (
-                <Check className="size-4 text-emerald-300" aria-hidden />
+                <Check className="text-correct size-4" aria-hidden />
               )}
-              {isWrongPick && (
-                <X className="size-4 text-rose-300" aria-hidden />
-              )}
+              {isWrongPick && <X className="text-wrong size-4" aria-hidden />}
             </button>
           </li>
         );

@@ -9,7 +9,8 @@ medical student. Hebrew/RTL UI first; English/Latin terminology alongside.
 the ordered next steps, known issues and how to verify. Then, as needed:
 `docs/SPEC.md` (product brief, §-numbered), `docs/ARCHITECTURE.md` (layers,
 boundaries, recipes), `docs/CONTRIBUTING.md` (conventions + definition of
-done), `docs/DECISIONS.md` (rationale log).
+done), `docs/DECISIONS.md` (rationale log), `docs/DESIGN.md` (visual direction
+and tokens — read before any UI change).
 
 Non-negotiables (details in CONTRIBUTING):
 

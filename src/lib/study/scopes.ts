@@ -4,13 +4,19 @@ import type { StudyScope } from "@/types/study";
 
 export const WHOLE_BODY_SCOPE_ID = "all";
 
-/** Scopes derived from dataset metadata: whole body, each region, each system. */
+/**
+ * Scopes derived from dataset metadata: whole body, each region, each system.
+ * "Other" region/system buckets are left out — they are leftovers, not
+ * something a student chooses to study.
+ */
 export function builtInScopes(registry: AnatomyRegistry): StudyScope[] {
   const ids = (
     predicate: (s: AnatomyRegistry["structures"][number]) => boolean,
   ) => registry.structures.filter(predicate).map((s) => s.id);
 
-  const regionScopes = ANATOMY_REGIONS.filter((r) => r !== "whole-body")
+  const regionScopes = ANATOMY_REGIONS.filter(
+    (r) => r !== "whole-body" && r !== "other",
+  )
     .map((region): StudyScope => ({
       id: `region:${region}`,
       kind: "region",
@@ -19,12 +25,15 @@ export function builtInScopes(registry: AnatomyRegistry): StudyScope[] {
     }))
     .filter((scope) => scope.structureIds.length > 0);
 
-  const systemScopes = registry.presentSystems().map((system): StudyScope => ({
-    id: `system:${system}`,
-    kind: "system",
-    system,
-    structureIds: ids((s) => s.system === system),
-  }));
+  const systemScopes = registry
+    .presentSystems()
+    .filter((system) => system !== "other")
+    .map((system): StudyScope => ({
+      id: `system:${system}`,
+      kind: "system",
+      system,
+      structureIds: ids((s) => s.system === system),
+    }));
 
   return [
     { id: WHOLE_BODY_SCOPE_ID, kind: "all", structureIds: ids(() => true) },

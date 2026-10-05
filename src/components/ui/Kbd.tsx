@@ -4,7 +4,7 @@ export function Kbd({ children }: { children: ReactNode }) {
   return (
     <kbd
       dir="ltr"
-      className="border-line bg-raised text-muted inline-flex min-w-6 items-center justify-center rounded-md border px-1.5 py-0.5 font-sans text-xs"
+      className="bg-wash text-graphite inline-flex min-w-6 items-center justify-center rounded-md px-1.5 py-0.5 font-sans text-[12px] shadow-[inset_0_-1px_0_var(--color-rule)]"
     >
       {children}
     </kbd>

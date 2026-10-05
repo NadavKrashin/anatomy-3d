@@ -50,7 +50,8 @@ export function resolveName(
   const usedLanguage = structure.names[language] ? language : "en";
   const side = getSideLabel(structure.side, usedLanguage);
   return {
-    text: side ? `${term.text} — ${side}` : term.text,
+    // Anatomy listings put the side in parentheses: "Humerus (left)".
+    text: side ? `${term.text} (${side})` : term.text,
     language: usedLanguage,
     verified: term.verified,
   };

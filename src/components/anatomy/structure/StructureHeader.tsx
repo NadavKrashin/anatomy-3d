@@ -7,7 +7,7 @@ import { TERM_LANGUAGES, type AnatomicalStructure } from "@/types/anatomy";
 import { SYSTEM_COLORS } from "../systemColors";
 import { TermText } from "../TermText";
 
-/** System/region eyebrow, primary + secondary name, and the remaining languages. */
+/** The structure's name set like an atlas label, with its other names below. */
 export function StructureHeader({
   structure,
   onClose,
@@ -23,36 +23,30 @@ export function StructureHeader({
   );
 
   return (
-    <header className="border-line flex items-start gap-2 border-b p-4">
+    <header className="flex items-start gap-2 px-5 pt-5 pb-4">
       <div className="min-w-0 flex-1">
-        <p className="text-muted mb-1 flex items-center gap-2 text-xs">
+        <p className="text-graphite mb-2 flex items-center gap-2 text-[13px]">
           <span
             aria-hidden
-            className="size-2 rounded-full"
+            className="size-2.5 rounded-full"
             style={{ backgroundColor: SYSTEM_COLORS[structure.system] }}
           />
-          {t.systems[structure.system]} · {t.regions[structure.region]}
+          {t.systems[structure.system]}, {t.regions[structure.region]}
         </p>
-        <h2 className="text-ink text-xl leading-tight font-semibold">
+        <h2 className="text-ink font-serif text-[26px] leading-[1.15] font-medium">
           <TermText name={primary} />
         </h2>
         {secondary && (
-          <p className="text-muted mt-0.5 text-base">
+          <p className="text-graphite mt-1 font-serif text-[18px] leading-snug">
             <TermText name={secondary} />
           </p>
         )}
-        {others.length > 0 && (
-          <dl className="mt-3 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-xs">
-            {others.map((language) => (
-              <div key={language} className="contents">
-                <dt className="text-faint">{t.termLanguages[language]}</dt>
-                <dd className="text-muted">
-                  <TermText name={resolveName(structure, language)} />
-                </dd>
-              </div>
-            ))}
-          </dl>
-        )}
+        {others.map((language) => (
+          <p key={language} className="text-graphite mt-1.5 text-[13px]">
+            <span className="text-faint">{t.termLanguages[language]}: </span>
+            <TermText name={resolveName(structure, language)} />
+          </p>
+        ))}
       </div>
       <IconButton
         label={t.viewer.close}

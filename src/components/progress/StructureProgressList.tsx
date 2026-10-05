@@ -24,40 +24,40 @@ export function StructureProgressList({
   return (
     <section className="flex flex-col gap-3">
       <div className="flex items-center justify-between gap-2">
-        <h2 className="text-muted text-sm font-medium">{title}</h2>
+        <h2 className="text-ink font-serif text-[20px]">{title}</h2>
         {action}
       </div>
       {items.length === 0 ? (
-        <p className="text-faint text-sm">{empty}</p>
+        <p className="text-graphite text-[15px]">{empty}</p>
       ) : (
-        <ul className="border-line divide-line divide-y rounded-[12px] border">
+        <ul className="divide-rule border-rule divide-y border-y">
           {items.map((item) => {
             const percent = Math.round(item.confidence * 100);
             return (
               <li key={item.structureId}>
                 <Link
                   href={`/explore?structure=${item.structureId}`}
-                  className="hover:bg-raised flex items-center gap-4 px-4 py-3 transition-colors"
+                  className="group flex items-center gap-4 py-3"
                 >
                   <StructureLabel
                     structureId={item.structureId}
-                    className="flex-1 text-sm"
+                    className="group-hover:[&_bdi]:text-scrub flex-1 font-serif text-[17px]"
                   />
                   <div
                     className="flex w-28 items-center gap-2"
                     title={t.progress.confidence}
                   >
                     <div
-                      className="bg-raised h-1.5 flex-1 overflow-hidden rounded-full"
+                      className="bg-rule h-1 flex-1 overflow-hidden rounded-full"
                       dir="ltr"
                     >
                       <div
-                        className="bg-accent h-full"
+                        className="bg-scrub h-full rounded-full"
                         style={{ width: `${percent}%` }}
                       />
                     </div>
                     <span
-                      className="text-muted w-9 text-end text-xs tabular-nums"
+                      className="text-graphite w-10 text-end text-[13px] tabular-nums"
                       dir="ltr"
                     >
                       {percent}%

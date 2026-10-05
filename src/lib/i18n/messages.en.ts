@@ -1,7 +1,7 @@
 import type { Messages } from "./messages.he";
 
 export const en: Messages = {
-  appName: "ANATOMY",
+  appName: "Anatomy",
   tagline: "Learn the body by exploring it.",
   disclaimer:
     "For educational purposes. Anatomy content should be verified against your institution's required resources.",
@@ -11,12 +11,11 @@ export const en: Messages = {
     explore: "Explore",
     quiz: "Quiz",
     progress: "Progress",
-    comingSoon: "Soon",
   },
   home: {
-    welcomeTitle: "Welcome to Anatomy",
+    welcomeTitle: "A 3D atlas of the human body",
     welcomeBody:
-      "Learn human anatomy by exploring it in 3D: rotate, select structures, peel away layers and practise.",
+      "Turn the model, pick a structure to see its name and details, and practise recognising it in short quizzes.",
     startExploring: "Start exploring",
     startQuiz: "Start a quiz",
     dueCount: (n: number) =>
@@ -24,20 +23,6 @@ export const en: Messages = {
     whatToStudy: "What are you studying?",
     structuresCount: (n: number) =>
       n === 1 ? "1 structure" : `${n} structures`,
-    features: {
-      explore: {
-        title: "3D exploration",
-        body: "Rotate, zoom and focus on any structure.",
-      },
-      identify: {
-        title: "Identify structures",
-        body: "Tap a structure to see its English, Latin and Hebrew names.",
-      },
-      quiz: {
-        title: "Active recall",
-        body: "Quizzes, weak-structure tracking and spaced review.",
-      },
-    },
   },
   viewer: {
     loading: "Loading anatomy…",
@@ -49,6 +34,7 @@ export const en: Messages = {
     showAll: "Show all",
     exitIsolate: "Exit isolate",
     systems: "Systems",
+    legend: "Legend",
     shortcuts: "Keyboard shortcuts",
     settings: "Settings",
     close: "Close",
@@ -64,7 +50,6 @@ export const en: Messages = {
     focus: "Focus",
     isolate: "Isolate",
     hide: "Hide",
-    studyThis: "Study this",
     unverified: "Unverified",
     unverifiedHint:
       "This term has not yet been checked against an authoritative source",
@@ -109,6 +94,8 @@ export const en: Messages = {
       mixed: { title: "Mixed", body: "Both types, alternating." },
     },
     wholeBody: "Whole body",
+    byRegion: "By region",
+    bySystem: "By system",
     dueForReview: "Due for review",
     reviewMistakes: "Review mistakes",
     start: "Start",

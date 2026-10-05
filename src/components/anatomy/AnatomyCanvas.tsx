@@ -32,7 +32,7 @@ const subscribeNever = () => () => {};
 function CenteredMessage({ children }: { children: React.ReactNode }) {
   return (
     <div className="absolute inset-0 flex items-center justify-center p-6">
-      <div className="panel flex max-w-sm flex-col items-center gap-4 p-6 text-center">
+      <div className="sheet flex max-w-sm flex-col items-center gap-4 p-6 text-center">
         {children}
       </div>
     </div>
@@ -51,13 +51,15 @@ function LoadingOverlay() {
       data-viewer-loading=""
     >
       <div className="flex w-56 flex-col items-center gap-3">
-        <p className="text-muted text-sm">{t.viewer.loading}</p>
+        <p className="text-graphite font-serif text-[17px]">
+          {t.viewer.loading}
+        </p>
         <div
-          className="bg-raised h-1 w-full overflow-hidden rounded-full"
+          className="bg-rule h-0.5 w-full overflow-hidden rounded-full"
           dir="ltr"
         >
           <div
-            className="bg-accent h-full transition-[width] duration-300"
+            className="bg-scrub h-full transition-[width] duration-300"
             style={{ width: `${percent}%` }}
           />
         </div>
@@ -69,7 +71,11 @@ function LoadingOverlay() {
   );
 }
 
-export default function AnatomyCanvas() {
+export default function AnatomyCanvas({
+  showSelectionLabel = false,
+}: {
+  showSelectionLabel?: boolean;
+}) {
   const t = useMessages();
   const { dataset } = useAnatomyData();
   const [attempt, setAttempt] = useState(0);
@@ -83,7 +89,7 @@ export default function AnatomyCanvas() {
   if (!hasWebGL) {
     return (
       <CenteredMessage>
-        <AlertTriangle className="text-warn size-6" aria-hidden />
+        <AlertTriangle className="text-caution size-6" aria-hidden />
         <p className="text-ink text-sm">{t.viewer.webglUnavailable}</p>
       </CenteredMessage>
     );
@@ -98,12 +104,12 @@ export default function AnatomyCanvas() {
       }}
       fallback={(retry) => (
         <CenteredMessage>
-          <AlertTriangle className="text-warn size-6" aria-hidden />
+          <AlertTriangle className="text-caution size-6" aria-hidden />
           <p className="text-ink text-sm">{t.viewer.loadFailed}</p>
           <button
             type="button"
             onClick={retry}
-            className="bg-accent text-accent-ink inline-flex items-center gap-2 rounded-[10px] px-4 py-2 text-sm font-medium"
+            className="bg-scrub inline-flex h-10 items-center gap-2 rounded-full px-5 text-sm font-medium text-white"
           >
             <RotateCw className="size-4" aria-hidden />
             {t.viewer.retry}
@@ -123,7 +129,10 @@ export default function AnatomyCanvas() {
         }}
       >
         <Suspense fallback={null}>
-          <AnatomyScene modelUrl={modelUrl} />
+          <AnatomyScene
+            modelUrl={modelUrl}
+            showSelectionLabel={showSelectionLabel}
+          />
         </Suspense>
       </Canvas>
       <LoadingOverlay />

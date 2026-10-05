@@ -36,6 +36,14 @@ A change is done only when all of these hold:
 
 ## UI
 
+- Follow `docs/DESIGN.md`: tokens from `globals.css` (`plate`, `sheet`, `ink`,
+  `graphite`, `rule`, `scrub`…), serif (`font-serif`) for names/titles, sans for
+  UI; sentence case; lists with hairline rules instead of card grids; quiet
+  controls (`IconButton`, `Button`, `Segmented` in `components/ui`). Avoid the
+  generic defaults listed there (all-caps eyebrows, "A · B" strings, arrows on
+  buttons, identical boxed cards, big-number stat tiles).
+- Review UI changes from screenshots before calling them done.
+
 - Hebrew is the default language; every string goes in both dictionaries.
 - Logical direction utilities only (`ms-`, `pe-`, `start-`, `end-`,
   `text-start`…). A test enforces this.

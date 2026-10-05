@@ -25,12 +25,20 @@ function SearchResult({ structure }: { structure: AnatomicalStructure }) {
         style={{ backgroundColor: SYSTEM_COLORS[structure.system] }}
       />
       <span className="flex min-w-0 flex-col">
-        <TermText name={primary} className="text-ink truncate text-sm" />
+        <TermText
+          name={primary}
+          showVerification={false}
+          className="text-ink truncate font-serif text-[16px]"
+        />
         {secondary && (
-          <TermText name={secondary} className="text-muted truncate text-xs" />
+          <TermText
+            name={secondary}
+            showVerification={false}
+            className="text-graphite truncate text-[13px]"
+          />
         )}
       </span>
-      <span className="text-faint ms-auto shrink-0 text-xs">
+      <span className="text-faint ms-auto shrink-0 text-[13px]">
         {t.systems[structure.system]}
       </span>
     </div>
@@ -62,8 +70,11 @@ export function StructureSearch() {
 
   return (
     <div className="relative w-full">
-      <div className="border-line bg-raised focus-within:border-accent/60 flex h-10 items-center gap-2 rounded-[10px] border px-3">
-        <Search className="text-muted size-4 shrink-0" aria-hidden />
+      <div className="bg-sheet focus-within:ring-scrub/40 flex h-11 items-center gap-2.5 rounded-full px-4 shadow-[var(--shadow-float)] ring-1 ring-transparent transition-shadow">
+        <Search
+          className="text-faint size-[18px] shrink-0 stroke-[1.75]"
+          aria-hidden
+        />
         <input
           ref={inputRef}
           id={STRUCTURE_SEARCH_INPUT_ID}
@@ -79,7 +90,7 @@ export function StructureSearch() {
           dir="auto"
           placeholder={t.search.placeholder}
           value={query}
-          className="text-ink placeholder:text-faint h-full min-w-0 flex-1 bg-transparent text-sm outline-none [&::-webkit-search-cancel-button]:hidden"
+          className="text-ink placeholder:text-faint h-full min-w-0 flex-1 bg-transparent text-[15px] outline-none [&::-webkit-search-cancel-button]:hidden"
           onChange={(event) => {
             setQuery(event.target.value);
             setActiveIndex(0);
@@ -108,7 +119,7 @@ export function StructureSearch() {
           <button
             type="button"
             aria-label={t.viewer.close}
-            className="text-muted hover:text-ink"
+            className="text-graphite hover:text-ink"
             onMouseDown={(event) => event.preventDefault()}
             onClick={() => setQuery("")}
           >
@@ -126,10 +137,10 @@ export function StructureSearch() {
           id={listboxId}
           role="listbox"
           aria-label={t.search.label}
-          className="panel absolute inset-x-0 top-12 z-30 max-h-[min(60dvh,420px)] overflow-y-auto p-1.5"
+          className="sheet divide-rule absolute inset-x-0 top-[52px] z-30 max-h-[min(60dvh,440px)] divide-y overflow-y-auto px-2 py-1 shadow-[var(--shadow-pop)]"
         >
           {results.length === 0 && (
-            <li className="text-muted px-3 py-3 text-sm">
+            <li className="text-graphite px-3 py-3 text-sm">
               {t.search.noResults}
             </li>
           )}
@@ -140,8 +151,8 @@ export function StructureSearch() {
               role="option"
               aria-selected={index === activeIndex}
               className={clsx(
-                "cursor-pointer rounded-[9px] px-3 py-2",
-                index === activeIndex ? "bg-raised" : "hover:bg-raised/60",
+                "cursor-pointer rounded-lg px-2 py-2.5 transition-colors",
+                index === activeIndex ? "bg-wash" : "hover:bg-wash/70",
               )}
               // mousedown, not click: fires before the input's blur closes the list.
               onMouseDown={(event) => {

@@ -14,19 +14,19 @@ export function QuizProgressBar({ onExit }: { onExit: () => void }) {
   const current = Math.min((run?.index ?? 0) + 1, total);
 
   return (
-    <div className="panel flex h-10 items-center gap-3 ps-4 pe-1">
-      <span className="text-ink shrink-0 text-sm tabular-nums">
+    <div className="bg-sheet/95 flex h-11 items-center gap-3 rounded-full ps-5 pe-1 shadow-[var(--shadow-float)] backdrop-blur">
+      <span className="text-ink shrink-0 text-[14px] tabular-nums">
         {total > 0 ? t.quiz.questionOf(current, total) : t.quiz.preparing}
       </span>
       <div
-        className="bg-raised h-1 flex-1 overflow-hidden rounded-full"
+        className="bg-rule h-0.5 flex-1 overflow-hidden rounded-full"
         role="progressbar"
         aria-valuemin={0}
         aria-valuemax={total}
         aria-valuenow={done}
       >
         <div
-          className="bg-accent h-full transition-[width] duration-300"
+          className="bg-scrub h-full transition-[width] duration-300"
           style={{ width: total ? `${(done / total) * 100}%` : 0 }}
         />
       </div>

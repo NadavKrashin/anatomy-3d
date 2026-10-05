@@ -13,7 +13,7 @@ _what to do next_ see `STATUS.md`.
 │ components/          React UI. Reads stores + context, calls lib/.  │
 │   anatomy/           3D canvas + viewer overlays                    │
 │   quiz/ progress/    quiz setup/run/summary, progress page          │
-│   home/ layout/ ui/  landing, top bar pieces, primitives            │
+│   home/ layout/ ui/  home, top strip, primitives (Button, Segmented) │
 ├─────────────────────────────────────────────────────────────────────┤
 │ store/ (zustand)     small, single-purpose client state stores      │
 │ hooks/               glue: store + context → convenient values      │

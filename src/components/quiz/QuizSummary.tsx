@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { StructureLabel } from "@/components/anatomy/StructureLabel";
 import { ViewerPanel } from "@/components/anatomy/ViewerPanel";
+import { Button, ButtonLink } from "@/components/ui/Button";
 import { useMessages } from "@/hooks/useMessages";
 import { summarizeSession } from "@/lib/quiz/summary";
 import { useQuizStore } from "@/store/quizStore";
@@ -11,9 +12,6 @@ interface QuizSummaryProps {
   onReviewMistakes: (structureIds: string[]) => void;
   onQuizAgain: () => void;
 }
-
-const action =
-  "inline-flex h-10 items-center rounded-[10px] px-4 text-sm font-medium transition-colors";
 
 /** End-of-quiz results (§22). */
 export function QuizSummary({
@@ -28,44 +26,43 @@ export function QuizSummary({
 
   return (
     <ViewerPanel label={t.quiz.complete}>
-      <div className="flex min-h-0 flex-col gap-5 overflow-y-auto p-5">
-        <h2 className="text-muted text-sm font-medium">{t.quiz.complete}</h2>
+      <div className="flex min-h-0 flex-col gap-6 overflow-y-auto p-5">
+        <p className="text-graphite text-[14px]">{t.quiz.complete}</p>
 
         {summary.total === 0 ? (
-          <p className="text-sm">{t.quiz.noEligible}</p>
+          <p className="text-[15px]">{t.quiz.noEligible}</p>
         ) : (
           <>
-            <div className="flex flex-col gap-1">
-              <p className="text-5xl font-semibold tabular-nums" dir="ltr">
-                {summary.percent}%
-              </p>
-              <p className="text-ink">
+            <div className="-mt-3 flex flex-col gap-1.5">
+              <h2 className="text-ink font-serif text-[28px] leading-tight font-medium">
                 {t.quiz.scoreLine(summary.correctFirstTry, summary.total)}
-              </p>
+              </h2>
               {summary.correctAfterRetry > 0 && (
-                <p className="text-muted text-sm">
+                <p className="text-graphite text-[14px]">
                   {t.quiz.afterRetry(summary.correctAfterRetry)}
                 </p>
               )}
-              <p className="text-muted text-sm">
+              <p className="text-graphite text-[14px]">
                 {t.quiz.averageTime}:{" "}
                 {t.quiz.seconds((summary.averageResponseMs / 1000).toFixed(1))}
               </p>
             </div>
 
-            <section className="flex flex-col gap-2">
-              <h3 className="text-muted text-[11px] font-semibold tracking-[0.08em] uppercase">
+            <section>
+              <h3 className="text-ink mb-1.5 text-[14px] font-semibold">
                 {t.quiz.toReview}
               </h3>
               {reviewIds.length === 0 ? (
-                <p className="text-sm">{t.quiz.nothingToReview}</p>
+                <p className="text-graphite text-[15px]">
+                  {t.quiz.nothingToReview}
+                </p>
               ) : (
-                <ul className="flex flex-col gap-1">
+                <ul className="divide-rule border-rule divide-y border-y">
                   {reviewIds.map((id) => (
                     <li key={id}>
                       <Link
                         href={`/explore?structure=${id}`}
-                        className="hover:bg-raised block rounded-[8px] px-2 py-1.5 text-sm"
+                        className="hover:bg-wash block rounded-lg px-1 py-2.5 font-serif text-[16px]"
                       >
                         <StructureLabel structureId={id} />
                       </Link>
@@ -77,31 +74,18 @@ export function QuizSummary({
           </>
         )}
       </div>
-      <footer className="border-line border-t p-3">
-        <div className="flex flex-wrap gap-2">
-          {reviewIds.length > 0 && (
-            <button
-              type="button"
-              onClick={() => onReviewMistakes(reviewIds)}
-              className={`${action} bg-accent text-accent-ink hover:opacity-90`}
-            >
-              {t.quiz.reviewMistakes}
-            </button>
-          )}
-          <button
-            type="button"
-            onClick={onQuizAgain}
-            className={`${action} border-line bg-raised hover:border-accent/50 border`}
-          >
-            {t.quiz.quizAgain}
-          </button>
-          <Link
-            href="/explore"
-            className={`${action} text-muted hover:text-ink`}
-          >
-            {t.quiz.returnToExplore}
-          </Link>
-        </div>
+      <footer className="flex flex-wrap gap-2 px-5 pt-2 pb-5">
+        {reviewIds.length > 0 && (
+          <Button size="sm" onClick={() => onReviewMistakes(reviewIds)}>
+            {t.quiz.reviewMistakes}
+          </Button>
+        )}
+        <Button variant="secondary" size="sm" onClick={onQuizAgain}>
+          {t.quiz.quizAgain}
+        </Button>
+        <ButtonLink variant="quiet" href="/explore">
+          {t.quiz.returnToExplore}
+        </ButtonLink>
       </footer>
     </ViewerPanel>
   );

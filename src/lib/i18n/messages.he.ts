@@ -6,7 +6,7 @@ import type {
 } from "@/types/anatomy";
 
 export const he = {
-  appName: "ANATOMY",
+  appName: "אנטומיה",
   tagline: "ללמוד את הגוף דרך חקירה שלו.",
   disclaimer:
     "לצורכי לימוד בלבד. יש לאמת את התוכן האנטומי מול המקורות הנדרשים במוסד הלימודים שלך.",
@@ -16,32 +16,17 @@ export const he = {
     explore: "חקירה",
     quiz: "בוחן",
     progress: "התקדמות",
-    comingSoon: "בקרוב",
   },
   home: {
-    welcomeTitle: "ברוכה הבאה ל־Anatomy",
+    welcomeTitle: "אטלס תלת־ממדי של גוף האדם",
     welcomeBody:
-      "לומדים אנטומיה של האדם דרך חקירה בתלת־ממד: מסובבים, בוחרים מבנים, מסתירים שכבות ומתרגלים.",
+      "מסובבים את המודל, בוחרים מבנה כדי לראות את שמו ואת הפרטים עליו, ומתרגלים זיהוי בבחנים קצרים.",
     startExploring: "להתחיל לחקור",
     startQuiz: "להתחיל בוחן",
     dueCount: (n: number) =>
       n === 1 ? "מבנה אחד ממתין לחזרה" : `${n} מבנים ממתינים לחזרה`,
     whatToStudy: "מה לומדים היום?",
     structuresCount: (n: number) => (n === 1 ? "מבנה אחד" : `${n} מבנים`),
-    features: {
-      explore: {
-        title: "חקירה תלת־ממדית",
-        body: "סיבוב, זום והתמקדות בכל מבנה.",
-      },
-      identify: {
-        title: "זיהוי מבנים",
-        body: "לחיצה על מבנה מציגה שם בעברית, באנגלית ובלטינית.",
-      },
-      quiz: {
-        title: "תרגול פעיל",
-        body: "בחנים, מעקב אחרי מבנים חלשים וחזרה מרווחת.",
-      },
-    },
   },
   viewer: {
     loading: "טוען אנטומיה…",
@@ -53,6 +38,7 @@ export const he = {
     showAll: "הצג הכול",
     exitIsolate: "יציאה מבידוד",
     systems: "מערכות",
+    legend: "מקרא",
     shortcuts: "קיצורי מקלדת",
     settings: "הגדרות",
     close: "סגירה",
@@ -68,7 +54,6 @@ export const he = {
     focus: "מיקוד",
     isolate: "בידוד",
     hide: "הסתרה",
-    studyThis: "ללמוד את זה",
     unverified: "לא אומת",
     unverifiedHint: "התרגום טרם אומת מול מקור מוסמך",
     noDetails: "אין עדיין מידע מאומת על מבנה זה.",
@@ -108,6 +93,8 @@ export const he = {
       mixed: { title: "משולב", body: "שני הסוגים לסירוגין." },
     },
     wholeBody: "כל הגוף",
+    byRegion: "לפי אזור",
+    bySystem: "לפי מערכת",
     dueForReview: "לחזרה עכשיו",
     reviewMistakes: "חזרה על טעויות",
     start: "להתחיל",

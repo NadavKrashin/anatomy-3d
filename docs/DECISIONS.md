@@ -66,6 +66,15 @@ lucide-react · Vitest 5 · Playwright 1.56 · gltf-transform 4.5.
 
 ## UI
 
+- **Visual direction (2026-10-05): see `docs/DESIGN.md`.** The first UI
+  (near-black, cyan accent, all-caps labels, boxed buttons) read as generic
+  AI output. Redesigned after Anthropic's _frontend-design_ guidance around
+  the anatomical-atlas subject: light "plate" ground, Frank Ruhl Libre +
+  IBM Plex Sans Hebrew, surgical-teal accent (the hue the tissue palette
+  lacks), legend instead of checkboxes, leader-line label on the selected
+  structure, contents-page home, ruled lists instead of cards. Side names are
+  written "Humerus (left)". The selected structure is mostly teal (a half
+  blend with red tissue turned grey).
 - No shadcn/ui yet: the slice needed only a button, a dialog (native
   `<dialog>`), selects (native, best on iPad) and panels. shadcn can be added
   when real form-heavy UI (custom study lists) arrives.
@@ -73,7 +82,8 @@ lucide-react · Vitest 5 · Playwright 1.56 · gltf-transform 4.5.
 - `/explore?region=upper-limb` starts with only that region visible — the home
   page's "What are you studying?" cards use it; full study scopes come later.
 - `TermText` shows the "unverified" badge in the info panel only; lists
-  (quiz options, progress rows, search) hide it to reduce noise.
+  (quiz options, progress rows, search, leader label) hide it to reduce noise.
+- Quiz/explore scopes leave out the "other" region/system buckets.
 
 ## Quiz (Phase 5)
 

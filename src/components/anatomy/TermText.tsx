@@ -33,7 +33,7 @@ export function TermText({
       {showUnverified && (
         <span
           title={t.structure.unverifiedHint}
-          className="border-warn/30 text-warn/90 rounded-full border px-1.5 text-[10px] leading-4 font-medium tracking-wide"
+          className="text-caution bg-caution/10 rounded-full px-2 font-sans text-[11px] leading-[18px] font-normal"
         >
           {t.structure.unverified}
         </span>

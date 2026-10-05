@@ -21,7 +21,7 @@ export function StructureInfoPanel() {
         onClose={() => useViewerStore.getState().select(null)}
       />
       <StructureActions structureId={structure.id} />
-      <div className="min-h-0 flex-1 overflow-y-auto p-4">
+      <div className="min-h-0 flex-1 overflow-y-auto px-5 py-4">
         <StructureDetails structure={structure} />
       </div>
     </ViewerPanel>

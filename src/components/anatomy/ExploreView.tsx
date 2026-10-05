@@ -61,11 +61,11 @@ export function ExploreView() {
   });
 
   return (
-    <ViewerFrame center={<StructureSearch />}>
+    <ViewerFrame center={<StructureSearch />} showSelectionLabel>
       <SystemVisibilityPanel
         className={clsx(
-          "absolute start-4 top-20 z-20",
-          systemsOpen ? "block" : "max-lg:hidden",
+          "absolute start-3 top-[76px] z-20",
+          systemsOpen ? "max-lg:sheet max-lg:py-2" : "max-lg:hidden",
         )}
       />
       <StructureInfoPanel />

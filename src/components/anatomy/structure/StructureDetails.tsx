@@ -4,8 +4,7 @@ import { useSettingsStore } from "@/store/settingsStore";
 import { DETAIL_SECTIONS, type AnatomicalStructure } from "@/types/anatomy";
 import { ContentText } from "./ContentText";
 
-const sectionHeading =
-  "text-muted mb-1 text-[11px] font-semibold tracking-[0.08em] uppercase";
+const sectionHeading = "text-ink mb-1.5 text-[14px] font-semibold";
 
 /** Description, bullet sections (function, origin, …) and clinical note — only what is known. */
 export function StructureDetails({
@@ -22,18 +21,20 @@ export function StructureDetails({
   });
 
   if (!details.description && !details.clinicalNote && sections.length === 0) {
-    return <p className="text-muted text-sm">{t.structure.noDetails}</p>;
+    return <p className="text-graphite text-sm">{t.structure.noDetails}</p>;
   }
 
   const englishOnly = locale === "he" && !details.description?.he;
 
   return (
-    <div className="flex flex-col gap-4 text-sm leading-relaxed">
+    <div className="flex flex-col gap-5 text-[15px] leading-relaxed">
       {englishOnly && t.structure.contentLanguageNote && (
-        <p className="text-faint text-xs">{t.structure.contentLanguageNote}</p>
+        <p className="text-faint text-[13px]">
+          {t.structure.contentLanguageNote}
+        </p>
       )}
       {details.description && (
-        <div className="text-ink/90">
+        <div className="text-ink">
           <ContentText text={details.description} as="p" />
         </div>
       )}
@@ -46,11 +47,11 @@ export function StructureDetails({
               <li
                 key={item.en}
                 dir={localizeText(item, locale).dir}
-                className="text-ink/90 flex gap-2"
+                className="text-ink flex gap-2.5"
               >
                 <span
                   aria-hidden
-                  className="bg-faint mt-2 size-1 shrink-0 rounded-full"
+                  className="bg-scrub/60 mt-[0.6em] size-1.5 shrink-0 rounded-full"
                 />
                 <ContentText text={item} />
               </li>
@@ -59,7 +60,7 @@ export function StructureDetails({
         </section>
       ))}
       {details.clinicalNote && (
-        <section className="border-line bg-raised rounded-[10px] border p-3">
+        <section className="border-scrub border-s-2 ps-4">
           <h3 className={sectionHeading}>{t.structure.clinicalNote}</h3>
           <div className="text-ink/90">
             <ContentText text={details.clinicalNote} as="p" />

@@ -14,19 +14,17 @@ export function QuizFeedback({ feedback }: { feedback: Feedback }) {
       return (
         <div
           role="status"
-          className="flex items-start gap-3 rounded-[10px] border border-emerald-400/30 bg-emerald-400/10 p-3"
+          className="bg-correct-soft flex items-start gap-3 rounded-xl p-4"
         >
           <CheckCircle2
-            className="mt-0.5 size-5 shrink-0 text-emerald-300"
+            className="text-correct mt-0.5 size-5 shrink-0"
             aria-hidden
           />
           <div className="flex flex-col gap-1">
-            <span className="font-medium text-emerald-200">
-              {t.quiz.correct}
-            </span>
+            <span className="text-correct font-medium">{t.quiz.correct}</span>
             <StructureLabel
               structureId={feedback.structureId}
-              className="text-sm"
+              className="text-[14px]"
             />
           </div>
         </div>
@@ -35,26 +33,23 @@ export function QuizFeedback({ feedback }: { feedback: Feedback }) {
       return (
         <div
           role="status"
-          className="flex items-start gap-3 rounded-[10px] border border-rose-400/30 bg-rose-400/10 p-3"
+          className="bg-wrong-soft flex items-start gap-3 rounded-xl p-4"
         >
-          <XCircle
-            className="mt-0.5 size-5 shrink-0 text-rose-300"
-            aria-hidden
-          />
-          <div className="flex flex-col gap-1 text-sm">
-            <span className="text-base font-medium text-rose-200">
+          <XCircle className="text-wrong mt-0.5 size-5 shrink-0" aria-hidden />
+          <div className="flex flex-col gap-1 text-[14px]">
+            <span className="text-wrong text-[15px] font-medium">
               {t.quiz.incorrect}
             </span>
             {feedback.final ? (
               <>
-                <span className="text-muted">{t.quiz.correctAnswer}</span>
+                <span className="text-graphite">{t.quiz.correctAnswer}</span>
                 <StructureLabel structureId={feedback.correctId} />
               </>
             ) : (
               <>
-                <span className="text-muted">{t.quiz.youChose}</span>
+                <span className="text-graphite">{t.quiz.youChose}</span>
                 <StructureLabel structureId={feedback.chosenId} />
-                <span className="text-muted">{t.quiz.tryAgain}</span>
+                <span className="text-graphite">{t.quiz.tryAgain}</span>
               </>
             )}
           </div>
@@ -64,11 +59,11 @@ export function QuizFeedback({ feedback }: { feedback: Feedback }) {
       return (
         <div
           role="status"
-          className="border-line bg-raised flex items-start gap-3 rounded-[10px] border p-3"
+          className="bg-wash flex items-start gap-3 rounded-xl p-4"
         >
-          <Eye className="text-accent mt-0.5 size-5 shrink-0" aria-hidden />
-          <div className="flex flex-col gap-1 text-sm">
-            <span className="text-muted">{t.quiz.revealedAnswer}</span>
+          <Eye className="text-scrub mt-0.5 size-5 shrink-0" aria-hidden />
+          <div className="flex flex-col gap-1 text-[14px]">
+            <span className="text-graphite">{t.quiz.revealedAnswer}</span>
             <StructureLabel structureId={feedback.structureId} />
           </div>
         </div>

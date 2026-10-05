@@ -20,7 +20,7 @@ function Label({
       {secondary && (
         <TermText
           name={secondary}
-          className="text-muted text-[0.85em]"
+          className="text-graphite text-[0.85em]"
           showVerification={false}
         />
       )}

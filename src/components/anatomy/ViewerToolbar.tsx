@@ -30,7 +30,10 @@ export function ViewerToolbar({
     <div
       role="toolbar"
       aria-label={t.viewer.settings}
-      className={clsx("panel flex items-center gap-1 p-1", className)}
+      className={clsx(
+        "bg-sheet/95 flex items-center gap-0.5 rounded-full p-1 shadow-[var(--shadow-float)] backdrop-blur",
+        className,
+      )}
     >
       <IconButton
         label={t.viewer.systems}

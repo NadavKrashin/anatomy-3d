@@ -1,12 +1,13 @@
 # Project status — START HERE
 
 > Living document. Every session updates it before finishing.
-> Last updated: 2026-10-05 (session 2).
+> Last updated: 2026-10-05 (session 2, design pass).
 
 ## Orientation (read in this order)
 
 1. This file — where we are and what's next.
 2. `docs/SPEC.md` — the product brief (sections are referenced as §N).
+   `docs/DESIGN.md` — visual direction; read before touching UI.
 3. `docs/ARCHITECTURE.md` — layers, boundaries, data flow, recipes.
 4. `docs/CONTRIBUTING.md` — conventions and the definition of done.
 5. `docs/DECISIONS.md` — why things are the way they are.
@@ -71,6 +72,8 @@ All verified by `npm run e2e:smoke` (criteria 1–18) against a production build
   `/explore` (`?region=<region>`, `?structure=<id>`), `/quiz`
   (`?scope=<id>`, e.g. `due`, `region:upper-limb`, `system:nervous`),
   `/progress`.
+- **Design:** light atlas-plate theme, serif names, legend, leader-line
+  label on the selected structure, contents-page home (`docs/DESIGN.md`).
 - **Viewer:** selection with x-ray highlight (buried structures stay
   visible), hover, info panel, search (he/en/la), focus with panel-aware
   framing, hide, isolate, systems, shortcuts (`/ Esc F I H R Q ?`).
@@ -128,3 +131,7 @@ All verified by `npm run e2e:smoke` (criteria 1–18) against a production build
   meshopt compression, runtime dataset builder with whole-muscle grouping,
   shared curated concepts, `detail` tag, x-ray selection highlight, quiz
   hides occluding muscles, attribution, docs.
+- **2026-10-05 · session 2 (cont.)** — Design pass following Anthropic's
+  frontend-design skill: `docs/DESIGN.md`, new tokens/fonts, quiet button
+  primitives, legend, leader label, contents home, list-based quiz setup and
+  progress, teal x-ray selection; e2e updated (21 checks).

@@ -3,9 +3,10 @@ import { Color, MeshStandardMaterial, type Material, type Mesh } from "three";
 export type MeshVisualState =
   "default" | "hovered" | "selected" | "ghosted" | "hidden";
 
-const HIGHLIGHT_COLOR = new Color("#5ac8fa");
+// Surgical-scrub teal: the one hue the tissue palette (red, blue, yellow, ivory) lacks.
+const HIGHLIGHT_COLOR = new Color("#14a39a");
 const HOVER_EMISSIVE_INTENSITY = 0.08;
-const SELECTED_EMISSIVE_INTENSITY = 0.45;
+const SELECTED_EMISSIVE_INTENSITY = 0.1;
 const GHOST_OPACITY = 0.1;
 /** Drawn after everything else so the x-ray highlight shows through occluders. */
 export const SELECTED_RENDER_ORDER = 10;
@@ -86,9 +87,11 @@ function createVariant(
     variant.depthWrite = false;
     variant.transparent = true;
     variant.opacity = 0.92;
-    // Thin structures (nerves, vessels) need a strong tint to read at a distance.
+    // Commit to the teal: tissue colours (mostly red) are near-complementary
+    // to it, so a half blend turns grey. A mostly-teal base keeps the shading
+    // (unlike a strong emissive glow) and reads clearly on thin nerves too.
     if ("color" in variant && variant.color instanceof Color) {
-      variant.color.lerp(HIGHLIGHT_COLOR, 0.35);
+      variant.color.lerp(HIGHLIGHT_COLOR, 0.7);
     }
   }
   if (variant instanceof MeshStandardMaterial) {

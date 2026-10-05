@@ -36,7 +36,7 @@ describe("<QuizQuestionPanel>", () => {
     ]);
     expect(screen.getByText("Find the")).toBeInTheDocument();
     expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent(
-      "Radial nerve — left",
+      "Radial nerve (left)",
     );
   });
 
