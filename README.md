@@ -19,7 +19,9 @@ Hebrew/English/Latin, focus, hide, isolate, systems), quiz yourself ("find the
 structure" by clicking in 3D, or "identify the highlighted structure"), and
 track progress with simple spaced review. See `docs/STATUS.md` for what's next.
 
-> The bundled model is a **development demo — not anatomically accurate**.
+> 3D model: **Z-Anatomy** (CC BY-SA 4.0), based on **BodyParts3D** (DBCLS,
+> CC BY-SA 2.1 JP) — whole skeleton plus the muscles, nerves and vessels of
+> the upper limbs. See `THIRD_PARTY_ASSETS.md`.
 > For educational purposes. Anatomy content should be verified against your
 > institution's required resources.
 
@@ -43,7 +45,8 @@ npm run dev            # http://localhost:3000
 | `npm run e2e:smoke`                             | Browser smoke test against a running app (`BASE_URL`, default `http://localhost:3100`); writes `docs/screenshots/` |
 | `npm run anatomy:inspect <file.glb> [-- --all]` | Mesh / vertex / triangle / material / texture counts, unnamed + duplicate names                                    |
 | `npm run anatomy:validate`                      | Cross-checks the active dataset's mesh map, metadata and model                                                     |
-| `npm run anatomy:generate-demo`                 | Regenerates `public/models/anatomy-demo.glb`                                                                       |
+| `npm run anatomy:generate-demo`                 | Regenerates `public/models/anatomy-demo.glb` (placeholder model used by tests)                                     |
+| `scripts/anatomy/z-anatomy/`                    | Z-Anatomy → GLB pipeline (Blender `bpy` export + meshopt); see its README                                          |
 
 E2E example:
 
@@ -70,7 +73,7 @@ src/
     quiz/  progress/      quiz setup / run / results, progress page
     home/  layout/  ui/   landing page, top-bar pieces, small primitives
     providers/            dataset context, settings (locale + <html dir>)
-  data/anatomy/           datasets — demo/{structures.ts, meshMap.json}
+  data/anatomy/           datasets — z-anatomy/ (active), demo/ (tests), content/ (curated concepts)
   hooks/                  useMessages, useStructureNames, shortcuts, …
   lib/
     anatomy/              registry, model adapter, names, search, visibility

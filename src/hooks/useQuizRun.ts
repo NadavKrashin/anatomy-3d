@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useAnatomyData } from "@/components/providers/AnatomyDataProvider";
+import type { AnatomyRegistry } from "@/lib/anatomy/registry";
 import { eligibleStructures } from "@/lib/quiz/eligibility";
 import { generateQuiz } from "@/lib/quiz/questionGenerator";
 import {
@@ -7,11 +8,13 @@ import {
   startQuiz,
   type QuizRun,
 } from "@/lib/quiz/quizEngine";
+import { systemsToHideFor } from "@/lib/quiz/questionView";
 import { createRng } from "@/lib/quiz/random";
 import { useProgressStore } from "@/store/progressStore";
 import { useQuizStore } from "@/store/quizStore";
 import { useSceneIndexStore } from "@/store/sceneIndexStore";
 import { useViewerStore } from "@/store/viewerStore";
+import { DETAIL_TAG } from "@/types/anatomy";
 import type { QuizConfig } from "@/types/quizConfig";
 
 /** Pause after a correct answer before moving on (§18 "short delay"). */
@@ -26,7 +29,11 @@ function cameraWasMoved(run: QuizRun): boolean {
 }
 
 /** Viewer state each quiz moment needs: what's highlighted, what's clickable, where the camera is. */
-function syncViewer(run: QuizRun, previous: QuizRun | null) {
+function syncViewer(
+  run: QuizRun,
+  previous: QuizRun | null,
+  registry: AnatomyRegistry,
+) {
   const viewer = useViewerStore.getState();
   const question = currentQuestion(run);
   const questionChanged =
@@ -35,12 +42,15 @@ function syncViewer(run: QuizRun, previous: QuizRun | null) {
   if (run.phase === "complete") {
     viewer.setSelectionLocked(false);
     viewer.select(null);
+    viewer.setHiddenSystems([]);
     viewer.resetCamera();
     return;
   }
   if (!question) return;
 
   if (run.phase === "answering" && questionChanged) {
+    const target = registry.get(question.structureId);
+    viewer.setHiddenSystems(target ? systemsToHideFor(target) : []);
     if (question.type === "identify") {
       // Highlight the structure to identify and keep clicks from moving it.
       // (It is visible: the quiz shows exactly its scope, which contains it.)
@@ -81,7 +91,10 @@ export function useQuizRun(config: QuizConfig) {
       const now = Date.now();
       const questions = generateQuiz({
         structures: eligibleStructures(config.scope, registry, selectable),
-        distractorPool: registry.structures.filter((s) => selectable.has(s.id)),
+        // Wrong options come from core structures only, never tiny branches.
+        distractorPool: registry.structures.filter(
+          (s) => selectable.has(s.id) && !s.tags.includes(DETAIL_TAG),
+        ),
         mode: config.mode,
         count: config.count,
         rng: createRng(now),
@@ -121,7 +134,7 @@ export function useQuizRun(config: QuizConfig) {
     const unsubscribe = useQuizStore.subscribe((state, previous) => {
       const run = state.run;
       if (!run || run === previous.run) return;
-      syncViewer(run, previous.run);
+      syncViewer(run, previous.run, registry);
 
       clearTimeout(advanceTimer);
       if (run.phase === "answered" && run.feedback?.kind === "correct") {
@@ -139,7 +152,7 @@ export function useQuizRun(config: QuizConfig) {
       clearTimeout(advanceTimer);
       unsubscribe();
     };
-  }, []);
+  }, [registry]);
 
   // A click on the model (selection change) answers a find question.
   useEffect(

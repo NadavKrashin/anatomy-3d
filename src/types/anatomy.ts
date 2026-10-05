@@ -83,6 +83,13 @@ export const DETAIL_SECTIONS = [
 ] as const satisfies readonly (keyof StructureDetails)[];
 export type DetailSection = (typeof DETAIL_SECTIONS)[number];
 
+/**
+ * Tag for fine-grained structures (small branches, digital vessels,
+ * inconstant structures). Searchable and explorable, but left out of
+ * built-in quiz scopes so quizzes focus on core exam material.
+ */
+export const DETAIL_TAG = "detail";
+
 export interface AnatomicalStructure {
   /** Stable, model-independent id, e.g. "biceps-brachii-left". */
   id: string;

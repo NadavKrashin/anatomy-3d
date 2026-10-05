@@ -34,6 +34,7 @@ interface ViewerState {
   isolate: (structureId: string) => void;
   exitIsolate: () => void;
   toggleSystem: (system: AnatomySystem) => void;
+  setHiddenSystems: (systems: Iterable<AnatomySystem>) => void;
   /** Make a structure visible regardless of hide/system/isolate filters. */
   reveal: (structureId: string, system: AnatomySystem) => void;
   focus: (structureId: string) => void;
@@ -120,6 +121,8 @@ export const useViewerStore = create<ViewerState>()((set, get) => ({
   isolate: (structureId) =>
     set({ isolatedStructureId: structureId, selectedStructureId: structureId }),
   exitIsolate: () => set({ isolatedStructureId: null }),
+
+  setHiddenSystems: (systems) => set({ hiddenSystems: new Set(systems) }),
 
   toggleSystem: (system) =>
     set((state) => ({

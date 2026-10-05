@@ -26,9 +26,12 @@ const dataset = (structures: AnatomicalStructure[]): AnatomyDataset => ({
 });
 
 describe("validateDataset", () => {
-  it("the shipped datasets have no issues", () => {
+  it("the shipped datasets have no errors", () => {
     expect(validateDataset(demoDataset)).toEqual([]);
-    expect(validateDataset(activeDataset)).toEqual([]);
+    // The real dataset has warnings (Hebrew names not yet written) but no errors.
+    expect(
+      validateDataset(activeDataset).filter((i) => i.severity === "error"),
+    ).toEqual([]);
   });
 
   it("flags non-kebab ids and empty names", () => {

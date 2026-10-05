@@ -53,12 +53,18 @@ describe("MaterialStateController", () => {
     expect(original.emissiveIntensity).toBe(1);
     expect(original.emissive.getHex()).toBe(0);
 
+    // Selected structures are drawn last, through anything in front of them.
+    const selected = a.material;
+    expect(selected.depthTest).toBe(false);
+    expect(a.renderOrder).toBeGreaterThan(0);
+
     controller.apply(a, "hidden");
     expect(a.visible).toBe(false);
     expect(a.userData.interactive).toBe(false);
 
     controller.dispose();
     expect(a.material).toBe(original);
+    expect(a.renderOrder).toBe(0);
     expect(a.visible).toBe(true);
   });
 

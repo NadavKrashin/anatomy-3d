@@ -1,0 +1,4324 @@
+[
+  {
+    "name": "(Abdominal part of pectoralis major muscle).l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 756,
+    "group": "Pectoralis major muscle"
+  },
+  {
+    "name": "(Abdominal part of pectoralis major muscle).r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 756,
+    "group": "Pectoralis major muscle"
+  },
+  {
+    "name": "(Communicating branch of median nerve with ulnar nerve).l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 300
+  },
+  {
+    "name": "(Communicating branch of median nerve with ulnar nerve).r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 300
+  },
+  {
+    "name": "(Ulnar recurrent artery).l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 130
+  },
+  {
+    "name": "(Ulnar recurrent artery).r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 130
+  },
+  {
+    "name": "Abductor digiti minimi of hand.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 336
+  },
+  {
+    "name": "Abductor digiti minimi of hand.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 336
+  },
+  {
+    "name": "Abductor pollicis brevis.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 312
+  },
+  {
+    "name": "Abductor pollicis brevis.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 312
+  },
+  {
+    "name": "Abductor pollicis longus.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1233
+  },
+  {
+    "name": "Abductor pollicis longus.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1233
+  },
+  {
+    "name": "Acromial part of deltoid muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1482,
+    "group": "Deltoid muscle"
+  },
+  {
+    "name": "Acromial part of deltoid muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1482,
+    "group": "Deltoid muscle"
+  },
+  {
+    "name": "Anconeus muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 723
+  },
+  {
+    "name": "Anconeus muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 723
+  },
+  {
+    "name": "Anterior branch of medial antebrachial cutaneous nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 732
+  },
+  {
+    "name": "Anterior branch of medial antebrachial cutaneous nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 732
+  },
+  {
+    "name": "Anterior cells of ethmoid bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "other",
+    "vertices": 372
+  },
+  {
+    "name": "Anterior cells of ethmoid bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "other",
+    "vertices": 372
+  },
+  {
+    "name": "Anterior circumflex humeral artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 554
+  },
+  {
+    "name": "Anterior circumflex humeral artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 554
+  },
+  {
+    "name": "Anterior circumflex humeral vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 789
+  },
+  {
+    "name": "Anterior circumflex humeral vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 789
+  },
+  {
+    "name": "Anterior division of inferior trunk of brachial plexus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 300
+  },
+  {
+    "name": "Anterior division of inferior trunk of brachial plexus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 300
+  },
+  {
+    "name": "Anterior division of middle trunk of brachial plexus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 156
+  },
+  {
+    "name": "Anterior division of middle trunk of brachial plexus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 156
+  },
+  {
+    "name": "Anterior division of superior trunk of brachial plexus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 156
+  },
+  {
+    "name": "Anterior division of superior trunk of brachial plexus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 156
+  },
+  {
+    "name": "Anterior interosseous nerve of forearm.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 732
+  },
+  {
+    "name": "Anterior interosseous nerve of forearm.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 732
+  },
+  {
+    "name": "Arytenoid cartilage.l",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "neck",
+    "vertices": 1892
+  },
+  {
+    "name": "Arytenoid cartilage.r",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "neck",
+    "vertices": 1892
+  },
+  {
+    "name": "Ascending part of trapezius muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 2298,
+    "group": "Trapezius muscle"
+  },
+  {
+    "name": "Ascending part of trapezius muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 2298,
+    "group": "Trapezius muscle"
+  },
+  {
+    "name": "Atlas (C1)",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "neck",
+    "vertices": 1106
+  },
+  {
+    "name": "Axillary artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 248
+  },
+  {
+    "name": "Axillary artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 248
+  },
+  {
+    "name": "Axillary nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 588
+  },
+  {
+    "name": "Axillary nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 588
+  },
+  {
+    "name": "Axillary vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 366
+  },
+  {
+    "name": "Axillary vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 366
+  },
+  {
+    "name": "Axis (C2)",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "neck",
+    "vertices": 1168
+  },
+  {
+    "name": "Basilic vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 897
+  },
+  {
+    "name": "Basilic vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 897
+  },
+  {
+    "name": "Body of sternum",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 2240
+  },
+  {
+    "name": "Brachial artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 602
+  },
+  {
+    "name": "Brachial artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 602
+  },
+  {
+    "name": "Brachial veins.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 484
+  },
+  {
+    "name": "Brachial veins.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 484
+  },
+  {
+    "name": "Brachialis muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1741
+  },
+  {
+    "name": "Brachialis muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1741
+  },
+  {
+    "name": "Brachioradialis muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 3658
+  },
+  {
+    "name": "Brachioradialis muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 3658
+  },
+  {
+    "name": "Calcaneus.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 726
+  },
+  {
+    "name": "Calcaneus.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 726
+  },
+  {
+    "name": "Capitate bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 238
+  },
+  {
+    "name": "Capitate bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 238
+  },
+  {
+    "name": "Cephalic vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 1428
+  },
+  {
+    "name": "Cephalic vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 1428
+  },
+  {
+    "name": "Circumflex scapular artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 246
+  },
+  {
+    "name": "Circumflex scapular artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 246
+  },
+  {
+    "name": "Circumflex scapular vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 304
+  },
+  {
+    "name": "Circumflex scapular vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 304
+  },
+  {
+    "name": "Clavicle.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 789
+  },
+  {
+    "name": "Clavicle.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 789
+  },
+  {
+    "name": "Clavicular head of pectoralis major muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 425,
+    "group": "Pectoralis major muscle"
+  },
+  {
+    "name": "Clavicular head of pectoralis major muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 425,
+    "group": "Pectoralis major muscle"
+  },
+  {
+    "name": "Clavicular part of deltoid muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1453,
+    "group": "Deltoid muscle"
+  },
+  {
+    "name": "Clavicular part of deltoid muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1453,
+    "group": "Deltoid muscle"
+  },
+  {
+    "name": "Coccyx",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 589
+  },
+  {
+    "name": "Common interosseous artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 71
+  },
+  {
+    "name": "Common interosseous artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 71
+  },
+  {
+    "name": "Common palmar digital arteries.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 697
+  },
+  {
+    "name": "Common palmar digital arteries.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 697
+  },
+  {
+    "name": "Common palmar digital branches of median nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1188
+  },
+  {
+    "name": "Common palmar digital branches of median nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1188
+  },
+  {
+    "name": "Common palmar digital branches of ulnar nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 900
+  },
+  {
+    "name": "Common palmar digital branches of ulnar nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 900
+  },
+  {
+    "name": "Coracobrachialis muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 582
+  },
+  {
+    "name": "Coracobrachialis muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 582
+  },
+  {
+    "name": "Corniculate cartilage.l",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "neck",
+    "vertices": 70
+  },
+  {
+    "name": "Corniculate cartilage.r",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "neck",
+    "vertices": 70
+  },
+  {
+    "name": "Costal cartilage of eighth rib.l",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 1314
+  },
+  {
+    "name": "Costal cartilage of eighth rib.r",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 1314
+  },
+  {
+    "name": "Costal cartilage of fifth rib.l",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 3248
+  },
+  {
+    "name": "Costal cartilage of fifth rib.r",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 3248
+  },
+  {
+    "name": "Costal cartilage of first rib.l",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 1388
+  },
+  {
+    "name": "Costal cartilage of first rib.r",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 1388
+  },
+  {
+    "name": "Costal cartilage of fourth rib.l",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 2238
+  },
+  {
+    "name": "Costal cartilage of fourth rib.r",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 2238
+  },
+  {
+    "name": "Costal cartilage of ninth rib.l",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 984
+  },
+  {
+    "name": "Costal cartilage of ninth rib.r",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 984
+  },
+  {
+    "name": "Costal cartilage of second rib.l",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 1706
+  },
+  {
+    "name": "Costal cartilage of second rib.r",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 1706
+  },
+  {
+    "name": "Costal cartilage of seventh rib.l",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 6884
+  },
+  {
+    "name": "Costal cartilage of seventh rib.r",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 6884
+  },
+  {
+    "name": "Costal cartilage of sixth rib.l",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 4062
+  },
+  {
+    "name": "Costal cartilage of sixth rib.r",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 4062
+  },
+  {
+    "name": "Costal cartilage of tenth rib.l",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 764
+  },
+  {
+    "name": "Costal cartilage of tenth rib.r",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 764
+  },
+  {
+    "name": "Costal cartilage of third rib.l",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 1802
+  },
+  {
+    "name": "Costal cartilage of third rib.r",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "thorax",
+    "vertices": 1802
+  },
+  {
+    "name": "Cricoid cartilage",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "neck",
+    "vertices": 941
+  },
+  {
+    "name": "Cuboid bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 501
+  },
+  {
+    "name": "Cuboid bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 501
+  },
+  {
+    "name": "Deep brachial artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 189
+  },
+  {
+    "name": "Deep brachial artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 189
+  },
+  {
+    "name": "Deep branch of radial nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1020
+  },
+  {
+    "name": "Deep branch of radial nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1020
+  },
+  {
+    "name": "Deep branch of ulnar nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 732
+  },
+  {
+    "name": "Deep branch of ulnar nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 732
+  },
+  {
+    "name": "Deep head of flexor pollicis brevis.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 371,
+    "group": "Flexor pollicis brevis"
+  },
+  {
+    "name": "Deep head of flexor pollicis brevis.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 371,
+    "group": "Flexor pollicis brevis"
+  },
+  {
+    "name": "Deep head of pronator teres.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 559,
+    "group": "Pronator teres"
+  },
+  {
+    "name": "Deep head of pronator teres.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 559,
+    "group": "Pronator teres"
+  },
+  {
+    "name": "Deep palmar arch.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 484
+  },
+  {
+    "name": "Deep palmar arch.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 484
+  },
+  {
+    "name": "Deep venous palmar arch.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 1015
+  },
+  {
+    "name": "Deep venous palmar arch.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 1015
+  },
+  {
+    "name": "Descending part of trapezius muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 3376,
+    "group": "Trapezius muscle"
+  },
+  {
+    "name": "Descending part of trapezius muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 3376,
+    "group": "Trapezius muscle"
+  },
+  {
+    "name": "Distal phalanx of fifth finger of foot.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 120
+  },
+  {
+    "name": "Distal phalanx of fifth finger of foot.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 120
+  },
+  {
+    "name": "Distal phalanx of fifth finger of hand.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 98
+  },
+  {
+    "name": "Distal phalanx of fifth finger of hand.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 98
+  },
+  {
+    "name": "Distal phalanx of first finger of foot.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 235
+  },
+  {
+    "name": "Distal phalanx of first finger of foot.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 235
+  },
+  {
+    "name": "Distal phalanx of first finger of hand.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 113
+  },
+  {
+    "name": "Distal phalanx of first finger of hand.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 113
+  },
+  {
+    "name": "Distal phalanx of fourth finger of foot.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 141
+  },
+  {
+    "name": "Distal phalanx of fourth finger of foot.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 141
+  },
+  {
+    "name": "Distal phalanx of fourth finger of hand.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 69
+  },
+  {
+    "name": "Distal phalanx of fourth finger of hand.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 69
+  },
+  {
+    "name": "Distal phalanx of second finger of foot.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 120
+  },
+  {
+    "name": "Distal phalanx of second finger of foot.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 120
+  },
+  {
+    "name": "Distal phalanx of second finger of hand.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 127
+  },
+  {
+    "name": "Distal phalanx of second finger of hand.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 127
+  },
+  {
+    "name": "Distal phalanx of third finger of foot.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 161
+  },
+  {
+    "name": "Distal phalanx of third finger of foot.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 161
+  },
+  {
+    "name": "Distal phalanx of third finger of hand.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 98
+  },
+  {
+    "name": "Distal phalanx of third finger of hand.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 98
+  },
+  {
+    "name": "Dorsal branch of ulnar nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 744
+  },
+  {
+    "name": "Dorsal branch of ulnar nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 744
+  },
+  {
+    "name": "Dorsal carpal anastomosis.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 130
+  },
+  {
+    "name": "Dorsal carpal anastomosis.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 130
+  },
+  {
+    "name": "Dorsal carpal branch of ulnar artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 366
+  },
+  {
+    "name": "Dorsal carpal branch of ulnar artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 366
+  },
+  {
+    "name": "Dorsal digital arteries of hand.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 3140
+  },
+  {
+    "name": "Dorsal digital arteries of hand.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 3140
+  },
+  {
+    "name": "Dorsal digital branches of radial nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 6852
+  },
+  {
+    "name": "Dorsal digital branches of radial nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 6852
+  },
+  {
+    "name": "Dorsal digital branches of ulnar nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 2484
+  },
+  {
+    "name": "Dorsal digital branches of ulnar nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 2484
+  },
+  {
+    "name": "Dorsal digital veins of hand.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 3864
+  },
+  {
+    "name": "Dorsal digital veins of hand.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 3864
+  },
+  {
+    "name": "Dorsal interossei muscles of hand.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 690
+  },
+  {
+    "name": "Dorsal interossei muscles of hand.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 690
+  },
+  {
+    "name": "Dorsal metacarpal arteries.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 1240
+  },
+  {
+    "name": "Dorsal metacarpal arteries.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 1240
+  },
+  {
+    "name": "Dorsal scapular nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1308
+  },
+  {
+    "name": "Dorsal scapular nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1308
+  },
+  {
+    "name": "Dorsal venous network of hand.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 543
+  },
+  {
+    "name": "Dorsal venous network of hand.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 543
+  },
+  {
+    "name": "Eighth rib.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 4137
+  },
+  {
+    "name": "Eighth rib.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 4137
+  },
+  {
+    "name": "Eleventh rib.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 2519
+  },
+  {
+    "name": "Eleventh rib.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 2519
+  },
+  {
+    "name": "Ethmoid bone",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 5082
+  },
+  {
+    "name": "Extensor carpi radialis brevis.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1573
+  },
+  {
+    "name": "Extensor carpi radialis brevis.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1573
+  },
+  {
+    "name": "Extensor carpi radialis longus.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1857
+  },
+  {
+    "name": "Extensor carpi radialis longus.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1857
+  },
+  {
+    "name": "Extensor digiti minimi.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1078
+  },
+  {
+    "name": "Extensor digiti minimi.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1078
+  },
+  {
+    "name": "Extensor digitorum.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 3201
+  },
+  {
+    "name": "Extensor digitorum.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 3201
+  },
+  {
+    "name": "Extensor indicis.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 573
+  },
+  {
+    "name": "Extensor indicis.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 573
+  },
+  {
+    "name": "Extensor pollicis brevis.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 590
+  },
+  {
+    "name": "Extensor pollicis brevis.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 590
+  },
+  {
+    "name": "Extensor pollicis longus.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 803
+  },
+  {
+    "name": "Extensor pollicis longus.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 803
+  },
+  {
+    "name": "Femur.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 1899
+  },
+  {
+    "name": "Femur.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 1899
+  },
+  {
+    "name": "Fibula.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 653
+  },
+  {
+    "name": "Fibula.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 653
+  },
+  {
+    "name": "Fifth metacarpal bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 258
+  },
+  {
+    "name": "Fifth metacarpal bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 258
+  },
+  {
+    "name": "Fifth metatarsal bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 449
+  },
+  {
+    "name": "Fifth metatarsal bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 449
+  },
+  {
+    "name": "Fifth rib.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 4690
+  },
+  {
+    "name": "Fifth rib.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 4690
+  },
+  {
+    "name": "First metacarpal bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 343
+  },
+  {
+    "name": "First metacarpal bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 343
+  },
+  {
+    "name": "First metatarsal bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 546
+  },
+  {
+    "name": "First metatarsal bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 546
+  },
+  {
+    "name": "First rib.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 1607
+  },
+  {
+    "name": "First rib.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 1607
+  },
+  {
+    "name": "Flexor carpi radialis.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 835
+  },
+  {
+    "name": "Flexor carpi radialis.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 835
+  },
+  {
+    "name": "Flexor digiti minimi of hand.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 156
+  },
+  {
+    "name": "Flexor digiti minimi of hand.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 156
+  },
+  {
+    "name": "Flexor digitorum profundus.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 3559
+  },
+  {
+    "name": "Flexor digitorum profundus.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 3559
+  },
+  {
+    "name": "Flexor pollicis longus.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 833
+  },
+  {
+    "name": "Flexor pollicis longus.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 833
+  },
+  {
+    "name": "Fourth metacarpal bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 323
+  },
+  {
+    "name": "Fourth metacarpal bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 323
+  },
+  {
+    "name": "Fourth metatarsal bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 419
+  },
+  {
+    "name": "Fourth metatarsal bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 419
+  },
+  {
+    "name": "Fourth rib.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 4325
+  },
+  {
+    "name": "Fourth rib.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 4325
+  },
+  {
+    "name": "Frontal bone",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 3902
+  },
+  {
+    "name": "Hamate bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 270
+  },
+  {
+    "name": "Hamate bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 270
+  },
+  {
+    "name": "Hip bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 1894
+  },
+  {
+    "name": "Hip bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 1894
+  },
+  {
+    "name": "Humeral head of extensor carpi ulnaris.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 411,
+    "group": "Extensor carpi ulnaris"
+  },
+  {
+    "name": "Humeral head of extensor carpi ulnaris.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 411,
+    "group": "Extensor carpi ulnaris"
+  },
+  {
+    "name": "Humeral head of flexor carpi ulnaris.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1954,
+    "group": "Flexor carpi ulnaris"
+  },
+  {
+    "name": "Humeral head of flexor carpi ulnaris.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1954,
+    "group": "Flexor carpi ulnaris"
+  },
+  {
+    "name": "Humero-ulnar head of flexor digitorum superficialis.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 6401,
+    "group": "Flexor digitorum superficialis"
+  },
+  {
+    "name": "Humero-ulnar head of flexor digitorum superficialis.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 6401,
+    "group": "Flexor digitorum superficialis"
+  },
+  {
+    "name": "Humerus.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 2143
+  },
+  {
+    "name": "Humerus.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 2143
+  },
+  {
+    "name": "Hyoid bone",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 664
+  },
+  {
+    "name": "Incus.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 1268
+  },
+  {
+    "name": "Incus.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 1268
+  },
+  {
+    "name": "Inferior lateral brachial cutaneous nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 300
+  },
+  {
+    "name": "Inferior lateral brachial cutaneous nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 300
+  },
+  {
+    "name": "Inferior nasal concha bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 238
+  },
+  {
+    "name": "Inferior nasal concha bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 238
+  },
+  {
+    "name": "Inferior subscapular nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1032
+  },
+  {
+    "name": "Inferior subscapular nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1032
+  },
+  {
+    "name": "Inferior trunk of brachial plexus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 300
+  },
+  {
+    "name": "Inferior trunk of brachial plexus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 300
+  },
+  {
+    "name": "Inferior ulnar collateral artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 307
+  },
+  {
+    "name": "Inferior ulnar collateral artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 307
+  },
+  {
+    "name": "Infraspinatus muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1585
+  },
+  {
+    "name": "Infraspinatus muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1585
+  },
+  {
+    "name": "Intermediate cuneiform bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 224
+  },
+  {
+    "name": "Intermediate cuneiform bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 224
+  },
+  {
+    "name": "Lacrimal bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 296
+  },
+  {
+    "name": "Lacrimal bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 296
+  },
+  {
+    "name": "Lateral antebrachial cutaneous nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 876
+  },
+  {
+    "name": "Lateral antebrachial cutaneous nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 876
+  },
+  {
+    "name": "Lateral cuneiform bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 321
+  },
+  {
+    "name": "Lateral cuneiform bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 321
+  },
+  {
+    "name": "Lateral head of triceps brachii.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1816,
+    "group": "Triceps brachii muscle"
+  },
+  {
+    "name": "Lateral head of triceps brachii.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1816,
+    "group": "Triceps brachii muscle"
+  },
+  {
+    "name": "Lateral pectoral nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 3660
+  },
+  {
+    "name": "Lateral pectoral nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 3660
+  },
+  {
+    "name": "Lateral process of nasal septal cartilage.l",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "head",
+    "vertices": 174
+  },
+  {
+    "name": "Lateral process of nasal septal cartilage.r",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "head",
+    "vertices": 174
+  },
+  {
+    "name": "Lateral thoracic artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 608
+  },
+  {
+    "name": "Lateral thoracic artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 608
+  },
+  {
+    "name": "Lateral thoracic vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 2125
+  },
+  {
+    "name": "Lateral thoracic vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 2125
+  },
+  {
+    "name": "Latissimus dorsi muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 10796
+  },
+  {
+    "name": "Latissimus dorsi muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 10796
+  },
+  {
+    "name": "Left subclavian artery",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 248
+  },
+  {
+    "name": "Left subclavian vein",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 248
+  },
+  {
+    "name": "Levator scapulae.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1543
+  },
+  {
+    "name": "Levator scapulae.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1543
+  },
+  {
+    "name": "Long head of biceps brachii.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1611,
+    "group": "Biceps brachii muscle"
+  },
+  {
+    "name": "Long head of biceps brachii.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1611,
+    "group": "Biceps brachii muscle"
+  },
+  {
+    "name": "Long head of triceps brachii.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1977,
+    "group": "Triceps brachii muscle"
+  },
+  {
+    "name": "Long head of triceps brachii.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1977,
+    "group": "Triceps brachii muscle"
+  },
+  {
+    "name": "Long thoracic nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 2040
+  },
+  {
+    "name": "Long thoracic nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 2040
+  },
+  {
+    "name": "Lower canine.l",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 640
+  },
+  {
+    "name": "Lower canine.r",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 640
+  },
+  {
+    "name": "Lower first molar tooth.l",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 2260
+  },
+  {
+    "name": "Lower first molar tooth.r",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 2260
+  },
+  {
+    "name": "Lower first premolar.l",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 613
+  },
+  {
+    "name": "Lower first premolar.r",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 613
+  },
+  {
+    "name": "Lower lateral incisor.l",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 522
+  },
+  {
+    "name": "Lower lateral incisor.r",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 522
+  },
+  {
+    "name": "Lower medial incisor.l",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 494
+  },
+  {
+    "name": "Lower medial incisor.r",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 494
+  },
+  {
+    "name": "Lower second molar tooth.l",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 840
+  },
+  {
+    "name": "Lower second molar tooth.r",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 840
+  },
+  {
+    "name": "Lower second premolar.l",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 592
+  },
+  {
+    "name": "Lower second premolar.r",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 592
+  },
+  {
+    "name": "Lumbrical muscles of hand.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 692
+  },
+  {
+    "name": "Lumbrical muscles of hand.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 692
+  },
+  {
+    "name": "Lunate bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 1046
+  },
+  {
+    "name": "Lunate bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 1046
+  },
+  {
+    "name": "Major alar cartilage.l",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "head",
+    "vertices": 174
+  },
+  {
+    "name": "Major alar cartilage.r",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "head",
+    "vertices": 174
+  },
+  {
+    "name": "Malleus.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 1993
+  },
+  {
+    "name": "Malleus.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 1993
+  },
+  {
+    "name": "Mandible",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 9388
+  },
+  {
+    "name": "Manubrium of sternum",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 1336
+  },
+  {
+    "name": "Maxilla.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 2399
+  },
+  {
+    "name": "Maxilla.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 2399
+  },
+  {
+    "name": "Medial antebrachial cutaneous nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 876
+  },
+  {
+    "name": "Medial antebrachial cutaneous nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 876
+  },
+  {
+    "name": "Medial brachial cutaneous nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 876
+  },
+  {
+    "name": "Medial brachial cutaneous nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 876
+  },
+  {
+    "name": "Medial cuneiform bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 498
+  },
+  {
+    "name": "Medial cuneiform bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 498
+  },
+  {
+    "name": "Medial head of triceps brachii.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1345,
+    "group": "Triceps brachii muscle"
+  },
+  {
+    "name": "Medial head of triceps brachii.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1345,
+    "group": "Triceps brachii muscle"
+  },
+  {
+    "name": "Medial pectoral nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1032
+  },
+  {
+    "name": "Medial pectoral nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1032
+  },
+  {
+    "name": "Median antebrachial vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 1098
+  },
+  {
+    "name": "Median antebrachial vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 1098
+  },
+  {
+    "name": "Median cubital vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 378
+  },
+  {
+    "name": "Median cubital vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 378
+  },
+  {
+    "name": "Median nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 2604
+  },
+  {
+    "name": "Median nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 2604
+  },
+  {
+    "name": "Middle cells of ethmoid bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "other",
+    "vertices": 484
+  },
+  {
+    "name": "Middle cells of ethmoid bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "other",
+    "vertices": 484
+  },
+  {
+    "name": "Middle collateral artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 189
+  },
+  {
+    "name": "Middle collateral artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 189
+  },
+  {
+    "name": "Middle phalanx of fifth finger of foot.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 110
+  },
+  {
+    "name": "Middle phalanx of fifth finger of foot.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 110
+  },
+  {
+    "name": "Middle phalanx of fifth finger of hand.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 148
+  },
+  {
+    "name": "Middle phalanx of fifth finger of hand.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 148
+  },
+  {
+    "name": "Middle phalanx of fourth finger of foot.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 226
+  },
+  {
+    "name": "Middle phalanx of fourth finger of foot.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 226
+  },
+  {
+    "name": "Middle phalanx of fourth finger of hand.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 225
+  },
+  {
+    "name": "Middle phalanx of fourth finger of hand.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 225
+  },
+  {
+    "name": "Middle phalanx of second finger of foot.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 193
+  },
+  {
+    "name": "Middle phalanx of second finger of foot.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 193
+  },
+  {
+    "name": "Middle phalanx of second finger of hand.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 159
+  },
+  {
+    "name": "Middle phalanx of second finger of hand.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 159
+  },
+  {
+    "name": "Middle phalanx of third finger of foot.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 202
+  },
+  {
+    "name": "Middle phalanx of third finger of foot.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 202
+  },
+  {
+    "name": "Middle phalanx of third finger of hand.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 182
+  },
+  {
+    "name": "Middle phalanx of third finger of hand.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 182
+  },
+  {
+    "name": "Middle trunk of brachial plexus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 156
+  },
+  {
+    "name": "Middle trunk of brachial plexus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 156
+  },
+  {
+    "name": "Muscular branches of axillary nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 588
+  },
+  {
+    "name": "Muscular branches of axillary nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 588
+  },
+  {
+    "name": "Muscular branches of median nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 624
+  },
+  {
+    "name": "Muscular branches of median nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 624
+  },
+  {
+    "name": "Muscular branches of radial nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1356
+  },
+  {
+    "name": "Muscular branches of radial nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1356
+  },
+  {
+    "name": "Muscular branches of ulnar nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 312
+  },
+  {
+    "name": "Muscular branches of ulnar nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 312
+  },
+  {
+    "name": "Musculocutaneous nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 732
+  },
+  {
+    "name": "Musculocutaneous nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 732
+  },
+  {
+    "name": "Nasal bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 148
+  },
+  {
+    "name": "Nasal bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 148
+  },
+  {
+    "name": "Nasal septal cartilage",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "head",
+    "vertices": 182
+  },
+  {
+    "name": "Navicular bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 368
+  },
+  {
+    "name": "Navicular bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 368
+  },
+  {
+    "name": "Ninth rib.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 3891
+  },
+  {
+    "name": "Ninth rib.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 3891
+  },
+  {
+    "name": "Oblique head of adductor pollicis.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 227,
+    "group": "Adductor pollicis"
+  },
+  {
+    "name": "Oblique head of adductor pollicis.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 227,
+    "group": "Adductor pollicis"
+  },
+  {
+    "name": "Occipital bone",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 3757
+  },
+  {
+    "name": "Opponens digiti minimi muscle of hand.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 210
+  },
+  {
+    "name": "Opponens digiti minimi muscle of hand.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 210
+  },
+  {
+    "name": "Opponens pollicis muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 194
+  },
+  {
+    "name": "Opponens pollicis muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 194
+  },
+  {
+    "name": "Palatine bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 732
+  },
+  {
+    "name": "Palatine bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 732
+  },
+  {
+    "name": "Palmar branch of median nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 588
+  },
+  {
+    "name": "Palmar branch of median nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 588
+  },
+  {
+    "name": "Palmar branch of ulnar nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 588
+  },
+  {
+    "name": "Palmar branch of ulnar nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 588
+  },
+  {
+    "name": "Palmar carpal branch of radial artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 130
+  },
+  {
+    "name": "Palmar carpal branch of radial artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 130
+  },
+  {
+    "name": "Palmar digital veins.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 6000
+  },
+  {
+    "name": "Palmar digital veins.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 6000
+  },
+  {
+    "name": "Palmar interossei muscles.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 87
+  },
+  {
+    "name": "Palmar interossei muscles.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 87
+  },
+  {
+    "name": "Palmar metacarpal arteries.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 933
+  },
+  {
+    "name": "Palmar metacarpal arteries.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 933
+  },
+  {
+    "name": "Palmaris longus muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 2177
+  },
+  {
+    "name": "Palmaris longus muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 2177
+  },
+  {
+    "name": "Parietal bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 3443
+  },
+  {
+    "name": "Parietal bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 3386
+  },
+  {
+    "name": "Patella.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 140
+  },
+  {
+    "name": "Patella.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 140
+  },
+  {
+    "name": "Pectoralis minor muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 2067
+  },
+  {
+    "name": "Pectoralis minor muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 2067
+  },
+  {
+    "name": "Pisiform bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 836
+  },
+  {
+    "name": "Pisiform bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 836
+  },
+  {
+    "name": "Posterior antebrachial cutaneous nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1308
+  },
+  {
+    "name": "Posterior antebrachial cutaneous nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1308
+  },
+  {
+    "name": "Posterior branch of medial antebrachial cutaneous nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1164
+  },
+  {
+    "name": "Posterior branch of medial antebrachial cutaneous nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1164
+  },
+  {
+    "name": "Posterior cells of ethmoid bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "other",
+    "vertices": 614
+  },
+  {
+    "name": "Posterior cells of ethmoid bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "other",
+    "vertices": 614
+  },
+  {
+    "name": "Posterior circumflex humeral artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 248
+  },
+  {
+    "name": "Posterior circumflex humeral artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 248
+  },
+  {
+    "name": "Posterior circumflex humeral vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 425
+  },
+  {
+    "name": "Posterior circumflex humeral vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 425
+  },
+  {
+    "name": "Posterior cord of brachial plexus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 300
+  },
+  {
+    "name": "Posterior cord of brachial plexus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 300
+  },
+  {
+    "name": "Posterior division of inferior trunk of brachial plexus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 156
+  },
+  {
+    "name": "Posterior division of inferior trunk of brachial plexus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 156
+  },
+  {
+    "name": "Posterior division of middle trunk of brachial plexus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 156
+  },
+  {
+    "name": "Posterior division of middle trunk of brachial plexus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 156
+  },
+  {
+    "name": "Posterior division of superior trunk of brachial plexus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 156
+  },
+  {
+    "name": "Posterior division of superior trunk of brachial plexus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 156
+  },
+  {
+    "name": "Posterior interosseous artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 245
+  },
+  {
+    "name": "Posterior interosseous artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 245
+  },
+  {
+    "name": "Posterior interosseous nerve of forearm.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 876
+  },
+  {
+    "name": "Posterior interosseous nerve of forearm.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 876
+  },
+  {
+    "name": "Pronator quadratus.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 512
+  },
+  {
+    "name": "Pronator quadratus.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 512
+  },
+  {
+    "name": "Proper palmar digital arteries.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 6496
+  },
+  {
+    "name": "Proper palmar digital arteries.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 6496
+  },
+  {
+    "name": "Proper palmar digital branches of median nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 5556
+  },
+  {
+    "name": "Proper palmar digital branches of median nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 5556
+  },
+  {
+    "name": "Proper palmar digital branches of ulnar nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 2916
+  },
+  {
+    "name": "Proper palmar digital branches of ulnar nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 2916
+  },
+  {
+    "name": "Proximal phalanx of fifth finger of foot.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 260
+  },
+  {
+    "name": "Proximal phalanx of fifth finger of foot.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 260
+  },
+  {
+    "name": "Proximal phalanx of fifth finger of hand.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 282
+  },
+  {
+    "name": "Proximal phalanx of fifth finger of hand.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 282
+  },
+  {
+    "name": "Proximal phalanx of first finger of foot.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 268
+  },
+  {
+    "name": "Proximal phalanx of first finger of foot.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 268
+  },
+  {
+    "name": "Proximal phalanx of first finger of hand.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 166
+  },
+  {
+    "name": "Proximal phalanx of first finger of hand.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 166
+  },
+  {
+    "name": "Proximal phalanx of fourth finger of foot.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 232
+  },
+  {
+    "name": "Proximal phalanx of fourth finger of foot.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 232
+  },
+  {
+    "name": "Proximal phalanx of fourth finger of hand.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 186
+  },
+  {
+    "name": "Proximal phalanx of fourth finger of hand.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 186
+  },
+  {
+    "name": "Proximal phalanx of second finger of foot.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 215
+  },
+  {
+    "name": "Proximal phalanx of second finger of foot.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 215
+  },
+  {
+    "name": "Proximal phalanx of second finger of hand.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 209
+  },
+  {
+    "name": "Proximal phalanx of second finger of hand.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 209
+  },
+  {
+    "name": "Proximal phalanx of third finger of foot.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 232
+  },
+  {
+    "name": "Proximal phalanx of third finger of foot.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 232
+  },
+  {
+    "name": "Proximal phalanx of third finger of hand.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 222
+  },
+  {
+    "name": "Proximal phalanx of third finger of hand.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 222
+  },
+  {
+    "name": "Radial artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 661
+  },
+  {
+    "name": "Radial artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 661
+  },
+  {
+    "name": "Radial collateral artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 543
+  },
+  {
+    "name": "Radial collateral artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 543
+  },
+  {
+    "name": "Radial head of flexor digitorum superficialis.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 640,
+    "group": "Flexor digitorum superficialis"
+  },
+  {
+    "name": "Radial head of flexor digitorum superficialis.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 640,
+    "group": "Flexor digitorum superficialis"
+  },
+  {
+    "name": "Radial nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1164
+  },
+  {
+    "name": "Radial nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1164
+  },
+  {
+    "name": "Radial veins.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 484
+  },
+  {
+    "name": "Radius.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 394
+  },
+  {
+    "name": "Radius.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 394
+  },
+  {
+    "name": "Recurrent interosseous artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 366
+  },
+  {
+    "name": "Recurrent interosseous artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 366
+  },
+  {
+    "name": "Rhomboid major muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 2402
+  },
+  {
+    "name": "Rhomboid major muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 2402
+  },
+  {
+    "name": "Rhomboid minor muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 747
+  },
+  {
+    "name": "Rhomboid minor muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 747
+  },
+  {
+    "name": "Right subclavian artery",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 189
+  },
+  {
+    "name": "Right subclavian vein",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 189
+  },
+  {
+    "name": "Roots of brachial plexus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 2388
+  },
+  {
+    "name": "Roots of brachial plexus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 2388
+  },
+  {
+    "name": "Sacrum",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 5832
+  },
+  {
+    "name": "Scaphoid bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 197
+  },
+  {
+    "name": "Scaphoid bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 197
+  },
+  {
+    "name": "Scapula.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 12690
+  },
+  {
+    "name": "Scapula.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 12690
+  },
+  {
+    "name": "Scapular spinal part of deltoid muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 2189,
+    "group": "Deltoid muscle"
+  },
+  {
+    "name": "Scapular spinal part of deltoid muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 2189,
+    "group": "Deltoid muscle"
+  },
+  {
+    "name": "Second metacarpal bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 384
+  },
+  {
+    "name": "Second metacarpal bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 384
+  },
+  {
+    "name": "Second metatarsal bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 347
+  },
+  {
+    "name": "Second metatarsal bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 347
+  },
+  {
+    "name": "Second rib.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 2684
+  },
+  {
+    "name": "Second rib.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 2684
+  },
+  {
+    "name": "Serratus anterior muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 12618
+  },
+  {
+    "name": "Serratus anterior muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 12618
+  },
+  {
+    "name": "Sesamoid bones of foot.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 149
+  },
+  {
+    "name": "Sesamoid bones of foot.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 149
+  },
+  {
+    "name": "Seventh rib.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 4890
+  },
+  {
+    "name": "Seventh rib.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 4890
+  },
+  {
+    "name": "Short head of biceps brachii.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1344,
+    "group": "Biceps brachii muscle"
+  },
+  {
+    "name": "Short head of biceps brachii.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1344,
+    "group": "Biceps brachii muscle"
+  },
+  {
+    "name": "Sinus of frontal bone",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 770
+  },
+  {
+    "name": "Sinus of sphenoid bone",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 210
+  },
+  {
+    "name": "Sixth rib.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 5078
+  },
+  {
+    "name": "Sixth rib.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 5078
+  },
+  {
+    "name": "Sphenoid bone",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 3650
+  },
+  {
+    "name": "Stapes.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 2171
+  },
+  {
+    "name": "Stapes.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 2171
+  },
+  {
+    "name": "Sternocostal head of pectoralis major muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1611,
+    "group": "Pectoralis major muscle"
+  },
+  {
+    "name": "Sternocostal head of pectoralis major muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1611,
+    "group": "Pectoralis major muscle"
+  },
+  {
+    "name": "Subclavian nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 444
+  },
+  {
+    "name": "Subclavian nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 444
+  },
+  {
+    "name": "Subclavius muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 397
+  },
+  {
+    "name": "Subclavius muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 397
+  },
+  {
+    "name": "Subscapular artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 71
+  },
+  {
+    "name": "Subscapular artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 71
+  },
+  {
+    "name": "Subscapularis muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1471
+  },
+  {
+    "name": "Subscapularis muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1471
+  },
+  {
+    "name": "Superficial branch of radial nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 2208
+  },
+  {
+    "name": "Superficial branch of radial nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 2208
+  },
+  {
+    "name": "Superficial branch of ulnar nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 444
+  },
+  {
+    "name": "Superficial branch of ulnar nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 444
+  },
+  {
+    "name": "Superficial head of flexor pollicis brevis.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 136,
+    "group": "Flexor pollicis brevis"
+  },
+  {
+    "name": "Superficial head of flexor pollicis brevis.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 136,
+    "group": "Flexor pollicis brevis"
+  },
+  {
+    "name": "Superficial head of pronator teres.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1273,
+    "group": "Pronator teres"
+  },
+  {
+    "name": "Superficial head of pronator teres.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1273,
+    "group": "Pronator teres"
+  },
+  {
+    "name": "Superficial palmar arch.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 602
+  },
+  {
+    "name": "Superficial palmar arch.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 602
+  },
+  {
+    "name": "Superficial transverse metacarpal ligament.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "vertices": 98
+  },
+  {
+    "name": "Superficial transverse metacarpal ligament.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "vertices": 98
+  },
+  {
+    "name": "Superficial venous palmar arch.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 897
+  },
+  {
+    "name": "Superficial venous palmar arch.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 897
+  },
+  {
+    "name": "Superior lateral brachial cutaneous nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1020
+  },
+  {
+    "name": "Superior lateral brachial cutaneous nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1020
+  },
+  {
+    "name": "Superior subscapular nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 588
+  },
+  {
+    "name": "Superior subscapular nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 588
+  },
+  {
+    "name": "Superior trunk of brachial plexus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 156
+  },
+  {
+    "name": "Superior trunk of brachial plexus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 156
+  },
+  {
+    "name": "Superior ulnar collateral artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 366
+  },
+  {
+    "name": "Superior ulnar collateral artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 366
+  },
+  {
+    "name": "Supinator.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1379
+  },
+  {
+    "name": "Supinator.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1379
+  },
+  {
+    "name": "Suprascapular artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 666
+  },
+  {
+    "name": "Suprascapular artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 666
+  },
+  {
+    "name": "Suprascapular nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 2508
+  },
+  {
+    "name": "Suprascapular nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 2508
+  },
+  {
+    "name": "Supraspinatus muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 717
+  },
+  {
+    "name": "Supraspinatus muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 717
+  },
+  {
+    "name": "Talus.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 677
+  },
+  {
+    "name": "Talus.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 677
+  },
+  {
+    "name": "Temporal bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 7051
+  },
+  {
+    "name": "Temporal bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 7051
+  },
+  {
+    "name": "Tenth rib.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 3515
+  },
+  {
+    "name": "Tenth rib.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 3515
+  },
+  {
+    "name": "Teres major muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 577
+  },
+  {
+    "name": "Teres major muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 577
+  },
+  {
+    "name": "Teres minor muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 763
+  },
+  {
+    "name": "Teres minor muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 763
+  },
+  {
+    "name": "Third metacarpal bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 356
+  },
+  {
+    "name": "Third metacarpal bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 356
+  },
+  {
+    "name": "Third metatarsal bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 409
+  },
+  {
+    "name": "Third metatarsal bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 409
+  },
+  {
+    "name": "Third rib.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 3492
+  },
+  {
+    "name": "Third rib.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 3492
+  },
+  {
+    "name": "Thoracodorsal nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 2340
+  },
+  {
+    "name": "Thoracodorsal nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 2340
+  },
+  {
+    "name": "Thyroid cartilage",
+    "system": "skeletal",
+    "tissue": "cartilage",
+    "region": "neck",
+    "vertices": 2247
+  },
+  {
+    "name": "Tibia.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 837
+  },
+  {
+    "name": "Tibia.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "lower-limb",
+    "vertices": 837
+  },
+  {
+    "name": "Transverse cervical artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 685
+  },
+  {
+    "name": "Transverse cervical artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 685
+  },
+  {
+    "name": "Transverse head of adductor pollicis.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 509,
+    "group": "Adductor pollicis"
+  },
+  {
+    "name": "Transverse head of adductor pollicis.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 509,
+    "group": "Adductor pollicis"
+  },
+  {
+    "name": "Transverse part of trapezius muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1494,
+    "group": "Trapezius muscle"
+  },
+  {
+    "name": "Transverse part of trapezius muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 1494,
+    "group": "Trapezius muscle"
+  },
+  {
+    "name": "Trapezium bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 252
+  },
+  {
+    "name": "Trapezium bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 252
+  },
+  {
+    "name": "Trapezoid bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 184
+  },
+  {
+    "name": "Trapezoid bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 184
+  },
+  {
+    "name": "Triquetrum bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 90
+  },
+  {
+    "name": "Triquetrum bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 90
+  },
+  {
+    "name": "Twelfth rib.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 1503
+  },
+  {
+    "name": "Twelfth rib.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 1503
+  },
+  {
+    "name": "Ulna.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 454
+  },
+  {
+    "name": "Ulna.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "upper-limb",
+    "vertices": 454
+  },
+  {
+    "name": "Ulnar artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 425
+  },
+  {
+    "name": "Ulnar artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "vertices": 425
+  },
+  {
+    "name": "Ulnar head of extensor carpi ulnaris.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 292,
+    "group": "Extensor carpi ulnaris"
+  },
+  {
+    "name": "Ulnar head of extensor carpi ulnaris.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 292,
+    "group": "Extensor carpi ulnaris"
+  },
+  {
+    "name": "Ulnar head of flexor carpi ulnaris.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 725,
+    "group": "Flexor carpi ulnaris"
+  },
+  {
+    "name": "Ulnar head of flexor carpi ulnaris.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "vertices": 725,
+    "group": "Flexor carpi ulnaris"
+  },
+  {
+    "name": "Ulnar nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1596
+  },
+  {
+    "name": "Ulnar nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "vertices": 1596
+  },
+  {
+    "name": "Ulnar veins.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 543
+  },
+  {
+    "name": "Ulnar veins.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "vertices": 543
+  },
+  {
+    "name": "Upper canine.l",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 737
+  },
+  {
+    "name": "Upper canine.r",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 737
+  },
+  {
+    "name": "Upper first molar tooth.l",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 1090
+  },
+  {
+    "name": "Upper first molar tooth.r",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 1090
+  },
+  {
+    "name": "Upper first premolar.l",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 844
+  },
+  {
+    "name": "Upper first premolar.r",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 844
+  },
+  {
+    "name": "Upper lateral incisor.l",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 726
+  },
+  {
+    "name": "Upper lateral incisor.r",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 726
+  },
+  {
+    "name": "Upper medial incisor.l",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 686
+  },
+  {
+    "name": "Upper medial incisor.r",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 686
+  },
+  {
+    "name": "Upper second molar tooth.l",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 924
+  },
+  {
+    "name": "Upper second molar tooth.r",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 924
+  },
+  {
+    "name": "Upper second premolar.l",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 779
+  },
+  {
+    "name": "Upper second premolar.r",
+    "system": "skeletal",
+    "tissue": "teeth",
+    "region": "head",
+    "vertices": 779
+  },
+  {
+    "name": "Vertebra C3",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "neck",
+    "vertices": 1216
+  },
+  {
+    "name": "Vertebra C4",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "neck",
+    "vertices": 972
+  },
+  {
+    "name": "Vertebra C5",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "neck",
+    "vertices": 1164
+  },
+  {
+    "name": "Vertebra C6",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "neck",
+    "vertices": 1148
+  },
+  {
+    "name": "Vertebra C7",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "neck",
+    "vertices": 1078
+  },
+  {
+    "name": "Vertebra L1",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 1581
+  },
+  {
+    "name": "Vertebra L2",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 1344
+  },
+  {
+    "name": "Vertebra L3",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 1600
+  },
+  {
+    "name": "Vertebra L4",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 1902
+  },
+  {
+    "name": "Vertebra L5",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 2016
+  },
+  {
+    "name": "Vertebra T1",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 973
+  },
+  {
+    "name": "Vertebra T10",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 1529
+  },
+  {
+    "name": "Vertebra T11",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 899
+  },
+  {
+    "name": "Vertebra T12",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 1293
+  },
+  {
+    "name": "Vertebra T2",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 1071
+  },
+  {
+    "name": "Vertebra T3",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 1172
+  },
+  {
+    "name": "Vertebra T4",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 1108
+  },
+  {
+    "name": "Vertebra T5",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 1076
+  },
+  {
+    "name": "Vertebra T6",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 890
+  },
+  {
+    "name": "Vertebra T7",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 1397
+  },
+  {
+    "name": "Vertebra T8",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 868
+  },
+  {
+    "name": "Vertebra T9",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "back",
+    "vertices": 1489
+  },
+  {
+    "name": "Vomer",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 514
+  },
+  {
+    "name": "Xiphoid process",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "thorax",
+    "vertices": 459
+  },
+  {
+    "name": "Zygomatic bone.l",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 666
+  },
+  {
+    "name": "Zygomatic bone.r",
+    "system": "skeletal",
+    "tissue": "bone",
+    "region": "head",
+    "vertices": 666
+  }
+]

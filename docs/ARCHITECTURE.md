@@ -76,6 +76,13 @@ ancestors are tried (multi-primitive meshes load as a group of meshes).
   `data/anatomy/index.ts → activeDataset`, provided via
   `components/providers/AnatomyDataProvider.tsx` (registry, adapter, search
   are built once per dataset).
+- Datasets: `data/anatomy/z-anatomy/` (active — real model; structures built
+  at runtime from the export `manifest.json` by `build.ts`) and
+  `data/anatomy/demo/` (placeholder, used by tests). Curated names/Hebrew/
+  details live once per concept in `data/anatomy/content/concepts.ts` and are
+  attached with `withConcept()`.
+- `DETAIL_TAG` marks fine-grained structures (branches, inconstant ones):
+  explorable, but skipped by built-in quiz scopes.
 - `lib/anatomy/validateDataset.ts` enforces data invariants (kebab-case ids,
   side suffixes, consistent bilateral groups, mesh map consistency). It runs
   in unit tests and in `npm run anatomy:validate`.
@@ -195,7 +202,13 @@ parameters) so logic is deterministic.
 `npm test && npm run anatomy:validate`.
 
 **Add a dataset / real model** — see README "Swapping in a real model". Also
-record licensing in `THIRD_PARTY_ASSETS.md` first.
+record licensing in `THIRD_PARTY_ASSETS.md` first. For Z-Anatomy regions,
+extend `scripts/anatomy/z-anatomy/export_glb.py` (README in that folder).
+
+**Add curated content (Hebrew name, details) for a structure** — add or
+extend a concept in `data/anatomy/content/concepts.ts`, map the dataset's
+English base name to it (`CONCEPT_BY_NAME` in `z-anatomy/build.ts`), and list
+the Hebrew term in `docs/CONTENT_REVIEW.md`.
 
 **Add a UI string** — add the key to `messages.he.ts` (TypeScript will then
 demand it in `messages.en.ts`), use via `useMessages()`.

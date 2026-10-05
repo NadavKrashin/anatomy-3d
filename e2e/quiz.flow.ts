@@ -125,7 +125,9 @@ async function runQuizFlow(page: Page) {
   await page
     .getByRole("radio", { name: new RegExp(he.quiz.modes.identify.title) })
     .check({ force: true });
-  await page.getByRole("radio", { name: "5" }).check({ force: true });
+  await page
+    .getByRole("radio", { name: "5", exact: true })
+    .check({ force: true });
   await page.getByRole("button", { name: he.quiz.start }).click();
   await waitForModel(page);
   assert(

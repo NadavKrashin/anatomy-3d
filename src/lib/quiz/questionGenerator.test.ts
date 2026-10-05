@@ -43,6 +43,37 @@ describe("eligibleStructures", () => {
   });
 });
 
+describe("eligibleStructures — detail structures", () => {
+  const detailed = createRegistry([
+    ...demoDataset.structures,
+    { ...demoDataset.structures[0]!, id: "tiny-branch", tags: ["detail"] },
+  ]);
+  const selectable = new Set(detailed.structures.map((s) => s.id));
+
+  it("skips detail structures in built-in scopes", () => {
+    const scope = {
+      id: "all",
+      kind: "all" as const,
+      structureIds: ["heart", "tiny-branch"],
+    };
+    expect(
+      eligibleStructures(scope, detailed, selectable).map((s) => s.id),
+    ).toEqual(["heart"]);
+  });
+
+  it("keeps them in custom scopes the student chose", () => {
+    const scope = {
+      id: "c",
+      kind: "custom" as const,
+      name: "Mine",
+      structureIds: ["heart", "tiny-branch"],
+    };
+    expect(
+      eligibleStructures(scope, detailed, selectable).map((s) => s.id),
+    ).toEqual(["heart", "tiny-branch"]);
+  });
+});
+
 describe("generateQuiz", () => {
   const structures = eligibleStructures(
     scope("region:upper-limb"),

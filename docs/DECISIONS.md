@@ -123,3 +123,47 @@ lucide-react · Vitest 5 · Playwright 1.56 · gltf-transform 4.5.
   kind for them.
 - No performance overlay yet; the demo model is ~23k triangles. Add
   instrumentation when the real model lands.
+
+## Real model: Z-Anatomy upper limb (Phase 8, started 2026-10-05)
+
+- **Source:** the FBX exports in the Z-Anatomy GitHub repo (per body system),
+  converted headlessly with Blender's Python module (`bpy` 4.5 from PyPI — no
+  Blender install). Licence approved by the user (CC BY-SA); NC-licensed
+  sub-models (inner ear, kidney) excluded. Pipeline:
+  `scripts/anatomy/z-anatomy/` (README there).
+- **Scope:** whole skeleton for context + all upper-limb muscles, nerves and
+  vessels (both sides), plus the pectoral/axillary/scapular structures that
+  Z-Anatomy's "upper limb" collection omits but courses teach. Fasciae,
+  sheaths, bursae, capsules excluded (they wrap and hide everything).
+  Landmark/attachment patch meshes (`.j`, `.ol`, `.el` …) excluded for now —
+  candidates for a future "origins & insertions" study mode.
+- **Size/perf:** 610 meshes, 771k vertices, 1.35M triangles → 18 MB raw →
+  **4.0 MB** with meshopt + quantization (no simplification needed). Loads and
+  indexes in ≈0.9 s locally; 40 hover moves over the densest arm area produce
+  no long tasks, so no BVH yet (`e2e/perf-probe.ts` to re-measure).
+  `optimize-glb.ts` never joins meshes — every structure must stay a node.
+- **Materials:** one per tissue (bone, cartilage, teeth, muscle, ligament,
+  nerve, artery, vein), decided from the anatomical _name_ (source material
+  slots were unreliable — bones list cartilage first) and every face pointed
+  at slot 0.
+- **Structures are built at runtime** from the committed export manifest
+  (`src/data/anatomy/z-anatomy/build.ts`, unit-tested) — no generated TS to
+  keep in sync. Muscle parts are merged into whole muscles using Z-Anatomy's
+  Group-Muscles collection (biceps = long + short head meshes); the
+  "common flexor/extensor tendon" columns are not muscles and are skipped.
+  Heads as separate sub-structures (`parentId`) are a later refinement.
+- **Names:** Z-Anatomy's English (TA-based) names are used as-is; ids are
+  kebab-case + side. Parenthesised names are inconstant structures (tag
+  `inconstant`). Hebrew/Latin and medical details come from shared curated
+  concepts (`src/data/anatomy/content/concepts.ts`), used by both datasets.
+  ≈560 structures have no Hebrew name yet (validator warnings, not errors).
+- **`detail` tag:** small branches, digital vessels, divisions, networks and
+  inconstant structures. Searchable/explorable, but excluded from built-in
+  quiz scopes and from identify-question distractors; custom scopes (review
+  mistakes, due) keep them.
+- **Buried structures:** the selected structure renders as an x-ray highlight
+  (no depth test, drawn last, strong tint) so deep nerves/vessels are visible
+  when chosen. Quiz questions about non-muscle targets hide the muscular
+  system (`lib/quiz/questionView.ts`).
+- **Demo dataset** stays for unit/component tests (stable ids) and as a
+  template; the app runs on `activeDataset = zAnatomyUpperLimbDataset`.

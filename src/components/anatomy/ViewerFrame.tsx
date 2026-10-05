@@ -45,11 +45,9 @@ export function ViewerFrame({
 
       {children}
 
-      {dataset.info.isDemo && (
-        <p className="text-faint pointer-events-none absolute start-4 bottom-5 z-0 max-w-[40ch] text-[11px] max-lg:hidden">
-          {t.demoModelNotice}
-        </p>
-      )}
+      <p className="text-faint pointer-events-none absolute start-4 bottom-5 z-0 max-w-[48ch] text-[11px] max-lg:hidden">
+        {dataset.info.isDemo ? t.demoModelNotice : dataset.info.attribution}
+      </p>
     </main>
   );
 }

@@ -5,8 +5,7 @@
  *   npm run anatomy:inspect public/models/anatomy.glb -- --all   (list every mesh)
  */
 import { statSync } from "node:fs";
-import { NodeIO } from "@gltf-transform/core";
-import { ALL_EXTENSIONS } from "@gltf-transform/extensions";
+import { createIO } from "./io";
 
 const EXAMPLE_LIMIT = 25;
 
@@ -19,7 +18,7 @@ async function main() {
     process.exit(1);
   }
 
-  const io = new NodeIO().registerExtensions(ALL_EXTENSIONS);
+  const io = await createIO();
   const doc = await io.read(path);
   const root = doc.getRoot();
 

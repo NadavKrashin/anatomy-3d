@@ -7,10 +7,9 @@
  * Exits non-zero on errors; warnings are printed but don't fail.
  */
 import { resolve } from "node:path";
-import { NodeIO } from "@gltf-transform/core";
-import { ALL_EXTENSIONS } from "@gltf-transform/extensions";
 import { activeDataset } from "../../src/data/anatomy";
 import { stripDuplicateSuffix } from "../../src/lib/anatomy/meshNames";
+import { createIO } from "./io";
 import {
   validateDataset,
   type DatasetIssue,
@@ -23,9 +22,7 @@ async function modelIssues(): Promise<DatasetIssue[]> {
     "public",
     info.modelUrl.replace(/^\//, ""),
   );
-  const nodes = (
-    await new NodeIO().registerExtensions(ALL_EXTENSIONS).read(modelPath)
-  )
+  const nodes = (await (await createIO()).read(modelPath))
     .getRoot()
     .listNodes();
   const nodeNames = new Set(
@@ -58,10 +55,22 @@ async function main() {
   console.log(
     `Dataset "${info.id}": ${structures.length} structures, ${Object.keys(meshMap).length} mapped meshes`,
   );
-  for (const issue of issues) {
-    const where = issue.structureId ? ` [${issue.structureId}]` : "";
+  for (const issue of errors) {
     console.log(
-      `${issue.severity === "error" ? "✗" : "!"} ${issue.message}${where}`,
+      `✗ ${issue.message}${issue.structureId ? ` [${issue.structureId}]` : ""}`,
+    );
+  }
+  // Warnings are grouped: e.g. hundreds of "missing Hebrew name" are one line.
+  const warnings = new Map<string, string[]>();
+  for (const issue of issues.filter((i) => i.severity === "warning")) {
+    warnings.set(issue.message, [
+      ...(warnings.get(issue.message) ?? []),
+      issue.structureId ?? "",
+    ]);
+  }
+  for (const [message, ids] of warnings) {
+    console.log(
+      `! ${message}: ${ids.length} (e.g. ${ids.slice(0, 3).join(", ")})`,
     );
   }
   console.log(

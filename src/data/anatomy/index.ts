@@ -1,8 +1,8 @@
 import type { AnatomyDataset } from "@/types/anatomy";
-import { demoDataset } from "./demo";
+import { zAnatomyUpperLimbDataset } from "./z-anatomy";
 
 /**
- * The dataset the app runs on. Swapping in a real model means adding a new
- * dataset folder (structures + mesh map + GLB) and pointing this at it.
+ * The dataset the app runs on: real Z-Anatomy upper-limb anatomy. The
+ * placeholder demo dataset (./demo) remains for tests and as a template.
  */
-export const activeDataset: AnatomyDataset = demoDataset;
+export const activeDataset: AnatomyDataset = zAnatomyUpperLimbDataset;
