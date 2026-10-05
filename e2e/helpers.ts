@@ -14,7 +14,7 @@ export async function waitForModel(page: Page) {
   await page.waitForFunction(
     () => !document.querySelector("[data-viewer-loading]"),
     null,
-    { timeout: 30_000 },
+    { timeout: 120_000 },
   );
   await page.waitForTimeout(800);
 }
@@ -27,7 +27,11 @@ export async function openPage(
     viewport: { width: 1440, height: 900 },
   },
 ) {
-  const page = await browser.newPage(options);
+  // Reduced motion makes camera moves instant: the CI/sandbox GPU is a
+  // software rasterizer, and animating the whole-body model frame by frame
+  // there takes longer than a screenshot's timeout.
+  const page = await browser.newPage({ reducedMotion: "reduce", ...options });
+  page.setDefaultTimeout(60_000);
   page.on("pageerror", (e) => errors.push(e.message));
   page.on("console", (m) => {
     if (m.type() === "error") errors.push(m.text());

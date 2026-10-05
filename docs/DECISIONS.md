@@ -252,3 +252,37 @@ lucide-react · Vitest 5 · Playwright 1.56 · gltf-transform 4.5.
   teal selection; the info panel names the bones (registry names, so Hebrew
   appears where curated) and, for a bone, the muscles attached to it.
 - **Not shown in quizzes** (explore only), like the leader label.
+
+## 2026-10-05 — Whole body: five streamed model files
+
+- **Scope (user request):** every Z-Anatomy system — bones/cartilage/joints,
+  muscles, brain/spinal cord/nerves/eye, heart/vessels, organs and lymphoid
+  organs. Source ≈6.4M polygons; error-bounded simplification (0.5) gives
+  ≈3.1M triangles, 15.8 MB.
+- **Packaging:** one GLB per pack (skeleton, muscles, nerves, vessels,
+  organs) instead of one 16 MB file: the skeleton (2.6 MB) shows the body
+  quickly and frames the camera, the rest streams in. Alternatives: one file
+  (slow first paint), per-region files (structures span regions, and the
+  legend toggles systems). Picking without a BVH measured fine (ray-casting
+  isn't the cost; rendering is), so no BVH yet.
+- **Left out on purpose:** the non-commercial inner ear ("Internal ear"
+  collection) and kidney model (kidneys, renal pelvis, intrarenal vessels) —
+  a test guards it; coverings that hide what's inside on first view (pleura,
+  greater omentum, meninges, plus the fasciae/sheaths/bursae/capsules
+  already excluded); liver segments (they duplicate the liver mesh); helper
+  objects.
+- **Organ systems:** explicit name patterns in the export
+  (`VISCERAL_SYSTEMS`) — the source groups viscera only loosely; an organ
+  without a match stops the export.
+- **Regions:** Z-Anatomy collections first; structures they don't place by the
+  height of their centre against skeletal landmarks (mandible, manubrium,
+  top of the diaphragm, top of the sacrum) — a navigation aid; left/right
+  harmonised; whole muscles take their parts' majority region.
+- **Source fixes:** missing side suffixes completed from position, one
+  spelling difference between sides, a leading space; attachment patch sides
+  from the nearest mesh of their own muscle.
+- **Quizzes:** organ/brain/heart targets also hide bones; nuclei, tracts,
+  fasciculi, sulci and lymph-node groups are `detail` (out of built-in
+  quizzes).
+- **Attachments:** all 679 patches; the muscle-by-muscle review was extended
+  to the whole body (28 muscles shown as "not confirmed").

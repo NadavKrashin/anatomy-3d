@@ -2,14 +2,14 @@
 import { act, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
-import { zAnatomyUpperLimbDataset } from "@/data/anatomy/z-anatomy";
+import { zAnatomyDataset } from "@/data/anatomy/z-anatomy";
 import { renderWithProviders } from "@/test/renderWithProviders";
 import { useViewerStore } from "@/store/viewerStore";
 import { StructureInfoPanel } from "../StructureInfoPanel";
 
 const show = (id: string) => {
   renderWithProviders(<StructureInfoPanel />, {
-    dataset: zAnatomyUpperLimbDataset,
+    dataset: zAnatomyDataset,
   });
   act(() => useViewerStore.getState().select(id));
 };

@@ -26,6 +26,8 @@ export const en: Messages = {
   },
   viewer: {
     loading: "Loading anatomy…",
+    loadingMore: (loaded: number, total: number) =>
+      `Loading body systems ${loaded}/${total}`,
     loadFailed: "Unable to load anatomy model.",
     retry: "Retry",
     webglUnavailable:

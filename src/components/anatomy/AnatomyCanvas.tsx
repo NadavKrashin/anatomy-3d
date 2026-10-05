@@ -6,6 +6,7 @@ import { AlertTriangle, RotateCw } from "lucide-react";
 import { Suspense, useState, useSyncExternalStore } from "react";
 import { useAnatomyData } from "@/components/providers/AnatomyDataProvider";
 import { useMessages } from "@/hooks/useMessages";
+import { useSceneIndexStore } from "@/store/sceneIndexStore";
 import { useViewerStore } from "@/store/viewerStore";
 import { AnatomyScene } from "./AnatomyScene";
 import { ViewerErrorBoundary } from "./ViewerErrorBoundary";
@@ -39,10 +40,32 @@ function CenteredMessage({ children }: { children: React.ReactNode }) {
   );
 }
 
+/**
+ * Loading state. Until the first (primary) model file is in, a centred
+ * progress bar; while the other files stream in, a small pill that leaves
+ * the already-visible model usable. `data-viewer-loading` stays until every
+ * file is indexed (e2e waits on it).
+ */
 function LoadingOverlay() {
   const t = useMessages();
   const { progress, active } = useProgress();
-  if (!active && progress >= 100) return null;
+  const loaded = useSceneIndexStore((s) => s.models.size);
+  const expected = useSceneIndexStore((s) => s.expected);
+  const complete = useSceneIndexStore((s) => s.complete);
+  if (complete && !active) return null;
+  if (loaded > 0) {
+    return (
+      <div
+        className="pointer-events-none absolute inset-x-0 top-[72px] z-10 flex justify-center"
+        role="status"
+        data-viewer-loading=""
+      >
+        <p className="bg-sheet/90 text-graphite rounded-full px-3 py-1 text-[13px] shadow-[var(--shadow-float)]">
+          {t.viewer.loadingMore(loaded, expected)}
+        </p>
+      </div>
+    );
+  }
   const percent = Math.round(progress);
   return (
     <div
@@ -84,7 +107,7 @@ export default function AnatomyCanvas({
     detectWebGL,
     () => true,
   );
-  const modelUrl = dataset.info.modelUrl;
+  const { models } = dataset.info;
 
   if (!hasWebGL) {
     return (
@@ -99,7 +122,7 @@ export default function AnatomyCanvas({
     <ViewerErrorBoundary
       key={attempt}
       onRetry={() => {
-        useGLTF.clear(modelUrl);
+        for (const model of models) useGLTF.clear(model.url);
         setAttempt((n) => n + 1);
       }}
       fallback={(retry) => (
@@ -130,7 +153,7 @@ export default function AnatomyCanvas({
       >
         <Suspense fallback={null}>
           <AnatomyScene
-            modelUrl={modelUrl}
+            models={models}
             showSelectionLabel={showSelectionLabel}
           />
         </Suspense>

@@ -1,34 +1,43 @@
 import { useThree } from "@react-three/fiber";
 import { useEffect } from "react";
-import type { Object3D } from "three";
+import type { Mesh } from "three";
 import { isPeelable, outerLayer } from "@/lib/anatomy/peel";
-import type { SceneIndex } from "@/lib/anatomy/three/sceneIndex";
 import { countFrontPixelsByStructure } from "@/lib/anatomy/three/structureIdPass";
+import { useSceneIndexStore } from "@/store/sceneIndexStore";
 import { useViewerStore } from "@/store/viewerStore";
+import type { AnatomicalStructure } from "@/types/anatomy";
 
 /**
  * Answers peel requests from the viewer store: finds the structures that are
- * outermost from the current camera (one off-screen ID render) and hands the
- * peelable ones back as a layer. Must run inside the R3F canvas.
+ * outermost from the current camera across every loaded model file (one
+ * off-screen ID render) and hands the peelable ones back as a layer. Must
+ * run inside the R3F canvas.
  */
-export function useLayerPeeling(root: Object3D, index: SceneIndex) {
+export function useLayerPeeling() {
   const getThree = useThree((s) => s.get);
 
   useEffect(
     () =>
       useViewerStore.subscribe((state, previous) => {
         if (state.peelRequest === previous.peelRequest) return;
+        const models = [...useSceneIndexStore.getState().models.values()];
+        if (models.length === 0) return;
+        const wholeByMesh = new Map<Mesh, AnatomicalStructure>();
+        const structures = new Map<string, AnatomicalStructure>();
+        for (const { index } of models) {
+          for (const [mesh, s] of index.structureByMesh) {
+            wholeByMesh.set(mesh, s);
+            structures.set(s.id, s);
+          }
+          for (const s of index.partByMesh.values()) structures.set(s.id, s);
+        }
+
         const { gl, camera, invalidate } = getThree();
         const counts = countFrontPixelsByStructure(
           gl,
-          root,
+          models.map((m) => m.root),
           camera,
-          (mesh) => index.structureByMesh.get(mesh)?.id,
-        );
-        const structures = new Map(
-          [...index.structureByMesh.values(), ...index.partByMesh.values()].map(
-            (s) => [s.id, s],
-          ),
+          (mesh) => wholeByMesh.get(mesh)?.id,
         );
         // A selected part keeps its whole muscle (peeling works on wholes).
         const selected = state.selectedStructureId;
@@ -45,6 +54,6 @@ export function useLayerPeeling(root: Object3D, index: SceneIndex) {
         );
         invalidate();
       }),
-    [root, index, getThree],
+    [getThree],
   );
 }

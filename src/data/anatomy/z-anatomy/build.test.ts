@@ -8,7 +8,8 @@ import {
   toId,
   type ManifestEntry,
 } from "./build";
-import { zAnatomyUpperLimbDataset } from "./index";
+import { zAnatomyDataset } from "./index";
+import manifest from "./manifest.json";
 
 const entry = (
   name: string,
@@ -137,15 +138,13 @@ describe("buildZAnatomyDataset", () => {
   });
 });
 
-describe("the Z-Anatomy upper-limb dataset", () => {
-  const { structures, meshMap } = zAnatomyUpperLimbDataset;
+describe("the Z-Anatomy whole-body dataset", () => {
+  const { structures, meshMap } = zAnatomyDataset;
   const registry = createRegistry(structures);
 
   it("passes dataset validation without errors", () => {
     expect(
-      validateDataset(zAnatomyUpperLimbDataset).filter(
-        (i) => i.severity === "error",
-      ),
+      validateDataset(zAnatomyDataset).filter((i) => i.severity === "error"),
     ).toEqual([]);
   });
 
@@ -171,6 +170,55 @@ describe("the Z-Anatomy upper-limb dataset", () => {
   });
 
   it("maps every exported mesh", () => {
-    expect(Object.keys(meshMap)).toHaveLength(610);
+    expect(Object.keys(meshMap)).toHaveLength(manifest.length);
+  });
+
+  it("covers every region and the organ systems", () => {
+    const regions = new Set(registry.structures.map((s) => s.region));
+    for (const region of [
+      "head",
+      "neck",
+      "thorax",
+      "abdomen",
+      "pelvis",
+      "back",
+      "upper-limb",
+      "lower-limb",
+    ] as const)
+      expect(regions.has(region), region).toBe(true);
+    expect(registry.presentSystems()).toEqual(
+      expect.arrayContaining([
+        "respiratory",
+        "digestive",
+        "urinary",
+        "reproductive",
+        "endocrine",
+        "lymphatic",
+      ]),
+    );
+  });
+
+  it("never contains the non-commercially licensed models", () => {
+    const names = manifest.map((entry) => entry.name);
+    for (const banned of [
+      /^Kidney\b/,
+      /^Renal pelvis/,
+      /^Intrarenal/,
+      /^Cochlea\./,
+      /^Vestibule\./,
+    ])
+      expect(
+        names.filter((n) => banned.test(n)),
+        String(banned),
+      ).toEqual([]);
+  });
+
+  it("places organs by region", () => {
+    const region = (id: string) => registry.get(id)?.region;
+    expect(region("liver")).toBe("abdomen");
+    expect(region("stomach")).toBe("abdomen");
+    expect(region("ventricle-left")).toBe("thorax"); // "Left ventricle"
+    expect(region("urinary-bladder")).toBe("pelvis");
+    expect(region("thyroid-gland")).toBe("neck");
   });
 });

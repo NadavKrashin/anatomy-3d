@@ -85,7 +85,7 @@ ancestors are tried (multi-primitive meshes load as a group of meshes).
   (off on quiz start via `showOnly`).
 - Attachments (origins/insertions): `AnatomyDataset.attachments` =
   `{ modelUrl, items: MuscleAttachment[] }` — one patch mesh per attachment
-  in a separate GLB (`z-anatomy-upper-limb-attachments.glb`, exported by
+  in a separate GLB (`z-anatomy/attachments.glb`, exported by
   `export_attachments.py`), each with the muscle/part `structureId`, `kind`
   (`origin` | `insertion` | `attachment` = not confirmed) and the `boneId` it
   lies on. `lib/anatomy/attachments.ts` (pure): `attachmentsFor` (a muscle →
@@ -114,7 +114,7 @@ ancestors are tried (multi-primitive meshes load as a group of meshes).
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | `store/viewerStore.ts`     | selection, hover, hidden ids, hidden systems, isolated id, camera command, selection lock, peeled layers + peel request | no                                                           |
 | `store/settingsStore.ts`   | UI locale, term-language preference                                                                                     | localStorage (`anatomy.settings`)                            |
-| `store/sceneIndexStore.ts` | structure id → three.js meshes of the loaded model                                                                      | no (runtime objects)                                         |
+| `store/sceneIndexStore.ts` | loaded model files (root + scene index each), merged structure id → meshes, `complete`                                  | no (runtime objects)                                         |
 | `store/quizStore.ts`       | the active `QuizRun` (state of the pure quiz engine)                                                                    | no                                                           |
 | `store/progressStore.ts`   | `ProgressData`: per-structure progress + session history                                                                | via `ProgressRepository` → localStorage (`anatomy.progress`) |
 
@@ -174,6 +174,19 @@ AnatomyModel.apply()
   x-ray like the selection (no depth test, drawn after it), unpickable.
   `viewerStore.showAttachments` toggles them; `StructureAttachments` is the
   info-panel key (bones per kind for a muscle, muscles per kind for a bone).
+- Several model files: `AnatomyDatasetInfo.models` lists them (Z-Anatomy:
+  skeleton, muscles, nerves, vessels, organs). `AnatomyScene` → `ModelFiles`
+  mounts the first (primary) file, then — once it is indexed — the others,
+  each in its own Suspense so files appear as they arrive. Every
+  `AnatomyModel` applies its material/visibility state, then registers
+  `{ root, index }` in `sceneIndexStore`, which merges `objectsByStructure`
+  and sets `complete` when all files are in. The camera frames on the first
+  registration only (the primary file is the whole skeleton), so streaming
+  files never move it. Quizzes start on `complete`; deep links wait only for
+  their structure (`useStructureLoaded`); `LoadingOverlay` shows a centred bar
+  until the primary file, then a small "n/5" pill. Peeling renders all file
+  roots into one ID pass sharing a depth buffer (`useLayerPeeling` at scene
+  level).
 - `AnatomyCanvas` is loaded with `next/dynamic({ ssr: false })`, wrapped in an
   error boundary with retry, a WebGL capability check and a loading overlay.
 

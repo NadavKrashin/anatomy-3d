@@ -4,8 +4,8 @@
 
 3D anatomy study app (Next.js 16 App Router + React Three Fiber + Zustand +
 Tailwind 4) for a Hebrew-speaking medical student in Israel. Hebrew/RTL UI
-first, English/Latin terminology alongside. Real model: Z-Anatomy upper limb +
-skeleton (CC BY-SA).
+first, English/Latin terminology alongside. Real model: Z-Anatomy whole body in five
+streamed model files (CC BY-SA).
 
 > **Keep the docs current as you go — not at the end of the session.** The
 > user requires this (2026-10-05). Every commit that changes behaviour, code,
