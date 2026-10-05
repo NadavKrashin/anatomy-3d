@@ -5,6 +5,11 @@
 This is the canonical product brief. It is a condensed but complete version of the
 original prompt, plus decisions made since (see §53 and `docs/DECISIONS.md`).
 
+> **Visual style is defined by `docs/DESIGN.md`, which supersedes §16 and §42
+> where they differ** (the user asked for a redesign on 2026-10-05: the
+> original dark, "futuristic" look read as generic/AI-made; the app now uses a
+> light anatomical-atlas style). Do not revert to a dark theme.
+
 **Guiding question:** does this help a medical student reliably learn the
 structures they need for their exam? When flashy graphics and learning UX
 conflict, learning UX wins.
@@ -114,8 +119,8 @@ beats hallucinated.
 
 ## 16. UI
 
-Modern, premium, medical, minimal, slightly futuristic, serious. Dark neutral
-around the viewer. Desktop: systems panel (start side), viewer centre, info panel
+_Superseded by `docs/DESIGN.md` for colours and style (light atlas plate, not
+dark)._ Original brief: modern, premium, medical, minimal, serious. Desktop: systems panel (start side), viewer centre, info panel
 (end side), top bar (logo, search, Explore/Quiz/Progress), small bottom toolbar.
 Tablet/phone: drawers/sheets; the model stays the focus.
 

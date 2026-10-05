@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd \"$CLAUDE_PROJECT_DIR\" && { [ -d node_modules ] || npm ci --no-audit --no-fund >/dev/null 2>&1; } ; echo 'Anatomy project: read docs/STATUS.md first (current phase, next steps, how to verify).'"
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && { [ -d node_modules ] || npm ci --no-audit --no-fund >/dev/null 2>&1; } ; echo 'Anatomy project: read docs/STATUS.md (state, user decisions, next steps) and docs/CONTRIBUTING.md first; docs/DESIGN.md before any UI change. Done = npm run verify + e2e:smoke + screenshots reviewed + docs updated + CI green.'"
           }
         ]
       }

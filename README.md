@@ -5,14 +5,17 @@
 A web-based 3D anatomy learning app for medical students, Hebrew-first (RTL) with
 English and Latin terminology.
 
-| Doc                                                | What's in it                                             |
-| -------------------------------------------------- | -------------------------------------------------------- |
-| [`docs/STATUS.md`](docs/STATUS.md)                 | **Start here** — current phase, next steps, known issues |
-| [`docs/SPEC.md`](docs/SPEC.md)                     | Product brief                                            |
-| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)     | Layers, boundaries, data flow, how-to recipes            |
-| [`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md)     | Conventions and definition of done                       |
-| [`docs/DECISIONS.md`](docs/DECISIONS.md)           | Why things are the way they are                          |
-| [`docs/CONTENT_REVIEW.md`](docs/CONTENT_REVIEW.md) | Medical terms awaiting human verification                |
+| Doc                                                            | What's in it                                                |
+| -------------------------------------------------------------- | ----------------------------------------------------------- |
+| [`docs/STATUS.md`](docs/STATUS.md)                             | **Start here** — current phase, next steps, known issues    |
+| [`docs/SPEC.md`](docs/SPEC.md)                                 | Product brief                                               |
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)                 | Layers, boundaries, data flow, how-to recipes               |
+| [`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md)                 | Conventions, lint rules and definition of done              |
+| [`docs/DESIGN.md`](docs/DESIGN.md)                             | Visual direction, tokens and type — read before UI work     |
+| [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md)                     | Vercel deployment and post-deploy checklist                 |
+| [`docs/DECISIONS.md`](docs/DECISIONS.md)                       | Why things are the way they are                             |
+| [`docs/CONTENT_REVIEW.md`](docs/CONTENT_REVIEW.md)             | Medical terms awaiting human verification                   |
+| [`CLAUDE.md`](CLAUDE.md) + [`.claude/skills/`](.claude/skills) | Working instructions and project skills for Claude sessions |
 
 **Status:** MVP v0 complete — explore the 3D model (select, search in
 Hebrew/English/Latin, focus, hide, isolate, systems), quiz yourself ("find the

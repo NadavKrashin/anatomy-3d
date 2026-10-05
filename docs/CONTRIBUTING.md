@@ -6,8 +6,9 @@ These apply to every change, human or AI.
 
 A change is done only when all of these hold:
 
-1. `npm run verify` passes (format check, typecheck, lint, unit tests, dataset
-   validation, production build). CI runs the same steps.
+1. `npm run verify` passes (format check, typecheck — `next typegen` then
+   `tsc` — lint, unit tests, dataset validation, production build). CI runs the
+   same steps; after pushing, check that the CI run for the commit is green.
 2. Viewer/UI changes: `npm run e2e:smoke` passes against a fresh build, and the
    screenshots in `docs/screenshots/` were actually looked at.
 3. New behaviour has tests at the lowest sensible level (pure logic first).
@@ -18,8 +19,14 @@ A change is done only when all of these hold:
 
 ## Code
 
-- TypeScript strict, `noUncheckedIndexedAccess`; no `any`, no non-null `!`
-  (tests excepted), no floating promises — enforced by ESLint.
+- TypeScript strict, `noUncheckedIndexedAccess`, `noImplicitOverride`.
+- ESLint (`eslint.config.mjs`, type-aware): Next core-web-vitals + TS
+  recommended-type-checked, plus `no-non-null-assertion` (off in tests),
+  `no-floating-promises`, `no-misused-promises`, `consistent-type-imports`,
+  `switch-exhaustiveness-check`, `no-unused-vars` (`_` prefix allowed),
+  `eqeqeq`, `prefer-const`, `no-console` (warn/error only; off in scripts/e2e).
+  React Compiler hook rules apply (no mutating hook values, no setState in
+  render). Never disable a rule to get green — fix the cause.
 - `import type` / inline `type` imports for types only.
 - Small focused modules and components. If a component grows past ~150 lines
   or does two jobs, split it.
@@ -43,7 +50,6 @@ A change is done only when all of these hold:
   generic defaults listed there (all-caps eyebrows, "A · B" strings, arrows on
   buttons, identical boxed cards, big-number stat tiles).
 - Review UI changes from screenshots before calling them done.
-
 - Hebrew is the default language; every string goes in both dictionaries.
 - Logical direction utilities only (`ms-`, `pe-`, `start-`, `end-`,
   `text-start`…). A test enforces this.

@@ -132,6 +132,11 @@ AnatomyModel.apply()
   bounding sphere (`three/cameraFraming.ts`) + a focal offset that centres the
   structure in the area not covered by any element marked
   `data-viewer-obstruction` (the info panel).
+- Selection: the selected structure uses a mostly-teal material drawn last
+  without depth test (x-ray), so buried nerves/vessels stay visible.
+  `SelectionLabel` (explore only — it would give away quiz answers) puts an
+  atlas-style leader label at the selection's bounding-box centre via drei
+  `<Html>`.
 - `AnatomyCanvas` is loaded with `next/dynamic({ ssr: false })`, wrapped in an
   error boundary with retry, a WebGL capability check and a loading overlay.
 
@@ -166,7 +171,17 @@ AnatomyModel.apply()
 - `CameraController` also applies a camera command issued just before it
   mounted (quiz start and deep links react to the same index update).
 
-## 7. Internationalization & RTL
+## 7. UI layer & style
+
+Visual rules: `docs/DESIGN.md` (and the `anatomy-ui-style` skill). Tokens are
+Tailwind theme variables in `src/app/globals.css`. Shared primitives live in
+`components/ui` (`Button`/`ButtonLink`, `IconButton`, `Segmented`, `Kbd`);
+page shells in `components/layout` (`PageShell`, `PageHeader`, `Logo`,
+`MainNav`, `SettingsMenu`) and `components/anatomy` (`ViewerFrame`,
+`ViewerPanel`). Feature components compose these; they don't define new
+colours or button styles.
+
+## 8. Internationalization & RTL
 
 - UI strings: `lib/i18n/messages.he.ts` defines the shape (`Messages`);
   `messages.en.ts` must satisfy it, so missing translations fail type-checking.
@@ -180,7 +195,7 @@ AnatomyModel.apply()
   geresh, maqaf, leading ה) and Latin diacritics on both sides.
 - Keyboard shortcuts match `event.code` so they work on a Hebrew layout.
 
-## 8. Testing strategy
+## 9. Testing strategy
 
 | Level            | Where                                                                                                                                       | Runs with                                   |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
@@ -194,7 +209,7 @@ Test behaviour (what a student would observe or what a function returns), not
 implementation details. Inject randomness and time (seeded RNG, `now`
 parameters) so logic is deterministic.
 
-## 9. Recipes
+## 10. Recipes
 
 **Add a structure to a dataset** — add it to `data/anatomy/<ds>/structures.ts`
 (names with `verified: false`, only facts you are sure of), map its mesh in
