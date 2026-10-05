@@ -201,3 +201,5 @@ All verified by `npm run e2e:smoke` against a production build.
   suffix+material agreement, side from position, muscles whose labels
   contradict standard anatomy shown as unconfirmed; muscle ⇄ bone views in
   the info panel.
+- **2026-10-05 · session 2 (cont.)** — Muscle parts + origins & insertions
+  merged to `main` via PR #3 (user asked); Vercel redeploys production.
