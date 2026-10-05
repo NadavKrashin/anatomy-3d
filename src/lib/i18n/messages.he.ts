@@ -31,6 +31,8 @@ export const he = {
   },
   viewer: {
     loading: "טוען אנטומיה…",
+    loadingMore: (loaded: number, total: number) =>
+      `טוען מערכות גוף ${loaded}/${total}`,
     loadFailed: "לא ניתן לטעון את המודל האנטומי.",
     retry: "נסה שוב",
     webglUnavailable:

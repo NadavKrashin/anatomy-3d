@@ -57,16 +57,36 @@ the source's labels contradict standard descriptions
 reviewer confirms the correct kinds, record them there instead of the
 demotion):
 
-| Muscle                                              | Why                                                                       |
-| --------------------------------------------------- | ------------------------------------------------------------------------- |
-| Serratus anterior                                   | ribs labelled insertion, scapula labelled origin (standard: the reverse)  |
-| Pectoralis minor                                    | ribs 3–5 labelled insertion, scapula origin (standard: the reverse)       |
-| Subclavius                                          | clavicle labelled origin (standard: first rib origin, clavicle insertion) |
-| Latissimus dorsi                                    | scapula patch labelled insertion (standard insertion: humerus)            |
-| Trapezius (descending, transverse, ascending parts) | origin/insertion bones don't match the parts' standard attachments        |
-| Extensor carpi ulnaris                              | insertion on the triquetrum (standard: base of the 5th metacarpal)        |
-| Deep head of flexor pollicis brevis                 | origin on the 1st metacarpal (standard: trapezoid/capitate)               |
+| Muscle                                                                                                                        | Why                                                                                                    |
+| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Serratus anterior                                                                                                             | ribs labelled insertion, scapula labelled origin (standard: the reverse)                               |
+| Pectoralis minor                                                                                                              | ribs 3–5 labelled insertion, scapula origin (standard: the reverse)                                    |
+| Subclavius                                                                                                                    | clavicle labelled origin (standard: first rib origin, clavicle insertion)                              |
+| Latissimus dorsi                                                                                                              | scapula patch labelled insertion (standard insertion: humerus)                                         |
+| Trapezius (descending, transverse, ascending parts)                                                                           | origin/insertion bones don't match the parts' standard attachments                                     |
+| Extensor carpi ulnaris                                                                                                        | insertion on the triquetrum (standard: base of the 5th metacarpal)                                     |
+| Deep head of flexor pollicis brevis                                                                                           | origin on the 1st metacarpal (standard: trapezoid/capitate)                                            |
+| Scalenus anterior / medius / posterior                                                                                        | first rib labelled origin, cervical vertebrae insertion (standard: the reverse)                        |
+| Thyrohyoid                                                                                                                    | hyoid labelled origin (standard: thyroid cartilage origin, hyoid insertion)                            |
+| Longus capitis; rectus capitis anterior / lateralis / posterior major / posterior minor; obliquus capitis superior / inferior | the cranial end labelled origin (standard: the reverse)                                                |
+| Rectus abdominis                                                                                                              | costal cartilage labelled origin (standard: pubis origin, costal cartilages 5–7 and xiphoid insertion) |
+| External / internal abdominal oblique                                                                                         | rib and iliac attachments labelled the wrong way round                                                 |
+| Lateral pterygoid                                                                                                             | origin on maxilla/palatine (standard: sphenoid)                                                        |
+| Procerus, frontalis                                                                                                           | bony "origin" on the frontal bone doesn't fit the standard description                                 |
+| Extensor hallucis longus                                                                                                      | insertion on the proximal phalanx (standard: distal phalanx of the hallux)                             |
+| Lateral head of flexor hallucis brevis                                                                                        | origin on the 1st metatarsal (standard: cuboid / lateral cuneiform)                                    |
 
 Also unclassified by the source itself (suffix and material disagree): long
 head of triceps (scapula), sternocostal head of pectoralis major (sternum,
 costal cartilages), part of adductor pollicis (capitate).
+
+## Whole body — classifications to check
+
+- **Organ → system** (`VISCERAL_SYSTEMS` in `scripts/anatomy/z-anatomy/export_glb.py`):
+  pharynx parts are filed under digestive (nasopharynx under respiratory),
+  the epiglottis under respiratory, salivary glands under digestive, the
+  spleen/thymus/tonsils under lymphatic.
+- **Regions** of organs and midline structures are assigned by height against
+  skeletal landmarks (e.g. the liver and stomach → abdomen, the thyroid →
+  neck). Adjust in the export if the course divides regions differently.
+- The model is male; no kidneys or inner ear (licences), no female organs.

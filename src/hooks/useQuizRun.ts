@@ -88,7 +88,7 @@ function syncViewer(
 export function useQuizRun(config: QuizConfig) {
   const { registry } = useAnatomyData();
 
-  // Start once the model's meshes are indexed (only selectable structures are asked).
+  // Start once every model file is indexed (only selectable structures are asked).
   useEffect(() => {
     const begin = (index: ReadonlyMap<string, unknown>) => {
       if (useQuizStore.getState().run) return;
@@ -121,10 +121,12 @@ export function useQuizRun(config: QuizConfig) {
       );
     };
 
-    const index = useSceneIndexStore.getState().objectsByStructure;
-    if (index) begin(index);
+    // Every model file must be in, or structures still loading couldn't be asked.
+    const { complete, objectsByStructure } = useSceneIndexStore.getState();
+    if (complete && objectsByStructure) begin(objectsByStructure);
     const unsubscribe = useSceneIndexStore.subscribe((state) => {
-      if (state.objectsByStructure) begin(state.objectsByStructure);
+      if (state.complete && state.objectsByStructure)
+        begin(state.objectsByStructure);
     });
     return () => {
       unsubscribe();

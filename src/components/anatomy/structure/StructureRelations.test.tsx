@@ -2,7 +2,7 @@
 import { act, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
-import { zAnatomyUpperLimbDataset } from "@/data/anatomy/z-anatomy";
+import { zAnatomyDataset } from "@/data/anatomy/z-anatomy";
 import { renderWithProviders } from "@/test/renderWithProviders";
 import { useViewerStore } from "@/store/viewerStore";
 import { StructureInfoPanel } from "../StructureInfoPanel";
@@ -11,7 +11,7 @@ describe("<StructureRelations> (in the info panel)", () => {
   it("lists a muscle's parts and navigates part → whole", async () => {
     const user = userEvent.setup();
     renderWithProviders(<StructureInfoPanel />, {
-      dataset: zAnatomyUpperLimbDataset,
+      dataset: zAnatomyDataset,
     });
     act(() => useViewerStore.getState().select("biceps-brachii-muscle-left"));
 
@@ -40,7 +40,7 @@ describe("<StructureRelations> (in the info panel)", () => {
 
   it("shows nothing for a structure without parts", () => {
     renderWithProviders(<StructureInfoPanel />, {
-      dataset: zAnatomyUpperLimbDataset,
+      dataset: zAnatomyDataset,
     });
     act(() => useViewerStore.getState().select("humerus-left"));
     expect(screen.queryByRole("heading", { name: /Parts|Part of/ })).toBeNull();

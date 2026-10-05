@@ -12,8 +12,10 @@ patches; those are exported as kind "attachment" (unclassified) rather than
 guessed. Patches live on the bones, so their world transform is baked in.
 
 A few patches carry the wrong side suffix (e.g. a right-side serratus
-anterior patch named ".e2l"), so the side comes from the patch's position
-(Blender +X is the body's left) unless it lies on the midline.
+anterior patch named ".e2l"), so a patch takes the side of the nearest mesh
+of its own muscle (or of the muscle's parts) — it must sit on the muscle it
+is shown for. Without such meshes, the side comes from position (Blender
++X is the body's left) unless the patch lies on the midline.
 
 Licence: Z-Anatomy CC BY-SA 4.0 — see THIRD_PARTY_ASSETS.md.
 """
@@ -32,14 +34,28 @@ PATCH = re.compile(r"^(?P<muscle>.+)\.(?P<kind>[oe])\d*(?P<side>[lr])$")
 MIDLINE = 0.01  # metres either side of x = 0
 
 
-def side_of(obj: bpy.types.Object, named: str) -> tuple[str, bool]:
-    """(side, corrected): from the world-space centre, else from the name."""
+def center(obj: bpy.types.Object) -> Vector:
     corners = [obj.matrix_world @ Vector(c) for c in obj.bound_box]
-    x = (min(c.x for c in corners) + max(c.x for c in corners)) / 2
+    return sum(corners, Vector()) / 8
+
+
+def side_of(
+    obj: bpy.types.Object, named: str, muscle_meshes: dict[str, list[Vector]]
+) -> tuple[str, bool]:
+    """(side, corrected): nearest own-muscle mesh, else position, else name."""
     by_name = "left" if named == "l" else "right"
-    if abs(x) < MIDLINE:
+    here = center(obj)
+    distances = {
+        side: min((here - c).length for c in centers)
+        for side, centers in muscle_meshes.items()
+        if centers
+    }
+    if len(distances) == 2:
+        side = min(distances, key=distances.get)
+        return side, side != by_name
+    if abs(here.x) < MIDLINE:
         return by_name, False
-    by_position = "left" if x > 0 else "right"
+    by_position = "left" if here.x > 0 else "right"
     return by_position, by_position != by_name
 
 
@@ -61,6 +77,14 @@ def main() -> None:
     manifest = json.loads(MANIFEST.read_text())
     targets = {strip(re.sub(r"\.(l|r)$", "", e["name"])) for e in manifest if e["tissue"] == "muscle"}
     targets |= {e["group"] for e in manifest if e.get("group")}
+    # Muscle (or whole-muscle group) → its exported mesh names per side.
+    meshes_of: dict[str, dict[str, list[str]]] = {}
+    for e in manifest:
+        if e["tissue"] != "muscle" or not e["name"].endswith((".l", ".r")):
+            continue
+        side = "left" if e["name"].endswith(".l") else "right"
+        for key in {strip(e["name"][:-2]), e.get("group")} - {None}:
+            meshes_of.setdefault(key, {"left": [], "right": []})[side].append(e["name"])
 
     bpy.ops.wm.read_factory_settings(use_empty=True)
     for name in ("SkeletalSystem100.fbx", "MuscularSystem100.fbx"):
@@ -74,7 +98,12 @@ def main() -> None:
         by_name = match["kind"]
         kind = {"o": "origin", "e": "insertion"}[by_name] if material_kind(obj) == by_name else "attachment"
         kinds[kind] += 1
-        side, side_corrected = side_of(obj, match["side"])
+        own = meshes_of.get(strip(match["muscle"]), {})
+        centers = {
+            side: [center(bpy.data.objects[n]) for n in names if n in bpy.data.objects]
+            for side, names in own.items()
+        }
+        side, side_corrected = side_of(obj, match["side"], centers)
         if side_corrected:
             corrected.append(obj.name)
         keep.append(obj)
@@ -122,7 +151,7 @@ def main() -> None:
     entries.sort(key=lambda e: e["name"])
     OUT_JSON.write_text(json.dumps(entries, indent=1, ensure_ascii=False))
     print(f"Exported {len(entries)} patches {dict(kinds)}, {sum(e['vertices'] for e in entries)} vertices")
-    print(f"Side taken from position (name suffix was wrong): {corrected}")
+    print(f"Side corrected (suffix disagreed with the nearest own-muscle mesh or position): {corrected}")
 
 
 main()

@@ -29,23 +29,25 @@ stored in the browser (localStorage), so each device keeps its own.
 ## What ships
 
 - Prerendered pages: `/`, `/explore`, `/quiz`, `/progress`.
-- `public/models/z-anatomy-upper-limb.glb` (≈4 MB, meshopt-compressed; the
-  decoder is bundled — no external CDN). `anatomy-demo.glb` is only used by
-  tests but is harmless.
+- `public/models/z-anatomy/*.glb` — the whole body in five files (skeleton
+  2.6 MB, muscles 4.2, nerves 3.8, vessels 3.5, organs 1.7; meshopt, decoder
+  bundled — no external CDN). The skeleton loads first; the rest streams in.
+  `attachments.glb` (1.9 MB) loads only when a muscle or bone is selected.
+  `anatomy-demo.glb` is only used by tests but is harmless.
 - Fonts (Frank Ruhl Libre, IBM Plex Sans Hebrew) are self-hosted by
   `next/font` at build time.
 
-The model file name is not content-hashed. If the GLB is regenerated, either
-rename it (and update `modelUrl` in `src/data/anatomy/z-anatomy/index.ts`) or
-expect browsers to revalidate it — Vercel serves `public/` with
+Model file names are not content-hashed. If the GLBs are regenerated, either
+rename them (the pack list is in `src/data/anatomy/z-anatomy/index.ts`) or
+expect browsers to revalidate them — Vercel serves `public/` with
 `must-revalidate`, so users get the new file on their next load.
 
 ## After deploying — checklist
 
 - [ ] Open the production URL on the **iPad** (Safari): model loads, rotate /
       pinch / two-finger pan work, tapping selects, the info sheet is usable.
-- [ ] Note load time and smoothness (the model is 1.35M triangles — see
-      STATUS → next steps if it is sluggish).
+- [ ] Note load time and smoothness (the whole body is ≈3.1M triangles in
+      five files — see STATUS → next steps if it is sluggish).
 - [ ] Hebrew RTL layout, search in Hebrew ("עצב מדיאני").
 - [ ] Do a short quiz, reload, check `/progress` remembers it.
 - [ ] Optional: Safari → Share → **Add to Home Screen** for an app-like icon.

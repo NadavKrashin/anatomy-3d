@@ -2,7 +2,7 @@
 
 > Living document. **Update it with every commit that changes the code, not
 > just at the end of a session** — it must always match the code as it is.
-> Last updated: 2026-10-05 (session 2, origins & insertions).
+> Last updated: 2026-10-05 (session 2, whole body).
 
 ## Orientation (read in this order)
 
@@ -28,7 +28,7 @@ npx next start -p 3100         # in the background (after verify, which builds)
 npm run e2e:smoke              # real-browser explore + quiz flows, writes docs/screenshots/
 ```
 
-Expected today: **164 unit/component tests, 31 e2e checks, all passing; CI green.**
+Expected today: **171 unit/component tests, 31 e2e checks, all passing; CI green.**
 
 ## User decisions & preferences (do not re-ask)
 
@@ -43,6 +43,8 @@ Expected today: **164 unit/component tests, 31 e2e checks, all passing; CI green
 | 2026-10-05 | **Redesign requested**: the first UI looked "blocky and AI-made". New direction in `docs/DESIGN.md` (light atlas style). Design plugins (`frontend-design`, `design-skills`) were suggested for install; `frontend-design` is vendored in `.claude/skills/`. |
 | 2026-10-05 | Next: **deploy the first version to Vercel** (user does the Vercel side — see `docs/DEPLOYMENT.md`).                                                                                                                                                         |
 | 2026-10-05 | Next features chosen by the user: **muscle parts**, then **origins & insertions**.                                                                                                                                                                           |
+| 2026-10-05 | **Whole body next**: add all remaining body parts. More quizzes, Hebrew names and study tools wait until the user has her course's study sources.                                                                                                            |
+| 2026-10-05 | Wants to **switch between a male and a female model** — **deferred** ("document the options, future addition"). Options and research: `docs/DECISIONS.md` → "Male/female model switch".                                                                      |
 | 2026-10-05 | **Docs must be kept updated continuously** as work happens (every commit), not at the end of a session. Enforced by the docs-gate hook.                                                                                                                      |
 | 2026-10-05 | **Deployed** by the user on Vercel: production URL **https://ors-anatomy.vercel.app** (production branch `main`).                                                                                                                                            |
 
@@ -58,7 +60,7 @@ Expected today: **164 unit/component tests, 31 e2e checks, all passing; CI green
 | 5     | Quiz engine + quiz UI (find, identify, mixed) | ✅ done                                                                |
 | 6     | Progress persistence + progress page          | ✅ done                                                                |
 | 7     | UI polish                                     | 🚧 redesign done (`docs/DESIGN.md`); polish continues                  |
-| 8     | Real model (Z-Anatomy)                        | ✅ upper limb + whole skeleton; other regions deferred by user         |
+| 8     | Real model (Z-Anatomy)                        | ✅ whole body (2026-10-05), five streamed model files                  |
 
 ## MVP v0 acceptance criteria (§45) — all met
 
@@ -74,10 +76,15 @@ All verified by `npm run e2e:smoke` against a production build.
 
 ## What exists
 
-- **Model:** Z-Anatomy (CC BY-SA) — `public/models/z-anatomy-upper-limb.glb`
-  (4 MB, meshopt): whole skeleton + muscles, nerves and vessels of both upper
-  limbs incl. pectoral, axillary and scapular regions. 580 structures (367
-  upper limb); muscle heads merged into whole muscles. Pipeline:
+- **Model:** Z-Anatomy (CC BY-SA), **whole body** in five files under
+  `public/models/z-anatomy/` — skeleton (bones, cartilage, joints/ligaments),
+  muscles, nerves (brain, spinal cord, nerves, eye), vessels (heart, arteries,
+  veins), organs (respiratory, digestive, urinary, male reproductive,
+  endocrine, lymphoid). 2,660 meshes → 2,583 whole structures (+52 muscle
+  parts), ≈3.1M triangles, 15.8 MB; the skeleton loads first and frames the
+  camera, the rest streams in ("Loading body systems n/5"). Left out: the
+  non-commercial inner ear and kidney models, coverings (fasciae, meninges,
+  pleura, greater omentum), liver segments. Pipeline:
   `scripts/anatomy/z-anatomy/README.md`. Placeholder demo model kept for tests.
 - **Routes:** `/` contents-page home (regions list, start quiz, "N due for
   review"), `/explore` (`?region=<region>`, `?structure=<id>`), `/quiz`
@@ -96,11 +103,13 @@ All verified by `npm run e2e:smoke` against a production build.
   parts; info panel links part ↔ whole), **origins & insertions** (select a
   muscle → its attachment patches on the bones, violet origin / amber
   insertion, with the bones named in the info panel; select a bone → the
-  muscles attached to it; from Z-Anatomy patches, lazy-loaded 0.8 MB model;
-  unverified, 9 muscles shown as "not confirmed" — see CONTENT_REVIEW),
+  muscles attached to it; from Z-Anatomy patches — 679 for the whole body,
+  lazy-loaded 1.9 MB model; unverified, 28 muscles shown as "not confirmed"
+  — see CONTENT_REVIEW),
   shortcuts
   (`/ Esc F I H R P ⇧P Q ?`).
-- **Quiz:** find (click in 3D; muscles auto-hidden for non-muscle targets;
+- **Quiz:** find (click in 3D; muscles auto-hidden for non-muscle targets,
+  and bones too for organs/brain/heart;
   peel/restore buttons and P/⇧P to reach deep structures — layers reset per
   question and when the answer is revealed),
   identify (multiple choice, plausible core distractors), mixed; scopes by
@@ -119,18 +128,24 @@ All verified by `npm run e2e:smoke` against a production build.
 
 1. ~~Post-deploy check~~ — user reported production "looks good"
    (2026-10-05). Keep an eye out for iPad performance feedback.
-2. **Real-device check on iPad:** load time and frame rate with the 1.35M
-   triangle model. If sluggish: simplify non-upper-limb bones
-   (`optimize-glb.ts --simplify 0.5`), or split the GLB per system/region and
-   lazy-load.
-3. **More regions** when the user asks (lower limb ≈ +480k vertices, ≈ +3 MB;
-   thorax viscera; head & neck) — extend `export_glb.py`; consider one GLB per
-   region once more than two regions exist.
-4. **Hebrew names** for the most-studied upper-limb structures — ideally from
+2. **Real-device check on iPad** with the whole body (≈3.1M triangles, 16 MB
+   in five files): load time, rotation smoothness, tap latency, peel speed.
+   If sluggish: lower `--simplify` for nerves/vessels, load packs on demand
+   (e.g. only when their legend entry is on), or add a BVH for picking.
+3. **Organ-level wholes:** the source models the brain as gyri/lobules, the
+   lungs as lobes, the heart as chambers/valves — there is no single
+   "cerebellum", "lung" or "heart" to select. Group them like muscle parts
+   (Z-Anatomy's ".g" hierarchy has the groupings).
+4. **Hebrew names** (when the user has her course sources) — ideally from
    her course's term list; add to curated concepts + `docs/CONTENT_REVIEW.md`.
 5. ~~Muscle heads as sub-structures~~ — done (52 parts); quizzing on parts
    is a possible follow-up.
-6. Custom study lists (§27), progress export/import, first-run tutorial,
+   5b. **Male/female switch** — deferred by the user; options, source (Human
+   Reference Atlas female set, CC BY 4.0) and how to fetch it are in
+   `docs/DECISIONS.md` → "Male/female model switch". Ask which option before
+   building.
+6. When the user has her study sources: more quiz types (origins/insertions,
+   parts), custom study lists (§27), progress export/import, first-run tutorial,
    ~~origins/insertions mode~~ (done; verify kinds + Hebrew terms per
    CONTENT_REVIEW).
 
@@ -148,13 +163,22 @@ All verified by `npm run e2e:smoke` against a production build.
   muscles' origins are missing (rhomboids, deltoid parts' insertion is on the
   whole muscle). 7 patches carried the wrong side suffix and are placed by
   position instead.
+- Whole body: the source is a **male** model (no female reproductive
+  organs); no kidneys or inner ear (non-commercial licences); pleura, greater
+  omentum, meninges and fasciae left out so they don't hide everything; the
+  liver is one mesh (segments omitted). Regions for organs and midline
+  structures come from their height against skeletal landmarks (navigation
+  aid). The brain/lungs/heart are only selectable as their parts (next steps).
+- Peeling inside the ribcage also removes the lungs (they show between the
+  ribs and bones are never peeled) — hide the skeleton in the legend first
+  to study thoracic organs.
 - Long structures (nerves) are framed along their whole length.
 - Viewer state (hidden/isolated) is not persisted across reloads (by design).
 - Progress is per browser/device (localStorage) — no sync.
 - The e2e find-quiz helper answers by clicking the body centre and revealing;
   it verifies the flow, not answer accuracy.
-- Deployed (https://ors-anatomy.vercel.app) but not yet checked on a real
-  iPad; cloud sessions cannot reach `*.vercel.app` to test it.
+- Whole body not yet checked on a real iPad (the upper-limb version was);
+  cloud sessions cannot reach `*.vercel.app` to test it.
 - `npm audit` reports 5 high-severity advisories in dev dependencies
   (transitive, from the Next/ESLint toolchain at scaffold time); not shipped
   to the browser. Re-check with `npm audit` when upgrading.
@@ -201,3 +225,15 @@ All verified by `npm run e2e:smoke` against a production build.
   suffix+material agreement, side from position, muscles whose labels
   contradict standard anatomy shown as unconfirmed; muscle ⇄ bone views in
   the info panel.
+- **2026-10-05 · session 2 (cont.)** — Muscle parts + origins & insertions
+  merged to `main` via PR #3 (user asked); Vercel redeploys production.
+- **2026-10-05 · session 2 (cont.)** — Whole body (user request): export
+  generalised to five packs (skeleton/muscles/nerves/vessels/organs) with
+  organ systems, landmark regions, NC exclusions; app loads several model
+  files (primary first, merged scene index, peeling across files, progress
+  pill); quizzes hide bones for encased targets; detail tags for nuclei/
+  tracts/nodes; attachments for every muscle with a whole-body review (28
+  muscles "not confirmed").
+- **2026-10-05 · session 2 (cont.)** — Researched a female model for a
+  male/female switch; user deferred the feature — options documented in
+  DECISIONS.

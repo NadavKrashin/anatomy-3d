@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { demoDataset } from "@/data/anatomy/demo";
+import type { AnatomicalStructure } from "@/types/anatomy";
 import { systemsToHideFor } from "./questionView";
 
 const get = (id: string) => {
@@ -17,5 +18,37 @@ describe("systemsToHideFor", () => {
 
   it("keeps everything visible for muscle targets", () => {
     expect(systemsToHideFor(get("biceps-brachii-left"))).toEqual([]);
+  });
+});
+
+describe("systemsToHideFor — encased targets", () => {
+  const structure = (
+    system: AnatomicalStructure["system"],
+    tags: string[],
+  ) => ({
+    ...get("humerus-left"),
+    system,
+    tags,
+  });
+
+  it("hides muscles and bones for organs, the brain and the heart", () => {
+    expect(systemsToHideFor(structure("digestive", ["digestive"]))).toEqual([
+      "muscular",
+      "skeletal",
+    ]);
+    expect(systemsToHideFor(structure("nervous", ["brain"]))).toEqual([
+      "muscular",
+      "skeletal",
+    ]);
+    expect(systemsToHideFor(structure("cardiovascular", ["heart"]))).toEqual([
+      "muscular",
+      "skeletal",
+    ]);
+  });
+
+  it("peripheral nerves and vessels only hide muscles", () => {
+    expect(systemsToHideFor(structure("nervous", ["nerve"]))).toEqual([
+      "muscular",
+    ]);
   });
 });

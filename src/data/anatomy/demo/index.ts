@@ -5,7 +5,7 @@ import { demoStructures } from "./structures";
 export const demoDataset: AnatomyDataset = {
   info: {
     id: "demo",
-    modelUrl: "/models/anatomy-demo.glb",
+    models: [{ id: "demo", url: "/models/anatomy-demo.glb" }],
     isDemo: true,
   },
   structures: demoStructures,

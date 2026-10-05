@@ -4,8 +4,8 @@
 
 3D anatomy study app (Next.js 16 App Router + React Three Fiber + Zustand +
 Tailwind 4) for a Hebrew-speaking medical student in Israel. Hebrew/RTL UI
-first, English/Latin terminology alongside. Real model: Z-Anatomy upper limb +
-skeleton (CC BY-SA).
+first, English/Latin terminology alongside. Real model: Z-Anatomy whole body in five
+streamed model files (CC BY-SA).
 
 > **Keep the docs current as you go — not at the end of the session.** The
 > user requires this (2026-10-05). Every commit that changes behaviour, code,
@@ -114,5 +114,7 @@ skeleton (CC BY-SA).
   blob. Use name-only listings.
 - The Z-Anatomy pipeline needs Blender's Python module in a venv
   (`pip install "bpy==4.5.*"`, Python 3.11) — see its README.
+- Docs-only commits still run CI's `format:check`: after editing any `.md`
+  (tables especially), run `npm run format` before committing.
 - Mixing the teal highlight 50/50 with red tissue gives grey; selection uses a
   mostly-teal base colour (see `materialStates.ts`).

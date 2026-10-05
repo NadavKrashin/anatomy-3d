@@ -4,7 +4,6 @@ import { useGLTF } from "@react-three/drei";
 import { useThree, type ThreeEvent } from "@react-three/fiber";
 import { useEffect, useMemo } from "react";
 import { useAnatomyData } from "@/components/providers/AnatomyDataProvider";
-import { useLayerPeeling } from "@/hooks/useLayerPeeling";
 import {
   MaterialStateController,
   type MeshVisualState,
@@ -63,7 +62,8 @@ function pickStructureId(
   return null;
 }
 
-export function AnatomyModel({ url }: { url: string }) {
+/** One model file (pack) of the dataset: indexed, registered, highlighted. */
+export function AnatomyModel({ id, url }: { id: string; url: string }) {
   const { scene } = useGLTF(url);
   const { adapter } = useAnatomyData();
   const invalidate = useThree((s) => s.invalidate);
@@ -73,13 +73,6 @@ export function AnatomyModel({ url }: { url: string }) {
     () => buildSceneIndex(scene, adapter),
     [scene, adapter],
   );
-
-  useLayerPeeling(scene, index);
-
-  useEffect(() => {
-    useSceneIndexStore.getState().setIndex(index.meshesByStructure);
-    return () => useSceneIndexStore.getState().setIndex(null);
-  }, [index]);
 
   // Materials are driven imperatively from the store so selection changes
   // don't re-render React for every mesh in a large model.
@@ -106,6 +99,14 @@ export function AnatomyModel({ url }: { url: string }) {
       controller.dispose();
     };
   }, [index, invalidate, getThree]);
+
+  // Registered after the material effect above has applied visibility, so
+  // the camera's first framing (on the first registered file) sees the
+  // current filters (e.g. a region deep link) rather than every mesh.
+  useEffect(() => {
+    useSceneIndexStore.getState().addModel(id, { root: scene, index });
+    return () => useSceneIndexStore.getState().removeModel(id);
+  }, [id, scene, index]);
 
   const setHovered = (id: string | null) => {
     if (useViewerStore.getState().hoveredStructureId !== id)

@@ -143,9 +143,15 @@ export interface AttachmentData {
 /** Maps raw mesh/node names in a model file to structure ids. */
 export type MeshMap = Record<string, string>;
 
+/** One model file of a dataset. The first is loaded first and frames the camera. */
+export interface AnatomyModelFile {
+  id: string;
+  url: string;
+}
+
 export interface AnatomyDatasetInfo {
   id: string;
-  modelUrl: string;
+  models: AnatomyModelFile[];
   isDemo: boolean;
   attribution?: string;
 }

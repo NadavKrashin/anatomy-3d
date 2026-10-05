@@ -252,3 +252,89 @@ lucide-react · Vitest 5 · Playwright 1.56 · gltf-transform 4.5.
   teal selection; the info panel names the bones (registry names, so Hebrew
   appears where curated) and, for a bone, the muscles attached to it.
 - **Not shown in quizzes** (explore only), like the leader label.
+
+## 2026-10-05 — Whole body: five streamed model files
+
+- **Scope (user request):** every Z-Anatomy system — bones/cartilage/joints,
+  muscles, brain/spinal cord/nerves/eye, heart/vessels, organs and lymphoid
+  organs. Source ≈6.4M polygons; error-bounded simplification (0.5) gives
+  ≈3.1M triangles, 15.8 MB.
+- **Packaging:** one GLB per pack (skeleton, muscles, nerves, vessels,
+  organs) instead of one 16 MB file: the skeleton (2.6 MB) shows the body
+  quickly and frames the camera, the rest streams in. Alternatives: one file
+  (slow first paint), per-region files (structures span regions, and the
+  legend toggles systems). Picking without a BVH measured fine (ray-casting
+  isn't the cost; rendering is), so no BVH yet.
+- **Left out on purpose:** the non-commercial inner ear ("Internal ear"
+  collection) and kidney model (kidneys, renal pelvis, intrarenal vessels) —
+  a test guards it; coverings that hide what's inside on first view (pleura,
+  greater omentum, meninges, plus the fasciae/sheaths/bursae/capsules
+  already excluded); liver segments (they duplicate the liver mesh); helper
+  objects.
+- **Organ systems:** explicit name patterns in the export
+  (`VISCERAL_SYSTEMS`) — the source groups viscera only loosely; an organ
+  without a match stops the export.
+- **Regions:** Z-Anatomy collections first; structures they don't place by the
+  height of their centre against skeletal landmarks (mandible, manubrium,
+  top of the diaphragm, top of the sacrum) — a navigation aid; left/right
+  harmonised; whole muscles take their parts' majority region.
+- **Source fixes:** missing side suffixes completed from position, one
+  spelling difference between sides, a leading space; attachment patch sides
+  from the nearest mesh of their own muscle.
+- **Quizzes:** organ/brain/heart targets also hide bones; nuclei, tracts,
+  fasciculi, sulci and lymph-node groups are `detail` (out of built-in
+  quizzes).
+- **Attachments:** all 679 patches; the muscle-by-muscle review was extended
+  to the whole body (28 muscles shown as "not confirmed").
+
+## 2026-10-05 — Male/female model switch: researched, deferred by the user
+
+The user wants to switch easily between a male and a female model. Z-Anatomy
+(and BodyParts3D, which it is built on) is **male only**. No open, full
+female counterpart (skeleton + muscles + nerves + vessels + organs) exists.
+The user asked to **document the options and leave it for later** — ask
+which option before building.
+
+**Best source found:** the Human Reference Atlas (HuBMAP) 3D reference
+organs, **female set ("VH_F", Visible Human Female), CC BY 4.0** (compatible
+with our CC BY-SA). Repo: `github.com/hubmapconsortium/ccf-3d-reference-object-library`
+— reachable from cloud sessions via `git clone --filter=blob:none
+--no-checkout` + `git checkout HEAD -- <file>` (the docs site
+`hubmapconsortium.github.io` and `cdn.humanatlas.io` are blocked by the
+network policy). Files are real GLBs (Maya/babylon export), e.g.
+`VH_Female/v1.2/`: `VH_F_Uterus`, `VH_F_Vagina`, `VH_F_Ovary_L/R`,
+`VH_F_Fallopian_Tube_L/R`, `VH_F_Ligaments_Uterus_Ovaries`, `VH_F_Pelvis`
+(bony pelvis), `VH_F_Kidney_L/R`, `VH_F_Urinary_Bladder`, `VH_F_Ureter_L/R`,
+`VH_F_Heart`, `VH_F_Lung`, `VH_F_Liver`, `VH_F_Spleen`, `VH_F_Skin`,
+`VH_F_Vertebrae`, `VH_F_Spinal_Cord`, eye/knee muscles…; `v1.3/`:
+`VH_F_mammary_gland_L/R`; `v1.4/`: larynx, trachea, bronchi, lung, blood
+vasculature. Female skeleton/muscle coverage is partial (pelvis, vertebrae,
+knee and eye muscles). For reference, the MIT-licensed
+`github.com/slorksmo/Human-Atlas` combines this female set with the male
+BodyParts3D skeleton (least-squares fit to shared anchors).
+
+**Options presented to the user (none chosen yet):**
+
+1. **Same body, female organs** (recommended): a male/female switch swaps
+   the male reproductive organs for the Atlas's uterus, ovaries, fallopian
+   tubes, vagina, uterine/ovarian ligaments and mammary glands (and could add
+   kidneys, which Z-Anatomy can't ship). Everything else stays shared.
+   Caveat: skeleton and proportions stay male (male-shaped pelvis).
+2. **Also swap the female pelvis:** option 1 plus the Atlas's female bony
+   pelvis replacing hip bones/sacrum in female mode. Caveat: hip/thigh
+   muscles and attachment patches were modelled on the male pelvis, so they
+   won't meet the female bones exactly.
+3. **Separate female body:** load the Atlas's own female body (skin, organs,
+   brain, female pelvis, few muscles). Caveat: most bones, muscles, nerves
+   and vessels missing, so explore/peel/quiz cover far less than the male
+   body.
+
+**Implementation notes for later:** the Atlas uses its own coordinates
+(Visible Human Female, millimetres) — fit a similarity transform from the
+Atlas pelvis/vertebrae to Z-Anatomy's (hip bones, sacrum, lumbar vertebrae),
+apply it to the organs in a Blender export script like `export_glb.py`, and
+ship a sixth pack (e.g. `female.glb`). In the app: a `sex` setting in the
+settings store; structures tagged `male`/`female` hidden by
+`getStructureVisibility` when the other sex is chosen (or packs loaded per
+sex); quiz scopes skip the hidden sex; THIRD_PARTY_ASSETS row with the HRA
+attribution ("Human Reference Atlas, HuBMAP — CC BY 4.0").

@@ -95,8 +95,9 @@ export function CameraController() {
       requestAnimationFrame(() => focus(command.structureId, smooth));
     };
 
-    // Frame the model once it is indexed (initial load or dataset swap).
-    // A command issued before this controller mounted (e.g. a quiz or deep
+    // Frame the model once the first (primary, whole-body) file is indexed.
+    // Files that stream in later don't move the camera under the user. A
+    // command issued before this controller mounted (e.g. a quiz or deep
     // link reacting to the same index update) is applied after framing.
     if (useSceneIndexStore.getState().objectsByStructure) {
       reset(false);
@@ -104,10 +105,7 @@ export function CameraController() {
       if (pending) run(pending);
     }
     const unsubscribeIndex = useSceneIndexStore.subscribe((state, previous) => {
-      if (
-        state.objectsByStructure &&
-        state.objectsByStructure !== previous.objectsByStructure
-      )
+      if (state.objectsByStructure && !previous.objectsByStructure)
         reset(false);
     });
     const unsubscribeCommands = useViewerStore.subscribe((state, previous) => {

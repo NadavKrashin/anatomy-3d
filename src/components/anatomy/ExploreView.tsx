@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { useAnatomyData } from "@/components/providers/AnatomyDataProvider";
 import { useRevealStructure } from "@/hooks/useRevealStructure";
-import { useSceneReady } from "@/hooks/useSceneReady";
+import { useStructureLoaded } from "@/hooks/useSceneReady";
 import { useShowScope } from "@/hooks/useShowScope";
 import { useViewerShortcuts } from "@/hooks/useViewerShortcuts";
 import { useViewerStore } from "@/store/viewerStore";
@@ -32,7 +32,7 @@ function useExploreDeepLinks() {
   const structureId = params.get("structure");
   const showScope = useShowScope();
   const reveal = useRevealStructure();
-  const sceneReady = useSceneReady();
+  const structureLoaded = useStructureLoaded(structureId);
 
   useEffect(() => {
     if (!isRegion(region) || region === "whole-body") return;
@@ -41,11 +41,11 @@ function useExploreDeepLinks() {
     );
   }, [region, registry, showScope]);
 
-  // Focusing needs the meshes, so wait until the model is indexed.
+  // Focusing needs the meshes, so wait until their model file is indexed.
   useEffect(() => {
     const structure = structureId ? registry.get(structureId) : undefined;
-    if (sceneReady && structure) reveal(structure);
-  }, [sceneReady, structureId, registry, reveal]);
+    if (structureLoaded && structure) reveal(structure);
+  }, [structureLoaded, structureId, registry, reveal]);
 }
 
 export function ExploreView() {

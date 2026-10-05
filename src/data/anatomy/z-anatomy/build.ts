@@ -48,8 +48,13 @@ const CONCEPT_BY_NAME: Record<string, ConceptKey> = {
   "Brachial artery": "brachial-artery",
 };
 
+/**
+ * Fine-grained structures: explorable and searchable, but left out of the
+ * built-in quiz scopes — small branches, brain/spinal nuclei, tracts and
+ * fasciculi, sulci, and individual lymph-node groups.
+ */
 const DETAIL_PATTERN =
-  /\bbranch(es)?\b|\bdigital\b|\bdivisions?\b|anastomosis|network|communicating/i;
+  /\bbranch(es)?\b|\bdigital\b|\bdivisions?\b|anastomosis|network|communicating|\bnucle(us|i)\b|\btracts?\b|fasciculus|\bsulc(us|i)\b|\bnodes?\b/i;
 
 export interface ParsedName {
   base: string;
@@ -109,11 +114,15 @@ export function buildZAnatomyDataset(manifest: readonly ManifestEntry[]): {
   const byId = new Map<string, AnatomicalStructure>();
   const meshMap: MeshMap = {};
   const partMeshMap: MeshMap = {};
+  const wholeRegions = new Map<string, AnatomyRegion[]>();
 
   for (const entry of manifest) {
     const parsed = parseName(entry.name);
     const id = toId(entry.group ?? parsed.base, parsed.side);
     meshMap[entry.name] = id;
+    // A whole muscle spans its parts' regions (e.g. erector spinae: neck + back).
+    if (entry.group)
+      wholeRegions.set(id, [...(wholeRegions.get(id) ?? []), entry.region]);
     if (!byId.has(id)) {
       byId.set(
         id,
@@ -137,7 +146,26 @@ export function buildZAnatomyDataset(manifest: readonly ManifestEntry[]): {
     }
   }
 
-  return { structures: [...byId.values()], meshMap, partMeshMap };
+  return {
+    structures: [...byId.values()].map((s) =>
+      wholeRegions.has(s.id)
+        ? { ...s, region: majorityRegion(wholeRegions.get(s.id) ?? []) }
+        : s,
+    ),
+    meshMap,
+    partMeshMap,
+  };
+}
+
+/** Most frequent region among a whole muscle's parts (first wins a tie). */
+function majorityRegion(regions: readonly AnatomyRegion[]): AnatomyRegion {
+  const counts = new Map<AnatomyRegion, number>();
+  for (const region of regions)
+    counts.set(region, (counts.get(region) ?? 0) + 1);
+  let best: AnatomyRegion = regions[0] ?? "other";
+  for (const [region, count] of counts)
+    if (count > (counts.get(best) ?? 0)) best = region;
+  return best;
 }
 
 function structureFor(

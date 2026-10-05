@@ -23,8 +23,10 @@ structure" by clicking in 3D, or "identify the highlighted structure"), and
 track progress with simple spaced review. See `docs/STATUS.md` for what's next.
 
 > 3D model: **Z-Anatomy** (CC BY-SA 4.0), based on **BodyParts3D** (DBCLS,
-> CC BY-SA 2.1 JP) — whole skeleton plus the muscles, nerves and vessels of
-> the upper limbs. See `THIRD_PARTY_ASSETS.md`.
+> CC BY-SA 2.1 JP) — the whole body: bones, joints/ligaments, muscles, brain
+> and nerves, heart and vessels, organs and lymphoid organs (male model; the
+> non-commercially licensed inner ear and kidney are left out). See
+> `THIRD_PARTY_ASSETS.md`.
 > For educational purposes. Anatomy content should be verified against your
 > institution's required resources.
 

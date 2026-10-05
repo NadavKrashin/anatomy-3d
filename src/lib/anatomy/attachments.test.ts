@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { zAnatomyUpperLimbDataset as dataset } from "@/data/anatomy/z-anatomy";
+import { zAnatomyDataset as dataset } from "@/data/anatomy/z-anatomy";
 import { createRegistry } from "./registry";
 import { attachmentsFor, summarizeAttachments } from "./attachments";
 
@@ -49,5 +49,15 @@ describe("muscle attachments", () => {
       expect(registry.has(item.structureId)).toBe(true);
       expect(item.boneId && registry.get(item.boneId)?.system).toBe("skeletal");
     }
+  });
+
+  it("every muscle under review exists in the attachment data", async () => {
+    const { KIND_UNDER_REVIEW } =
+      await import("@/data/anatomy/z-anatomy/attachments");
+    const raw = (await import("@/data/anatomy/z-anatomy/attachments.json"))
+      .default;
+    const muscles = new Set(raw.map((entry) => entry.muscle));
+    for (const name of KIND_UNDER_REVIEW)
+      expect(muscles.has(name), name).toBe(true);
   });
 });

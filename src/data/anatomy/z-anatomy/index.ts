@@ -15,10 +15,13 @@ import manifest from "./manifest.json";
 const built = buildZAnatomyDataset(manifest as ManifestEntry[]);
 const ids = new Set(built.structures.map((s) => s.id));
 
-export const zAnatomyUpperLimbDataset: AnatomyDataset = {
+export const zAnatomyDataset: AnatomyDataset = {
   info: {
-    id: "z-anatomy-upper-limb",
-    modelUrl: "/models/z-anatomy-upper-limb.glb",
+    id: "z-anatomy",
+    // Skeleton first: it frames the whole body while the rest streams in.
+    models: ["skeleton", "muscles", "nerves", "vessels", "organs"].map(
+      (pack) => ({ id: pack, url: `/models/z-anatomy/${pack}.glb` }),
+    ),
     isDemo: false,
     attribution: Z_ANATOMY_ATTRIBUTION,
   },

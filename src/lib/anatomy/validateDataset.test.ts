@@ -20,7 +20,7 @@ const structure = (
 });
 
 const dataset = (structures: AnatomicalStructure[]): AnatomyDataset => ({
-  info: { id: "test", modelUrl: "/x.glb", isDemo: true },
+  info: { id: "test", models: [{ id: "x", url: "/x.glb" }], isDemo: true },
   structures,
   meshMap: Object.fromEntries(structures.map((s) => [s.id, s.id])),
 });

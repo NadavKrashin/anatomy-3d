@@ -20,7 +20,8 @@ const isMesh = (object: Object3D): object is Mesh =>
   (object as Mesh).isMesh === true;
 
 /**
- * Renders `root` once from `camera` into an off-screen target with every mesh
+ * Renders `roots` (the loaded model files, sharing one depth buffer) once
+ * from `camera` into an off-screen target with every mesh
  * in a flat colour encoding its index, reads the pixels back and returns the
  * number of front pixels per structure id. Meshes that aren't interactive
  * (ghosted, hidden) are skipped; unmapped meshes still occlude.
@@ -31,7 +32,7 @@ const isMesh = (object: Object3D): object is Mesh =>
  */
 export function countFrontPixelsByStructure(
   gl: WebGLRenderer,
-  root: Object3D,
+  roots: readonly Object3D[],
   camera: Camera,
   structureIdOf: (mesh: Mesh) => string | undefined,
 ): Map<string, number> {
@@ -47,7 +48,7 @@ export function countFrontPixelsByStructure(
   >();
   const materials: MeshBasicMaterial[] = [];
 
-  root.traverse((object) => {
+  const prepare = (object: Object3D) => {
     if (!isMesh(object)) return;
     saved.set(object, { material: object.material, visible: object.visible });
     if (object.userData.interactive === false) {
@@ -71,20 +72,24 @@ export function countFrontPixelsByStructure(
     material.color.setRGB(r / 255, g / 255, b / 255, LinearSRGBColorSpace);
     materials.push(material);
     object.material = material;
-  });
+  };
+  for (const root of roots) root.traverse(prepare);
 
   const target = new WebGLRenderTarget(width, height);
   const pixels = new Uint8Array(width * height * 4);
   const previousTarget = gl.getRenderTarget();
   const previousClear = gl.getClearColor(new Color());
   const previousAlpha = gl.getClearAlpha();
+  const previousAutoClear = gl.autoClear;
   try {
     gl.setRenderTarget(target);
     gl.setClearColor(0x000000, 0);
     gl.clear();
-    gl.render(root, camera);
+    gl.autoClear = false; // one depth buffer across all files
+    for (const root of roots) gl.render(root, camera);
     gl.readRenderTargetPixels(target, 0, 0, width, height, pixels);
   } finally {
+    gl.autoClear = previousAutoClear;
     gl.setRenderTarget(previousTarget);
     gl.setClearColor(previousClear, previousAlpha);
     for (const [mesh, { material, visible }] of saved) {

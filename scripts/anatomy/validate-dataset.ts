@@ -17,14 +17,12 @@ import {
 
 async function modelIssues(): Promise<DatasetIssue[]> {
   const { info, meshMap } = activeDataset;
-  const modelPath = resolve(
-    process.cwd(),
-    "public",
-    info.modelUrl.replace(/^\//, ""),
-  );
-  const nodes = (await (await createIO()).read(modelPath))
-    .getRoot()
-    .listNodes();
+  const io = await createIO();
+  const nodes = [];
+  for (const model of info.models) {
+    const path = resolve(process.cwd(), "public", model.url.replace(/^\//, ""));
+    nodes.push(...(await io.read(path)).getRoot().listNodes());
+  }
   const nodeNames = new Set(
     nodes.map((n) => stripDuplicateSuffix(n.getName())),
   );
