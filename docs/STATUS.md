@@ -2,7 +2,7 @@
 
 > Living document. **Update it with every commit that changes the code, not
 > just at the end of a session** — it must always match the code as it is.
-> Last updated: 2026-10-05 (session 2, docs-gate hook added).
+> Last updated: 2026-10-05 (session 2, deployed to Vercel).
 
 ## Orientation (read in this order)
 
@@ -43,6 +43,7 @@ Expected today: **135 unit/component tests, 21 e2e checks, all passing; CI green
 | 2026-10-05 | **Redesign requested**: the first UI looked "blocky and AI-made". New direction in `docs/DESIGN.md` (light atlas style). Design plugins (`frontend-design`, `design-skills`) were suggested for install; `frontend-design` is vendored in `.claude/skills/`. |
 | 2026-10-05 | Next: **deploy the first version to Vercel** (user does the Vercel side — see `docs/DEPLOYMENT.md`).                                                                                                                                                         |
 | 2026-10-05 | **Docs must be kept updated continuously** as work happens (every commit), not at the end of a session. Enforced by the docs-gate hook.                                                                                                                      |
+| 2026-10-05 | **Deployed** by the user on Vercel: production URL **https://ors-anatomy.vercel.app** (production branch `main`).                                                                                                                                            |
 
 ## Phase tracker (§48)
 
@@ -102,11 +103,11 @@ All verified by `npm run e2e:smoke` against a production build.
 
 ## Next steps (in order)
 
-1. **Deploy to Vercel** — `main` is deployable (PR #1 merged 2026-10-05, CI
-   green). Remaining: the user imports `NadavKrashin/anatomy-3d` in Vercel
-   (Next.js preset, Node 22, no env vars — `docs/DEPLOYMENT.md`); a cloud
-   session has no Vercel access. Then run the post-deploy checklist on the
-   iPad and record the production URL here.
+1. **Post-deploy check** of https://ors-anatomy.vercel.app — run the
+   checklist in `docs/DEPLOYMENT.md` on the iPad. Cloud Claude sessions can't
+   reach `*.vercel.app` (network policy), so this is done by the user; a
+   session with access can run `BASE_URL=https://ors-anatomy.vercel.app npm
+run e2e:smoke`.
 2. **Real-device check on iPad:** load time and frame rate with the 1.35M
    triangle model. If sluggish: simplify non-upper-limb bones
    (`optimize-glb.ts --simplify 0.5`), or split the GLB per system/region and
@@ -132,8 +133,8 @@ All verified by `npm run e2e:smoke` against a production build.
 - Progress is per browser/device (localStorage) — no sync.
 - The e2e find-quiz helper answers by clicking the body centre and revealing;
   it verifies the flow, not answer accuracy.
-- `main` is deployable but the Vercel project isn't connected yet; untested on
-  a real iPad.
+- Deployed (https://ors-anatomy.vercel.app) but not yet checked on a real
+  iPad; cloud sessions cannot reach `*.vercel.app` to test it.
 - `npm audit` reports 5 high-severity advisories in dev dependencies
   (transitive, from the Next/ESLint toolchain at scaffold time); not shipped
   to the browser. Re-check with `npm audit` when upgrading.
@@ -162,3 +163,5 @@ All verified by `npm run e2e:smoke` against a production build.
   `git commit`s that change code without a doc (`[docs: none]` escape hatch).
 - **2026-10-05 · session 2 (cont.)** — Opened and merged PR #1 into `main`
   (CI green) so Vercel can deploy production from `main`.
+- **2026-10-05 · session 2 (cont.)** — User connected the repo in Vercel and
+  deployed: https://ors-anatomy.vercel.app. Recorded in STATUS/DEPLOYMENT.

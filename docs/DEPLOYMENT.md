@@ -1,10 +1,14 @@
 # Deployment (Vercel)
 
+**Production:** https://ors-anatomy.vercel.app — Vercel project connected to
+`NadavKrashin/anatomy-3d`, production branch `main` (first deployed
+2026-10-05). Every push to `main` redeploys; other branches get preview URLs.
+
 The app is a static-friendly Next.js 16 site: every route prerenders, there
 is no backend, no database and **no environment variables**. Progress is
 stored in the browser (localStorage), so each device keeps its own.
 
-## First deployment
+## First deployment (done 2026-10-05 — kept for reference)
 
 1. **Get the code onto the production branch.** Work happens on
    `claude/*` branches. Either merge the branch into `main` (recommended:
@@ -55,7 +59,13 @@ for the commit is green.
 
 ## Notes for Claude sessions
 
-A cloud session cannot log in to Vercel. Deploying is done by the user in the
+A cloud session cannot log in to Vercel, and its network policy blocks
+`*.vercel.app`, so it cannot open the production site either. Deploying is done by the user in the
 Vercel dashboard (or `npx vercel` on their own machine). Claude's part: keep
 `main` deployable (green CI), keep this document accurate, and help debug
-build logs the user shares.
+build logs the user shares. To smoke-test production from a machine with
+access: `BASE_URL=https://ors-anatomy.vercel.app npm run e2e:smoke`.
+
+If Vercel doesn't list the repo when importing: grant the Vercel GitHub app
+access at github.com/settings/installations → Vercel → Configure →
+Repository access (the mobile settings menu hides this page).
