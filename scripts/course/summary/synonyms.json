@@ -1,0 +1,46 @@
+{
+  "about": "Her summary's terms that name a model structure in other words. Keys are the term exactly as in her summary; values are structure ids — side-less for both sides, or a sided id when the term names one side (e.g. 'Right coronary artery').",
+  "terms": {
+    "Quadriceps m. (Rectus femoris, Vastus medialis, Vastus lateralis, Vastus intermedius)": [
+      "quadriceps-femoris-muscle"
+    ],
+    "Lateral Collateral Ligament (LCL)": ["fibular-collateral-ligament"],
+    "Medial Collateral Ligament (MCL)": [
+      "superficial-part-of-tibial-collateral-ligament",
+      "deep-part-of-tibial-collateral-ligament"
+    ],
+    "Chorda tympani nerve": ["chorda-tympani"],
+    "Mylohyoid nerve": ["nerve-to-mylohyoid-muscle"],
+    "Plantar calcaneonavicular / Spring ligament": [
+      "plantar-calcaneonavicular-ligament"
+    ],
+    "Gastrocnemius (medial/lateral head)": [
+      "lateral-head-of-gastrocnemius",
+      "medial-head-of-gastrocnemius"
+    ],
+    "Tibialis posterior tendon": ["tibialis-posterior-muscle"],
+    "Levator costarum (Brevis & Longus)": ["levatores-costarum"],
+    "Superficial fibular / peroneal nerve": ["superficial-fibular-nerve"],
+    "Corpora cavernosa": ["corpus-cavernosum-of-penis"],
+    "Parathyroid glands": [
+      "inferior-parathyroid-gland",
+      "superior-parathyroid-gland"
+    ],
+    "Left Main Bronchus": ["main-bronchus-left"],
+    "Left Coronary Artery": ["coronary-artery-left"],
+    "Right Coronary Artery": ["coronary-artery-right"],
+    "Left gastric artery": ["gastric-artery-left"],
+    "Right colic artery": ["colic-artery-right"],
+    "Left colic artery": ["colic-artery-left"]
+  },
+  "hebrew": {
+    "about": "Her organ-guide headings name some structures in the plural; the model has one per side. Singular forms (from her own text where she uses them), or null to show no Hebrew from the summary.",
+    "names": {
+      "ureter": "שופכן",
+      "seminal-gland": "שלפוחית הזרע",
+      "suprarenal-gland": "בלוטת יותרת הכליה",
+      "lung": null,
+      "lymph-node": null
+    }
+  }
+}

@@ -26,13 +26,56 @@ site writes them** (https://medintzfat.com/anatomy/). See
   `scripts/course/medintzfat/synonyms.json`.
 - **Hebrew:** the course writes structure names in English. It uses Hebrew
   only occasionally, mostly as transliterations: העצב האולנרי, never עצב
-  הגומד; רדיוס and אולנה, never עצם החישור or עצם הגומד. So only the 71
-  structures below show a Hebrew name, as the course writes it. The earlier
+  הגומד; רדיוס and אולנה, never עצם החישור or עצם הגומד. So only the
+  structures below show a Hebrew name: 71 as the site writes them, plus 32
+  from her own summary, which wins where both exist. The earlier
   curated Hebrew names (`concepts.ts`) are kept as search aliases. They are
   no longer shown for structures the course names in English only (e.g.
   עורק הזרוע).
 
-### Hebrew names shown (as her course writes them — please check)
+### Hebrew names from her summary (shown — they win over the site's)
+
+From her own anatomy summary (`docs/COURSE_SOURCE.md` → "Her summary"):
+the organ guide's headings, without the definite article and in the
+singular for one-sided structures (`scripts/course/summary/synonyms.json` →
+`hebrew`). Where the site's form differs it stays searchable.
+
+| Structure           | Hebrew shown          | Her heading           | The site's form |
+| ------------------- | --------------------- | --------------------- | --------------- |
+| Colon               | כרכשת                 | הכרכשת                |                 |
+| Diaphragm           | סרעפת                 | הסרעפת                | סרעפת           |
+| Ductus deferens     | צינור הזרע            | צינור הזרע            |                 |
+| Duodenum            | תריסריון              | התריסריון             | תריסריון        |
+| Epididymis          | יותרת האשך            | יותרת האשך            | יותרת האשך      |
+| Epiglottis          | מכסה הגרון            | מכסה הגרון            |                 |
+| Esophagus           | ושט                   | הוושט                 | ושט             |
+| Gallbladder         | כיס המרה              | כיס המרה              | כיס המרה        |
+| Heart               | לב                    | הלב                   | לב              |
+| Jejunum             | מעי ריק               | המעי הריק             |                 |
+| Lacrimal gland      | בלוטת הדמעות          | בלוטת הדמעות          |                 |
+| Liver               | כבד                   | הכבד                  | כבד             |
+| Pancreas            | לבלב                  | הלבלב                 | לבלב            |
+| Parotid gland       | בלוטת הפרוטיד         | בלוטת הפרוטיד         |                 |
+| Penis               | פין                   | הפין                  |                 |
+| Pharynx             | לוע                   | הלוע                  | לוע             |
+| Prostate            | ערמונית               | הערמונית              |                 |
+| Seminal vesicle     | שלפוחית הזרע          | שלפוחיות הזרע         |                 |
+| Spinal cord         | חוט השדרה             | חוט השדרה             | חוט השדרה       |
+| Spleen              | טחול                  | הטחול                 | טחול            |
+| Stomach             | קיבה                  | הקיבה                 | קיבה            |
+| Sublingual gland    | בלוטת הרוק התת־לשונית | בלוטת הרוק התת־לשונית |                 |
+| Submandibular gland | בלוטת הרוק התת־לסתית  | בלוטת הרוק התת־לסתית  |                 |
+| Suprarenal gland    | בלוטת יותרת הכליה     | בלוטות יותרת הכליה    |                 |
+| Thymus              | תימוס                 | התימוס                |                 |
+| Thyroid gland       | בלוטת התריס           | בלוטת התריס           | בלוטת התריס     |
+| Tongue              | לשון                  | הלשון                 |                 |
+| Trachea             | קנה הנשימה            | קנה הנשימה            | טרכיאה          |
+| Ureter              | שופכן                 | השופכנים              | צינור הכליה     |
+| Urethra             | שופכה                 | השופכה                |                 |
+| Urinary bladder     | שלפוחית השתן          | שלפוחית השתן          |                 |
+| Vermiform appendix  | תוספתן                | התוספתן               | תוספתן          |
+
+### Hebrew names shown from the course site (as it writes them — please check)
 
 Source of truth: `scripts/course/medintzfat/hebrew-names.json`. Niqqud and
 the definite article are kept where the course writes them that way.

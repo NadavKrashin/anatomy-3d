@@ -111,10 +111,25 @@ export interface AnatomicalStructure {
    */
   parentId?: string;
   details?: StructureDetails;
+  /** Study notes from her own course summary, in its language (Hebrew). */
+  studyNotes?: StudyNote[];
   tags: string[];
   modelSource?: string;
   sourceLicense?: string;
   sourceAttribution?: string;
+}
+
+/**
+ * A note from her course summary (her own words). `term` is the entry it
+ * comes from; `shared` marks an entry about several structures ("Superficial
+ * & Deep inguinal ring"); `section` is where it sits in the summary.
+ */
+export interface StudyNote {
+  text: string;
+  language: TermLanguage;
+  term: string;
+  section: string;
+  shared?: boolean;
 }
 
 /**

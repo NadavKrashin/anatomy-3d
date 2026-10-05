@@ -156,3 +156,52 @@ npx tsx scripts/course/medintzfat/dump-structures.ts
 python3 scripts/course/medintzfat/course_names.py
 npm run format
 ```
+
+## Her summary (study notes and Hebrew names)
+
+On 2026-10-05 the user shared her own anatomy summary: a Word file, "אנטומיה
+של גוף האדם", which she wrote herself in her own words. It follows the same
+course and is used **with her consent, via the user**. The file stays out of
+git: its path is `.course-cache/summary/summary.docx`, and the user has the
+original.
+
+It has two parts:
+
+- an organ guide of 80 entries: Hebrew heading, English name, a paragraph
+  on location, function and relations;
+- region tables of about 1,040 rows: her Hebrew definition next to the
+  English structure name, using the same names as the site's lab checklist.
+  The tables include "השלמות" (supplement) sections beyond the checklist.
+
+The document ends with distinctions and self-review questions, which are
+not used yet.
+
+`scripts/course/summary/summary_notes.py` writes
+`src/data/anatomy/z-anatomy/summaryNotes.json`, which
+`z-anatomy/summaryNotes.ts` (`withSummaryNotes`, after `withCourseName`)
+applies:
+
+- **Notes for 458 structures.** They show as "סיכום" ("Summary") at the
+  top of the info panel. An entry about several structures ("Superficial &
+  Deep inguinal ring") goes to each of them and is labelled with its name.
+  Matching uses the course-name rules. Ambiguous names like "Abductor
+  digiti minimi" are resolved by the summary's region (the lower-limb
+  table → the foot's). Hand-checked synonyms ("LCL", "Spring ligament",
+  side-specific arteries) are in `scripts/course/summary/synonyms.json`.
+- **32 Hebrew names** from the organ guide (e.g. קנה הנשימה, שופכן, צינור
+  הזרע, שלפוחית השתן). The definite article is dropped and plurals are made
+  singular for one-sided structures. Her Hebrew wins over the site's: she
+  wrote it and learns from it. The site's form stays searchable.
+- **636 entries name no model structure.** They are mostly bony landmarks,
+  folds and spaces, female organs and the kidneys (not in the model), plus
+  some wholes the model only has as parts. The list is written to
+  `.course-cache/summary/unmatched.json` when the script runs.
+
+Regenerate (needs the .docx):
+
+```bash
+pip install python-docx
+npx tsx scripts/course/medintzfat/dump-structures.ts
+python3 scripts/course/summary/summary_notes.py .course-cache/summary/summary.docx
+npm run format
+```

@@ -67,6 +67,7 @@ export const he = {
     unverifiedHint: "התרגום טרם אומת מול מקור מוסמך",
     noDetails: "אין עדיין מידע מאומת על מבנה זה.",
     contentLanguageNote: "התוכן המפורט זמין כרגע באנגלית.",
+    studyNotes: "סיכום",
     sections: {
       function: "תפקוד",
       origin: "מוצא",

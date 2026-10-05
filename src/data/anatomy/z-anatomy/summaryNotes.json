@@ -1,0 +1,4514 @@
+{
+  "abdominal-aorta": {
+    "notes": [
+      {
+        "text": "המשך האאורטה בבית הבטן; מקור לעורקי הדופן והאיברים.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Abdominal Aorta"
+      }
+    ]
+  },
+  "abducens-nerve-vi": {
+    "notes": [
+      {
+        "text": "עצב VI; מפעיל את הרקטוס הלטרלי להרחקת המבט.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Abducent nerve (VI)"
+      }
+    ]
+  },
+  "abductor-digiti-minimi-of-foot": {
+    "notes": [
+      {
+        "text": "שריר בצד החיצוני של כף הרגל, המרחיק את הזרת.",
+        "section": "גפה תחתונה",
+        "term": "Abductor digiti minimi"
+      }
+    ]
+  },
+  "abductor-hallucis": {
+    "notes": [
+      {
+        "text": "שריר מדיאלי בסוליה; מרחיק את הבוהן ומסייע בכיפופה.",
+        "section": "גפה תחתונה",
+        "term": "Abductor hallucis"
+      }
+    ]
+  },
+  "abductor-pollicis-brevis": {
+    "notes": [
+      {
+        "text": "שריר פנימי בכף היד המרחיק את האגודל מן המישור הכפי.",
+        "section": "גפה עליונה",
+        "term": "Abductor pollicis brevis"
+      }
+    ]
+  },
+  "abductor-pollicis-longus": {
+    "notes": [
+      {
+        "text": "מרחיק ארוך של האגודל, הנאחז במסרק הראשון.",
+        "section": "גפה עליונה",
+        "term": "Abductor Pollicis Longus"
+      },
+      {
+        "text": "גיד המרחיק הארוך של האגודל, חלק מהגבול הצדדי של תיבת ההרחה.",
+        "section": "גפה עליונה",
+        "term": "Abductor Pollicis Longus(Lateral)"
+      }
+    ]
+  },
+  "accessory-hemi-azygos-vein": {
+    "notes": [
+      {
+        "text": "וריד המנקז בעיקר אזורים שמאליים עליונים של דופן החזה.",
+        "section": "בית החזה",
+        "term": "Accessory Hemiazygos Vein (צד שמאל עליון)"
+      }
+    ]
+  },
+  "accessory-nerve-xi": {
+    "notes": [
+      {
+        "text": "עצב קרניאלי XI; מפעיל טרפז וסטרנוקליידומסטואיד.",
+        "section": "גב ועמוד שדרה",
+        "term": "Accessory nerve"
+      },
+      {
+        "text": "עצב XI, המפעיל את הטרפז ואת הסטרנוקליידומסטואיד.",
+        "section": "צוואר",
+        "term": "Accessory nerve"
+      }
+    ]
+  },
+  "acetabular-labrum": {
+    "notes": [
+      {
+        "text": "טבעת סחוס סיבי המעמיקה את מכתש מפרק הירך.",
+        "section": "גפה תחתונה",
+        "term": "Acetabular labrum"
+      }
+    ]
+  },
+  "adductor-brevis": {
+    "notes": [
+      {
+        "text": "מקרב ירך קצר, עמוק לאדוקטור לונגוס.",
+        "section": "גפה תחתונה",
+        "term": "Adductor brevis m."
+      }
+    ]
+  },
+  "adductor-hallucis": {
+    "notes": [
+      {
+        "text": "שריר בעל ראש אלכסוני ורוחבי המקרב את הבוהן.",
+        "section": "גפה תחתונה",
+        "term": "Adductor hallucis (oblique & transverse head)"
+      }
+    ]
+  },
+  "adductor-longus": {
+    "notes": [
+      {
+        "text": "מקרב ירך שטחי היוצא מעצם החיק.",
+        "section": "גפה תחתונה",
+        "term": "Adductor longus m."
+      }
+    ]
+  },
+  "adductor-magnus": {
+    "notes": [
+      {
+        "text": "מקרב ירך גדול; כולל חלק אדוקטורי וחלק בעל מאפייני המסטרינג.",
+        "section": "גפה תחתונה",
+        "term": "Adductor magnus m."
+      }
+    ]
+  },
+  "anconeus-muscle": {
+    "notes": [
+      {
+        "text": "שריר קטן סמוך למרפק האחורי, המסייע בפשיטה ובייצוב.",
+        "section": "השלמות גפה עליונה",
+        "term": "Anconeus"
+      }
+    ]
+  },
+  "anterior-belly-of-digastric-muscle": {
+    "notes": [
+      {
+        "text": "שריר דו־בטני מעל ההיואיד, המסייע בהורדת הלסת ובהרמת ההיואיד.",
+        "section": "צוואר",
+        "term": "Posterior & Anterior belly Digastric",
+        "shared": true
+      }
+    ]
+  },
+  "anterior-cruciate-ligament": {
+    "notes": [
+      {
+        "text": "רצועה צולבת קדמית; מגבילה תזוזה קדמית של הטיביה ביחס לפמור.",
+        "section": "גפה תחתונה",
+        "term": "Anterior Cruciate Ligament (ACL)"
+      }
+    ]
+  },
+  "anterior-jugular-vein": {
+    "notes": [
+      {
+        "text": "וריד שטחי קדמי בצוואר.",
+        "section": "צוואר",
+        "term": "Anterior jugular vein"
+      }
+    ]
+  },
+  "anterior-longitudinal-ligament": {
+    "notes": [
+      {
+        "text": "רצועות לאורך הצד הקדמי והאחורי של גופי החוליות.",
+        "section": "גב ועמוד שדרה",
+        "term": "Posterior & Anterior longitudinal ligament",
+        "shared": true
+      }
+    ]
+  },
+  "anterior-spinal-artery": {
+    "notes": [
+      {
+        "text": "עורקים אורכיים על פני חוט השדרה, עם תגבור מעורקים מקטעיים.",
+        "section": "גב ועמוד שדרה",
+        "term": "Posterior & Anterior spinal artery"
+      }
+    ]
+  },
+  "anterior-talofibular-ligament": {
+    "notes": [
+      {
+        "text": "רצועה צדדית קדמית בקרסול, בין הפיבולה לטאלוס.",
+        "section": "גפה תחתונה",
+        "term": "Anterior talofibular ligament"
+      }
+    ]
+  },
+  "anterior-tibial-artery": {
+    "notes": [
+      {
+        "text": "עורק למדור השוק הקדמי, הממשיך לעורק גב כף הרגל.",
+        "section": "גפה תחתונה",
+        "term": "Anterior tibial artery"
+      }
+    ]
+  },
+  "aortic-arch": {
+    "notes": [
+      {
+        "text": "קשת האאורטה, המקשרת את החלק העולה ליורד ונותנת ענפים לראש ולגפיים.",
+        "section": "בית החזה",
+        "term": "קשת האאורטה (Aortic Arch)"
+      }
+    ]
+  },
+  "appendicular-artery": {
+    "notes": [
+      {
+        "text": "עורק לתוספתן, העובר במזואפנדיקס.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Appendicular artery"
+      }
+    ]
+  },
+  "arytenoid-cartilage": {
+    "notes": [
+      {
+        "text": "סחוסים זוגיים המניעים את מיתרי הקול באמצעות זיזים ואחזי שרירים.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Arytenoid cartilages - Vocal processes & muscular processes"
+      }
+    ]
+  },
+  "ascending-colon": {
+    "notes": [
+      {
+        "text": "המעי העולה, בצד הימני של הבטן.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Ascending colon"
+      }
+    ]
+  },
+  "ascending-pharyngeal-artery": {
+    "notes": [
+      {
+        "text": "ענף עמוק של הקרוטיד החיצוני ללוע ולמבנים נוספים.",
+        "section": "צוואר",
+        "term": "Ascending pharyngeal artery"
+      }
+    ]
+  },
+  "atlas-c1": {
+    "notes": [
+      {
+        "text": "אטלס ואקסיס הם C1 ו־C2, המותאמות לתנועות הראש.",
+        "section": "גב ועמוד שדרה",
+        "term": "Atlas & Axis",
+        "shared": true
+      }
+    ]
+  },
+  "auditory-tube": {
+    "notes": [
+      {
+        "text": "תעלה בין האוזן התיכונה ללוע האפי, לאוורור ולהשוואת לחצים.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Auditory tube / Eustachian tube"
+      }
+    ]
+  },
+  "axillary-artery": {
+    "notes": [
+      {
+        "text": "המשך העורק התת־בריחי בבית השחי.",
+        "section": "גפה עליונה",
+        "term": "Axillary Artery"
+      },
+      {
+        "text": "עורק הזרוע, המשך האקסילרי מעבר לגבול התחתון של טרס מג׳ור.",
+        "section": "גפה עליונה",
+        "term": "Brachial Artery - המשך של Axillary Artery",
+        "shared": true
+      }
+    ]
+  },
+  "axillary-nerve": {
+    "notes": [
+      {
+        "text": "עצב לדלטואיד ולטרס מינור, ולתחושה באזור הכתף הצדדי.",
+        "section": "השלמות גפה עליונה",
+        "term": "Axillary nerve"
+      }
+    ]
+  },
+  "axillary-vein": {
+    "notes": [
+      {
+        "text": "וריד עמוק בבית השחי, המתמשך לווריד התת־בריחי.",
+        "section": "גפה עליונה",
+        "term": "Axillary Vein"
+      }
+    ]
+  },
+  "axis-c2": {
+    "notes": [
+      {
+        "text": "אטלס ואקסיס הם C1 ו־C2, המותאמות לתנועות הראש.",
+        "section": "גב ועמוד שדרה",
+        "term": "Atlas & Axis",
+        "shared": true
+      }
+    ]
+  },
+  "azygos-vein": {
+    "notes": [
+      {
+        "text": "וריד אזיגוס מימין, הקשתי מעל שורש הריאה בדרכו לנבוב העליון.",
+        "section": "בית החזה",
+        "term": "Azygos Vein (צד ימין)"
+      }
+    ]
+  },
+  "basilic-vein": {
+    "notes": [
+      {
+        "text": "וריד שטחי בצד המדיאלי של הגפה העליונה, המתחבר למערכת העמוקה.",
+        "section": "השלמות גפה עליונה",
+        "term": "Basilic vein"
+      }
+    ]
+  },
+  "biceps-brachii-muscle": {
+    "notes": [
+      {
+        "text": "שריר קדמי בזרוע; מסובב את האמה לסופינציה ומכופף את המרפק.",
+        "section": "גפה עליונה",
+        "term": "Biceps Brachii"
+      }
+    ]
+  },
+  "biceps-femoris-muscle": {
+    "notes": [
+      {
+        "text": "שריר המסטרינג צדדי בעל שני ראשים; מכופף ברך ומסובב שוק החוצה.",
+        "section": "גפה תחתונה",
+        "term": "Biceps femoris m. (Long & Short head)"
+      }
+    ]
+  },
+  "bile-duct": {
+    "notes": [
+      {
+        "text": "צינור המרה המשותף, המוביל מרה לכיוון התריסריון.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Bile duct"
+      }
+    ]
+  },
+  "brachial-artery": {
+    "notes": [
+      {
+        "text": "עורק הזרוע הראשי, המתפצל באזור המרפק לרדיאלי ולאולנרי.",
+        "section": "גפה עליונה",
+        "term": "Brachial Artery"
+      },
+      {
+        "text": "עורק הזרוע, המשך האקסילרי מעבר לגבול התחתון של טרס מג׳ור.",
+        "section": "גפה עליונה",
+        "term": "Brachial Artery - המשך של Axillary Artery",
+        "shared": true
+      }
+    ]
+  },
+  "brachialis-muscle": {
+    "notes": [
+      {
+        "text": "מכופף מרכזי של המרפק, עמוק לבייספס.",
+        "section": "גפה עליונה",
+        "term": "Brachialis"
+      }
+    ]
+  },
+  "brachiocephalic-trunk": {
+    "notes": [
+      {
+        "text": "גזע עורקי המתפצל לקרוטיד המשותף הימני ולעורק התת־בריחי הימני.",
+        "section": "בית החזה",
+        "term": "Brachiocephalic Trunk"
+      }
+    ]
+  },
+  "brachiocephalic-vein": {
+    "notes": [
+      {
+        "text": "ורידים זוגיים הנוצרים מאיחוד הג׳וגולרי הפנימי והתת־בריחי.",
+        "section": "בית החזה",
+        "term": "Brachiocephalic Veins"
+      }
+    ]
+  },
+  "brachioradialis-muscle": {
+    "notes": [
+      {
+        "text": "שריר צדדי באמה המסייע בכיפוף המרפק, במיוחד במנח ביניים.",
+        "section": "השלמות גפה עליונה",
+        "term": "Brachioradialis"
+      }
+    ]
+  },
+  "brainstem": {
+    "notes": [
+      {
+        "text": "גזע המוח; כולל מוח אמצעי, גשר ומוח מוארך, ומחבר למערכת השדרה.",
+        "section": "השלמות מוח ומעטפות",
+        "term": "Brainstem"
+      }
+    ]
+  },
+  "buccal-nerve": {
+    "notes": [
+      {
+        "text": "ענף תחושתי של V3 לרירית ולעור הלחי; אינו הענף המוטורי של VII.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Buccal nerve"
+      }
+    ]
+  },
+  "bucinator": {
+    "notes": [
+      {
+        "text": "שריר הלחי; מצמיד אותה לשיניים ומסייע בשליטת המזון בלעיסה.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Buccinator"
+      }
+    ]
+  },
+  "calcaneal-tendon": {
+    "notes": [
+      {
+        "text": "גיד משותף בעיקר לגסטרוקנמיוס ולסולאוס, הנאחז בעצם העקב.",
+        "section": "גפה תחתונה",
+        "term": "Achilles / Calcaneal tendon"
+      }
+    ]
+  },
+  "calcaneofibular-ligament": {
+    "notes": [
+      {
+        "text": "רצועה צדדית בין הפיבולה לעצם העקב.",
+        "section": "גפה תחתונה",
+        "term": "Calcaneofibular ligament"
+      }
+    ]
+  },
+  "calcaneus": {
+    "notes": [
+      {
+        "text": "עצם העקב, הגדולה בעצמות שורש כף הרגל.",
+        "section": "השלמות גפה תחתונה",
+        "term": "Calcaneus"
+      }
+    ]
+  },
+  "capitate-bone": {
+    "notes": [
+      {
+        "text": "עצם ראשית במרכז שורש כף היד, בעיקר מול המסרק השלישי.",
+        "section": "השלמות גפה עליונה",
+        "term": "Capitate"
+      }
+    ]
+  },
+  "cauda-equina": {
+    "notes": [
+      {
+        "text": "צרור שורשי עצבים היורדים מתחת לקצה חוט השדרה.",
+        "section": "גב ועמוד שדרה",
+        "term": "Cauda equina"
+      }
+    ]
+  },
+  "cavernous-sinus": {
+    "notes": [
+      {
+        "text": "סינוס ורידי משני צדי האוכף הטורקי, בסמיכות לקרוטיד ולעצבים קרניאליים.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Cavernous sinus"
+      }
+    ]
+  },
+  "central-retinal-artery": {
+    "notes": [
+      {
+        "text": "עורק העובר בתוך עצב הראייה ומספק את הרשתית הפנימית.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Central retinal artery"
+      }
+    ]
+  },
+  "cephalic-vein": {
+    "notes": [
+      {
+        "text": "וריד שטחי בצד הלטרלי של הגפה העליונה, העולה באזור הדלטופקטורלי.",
+        "section": "השלמות גפה עליונה",
+        "term": "Cephalic vein"
+      }
+    ]
+  },
+  "cerebellum": {
+    "notes": [
+      {
+        "text": "המוחון; מתאם תנועה, שיווי משקל ולמידה מוטורית.",
+        "section": "השלמות מוח ומעטפות",
+        "term": "Cerebellum"
+      }
+    ]
+  },
+  "chorda-tympani": {
+    "notes": [
+      {
+        "text": "ענף של VII המעביר טעם מהלשון הקדמית וסיבים להפרשת רוק.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Chorda tympani nerve"
+      }
+    ]
+  },
+  "clavicle": {
+    "notes": [
+      {
+        "text": "עצמות הבריח מחברות את הסטרנום לשכמות ותומכות בחגורת הכתפיים.",
+        "section": "גפה עליונה",
+        "term": "עצמות הבריח (Clavicles)"
+      }
+    ]
+  },
+  "coccygeus-muscle": {
+    "notes": [
+      {
+        "text": "שריר אחורי של סרעפת האגן, סמוך לרצועה הסקרוספינלית.",
+        "section": "אגן ופרינאום",
+        "term": "Coccygeus"
+      }
+    ]
+  },
+  "coccyx": {
+    "notes": [
+      {
+        "text": "עצם הזנב, בקצה התחתון של עמוד השדרה.",
+        "section": "אגן ופרינאום",
+        "term": "Coccyx"
+      }
+    ]
+  },
+  "coeliac-trunk": {
+    "notes": [
+      {
+        "text": "ענף לא זוגי של האאורטה המספק את איברי המעי הקדמי.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Celiac trunk"
+      }
+    ]
+  },
+  "colic-artery-left": {
+    "notes": [
+      {
+        "text": "ענף מזנטרי תחתון אל המעי היורד.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Left colic artery"
+      }
+    ]
+  },
+  "colic-artery-right": {
+    "notes": [
+      {
+        "text": "עורק המספק את המעי העולה; מוצאו משתנה.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Right colic artery"
+      }
+    ]
+  },
+  "colon": {
+    "notes": [
+      {
+        "text": "כוללת מעי עולה, רוחבי, יורד וסיגמואידי. סופגת מים ואלקטרוליטים ותורמת ליצירת הצואה. מאפייני זיהוי כוללים האוסטרות, טניות ותוספות שומן. יחסי הצפק שונים בין החלקים, ולכן אין להניח שכל המעי הגס נייד באותה מידה.",
+        "section": "מערכת העיכול",
+        "term": "Colon"
+      }
+    ],
+    "he": "כרכשת",
+    "heHeading": "הכרכשת"
+  },
+  "common-carotid-artery": {
+    "notes": [
+      {
+        "text": "עורק צווארי המתפצל לקרוטיד פנימי וחיצוני.",
+        "section": "צוואר",
+        "term": "Common carotid artery"
+      }
+    ]
+  },
+  "common-fibular-nerve": {
+    "notes": [
+      {
+        "text": "ענף של הסיאטי העובר ליד צוואר הפיבולה ומתפצל לשטחי ולעמוק.",
+        "section": "גפה תחתונה",
+        "term": "Common fibular nerve"
+      }
+    ]
+  },
+  "common-hepatic-artery": {
+    "notes": [
+      {
+        "text": "ענף מגזע הצליאק שממנו מסתעפת אספקה לכבד ולמבנים סמוכים.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Common hepatic artery"
+      }
+    ]
+  },
+  "common-iliac-artery": {
+    "notes": [
+      {
+        "text": "כלי דם זוגיים המקשרים בין כלי הדם המרכזיים לאגן ולגפיים התחתונות.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Common iliac artery & vein",
+        "shared": true
+      }
+    ]
+  },
+  "common-iliac-vein": {
+    "notes": [
+      {
+        "text": "כלי דם זוגיים המקשרים בין כלי הדם המרכזיים לאגן ולגפיים התחתונות.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Common iliac artery & vein",
+        "shared": true
+      }
+    ]
+  },
+  "common-tendinous-ring": {
+    "notes": [
+      {
+        "text": "טבעת גידית בחלק האחורי של הארובה, מוצא לרוב השרירים הישרים.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Annulus tendineus / Common tendinous ring (of Zinn)"
+      }
+    ]
+  },
+  "coracobrachialis-muscle": {
+    "notes": [
+      {
+        "text": "שריר מהקורקואיד להומרוס, המסייע בכיפוף ובקירוב הזרוע.",
+        "section": "גפה עליונה",
+        "term": "Coracobrachialis"
+      }
+    ]
+  },
+  "cornea": {
+    "notes": [
+      {
+        "text": "החלק השקוף הקדמי של מעטפת העין, בעל תפקיד מרכזי בשבירת אור.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Cornea"
+      }
+    ]
+  },
+  "coronary-artery": {
+    "notes": [
+      {
+        "text": "עורקים היוצאים משורש האאורטה ומספקים את שריר הלב.",
+        "section": "בית החזה",
+        "term": "העורקים הקורונריים (Coronary Arteries)"
+      }
+    ]
+  },
+  "coronary-artery-left": {
+    "notes": [
+      {
+        "text": "עורק כלילי שמאלי, המתפצל בדרך כלל ל־LAD ולענף העוקף.",
+        "section": "בית החזה",
+        "term": "Left Coronary Artery"
+      }
+    ]
+  },
+  "coronary-artery-right": {
+    "notes": [
+      {
+        "text": "עורק כלילי ימני, הנע בחריץ שבין העלייה לחדר הימניים.",
+        "section": "בית החזה",
+        "term": "Right Coronary Artery"
+      }
+    ]
+  },
+  "coronary-sinus": {
+    "notes": [
+      {
+        "text": "סינוס ורידי בחלק האחורי של החריץ הכלילי, המתנקז לעלייה ימין.",
+        "section": "בית החזה",
+        "term": "Coronary Sinus"
+      }
+    ]
+  },
+  "corpus-cavernosum-of-penis": {
+    "notes": [
+      {
+        "text": "שני גופים זקפתיים המהווים את עיקר רקמת הזקפה בפין.",
+        "section": "אגן ופרינאום",
+        "term": "Corpora cavernosa"
+      }
+    ]
+  },
+  "corpus-spongiosum-of-penis": {
+    "notes": [
+      {
+        "text": "גוף זקפתי המקיף את השופכה ומתמשך לעטרת הפין.",
+        "section": "אגן ופרינאום",
+        "term": "Corpus spongiosum"
+      }
+    ]
+  },
+  "cricoid-cartilage": {
+    "notes": [
+      {
+        "text": "סחוס טבעתי מלא בבסיס בית הקול.",
+        "section": "צוואר",
+        "term": "Cricoid cartilage"
+      }
+    ]
+  },
+  "cricothyroid-muscle": {
+    "notes": [
+      {
+        "text": "שריר המותח ומאריך את מיתרי הקול; מקבל עצבוב מהענף הלרינגיאלי העליון החיצוני.",
+        "section": "צוואר",
+        "term": "Cricothyroid"
+      },
+      {
+        "text": "שריר המותח את מיתרי הקול באמצעות תנועה בין התריס לקריקואיד.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Cricothyroid m."
+      }
+    ]
+  },
+  "cuboid-bone": {
+    "notes": [
+      {
+        "text": "עצם הכפיס, בחלק הצדדי של שורש כף הרגל.",
+        "section": "השלמות גפה תחתונה",
+        "term": "Cuboid"
+      }
+    ]
+  },
+  "deep-artery-of-penis": {
+    "notes": [
+      {
+        "text": "עורק פנימי בגוף המחילתי המשתתף באספקת רקמת הזקפה.",
+        "section": "אגן ופרינאום",
+        "term": "Deep artery of the penis"
+      }
+    ]
+  },
+  "deep-dorsal-vein-of-penis": {
+    "notes": [
+      {
+        "text": "ורידים דורסליים המנקזים שכבות שונות של הפין.",
+        "section": "אגן ופרינאום",
+        "term": "Superficial & Deep dorsal vein of penis",
+        "shared": true
+      }
+    ]
+  },
+  "deep-femoral-artery": {
+    "notes": [
+      {
+        "text": "ענף עמוק של הפמורלי המספק חלק ניכר משרירי הירך.",
+        "section": "גפה תחתונה",
+        "term": "Deep / Profunda femoral artery"
+      }
+    ]
+  },
+  "deep-fibular-nerve": {
+    "notes": [
+      {
+        "text": "עצב למדור השוק הקדמי ולתחושה במרווח בין הבוהן לאצבע השנייה.",
+        "section": "גפה תחתונה",
+        "term": "Deep fibular nerve"
+      }
+    ]
+  },
+  "deep-part-of-tibial-collateral-ligament": {
+    "notes": [
+      {
+        "text": "רצועה צידית מדיאלית בברך, המתנגדת לעומס ולגוס.",
+        "section": "גפה תחתונה",
+        "term": "Medial Collateral Ligament (MCL)",
+        "shared": true
+      }
+    ]
+  },
+  "deltoid-muscle": {
+    "notes": [
+      {
+        "text": "שריר הכתף השטחי; סיביו האמצעיים מרחיקים את הזרוע.",
+        "section": "גפה עליונה",
+        "term": "Deltoid"
+      }
+    ]
+  },
+  "depressor-anguli-oris": {
+    "notes": [
+      {
+        "text": "שריר המוריד את זווית הפה.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Depressor anguli oris"
+      }
+    ]
+  },
+  "depressor-labii-inferioris": {
+    "notes": [
+      {
+        "text": "שריר המוריד את השפה התחתונה.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Depressor labii inferioris"
+      }
+    ]
+  },
+  "descending-colon": {
+    "notes": [
+      {
+        "text": "המעי היורד, בצד השמאלי של הבטן.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Descending colon"
+      }
+    ]
+  },
+  "diaphragm": {
+    "notes": [
+      {
+        "text": "שריר דמוי כיפה המפריד בין בית החזה לבטן והוא שריר השאיפה העיקרי. עצבוב מוטורי דרך העצב הפרני. קיימים פתחים נפרדים למעבר הווריד הנבוב התחתון, הוושט והאאורטה; אלה אינם עוברים באותו פתח.",
+        "section": "בית החזה",
+        "term": "Diaphragm"
+      },
+      {
+        "text": "שריר המפריד בין חזה לבטן ומהווה מניע מרכזי בשאיפה.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Diaphragm"
+      }
+    ],
+    "he": "סרעפת",
+    "heHeading": "הסרעפת"
+  },
+  "dorsal-interossei-muscles-of-foot": {
+    "notes": [
+      {
+        "text": "שרירים בין עצמות המסרק המרחיקים אצבעות מציר האצבע השנייה.",
+        "section": "גפה תחתונה",
+        "term": "Dorsal interossei"
+      },
+      {
+        "text": "בין־גרמיים פלנטריים מקרבים אצבעות; הדורסליים מרחיקים אותן מציר האצבע השנייה.",
+        "section": "גפה תחתונה",
+        "term": "Plantar & dorsal interossei",
+        "shared": true
+      }
+    ]
+  },
+  "dorsal-interossei-muscles-of-hand": {
+    "notes": [
+      {
+        "text": "שרירים בין־גרמיים גביים המרחיקים אצבעות מציר האצבע האמצעית.",
+        "section": "גפה עליונה",
+        "term": "4 Dorsal Interossei"
+      }
+    ]
+  },
+  "dorsalis-pedis-artery": {
+    "notes": [
+      {
+        "text": "עורק בגב כף הרגל, המשך העורק הטיביאלי הקדמי.",
+        "section": "גפה תחתונה",
+        "term": "Dorsalis pedis artery"
+      }
+    ]
+  },
+  "ductus-deferens": {
+    "notes": [
+      {
+        "text": "צינור שרירי המוביל תאי זרע מיותרת האשך לכיוון צינור השפיכה. עובר בחבל הזרע ובתעלה המפשעתית ומגיע לאגן. דופנו העבה מבדילה אותו מכלי הדם הסמוכים. הוא אינו השופכן, אף שיש ביניהם יחסי חצייה באגן.",
+        "section": "מערכת הרבייה הזכרית",
+        "term": "Ductus deferens"
+      },
+      {
+        "text": "צינור שרירי המוביל זרע מיותרת האשך לכיוון צינור השפיכה.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Ductus deferens"
+      },
+      {
+        "text": "צינור הזרע; מוביל מיותרת האשך לכיוון צינור השפיכה.",
+        "section": "אגן ופרינאום",
+        "term": "Vas/Ductus deferens"
+      }
+    ],
+    "he": "צינור הזרע",
+    "heHeading": "צינור הזרע"
+  },
+  "duodenum": {
+    "notes": [
+      {
+        "text": "החלק הראשון של המעי הדק, בצורת קשת סביב ראש הלבלב. מקבל מרה והפרשות לבלב. מחולק לארבעה חלקים ורובו מקובע מאחורי הצפק. חשוב לזהות את יחסו ללבלב ואת מקום כניסת צינורות ההפרשה.",
+        "section": "מערכת העיכול",
+        "term": "Duodenum"
+      },
+      {
+        "text": "המקטע הראשון של המעי הדק, סמוך לראש הלבלב.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Duodenum"
+      }
+    ],
+    "he": "תריסריון",
+    "heHeading": "התריסריון"
+  },
+  "ejaculatory-duct": {
+    "notes": [
+      {
+        "text": "צינור הנוצר מחיבור צינור הזרע לצינור שלפוחית הזרע, ונפתח בשופכה הערמוניתית.",
+        "section": "השלמות איברי הבטן והאגן",
+        "term": "Ejaculatory duct"
+      }
+    ]
+  },
+  "epididymis": {
+    "notes": [
+      {
+        "text": "צינור מפותל מאוד בצמוד לחלקו האחורי של האשך. כולל ראש, גוף וזנב. משתתף בהבשלה, אחסון והובלת תאי זרע; הזנב נמשך לצינור הזרע. אינו אתר הייצור הראשוני של תאי הזרע.",
+        "section": "מערכת הרבייה הזכרית",
+        "term": "Epididymis"
+      },
+      {
+        "text": "צינור מפותל הצמוד לאשך, שבו מתרחשות הבשלה ואגירה של זרע.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Epididymis"
+      },
+      {
+        "text": "ראש, גוף וזנב של יותרת האשך; הזנב נמשך לצינור הזרע.",
+        "section": "אגן ופרינאום",
+        "term": "Epididymis - Head, Body, Tail"
+      }
+    ],
+    "he": "יותרת האשך",
+    "heHeading": "יותרת האשך"
+  },
+  "epiglottis": {
+    "notes": [
+      {
+        "text": "סחוס אלסטי בכניסה לבית הקול. תנועתו במהלך הבליעה מסייעת בהגנת נתיב האוויר. ההגנה אינה תלויה בו בלבד: גם עליית בית הקול וסגירת הקפלים משתתפות. זהו חלק של בית הקול ולא איבר נפרד.",
+        "section": "הראש והצוואר",
+        "term": "Epiglottis"
+      }
+    ],
+    "he": "מכסה הגרון",
+    "heHeading": "מכסה הגרון"
+  },
+  "erector-spinae": {
+    "notes": [
+      {
+        "text": "קבוצת זוקפי הגב, הפושטת את עמוד השדרה ומסייעת בכיפוף צדי.",
+        "section": "גב ועמוד שדרה",
+        "term": "Erector spinae - Spinalis, Longissimus, Iliocostalis"
+      }
+    ]
+  },
+  "ethmoid-bone": {
+    "notes": [
+      {
+        "text": "עצם הכברה, המשתתפת בגג האף, במחיצה ובדופן הארובה.",
+        "section": "גולגולת",
+        "term": "Ethmoid bone"
+      }
+    ]
+  },
+  "extensor-carpi-radialis-brevis": {
+    "notes": [
+      {
+        "text": "פושט ומטה רדיאלית את שורש כף היד; נאחז במסרק השלישי.",
+        "section": "גפה עליונה",
+        "term": "Extensor Carpi Radialis Brevis"
+      }
+    ]
+  },
+  "extensor-carpi-radialis-longus": {
+    "notes": [
+      {
+        "text": "פושט ומטה רדיאלית את שורש כף היד; נאחז במסרק השני.",
+        "section": "גפה עליונה",
+        "term": "Extensor Carpi Radialis Longus"
+      }
+    ]
+  },
+  "extensor-carpi-ulnaris": {
+    "notes": [
+      {
+        "text": "פושט ומטה אולנרית את שורש כף היד.",
+        "section": "גפה עליונה",
+        "term": "Extensor Carpi Ulnaris"
+      }
+    ]
+  },
+  "extensor-digiti-minimi": {
+    "notes": [
+      {
+        "text": "שריר פושט נוסף לאצבע החמישית.",
+        "section": "גפה עליונה",
+        "term": "Extensor Digiti Minimi"
+      }
+    ]
+  },
+  "extensor-digitorum": {
+    "notes": [
+      {
+        "text": "פושט את אצבעות היד באמצעות הרחבות גידיות דורסליות.",
+        "section": "גפה עליונה",
+        "term": "Extensor Digitorum"
+      }
+    ]
+  },
+  "extensor-digitorum-brevis": {
+    "notes": [
+      {
+        "text": "שריר בגב כף הרגל המסייע בפשיטת האצבעות.",
+        "section": "גפה תחתונה",
+        "term": "Extensor digitorum brevis"
+      }
+    ]
+  },
+  "extensor-digitorum-longus": {
+    "notes": [
+      {
+        "text": "פושט את ארבע אצבעות הרגל הצדדיות ומסייע בכיפוף גבי.",
+        "section": "גפה תחתונה",
+        "term": "Extensor digitorum longus"
+      }
+    ]
+  },
+  "extensor-hallucis-brevis": {
+    "notes": [
+      {
+        "text": "שריר קצר בגב כף הרגל המסייע בפשיטת הבוהן.",
+        "section": "גפה תחתונה",
+        "term": "Extensor hallucis brevis"
+      }
+    ]
+  },
+  "extensor-hallucis-longus": {
+    "notes": [
+      {
+        "text": "פושט את הבוהן ומסייע בכיפוף גבי של הקרסול.",
+        "section": "גפה תחתונה",
+        "term": "Extensor hallucis longus"
+      }
+    ]
+  },
+  "extensor-indicis": {
+    "notes": [
+      {
+        "text": "שריר פושט עצמאי נוסף לאצבע המורה.",
+        "section": "גפה עליונה",
+        "term": "Extensor Indicis"
+      }
+    ]
+  },
+  "extensor-pollicis-brevis": {
+    "notes": [
+      {
+        "text": "פושט קצר של האגודל, המגיע לגליל המקורב.",
+        "section": "גפה עליונה",
+        "term": "Extensor Pollicis Brevis"
+      },
+      {
+        "text": "גיד הפושט הקצר של האגודל, חלק מהגבול הצדדי של תיבת ההרחה.",
+        "section": "גפה עליונה",
+        "term": "Extensor Pollicis Brevis(Lateral)"
+      }
+    ]
+  },
+  "extensor-pollicis-longus": {
+    "notes": [
+      {
+        "text": "פושט ארוך של האגודל, המגיע לגליל המרוחק.",
+        "section": "גפה עליונה",
+        "term": "Extensor Pollicis Longus"
+      },
+      {
+        "text": "גיד הפושט הארוך של האגודל, הגבול המדיאלי של תיבת ההרחה.",
+        "section": "גפה עליונה",
+        "term": "Extensor Pollicis Longus(Medial)"
+      }
+    ]
+  },
+  "external-abdominal-oblique-muscle": {
+    "notes": [
+      {
+        "text": "שריר בטן שטחי; מכופף את הגו ומסובב אותו לצד הנגדי.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "External abdominal oblique"
+      }
+    ]
+  },
+  "external-anal-sphincter": {
+    "notes": [
+      {
+        "text": "סוגר פנימי משריר חלק וסוגר חיצוני משריר שלד סביב התעלה האנאלית.",
+        "section": "אגן ופרינאום",
+        "term": "External & Internal anal sphincter"
+      }
+    ]
+  },
+  "external-carotid-artery": {
+    "notes": [
+      {
+        "text": "עורק המספק בעיקר מבנים חיצוניים של הראש וחלק מהצוואר.",
+        "section": "צוואר",
+        "term": "External carotid artery"
+      }
+    ]
+  },
+  "external-iliac-artery": {
+    "notes": [
+      {
+        "text": "עורק הממשיך מתחת לרצועה המפשעתית כעורק הפמורלי.",
+        "section": "אגן ופרינאום",
+        "term": "External iliac artery"
+      }
+    ]
+  },
+  "external-intercostal-muscles": {
+    "notes": [
+      {
+        "text": "שכבה חיצונית של שרירים בין־צלעיים, המסייעת בהרמת הצלעות.",
+        "section": "בית החזה",
+        "term": "External Intercostal"
+      }
+    ]
+  },
+  "external-jugular-vein": {
+    "notes": [
+      {
+        "text": "וריד שטחי בצוואר, העובר מעל הסטרנוקליידומסטואיד.",
+        "section": "צוואר",
+        "term": "External jugular vein"
+      }
+    ]
+  },
+  "facial-artery": {
+    "notes": [
+      {
+        "text": "עורק לפנים, החוצה את שפת הלסת סמוך למאסטר.",
+        "section": "צוואר",
+        "term": "Facial artery"
+      },
+      {
+        "text": "העורק והווריד של הפנים, המזינים ומנקזים את הרקמות השטחיות.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Facial artery & vein",
+        "shared": true
+      }
+    ]
+  },
+  "facial-vein": {
+    "notes": [
+      {
+        "text": "העורק והווריד של הפנים, המזינים ומנקזים את הרקמות השטחיות.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Facial artery & vein",
+        "shared": true
+      }
+    ]
+  },
+  "falx-cerebri": {
+    "notes": [
+      {
+        "text": "קפל דורה אנכי בין שתי ההמיספרות של המוח הגדול.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Falx cerebri"
+      }
+    ]
+  },
+  "femoral-artery": {
+    "notes": [
+      {
+        "text": "כלי הדם הראשיים בקדמת הירך, בהמשך לכלי הכסל החיצוניים.",
+        "section": "גפה תחתונה",
+        "term": "Femoral artery & vein",
+        "shared": true
+      }
+    ]
+  },
+  "femoral-nerve": {
+    "notes": [
+      {
+        "text": "עצב מהמקלעת המותנית; מפעיל בעיקר את מדור הירך הקדמי.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Femoral nerve"
+      }
+    ]
+  },
+  "femoral-vein": {
+    "notes": [
+      {
+        "text": "כלי הדם הראשיים בקדמת הירך, בהמשך לכלי הכסל החיצוניים.",
+        "section": "גפה תחתונה",
+        "term": "Femoral artery & vein",
+        "shared": true
+      }
+    ]
+  },
+  "femur": {
+    "notes": [
+      {
+        "text": "עצם הירך, בין מפרקי הירך והברך.",
+        "section": "השלמות גפה תחתונה",
+        "term": "Femur"
+      }
+    ]
+  },
+  "fibula": {
+    "notes": [
+      {
+        "text": "עצם השוקית, בצד החיצוני של השוק; תורמת במיוחד ליציבות הקרסול.",
+        "section": "השלמות גפה תחתונה",
+        "term": "Fibula"
+      }
+    ]
+  },
+  "fibular-artery": {
+    "notes": [
+      {
+        "text": "ענף עורקי המספק בעיקר אזורים עמוקים וצדדיים בשוק.",
+        "section": "גפה תחתונה",
+        "term": "Fibular / Peroneal artery"
+      }
+    ]
+  },
+  "fibular-collateral-ligament": {
+    "notes": [
+      {
+        "text": "רצועה צידית לטרלית בברך, מהפמור לפיבולה, המתנגדת לעומס ורוס.",
+        "section": "גפה תחתונה",
+        "term": "Lateral Collateral Ligament (LCL)"
+      }
+    ]
+  },
+  "fibularis-brevis-muscle": {
+    "notes": [
+      {
+        "text": "מטה את כף הרגל החוצה; גידו נאחז בבסיס המסרק החמישי.",
+        "section": "גפה תחתונה",
+        "term": "Fibularis brevis"
+      }
+    ]
+  },
+  "fibularis-longus-muscle": {
+    "notes": [
+      {
+        "text": "מטה את כף הרגל החוצה ותומך בקשתות דרך גיד החוצה את הסוליה.",
+        "section": "גפה תחתונה",
+        "term": "Fibularis longus"
+      }
+    ]
+  },
+  "fibularis-tertius-muscle": {
+    "notes": [
+      {
+        "text": "מסייע בכיפוף גבי ובהטיית כף הרגל החוצה.",
+        "section": "גפה תחתונה",
+        "term": "Fibularis tertius"
+      }
+    ]
+  },
+  "flexor-carpi-radialis": {
+    "notes": [
+      {
+        "text": "מכופף ומטה רדיאלית את שורש כף היד.",
+        "section": "גפה עליונה",
+        "term": "Flexor Carpi Radialis"
+      }
+    ]
+  },
+  "flexor-carpi-ulnaris": {
+    "notes": [
+      {
+        "text": "מכופף ומטה אולנרית את שורש כף היד; מעוצבב בידי האולנרי.",
+        "section": "גפה עליונה",
+        "term": "Flexor Carpi Ulnaris"
+      }
+    ]
+  },
+  "flexor-digiti-minimi-of-hand": {
+    "notes": [
+      {
+        "text": "שריר קצר המכופף את מפרק בסיס הזרת ביד.",
+        "section": "גפה עליונה",
+        "term": "Flexor Digiti Minimi"
+      }
+    ]
+  },
+  "flexor-digitorum-brevis": {
+    "notes": [
+      {
+        "text": "שריר שטחי בסוליה המאפשר כיפוף של האצבעות הצדדיות.",
+        "section": "גפה תחתונה",
+        "term": "Flexor digitorum brevis"
+      }
+    ]
+  },
+  "flexor-digitorum-longus": {
+    "notes": [
+      {
+        "text": "מכופף את ארבע האצבעות הצדדיות של כף הרגל.",
+        "section": "גפה תחתונה",
+        "term": "Flexor digitorum longus"
+      }
+    ]
+  },
+  "flexor-digitorum-profundus": {
+    "notes": [
+      {
+        "text": "מכופף עמוק של האצבעות, המגיע לגלילים המרוחקים.",
+        "section": "גפה עליונה",
+        "term": "Flexor Digitorum Profundus"
+      }
+    ]
+  },
+  "flexor-digitorum-superficialis": {
+    "notes": [
+      {
+        "text": "שריר מכופף שטחי לאצבעות, הנאחז בגלילים האמצעיים.",
+        "section": "השלמות גפה עליונה",
+        "term": "Flexor digitorum superficialis"
+      }
+    ]
+  },
+  "flexor-hallucis-longus": {
+    "notes": [
+      {
+        "text": "מכופף את הבוהן, במיוחד במפרק הבין־גלילי, ומסייע בדחיפה בהליכה.",
+        "section": "גפה תחתונה",
+        "term": "Flexor hallucis longus"
+      }
+    ]
+  },
+  "flexor-pollicis-brevis": {
+    "notes": [
+      {
+        "text": "שריר פנימי המכופף את מפרק בסיס האגודל.",
+        "section": "גפה עליונה",
+        "term": "Flexor pollicis brevis"
+      }
+    ]
+  },
+  "flexor-pollicis-longus": {
+    "notes": [
+      {
+        "text": "מכופף ארוך של האגודל, עד לגליל המרוחק.",
+        "section": "גפה עליונה",
+        "term": "Flexor Pollicis Longus"
+      }
+    ]
+  },
+  "frontal-bone": {
+    "notes": [
+      {
+        "text": "עצם המצח, היוצרת את המצח וחלק מגג הארובות והגולגולת הקדמית.",
+        "section": "גולגולת",
+        "term": "Frontal bone"
+      }
+    ]
+  },
+  "frontalis-muscle": {
+    "notes": [
+      {
+        "text": "בטנים קדמית ואחורית המחוברות באפונאורוזת הקרקפת; מניעות קרקפת וגבות.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Occipitofrontalis - Frontalis & Occipitalis",
+        "shared": true
+      }
+    ]
+  },
+  "gallbladder": {
+    "notes": [
+      {
+        "text": "שק קטן בצד התחתון של הכבד. אוגר ומרכז את המרה שמיוצרת בכבד ומתרוקן דרך הצינור הציסטי. חלקיו כוללים קרקעית, גוף וצוואר. הוא אינו היצרן של המרה ואינו חלק מהלבלב.",
+        "section": "מערכת העיכול",
+        "term": "Gallbladder"
+      },
+      {
+        "text": "שק המאחסן ומרכז מרה; פירוט במדריך האיברים.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Gallbladder"
+      }
+    ],
+    "he": "כיס המרה",
+    "heHeading": "כיס המרה"
+  },
+  "gastric-artery-left": {
+    "notes": [
+      {
+        "text": "עורק לקיבה, בעיקר לאורך העקמומיות הקטנה.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Left gastric artery"
+      }
+    ]
+  },
+  "gastroduodenal-artery": {
+    "notes": [
+      {
+        "text": "עורק היורד מאחורי התריסריון ומספק אזורי קיבה, תריסריון ולבלב.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Gastroduodenal artery"
+      }
+    ]
+  },
+  "genioglossus-muscle": {
+    "notes": [
+      {
+        "text": "שריר בצורת מניפה מהלסת ללשון; חשוב בהבלטת הלשון קדימה.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Genioglossus"
+      }
+    ]
+  },
+  "geniohyoid-muscle": {
+    "notes": [
+      {
+        "text": "שריר מעל המיילוהיואיד, המושך את ההיואיד קדימה ולמעלה.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Geniohyoid"
+      }
+    ]
+  },
+  "genitofemoral-nerve": {
+    "notes": [
+      {
+        "text": "עצב L1–L2 החוצה את הפסואס ומתפצל לענף גניטלי ולענף פמורלי.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Genitofemoral nerve"
+      }
+    ]
+  },
+  "glans-penis": {
+    "notes": [
+      {
+        "text": "העטרה, ההתרחבות המרוחקת של הגוף הספוגי.",
+        "section": "אגן ופרינאום",
+        "term": "Glans penis"
+      }
+    ]
+  },
+  "glenoid-labrum": {
+    "notes": [
+      {
+        "text": "טבעת סחוס סיבי המעמיקה את מכתש הכתף.",
+        "section": "השלמות גפה עליונה",
+        "term": "Glenoid labrum"
+      }
+    ]
+  },
+  "gluteus-maximus-muscle": {
+    "notes": [
+      {
+        "text": "שריר העכוז הגדול; פושט ומסובב החוצה את הירך.",
+        "section": "גפה תחתונה",
+        "term": "Gluteus maximus m."
+      }
+    ]
+  },
+  "gluteus-medius-muscle": {
+    "notes": [
+      {
+        "text": "שריר עכוז המרחיק את הירך ומייצב את האגן בעמידה על רגל אחת.",
+        "section": "גפה תחתונה",
+        "term": "Gluteus medius m."
+      }
+    ]
+  },
+  "gluteus-minimus-muscle": {
+    "notes": [
+      {
+        "text": "שריר עמוק לגלוטאוס מדיוס; מרחיק ירך ותורם לייצוב האגן.",
+        "section": "גפה תחתונה",
+        "term": "Gluteus minimus m."
+      }
+    ]
+  },
+  "gracilis-muscle": {
+    "notes": [
+      {
+        "text": "שריר מדיאלי ארוך; מקרב ירך ומסייע בכיפוף הברך.",
+        "section": "גפה תחתונה",
+        "term": "Gracilis m."
+      }
+    ]
+  },
+  "great-cardiac-vein": {
+    "notes": [
+      {
+        "text": "וריד לבבי גדול, המלווה בחלק ממהלכו את ה־LAD.",
+        "section": "בית החזה",
+        "term": "Great Cardiac Vein"
+      }
+    ]
+  },
+  "great-saphenous-vein": {
+    "notes": [
+      {
+        "text": "וריד שטחי ארוך לאורך הצד המדיאלי של הרגל, המתנקז לפמורלי.",
+        "section": "גפה תחתונה",
+        "term": "Great saphenous vein"
+      }
+    ]
+  },
+  "hamate-bone": {
+    "notes": [
+      {
+        "text": "עצם האנקול בצד האולנרי של השורה המרוחקת; נושאת זיז דמוי וו.",
+        "section": "השלמות גפה עליונה",
+        "term": "Hamate"
+      }
+    ]
+  },
+  "heart": {
+    "notes": [
+      {
+        "text": "איבר שרירי במדיאסטינום האמצעי, עטוף בפריקרד. צד ימין מזרים דם למחזור הריאתי וצד שמאל למחזור המערכתי. העליות מקבלות דם והחדרים מוציאים אותו. אספקת שריר הלב מגיעה מהעורקים הכליליים.",
+        "section": "בית החזה",
+        "term": "Heart"
+      }
+    ],
+    "he": "לב",
+    "heHeading": "הלב"
+  },
+  "hemi-azygos-vein": {
+    "notes": [
+      {
+        "text": "וריד המנקז בעיקר את דופן החזה השמאלית התחתונה לכיוון האזיגוס.",
+        "section": "בית החזה",
+        "term": "Hemiazygos Vein (צד שמאל תחתון)"
+      }
+    ]
+  },
+  "hepatic-portal-vein": {
+    "notes": [
+      {
+        "text": "וריד המביא לכבד דם ממערכת העיכול, מהטחול ומאיברים נלווים.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Hepatic portal vein"
+      }
+    ]
+  },
+  "hepatic-veins": {
+    "notes": [
+      {
+        "text": "ורידים המנקזים את הכבד אל הווריד הנבוב התחתון.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Hepatic veins"
+      }
+    ]
+  },
+  "humerus": {
+    "notes": [
+      {
+        "text": "עצם הזרוע, בין השכמה לעצמות האמה.",
+        "section": "השלמות גפה עליונה",
+        "term": "Humerus"
+      }
+    ]
+  },
+  "hyoglossus-muscle": {
+    "notes": [
+      {
+        "text": "שריר מההיואיד ללשון, המסייע בהורדת הלשון.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Hyoglossus"
+      }
+    ]
+  },
+  "hyoid-bone": {
+    "notes": [
+      {
+        "text": "עצם הלשון; עצם בצוואר שאינה יוצרת מפרק ישיר עם עצמות אחרות.",
+        "section": "צוואר",
+        "term": "Hyoid bone"
+      }
+    ]
+  },
+  "hypoglossal-nerve-xii": {
+    "notes": [
+      {
+        "text": "עצב XII; מפעיל את רוב שרירי הלשון.",
+        "section": "צוואר",
+        "term": "Hypoglossal nerve"
+      },
+      {
+        "text": "עצב XII, למוטוריקה של רוב שרירי הלשון.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Hypoglossal nerve"
+      }
+    ]
+  },
+  "hypophysis": {
+    "notes": [
+      {
+        "text": "יותרת המוח, בלוטה הורמונלית בבסיס המוח הקשורה להיפותלמוס.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Hypophysis"
+      }
+    ]
+  },
+  "hypothalamus": {
+    "notes": [
+      {
+        "text": "אזור בבסיס המוח המווסת תפקודים אוטונומיים והורמונליים ומשפיע על יותרת המוח.",
+        "section": "השלמות מוח ומעטפות",
+        "term": "Hypothalamus"
+      }
+    ]
+  },
+  "ileocolic-artery": {
+    "notes": [
+      {
+        "text": "ענף לאזור האילאום הסופי, הצקום והתוספתן.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Ileocolic artery"
+      }
+    ]
+  },
+  "iliacus-muscle": {
+    "notes": [
+      {
+        "text": "שריר בכסל המצטרף לפסואס ונאחז באזור הטרוכנטר הקטן.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Iliacus"
+      }
+    ]
+  },
+  "ilio-inguinal-nerve": {
+    "notes": [
+      {
+        "text": "עצב מאזור L1, המעצבב חלק מהמפשעה ומאיברי המין החיצוניים.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Ilioinguinal nerve"
+      }
+    ]
+  },
+  "iliococcygeus-muscle": {
+    "notes": [
+      {
+        "text": "קבוצת שרירים התומכת באיברי האגן ומשתתפת בשליטה על התרוקנות.",
+        "section": "אגן ופרינאום",
+        "term": "Levator ani - Puborectalis, Pubococcygeus, Iliococcygeus",
+        "shared": true
+      }
+    ]
+  },
+  "iliohypogastric-nerve": {
+    "notes": [
+      {
+        "text": "עצב מאזור L1, המספק דופן בטן תחתונה ועור סמוך לאגן.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Iliohypogastric nerve"
+      }
+    ]
+  },
+  "iliolumbar-artery": {
+    "notes": [
+      {
+        "text": "ענף עורקי לאזור הכסל והמותן.",
+        "section": "אגן ופרינאום",
+        "term": "Ilio-lumbar artery"
+      }
+    ]
+  },
+  "iliopsoas-muscle": {
+    "notes": [
+      {
+        "text": "איליאקוס ופסואס מג׳ור יחד; מכופפי ירך מרכזיים.",
+        "section": "גפה תחתונה",
+        "term": "Iliopsoas m."
+      }
+    ]
+  },
+  "iliotibial-tract": {
+    "notes": [
+      {
+        "text": "עיבוי צדדי של הפאסיה העמוקה בירך, המסייע בייצוב הירך והברך.",
+        "section": "גפה תחתונה",
+        "term": "Iliotibial tract / band + Fascia lata"
+      }
+    ]
+  },
+  "incus": {
+    "notes": [
+      {
+        "text": "הסדן, עצם שמע המקשרת בין הפטיש לארכוף.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Incus"
+      }
+    ]
+  },
+  "inferior-alveolar-artery": {
+    "notes": [
+      {
+        "text": "כלי דם המלווים את העצב האלבאולרי התחתון בתעלת הלסת.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Inferior alveolar artery & vein"
+      }
+    ]
+  },
+  "inferior-alveolar-nerve": {
+    "notes": [
+      {
+        "text": "ענף V3 לשיניים התחתונות; ממשיך בין היתר כעצב המנטלי.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Inferior Alveolar nerve"
+      }
+    ]
+  },
+  "inferior-epigastric-artery": {
+    "notes": [
+      {
+        "text": "כלי דם של דופן הבטן; העורק התחתון עולה ממערכת הכסל החיצונית.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Inferior epigastric artery & vein",
+        "shared": true
+      },
+      {
+        "text": "עורק העולה מהכסל החיצוני לדופן הבטן הקדמית.",
+        "section": "אגן ופרינאום",
+        "term": "Inferior epigastric artery"
+      }
+    ]
+  },
+  "inferior-epigastric-vein": {
+    "notes": [
+      {
+        "text": "כלי דם של דופן הבטן; העורק התחתון עולה ממערכת הכסל החיצונית.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Inferior epigastric artery & vein",
+        "shared": true
+      }
+    ]
+  },
+  "inferior-gemellus-muscle": {
+    "notes": [
+      {
+        "text": "שריר קטן מתחת לגיד האובטורטור הפנימי, המסייע בסיבוב ירך החוצה.",
+        "section": "גפה תחתונה",
+        "term": "Gemellus inferior m."
+      }
+    ]
+  },
+  "inferior-gluteal-artery": {
+    "notes": [
+      {
+        "text": "עורק היוצא מתחת לפיריפורמיס לאזור העכוז.",
+        "section": "אגן ופרינאום",
+        "term": "Inferior gluteal artery"
+      },
+      {
+        "text": "עורקים מהכסל הפנימי המזינים את אזור העכוז מעל הפיריפורמיס ומתחתיו.",
+        "section": "גפה תחתונה",
+        "term": "Superior & Inferior gluteal arteries",
+        "shared": true
+      }
+    ]
+  },
+  "inferior-mesenteric-artery": {
+    "notes": [
+      {
+        "text": "עורק לאיברי המעי האחורי, ובהם המעי היורד, הסיגמה והרקטום העליון.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Inferior Mesenteric artery"
+      }
+    ]
+  },
+  "inferior-mesenteric-vein": {
+    "notes": [
+      {
+        "text": "וריד המנקז את אזור המעי האחורי, לרוב אל וריד הטחול.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Inferior Mesenteric vein"
+      }
+    ]
+  },
+  "inferior-nasal-concha-bone": {
+    "notes": [
+      {
+        "text": "הקונכייה התחתונה היא עצם נפרדת בדופן חלל האף.",
+        "section": "גולגולת",
+        "term": "Inferior nasal concha"
+      }
+    ]
+  },
+  "inferior-oblique-muscle": {
+    "notes": [
+      {
+        "text": "שריר עין אלכסוני תחתון; תורם לסיבוב החוצה ולהרמה, תלוי במנח המבט.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Inferior oblique"
+      }
+    ]
+  },
+  "inferior-pancreaticoduodenal-artery": {
+    "notes": [
+      {
+        "text": "אספקה תחתונה לראש הלבלב ולתריסריון, מהמערכת המזנטרית העליונה.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Inferior pancreaticoduodenal artery"
+      }
+    ]
+  },
+  "inferior-parathyroid-gland": {
+    "notes": [
+      {
+        "text": "בלוטות קטנות, לרוב ארבע, בסביבת המשטח האחורי של התריס. מפרישות PTH ומשתתפות בוויסות הסידן. מיקומן ומספרן עשויים להשתנות. למרות השם והקרבה, תפקידן שונה מתפקיד בלוטת התריס.",
+        "section": "בלוטות ואיברים לימפתיים",
+        "term": "Parathyroid glands",
+        "shared": true
+      }
+    ]
+  },
+  "inferior-rectus-muscle": {
+    "notes": [
+      {
+        "text": "שריר עין ישר תחתון; מוריד את המבט ומוסיף רכיבי קירוב וסיבוב.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Inferior rectus"
+      }
+    ]
+  },
+  "inferior-suprarenal-artery": {
+    "notes": [
+      {
+        "text": "ענף מעורק הכליה אל יותרת הכליה.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Inferior suprarenal artery"
+      }
+    ]
+  },
+  "inferior-thyroid-artery": {
+    "notes": [
+      {
+        "text": "גזע תירוצרוויקלי וענפיו, המספקים אזורי תריס, צוואר ושכמה.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Thyrocervical trunk - Transverse cervical artery, Suprascapular artery, Inferior thyroid artery",
+        "shared": true
+      }
+    ]
+  },
+  "inferior-vena-cava-abdominal-part": {
+    "notes": [
+      {
+        "text": "וריד גדול המחזיר דם מחלקו התחתון של הגוף לעלייה ימין.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Inferior vena cava"
+      }
+    ]
+  },
+  "infrapatellar-fat-pad": {
+    "notes": [
+      {
+        "text": "כרית שומן מתחת לפטלה, בתוך הקפסולה אך מחוץ לחלל הסינוביאלי.",
+        "section": "גפה תחתונה",
+        "term": "Infrapatellar fat pad"
+      }
+    ]
+  },
+  "infraspinatus-muscle": {
+    "notes": [
+      {
+        "text": "שריר שרוול מסובב המסובב את הזרוע החוצה.",
+        "section": "השלמות גפה עליונה",
+        "term": "Infraspinatus"
+      }
+    ]
+  },
+  "inguinal-ligament": {
+    "notes": [
+      {
+        "text": "רצועה בין קוץ הכסל הקדמי העליון לגבשושית החיק.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Inguinal ligament"
+      }
+    ]
+  },
+  "innermost-intercostal-muscles": {
+    "notes": [
+      {
+        "text": "השכבה הפנימית ביותר של השרירים הבין־צלעיים.",
+        "section": "בית החזה",
+        "term": "Innermost Intercostal"
+      }
+    ]
+  },
+  "intercostal-nerves": {
+    "notes": [
+      {
+        "text": "הענף הקדמי של עצב חזי, העובר ברווח הבין־צלעי.",
+        "section": "בית החזה",
+        "term": "עצב אינטרקוסטלי (Intercostal Nerve)"
+      }
+    ]
+  },
+  "intermediate-tendon-of-digastric-muscle": {
+    "notes": [
+      {
+        "text": "הגיד המחבר בין שתי בטני הדיגסטריק, הנתמך סמוך להיואיד.",
+        "section": "צוואר",
+        "term": "Intermediate di-gastric tendon"
+      }
+    ]
+  },
+  "internal-abdominal-oblique-muscle": {
+    "notes": [
+      {
+        "text": "שריר בטן אמצעי; מסייע בכיפוף ובסיבוב הגו לאותו צד.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Internal abdominal oblique"
+      }
+    ]
+  },
+  "internal-carotid-artery": {
+    "notes": [
+      {
+        "text": "עורק המגיע למוח ולארובה; בדרך כלל ללא ענפים בצוואר.",
+        "section": "צוואר",
+        "term": "Internal carotid artery"
+      }
+    ]
+  },
+  "internal-iliac-artery": {
+    "notes": [
+      {
+        "text": "העורק העיקרי לאיברי האגן ולחלק מדפנותיו.",
+        "section": "אגן ופרינאום",
+        "term": "Internal iliac artery"
+      }
+    ]
+  },
+  "internal-intercostal-muscles": {
+    "notes": [
+      {
+        "text": "שכבה אמצעית של שרירים בין־צלעיים; פעולתה משתנה לפי חלק השריר.",
+        "section": "בית החזה",
+        "term": "Internal Intercostal"
+      }
+    ]
+  },
+  "internal-jugular-vein": {
+    "notes": [
+      {
+        "text": "וריד עמוק גדול המנקז את המוח וחלק מהראש והצוואר.",
+        "section": "צוואר",
+        "term": "Internal jugular vein"
+      }
+    ]
+  },
+  "internal-pudendal-artery": {
+    "notes": [
+      {
+        "text": "מקור עורקי מרכזי לפרינאום ולאיברי המין החיצוניים.",
+        "section": "אגן ופרינאום",
+        "term": "Internal pudendal artery"
+      }
+    ]
+  },
+  "internal-thoracic-artery": {
+    "notes": [
+      {
+        "text": "עורק היורד בצד הפנימי של דופן החזה, לצד הסטרנום.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Internal thoracic artery"
+      },
+      {
+        "text": "כלי דם לאורך הצד הפנימי של דופן החזה הקדמית.",
+        "section": "בית החזה",
+        "term": "Internal Thoracic Artery & Vein",
+        "shared": true
+      }
+    ]
+  },
+  "internal-thoracic-veins": {
+    "notes": [
+      {
+        "text": "כלי דם לאורך הצד הפנימי של דופן החזה הקדמית.",
+        "section": "בית החזה",
+        "term": "Internal Thoracic Artery & Vein",
+        "shared": true
+      }
+    ]
+  },
+  "interosseous-membrane-of-leg": {
+    "notes": [
+      {
+        "text": "קרום סיבי בין הטיביה לפיבולה, המפריד מדורים ומספק אחיזה.",
+        "section": "גפה תחתונה",
+        "term": "Interosseous membrane"
+      }
+    ]
+  },
+  "iris": {
+    "notes": [
+      {
+        "text": "הקשתית, השולטת בגודל האישון ובכמות האור הנכנסת.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Iris"
+      }
+    ]
+  },
+  "jejunum": {
+    "notes": [
+      {
+        "text": "חלקו האמצעי של המעי הדק, בין התריסריון לאילאום. משתתף בעיכול ובספיגה. בהשוואה לאילאום נוטים למצוא בו קפלים בולטים יותר, פחות קשתות עורקיות וכלי דם ישרים ארוכים יותר; אין ביניהם קו גבול חד.",
+        "section": "מערכת העיכול",
+        "term": "Jejunum"
+      },
+      {
+        "text": "המעי הריק, המקטע שבין התריסריון לאילאום.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Jejunum"
+      }
+    ],
+    "he": "מעי ריק",
+    "heHeading": "המעי הריק"
+  },
+  "lacrimal-bone": {
+    "notes": [
+      {
+        "text": "עצם קטנה בדופן המדיאלית של הארובה, בסביבת מערכת הדמעות.",
+        "section": "גולגולת",
+        "term": "Lacrimal bone"
+      }
+    ]
+  },
+  "lacrimal-gland": {
+    "notes": [
+      {
+        "text": "בחלק העליון־צדי של הארובה. מפרישה את המרכיב המימי של הדמעות, שמלחלחות ומגינות על פני העין. הנוזל זורם לכיוון הזווית המדיאלית ומשם למערכת הניקוז ולחלל האף. יש להבדיל בין הבלוטה המפרישה לבין שק הדמעות המנקז.",
+        "section": "מערכת העצבים והחושים",
+        "term": "Lacrimal gland"
+      },
+      {
+        "text": "בלוטת הדמעות מפרישה נוזל; שק הדמעות אוסף אותו בדרך לניקוז לאף.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Lacrimal gland + Lacrimal sac",
+        "shared": true
+      }
+    ],
+    "he": "בלוטת הדמעות",
+    "heHeading": "בלוטת הדמעות"
+  },
+  "lacrimal-sac": {
+    "notes": [
+      {
+        "text": "בלוטת הדמעות מפרישה נוזל; שק הדמעות אוסף אותו בדרך לניקוז לאף.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Lacrimal gland + Lacrimal sac",
+        "shared": true
+      }
+    ]
+  },
+  "laryngopharynx": {
+    "notes": [
+      {
+        "text": "הלוע הגרוני, מאחורי בית הקול ובהמשך לכיוון הוושט.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Laryngopharynx"
+      }
+    ]
+  },
+  "lateral-circumflex-femoral-artery": {
+    "notes": [
+      {
+        "text": "עורק המקיף את הפמור המקורב מהצד הלטרלי.",
+        "section": "גפה תחתונה",
+        "term": "Lateral circumflex femoral artery"
+      }
+    ]
+  },
+  "lateral-crico-arytenoid-muscle": {
+    "notes": [
+      {
+        "text": "שרירים המקרבים את קפלי הקול באמצעות סיבוב האריטנואידים.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Lateral cricoarytenoids m."
+      }
+    ]
+  },
+  "lateral-head-of-gastrocnemius": {
+    "notes": [
+      {
+        "text": "שריר הסובך השטחי; מבצע כפיפה כפית בקרסול ומסייע בכיפוף ברך.",
+        "section": "גפה תחתונה",
+        "term": "Gastrocnemius (medial/lateral head)",
+        "shared": true
+      }
+    ]
+  },
+  "lateral-meniscus": {
+    "notes": [
+      {
+        "text": "סהרוני סחוס סיבי המפזרים עומס ומשפרים התאמה במפרק הברך.",
+        "section": "גפה תחתונה",
+        "term": "Medial + Lateral meniscus",
+        "shared": true
+      }
+    ]
+  },
+  "lateral-plantar-artery": {
+    "notes": [
+      {
+        "text": "עורק לסוליה הצדדית המשתתף ביצירת הקשת הפלנטרית העמוקה.",
+        "section": "גפה תחתונה",
+        "term": "Lateral plantar artery"
+      }
+    ]
+  },
+  "lateral-plantar-nerve": {
+    "notes": [
+      {
+        "text": "ענף טיביאלי המספק את הצד הצדדי של הסוליה ורבים משריריה הקטנים.",
+        "section": "גפה תחתונה",
+        "term": "Lateral plantar nerve"
+      }
+    ]
+  },
+  "lateral-pterygoid-muscle": {
+    "notes": [
+      {
+        "text": "שריר לעיסה עמוק המסייע בקידום הלסת ובתנועת הדיסק המפרקי.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Lateral pterygoid"
+      }
+    ]
+  },
+  "lateral-rectus-muscle": {
+    "notes": [
+      {
+        "text": "שריר עין המרחיק את המבט החוצה, באמצעות עצב VI.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Lateral rectus"
+      }
+    ]
+  },
+  "latissimus-dorsi-muscle": {
+    "notes": [
+      {
+        "text": "שריר גב רחב; פושט, מקרב ומסובב פנימה את הזרוע.",
+        "section": "גב ועמוד שדרה",
+        "term": "Latissimus dorsi"
+      }
+    ]
+  },
+  "lens": {
+    "notes": [
+      {
+        "text": "העדשה, מבנה שקוף המשנה את כוח המיקוד באקומודציה.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Lens"
+      }
+    ]
+  },
+  "lesser-omentum": {
+    "notes": [
+      {
+        "text": "קפל צפק בין הכבד לקיבה ולתריסריון המקורב.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Lesser omentum"
+      }
+    ]
+  },
+  "levator-anguli-oris": {
+    "notes": [
+      {
+        "text": "שריר המרים את זווית הפה.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Levator anguli oris"
+      }
+    ]
+  },
+  "levator-labii-superioris": {
+    "notes": [
+      {
+        "text": "שריר המרים את השפה העליונה.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Levator labii superioris"
+      }
+    ]
+  },
+  "levator-palpebrae-superioris": {
+    "notes": [
+      {
+        "text": "שריר המרים את העפעף העליון, בעיקר באמצעות עצב III.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Levator palpebrae superioris"
+      }
+    ]
+  },
+  "levator-scapulae": {
+    "notes": [
+      {
+        "text": "שריר מהצוואר לשכמה, המרים אותה ומסייע בסיבוב מטה.",
+        "section": "גב ועמוד שדרה",
+        "term": "Levator scapulae"
+      }
+    ]
+  },
+  "levatores-costarum": {
+    "notes": [
+      {
+        "text": "שרירים קצרים בין זיזים רוחביים לצלעות, המסייעים בתנועתן.",
+        "section": "גב ועמוד שדרה",
+        "term": "Levator costarum (Brevis & Longus)"
+      }
+    ]
+  },
+  "ligament-of-head-of-femur": {
+    "notes": [
+      {
+        "text": "רצועה מראש הפמור לאצטבולום, המכילה גם כלי דם קטן.",
+        "section": "גפה תחתונה",
+        "term": "Ligament of head of femur / Ligamentum teres"
+      }
+    ]
+  },
+  "ligamenta-flava": {
+    "notes": [
+      {
+        "text": "רצועה עשירה בסיבים אלסטיים המחברת בין למינות של חוליות סמוכות.",
+        "section": "גב ועמוד שדרה",
+        "term": "Ligamentum flavum"
+      }
+    ]
+  },
+  "linea-alba": {
+    "notes": [
+      {
+        "text": "קו חיבור אמצעי של אפונאורוזות שרירי הבטן.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Linea alba"
+      }
+    ]
+  },
+  "lingual-nerve": {
+    "notes": [
+      {
+        "text": "ענף V3 לתחושה כללית בשני השלישים הקדמיים של הלשון.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Lingual nerve"
+      }
+    ]
+  },
+  "lingual-vein": {
+    "notes": [
+      {
+        "text": "כלי הדם הראשיים של הלשון והאזורים הסמוכים.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Lingual artery & vein"
+      }
+    ]
+  },
+  "liver": {
+    "notes": [
+      {
+        "text": "איבר גדול בעיקר בבטן הימנית העליונה. מעבד חומרי מזון, מייצר חלבונים ומרה ומשתתף בפינוי חומרים מהדם. מקבל דם מהווריד הפורטלי ומהעורק הכבדי; הוורידים הכבדיים מנקזים אותו אל הווריד הנבוב התחתון.",
+        "section": "מערכת העיכול",
+        "term": "Liver"
+      },
+      {
+        "text": "הכבד הוא איבר מטבולי ומפריש מרה; פירוט במדריך האיברים.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Liver"
+      }
+    ],
+    "he": "כבד",
+    "heHeading": "הכבד"
+  },
+  "long-plantar-ligament": {
+    "notes": [
+      {
+        "text": "רצועה ארוכה בסוליה, התומכת בעיקר בקשת הצדדית.",
+        "section": "גפה תחתונה",
+        "term": "Long plantar ligament"
+      }
+    ]
+  },
+  "long-thoracic-nerve": {
+    "notes": [
+      {
+        "text": "עצב לשריר הסרטוס אנטריור, החשוב להצמדת השכמה לבית החזה.",
+        "section": "השלמות גפה עליונה",
+        "term": "Long thoracic nerve"
+      }
+    ]
+  },
+  "longus-colli-muscle": {
+    "notes": [
+      {
+        "text": "שריר עמוק קדמי בצוואר, המכופף ומייצב חוליות צוואריות.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Longus colli"
+      }
+    ]
+  },
+  "lumbrical-muscles-of-foot": {
+    "notes": [
+      {
+        "text": "שרירים קטנים המכופפים מפרקי בסיס אצבעות ומסייעים ביישור המפרקים הבין־גליליים.",
+        "section": "גפה תחתונה",
+        "term": "Lumbricals"
+      }
+    ]
+  },
+  "lumbrical-muscles-of-hand": {
+    "notes": [
+      {
+        "text": "לומבריקליים ביד: מכופפים מפרקי MCP ומסייעים ביישור מפרקי האצבעות הבין־גליליים.",
+        "section": "גפה עליונה",
+        "term": "4 Lumbrical Muscles"
+      }
+    ]
+  },
+  "lunate-bone": {
+    "notes": [
+      {
+        "text": "עצם הסהר בשורה המקורבת של שורש כף היד.",
+        "section": "השלמות גפה עליונה",
+        "term": "Lunate"
+      }
+    ]
+  },
+  "lung": {
+    "notes": [
+      {
+        "text": "איברי חילוף הגזים משני צדי המדיאסטינום. בימין שלוש אונות ובשמאל שתיים. כל ריאה עטופה בפלאורה ויסצרלית; בשער עוברים סימפונות וכלי דם. סגמנט ברונכופולמונרי הוא יחידה אנטומית בתוך אונה, ולא אונה נוספת.",
+        "section": "בית החזה",
+        "term": "Lungs"
+      },
+      {
+        "text": "איברי חילוף הגזים בבית החזה, מחולקים לאונות ולסגמנטים.",
+        "section": "בית החזה",
+        "term": "הריאות (Lungs)"
+      }
+    ]
+  },
+  "lymph-node": {
+    "notes": [
+      {
+        "text": "איברים לימפתיים קטנים לאורך כלי הלימפה. מסננים לימפה ומשמשים אתר למפגש בין אנטיגנים לתאי מערכת החיסון. באתר מופיעות קבוצות אזוריות, כגון אקסילריות, צוואריות ואינגווינליות; האזור שממנו הן מנקזות חשוב יותר משינון השם בלבד.",
+        "section": "בלוטות ואיברים לימפתיים",
+        "term": "Lymph nodes"
+      }
+    ]
+  },
+  "main-bronchus-left": {
+    "notes": [
+      {
+        "text": "הסימפון הראשי השמאלי, ארוך ואלכסוני יותר מן הימני.",
+        "section": "בית החזה",
+        "term": "Left Main Bronchus"
+      }
+    ]
+  },
+  "malleus": {
+    "notes": [
+      {
+        "text": "הפטיש, עצם שמע המחוברת לעור התוף.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Malleus"
+      }
+    ]
+  },
+  "manubrium-of-sternum": {
+    "notes": [
+      {
+        "text": "החלק העליון של הסטרנום, הנפגש עם עצמות הבריח.",
+        "section": "השלמות בית החזה",
+        "term": "Manubrium"
+      }
+    ]
+  },
+  "marginal-artery": {
+    "notes": [
+      {
+        "text": "שרשרת השקות עורקיות לאורך השוליים המזנטריים של הכרכשת.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Marginal artery"
+      }
+    ]
+  },
+  "masseter": {
+    "notes": [
+      {
+        "text": "שריר לעיסה חזק בצד הלסת, המרים את המנדיבולה.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Masseter"
+      }
+    ]
+  },
+  "maxilla": {
+    "notes": [
+      {
+        "text": "הלסת העליונה, הנושאת שיניים ומשתתפת בחך, באף ובארובה.",
+        "section": "גולגולת",
+        "term": "Maxilla bone"
+      }
+    ]
+  },
+  "maxillary-artery": {
+    "notes": [
+      {
+        "text": "ענף סופי עמוק של הקרוטיד החיצוני, לפנים העמוקות ולמבנים סמוכים.",
+        "section": "צוואר",
+        "term": "Maxillary artery"
+      },
+      {
+        "text": "כלי דם של הפנים העמוקות, הקשורים למערכת המקסילרית.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Maxillary artery & vein",
+        "shared": true
+      }
+    ]
+  },
+  "maxillary-veins": {
+    "notes": [
+      {
+        "text": "כלי דם של הפנים העמוקות, הקשורים למערכת המקסילרית.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Maxillary artery & vein",
+        "shared": true
+      }
+    ]
+  },
+  "medial-circumflex-femoral-artery": {
+    "notes": [
+      {
+        "text": "עורק המקיף את הפמור מדיאלית ותורם רבות לאספקת ראשו.",
+        "section": "גפה תחתונה",
+        "term": "Medial circumflex femoral artery"
+      }
+    ]
+  },
+  "medial-cuneiform-bone": {
+    "notes": [
+      {
+        "text": "עצם היתד המדיאלית, בין הסירה למסד המסרק הראשון.",
+        "section": "גפה תחתונה",
+        "term": "Medial cuneiform"
+      }
+    ]
+  },
+  "medial-head-of-gastrocnemius": {
+    "notes": [
+      {
+        "text": "שריר הסובך השטחי; מבצע כפיפה כפית בקרסול ומסייע בכיפוף ברך.",
+        "section": "גפה תחתונה",
+        "term": "Gastrocnemius (medial/lateral head)",
+        "shared": true
+      }
+    ]
+  },
+  "medial-meniscus": {
+    "notes": [
+      {
+        "text": "סהרוני סחוס סיבי המפזרים עומס ומשפרים התאמה במפרק הברך.",
+        "section": "גפה תחתונה",
+        "term": "Medial + Lateral meniscus",
+        "shared": true
+      }
+    ]
+  },
+  "medial-plantar-artery": {
+    "notes": [
+      {
+        "text": "עורק לצד המדיאלי של הסוליה.",
+        "section": "גפה תחתונה",
+        "term": "Medial plantar artery"
+      }
+    ]
+  },
+  "medial-plantar-nerve": {
+    "notes": [
+      {
+        "text": "ענף טיביאלי המספק את הצד המדיאלי של הסוליה וחלק משריריה.",
+        "section": "גפה תחתונה",
+        "term": "Medial plantar nerve"
+      }
+    ]
+  },
+  "medial-pterygoid-muscle": {
+    "notes": [
+      {
+        "text": "שריר לעיסה מדיאלי, המרים את הלסת ומסייע בתנועות טחינה.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Medial pterygoid"
+      }
+    ]
+  },
+  "medial-rectus-muscle": {
+    "notes": [
+      {
+        "text": "שריר עין המקרב את המבט פנימה, באמצעות עצב III.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Medial rectus"
+      }
+    ]
+  },
+  "median-cubital-vein": {
+    "notes": [
+      {
+        "text": "וריד שטחי במרפק המחבר לעיתים בין הצפלי לבזילי.",
+        "section": "השלמות גפה עליונה",
+        "term": "Median cubital vein"
+      }
+    ]
+  },
+  "median-nerve": {
+    "notes": [
+      {
+        "text": "עצב מרכזי לכיפוף באמה ולחלק משרירי ותחושת כף היד.",
+        "section": "גפה עליונה",
+        "term": "Median Nerve"
+      }
+    ]
+  },
+  "mental-nerve": {
+    "notes": [
+      {
+        "text": "ענף תחושתי לשפה התחתונה ולסנטר, היוצא מהנקב המנטלי.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Mental nerve"
+      }
+    ]
+  },
+  "mentalis-muscle": {
+    "notes": [
+      {
+        "text": "שריר הסנטר, המרים את רקמת הסנטר ומשנה את מנח השפה התחתונה.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Mentalis"
+      }
+    ]
+  },
+  "meso-appendix": {
+    "notes": [
+      {
+        "text": "קפל צפק התולה את התוספתן ומכיל את כלי הדם שלו.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Mesoappendix"
+      }
+    ]
+  },
+  "mesocolon": {
+    "notes": [
+      {
+        "text": "קפלי צפק התולים את המעי הרוחבי ואת הסיגמה.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Mesocolon (Transverse/Sigmoid)"
+      }
+    ]
+  },
+  "middle-cardiac-vein": {
+    "notes": [
+      {
+        "text": "וריד לבבי אמצעי, בחריץ הבין־חדרי האחורי.",
+        "section": "בית החזה",
+        "term": "Middle Cardiac Vein"
+      }
+    ]
+  },
+  "middle-colic-artery": {
+    "notes": [
+      {
+        "text": "עורק מהמערכת המזנטרית העליונה אל המעי הרוחבי.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Middle colic artery"
+      }
+    ]
+  },
+  "musculocutaneous-nerve": {
+    "notes": [
+      {
+        "text": "עצב למדור הקדמי של הזרוע, הממשיך לענף תחושתי באמה הצדדית.",
+        "section": "גפה עליונה",
+        "term": "Musculocutaneous Nerve"
+      }
+    ]
+  },
+  "mylohyoid-muscle": {
+    "notes": [
+      {
+        "text": "שריר היוצר חלק נרחב מרצפת הפה; מרים את הרצפה וההיואיד.",
+        "section": "צוואר",
+        "term": "Mylohyoid"
+      }
+    ]
+  },
+  "nasal-bone": {
+    "notes": [
+      {
+        "text": "עצם האף, חלק מן הגשר הגרמי של האף.",
+        "section": "גולגולת",
+        "term": "Nasal bone"
+      }
+    ]
+  },
+  "nasopharynx": {
+    "notes": [
+      {
+        "text": "הלוע האפי, מאחורי חלל האף ומעל החך הרך.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Nasopharynx"
+      }
+    ]
+  },
+  "navicular-bone": {
+    "notes": [
+      {
+        "text": "גבשושית עצם הסירה, אתר אחיזה מרכזי לטיביאליס פוסטריור.",
+        "section": "גפה תחתונה",
+        "term": "Navicular - Tuberosity"
+      },
+      {
+        "text": "עצם הסירה של כף הרגל, בין הטאלוס לעצמות היתד.",
+        "section": "השלמות גפה תחתונה",
+        "term": "Navicular"
+      }
+    ]
+  },
+  "nerve-to-mylohyoid-muscle": {
+    "notes": [
+      {
+        "text": "ענף מוטורי למיילוהיואיד ולבטן הקדמית של הדיגסטריק.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Mylohyoid nerve"
+      }
+    ]
+  },
+  "obliquus-inferior-capitis-muscle": {
+    "notes": [
+      {
+        "text": "שריר תת־עורפי מאקסיס לאטלס, המסובב את הראש לאותו צד.",
+        "section": "גב ועמוד שדרה",
+        "term": "Obliquus capitis inferior"
+      }
+    ]
+  },
+  "obliquus-superior-capitis-muscle": {
+    "notes": [
+      {
+        "text": "שריר תת־עורפי מאטלס לעצם העורף, המסייע בתנועות הראש.",
+        "section": "גב ועמוד שדרה",
+        "term": "Obliquus capitis superior"
+      }
+    ]
+  },
+  "obturator-artery": {
+    "notes": [
+      {
+        "text": "עורק העובר בתעלה האובטורטורית ומספק אזור ירך מדיאלי.",
+        "section": "אגן ופרינאום",
+        "term": "Obturator artery"
+      }
+    ]
+  },
+  "obturator-externus": {
+    "notes": [
+      {
+        "text": "שריר על הצד החיצוני של הממברנה האובטורטורית; מסובב ירך החוצה.",
+        "section": "גפה תחתונה",
+        "term": "Obturator externus m."
+      }
+    ]
+  },
+  "obturator-internus": {
+    "notes": [
+      {
+        "text": "שריר בדופן האגן הפנימית המסובב את הירך החוצה.",
+        "section": "אגן ופרינאום",
+        "term": "Obturator internus"
+      },
+      {
+        "text": "שריר מדופן האגן הפנימית אל הטרוכנטר הגדול; מסובב ירך החוצה.",
+        "section": "גפה תחתונה",
+        "term": "Obturator internus m."
+      }
+    ]
+  },
+  "obturator-nerve": {
+    "notes": [
+      {
+        "text": "עצב המגיע דרך התעלה האובטורטורית למקרבי הירך.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Obturator nerve"
+      }
+    ]
+  },
+  "occipital-artery": {
+    "notes": [
+      {
+        "text": "עורק המספק את החלק האחורי של הקרקפת.",
+        "section": "צוואר",
+        "term": "Occipital artery"
+      }
+    ]
+  },
+  "occipital-bone": {
+    "notes": [
+      {
+        "text": "עצם העורף, הכוללת את הפתח הגדול ואת הקונדילים לאטלס.",
+        "section": "גולגולת",
+        "term": "Occipital bone"
+      }
+    ]
+  },
+  "occipitalis-muscle": {
+    "notes": [
+      {
+        "text": "בטנים קדמית ואחורית המחוברות באפונאורוזת הקרקפת; מניעות קרקפת וגבות.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Occipitofrontalis - Frontalis & Occipitalis",
+        "shared": true
+      }
+    ]
+  },
+  "oesophagus": {
+    "notes": [
+      {
+        "text": "צינור שרירי המוליך מזון מהלוע לקיבה, דרך הצוואר, החזה ופתח בסרעפת. בחזה הוא עובר מאחורי קנה הנשימה וליד העלייה השמאלית. תנועות פריסטלטיות מקדמות את תוכנו. חיבורו לקיבה חשוב להבנת מחסום הרפלוקס.",
+        "section": "מערכת העיכול",
+        "term": "Esophagus"
+      },
+      {
+        "text": "צינור שרירי מהלוע לקיבה; פירוט במדריך האיברים.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Esophagus"
+      }
+    ],
+    "he": "ושט",
+    "heHeading": "הוושט"
+  },
+  "omohyoid-muscle": {
+    "notes": [
+      {
+        "text": "שריר תת־היואידי בעל שתי בטנים, מהשכמה לעצם הלשון.",
+        "section": "צוואר",
+        "term": "Omo-hyoid - Superior & Inferior Belly"
+      }
+    ]
+  },
+  "ophthalmic-artery": {
+    "notes": [
+      {
+        "text": "ענף של הקרוטיד הפנימי המספק את הארובה והעין.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Ophthalmic artery"
+      }
+    ]
+  },
+  "opponens-digiti-minimi-muscle-of-hand": {
+    "notes": [
+      {
+        "text": "שריר המניע את המסרק החמישי ומסייע בקיעור כף היד.",
+        "section": "גפה עליונה",
+        "term": "Opponens Digiti Minimi"
+      }
+    ]
+  },
+  "opponens-pollicis-muscle": {
+    "notes": [
+      {
+        "text": "שריר המאפשר אופוזיציה של האגודל באמצעות הנעת המסרק הראשון.",
+        "section": "גפה עליונה",
+        "term": "Opponens pollicis"
+      }
+    ]
+  },
+  "optic-chiasm": {
+    "notes": [
+      {
+        "text": "תצלובת עצבי הראייה, שבה חוצים בעיקר סיבי מחציות הרשתית הנאזליות.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Optic chiasm"
+      }
+    ]
+  },
+  "optic-nerve-ii": {
+    "notes": [
+      {
+        "text": "עצב II, מסלול המידע מהרשתית אל המוח.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Optic nerve"
+      }
+    ]
+  },
+  "orbicularis-oris-muscle": {
+    "notes": [
+      {
+        "text": "שריר סביב הפה, הסוגר ומכווץ את השפתיים.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Orbicularis oris"
+      }
+    ]
+  },
+  "oropharynx": {
+    "notes": [
+      {
+        "text": "הלוע הפומי, מאחורי חלל הפה.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Oropharynx"
+      }
+    ]
+  },
+  "palatine-bone": {
+    "notes": [
+      {
+        "text": "עצם החך, המשתתפת בעיקר בחך הקשה ובחלל האף.",
+        "section": "גולגולת",
+        "term": "Palatine bone"
+      }
+    ]
+  },
+  "palatine-tonsil": {
+    "notes": [
+      {
+        "text": "שקד לימפתי בין קשתות החך באזור הלוע הפומי.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Palatine tonsil"
+      }
+    ]
+  },
+  "palmar-interossei-muscles": {
+    "notes": [
+      {
+        "text": "שרירים בין־גרמיים כפיים המקרבים אצבעות לכיוון האצבע האמצעית.",
+        "section": "גפה עליונה",
+        "term": "3 Palmar Interossei"
+      }
+    ]
+  },
+  "palmaris-longus-muscle": {
+    "notes": [
+      {
+        "text": "שריר אמה עם גיד ארוך לאפונאורוזה הכפית; עשוי להיעדר.",
+        "section": "גפה עליונה",
+        "term": "Palmaris Longus"
+      }
+    ]
+  },
+  "pancreas": {
+    "notes": [
+      {
+        "text": "בלוטה מוארכת מאחורי הקיבה, מראש בתוך קשת התריסריון ועד זנב סמוך לטחול. החלק האקסוקריני מפריש אנזימי עיכול וביקרבונט למעי; האיים האנדוקריניים מפרישים הורמונים לדם. רובו מאחורי הצפק, עם חריגות ביחסי הזנב.",
+        "section": "מערכת העיכול",
+        "term": "Pancreas"
+      },
+      {
+        "text": "בלוטת עיכול והורמונים מאחורי הקיבה; פירוט במדריך האיברים.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Pancreas"
+      }
+    ],
+    "he": "לבלב",
+    "heHeading": "הלבלב"
+  },
+  "pancreatic-duct": {
+    "notes": [
+      {
+        "text": "צינור המנקז הפרשות אקסוקריניות מהלבלב אל התריסריון.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Pancreatic duct"
+      }
+    ]
+  },
+  "parietal-bone": {
+    "notes": [
+      {
+        "text": "עצם קודקודית זוגית בגג הגולגולת ובצדדיה.",
+        "section": "גולגולת",
+        "term": "Parietal bone"
+      }
+    ]
+  },
+  "parotid-duct": {
+    "notes": [
+      {
+        "text": "צינור הפרוטיד, המוביל רוק אל חלל הפה מול הטוחנת העליונה השנייה.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Parotid duct"
+      }
+    ]
+  },
+  "parotid-gland": {
+    "notes": [
+      {
+        "text": "בלוטת רוק גדולה באזור שלפני האוזן ומאחורי ענף הלסת. הצינור שלה חוצה את שריר הלעיסה ונפתח לחלל הפה. עצב הפנים עובר בתוכה ומתפצל, אך אינו המקור לעצבוב הפאראסימפתטי שמפעיל את הפרשת הרוק ממנה.",
+        "section": "הראש והצוואר",
+        "term": "Parotid gland"
+      },
+      {
+        "text": "בלוטת הרוק שלפני האוזן; עצב הפנים עובר בתוכה.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Parotid gland"
+      }
+    ],
+    "he": "בלוטת הפרוטיד",
+    "heHeading": "בלוטת הפרוטיד"
+  },
+  "patella": {
+    "notes": [
+      {
+        "text": "הפטלה, עצם ססמואידית במנגנון גיד הארבע־ראשי בקדמת הברך.",
+        "section": "השלמות גפה תחתונה",
+        "term": "Patella"
+      }
+    ]
+  },
+  "pectineus-muscle": {
+    "notes": [
+      {
+        "text": "שריר בחלק העליון־מדיאלי של הירך; מקרב ומכופף את הירך.",
+        "section": "גפה תחתונה",
+        "term": "Pectineus m."
+      }
+    ]
+  },
+  "pectoralis-major-muscle": {
+    "notes": [
+      {
+        "text": "שריר החזה הגדול; מקרב ומסובב פנימה את הזרוע.",
+        "section": "גפה עליונה",
+        "term": "Pectoralis Major"
+      }
+    ]
+  },
+  "pectoralis-minor-muscle": {
+    "notes": [
+      {
+        "text": "שריר מהצלעות לזיז הקורקואיד, המייצב ומניע את השכמה.",
+        "section": "גפה עליונה",
+        "term": "Pectoralis Minor"
+      }
+    ]
+  },
+  "penis": {
+    "notes": [
+      {
+        "text": "איבר המורכב משני גופים מחילתיים וגוף ספוגי המקיף את השופכה ומתרחב לעטרה. משלב נתיב להוצאת שתן ותפקיד ברבייה. השורש מעוגן בפרינאום; הגוף הוא החלק החופשי. אספקת הדם והעצבוב קשורים לענפים פודנדליים.",
+        "section": "מערכת הרבייה הזכרית",
+        "term": "Penis"
+      }
+    ],
+    "he": "פין",
+    "heHeading": "הפין"
+  },
+  "pharynx": {
+    "notes": [
+      {
+        "text": "צינור שרירי מאחורי חללי האף והפה, הנמשך אל הוושט. מחולק ללוע אפי, פומי וגרוני. משמש מעבר לאוויר ולמזון בחלקים שונים, ומשתתף בבליעה. שרירי הלוע והחך מסייעים בהכוונת המזון ובהפרדת המעברים.",
+        "section": "הראש והצוואר",
+        "term": "Pharynx"
+      }
+    ],
+    "he": "לוע",
+    "heHeading": "הלוע"
+  },
+  "piriformis-muscle": {
+    "notes": [
+      {
+        "text": "שריר מהסקרום לירך; עובר דרך הפתח הסיאטי הגדול.",
+        "section": "אגן ופרינאום",
+        "term": "Piriformis"
+      },
+      {
+        "text": "מסובב חיצוני עמוק של הירך, המהווה ציון דרך לעצבים וכלי דם בעכוז.",
+        "section": "גפה תחתונה",
+        "term": "Piriformis m."
+      }
+    ]
+  },
+  "pisiform-bone": {
+    "notes": [
+      {
+        "text": "עצם דמוית אפונה בגיד FCU, קדמית לעצם המשולשת.",
+        "section": "השלמות גפה עליונה",
+        "term": "Pisiform"
+      }
+    ]
+  },
+  "plantar-calcaneonavicular-ligament": {
+    "notes": [
+      {
+        "text": "רצועה בין העקב לסירה התומכת בראש הטאלוס ובקשת המדיאלית.",
+        "section": "גפה תחתונה",
+        "term": "Plantar calcaneonavicular / Spring ligament"
+      }
+    ]
+  },
+  "plantar-interossei-muscles": {
+    "notes": [
+      {
+        "text": "בין־גרמיים פלנטריים מקרבים אצבעות; הדורסליים מרחיקים אותן מציר האצבע השנייה.",
+        "section": "גפה תחתונה",
+        "term": "Plantar & dorsal interossei",
+        "shared": true
+      }
+    ]
+  },
+  "plantaris-muscle": {
+    "notes": [
+      {
+        "text": "שריר קטן עם גיד ארוך בשוק; מסייע חלש בכפיפה כפית ובכיפוף ברך.",
+        "section": "גפה תחתונה",
+        "term": "Plantaris"
+      }
+    ]
+  },
+  "platysma": {
+    "notes": [
+      {
+        "text": "שריר שטחי ודק בצוואר; מותח את עור הצוואר ומסייע בהורדת הלסת.",
+        "section": "צוואר",
+        "term": "Platysma"
+      }
+    ]
+  },
+  "popliteal-artery": {
+    "notes": [
+      {
+        "text": "כלי דם עמוקים בגומה שמאחורי הברך.",
+        "section": "גפה תחתונה",
+        "term": "Popliteal artery & vein",
+        "shared": true
+      }
+    ]
+  },
+  "popliteal-vein": {
+    "notes": [
+      {
+        "text": "כלי דם עמוקים בגומה שמאחורי הברך.",
+        "section": "גפה תחתונה",
+        "term": "Popliteal artery & vein",
+        "shared": true
+      }
+    ]
+  },
+  "popliteus-muscle": {
+    "notes": [
+      {
+        "text": "שריר מאחורי הברך המסייע להתחיל את כיפופה ממצב נעול.",
+        "section": "גפה תחתונה",
+        "term": "Popliteus"
+      }
+    ]
+  },
+  "posterior-belly-of-digastric-muscle": {
+    "notes": [
+      {
+        "text": "שריר דו־בטני מעל ההיואיד, המסייע בהורדת הלסת ובהרמת ההיואיד.",
+        "section": "צוואר",
+        "term": "Posterior & Anterior belly Digastric",
+        "shared": true
+      }
+    ]
+  },
+  "posterior-crico-arytenoid-muscle": {
+    "notes": [
+      {
+        "text": "השרירים היחידים המרחיקים באופן פעיל את קפלי הקול.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Posterior cricoarytenoids m."
+      }
+    ]
+  },
+  "posterior-cruciate-ligament": {
+    "notes": [
+      {
+        "text": "רצועה צולבת אחורית; מגבילה תזוזה אחורית של הטיביה ביחס לפמור.",
+        "section": "גפה תחתונה",
+        "term": "Posterior Cruciate Ligament (PCL)"
+      }
+    ]
+  },
+  "posterior-femoral-cutaneous-nerve": {
+    "notes": [
+      {
+        "text": "עצב תחושתי לעור הצד האחורי של הירך.",
+        "section": "גפה תחתונה",
+        "term": "Posterior femoral cutaneous n. / Posterior cutaneous n. of thigh"
+      }
+    ]
+  },
+  "posterior-longitudinal-ligament": {
+    "notes": [
+      {
+        "text": "רצועות לאורך הצד הקדמי והאחורי של גופי החוליות.",
+        "section": "גב ועמוד שדרה",
+        "term": "Posterior & Anterior longitudinal ligament",
+        "shared": true
+      }
+    ]
+  },
+  "posterior-talofibular-ligament": {
+    "notes": [
+      {
+        "text": "רצועה צדדית אחורית בקרסול, בין הפיבולה לטאלוס.",
+        "section": "השלמות גפה תחתונה",
+        "term": "Posterior talofibular ligament"
+      }
+    ]
+  },
+  "posterior-tibial-artery": {
+    "notes": [
+      {
+        "text": "עורק במדור השוק האחורי, המסתיים בענפים הפלנטריים.",
+        "section": "גפה תחתונה",
+        "term": "Posterior tibial artery"
+      }
+    ]
+  },
+  "pronator-quadratus": {
+    "notes": [
+      {
+        "text": "שריר מרובע עמוק בקצה האמה, המסובב אותה לפרונציה.",
+        "section": "גפה עליונה",
+        "term": "Pronator Quadratus"
+      }
+    ]
+  },
+  "pronator-teres": {
+    "notes": [
+      {
+        "text": "שריר המסובב את האמה לפרונציה ומסייע בכיפוף המרפק.",
+        "section": "גפה עליונה",
+        "term": "Pronator Teres"
+      }
+    ]
+  },
+  "proper-hepatic-artery": {
+    "notes": [
+      {
+        "text": "המשך העורק הכבדי לאחר הסתעפות הגסטרודואודנלי, בדרכו לכבד.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Hepatic artery proper"
+      }
+    ]
+  },
+  "prostate": {
+    "notes": [
+      {
+        "text": "בלוטה מתחת לשלפוחית השתן ומסביב לחלק המקורב של השופכה. מוסיפה נוזל להפרשת הזרע; צינורות השפיכה עוברים בה. קרבתה לרקטום ולשופכה מסבירה את חשיבות יחסי השכנות שלה.",
+        "section": "מערכת הרבייה הזכרית",
+        "term": "Prostate"
+      },
+      {
+        "text": "בלוטה המקיפה את השופכה מתחת לשלפוחית.",
+        "section": "אגן ופרינאום",
+        "term": "Prostate"
+      }
+    ],
+    "he": "ערמונית",
+    "heHeading": "הערמונית"
+  },
+  "psoas-major": {
+    "notes": [
+      {
+        "text": "שריר מותני עמוק היוצר עם האיליאקוס את מכופף הירך איליופסואס.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Psoas major"
+      }
+    ]
+  },
+  "pubic-symphysis": {
+    "notes": [
+      {
+        "text": "מפרק סחוסי משני המחבר את עצמות החיק בקדמת האגן.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Pubic symphysis"
+      }
+    ]
+  },
+  "pubococcygeus-muscle": {
+    "notes": [
+      {
+        "text": "קבוצת שרירים התומכת באיברי האגן ומשתתפת בשליטה על התרוקנות.",
+        "section": "אגן ופרינאום",
+        "term": "Levator ani - Puborectalis, Pubococcygeus, Iliococcygeus",
+        "shared": true
+      }
+    ]
+  },
+  "pudendal-nerve": {
+    "notes": [
+      {
+        "text": "עצב S2–S4 המספק תחושה ומוטוריקה לחלק ניכר מהפרינאום.",
+        "section": "אגן ופרינאום",
+        "term": "Pudendal nerve"
+      }
+    ]
+  },
+  "pulmonary-artery": {
+    "notes": [
+      {
+        "text": "עורקים המובילים דם מחדר ימין אל הריאות.",
+        "section": "השלמות בית החזה",
+        "term": "Pulmonary arteries"
+      }
+    ]
+  },
+  "pulmonary-trunk": {
+    "notes": [
+      {
+        "text": "עורק גדול מחדר ימין המתפצל לעורקי הריאה.",
+        "section": "בית החזה",
+        "term": "Pulmonary Trunk"
+      }
+    ]
+  },
+  "pyramidalis-muscle": {
+    "notes": [
+      {
+        "text": "שריר קטן ולא קבוע בקדמת הבטן התחתונה; מותח את הקו הלבן.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Pyramidalis"
+      }
+    ]
+  },
+  "quadrangular-membrane": {
+    "notes": [
+      {
+        "text": "ממברנה עליונה בבית הקול שקצהּ משתתף ביצירת הקפל האריאפיגלוטי.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Quadrangular membrane / Aryepiglottic fold"
+      }
+    ]
+  },
+  "quadratus-femoris-muscle": {
+    "notes": [
+      {
+        "text": "מסובב חיצוני קצר של הירך, בין גבשושית השת לפמור.",
+        "section": "גפה תחתונה",
+        "term": "Quadratus femoris m."
+      }
+    ]
+  },
+  "quadratus-lumborum-muscle": {
+    "notes": [
+      {
+        "text": "שריר בדופן הבטן האחורית, המסייע בכיפוף צדי ובייצוב צלע 12.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Quadratus lumborum"
+      }
+    ]
+  },
+  "quadriceps-femoris-muscle": {
+    "notes": [
+      {
+        "text": "הארבע־ראשי פושט את הברך; הרקטוס פמוריס מסייע גם בכיפוף הירך.",
+        "section": "גפה תחתונה",
+        "term": "Quadriceps m. (Rectus femoris, Vastus medialis, Vastus lateralis, Vastus intermedius)"
+      }
+    ]
+  },
+  "radial-artery": {
+    "notes": [
+      {
+        "text": "עורק בצד הרדיאלי של האמה, התורם בעיקר לקשת הכפית העמוקה.",
+        "section": "גפה עליונה",
+        "term": "Radial Artery"
+      }
+    ]
+  },
+  "radial-nerve": {
+    "notes": [
+      {
+        "text": "עצב למדורים הפושטים בגפה העליונה ולתחושה בחלק מהגפה האחורית.",
+        "section": "גפה עליונה",
+        "term": "Radial Nerve"
+      }
+    ]
+  },
+  "radius": {
+    "notes": [
+      {
+        "text": "עצם החישור, בצד האגודל בעמידה אנטומית.",
+        "section": "השלמות גפה עליונה",
+        "term": "Radius"
+      }
+    ]
+  },
+  "rectus-abdominis-muscle": {
+    "notes": [
+      {
+        "text": "שריר הבטן הישר; מכופף את הגו ומסייע בהטיית האגן לאחור.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Rectus abdominis"
+      }
+    ]
+  },
+  "rectus-posterior-major-capitis-muscle": {
+    "notes": [
+      {
+        "text": "שריר תת־עורפי מ־C2 לעורף, המסייע בפשיטה ובסיבוב הראש.",
+        "section": "גב ועמוד שדרה",
+        "term": "Rectus capitis posterior major"
+      }
+    ]
+  },
+  "rectus-posterior-minor-capitis-muscle": {
+    "notes": [
+      {
+        "text": "שריר תת־עורפי מ־C1 לעורף, המסייע בפשיטת הראש.",
+        "section": "גב ועמוד שדרה",
+        "term": "Rectus capitis posterior minor"
+      }
+    ]
+  },
+  "renal-artery": {
+    "notes": [
+      {
+        "text": "כלי הדם הנכנסים לכליות ומנקזים אותן.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Renal artery + vein",
+        "shared": true
+      }
+    ]
+  },
+  "renal-vein": {
+    "notes": [
+      {
+        "text": "כלי הדם הנכנסים לכליות ומנקזים אותן.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Renal artery + vein",
+        "shared": true
+      }
+    ]
+  },
+  "retina": {
+    "notes": [
+      {
+        "text": "רקמה עצבית קולטת אור בחלק הפנימי האחורי של העין.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Retina"
+      }
+    ]
+  },
+  "rhomboid-major-muscle": {
+    "notes": [
+      {
+        "text": "שרירים בין עמוד השדרה לשכמה, המקרבים ומייצבים אותה.",
+        "section": "גב ועמוד שדרה",
+        "term": "Rhomboid major/minor"
+      }
+    ]
+  },
+  "rotatores": {
+    "notes": [
+      {
+        "text": "שרירים עמוקים בין חוליות, חשובים לייצוב ולבקרה תחושתית.",
+        "section": "גב ועמוד שדרה",
+        "term": "Rotatores (Brevis & Longus)"
+      }
+    ]
+  },
+  "sacrospinous-ligament": {
+    "notes": [
+      {
+        "text": "רצועה מהסקרום לקוץ השת, המשתתפת ביצירת הפתחים הסיאטיים.",
+        "section": "גפה תחתונה",
+        "term": "Sacrospinous ligament"
+      }
+    ]
+  },
+  "sacrotuberous-ligament": {
+    "notes": [
+      {
+        "text": "רצועה מהסקרום לגבשושית השת, המשתתפת ביצירת הפתחים הסיאטיים.",
+        "section": "גפה תחתונה",
+        "term": "Sacrotuberous ligament"
+      }
+    ]
+  },
+  "saphenous-nerve": {
+    "notes": [
+      {
+        "text": "ענף תחושתי של הפמורלי, לעור השוק וכף הרגל המדיאליים.",
+        "section": "גפה תחתונה",
+        "term": "Saphenous nerve"
+      }
+    ]
+  },
+  "sartorius-muscle": {
+    "notes": [
+      {
+        "text": "שריר ארוך ואלכסוני בירך; מסייע בכיפוף ירך וברך ובסיבוב הירך החוצה.",
+        "section": "גפה תחתונה",
+        "term": "Sartorius m."
+      }
+    ]
+  },
+  "scalenus-anterior-muscle": {
+    "notes": [
+      {
+        "text": "שרירי צוואר צדדיים המחוברים לצלעות הראשונה והשנייה ומסייעים גם בנשימה.",
+        "section": "צוואר",
+        "term": "Scalenus Anterior/medius/Posterior"
+      }
+    ]
+  },
+  "scaphoid-bone": {
+    "notes": [
+      {
+        "text": "עצם הסירה בשורש כף היד, בצד הרדיאלי של השורה המקורבת.",
+        "section": "השלמות גפה עליונה",
+        "term": "Scaphoid"
+      }
+    ]
+  },
+  "scapula": {
+    "notes": [
+      {
+        "text": "עצם שטוחה בגב החזה, ובה המכתש למפרק הכתף ואחזי שרירים רבים.",
+        "section": "גפה עליונה",
+        "term": "עצם השכמה (Scapula)"
+      }
+    ]
+  },
+  "sciatic-nerve": {
+    "notes": [
+      {
+        "text": "עצב גדול מאחורי הירך; מתפצל למרכיב טיביאלי ולפיבולרי משותף.",
+        "section": "גפה תחתונה",
+        "term": "Sciatic nerve (ונקודת ההתפצלות שלו Tibial & Common fibular n.)"
+      }
+    ]
+  },
+  "sclera": {
+    "notes": [
+      {
+        "text": "המעטפת הסיבית הלבנה של גלגל העין.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Sclera"
+      }
+    ]
+  },
+  "semimembranosus-muscle": {
+    "notes": [
+      {
+        "text": "שריר המסטרינג מדיאלי עמוק יותר; פושט ירך ומכופף ברך.",
+        "section": "גפה תחתונה",
+        "term": "Semimembranosus m."
+      }
+    ]
+  },
+  "seminal-gland": {
+    "notes": [
+      {
+        "text": "בלוטות מאחורי שלפוחית השתן התורמות נוזל להפרשת הזרע. הצינור שלהן מצטרף לצינור הזרע ליצירת צינור השפיכה. למרות השם, הן אינן מאגר תאי הזרע המרכזי ואינן חלק ממערכת השתן.",
+        "section": "מערכת הרבייה הזכרית",
+        "term": "Seminal vesicles"
+      },
+      {
+        "text": "בלוטה המפרישה חלק מנוזל הזרע, מאחורי שלפוחית השתן.",
+        "section": "אגן ופרינאום",
+        "term": "Seminal vesicle"
+      }
+    ],
+    "he": "שלפוחית הזרע",
+    "heHeading": "שלפוחיות הזרע"
+  },
+  "semitendinosus-muscle": {
+    "notes": [
+      {
+        "text": "שריר המסטרינג מדיאלי; פושט ירך ומכופף ברך.",
+        "section": "גפה תחתונה",
+        "term": "Semitendinosus m."
+      }
+    ]
+  },
+  "serratus-anterior-muscle": {
+    "notes": [
+      {
+        "text": "שריר מדופן החזה לשכמה, המצמיד אותה לבית החזה ומסייע בסיבובה מעלה.",
+        "section": "גפה עליונה",
+        "term": "Serratus Anterior"
+      }
+    ]
+  },
+  "serratus-posterior-inferior-muscle": {
+    "notes": [
+      {
+        "text": "שריר דק המחובר לצלעות התחתונות; תורם לייצוב ולתחושה עמוקה באזור.",
+        "section": "גב ועמוד שדרה",
+        "term": "Serratus posterior Inferior"
+      }
+    ]
+  },
+  "serratus-posterior-superior-muscle": {
+    "notes": [
+      {
+        "text": "שריר דק המחובר לצלעות העליונות, מתחת לשרירי הגב השטחיים.",
+        "section": "גב ועמוד שדרה",
+        "term": "Serratus posterior Superior"
+      }
+    ]
+  },
+  "sigmoid-arteries": {
+    "notes": [
+      {
+        "text": "ענפים עורקיים אל המעי הסיגמואידי.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Sigmoid artery"
+      }
+    ]
+  },
+  "sigmoid-colon": {
+    "notes": [
+      {
+        "text": "מקטע המעי הגס בצורת לולאה המחבר בין היורד לרקטום.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Sigmoid colon"
+      }
+    ]
+  },
+  "sinus-of-frontal-bone": {
+    "notes": [
+      {
+        "text": "חלל אוויר בעצם המצח, המתנקז למערכת חלל האף.",
+        "section": "גולגולת",
+        "term": "Frontal sinus"
+      }
+    ]
+  },
+  "sinus-of-sphenoid-bone": {
+    "notes": [
+      {
+        "text": "חלל אוויר בגוף הספנואיד, מתחת לאזור האוכף הטורקי.",
+        "section": "גולגולת",
+        "term": "Sphenoid sinus"
+      }
+    ]
+  },
+  "small-saphenous-vein": {
+    "notes": [
+      {
+        "text": "וריד שטחי אחורי בשוק, המתנקז בדרך כלל לפופליטאלי.",
+        "section": "גפה תחתונה",
+        "term": "Small saphenous vein"
+      }
+    ]
+  },
+  "soleus-muscle": {
+    "notes": [
+      {
+        "text": "שריר עמוק בסובך; כופף כפית מרכזי ותורם ליציבה בעמידה.",
+        "section": "גפה תחתונה",
+        "term": "Soleus"
+      }
+    ]
+  },
+  "sphenoid-bone": {
+    "notes": [
+      {
+        "text": "עצם היתד במרכז בסיס הגולגולת, ובה האוכף הטורקי ומספר פתחים.",
+        "section": "גולגולת",
+        "term": "Sphenoid bone"
+      }
+    ]
+  },
+  "sphenomandibular-ligament": {
+    "notes": [
+      {
+        "text": "רצועה מהספנואיד ללינגולה של המנדיבולה.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Sphenomandibular ligament"
+      }
+    ]
+  },
+  "spinal-cord": {
+    "notes": [
+      {
+        "text": "בתעלה החולייתית, בהמשך לגזע המוח. מעביר מידע בין המוח לגוף ומשתתף ברפלקסים. חומר אפור מרכזי מוקף חומר לבן. השורש האחורי מעביר מידע תחושתי והקדמי מידע מוטורי; עצב שדרתי לאחר איחודם הוא מעורב.",
+        "section": "מערכת העצבים והחושים",
+        "term": "Spinal cord"
+      }
+    ],
+    "he": "חוט השדרה",
+    "heHeading": "חוט השדרה"
+  },
+  "spleen": {
+    "notes": [
+      {
+        "text": "בבטן העליונה משמאל, סמוך לסרעפת ולקיבה. איבר לימפתי המסנן דם ומשתתף בסילוק תאי דם מזדקנים ובתגובה חיסונית. אינו מייצר אנזימי עיכול. יש להכיר את שער הטחול ואת קרבת זנב הלבלב אליו.",
+        "section": "בלוטות ואיברים לימפתיים",
+        "term": "Spleen"
+      },
+      {
+        "text": "איבר לימפתי המסנן דם; פירוט במדריך האיברים.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Spleen"
+      }
+    ],
+    "he": "טחול",
+    "heHeading": "הטחול"
+  },
+  "splenic-artery": {
+    "notes": [
+      {
+        "text": "עורק מפותל לאורך הלבלב בדרכו אל הטחול.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Splenic artery"
+      }
+    ]
+  },
+  "splenic-vein": {
+    "notes": [
+      {
+        "text": "וריד הטחול, העובר מאחורי הלבלב ומשתתף ביצירת הווריד הפורטלי.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Splenic vein"
+      }
+    ]
+  },
+  "splenius-muscles": {
+    "notes": [
+      {
+        "text": "שרירי צוואר אחוריים הפושטים ומסובבים את הראש והצוואר לאותו צד.",
+        "section": "גב ועמוד שדרה",
+        "term": "Splenius (cervicis & capitis)"
+      }
+    ]
+  },
+  "stapes": {
+    "notes": [
+      {
+        "text": "הארכוף, עצם שמע שבסיסה נע בחלון הסגלגל.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Stapes"
+      }
+    ]
+  },
+  "sternocleidomastoid-muscle": {
+    "notes": [
+      {
+        "text": "שריר צדדי בצוואר; מסובב את הראש לצד הנגדי ומטה אותו לאותו צד.",
+        "section": "צוואר",
+        "term": "Sternocleidomastoid"
+      }
+    ]
+  },
+  "sternohyoid-muscle": {
+    "notes": [
+      {
+        "text": "שריר מהסטרנום להיואיד, המוריד את עצם הלשון.",
+        "section": "צוואר",
+        "term": "Sternohyoid"
+      }
+    ]
+  },
+  "sternothyroid-muscle": {
+    "notes": [
+      {
+        "text": "שריר מהסטרנום לסחוס התריס, המוריד את בית הקול.",
+        "section": "צוואר",
+        "term": "Sternothyroid"
+      }
+    ]
+  },
+  "stomach": {
+    "notes": [
+      {
+        "text": "איבר חלול בבטן העליונה המשמש לאגירת מזון, ערבולו ותחילת עיכולו הכימי. חלקיה העיקריים הם קרדיה, פונדוס, גוף ואזור פילורי. יש שתי עקמומיות; השוער מחבר אותה לתריסריון ומווסת מעבר תוכן.",
+        "section": "מערכת העיכול",
+        "term": "Stomach"
+      },
+      {
+        "text": "איבר חלול לערבול ולעיכול מזון; פירוט במדריך האיברים.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Stomach"
+      }
+    ],
+    "he": "קיבה",
+    "heHeading": "הקיבה"
+  },
+  "stylohyoid-muscle": {
+    "notes": [
+      {
+        "text": "שריר מזיז הסטילואיד להיואיד, המושך את ההיואיד מעלה ואחורה.",
+        "section": "צוואר",
+        "term": "Stylohyoid"
+      }
+    ]
+  },
+  "stylomandibular-ligament": {
+    "notes": [
+      {
+        "text": "רצועה בין זיז הסטילואיד לזווית הלסת, התומכת באזור.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Stylomandibular ligament"
+      }
+    ]
+  },
+  "subclavian-artery": {
+    "notes": [
+      {
+        "text": "כלי הדם התת־בריחיים; העורק והווריד עוברים ביחסים שונים לסקאלנוס הקדמי.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Subclavian artery & vein",
+        "shared": true
+      },
+      {
+        "text": "עורק תת־בריחי, מקור עיקרי לאספקת הדם לגפה העליונה.",
+        "section": "גפה עליונה",
+        "term": "Subclavian Artery"
+      }
+    ]
+  },
+  "subclavian-vein": {
+    "notes": [
+      {
+        "text": "כלי הדם התת־בריחיים; העורק והווריד עוברים ביחסים שונים לסקאלנוס הקדמי.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Subclavian artery & vein",
+        "shared": true
+      }
+    ]
+  },
+  "sublingual-gland": {
+    "notes": [
+      {
+        "text": "נמצאת מתחת לרירית רצפת הפה, מעל המיילוהיואיד. מפרישה רוק דרך מספר פתחים קטנים באזור הקפל התת־לשוני. יש להבדיל בינה לבין הבלוטה התת־לסתית, שנמצאת עמוק יותר וחלק ניכר ממנה מחוץ לרצפת הפה.",
+        "section": "הראש והצוואר",
+        "term": "Sublingual gland"
+      },
+      {
+        "text": "בלוטת רוק ברצפת הפה וצינורות הניקוז שלה.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Sub-lingual gland & Duct"
+      }
+    ],
+    "he": "בלוטת הרוק התת־לשונית",
+    "heHeading": "בלוטת הרוק התת־לשונית"
+  },
+  "submandibular-gland": {
+    "notes": [
+      {
+        "text": "שוכנת באזור המשולש התת־לסתי ומקיפה את השוליים האחוריים של שריר המיילוהיואיד. צינור ההפרשה שלה נפתח סמוך לרסן הלשון. מייצרת רוק מסוג מעורב. חשוב להכיר את היחסים בין הצינור לעצב הלשון.",
+        "section": "הראש והצוואר",
+        "term": "Submandibular gland"
+      },
+      {
+        "text": "בלוטת רוק מתחת ללסת, שצינורה נפתח ברצפת הפה.",
+        "section": "צוואר",
+        "term": "Submandibular gland"
+      }
+    ],
+    "he": "בלוטת הרוק התת־לסתית",
+    "heHeading": "בלוטת הרוק התת־לסתית"
+  },
+  "subscapularis-muscle": {
+    "notes": [
+      {
+        "text": "שריר שרוול מסובב בקדמת השכמה, המסובב את הזרוע פנימה.",
+        "section": "השלמות גפה עליונה",
+        "term": "Subscapularis"
+      }
+    ]
+  },
+  "superficial-dorsal-veins-of-penis": {
+    "notes": [
+      {
+        "text": "ורידים דורסליים המנקזים שכבות שונות של הפין.",
+        "section": "אגן ופרינאום",
+        "term": "Superficial & Deep dorsal vein of penis",
+        "shared": true
+      }
+    ]
+  },
+  "superficial-fibular-nerve": {
+    "notes": [
+      {
+        "text": "עצב למדור השוק הצדדי ולרוב עור גב כף הרגל.",
+        "section": "גפה תחתונה",
+        "term": "Superficial fibular / peroneal nerve"
+      }
+    ]
+  },
+  "superficial-part-of-tibial-collateral-ligament": {
+    "notes": [
+      {
+        "text": "רצועה צידית מדיאלית בברך, המתנגדת לעומס ולגוס.",
+        "section": "גפה תחתונה",
+        "term": "Medial Collateral Ligament (MCL)",
+        "shared": true
+      }
+    ]
+  },
+  "superficial-temporal-artery": {
+    "notes": [
+      {
+        "text": "ענף סופי שטחי של הקרוטיד החיצוני, לקרקפת הרקתית.",
+        "section": "צוואר",
+        "term": "Superficial temporal artery"
+      },
+      {
+        "text": "כלי דם שטחיים באזור הרקה והקרקפת.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Superficial temporal artery & vein",
+        "shared": true
+      }
+    ]
+  },
+  "superficial-temporal-veins": {
+    "notes": [
+      {
+        "text": "כלי דם שטחיים באזור הרקה והקרקפת.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Superficial temporal artery & vein",
+        "shared": true
+      }
+    ]
+  },
+  "superior-anorectal-artery": {
+    "notes": [
+      {
+        "text": "המשך העורק המזנטרי התחתון אל הרקטום העליון.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Superior rectal artery"
+      }
+    ]
+  },
+  "superior-epigastric-artery": {
+    "notes": [
+      {
+        "text": "כלי דם במעטפת הרקטוס; העורק העליון ממשיך את העורק התורקלי הפנימי.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Superior epigastric artery & vein",
+        "shared": true
+      }
+    ]
+  },
+  "superior-epigastric-veins": {
+    "notes": [
+      {
+        "text": "כלי דם במעטפת הרקטוס; העורק העליון ממשיך את העורק התורקלי הפנימי.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Superior epigastric artery & vein",
+        "shared": true
+      }
+    ]
+  },
+  "superior-gemellus-muscle": {
+    "notes": [
+      {
+        "text": "שריר קטן מעל גיד האובטורטור הפנימי, המסייע בסיבוב ירך החוצה.",
+        "section": "גפה תחתונה",
+        "term": "Gemellus superior m."
+      }
+    ]
+  },
+  "superior-gluteal-artery": {
+    "notes": [
+      {
+        "text": "עורק היוצא מעל הפיריפורמיס לאזור העכוז העליון.",
+        "section": "אגן ופרינאום",
+        "term": "Superior gluteal artery"
+      },
+      {
+        "text": "עורקים מהכסל הפנימי המזינים את אזור העכוז מעל הפיריפורמיס ומתחתיו.",
+        "section": "גפה תחתונה",
+        "term": "Superior & Inferior gluteal arteries",
+        "shared": true
+      }
+    ]
+  },
+  "superior-gluteal-nerve": {
+    "notes": [
+      {
+        "text": "עצב לגלוטאוס מדיוס, גלוטאוס מינימוס ומותח הפאסיה.",
+        "section": "גפה תחתונה",
+        "term": "Superior gluteal nerve"
+      }
+    ]
+  },
+  "superior-mesenteric-artery": {
+    "notes": [
+      {
+        "text": "ענף אאורטלי לאיברי המעי האמצעי, מהתריסריון הדיסטלי ועד רוב המעי הרוחבי.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Superior mesenteric artery"
+      }
+    ]
+  },
+  "superior-mesenteric-vein": {
+    "notes": [
+      {
+        "text": "וריד המנקז את רוב אזור המעי האמצעי למערכת הפורטלית.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Superior mesenteric vein"
+      }
+    ]
+  },
+  "superior-oblique-muscle": {
+    "notes": [
+      {
+        "text": "שריר עין אלכסוני עליון; תורם לסיבוב פנימה ולהורדה, תלוי במנח המבט.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Superior oblique"
+      }
+    ]
+  },
+  "superior-parathyroid-gland": {
+    "notes": [
+      {
+        "text": "בלוטות קטנות, לרוב ארבע, בסביבת המשטח האחורי של התריס. מפרישות PTH ומשתתפות בוויסות הסידן. מיקומן ומספרן עשויים להשתנות. למרות השם והקרבה, תפקידן שונה מתפקיד בלוטת התריס.",
+        "section": "בלוטות ואיברים לימפתיים",
+        "term": "Parathyroid glands",
+        "shared": true
+      }
+    ]
+  },
+  "superior-rectus-muscle": {
+    "notes": [
+      {
+        "text": "שריר עין ישר עליון; מרים את המבט ומוסיף רכיבי קירוב וסיבוב.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Superior rectus"
+      }
+    ]
+  },
+  "superior-vena-cava": {
+    "notes": [
+      {
+        "text": "וריד נבוב עליון, המחזיר דם מהגוף העליון לעלייה ימין.",
+        "section": "בית החזה",
+        "term": "Superior Vena Cava (SVC)"
+      }
+    ]
+  },
+  "supinator": {
+    "notes": [
+      {
+        "text": "שריר אמה מקורב המסובב אותה לסופינציה.",
+        "section": "גפה עליונה",
+        "term": "Supinator"
+      }
+    ]
+  },
+  "suprarenal-gland": {
+    "notes": [
+      {
+        "text": "מעל הכליות, מאחורי הצפק. הקליפה והליבה שונות במבנה ובתוצרים: הקליפה מפרישה הורמונים סטרואידיים והליבה קטכולאמינים. הן בלוטות עצמאיות ואינן חלק ממערכת איסוף השתן. ניקוזן הוורידי שונה בין ימין לשמאל.",
+        "section": "בלוטות ואיברים לימפתיים",
+        "term": "Adrenal glands"
+      },
+      {
+        "text": "בלוטות הורמונליות מעל הכליות; קליפה סטרואידית וליבה קטכולאמינית.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Suprarenal / adrenal glands - Right + Left"
+      }
+    ],
+    "he": "בלוטת יותרת הכליה",
+    "heHeading": "בלוטות יותרת הכליה"
+  },
+  "suprascapular-artery": {
+    "notes": [
+      {
+        "text": "גזע תירוצרוויקלי וענפיו, המספקים אזורי תריס, צוואר ושכמה.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Thyrocervical trunk - Transverse cervical artery, Suprascapular artery, Inferior thyroid artery",
+        "shared": true
+      }
+    ]
+  },
+  "suprascapular-nerve": {
+    "notes": [
+      {
+        "text": "עצב לסופרספינטוס ולאינפרספינטוס.",
+        "section": "השלמות גפה עליונה",
+        "term": "Suprascapular nerve"
+      }
+    ]
+  },
+  "supraspinatus-muscle": {
+    "notes": [
+      {
+        "text": "שריר שרוול מסובב; מסייע בתחילת הרחקת הזרוע ובייצוב ראש ההומרוס.",
+        "section": "השלמות גפה עליונה",
+        "term": "Supraspinatus"
+      }
+    ]
+  },
+  "sural-nerve": {
+    "notes": [
+      {
+        "text": "עצב תחושתי לאזור האחורי־צדי של השוק ולשוליים הצדדיים של כף הרגל.",
+        "section": "גפה תחתונה",
+        "term": "Sural nerve"
+      }
+    ]
+  },
+  "sympathetic-trunk": {
+    "notes": [
+      {
+        "text": "שרשרת גנגליונים סימפתטיים לאורך צדי עמוד השדרה.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Sympathetic trunk"
+      },
+      {
+        "text": "החלק הצווארי של השרשרת הסימפתטית והגנגליונים שלו.",
+        "section": "צוואר",
+        "term": "Sympathetic trunk & cervical ganglia"
+      },
+      {
+        "text": "שרשרת גנגליונים סימפתטיים לאורך צדי עמוד השדרה.",
+        "section": "בית החזה",
+        "term": "Sympathetic Chain (השרשרת הסימפתטית)"
+      }
+    ]
+  },
+  "talus": {
+    "notes": [
+      {
+        "text": "עצם הטאלוס, המחברת בין השוק לעקב ולסירה.",
+        "section": "השלמות גפה תחתונה",
+        "term": "Talus"
+      }
+    ]
+  },
+  "temporal-bone": {
+    "notes": [
+      {
+        "text": "עצם הרקה, המכילה את איברי האוזן וחלק ממפרק הלסת.",
+        "section": "גולגולת",
+        "term": "Temporal bone"
+      }
+    ]
+  },
+  "temporalis-muscle": {
+    "notes": [
+      {
+        "text": "שריר רקתי המרים את הלסת; סיביו האחוריים מסייעים במשיכתה לאחור.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Temporalis"
+      }
+    ]
+  },
+  "tendinous-arch-of-levator-ani": {
+    "notes": [
+      {
+        "text": "פס מעובה בפאסיית האובטורטור הפנימי, המשמש אחיזה לחלק מהלבטור אני.",
+        "section": "אגן ופרינאום",
+        "term": "Tendinous arch of Obturator internus / Tendinous arch of Levator ani"
+      }
+    ]
+  },
+  "tentorium-cerebelli": {
+    "notes": [
+      {
+        "text": "קפל דורה המפריד בין חלק מהמוח הגדול למוחון.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Tentorium cerebelli"
+      }
+    ]
+  },
+  "teres-major-muscle": {
+    "notes": [
+      {
+        "text": "שריר המקרב, פושט ומסובב פנימה את הזרוע; אינו חלק מהשרוול המסובב.",
+        "section": "השלמות גפה עליונה",
+        "term": "Teres major"
+      }
+    ]
+  },
+  "teres-minor-muscle": {
+    "notes": [
+      {
+        "text": "שריר קטן בשרוול המסובב, המסייע בסיבוב הזרוע החוצה.",
+        "section": "השלמות גפה עליונה",
+        "term": "Teres minor"
+      }
+    ]
+  },
+  "testicular-artery": {
+    "notes": [
+      {
+        "text": "עורק היוצא מהאאורטה הבטנית ומספק את האשך.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Testicular artery"
+      },
+      {
+        "text": "עורקי וורידי בלוטות המין; בימין ובשמאל קיימים הבדלים בניקוז הוורידי.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Testicular artery + vein / Gonadal vessels / Ovarian artery + vein",
+        "shared": true
+      }
+    ]
+  },
+  "testicular-vein": {
+    "notes": [
+      {
+        "text": "עורקי וורידי בלוטות המין; בימין ובשמאל קיימים הבדלים בניקוז הוורידי.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Testicular artery + vein / Gonadal vessels / Ovarian artery + vein",
+        "shared": true
+      }
+    ]
+  },
+  "thymus": {
+    "notes": [
+      {
+        "text": "איבר לימפתי במדיאסטינום הקדמי, הבולט יותר בילדות. קשור להבשלה ולסלקציה של תאי T. לאחר ההתבגרות חלק ניכר מרקמתו מתחלף בשומן. יש לזהותו לפי מיקומו ביחס לסטרנום ולכלי הדם הגדולים.",
+        "section": "בלוטות ואיברים לימפתיים",
+        "term": "Thymus"
+      },
+      {
+        "text": "איבר לימפתי הקשור להבשלת תאי T, בולט בעיקר בילדות.",
+        "section": "בית החזה",
+        "term": "Thymus"
+      }
+    ],
+    "he": "תימוס",
+    "heHeading": "התימוס"
+  },
+  "thyrocervical-trunk": {
+    "notes": [
+      {
+        "text": "גזע תירוצרוויקלי וענפיו, המספקים אזורי תריס, צוואר ושכמה.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Thyrocervical trunk - Transverse cervical artery, Suprascapular artery, Inferior thyroid artery",
+        "shared": true
+      }
+    ]
+  },
+  "thyrohyoid-muscle": {
+    "notes": [
+      {
+        "text": "שריר בין סחוס התריס להיואיד; מקרב ביניהם.",
+        "section": "צוואר",
+        "term": "Thyrohyoid"
+      }
+    ]
+  },
+  "thyroid-cartilage": {
+    "notes": [
+      {
+        "text": "הסחוס הגדול של בית הקול; חיבור לוחותיו יוצר את הבליטה הקדמית.",
+        "section": "צוואר",
+        "term": "Thyroid cartilage & Laryngeal prominence"
+      },
+      {
+        "text": "לוחות סחוס התריס וקרניו; יוצרים חלק מהמסגרת של בית הקול.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Thyroid cartilage - Lamina, Laryngeal prominence, Superior & Inferior horn"
+      }
+    ]
+  },
+  "thyroid-gland": {
+    "notes": [
+      {
+        "text": "קדמית וצדדית לקנה הנשימה בצוואר. בדרך כלל שתי אונות המחוברות במצר. מפרישה הורמונים המשפיעים על חילוף החומרים. סמיכותה לעצב הגרון החוזר ולבלוטות יותרת התריס חשובה להבנת האנטומיה הכירורגית של הצוואר.",
+        "section": "בלוטות ואיברים לימפתיים",
+        "term": "Thyroid gland"
+      },
+      {
+        "text": "בלוטת התריס מורכבת בדרך כלל משתי אונות ומצר ביניהן.",
+        "section": "צוואר",
+        "term": "Thyroid gland - Isthmus, Right & Left lobe"
+      }
+    ],
+    "he": "בלוטת התריס",
+    "heHeading": "בלוטת התריס"
+  },
+  "tibia": {
+    "notes": [
+      {
+        "text": "עצם השוקה, נושאת המשקל העיקרית בשוק.",
+        "section": "השלמות גפה תחתונה",
+        "term": "Tibia"
+      }
+    ]
+  },
+  "tibial-nerve": {
+    "notes": [
+      {
+        "text": "עצב למדור השוק האחורי ולכף הרגל הפלנטרית.",
+        "section": "גפה תחתונה",
+        "term": "Tibial nerve"
+      }
+    ]
+  },
+  "tibialis-anterior-muscle": {
+    "notes": [
+      {
+        "text": "מכופף גבי של הקרסול והופך את כף הרגל פנימה.",
+        "section": "גפה תחתונה",
+        "term": "Tibialis anterior"
+      }
+    ]
+  },
+  "tibialis-posterior-muscle": {
+    "notes": [
+      {
+        "text": "שריר עמוק בשוק האחורית; הופך כף רגל פנימה ותומך בקשת המדיאלית.",
+        "section": "גפה תחתונה",
+        "term": "Tibialis posterior"
+      },
+      {
+        "text": "גיד העובר מאחורי הפטישון המדיאלי ונאחז בעיקר בעצם הסירה ובסביבתה.",
+        "section": "גפה תחתונה",
+        "term": "Tibialis posterior tendon"
+      }
+    ]
+  },
+  "tongue": {
+    "notes": [
+      {
+        "text": "איבר שרירי ברצפת הפה, המשתתף בהנעת מזון, בליעה, דיבור וטעם. שרירים פנימיים משנים את צורתו וחיצוניים את מיקומו. יש להפריד בין עצבוב מוטורי, תחושה כללית וטעם; הם אינם מגיעים כולם מאותו עצב.",
+        "section": "הראש והצוואר",
+        "term": "Tongue"
+      }
+    ],
+    "he": "לשון",
+    "heHeading": "הלשון"
+  },
+  "trachea": {
+    "notes": [
+      {
+        "text": "צינור אוויר הנמשך מבית הקול ומתפצל לשני סימפונות ראשיים. טבעות סחוס לא שלמות תומכות בדופן, והחלק האחורי סמוך לוושט. אזור ההתפצלות נקרא קרינה. האוויר עובר דרכו אך חילוף הגזים מתרחש בהמשך.",
+        "section": "בית החזה",
+        "term": "Trachea"
+      },
+      {
+        "text": "קנה הנשימה: מעבר אוויר מבית הקול אל הסימפונות.",
+        "section": "בית החזה",
+        "term": "Trachea"
+      }
+    ],
+    "he": "קנה הנשימה",
+    "heHeading": "קנה הנשימה"
+  },
+  "transverse-acetabular-ligament": {
+    "notes": [
+      {
+        "text": "רצועה המגשרת על החריץ התחתון של האצטבולום.",
+        "section": "גפה תחתונה",
+        "term": "Transverse acetabular ligament"
+      }
+    ]
+  },
+  "transverse-arytenoid-muscle": {
+    "notes": [
+      {
+        "text": "שרירים המחברים בין האריטנואידים ומסייעים בסגירת הפתח הקולי.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Transverse & Oblique arytenoids m."
+      }
+    ]
+  },
+  "transverse-cervical-artery": {
+    "notes": [
+      {
+        "text": "גזע תירוצרוויקלי וענפיו, המספקים אזורי תריס, צוואר ושכמה.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Thyrocervical trunk - Transverse cervical artery, Suprascapular artery, Inferior thyroid artery",
+        "shared": true
+      }
+    ]
+  },
+  "transverse-colon": {
+    "notes": [
+      {
+        "text": "המעי הרוחבי, החוצה את הבטן מימין לשמאל.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Transverse colon"
+      }
+    ]
+  },
+  "transversus-abdominis-muscle": {
+    "notes": [
+      {
+        "text": "שריר הבטן הרוחבי; דוחס את תוכן הבטן ומסייע בייצוב הגו.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Transversus abdominis"
+      }
+    ]
+  },
+  "transversus-thoracis-muscle": {
+    "notes": [
+      {
+        "text": "שריר בדופן הפנימית הקדמית של בית החזה, מן הסטרנום לסחוסי צלעות.",
+        "section": "בית החזה",
+        "term": "Transversus Thoracis Muscle"
+      },
+      {
+        "text": "שריר פנימי בדופן החזה הקדמית, מאחורי הסטרנום וסחוסי הצלעות.",
+        "section": "בית החזה",
+        "term": "Transversus Thoracis"
+      }
+    ]
+  },
+  "trapezium-bone": {
+    "notes": [
+      {
+        "text": "עצם בשורה המרוחקת של שורש כף היד, המפרקית עם מסרק האגודל.",
+        "section": "השלמות גפה עליונה",
+        "term": "Trapezium"
+      }
+    ]
+  },
+  "trapezius-muscle": {
+    "notes": [
+      {
+        "text": "שריר גב וצוואר שטחי; מרים, מקרב ומסובב את השכמה בהתאם לסיביו.",
+        "section": "גב ועמוד שדרה",
+        "term": "Trapezius"
+      }
+    ]
+  },
+  "trapezoid-bone": {
+    "notes": [
+      {
+        "text": "עצם קטנה בשורה המרוחקת, בעיקר מול המסרק השני.",
+        "section": "השלמות גפה עליונה",
+        "term": "Trapezoid"
+      }
+    ]
+  },
+  "triceps-brachii-muscle": {
+    "notes": [
+      {
+        "text": "שריר תלת־ראשי בחלק האחורי של הזרוע, הפושט את המרפק.",
+        "section": "השלמות גפה עליונה",
+        "term": "Triceps brachii"
+      }
+    ]
+  },
+  "triquetrum-bone": {
+    "notes": [
+      {
+        "text": "העצם המשולשת, בצד האולנרי של השורה המקורבת.",
+        "section": "השלמות גפה עליונה",
+        "term": "Triquetrum"
+      }
+    ]
+  },
+  "trochlea-of-superior-oblique-muscle": {
+    "notes": [
+      {
+        "text": "גלגלת סיבית בקדמת הארובה שבה משנה כיוון גיד האלכסוני העליון.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Trochlea (pulley) of Superior Oblique m."
+      }
+    ]
+  },
+  "tympanic-membrane": {
+    "notes": [
+      {
+        "text": "קרום המפריד בין האוזן החיצונית לתיכונה וממיר גלי קול לתנודות.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Tympanic membrane"
+      }
+    ]
+  },
+  "ulna": {
+    "notes": [
+      {
+        "text": "עצם הגומד, בצד הזרת באמה; משתתפת מרכזית בציר המרפק.",
+        "section": "השלמות גפה עליונה",
+        "term": "Ulna"
+      }
+    ]
+  },
+  "ulnar-artery": {
+    "notes": [
+      {
+        "text": "עורק בצד האולנרי של האמה, התורם בעיקר לקשת הכפית השטחית.",
+        "section": "גפה עליונה",
+        "term": "Ulnar Artery"
+      }
+    ]
+  },
+  "ulnar-nerve": {
+    "notes": [
+      {
+        "text": "עצב לחלק מכופפי האמה ולרוב שרירי כף היד הפנימיים.",
+        "section": "גפה עליונה",
+        "term": "Ulnar Nerve"
+      }
+    ]
+  },
+  "ureter": {
+    "notes": [
+      {
+        "text": "שני צינורות שריריים המובילים שתן מאגני הכליות לשלפוחית. מהלכם רטרופריטוניאלי; כניסתם האלכסונית לדופן השלפוחית מסייעת לצמצם זרימה חוזרת. באגן הנקבי השופכן עובר מתחת לעורק הרחמי. אין לבלבל עם השופכה.",
+        "section": "מערכת השתן",
+        "term": "Ureters"
+      },
+      {
+        "text": "צינור שרירי מהכליה לשלפוחית השתן.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Ureter"
+      }
+    ],
+    "he": "שופכן",
+    "heHeading": "השופכנים"
+  },
+  "urethra": {
+    "notes": [
+      {
+        "text": "מוליכה שתן מהשלפוחית אל מחוץ לגוף. באנטומיה זכרית עוברת גם דרך הערמונית והפין ומשמשת מסלול לשפיכה; באנטומיה נקבית קצרה יותר ונפתחת לפני פתח הנרתיק. שופכן ושופכה הם מבנים שונים לחלוטין.",
+        "section": "מערכת השתן",
+        "term": "Urethra"
+      }
+    ],
+    "he": "שופכה",
+    "heHeading": "השופכה"
+  },
+  "urinary-bladder": {
+    "notes": [
+      {
+        "text": "מאגר שרירי באגן, מאחורי סימפיזת החיק. הדטרוזור יוצר את עיקר הדופן. הטריגון מוגדר על ידי שני פתחי השופכנים ופתח השופכה. צורת השלפוחית וגובהה משתנים עם מידת המילוי.",
+        "section": "מערכת השתן",
+        "term": "Urinary bladder"
+      },
+      {
+        "text": "מאגר שתן שרירי באגן; פירוט במדריך האיברים.",
+        "section": "אגן ופרינאום",
+        "term": "Urinary bladder"
+      }
+    ],
+    "he": "שלפוחית השתן",
+    "heHeading": "שלפוחית השתן"
+  },
+  "vagus-nerve-x": {
+    "notes": [
+      {
+        "text": "עצב X; מספק תפקודים תחושתיים, מוטוריים ואוטונומיים בראש, בצוואר ובגוף.",
+        "section": "צוואר",
+        "term": "Vagus nerve"
+      },
+      {
+        "text": "עצב X; בחזה עובר אחורית לשורש הריאה ומשתתף במקלעות ויסצרליות.",
+        "section": "בית החזה",
+        "term": "Vagus Nerve"
+      }
+    ]
+  },
+  "vermiform-appendix": {
+    "notes": [
+      {
+        "text": "צינור צר המתחיל מהצקום ומכיל רקמה לימפתית. מיקום הקצה משתנה בין אנשים, בעוד בסיסו קשור למפגש רצועות השריר האורכיות של הצקום. שינויי המנח חשובים להבנת האנטומיה של האזור.",
+        "section": "מערכת העיכול",
+        "term": "Vermiform appendix"
+      },
+      {
+        "text": "שלוחה צרה מהצקום המכילה רקמה לימפתית.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Vermiform Appendix"
+      }
+    ],
+    "he": "תוספתן",
+    "heHeading": "התוספתן"
+  },
+  "vertebral-artery": {
+    "notes": [
+      {
+        "text": "עורק העולה בצוואר ונכנס לגולגולת לתרומה למחזור האחורי של המוח.",
+        "section": "גב ועמוד שדרה",
+        "term": "Vertebral artery"
+      }
+    ]
+  },
+  "vomer": {
+    "notes": [
+      {
+        "text": "עצם המחרשה, חלק מהמחיצה הגרמית של האף.",
+        "section": "גולגולת",
+        "term": "Vomer"
+      }
+    ]
+  },
+  "xiphoid-process": {
+    "notes": [
+      {
+        "text": "הזיז התחתון של הסטרנום, לאחזי רקמות ושרירים.",
+        "section": "השלמות בית החזה",
+        "term": "Xiphoid process"
+      }
+    ]
+  },
+  "zygomatic-bone": {
+    "notes": [
+      {
+        "text": "עצם הלחי, המשתתפת בדופן הארובה ובקשת הזיגומטית.",
+        "section": "גולגולת",
+        "term": "Zygomatic bone"
+      }
+    ]
+  },
+  "zygomaticus-major-muscle": {
+    "notes": [
+      {
+        "text": "שרירים מהזיגומה לשפה ולזווית הפה, התורמים לחיוך.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Zygomaticus major & minor"
+      }
+    ]
+  }
+}

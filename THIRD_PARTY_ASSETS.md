@@ -18,6 +18,7 @@
 | Item                                                                         | Source                                                                   | Terms                                                                                                                                           |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | `data/course/medintzfat/*.json` (syllabus, structure names, term pairs only) | [Med in Tzfat](https://medintzfat.com/anatomy/), each row cites its page | [Site terms](https://medintzfat.com/terms/): personal study use; no copying of content. Only facts are committed — see `docs/COURSE_SOURCE.md`. |
+| `src/data/anatomy/z-anatomy/summaryNotes.json` (study notes, Hebrew names)   | Her own anatomy summary (Word file), shared by the user                  | Her own work, used with her consent for this app; not a third-party asset. Original file not in git.                                            |
 
 ## ShareAlike
 

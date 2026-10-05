@@ -6,6 +6,7 @@ import { StructureActions } from "./structure/StructureActions";
 import { StructureAttachments } from "./structure/StructureAttachments";
 import { StructureDetails } from "./structure/StructureDetails";
 import { StructureHeader } from "./structure/StructureHeader";
+import { StructureNotes } from "./structure/StructureNotes";
 import { StructureRelations } from "./structure/StructureRelations";
 import { ViewerPanel } from "./ViewerPanel";
 
@@ -24,6 +25,7 @@ export function StructureInfoPanel() {
       />
       <StructureActions structureId={structure.id} />
       <div className="flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto px-5 py-4">
+        <StructureNotes structure={structure} />
         <StructureRelations structure={structure} />
         <StructureAttachments structure={structure} />
         <StructureDetails structure={structure} />

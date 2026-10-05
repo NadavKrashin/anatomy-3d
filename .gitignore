@@ -46,3 +46,4 @@ next-env.d.ts
 
 # course-site extracts (personal study use only — see docs/COURSE_SOURCE.md)
 /.course-cache
+__pycache__/

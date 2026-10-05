@@ -63,6 +63,7 @@ export const en: Messages = {
       "This term has not yet been checked against an authoritative source",
     noDetails: "No verified information for this structure yet.",
     contentLanguageNote: "",
+    studyNotes: "Summary",
     sections: {
       function: "Function",
       origin: "Origin",

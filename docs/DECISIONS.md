@@ -422,3 +422,24 @@ brachii", "Esophagus", "Vagus nerve".
 - Hebrew: the course hardly uses Hebrew names. Our earlier Hebrew (Academy
   forms such as עצב הגומד) is no longer shown for structures the course
   names only in English. It stays searchable.
+
+## 2026-10-05 — Her own summary provides the study notes
+
+**Context.** Descriptions were wanted for every part. The course site's
+notes may not be copied or rewritten (its terms forbid both). The user then
+shared her own summary, written in her own words, for the app to use.
+
+**Decision.**
+
+- Her text is shown **verbatim**, labelled "סיכום" ("Summary"), not mixed
+  into the English textbook `details`. A `StudyNote[]` field on the
+  structure keeps it separate, carries its language, and lets one entry
+  cover several structures.
+- Notes go first in the panel, because they are her own course material.
+  "No verified information" is not shown when notes exist.
+- Her Hebrew names beat the site's: she uses them. Only trivial forms are
+  normalised: the definite article, and the plural for a one-sided
+  structure. The rest is as written.
+- The .docx stays out of git, but the generated JSON with her text is
+  committed and deployed (the repo and app are public). The user shared it
+  for the app.

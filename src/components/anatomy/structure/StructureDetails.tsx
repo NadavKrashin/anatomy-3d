@@ -20,11 +20,14 @@ export function StructureDetails({
     return items && items.length > 0 ? [{ key, items }] : [];
   });
 
+  const hasNotes = (structure.studyNotes ?? []).length > 0;
   if (!details.description && !details.clinicalNote && sections.length === 0) {
+    // Her summary notes (shown above) are the information here.
+    if (hasNotes) return null;
     return <p className="text-graphite text-sm">{t.structure.noDetails}</p>;
   }
 
-  const englishOnly = locale === "he" && !details.description?.he;
+  const englishOnly = locale === "he" && !details.description?.he && !hasNotes;
 
   return (
     <div className="flex flex-col gap-5 text-[15px] leading-relaxed">

@@ -22,6 +22,8 @@ writeFileSync(
       id: s.id,
       en: s.names.en.text,
       la: s.names.la?.text ?? null,
+      region: s.region,
+      system: s.system,
     })),
   ),
 );

@@ -6,6 +6,7 @@ import {
 } from "./build";
 import { zAnatomyAttachments } from "./attachments";
 import { withCourseName } from "./courseNames";
+import { withSummaryNotes } from "./summaryNotes";
 import manifest from "./manifest.json";
 
 /**
@@ -14,10 +15,11 @@ import manifest from "./manifest.json";
  * axillary and scapular regions). Rebuild with scripts/anatomy/z-anatomy/README.md.
  */
 const raw = buildZAnatomyDataset(manifest as ManifestEntry[]);
-// Names as her course writes them (docs/COURSE_SOURCE.md → "Course names").
+// Names as her course writes them, then her own summary's notes and Hebrew
+// names (docs/COURSE_SOURCE.md → "Course names", "Her summary").
 const built = {
   ...raw,
-  structures: raw.structures.map((s) => withCourseName(s)),
+  structures: raw.structures.map((s) => withSummaryNotes(withCourseName(s))),
 };
 const ids = new Set(built.structures.map((s) => s.id));
 
