@@ -40,6 +40,8 @@ export const en: Messages = {
     close: "Close",
     hiddenCount: (n: number) => `${n} hidden`,
     isolating: "Isolate mode",
+    peelLayer: "Peel layer",
+    restoreLayer: "Restore layer",
   },
   search: {
     placeholder: "Search structures…",
@@ -74,6 +76,8 @@ export const en: Messages = {
     reset: "Reset camera",
     help: "Show shortcuts",
     quiz: "Go to quiz / back to explore",
+    peel: "Peel the outer layer (as seen now)",
+    restore: "Restore the last peeled layer",
   },
   quiz: {
     setupTitle: "Quiz",

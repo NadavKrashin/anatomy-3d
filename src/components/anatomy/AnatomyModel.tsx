@@ -4,6 +4,7 @@ import { useGLTF } from "@react-three/drei";
 import { useThree, type ThreeEvent } from "@react-three/fiber";
 import { useEffect, useMemo } from "react";
 import { useAnatomyData } from "@/components/providers/AnatomyDataProvider";
+import { useLayerPeeling } from "@/hooks/useLayerPeeling";
 import {
   MaterialStateController,
   type MeshVisualState,
@@ -64,6 +65,8 @@ export function AnatomyModel({ url }: { url: string }) {
     () => buildSceneIndex(scene, adapter),
     [scene, adapter],
   );
+
+  useLayerPeeling(scene, index);
 
   useEffect(() => {
     useSceneIndexStore.getState().setIndex(index.meshesByStructure);

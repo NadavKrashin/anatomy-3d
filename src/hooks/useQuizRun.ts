@@ -40,6 +40,7 @@ function syncViewer(
     run.index !== previous?.index || previous.phase === "complete";
 
   if (run.phase === "complete") {
+    viewer.restoreAllLayers();
     viewer.setSelectionLocked(false);
     viewer.select(null);
     viewer.setHiddenSystems([]);
@@ -50,6 +51,8 @@ function syncViewer(
 
   if (run.phase === "answering" && questionChanged) {
     const target = registry.get(question.structureId);
+    // Layers peeled for the previous question would give this one away.
+    viewer.restoreAllLayers();
     viewer.setHiddenSystems(target ? systemsToHideFor(target) : []);
     if (question.type === "identify") {
       // Highlight the structure to identify and keep clicks from moving it.
@@ -69,6 +72,8 @@ function syncViewer(
   if (run.phase === "answered") {
     viewer.setSelectionLocked(true);
     if (run.feedback?.kind === "revealed") {
+      // The answer may have been peeled away; show it in context (x-ray).
+      viewer.restoreAllLayers();
       viewer.select(question.structureId);
       viewer.focus(question.structureId);
     }

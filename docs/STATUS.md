@@ -2,7 +2,7 @@
 
 > Living document. **Update it with every commit that changes the code, not
 > just at the end of a session** — it must always match the code as it is.
-> Last updated: 2026-10-05 (session 2, docs-gate hook added).
+> Last updated: 2026-10-05 (session 2, layer peeling).
 
 ## Orientation (read in this order)
 
@@ -28,7 +28,7 @@ npx next start -p 3100         # in the background (after verify, which builds)
 npm run e2e:smoke              # real-browser explore + quiz flows, writes docs/screenshots/
 ```
 
-Expected today: **135 unit/component tests, 21 e2e checks, all passing; CI green.**
+Expected today: **146 unit/component tests, 25 e2e checks, all passing; CI green.**
 
 ## User decisions & preferences (do not re-ask)
 
@@ -43,6 +43,7 @@ Expected today: **135 unit/component tests, 21 e2e checks, all passing; CI green
 | 2026-10-05 | **Redesign requested**: the first UI looked "blocky and AI-made". New direction in `docs/DESIGN.md` (light atlas style). Design plugins (`frontend-design`, `design-skills`) were suggested for install; `frontend-design` is vendored in `.claude/skills/`. |
 | 2026-10-05 | Next: **deploy the first version to Vercel** (user does the Vercel side — see `docs/DEPLOYMENT.md`).                                                                                                                                                         |
 | 2026-10-05 | **Docs must be kept updated continuously** as work happens (every commit), not at the end of a session. Enforced by the docs-gate hook.                                                                                                                      |
+| 2026-10-05 | **Deployed** by the user on Vercel: production URL **https://ors-anatomy.vercel.app** (production branch `main`).                                                                                                                                            |
 
 ## Phase tracker (§48)
 
@@ -86,8 +87,13 @@ All verified by `npm run e2e:smoke` against a production build.
   selected structure, ruled lists (`docs/DESIGN.md`).
 - **Viewer:** selection with teal x-ray highlight (buried structures stay
   visible), hover, info panel, search (he/en/la), focus with panel-aware
-  framing, hide, isolate, legend toggles, shortcuts (`/ Esc F I H R Q ?`).
-- **Quiz:** find (click in 3D; muscles auto-hidden for non-muscle targets),
+  framing, hide, isolate, legend toggles, **layer peeling** (peel the
+  structures outermost from the current view, never bones; restore one layer
+  at a time; the selected structure is kept), shortcuts
+  (`/ Esc F I H R P ⇧P Q ?`).
+- **Quiz:** find (click in 3D; muscles auto-hidden for non-muscle targets;
+  peel/restore buttons and P/⇧P to reach deep structures — layers reset per
+  question and when the answer is revealed),
   identify (multiple choice, plausible core distractors), mixed; scopes by
   region / system / due / review mistakes; built-in scopes skip `detail`
   structures (small branches).
@@ -102,9 +108,8 @@ All verified by `npm run e2e:smoke` against a production build.
 
 ## Next steps (in order)
 
-1. **Deploy to Vercel** — follow `docs/DEPLOYMENT.md` (merge to `main` via a
-   PR once CI is green; the user connects the repo in Vercel; Node 22; no
-   env vars). Then run its post-deploy checklist on the iPad.
+1. ~~Post-deploy check~~ — user reported production "looks good"
+   (2026-10-05). Keep an eye out for iPad performance feedback.
 2. **Real-device check on iPad:** load time and frame rate with the 1.35M
    triangle model. If sluggish: simplify non-upper-limb bones
    (`optimize-glb.ts --simplify 0.5`), or split the GLB per system/region and
@@ -123,14 +128,17 @@ All verified by `npm run e2e:smoke` against a production build.
 
 - All medical terms are `verified: false`; Hebrew exists only for ~16 curated
   concepts; the other structures show English (validator warnings, expected).
-- Deep muscles can be covered by superficial ones in muscle "find" questions
-  (no layer peeling yet; x-ray applies to the selected structure only).
+- Peeling is view-based: from far away one peel removes a lot (the whole
+  superficial layer of both arms); zoom in to peel finely. Structures showing
+  fewer than 3 pixels in the 512px pass count as slivers and stay. Peel speed
+  on a real iPad not yet measured (one extra off-screen render + readback).
 - Long structures (nerves) are framed along their whole length.
 - Viewer state (hidden/isolated) is not persisted across reloads (by design).
 - Progress is per browser/device (localStorage) — no sync.
 - The e2e find-quiz helper answers by clicking the body centre and revealing;
   it verifies the flow, not answer accuracy.
-- Not yet deployed; untested on a real iPad.
+- Deployed (https://ors-anatomy.vercel.app) but not yet checked on a real
+  iPad; cloud sessions cannot reach `*.vercel.app` to test it.
 - `npm audit` reports 5 high-severity advisories in dev dependencies
   (transitive, from the Next/ESLint toolchain at scaffold time); not shipped
   to the browser. Re-check with `npm audit` when upgrading.
@@ -157,3 +165,13 @@ All verified by `npm run e2e:smoke` against a production build.
   prominent instruction in CLAUDE.md, CONTRIBUTING, anatomy-workflow skill and
   the SessionStart message; `scripts/hooks/docs-gate.mjs` PreToolUse hook blocks
   `git commit`s that change code without a doc (`[docs: none]` escape hatch).
+- **2026-10-05 · session 2 (cont.)** — Opened and merged PR #1 into `main`
+  (CI green) so Vercel can deploy production from `main`.
+- **2026-10-05 · session 2 (cont.)** — User connected the repo in Vercel and
+  deployed: https://ors-anatomy.vercel.app. Recorded in STATUS/DEPLOYMENT.
+- **2026-10-05 · session 2 (cont.)** — User checked production: "looks
+  good". Awaiting the user's pick of the next feature.
+- **2026-10-05 · session 2 (cont.)** — Layer peeling (user picked it as the
+  next feature): off-screen structure-ID render finds what's outermost from
+  the camera; Peel / Restore in the toolbar and in find questions; P / ⇧P.
+  Also: toolbar labels no longer wrap on phones.

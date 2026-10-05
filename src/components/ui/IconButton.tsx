@@ -4,8 +4,11 @@ import type { ButtonHTMLAttributes, ReactNode } from "react";
 interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
   icon: ReactNode;
-  /** Show the label next to the icon instead of only as a tooltip. */
-  showLabel?: boolean;
+  /**
+   * Show the label next to the icon instead of only as a tooltip; "wide"
+   * shows it from tablet width up (icon-only on phones, still named).
+   */
+  showLabel?: boolean | "wide";
   active?: boolean;
 }
 
@@ -28,9 +31,10 @@ export function IconButton({
       title={label}
       aria-pressed={active || undefined}
       className={clsx(
-        "inline-flex h-10 min-w-10 items-center justify-center gap-2 rounded-full text-[14px] transition-colors duration-150",
+        "inline-flex h-10 min-w-10 shrink-0 items-center justify-center gap-2 rounded-full text-[14px] whitespace-nowrap transition-colors duration-150",
         "disabled:pointer-events-none disabled:opacity-40",
-        showLabel && "ps-3 pe-4",
+        showLabel === true && "ps-3 pe-4",
+        showLabel === "wide" && "md:ps-3 md:pe-4",
         active
           ? "bg-scrub-soft text-scrub"
           : "text-graphite hover:bg-wash hover:text-ink",
@@ -41,7 +45,11 @@ export function IconButton({
       <span aria-hidden className="[&>svg]:size-[18px] [&>svg]:stroke-[1.75]">
         {icon}
       </span>
-      {showLabel && <span>{label}</span>}
+      {showLabel && (
+        <span className={clsx(showLabel === "wide" && "max-md:sr-only")}>
+          {label}
+        </span>
+      )}
     </button>
   );
 }

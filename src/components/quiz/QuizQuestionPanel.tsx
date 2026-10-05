@@ -1,6 +1,7 @@
 "use client";
 
 import { Eye } from "lucide-react";
+import { LayerControls } from "@/components/anatomy/LayerControls";
 import { StructureLabel } from "@/components/anatomy/StructureLabel";
 import { ViewerPanel } from "@/components/anatomy/ViewerPanel";
 import { buttonClass } from "@/components/ui/Button";
@@ -52,6 +53,13 @@ export function QuizQuestionPanel() {
         )}
 
         {run.feedback && <QuizFeedback feedback={run.feedback} />}
+
+        {question.type === "find" && !answered && (
+          // Deep muscles hide under superficial ones: peel to reach them.
+          <div className="-ms-2 flex flex-wrap gap-1">
+            <LayerControls showLabel />
+          </div>
+        )}
 
         <div className="flex flex-wrap gap-2">
           {canReveal(run) && (

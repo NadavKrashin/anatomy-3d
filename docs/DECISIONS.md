@@ -196,3 +196,21 @@ lucide-react · Vitest 5 · Playwright 1.56 · gltf-transform 4.5.
   bypasses it for formatting/typo commits. Not a git hook, so humans and CI
   are unaffected; a git-level hook was rejected because it needs per-clone
   installation (husky etc.) for little gain in a single-author repo.
+
+## 2026-10-05 — Layer peeling is view-based (GPU ID pass), not data-based
+
+- **Need:** deep muscles are hidden under superficial ones, especially in
+  "find" questions.
+- **Options:** (a) anatomical layer numbers per muscle — Z-Anatomy has none,
+  and inventing them breaks the "never invent medical facts" rule;
+  (b) CPU raycasting a grid — slow on 1.35M triangles without a BVH;
+  (c) render the scene once off-screen with per-mesh ID colours and read back
+  which structures own front pixels. Chosen: **(c)** — exact for the current
+  view, one cheap render, works for any model and any future region.
+- **Rules:** bones are never peeled (they are the core); slivers under 3
+  pixels stay; the selected structure is kept so you can dissect down around
+  it; peels are a stack so "restore" undoes one step; quiz questions and
+  revealed answers restore all layers (a peeled target would be invisible and
+  peels would leak between questions).
+- **Rejected:** tap-to-peel mode — hide (H / panel button) already covers
+  removing one chosen structure.
