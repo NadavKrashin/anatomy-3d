@@ -156,6 +156,29 @@ export async function exploreFlow(browser: Browser, errors: string[]) {
     "Show all also clears peeled layers",
   );
 
+  // Muscle parts: search a head, see what it belongs to, go to the whole.
+  await desktop.locator("#structure-search").fill("long head of biceps");
+  await desktop.waitForSelector('[role="option"]');
+  await desktop.keyboard.press("Enter");
+  await desktop.waitForTimeout(900);
+  assert(
+    (await infoTitle(desktop))?.includes("Long head of biceps brachii"),
+    "search finds a muscle part (long head of biceps)",
+  );
+  await desktop.screenshot({ path: `${SHOTS}/muscle-part.png` });
+  await desktop.getByRole("button", { name: /^Biceps brachii muscle/ }).click();
+  assert(
+    (await desktop.getByRole("heading", { name: "Parts" }).count()) === 1,
+    "a part links to its whole muscle, which lists its parts",
+  );
+  await desktop.getByRole("button", { name: "Muscle parts" }).click();
+  assert(
+    (await desktop
+      .getByRole("button", { name: "Muscle parts" })
+      .getAttribute("aria-pressed")) === "true",
+    "the muscle parts toggle switches on",
+  );
+
   // iPad landscape, Hebrew, region scope.
   const ipad = await openPage(browser, errors, {
     viewport: { width: 1180, height: 820 },

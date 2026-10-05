@@ -18,6 +18,8 @@ interface ViewerState {
   cameraCommand: CameraCommand | null;
   /** While true, clicks in the 3D view don't change the selection (quiz highlights). */
   selectionLocked: boolean;
+  /** Clicks pick parts (heads of a muscle) instead of whole structures. */
+  pickParts: boolean;
   /**
    * Layer peeling: each entry is one peeled batch (the structures that were
    * outermost from the camera at the time), most recent last.
@@ -30,6 +32,7 @@ interface ViewerState {
   /** Selection from a click in the 3D view; ignored while the selection is locked. */
   pick: (structureId: string | null) => void;
   setSelectionLocked: (locked: boolean) => void;
+  setPickParts: (pickParts: boolean) => void;
   hover: (structureId: string | null) => void;
   hide: (structureId: string) => void;
   hideMany: (structureIds: Iterable<string>) => void;
@@ -72,6 +75,7 @@ const initialState = {
   isolatedStructureId: null,
   cameraCommand: null,
   selectionLocked: false,
+  pickParts: false,
   peeledLayers: [],
   peelRequest: 0,
 } satisfies Partial<ViewerState>;
@@ -84,6 +88,7 @@ export const useViewerStore = create<ViewerState>()((set, get) => ({
     if (!get().selectionLocked) set({ selectedStructureId: structureId });
   },
   setSelectionLocked: (selectionLocked) => set({ selectionLocked }),
+  setPickParts: (pickParts) => set({ pickParts }),
   hover: (hoveredStructureId) => set({ hoveredStructureId }),
 
   hide: (structureId) =>
@@ -127,6 +132,7 @@ export const useViewerStore = create<ViewerState>()((set, get) => ({
       isolatedStructureId: null,
       selectedStructureId: null,
       peeledLayers: [],
+      pickParts: false,
     });
   },
 

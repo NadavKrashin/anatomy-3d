@@ -68,8 +68,8 @@ describe("toId", () => {
 });
 
 describe("buildZAnatomyDataset", () => {
-  it("groups muscle parts into one structure with several meshes", () => {
-    const { structures, meshMap } = buildZAnatomyDataset([
+  it("groups muscle parts into a whole muscle, and keeps each part as a child structure", () => {
+    const { structures, meshMap, partMeshMap } = buildZAnatomyDataset([
       entry("Long head of biceps brachii.l", {
         system: "muscular",
         tissue: "muscle",
@@ -81,10 +81,18 @@ describe("buildZAnatomyDataset", () => {
         group: "Biceps brachii muscle",
       }),
     ]);
-    expect(structures.map((s) => s.id)).toEqual(["biceps-brachii-muscle-left"]);
+    expect(structures.map((s) => [s.id, s.parentId])).toEqual([
+      ["biceps-brachii-muscle-left", undefined],
+      ["long-head-of-biceps-brachii-left", "biceps-brachii-muscle-left"],
+      ["short-head-of-biceps-brachii-left", "biceps-brachii-muscle-left"],
+    ]);
     expect(meshMap).toEqual({
       "Long head of biceps brachii.l": "biceps-brachii-muscle-left",
       "Short head of biceps brachii.l": "biceps-brachii-muscle-left",
+    });
+    expect(partMeshMap).toEqual({
+      "Long head of biceps brachii.l": "long-head-of-biceps-brachii-left",
+      "Short head of biceps brachii.l": "short-head-of-biceps-brachii-left",
     });
   });
 

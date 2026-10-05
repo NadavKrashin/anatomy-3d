@@ -42,6 +42,7 @@ export const en: Messages = {
     isolating: "Isolate mode",
     peelLayer: "Peel layer",
     restoreLayer: "Restore layer",
+    pickParts: "Muscle parts",
   },
   search: {
     placeholder: "Search structures…",
@@ -52,6 +53,8 @@ export const en: Messages = {
     focus: "Focus",
     isolate: "Isolate",
     hide: "Hide",
+    partOf: "Part of",
+    parts: "Parts",
     unverified: "Unverified",
     unverifiedHint:
       "This term has not yet been checked against an authoritative source",

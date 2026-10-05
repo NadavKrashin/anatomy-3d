@@ -104,6 +104,11 @@ export interface AnatomicalStructure {
    * accept either side when the side is not what is being tested.
    */
   bilateralGroupId?: string;
+  /**
+   * Set on a part of a larger structure (a head of a muscle). Parts are
+   * selectable and searchable, but scopes, counts and quizzes work on whole
+   * structures (`AnatomyRegistry.structures` lists only those).
+   */
   parentId?: string;
   details?: StructureDetails;
   tags: string[];
@@ -125,5 +130,8 @@ export interface AnatomyDatasetInfo {
 export interface AnatomyDataset {
   info: AnatomyDatasetInfo;
   structures: AnatomicalStructure[];
+  /** Mesh → whole structure. Every mesh of a part maps to its parent here. */
   meshMap: MeshMap;
+  /** Mesh → part structure, for meshes that are a part of a whole (optional). */
+  partMeshMap?: MeshMap;
 }

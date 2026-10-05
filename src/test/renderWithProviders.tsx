@@ -4,6 +4,7 @@ import { AnatomyDataProvider } from "@/components/providers/AnatomyDataProvider"
 import { demoDataset } from "@/data/anatomy/demo";
 import { DEFAULT_TERM_PREFERENCE } from "@/lib/anatomy/names";
 import type { Locale } from "@/lib/i18n/locale";
+import type { AnatomyDataset } from "@/types/anatomy";
 import { useSettingsStore } from "@/store/settingsStore";
 import { useViewerStore } from "@/store/viewerStore";
 
@@ -14,8 +15,12 @@ export function renderWithProviders(
   ui: ReactElement,
   {
     locale = "en",
+    dataset = demoDataset,
     ...options
-  }: { locale?: Locale } & Omit<RenderOptions, "wrapper"> = {},
+  }: { locale?: Locale; dataset?: AnatomyDataset } & Omit<
+    RenderOptions,
+    "wrapper"
+  > = {},
 ) {
   useViewerStore.setState(initialViewerState, true);
   useSettingsStore.setState({
@@ -23,11 +28,9 @@ export function renderWithProviders(
     termPreference: DEFAULT_TERM_PREFERENCE,
   });
   return render(ui, {
-    // Tests use the small, stable demo dataset regardless of the active one.
+    // Tests use the small, stable demo dataset unless they need real data.
     wrapper: ({ children }) => (
-      <AnatomyDataProvider dataset={demoDataset}>
-        {children}
-      </AnatomyDataProvider>
+      <AnatomyDataProvider dataset={dataset}>{children}</AnatomyDataProvider>
     ),
     ...options,
   });

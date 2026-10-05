@@ -2,7 +2,7 @@
 
 > Living document. **Update it with every commit that changes the code, not
 > just at the end of a session** — it must always match the code as it is.
-> Last updated: 2026-10-05 (session 2, layer peeling).
+> Last updated: 2026-10-05 (session 2, muscle parts).
 
 ## Orientation (read in this order)
 
@@ -28,7 +28,7 @@ npx next start -p 3100         # in the background (after verify, which builds)
 npm run e2e:smoke              # real-browser explore + quiz flows, writes docs/screenshots/
 ```
 
-Expected today: **146 unit/component tests, 25 e2e checks, all passing; CI green.**
+Expected today: **154 unit/component tests, 28 e2e checks, all passing; CI green.**
 
 ## User decisions & preferences (do not re-ask)
 
@@ -42,6 +42,7 @@ Expected today: **146 unit/component tests, 25 e2e checks, all passing; CI green
 | 2026-10-05 | **Lower limb / other regions deferred** — "we will add everything later". Legs show bones only for now.                                                                                                                                                      |
 | 2026-10-05 | **Redesign requested**: the first UI looked "blocky and AI-made". New direction in `docs/DESIGN.md` (light atlas style). Design plugins (`frontend-design`, `design-skills`) were suggested for install; `frontend-design` is vendored in `.claude/skills/`. |
 | 2026-10-05 | Next: **deploy the first version to Vercel** (user does the Vercel side — see `docs/DEPLOYMENT.md`).                                                                                                                                                         |
+| 2026-10-05 | Next features chosen by the user: **muscle parts**, then **origins & insertions**.                                                                                                                                                                           |
 | 2026-10-05 | **Docs must be kept updated continuously** as work happens (every commit), not at the end of a session. Enforced by the docs-gate hook.                                                                                                                      |
 | 2026-10-05 | **Deployed** by the user on Vercel: production URL **https://ors-anatomy.vercel.app** (production branch `main`).                                                                                                                                            |
 
@@ -89,7 +90,10 @@ All verified by `npm run e2e:smoke` against a production build.
   visible), hover, info panel, search (he/en/la), focus with panel-aware
   framing, hide, isolate, legend toggles, **layer peeling** (peel the
   structures outermost from the current view, never bones; restore one layer
-  at a time; the selected structure is kept), shortcuts
+  at a time; the selected structure is kept), **muscle parts** (52 parts —
+  heads of biceps/triceps, parts of deltoid, pectoralis major, trapezius… —
+  searchable and selectable; "Muscle parts" toolbar toggle makes clicks pick
+  parts; info panel links part ↔ whole), shortcuts
   (`/ Esc F I H R P ⇧P Q ?`).
 - **Quiz:** find (click in 3D; muscles auto-hidden for non-muscle targets;
   peel/restore buttons and P/⇧P to reach deep structures — layers reset per
@@ -119,8 +123,8 @@ All verified by `npm run e2e:smoke` against a production build.
    region once more than two regions exist.
 4. **Hebrew names** for the most-studied upper-limb structures — ideally from
    her course's term list; add to curated concepts + `docs/CONTENT_REVIEW.md`.
-5. **Muscle heads as sub-structures** (biceps long/short, triceps heads) via
-   `parentId`, selectable in a "parts" mode.
+5. ~~Muscle heads as sub-structures~~ — done (52 parts); quizzing on parts
+   is a possible follow-up.
 6. Custom study lists (§27), progress export/import, first-run tutorial,
    origins/insertions mode (Z-Anatomy ships attachment patches).
 
@@ -177,3 +181,6 @@ All verified by `npm run e2e:smoke` against a production build.
   Also: toolbar labels no longer wrap on phones.
 - **2026-10-05 · session 2 (cont.)** — Layer peeling merged to `main` via
   PR #2 (user asked); Vercel redeploys production from `main`.
+- **2026-10-05 · session 2 (cont.)** — Muscle parts as child structures
+  (`parentId`, `partMeshMap`); registry lists wholes only so scopes/counts/
+  quizzes are unchanged; parts toggle + whole↔part navigation.

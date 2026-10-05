@@ -46,6 +46,7 @@ export const he = {
     isolating: "מצב בידוד",
     peelLayer: "הסרת שכבה",
     restoreLayer: "החזרת שכבה",
+    pickParts: "חלקי שרירים",
   },
   search: {
     placeholder: "חיפוש מבנה…",
@@ -56,6 +57,8 @@ export const he = {
     focus: "מיקוד",
     isolate: "בידוד",
     hide: "הסתרה",
+    partOf: "חלק מתוך",
+    parts: "חלקים",
     unverified: "לא אומת",
     unverifiedHint: "התרגום טרם אומת מול מקור מוסמך",
     noDetails: "אין עדיין מידע מאומת על מבנה זה.",

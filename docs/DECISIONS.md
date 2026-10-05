@@ -214,3 +214,18 @@ lucide-react · Vitest 5 · Playwright 1.56 · gltf-transform 4.5.
   peels would leak between questions).
 - **Rejected:** tap-to-peel mode — hide (H / panel button) already covers
   removing one chosen structure.
+
+## 2026-10-05 — Muscle parts are child structures; wholes stay the unit of study
+
+- Z-Anatomy models many muscles as parts (heads of biceps/triceps, parts of
+  deltoid, trapezius, pectoralis major); until now they were merged into
+  whole muscles. Each part is now also its own structure with `parentId`.
+- `registry.structures` lists wholes only, so every existing consumer (quiz
+  scopes, legend counts, progress, region filters, peeling) keeps working on
+  whole muscles without changes; parts are reachable by id, search and the
+  info panel. Alternative — mapping meshes to parts and deriving wholes
+  everywhere — would have touched every consumer for little gain.
+- Clicking picks wholes by default (what an intro course asks); a toolbar
+  toggle switches to parts. Quizzes don't ask about parts yet and always
+  start with part picking off, so a click on a head still answers "find the
+  biceps".

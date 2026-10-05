@@ -61,3 +61,29 @@ describe("getStructureVisibility", () => {
     expect(getStructureVisibility("liver", "digestive", s)).toBe("hidden");
   });
 });
+
+describe("getStructureVisibility — parts of a whole", () => {
+  const of = (s: VisibilityState, part: string) =>
+    getStructureVisibility("biceps", "muscular", s, part);
+
+  it("hiding the whole or the part hides the part's mesh", () => {
+    expect(of(state({ hiddenStructureIds: new Set(["biceps"]) }), "long")).toBe(
+      "hidden",
+    );
+    expect(of(state({ hiddenStructureIds: new Set(["long"]) }), "long")).toBe(
+      "hidden",
+    );
+    expect(of(state({ hiddenStructureIds: new Set(["long"]) }), "short")).toBe(
+      "visible",
+    );
+  });
+
+  it("isolating a part ghosts the whole's other parts", () => {
+    const isolatingLong = state({ isolatedStructureId: "long" });
+    expect(of(isolatingLong, "long")).toBe("visible");
+    expect(of(isolatingLong, "short")).toBe("ghosted");
+    expect(of(state({ isolatedStructureId: "biceps" }), "short")).toBe(
+      "visible",
+    );
+  });
+});

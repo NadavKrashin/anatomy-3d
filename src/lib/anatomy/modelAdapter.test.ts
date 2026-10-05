@@ -62,3 +62,23 @@ describe("getSourceName", () => {
     ).toBe("demo_heart");
   });
 });
+
+describe("mesh map model adapter — parts", () => {
+  const whole = demoDataset.structures.find(
+    (s) => s.id === "biceps-brachii-left",
+  );
+  if (!whole) throw new Error("demo biceps missing");
+  const part = { ...whole, id: "long-head-left", parentId: whole.id };
+  const registry = createRegistry([...demoDataset.structures, part]);
+  const adapter = createMeshMapAdapter(
+    registry,
+    { LongHead: whole.id },
+    { LongHead: part.id },
+  );
+
+  it("resolves a part mesh to both its whole and its part", () => {
+    expect(adapter.getStructureForMesh("LongHead")?.id).toBe(whole.id);
+    expect(adapter.getPartForMesh("LongHead")?.id).toBe(part.id);
+    expect(adapter.getMeshesForStructure(part.id)).toEqual(["LongHead"]);
+  });
+});

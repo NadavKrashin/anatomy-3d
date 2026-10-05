@@ -5,6 +5,7 @@ import { useViewerStore } from "@/store/viewerStore";
 import { StructureActions } from "./structure/StructureActions";
 import { StructureDetails } from "./structure/StructureDetails";
 import { StructureHeader } from "./structure/StructureHeader";
+import { StructureRelations } from "./structure/StructureRelations";
 import { ViewerPanel } from "./ViewerPanel";
 
 /** Information about the selected structure. */
@@ -21,7 +22,8 @@ export function StructureInfoPanel() {
         onClose={() => useViewerStore.getState().select(null)}
       />
       <StructureActions structureId={structure.id} />
-      <div className="min-h-0 flex-1 overflow-y-auto px-5 py-4">
+      <div className="flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto px-5 py-4">
+        <StructureRelations structure={structure} />
         <StructureDetails structure={structure} />
       </div>
     </ViewerPanel>

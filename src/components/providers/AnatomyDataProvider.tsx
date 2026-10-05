@@ -34,7 +34,11 @@ export function AnatomyDataProvider({
     return {
       dataset,
       registry,
-      adapter: createMeshMapAdapter(registry, dataset.meshMap),
+      adapter: createMeshMapAdapter(
+        registry,
+        dataset.meshMap,
+        dataset.partMeshMap,
+      ),
       search: createStructureSearch(dataset.structures),
     };
   }, [dataset]);

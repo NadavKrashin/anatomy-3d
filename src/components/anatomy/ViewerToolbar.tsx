@@ -1,7 +1,14 @@
 "use client";
 
 import { clsx } from "clsx";
-import { Eye, Keyboard, Layers, ListTree, RotateCcw } from "lucide-react";
+import {
+  Eye,
+  Keyboard,
+  Layers,
+  ListTree,
+  Puzzle,
+  RotateCcw,
+} from "lucide-react";
 import { IconButton } from "@/components/ui/IconButton";
 import { useMessages } from "@/hooks/useMessages";
 import { useViewerStore } from "@/store/viewerStore";
@@ -25,7 +32,9 @@ export function ViewerToolbar({
     (s) => s.hiddenStructureIds.size + s.hiddenSystems.size,
   );
   const isolating = useViewerStore((s) => s.isolatedStructureId !== null);
-  const { resetCamera, showAll, exitIsolate } = useViewerStore.getState();
+  const pickParts = useViewerStore((s) => s.pickParts);
+  const { resetCamera, showAll, exitIsolate, setPickParts } =
+    useViewerStore.getState();
 
   return (
     <div
@@ -49,6 +58,13 @@ export function ViewerToolbar({
         onClick={resetCamera}
       />
       <LayerControls />
+      <IconButton
+        showLabel="wide"
+        label={t.viewer.pickParts}
+        icon={<Puzzle />}
+        active={pickParts}
+        onClick={() => setPickParts(!pickParts)}
+      />
       {isolating && (
         <IconButton
           showLabel

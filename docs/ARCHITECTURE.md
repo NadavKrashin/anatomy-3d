@@ -72,7 +72,17 @@ ancestors are tried (multi-primitive meshes load as a group of meshes).
 - Display names are composed at runtime (`lib/anatomy/names.ts`): base name +
   localized side label, in the user's preferred term language with English
   fallback.
-- `AnatomyDataset` = `{ info, structures, meshMap }`. The app runs on
+- Parts: a structure with `parentId` is a part of a whole (a head of a
+  muscle). `meshMap` maps every mesh to its **whole** structure;
+  `partMeshMap` (optional) additionally maps part meshes to the part.
+  `registry.structures` / `bySystem` list **wholes only** (so scopes, counts,
+  quizzes and `showOnly` never see parts); `registry.get`, search and the
+  info panel include parts; `partsOf` / `wholeOf` relate them. The scene index
+  tags meshes with `userData.partId`, `getStructureVisibility(..., partId)`
+  applies hide/isolate of either the part or the whole, selection/hover match
+  either id, and clicks pick the part only when `viewerStore.pickParts` is on
+  (off on quiz start via `showOnly`).
+- `AnatomyDataset` = `{ info, structures, meshMap, partMeshMap? }`. The app runs on
   `data/anatomy/index.ts → activeDataset`, provided via
   `components/providers/AnatomyDataProvider.tsx` (registry, adapter, search
   are built once per dataset).
