@@ -5,6 +5,7 @@ import {
   type ManifestEntry,
 } from "./build";
 import { zAnatomyAttachments } from "./attachments";
+import { withCourseName } from "./courseNames";
 import manifest from "./manifest.json";
 
 /**
@@ -12,7 +13,12 @@ import manifest from "./manifest.json";
  * the muscles, nerves and vessels of both upper limbs (incl. pectoral,
  * axillary and scapular regions). Rebuild with scripts/anatomy/z-anatomy/README.md.
  */
-const built = buildZAnatomyDataset(manifest as ManifestEntry[]);
+const raw = buildZAnatomyDataset(manifest as ManifestEntry[]);
+// Names as her course writes them (docs/COURSE_SOURCE.md → "Course names").
+const built = {
+  ...raw,
+  structures: raw.structures.map((s) => withCourseName(s)),
+};
 const ids = new Set(built.structures.map((s) => s.id));
 
 export const zAnatomyDataset: AnatomyDataset = {

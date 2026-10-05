@@ -1,0 +1,361 @@
+{
+  "about": "Hebrew names as her course writes them (https://medintzfat.com/anatomy/), hand-picked from data/course/medintzfat/hebrew-term-candidates.json and the page text; ids are side-less structure ids. The course mostly uses English names, so only these structures have a course Hebrew name. Unverified until reviewed (docs/CONTENT_REVIEW.md).",
+  "names": [
+    {
+      "id": "pectoralis-major-muscle",
+      "he": "שְׁרִיר הֶחָזֶה הַגָּדוֹל",
+      "source": "https://medintzfat.com/anatomy/class6"
+    },
+    {
+      "id": "pectoralis-minor-muscle",
+      "he": "החזה הקטן",
+      "source": "https://medintzfat.com/anatomy/class6"
+    },
+    {
+      "id": "spinal-cord",
+      "he": "חוט השדרה",
+      "source": "https://medintzfat.com/anatomy/class1"
+    },
+    {
+      "id": "aortic-arch",
+      "he": "קשת האאורטה",
+      "source": "https://medintzfat.com/anatomy/lab2"
+    },
+    {
+      "id": "auditory-tube",
+      "he": "חצוצרת השמע",
+      "source": "https://medintzfat.com/anatomy/ear"
+    },
+    {
+      "id": "bile-duct",
+      "he": "צינור המרה",
+      "source": "https://medintzfat.com/anatomy/lab5"
+    },
+    {
+      "id": "calcaneus",
+      "he": "עצם הקלקנאוס",
+      "source": "https://medintzfat.com/anatomy/lower-limb-part5"
+    },
+    {
+      "id": "clavicle",
+      "he": "עצם הבריח",
+      "source": "https://medintzfat.com/anatomy/class5"
+    },
+    {
+      "id": "coccyx",
+      "he": "עצם הזנב",
+      "source": "https://medintzfat.com/anatomy/lab6"
+    },
+    {
+      "id": "coracobrachialis-muscle",
+      "he": "קורקו ברכיאלי",
+      "source": "https://medintzfat.com/anatomy/class6"
+    },
+    {
+      "id": "diaphragm",
+      "he": "סרעפת",
+      "source": "https://medintzfat.com/anatomy/respiratory-system"
+    },
+    {
+      "id": "small-intestine",
+      "he": "מעי דק",
+      "source": "https://medintzfat.com/anatomy/abdominal-imaging"
+    },
+    {
+      "id": "duodenum",
+      "he": "תריסריון",
+      "source": "https://medintzfat.com/anatomy/labs-semester-b"
+    },
+    {
+      "id": "ejaculatory-duct",
+      "he": "צינור השפיכה",
+      "source": "https://medintzfat.com/anatomy/lab6"
+    },
+    {
+      "id": "epididymis",
+      "he": "יותרת האשך",
+      "source": "https://medintzfat.com/anatomy/lab3"
+    },
+    {
+      "id": "ethmoid-bone",
+      "he": "עצם האתמואיד",
+      "source": "https://medintzfat.com/anatomy/skull-cranial-nerves"
+    },
+    {
+      "id": "external-intercostal-muscles",
+      "he": "בין צלעי חיצוני",
+      "source": "https://medintzfat.com/anatomy/thorax-part1"
+    },
+    {
+      "id": "femur",
+      "he": "עצם הירך",
+      "source": "https://medintzfat.com/anatomy/lab7"
+    },
+    {
+      "id": "frontal-bone",
+      "he": "העצם הפרונטלית",
+      "source": "https://medintzfat.com/anatomy/skull-cranial-nerves"
+    },
+    {
+      "id": "gallbladder",
+      "he": "כיס המרה",
+      "source": "https://medintzfat.com/anatomy/lab4"
+    },
+    {
+      "id": "hepatic-portal-vein",
+      "he": "הווריד הפורטלי",
+      "source": "https://medintzfat.com/anatomy/lab5"
+    },
+    {
+      "id": "erector-spinae",
+      "he": "זוקפי הגב",
+      "source": "https://medintzfat.com/anatomy/back-and-spine"
+    },
+    {
+      "id": "inguinal-ligament",
+      "he": "רצועת המפשעה",
+      "source": "https://medintzfat.com/anatomy/lab3"
+    },
+    {
+      "id": "internal-intercostal-muscles",
+      "he": "בין צלעי פנימי",
+      "source": "https://medintzfat.com/anatomy/thorax-part1"
+    },
+    {
+      "id": "internal-thoracic-artery",
+      "he": "עורק החזה הפנימי",
+      "source": "https://medintzfat.com/anatomy/thorax-part1"
+    },
+    {
+      "id": "lacrimal-bone",
+      "he": "עצם הדמעות",
+      "source": "https://medintzfat.com/anatomy/skull-cranial-nerves"
+    },
+    {
+      "id": "triceps-brachii-muscle",
+      "he": "תלת ראשי",
+      "source": "https://medintzfat.com/anatomy/class6"
+    },
+    {
+      "id": "renal-artery",
+      "he": "עורק הכליה",
+      "source": "https://medintzfat.com/anatomy/lab6"
+    },
+    {
+      "id": "levator-scapulae",
+      "he": "מֵרִים הַשֶּׁכֶם",
+      "source": "https://medintzfat.com/anatomy/class6"
+    },
+    {
+      "id": "linea-alba",
+      "he": "הקו הלבן",
+      "source": "https://medintzfat.com/anatomy/lab3"
+    },
+    {
+      "id": "liver",
+      "he": "כבד",
+      "source": "https://medintzfat.com/anatomy/abdominal-imaging"
+    },
+    {
+      "id": "biceps-brachii-muscle",
+      "he": "הַשְּׁרִיר הַדוּ-רֹאשִׁי",
+      "source": "https://medintzfat.com/anatomy/class6"
+    },
+    {
+      "id": "long-thoracic-nerve",
+      "he": "עצב ארוך חזה",
+      "source": "https://medintzfat.com/anatomy/class6"
+    },
+    {
+      "id": "mandible",
+      "he": "הלסת התחתונה",
+      "source": "https://medintzfat.com/anatomy/skull-cranial-nerves",
+      "aliases": ["המנדיבולה"]
+    },
+    {
+      "id": "median-nerve",
+      "he": "עצב מדיאני",
+      "source": "https://medintzfat.com/anatomy/class7"
+    },
+    {
+      "id": "adductor-pollicis",
+      "he": "מקרב האגודל",
+      "source": "https://medintzfat.com/anatomy/lab1"
+    },
+    {
+      "id": "occipital-bone",
+      "he": "עצם העורף",
+      "source": "https://medintzfat.com/anatomy/skull-cranial-nerves"
+    },
+    {
+      "id": "oesophagus",
+      "he": "ושט",
+      "source": "https://medintzfat.com/anatomy/thorax-part2"
+    },
+    {
+      "id": "pancreas",
+      "he": "לבלב",
+      "source": "https://medintzfat.com/anatomy/quiz-abdomen"
+    },
+    {
+      "id": "patella",
+      "he": "פיקה",
+      "source": "https://medintzfat.com/anatomy/lab7"
+    },
+    {
+      "id": "platysma",
+      "he": "פלטיזמה",
+      "source": "https://medintzfat.com/anatomy/neck"
+    },
+    {
+      "id": "pudendal-nerve",
+      "he": "העצב הפודנדלי",
+      "source": "https://medintzfat.com/anatomy/pelvis-male"
+    },
+    {
+      "id": "quadriceps-femoris-muscle",
+      "he": "הארבע ראשי",
+      "source": "https://medintzfat.com/anatomy/lower-limb-part2"
+    },
+    {
+      "id": "sacrum",
+      "he": "עצם העצה",
+      "source": "https://medintzfat.com/anatomy/pelvis"
+    },
+    {
+      "id": "sartorius-muscle",
+      "he": "שריר החייטים",
+      "source": "https://medintzfat.com/anatomy/lower-limb-part1"
+    },
+    {
+      "id": "scapula",
+      "he": "עצם השכמה",
+      "source": "https://medintzfat.com/anatomy/lab1"
+    },
+    {
+      "id": "sphenoid-bone",
+      "he": "עצם הספנואיד",
+      "source": "https://medintzfat.com/anatomy/skull-cranial-nerves"
+    },
+    {
+      "id": "spleen",
+      "he": "טחול",
+      "source": "https://medintzfat.com/anatomy/labs-semester-b"
+    },
+    {
+      "id": "stomach",
+      "he": "קיבה",
+      "source": "https://medintzfat.com/anatomy/quiz-abdomen"
+    },
+    {
+      "id": "sympathetic-trunk",
+      "he": "השרשרת הסימפתטית",
+      "source": "https://medintzfat.com/anatomy/lab2"
+    },
+    {
+      "id": "talus",
+      "he": "עצם הטלוס",
+      "source": "https://medintzfat.com/anatomy/lower-limb-part5"
+    },
+    {
+      "id": "temporal-bone",
+      "he": "העצם הטמפורלית",
+      "source": "https://medintzfat.com/anatomy/lab9"
+    },
+    {
+      "id": "teres-major-muscle",
+      "he": "הַשְּׁרִיר הֶעָגֹל הַגָּדוֹל",
+      "source": "https://medintzfat.com/anatomy/class6"
+    },
+    {
+      "id": "teres-minor-muscle",
+      "he": "הַשְּׁרִיר הֶעָגֹל הַקָּטָן",
+      "source": "https://medintzfat.com/anatomy/class6"
+    },
+    {
+      "id": "thalamus",
+      "he": "תלמוס",
+      "source": "https://medintzfat.com/anatomy/class1"
+    },
+    {
+      "id": "thyroid-gland",
+      "he": "בלוטת התריס",
+      "source": "https://medintzfat.com/anatomy/lab9"
+    },
+    {
+      "id": "trachea",
+      "he": "טרכיאה",
+      "source": "https://medintzfat.com/anatomy/thorax-part2"
+    },
+    {
+      "id": "transverse-colon",
+      "he": "מעי גס חוצה",
+      "source": "https://medintzfat.com/anatomy/quiz-abdomen"
+    },
+    {
+      "id": "tympanic-membrane",
+      "he": "עור התוף",
+      "source": "https://medintzfat.com/anatomy/ear"
+    },
+    {
+      "id": "ureter",
+      "he": "צינור הכליה",
+      "source": "https://medintzfat.com/anatomy/pelvis"
+    },
+    {
+      "id": "vagus-nerve-x",
+      "he": "עצב הוואגוס",
+      "source": "https://medintzfat.com/anatomy/thorax-autonomic-innervation"
+    },
+    {
+      "id": "vermiform-appendix",
+      "he": "תוספתן",
+      "source": "https://medintzfat.com/anatomy/abdominal-organs"
+    },
+    {
+      "id": "xiphoid-process",
+      "he": "זיז החרב",
+      "source": "https://medintzfat.com/anatomy/thorax-part1"
+    },
+    {
+      "id": "ulnar-nerve",
+      "he": "העצב האולנרי",
+      "source": "https://medintzfat.com/anatomy/class8"
+    },
+    {
+      "id": "radial-nerve",
+      "he": "העצב הרדיאלי",
+      "source": "https://medintzfat.com/anatomy/class8"
+    },
+    {
+      "id": "radius",
+      "he": "רדיוס",
+      "source": "https://medintzfat.com/anatomy/class3"
+    },
+    {
+      "id": "ulna",
+      "he": "אולנה",
+      "source": "https://medintzfat.com/anatomy/class8"
+    },
+    {
+      "id": "humerus",
+      "he": "עצם הזרוע",
+      "source": "https://medintzfat.com/anatomy/class5"
+    },
+    {
+      "id": "heart",
+      "he": "לב",
+      "source": "https://medintzfat.com/anatomy/xray-ct-basics"
+    },
+    {
+      "id": "lung",
+      "he": "ריאה",
+      "source": "https://medintzfat.com/anatomy/lab2"
+    },
+    {
+      "id": "pharynx",
+      "he": "לוע",
+      "source": "https://medintzfat.com/anatomy/labs-semester-b"
+    }
+  ]
+}

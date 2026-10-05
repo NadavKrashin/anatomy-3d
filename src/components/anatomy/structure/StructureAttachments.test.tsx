@@ -60,7 +60,7 @@ describe("<StructureAttachments> (in the info panel)", () => {
       screen.getByRole("heading", { name: "Muscles attached to this bone" }),
     ).toBeTruthy();
     expect(
-      screen.getByRole("button", { name: "Brachialis muscle (left)" }),
+      screen.getByRole("button", { name: "Brachialis (left)" }),
     ).toBeTruthy();
   });
 });

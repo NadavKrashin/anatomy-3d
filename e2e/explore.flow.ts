@@ -168,11 +168,11 @@ export async function exploreFlow(browser: Browser, errors: string[]) {
   await desktop.keyboard.press("Enter");
   await desktop.waitForTimeout(900);
   assert(
-    (await infoTitle(desktop))?.includes("Long head of biceps brachii"),
+    (await infoTitle(desktop))?.includes("Long head of biceps"),
     "search finds a muscle part (long head of biceps)",
   );
   await desktop.screenshot({ path: `${SHOTS}/muscle-part.png` });
-  await desktop.getByRole("button", { name: /^Biceps brachii muscle/ }).click();
+  await desktop.getByRole("button", { name: /^Biceps brachii/ }).click();
   assert(
     (await desktop.getByRole("heading", { name: "Parts" }).count()) === 1,
     "a part links to its whole muscle, which lists its parts",

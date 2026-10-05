@@ -22,7 +22,7 @@ describe("<StructureRelations> (in the info panel)", () => {
         .getAllByRole("button")
         .map((b) => b.textContent),
     ).toEqual([
-      "Long head of biceps brachii (left)",
+      "Long head of biceps (left)",
       "Short head of biceps brachii (left)",
     ]);
 
@@ -31,7 +31,7 @@ describe("<StructureRelations> (in the info panel)", () => {
       "long-head-of-biceps-brachii-left",
     );
     await user.click(
-      screen.getByRole("button", { name: /^Biceps brachii muscle \(left\)/ }),
+      screen.getByRole("button", { name: /^Biceps brachii \(left\)/ }),
     );
     expect(useViewerStore.getState().selectedStructureId).toBe(
       "biceps-brachii-muscle-left",

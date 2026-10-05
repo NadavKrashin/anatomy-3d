@@ -1,0 +1,3075 @@
+{
+  "abdominal-aorta": {
+    "en": "Abdominal aorta",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 31
+  },
+  "abducens-nerve-vi": {
+    "en": "Abducens nerve",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 4,
+    "aliases": ["Abducent nerve"]
+  },
+  "abductor-hallucis": {
+    "en": "Abductor hallucis",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part5",
+    "uses": 11
+  },
+  "abductor-pollicis-brevis": {
+    "en": "Abductor pollicis brevis",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 9
+  },
+  "abductor-pollicis-longus": {
+    "en": "Abductor pollicis longus",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 14
+  },
+  "accessory-hemi-azygos-vein": {
+    "en": "Accessory hemiazygos vein",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 1
+  },
+  "accessory-nerve-xi": {
+    "en": "Accessory nerve",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 12
+  },
+  "accessory-pancreatic-duct": {
+    "en": "Accessory pancreatic duct",
+    "source": "https://medintzfat.com/anatomy/abdominal-organs",
+    "uses": 2
+  },
+  "acetabular-labrum": {
+    "en": "Acetabular labrum",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 4
+  },
+  "adductor-brevis": {
+    "en": "Adductor brevis",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 16
+  },
+  "adductor-hallucis": {
+    "en": "Adductor hallucis",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part5",
+    "uses": 6
+  },
+  "adductor-longus": {
+    "en": "Adductor longus",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 39
+  },
+  "adductor-magnus": {
+    "en": "Adductor magnus",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 49
+  },
+  "adductor-pollicis": {
+    "en": "Adductor pollicis",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 11,
+    "he": "מקרב האגודל",
+    "heSource": "https://medintzfat.com/anatomy/lab1"
+  },
+  "anconeus-muscle": {
+    "en": "Anconeus",
+    "source": "https://medintzfat.com/anatomy/class8",
+    "uses": 4
+  },
+  "angular-artery": {
+    "en": "Angular artery",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 1
+  },
+  "annular-ligament-of-radius": {
+    "en": "Annular ligament",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 12
+  },
+  "anterior-belly-of-digastric-muscle": {
+    "en": "Anterior belly of digastric",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 22
+  },
+  "anterior-branch-of-obturator-nerve": {
+    "en": "Anterior branch of obturator nerve",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 2
+  },
+  "anterior-cerebral-artery": {
+    "en": "Anterior cerebral artery",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 2
+  },
+  "anterior-circumflex-humeral-artery": {
+    "en": "Anterior circumflex humeral artery",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 2
+  },
+  "anterior-cruciate-ligament": {
+    "en": "Anterior cruciate ligament",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 14
+  },
+  "anterior-division-of-internal-iliac-artery": {
+    "en": "Anterior division of internal iliac artery",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 1
+  },
+  "anterior-ethmoidal-artery": {
+    "en": "Anterior ethmoidal artery",
+    "source": "https://medintzfat.com/anatomy/nasal-cavity",
+    "uses": 1
+  },
+  "anterior-inferior-pancreaticoduodenal-artery": {
+    "en": "Anterior inferior pancreaticoduodenal artery",
+    "source": "https://medintzfat.com/anatomy/abdominal-organs",
+    "uses": 2
+  },
+  "anterior-interventricular-artery": {
+    "en": "Anterior interventricular artery",
+    "source": "https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01",
+    "uses": 4
+  },
+  "anterior-jugular-vein": {
+    "en": "Anterior jugular vein",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 5
+  },
+  "anterior-longitudinal-ligament": {
+    "en": "Anterior longitudinal ligament",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 9
+  },
+  "anterior-papillary-muscle-of-right-ventricle": {
+    "en": "Anterior papillary muscle of right ventricle",
+    "source": "https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01",
+    "uses": 1
+  },
+  "anterior-sacro-iliac-ligament": {
+    "en": "Anterior sacroiliac ligament",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part1",
+    "uses": 3
+  },
+  "anterior-spinal-artery": {
+    "en": "Anterior spinal artery",
+    "source": "https://medintzfat.com/anatomy/back-and-spine",
+    "uses": 2
+  },
+  "anterior-talofibular-ligament": {
+    "en": "Anterior talofibular ligament",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 7
+  },
+  "anterior-tibial-artery": {
+    "en": "Anterior tibial artery",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 32
+  },
+  "aortic-arch": {
+    "en": "Aortic arch",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 8,
+    "he": "קשת האאורטה",
+    "heSource": "https://medintzfat.com/anatomy/lab2"
+  },
+  "appendicular-artery": {
+    "en": "Appendicular artery",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 5
+  },
+  "arcuate-popliteal-ligament": {
+    "en": "Arcuate popliteal ligament",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part4",
+    "uses": 1
+  },
+  "arytenoid-cartilage": {
+    "en": "Arytenoid cartilage",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 14
+  },
+  "ascending-aorta": {
+    "en": "Ascending aorta",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 3
+  },
+  "ascending-colon": {
+    "en": "Ascending colon",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 31
+  },
+  "ascending-pharyngeal-artery": {
+    "en": "Ascending pharyngeal artery",
+    "source": "https://medintzfat.com/anatomy/neck",
+    "uses": 6
+  },
+  "atlas-c1": {
+    "en": "Atlas",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 17
+  },
+  "auditory-tube": {
+    "en": "Auditory tube",
+    "source": "https://medintzfat.com/anatomy/nasal-cavity",
+    "uses": 13,
+    "he": "חצוצרת השמע",
+    "heSource": "https://medintzfat.com/anatomy/ear"
+  },
+  "axillary-artery": {
+    "en": "Axillary artery",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 34
+  },
+  "axillary-nerve": {
+    "en": "Axillary nerve",
+    "source": "https://medintzfat.com/anatomy/class6",
+    "uses": 29
+  },
+  "axillary-vein": {
+    "en": "Axillary vein",
+    "source": "https://medintzfat.com/anatomy/class7",
+    "uses": 11
+  },
+  "axis-c2": {
+    "en": "Axis",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 15
+  },
+  "azygos-vein": {
+    "en": "Azygos vein",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 17
+  },
+  "basilar-artery": {
+    "en": "Basilar artery",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 4
+  },
+  "basilic-vein": {
+    "en": "Basilic vein",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 12
+  },
+  "biceps-brachii-muscle": {
+    "en": "Biceps brachii",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 17,
+    "he": "הַשְּׁרִיר הַדוּ-רֹאשִׁי",
+    "heSource": "https://medintzfat.com/anatomy/class6"
+  },
+  "biceps-femoris-muscle": {
+    "en": "Biceps femoris",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 30
+  },
+  "bile-duct": {
+    "en": "Bile duct",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 12,
+    "he": "צינור המרה",
+    "heSource": "https://medintzfat.com/anatomy/lab5"
+  },
+  "body-of-sternum": {
+    "en": "Body of sternum",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 6
+  },
+  "brachial-artery": {
+    "en": "Brachial artery",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 27
+  },
+  "brachial-veins": {
+    "en": "Brachial veins",
+    "source": "https://medintzfat.com/anatomy/class7",
+    "uses": 8
+  },
+  "brachialis-muscle": {
+    "en": "Brachialis",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 21
+  },
+  "brachiocephalic-trunk": {
+    "en": "Brachiocephalic trunk",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 18
+  },
+  "brachiocephalic-vein": {
+    "en": "Brachiocephalic vein",
+    "source": "https://medintzfat.com/anatomy/thorax-part2",
+    "uses": 7
+  },
+  "brachioradialis-muscle": {
+    "en": "Brachioradialis",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 19
+  },
+  "buccal-nerve": {
+    "en": "Buccal nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 14
+  },
+  "bucinator": {
+    "en": "Buccinator",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 50
+  },
+  "calcaneal-tendon": {
+    "en": "Calcaneal tendon",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 2
+  },
+  "calcaneofibular-ligament": {
+    "en": "Calcaneofibular ligament",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 2
+  },
+  "calcaneonavicular-ligament": {
+    "en": "Calcaneonavicular ligament",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 1
+  },
+  "calcaneus": {
+    "en": "Calcaneus",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 37,
+    "he": "עצם הקלקנאוס",
+    "heSource": "https://medintzfat.com/anatomy/lower-limb-part5"
+  },
+  "capitate-bone": {
+    "en": "Capitate",
+    "source": "https://medintzfat.com/anatomy/class9",
+    "uses": 2
+  },
+  "cauda-equina": {
+    "en": "Cauda equina",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 15
+  },
+  "cavernous-sinus": {
+    "en": "Cavernous sinus",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 7
+  },
+  "central-retinal-artery": {
+    "en": "Central retinal artery",
+    "source": "https://medintzfat.com/anatomy/eye",
+    "uses": 2
+  },
+  "cephalic-vein": {
+    "en": "Cephalic vein",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 14
+  },
+  "cerebellum": {
+    "en": "Cerebellum",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 3
+  },
+  "chorda-tympani": {
+    "en": "Chorda tympani",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 25
+  },
+  "circumflex-scapular-artery": {
+    "en": "Circumflex scapular artery",
+    "source": "https://medintzfat.com/anatomy/class7",
+    "uses": 2
+  },
+  "clavicle": {
+    "en": "Clavicle",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 26,
+    "he": "עצם הבריח",
+    "heSource": "https://medintzfat.com/anatomy/class5"
+  },
+  "coccygeus-muscle": {
+    "en": "Coccygeus",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 19
+  },
+  "coccyx": {
+    "en": "Coccyx",
+    "source": "https://medintzfat.com/anatomy/back-and-spine",
+    "uses": 17,
+    "he": "עצם הזנב",
+    "heSource": "https://medintzfat.com/anatomy/lab6"
+  },
+  "coeliac-nodes": {
+    "en": "Celiac nodes",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 3
+  },
+  "coeliac-trunk": {
+    "en": "Celiac trunk",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 60
+  },
+  "colic-artery-left": {
+    "aliases": ["Left colic artery"],
+    "source": "https://medintzfat.com/anatomy/labs-semester-b"
+  },
+  "colic-artery-right": {
+    "aliases": ["Right colic artery"],
+    "source": "https://medintzfat.com/anatomy/labs-semester-b"
+  },
+  "common-carotid-artery": {
+    "en": "Common carotid artery",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 11
+  },
+  "common-fibular-nerve": {
+    "en": "Common fibular nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 49
+  },
+  "common-hepatic-artery": {
+    "en": "Common hepatic artery",
+    "source": "https://medintzfat.com/anatomy/abdominal-imaging",
+    "uses": 15
+  },
+  "common-iliac-artery": {
+    "en": "Common iliac artery",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 8
+  },
+  "common-iliac-vein": {
+    "en": "Common iliac vein",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part3",
+    "uses": 1
+  },
+  "common-interosseous-artery": {
+    "en": "Common interosseous artery",
+    "source": "https://medintzfat.com/anatomy/class9",
+    "uses": 1
+  },
+  "common-palmar-digital-arteries": {
+    "en": "Common palmar digital arteries",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 1
+  },
+  "common-tendinous-ring": {
+    "en": "Common tendinous ring",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 6
+  },
+  "conoid-ligament": {
+    "en": "Conoid ligament",
+    "source": "https://medintzfat.com/anatomy/class5",
+    "uses": 1
+  },
+  "coraco-acromial-ligament": {
+    "en": "Coracoacromial ligament",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 3
+  },
+  "coracobrachialis-muscle": {
+    "en": "Coracobrachialis",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 20,
+    "he": "קורקו ברכיאלי",
+    "heSource": "https://medintzfat.com/anatomy/class6"
+  },
+  "coracohumeral-ligament": {
+    "en": "Coracohumeral ligament",
+    "source": "https://medintzfat.com/anatomy/class5",
+    "uses": 1
+  },
+  "cornea": {
+    "en": "Cornea",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 16
+  },
+  "corniculate-cartilage": {
+    "en": "Corniculate cartilage",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 9
+  },
+  "coronary-artery-left": {
+    "aliases": ["Left coronary artery"],
+    "source": "https://medintzfat.com/anatomy/thorax-part3"
+  },
+  "coronary-artery-right": {
+    "aliases": ["Right coronary artery"],
+    "source": "https://medintzfat.com/anatomy/thorax-part3"
+  },
+  "coronary-sinus": {
+    "en": "Coronary sinus",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 12
+  },
+  "corpus-spongiosum-of-penis": {
+    "en": "Corpus spongiosum",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 20
+  },
+  "corrugator-supercilii": {
+    "en": "Corrugator supercilii",
+    "source": "https://medintzfat.com/anatomy/face-mastication",
+    "uses": 2
+  },
+  "costoclavicular-ligament": {
+    "en": "Costoclavicular ligament",
+    "source": "https://medintzfat.com/anatomy/class5",
+    "uses": 1
+  },
+  "cricoid-cartilage": {
+    "en": "Cricoid cartilage",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 39
+  },
+  "cricothyroid-muscle": {
+    "en": "Cricothyroid",
+    "source": "https://medintzfat.com/anatomy/throat",
+    "uses": 9
+  },
+  "cubital-nodes": {
+    "en": "Cubital nodes",
+    "source": "https://medintzfat.com/anatomy/class7",
+    "uses": 1
+  },
+  "cuboid-bone": {
+    "en": "Cuboid",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part5",
+    "uses": 23
+  },
+  "deep-artery-of-penis": {
+    "en": "Deep artery of the penis",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 3
+  },
+  "deep-brachial-artery": {
+    "en": "Deep brachial artery",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 21
+  },
+  "deep-branch-of-radial-nerve": {
+    "en": "Deep branch of radial nerve",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 2
+  },
+  "deep-dorsal-vein-of-penis": {
+    "en": "Deep dorsal vein of penis",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 1
+  },
+  "deep-femoral-artery": {
+    "en": "Deep femoral artery",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 21,
+    "aliases": ["Profunda femoris artery"]
+  },
+  "deep-fibular-nerve": {
+    "en": "Deep fibular nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 45
+  },
+  "deep-palmar-arch": {
+    "en": "Deep palmar arch",
+    "source": "https://medintzfat.com/anatomy/class9",
+    "uses": 2
+  },
+  "deltoid-muscle": {
+    "en": "Deltoid",
+    "source": "https://medintzfat.com/anatomy/class6",
+    "uses": 30
+  },
+  "depressor-anguli-oris": {
+    "en": "Depressor anguli oris",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 13
+  },
+  "depressor-labii-inferioris": {
+    "en": "Depressor labii inferioris",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 5
+  },
+  "descending-colon": {
+    "en": "Descending colon",
+    "source": "https://medintzfat.com/anatomy/abdominal-imaging",
+    "uses": 27
+  },
+  "diaphragm": {
+    "en": "Diaphragm",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 12,
+    "he": "סרעפת",
+    "heSource": "https://medintzfat.com/anatomy/respiratory-system"
+  },
+  "digastric-muscle": {
+    "en": "Digastric",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 28
+  },
+  "dorsal-branch-of-ulnar-nerve": {
+    "en": "Dorsal branch of ulnar nerve",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 1
+  },
+  "dorsal-scapular-nerve": {
+    "en": "Dorsal scapular nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 11
+  },
+  "dorsalis-pedis-artery": {
+    "en": "Dorsalis pedis artery",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 11
+  },
+  "ductus-deferens": {
+    "en": "Ductus deferens",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 45,
+    "aliases": ["Vas deferens"]
+  },
+  "duodenum": {
+    "en": "Duodenum",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 14,
+    "he": "תריסריון",
+    "heSource": "https://medintzfat.com/anatomy/labs-semester-b"
+  },
+  "ejaculatory-duct": {
+    "en": "Ejaculatory duct",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 27,
+    "he": "צינור השפיכה",
+    "heSource": "https://medintzfat.com/anatomy/lab6"
+  },
+  "epididymis": {
+    "en": "Epididymis",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 25,
+    "he": "יותרת האשך",
+    "heSource": "https://medintzfat.com/anatomy/lab3"
+  },
+  "epiglottis": {
+    "en": "Epiglottis",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 38
+  },
+  "erector-spinae": {
+    "en": "Erector spinae",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 21,
+    "he": "זוקפי הגב",
+    "heSource": "https://medintzfat.com/anatomy/back-and-spine"
+  },
+  "ethmoid-bone": {
+    "en": "Ethmoid",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 36,
+    "he": "עצם האתמואיד",
+    "heSource": "https://medintzfat.com/anatomy/skull-cranial-nerves"
+  },
+  "extensor-carpi-radialis-brevis": {
+    "en": "Extensor carpi radialis brevis",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 4
+  },
+  "extensor-carpi-radialis-longus": {
+    "en": "Extensor carpi radialis longus",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 12
+  },
+  "extensor-carpi-ulnaris": {
+    "en": "Extensor carpi ulnaris",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 7
+  },
+  "extensor-digiti-minimi": {
+    "en": "Extensor digiti minimi",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 4
+  },
+  "extensor-digitorum": {
+    "en": "Extensor digitorum",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 11
+  },
+  "extensor-digitorum-brevis": {
+    "en": "Extensor digitorum brevis",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 9
+  },
+  "extensor-digitorum-longus": {
+    "en": "Extensor digitorum longus",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 25
+  },
+  "extensor-hallucis-brevis": {
+    "en": "Extensor hallucis brevis",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part5",
+    "uses": 4
+  },
+  "extensor-hallucis-longus": {
+    "en": "Extensor hallucis longus",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 14
+  },
+  "extensor-indicis": {
+    "en": "Extensor indicis",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 8
+  },
+  "extensor-pollicis-brevis": {
+    "en": "Extensor pollicis brevis",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 10
+  },
+  "extensor-pollicis-longus": {
+    "en": "Extensor pollicis longus",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 14
+  },
+  "external-abdominal-oblique-muscle": {
+    "en": "External abdominal oblique",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 7
+  },
+  "external-anal-sphincter": {
+    "en": "External anal sphincter",
+    "source": "https://medintzfat.com/anatomy/lab6",
+    "uses": 2
+  },
+  "external-carotid-artery": {
+    "en": "External carotid artery",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 26
+  },
+  "external-iliac-artery": {
+    "en": "External iliac artery",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 15
+  },
+  "external-iliac-vein": {
+    "en": "External iliac vein",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part3",
+    "uses": 3
+  },
+  "external-intercostal-membrane": {
+    "en": "External intercostal membrane",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 6
+  },
+  "external-intercostal-muscles": {
+    "en": "External intercostals",
+    "source": "https://medintzfat.com/anatomy/abdominal-wall",
+    "uses": 1,
+    "he": "בין צלעי חיצוני",
+    "heSource": "https://medintzfat.com/anatomy/thorax-part1"
+  },
+  "external-jugular-vein": {
+    "en": "External jugular vein",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 12
+  },
+  "facial-artery": {
+    "en": "Facial artery",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 30
+  },
+  "facial-nerve-vii": {
+    "en": "Facial nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 100,
+    "aliases": ["Facial nerve - VII"]
+  },
+  "facial-vein": {
+    "en": "Facial vein",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 4
+  },
+  "falx-cerebri": {
+    "en": "Falx cerebri",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 5
+  },
+  "femoral-artery": {
+    "en": "Femoral artery",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 59
+  },
+  "femoral-nerve": {
+    "en": "Femoral nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 111
+  },
+  "femoral-vein": {
+    "en": "Femoral vein",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 50
+  },
+  "femur": {
+    "en": "Femur",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 100,
+    "he": "עצם הירך",
+    "heSource": "https://medintzfat.com/anatomy/lab7"
+  },
+  "fibula": {
+    "en": "Fibula",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 54
+  },
+  "fibular-artery": {
+    "en": "Fibular artery",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 12
+  },
+  "fibular-collateral-ligament": {
+    "en": "Fibular collateral ligament",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 2
+  },
+  "fibularis-brevis-muscle": {
+    "en": "Fibularis brevis",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 34
+  },
+  "fibularis-longus-muscle": {
+    "en": "Fibularis longus",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 38
+  },
+  "fibularis-tertius-muscle": {
+    "en": "Fibularis tertius",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 25
+  },
+  "first-metatarsal-bone": {
+    "en": "First metatarsal",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 3
+  },
+  "flexor-carpi-radialis": {
+    "en": "Flexor carpi radialis",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 10
+  },
+  "flexor-carpi-ulnaris": {
+    "en": "Flexor carpi ulnaris",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 19
+  },
+  "flexor-digitorum-brevis": {
+    "en": "Flexor digitorum brevis",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 18
+  },
+  "flexor-digitorum-longus": {
+    "en": "Flexor digitorum longus",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 26
+  },
+  "flexor-digitorum-profundus": {
+    "en": "Flexor digitorum profundus",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 16
+  },
+  "flexor-digitorum-superficialis": {
+    "en": "Flexor digitorum superficialis",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 7
+  },
+  "flexor-hallucis-longus": {
+    "en": "Flexor hallucis longus",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 32
+  },
+  "flexor-pollicis-brevis": {
+    "en": "Flexor pollicis brevis",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 4
+  },
+  "flexor-pollicis-longus": {
+    "en": "Flexor pollicis longus",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 12
+  },
+  "fornix": {
+    "en": "Fornix",
+    "source": "https://medintzfat.com/anatomy/lab6",
+    "uses": 2
+  },
+  "free-taenia": {
+    "en": "Free taenia",
+    "source": "https://medintzfat.com/anatomy/lab5",
+    "uses": 2
+  },
+  "frontal-bone": {
+    "en": "Frontal bone",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 29,
+    "he": "העצם הפרונטלית",
+    "heSource": "https://medintzfat.com/anatomy/skull-cranial-nerves"
+  },
+  "frontalis-muscle": {
+    "en": "Frontalis",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 10
+  },
+  "gallbladder": {
+    "en": "Gallbladder",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 15,
+    "he": "כיס המרה",
+    "heSource": "https://medintzfat.com/anatomy/lab4"
+  },
+  "gastric-artery-left": {
+    "aliases": ["Left gastric artery"],
+    "source": "https://medintzfat.com/anatomy/labs-semester-b"
+  },
+  "gastroduodenal-artery": {
+    "en": "Gastroduodenal artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 19
+  },
+  "genioglossus-muscle": {
+    "en": "Genioglossus",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 22
+  },
+  "geniohyoid-muscle": {
+    "en": "Geniohyoid",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 20
+  },
+  "genital-branch-of-genitofemoral-nerve": {
+    "en": "Genital branch of genitofemoral nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 3
+  },
+  "genitofemoral-nerve": {
+    "en": "Genitofemoral nerve",
+    "source": "https://medintzfat.com/anatomy/abdominal-innervation",
+    "uses": 14
+  },
+  "glans-penis": {
+    "en": "Glans penis",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 8
+  },
+  "glenoid-labrum": {
+    "en": "Glenoid labrum",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 1
+  },
+  "glossopharyngeal-nerve-ix": {
+    "en": "Glossopharyngeal nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 12
+  },
+  "gluteus-maximus-muscle": {
+    "en": "Gluteus maximus",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 78
+  },
+  "gluteus-medius-muscle": {
+    "en": "Gluteus medius",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 38
+  },
+  "gluteus-minimus-muscle": {
+    "en": "Gluteus minimus",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 18
+  },
+  "gracilis-muscle": {
+    "en": "Gracilis",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 35
+  },
+  "great-cardiac-vein": {
+    "en": "Great cardiac vein",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 5
+  },
+  "great-saphenous-vein": {
+    "en": "Great saphenous vein",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 37
+  },
+  "hamate-bone": {
+    "en": "Hamate",
+    "source": "https://medintzfat.com/anatomy/class9",
+    "uses": 7
+  },
+  "heart": {
+    "he": "לב",
+    "heSource": "https://medintzfat.com/anatomy/xray-ct-basics"
+  },
+  "hemi-azygos-vein": {
+    "en": "Hemiazygos vein",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 3
+  },
+  "hepatic-portal-vein": {
+    "en": "Hepatic portal vein",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 12,
+    "aliases": ["Portal vein"],
+    "he": "הווריד הפורטלי",
+    "heSource": "https://medintzfat.com/anatomy/lab5"
+  },
+  "hepatic-veins": {
+    "en": "Hepatic veins",
+    "source": "https://medintzfat.com/anatomy/abdominal-organs",
+    "uses": 12
+  },
+  "hip-bone": {
+    "en": "Hip bone",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part1",
+    "uses": 10
+  },
+  "humerus": {
+    "en": "Humerus",
+    "source": "https://medintzfat.com/anatomy/class6",
+    "uses": 36,
+    "he": "עצם הזרוע",
+    "heSource": "https://medintzfat.com/anatomy/class5"
+  },
+  "hyoglossus-muscle": {
+    "en": "Hyoglossus",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 28
+  },
+  "hyoid-bone": {
+    "en": "Hyoid",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 57
+  },
+  "hypoglossal-nerve-xii": {
+    "en": "Hypoglossal nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 38,
+    "aliases": ["Hypoglossal nerve - XII"]
+  },
+  "hypophysis": {
+    "en": "Hypophysis",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 3
+  },
+  "ileocolic-artery": {
+    "en": "Ileocolic artery",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 5
+  },
+  "iliacus-muscle": {
+    "en": "Iliacus",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 53
+  },
+  "ilio-inguinal-nerve": {
+    "en": "Ilioinguinal nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 23
+  },
+  "iliococcygeus-muscle": {
+    "en": "Iliococcygeus",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 16
+  },
+  "iliohypogastric-nerve": {
+    "en": "Iliohypogastric nerve",
+    "source": "https://medintzfat.com/anatomy/abdominal-innervation",
+    "uses": 7
+  },
+  "iliolumbar-artery": {
+    "en": "Iliolumbar artery",
+    "source": "https://medintzfat.com/anatomy/back-and-spine",
+    "uses": 4
+  },
+  "iliolumbar-ligament": {
+    "en": "Iliolumbar ligament",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 11
+  },
+  "iliopsoas-muscle": {
+    "en": "Iliopsoas",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 62
+  },
+  "iliotibial-tract": {
+    "en": "Iliotibial tract",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 32
+  },
+  "incus": {
+    "en": "Incus",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 14
+  },
+  "inferior-alveolar-artery": {
+    "en": "Inferior alveolar artery",
+    "source": "https://medintzfat.com/anatomy/face-mastication",
+    "uses": 4
+  },
+  "inferior-alveolar-nerve": {
+    "en": "Inferior alveolar nerve",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 20
+  },
+  "inferior-epigastric-artery": {
+    "en": "Inferior epigastric artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 28
+  },
+  "inferior-epigastric-vein": {
+    "en": "Inferior epigastric vein",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 4
+  },
+  "inferior-gemellus-muscle": {
+    "en": "Inferior gemellus",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 2
+  },
+  "inferior-gluteal-artery": {
+    "en": "Inferior gluteal artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 22
+  },
+  "inferior-labial-artery": {
+    "en": "Inferior labial artery",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 1
+  },
+  "inferior-lateral-genicular-artery": {
+    "en": "Inferior lateral genicular artery",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 1
+  },
+  "inferior-medial-genicular-artery": {
+    "en": "Inferior medial genicular artery",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 1
+  },
+  "inferior-mesenteric-artery": {
+    "en": "Inferior mesenteric artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 21
+  },
+  "inferior-mesenteric-vein": {
+    "en": "Inferior mesenteric vein",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 28
+  },
+  "inferior-nasal-concha-bone": {
+    "en": "Inferior nasal concha",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 8
+  },
+  "inferior-oblique-muscle": {
+    "en": "Inferior oblique",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 16
+  },
+  "inferior-pancreaticoduodenal-artery": {
+    "en": "Inferior pancreaticoduodenal artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 18
+  },
+  "inferior-pharyngeal-constrictor": {
+    "en": "Inferior pharyngeal constrictor",
+    "source": "https://medintzfat.com/anatomy/nasal-cavity",
+    "uses": 1
+  },
+  "inferior-phrenic-artery": {
+    "en": "Inferior phrenic artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 7
+  },
+  "inferior-rectus-muscle": {
+    "en": "Inferior rectus",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 11
+  },
+  "inferior-suprarenal-artery": {
+    "en": "Inferior suprarenal artery",
+    "source": "https://medintzfat.com/anatomy/abdominal-innervation",
+    "uses": 4
+  },
+  "inferior-tarsus": {
+    "en": "Inferior tarsus",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 1
+  },
+  "inferior-thyroid-artery": {
+    "en": "Inferior thyroid artery",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 3
+  },
+  "inferior-vena-cava-abdominal-part": {
+    "en": "Inferior vena cava",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 33
+  },
+  "inferior-vena-cava-thoracic-part": {
+    "en": "Thoracic part of inferior vena cava",
+    "source": "https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01",
+    "uses": 1
+  },
+  "infra-orbital-artery": {
+    "en": "Infraorbital artery",
+    "source": "https://medintzfat.com/anatomy/nasal-cavity",
+    "uses": 1
+  },
+  "infrapatellar-branch-of-saphenous-nerve": {
+    "en": "Infrapatellar branch of saphenous nerve",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 1
+  },
+  "infrapatellar-fat-pad": {
+    "en": "Infrapatellar fat pad",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 5
+  },
+  "infraspinatus-muscle": {
+    "en": "Infraspinatus",
+    "source": "https://medintzfat.com/anatomy/class6",
+    "uses": 16
+  },
+  "inguinal-ligament": {
+    "en": "Inguinal ligament",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 76,
+    "he": "רצועת המפשעה",
+    "heSource": "https://medintzfat.com/anatomy/lab3"
+  },
+  "interclavicular-ligament": {
+    "en": "Interclavicular ligament",
+    "source": "https://medintzfat.com/anatomy/class5",
+    "uses": 1
+  },
+  "intercostal-nerves": {
+    "en": "Intercostal nerves",
+    "source": "https://medintzfat.com/anatomy/abdominal-innervation",
+    "uses": 2
+  },
+  "intermediate-cuneiform-bone": {
+    "en": "Intermediate cuneiform",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part5",
+    "uses": 3
+  },
+  "intermediate-tendon-of-digastric-muscle": {
+    "en": "Intermediate di-gastric tendon",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 1
+  },
+  "internal-abdominal-oblique-muscle": {
+    "en": "Internal abdominal oblique",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 11
+  },
+  "internal-carotid-artery": {
+    "en": "Internal carotid artery",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 33
+  },
+  "internal-iliac-artery": {
+    "en": "Internal iliac artery",
+    "source": "https://medintzfat.com/anatomy/lab6",
+    "uses": 18
+  },
+  "internal-iliac-vein": {
+    "en": "Internal iliac vein",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 6
+  },
+  "internal-intercostal-membrane": {
+    "en": "Internal intercostal membrane",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 4
+  },
+  "internal-intercostal-muscles": {
+    "en": "Internal intercostal muscles",
+    "source": "https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01",
+    "uses": 4,
+    "he": "בין צלעי פנימי",
+    "heSource": "https://medintzfat.com/anatomy/thorax-part1"
+  },
+  "internal-jugular-vein": {
+    "en": "Internal jugular vein",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 35
+  },
+  "internal-pudendal-artery": {
+    "en": "Internal pudendal artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 24
+  },
+  "internal-pudendal-vein": {
+    "en": "Internal pudendal vein",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part1",
+    "uses": 4
+  },
+  "internal-thoracic-artery": {
+    "en": "Internal thoracic artery",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 15,
+    "he": "עורק החזה הפנימי",
+    "heSource": "https://medintzfat.com/anatomy/thorax-part1"
+  },
+  "interspinous-ligaments": {
+    "en": "Interspinous ligaments",
+    "source": "https://medintzfat.com/anatomy/back-and-spine",
+    "uses": 1
+  },
+  "iris": {
+    "en": "Iris",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 21
+  },
+  "ischiofemoral-ligament": {
+    "en": "Ischiofemoral ligament",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part1",
+    "uses": 3
+  },
+  "jejunum": {
+    "en": "Jejunum",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 58
+  },
+  "lacrimal-bone": {
+    "en": "Lacrimal bone",
+    "source": "https://medintzfat.com/anatomy/skull-cranial-nerves",
+    "uses": 9,
+    "he": "עצם הדמעות",
+    "heSource": "https://medintzfat.com/anatomy/skull-cranial-nerves"
+  },
+  "lacrimal-gland": {
+    "en": "Lacrimal gland",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 8
+  },
+  "lacrimal-sac": {
+    "en": "Lacrimal sac",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 7
+  },
+  "laryngopharynx": {
+    "en": "Laryngopharynx",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 11
+  },
+  "lateral-antebrachial-cutaneous-nerve": {
+    "en": "Lateral antebrachial cutaneous nerve",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 4
+  },
+  "lateral-circumflex-femoral-artery": {
+    "en": "Lateral circumflex femoral artery",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 7
+  },
+  "lateral-crico-arytenoid-muscle": {
+    "en": "Lateral cricoarytenoid",
+    "source": "https://medintzfat.com/anatomy/throat",
+    "uses": 1
+  },
+  "lateral-cuneiform-bone": {
+    "en": "Lateral cuneiform",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 3
+  },
+  "lateral-femoral-cutaneous-nerve": {
+    "en": "Lateral femoral cutaneous nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 13
+  },
+  "lateral-head-of-gastrocnemius": {
+    "en": "Lateral head of gastrocnemius",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 2
+  },
+  "lateral-meniscus": {
+    "en": "Lateral meniscus",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part4",
+    "uses": 4
+  },
+  "lateral-pectoral-nerve": {
+    "en": "Lateral pectoral nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 11
+  },
+  "lateral-plantar-artery": {
+    "en": "Lateral plantar artery",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 5
+  },
+  "lateral-plantar-nerve": {
+    "en": "Lateral plantar nerve",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part5",
+    "uses": 22
+  },
+  "lateral-pterygoid-muscle": {
+    "en": "Lateral pterygoid",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 42
+  },
+  "lateral-rectus-muscle": {
+    "en": "Lateral rectus",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 13
+  },
+  "lateral-thoracic-artery": {
+    "en": "Lateral thoracic artery",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 14
+  },
+  "lateral-thoracic-vein": {
+    "en": "Lateral thoracic vein",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 1
+  },
+  "latissimus-dorsi-muscle": {
+    "en": "Latissimus dorsi",
+    "source": "https://medintzfat.com/anatomy/class6",
+    "uses": 27
+  },
+  "lens": {
+    "en": "Lens",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 17
+  },
+  "lesser-omentum": {
+    "en": "Lesser omentum",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 18
+  },
+  "levator-anguli-oris": {
+    "en": "Levator anguli oris",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 10
+  },
+  "levator-labii-superioris": {
+    "en": "Levator labii superioris",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 9
+  },
+  "levator-palpebrae-superioris": {
+    "en": "Levator palpebrae superioris",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 19
+  },
+  "levator-scapulae": {
+    "en": "Levator scapulae",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 22,
+    "he": "מֵרִים הַשֶּׁכֶם",
+    "heSource": "https://medintzfat.com/anatomy/class6"
+  },
+  "levatores-costarum": {
+    "en": "Levatores costarum",
+    "source": "https://medintzfat.com/anatomy/lab8",
+    "uses": 6
+  },
+  "ligament-of-head-of-femur": {
+    "en": "Ligament of head of femur",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part1",
+    "uses": 14
+  },
+  "ligamenta-flava": {
+    "en": "Ligamentum flavum",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 16
+  },
+  "linea-alba": {
+    "en": "Linea alba",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 26,
+    "he": "הקו הלבן",
+    "heSource": "https://medintzfat.com/anatomy/lab3"
+  },
+  "lingual-nerve": {
+    "en": "Lingual nerve",
+    "source": "https://medintzfat.com/anatomy/oral-cavity",
+    "uses": 32
+  },
+  "lingual-vein": {
+    "en": "Lingual vein",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 2
+  },
+  "liver": {
+    "en": "Liver",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 8,
+    "he": "כבד",
+    "heSource": "https://medintzfat.com/anatomy/abdominal-imaging"
+  },
+  "long-head-of-biceps-brachii": {
+    "en": "Long head of biceps",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 7
+  },
+  "long-head-of-biceps-femoris": {
+    "en": "Long head of biceps femoris",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 1
+  },
+  "long-plantar-ligament": {
+    "en": "Long plantar ligament",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 6
+  },
+  "long-thoracic-nerve": {
+    "en": "Long thoracic nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 26,
+    "he": "עצב ארוך חזה",
+    "heSource": "https://medintzfat.com/anatomy/class6"
+  },
+  "longus-capitis-muscle": {
+    "en": "Longus capitis",
+    "source": "https://medintzfat.com/anatomy/back-and-spine",
+    "uses": 3
+  },
+  "longus-colli-muscle": {
+    "en": "Longus colli",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 15
+  },
+  "lumbar-arteries": {
+    "en": "Lumbar arteries",
+    "source": "https://medintzfat.com/anatomy/abdominal-innervation",
+    "uses": 3
+  },
+  "lunate-bone": {
+    "en": "Lunate",
+    "source": "https://medintzfat.com/anatomy/class9",
+    "uses": 1
+  },
+  "lung": {
+    "he": "ריאה",
+    "heSource": "https://medintzfat.com/anatomy/lab2"
+  },
+  "main-bronchus": {
+    "en": "Main bronchus",
+    "source": "https://medintzfat.com/anatomy/respiratory-system",
+    "uses": 1
+  },
+  "malleus": {
+    "en": "Malleus",
+    "source": "https://medintzfat.com/anatomy/ear",
+    "uses": 17
+  },
+  "mandible": {
+    "en": "Mandible",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 12,
+    "he": "הלסת התחתונה",
+    "heSource": "https://medintzfat.com/anatomy/skull-cranial-nerves",
+    "heAliases": ["המנדיבולה"]
+  },
+  "manubrium-of-sternum": {
+    "en": "Manubrium",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 20
+  },
+  "marginal-artery": {
+    "en": "Marginal artery",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 3
+  },
+  "masseter": {
+    "en": "Masseter",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 77
+  },
+  "maxilla": {
+    "en": "Maxilla",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 22
+  },
+  "maxillary-artery": {
+    "en": "Maxillary artery",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 25
+  },
+  "maxillary-nerve": {
+    "en": "Maxillary nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 17
+  },
+  "medial-circumflex-femoral-artery": {
+    "en": "Medial circumflex femoral artery",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 8
+  },
+  "medial-cuneiform-bone": {
+    "en": "Medial cuneiform",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 11
+  },
+  "medial-meniscus": {
+    "en": "Medial meniscus",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part4",
+    "uses": 4
+  },
+  "medial-pectoral-nerve": {
+    "en": "Medial pectoral nerve",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 9
+  },
+  "medial-plantar-artery": {
+    "en": "Medial plantar artery",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 4
+  },
+  "medial-plantar-nerve": {
+    "en": "Medial plantar nerve",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part5",
+    "uses": 16
+  },
+  "medial-pterygoid-muscle": {
+    "en": "Medial pterygoid",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 24
+  },
+  "medial-rectus-muscle": {
+    "en": "Medial rectus",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 11
+  },
+  "median-cubital-vein": {
+    "en": "Median cubital vein",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 3
+  },
+  "median-nerve": {
+    "en": "Median nerve",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 58,
+    "he": "עצב מדיאני",
+    "heSource": "https://medintzfat.com/anatomy/class7"
+  },
+  "median-sacral-artery": {
+    "en": "Median sacral artery",
+    "source": "https://medintzfat.com/anatomy/back-and-spine",
+    "uses": 1
+  },
+  "mental-nerve": {
+    "en": "Mental nerve",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 8
+  },
+  "mentalis-muscle": {
+    "en": "Mentalis",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 11
+  },
+  "meso-appendix": {
+    "en": "Mesoappendix",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 10
+  },
+  "mesocolic-taenia": {
+    "en": "Mesocolic taenia",
+    "source": "https://medintzfat.com/anatomy/lab5",
+    "uses": 1
+  },
+  "mesocolon": {
+    "en": "Mesocolon",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 12
+  },
+  "middle-cardiac-vein": {
+    "en": "Middle cardiac vein",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 6
+  },
+  "middle-colic-artery": {
+    "en": "Middle colic artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 13
+  },
+  "middle-pharyngeal-constrictor": {
+    "en": "Middle pharyngeal constrictor",
+    "source": "https://medintzfat.com/anatomy/nasal-cavity",
+    "uses": 1
+  },
+  "musculocutaneous-nerve": {
+    "en": "Musculocutaneous nerve",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 26
+  },
+  "musculophrenic-artery": {
+    "en": "Musculophrenic artery",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 1
+  },
+  "mylohyoid-muscle": {
+    "en": "Mylohyoid",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 48
+  },
+  "nasal-bone": {
+    "en": "Nasal bone",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 1
+  },
+  "nasalis-muscle": {
+    "en": "Nasalis",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 1
+  },
+  "nasolacrimal-duct": {
+    "en": "Nasolacrimal duct",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 6
+  },
+  "nasopharynx": {
+    "en": "Nasopharynx",
+    "source": "https://medintzfat.com/anatomy/nasal-cavity",
+    "uses": 31
+  },
+  "navicular-bone": {
+    "en": "Navicular",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 32
+  },
+  "nerve-to-mylohyoid-muscle": {
+    "en": "Nerve to mylohyoid",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 12
+  },
+  "nerve-to-piriformis-muscle": {
+    "en": "Nerve to piriformis",
+    "source": "https://medintzfat.com/anatomy/pelvis-male",
+    "uses": 1
+  },
+  "oblique-popliteal-ligament": {
+    "en": "Oblique popliteal ligament",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part4",
+    "uses": 3
+  },
+  "obliquus-inferior-capitis-muscle": {
+    "en": "Obliquus capitis inferior",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 7
+  },
+  "obliquus-superior-capitis-muscle": {
+    "en": "Obliquus capitis superior",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 4
+  },
+  "obturator-artery": {
+    "en": "Obturator artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 43
+  },
+  "obturator-externus": {
+    "en": "Obturator externus",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 7
+  },
+  "obturator-internus": {
+    "en": "Obturator internus",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 35
+  },
+  "obturator-membrane": {
+    "en": "Obturator membrane",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 8
+  },
+  "obturator-nerve": {
+    "en": "Obturator nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 68
+  },
+  "occipital-artery": {
+    "en": "Occipital artery",
+    "source": "https://medintzfat.com/anatomy/neck",
+    "uses": 7
+  },
+  "occipital-bone": {
+    "en": "Occipital bone",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 29,
+    "he": "עצם העורף",
+    "heSource": "https://medintzfat.com/anatomy/skull-cranial-nerves"
+  },
+  "occipitalis-muscle": {
+    "en": "Occipitalis",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 6
+  },
+  "oculomotor-nerve-iii": {
+    "en": "Oculomotor nerve",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 20
+  },
+  "oesophagus": {
+    "en": "Esophagus",
+    "source": "https://medintzfat.com/anatomy/throat",
+    "uses": 36,
+    "he": "ושט",
+    "heSource": "https://medintzfat.com/anatomy/thorax-part2"
+  },
+  "olfactory-nerve-i": {
+    "en": "Olfactory nerve",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 4
+  },
+  "omental-taenia": {
+    "en": "Omental taenia",
+    "source": "https://medintzfat.com/anatomy/lab5",
+    "uses": 1
+  },
+  "omohyoid-muscle": {
+    "en": "Omohyoid",
+    "source": "https://medintzfat.com/anatomy/neck",
+    "uses": 17
+  },
+  "ophthalmic-artery": {
+    "en": "Ophthalmic artery",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 14
+  },
+  "ophthalmic-nerve": {
+    "en": "Ophthalmic nerve",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 14
+  },
+  "opponens-pollicis-muscle": {
+    "en": "Opponens pollicis",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 5
+  },
+  "optic-chiasm": {
+    "en": "Optic chiasm",
+    "source": "https://medintzfat.com/anatomy/skull-cranial-nerves",
+    "uses": 5
+  },
+  "optic-nerve-ii": {
+    "en": "Optic nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 31
+  },
+  "orbicularis-oris-muscle": {
+    "en": "Orbicularis oris",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 18
+  },
+  "oropharynx": {
+    "en": "Oropharynx",
+    "source": "https://medintzfat.com/anatomy/nasal-cavity",
+    "uses": 15
+  },
+  "palatine-bone": {
+    "en": "Palatine bone",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 4
+  },
+  "palatine-tonsil": {
+    "en": "Palatine tonsil",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 5
+  },
+  "palatopharyngeus-muscle": {
+    "en": "Palatopharyngeus",
+    "source": "https://medintzfat.com/anatomy/oral-cavity",
+    "uses": 12
+  },
+  "palmaris-longus-muscle": {
+    "en": "Palmaris longus",
+    "source": "https://medintzfat.com/anatomy/class9",
+    "uses": 11
+  },
+  "pancreas": {
+    "en": "Pancreas",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 9,
+    "he": "לבלב",
+    "heSource": "https://medintzfat.com/anatomy/quiz-abdomen"
+  },
+  "pancreatic-duct": {
+    "en": "Pancreatic duct",
+    "source": "https://medintzfat.com/anatomy/lab5",
+    "uses": 7
+  },
+  "parietal-bone": {
+    "en": "Parietal",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 11
+  },
+  "parotid-duct": {
+    "en": "Parotid duct",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 9
+  },
+  "parotid-gland": {
+    "en": "Parotid gland",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 24
+  },
+  "patella": {
+    "en": "Patella",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 17,
+    "he": "פיקה",
+    "heSource": "https://medintzfat.com/anatomy/lab7"
+  },
+  "pectineus-muscle": {
+    "en": "Pectineus",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 35
+  },
+  "pectoralis-major-muscle": {
+    "en": "Pectoralis major",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 38,
+    "he": "שְׁרִיר הֶחָזֶה הַגָּדוֹל",
+    "heSource": "https://medintzfat.com/anatomy/class6"
+  },
+  "pectoralis-minor-muscle": {
+    "en": "Pectoralis minor",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 39,
+    "he": "החזה הקטן",
+    "heSource": "https://medintzfat.com/anatomy/class6"
+  },
+  "penis": {
+    "en": "Penis",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 1
+  },
+  "perforating-veins": {
+    "en": "Perforating veins",
+    "source": "https://medintzfat.com/anatomy/class6",
+    "uses": 1
+  },
+  "pharynx": {
+    "en": "Pharynx",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 35,
+    "he": "לוע",
+    "heSource": "https://medintzfat.com/anatomy/labs-semester-b"
+  },
+  "piriformis-muscle": {
+    "en": "Piriformis",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 87
+  },
+  "pisiform-bone": {
+    "en": "Pisiform",
+    "source": "https://medintzfat.com/anatomy/class9",
+    "uses": 7
+  },
+  "plantar-calcaneonavicular-ligament": {
+    "en": "Plantar calcaneonavicular ligament",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part5",
+    "uses": 1
+  },
+  "plantaris-muscle": {
+    "en": "Plantaris",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 10
+  },
+  "platysma": {
+    "en": "Platysma",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 30,
+    "he": "פלטיזמה",
+    "heSource": "https://medintzfat.com/anatomy/neck"
+  },
+  "popliteal-artery": {
+    "en": "Popliteal artery",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 28
+  },
+  "popliteal-vein": {
+    "en": "Popliteal vein",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 23
+  },
+  "popliteus-muscle": {
+    "en": "Popliteus",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part4",
+    "uses": 9
+  },
+  "posterior-belly-of-digastric-muscle": {
+    "en": "Posterior belly of digastric",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 14
+  },
+  "posterior-branch-of-obturator-nerve": {
+    "en": "Posterior branch of obturator nerve",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 1
+  },
+  "posterior-cerebral-artery": {
+    "en": "Posterior cerebral artery",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 2
+  },
+  "posterior-circumflex-humeral-artery": {
+    "en": "Posterior circumflex humeral artery",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 5
+  },
+  "posterior-cord-of-brachial-plexus": {
+    "en": "Posterior cord of brachial plexus",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 1
+  },
+  "posterior-crico-arytenoid-muscle": {
+    "en": "Posterior cricoarytenoid",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 3
+  },
+  "posterior-cruciate-ligament": {
+    "en": "Posterior cruciate ligament",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 4
+  },
+  "posterior-division-of-internal-iliac-artery": {
+    "en": "Posterior division of internal iliac artery",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 1
+  },
+  "posterior-ethmoidal-artery": {
+    "en": "Posterior ethmoidal artery",
+    "source": "https://medintzfat.com/anatomy/nasal-cavity",
+    "uses": 1
+  },
+  "posterior-femoral-cutaneous-nerve": {
+    "en": "Posterior femoral cutaneous nerve",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 1
+  },
+  "posterior-inferior-cerebellar-artery": {
+    "en": "Posterior inferior cerebellar artery",
+    "source": "https://medintzfat.com/anatomy/back-and-spine",
+    "uses": 1
+  },
+  "posterior-intercostal-arteries": {
+    "en": "Posterior intercostal arteries",
+    "source": "https://medintzfat.com/anatomy/back-and-spine",
+    "uses": 3
+  },
+  "posterior-interosseous-artery": {
+    "en": "Posterior interosseous artery",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 1
+  },
+  "posterior-longitudinal-ligament": {
+    "en": "Posterior longitudinal ligament",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 13
+  },
+  "posterior-sacro-iliac-ligament": {
+    "en": "Posterior sacroiliac ligament",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part1",
+    "uses": 3
+  },
+  "posterior-talofibular-ligament": {
+    "en": "Posterior talofibular ligament",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part5",
+    "uses": 1
+  },
+  "posterior-tibial-artery": {
+    "en": "Posterior tibial artery",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 47
+  },
+  "posterior-tibial-veins": {
+    "en": "Posterior tibial veins",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 3
+  },
+  "procerus-muscle": {
+    "en": "Procerus",
+    "source": "https://medintzfat.com/anatomy/face-mastication",
+    "uses": 2
+  },
+  "pronator-quadratus": {
+    "en": "Pronator quadratus",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 11
+  },
+  "pronator-teres": {
+    "en": "Pronator teres",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 12
+  },
+  "proper-hepatic-artery": {
+    "en": "Hepatic artery proper",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 1,
+    "aliases": ["Proper hepatic artery"]
+  },
+  "proper-palmar-digital-arteries": {
+    "en": "Proper palmar digital arteries",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 1
+  },
+  "prostate": {
+    "en": "Prostate",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 14
+  },
+  "psoas-major": {
+    "en": "Psoas major",
+    "source": "https://medintzfat.com/anatomy/abdominal-innervation",
+    "uses": 45
+  },
+  "pubic-symphysis": {
+    "en": "Pubic symphysis",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 23
+  },
+  "pubococcygeus-muscle": {
+    "en": "Pubococcygeus",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 19
+  },
+  "pubofemoral-ligament": {
+    "en": "Pubofemoral ligament",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part1",
+    "uses": 4
+  },
+  "pudendal-nerve": {
+    "en": "Pudendal nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 39,
+    "he": "העצב הפודנדלי",
+    "heSource": "https://medintzfat.com/anatomy/pelvis-male"
+  },
+  "pulmonary-artery": {
+    "en": "Pulmonary artery",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 19
+  },
+  "pulmonary-trunk": {
+    "en": "Pulmonary trunk",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 25
+  },
+  "pyramidalis-muscle": {
+    "en": "Pyramidalis",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 1
+  },
+  "quadrangular-membrane": {
+    "en": "Quadrangular membrane",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 5
+  },
+  "quadratus-femoris-muscle": {
+    "en": "Quadratus femoris",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 19
+  },
+  "quadratus-lumborum-muscle": {
+    "en": "Quadratus lumborum",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 15
+  },
+  "quadriceps-femoris-muscle": {
+    "en": "Quadriceps femoris",
+    "source": "https://medintzfat.com/anatomy/abdominal-innervation",
+    "uses": 6,
+    "he": "הארבע ראשי",
+    "heSource": "https://medintzfat.com/anatomy/lower-limb-part2"
+  },
+  "radial-artery": {
+    "en": "Radial artery",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 16
+  },
+  "radial-collateral-ligament": {
+    "en": "Radial collateral ligament",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 3
+  },
+  "radial-nerve": {
+    "en": "Radial nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 60,
+    "he": "העצב הרדיאלי",
+    "heSource": "https://medintzfat.com/anatomy/class8"
+  },
+  "radius": {
+    "en": "Radius",
+    "source": "https://medintzfat.com/anatomy/class8",
+    "uses": 27,
+    "he": "רדיוס",
+    "heSource": "https://medintzfat.com/anatomy/class3"
+  },
+  "rectus-abdominis-muscle": {
+    "en": "Rectus abdominis",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 33
+  },
+  "rectus-anterior-capitis-muscle": {
+    "en": "Rectus capitis anterior",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 3
+  },
+  "rectus-femoris-muscle": {
+    "en": "Rectus femoris",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 42
+  },
+  "rectus-posterior-major-capitis-muscle": {
+    "en": "Rectus capitis posterior major",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 4
+  },
+  "rectus-posterior-minor-capitis-muscle": {
+    "en": "Rectus capitis posterior minor",
+    "source": "https://medintzfat.com/anatomy/lab8",
+    "uses": 2
+  },
+  "renal-artery": {
+    "en": "Renal artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 11,
+    "he": "עורק הכליה",
+    "heSource": "https://medintzfat.com/anatomy/lab6"
+  },
+  "renal-vein": {
+    "en": "Renal vein",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 4
+  },
+  "retina": {
+    "en": "Retina",
+    "source": "https://medintzfat.com/anatomy/eye",
+    "uses": 4
+  },
+  "retromandibular-vein": {
+    "en": "Retromandibular vein",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 1
+  },
+  "rhomboid-major-muscle": {
+    "en": "Rhomboid major",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 5
+  },
+  "rhomboid-minor-muscle": {
+    "en": "Rhomboid minor",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 3
+  },
+  "risorius-muscle": {
+    "en": "Risorius",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 2
+  },
+  "roots-of-brachial-plexus": {
+    "en": "Roots of brachial plexus",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 3
+  },
+  "rotatores": {
+    "en": "Rotatores",
+    "source": "https://medintzfat.com/anatomy/lab8",
+    "uses": 13
+  },
+  "sacrospinous-ligament": {
+    "en": "Sacrospinous ligament",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 16
+  },
+  "sacrotuberous-ligament": {
+    "en": "Sacrotuberous ligament",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 29
+  },
+  "sacrum": {
+    "en": "Sacrum",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 47,
+    "he": "עצם העצה",
+    "heSource": "https://medintzfat.com/anatomy/pelvis"
+  },
+  "saphenous-nerve": {
+    "en": "Saphenous nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 44
+  },
+  "sartorius-muscle": {
+    "en": "Sartorius",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 61,
+    "he": "שריר החייטים",
+    "heSource": "https://medintzfat.com/anatomy/lower-limb-part1"
+  },
+  "scalenus-anterior-muscle": {
+    "en": "Scalenus anterior",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 2
+  },
+  "scaphoid-bone": {
+    "en": "Scaphoid",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 9
+  },
+  "scapula": {
+    "en": "Scapula",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 18,
+    "he": "עצם השכמה",
+    "heSource": "https://medintzfat.com/anatomy/lab1"
+  },
+  "sciatic-nerve": {
+    "en": "Sciatic nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 80
+  },
+  "sclera": {
+    "en": "Sclera",
+    "source": "https://medintzfat.com/anatomy/eye",
+    "uses": 10
+  },
+  "semimembranosus-muscle": {
+    "en": "Semimembranosus",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part4",
+    "uses": 37
+  },
+  "seminal-gland": {
+    "en": "Seminal vesicle",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 9,
+    "aliases": ["Seminal glands"]
+  },
+  "semitendinosus-muscle": {
+    "en": "Semitendinosus",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 25
+  },
+  "serratus-anterior-muscle": {
+    "en": "Serratus anterior",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 33
+  },
+  "serratus-posterior-inferior-muscle": {
+    "en": "Serratus posterior inferior",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 7
+  },
+  "serratus-posterior-superior-muscle": {
+    "en": "Serratus posterior superior",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 9
+  },
+  "short-head-of-biceps-femoris": {
+    "en": "Short head of biceps femoris",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 9
+  },
+  "sigmoid-arteries": {
+    "en": "Sigmoid arteries",
+    "source": "https://medintzfat.com/anatomy/abdominal-organs",
+    "uses": 2
+  },
+  "sigmoid-colon": {
+    "en": "Sigmoid colon",
+    "source": "https://medintzfat.com/anatomy/abdominal-imaging",
+    "uses": 24
+  },
+  "sigmoid-sinus": {
+    "en": "Sigmoid sinus",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 2
+  },
+  "sinus-of-frontal-bone": {
+    "en": "Frontal sinus",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 18
+  },
+  "sinus-of-sphenoid-bone": {
+    "en": "Sphenoid sinus",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 24
+  },
+  "small-intestine": {
+    "en": "Small intestine",
+    "source": "https://medintzfat.com/anatomy/abdominal-organs",
+    "uses": 1,
+    "he": "מעי דק",
+    "heSource": "https://medintzfat.com/anatomy/abdominal-imaging"
+  },
+  "small-saphenous-vein": {
+    "en": "Small saphenous vein",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 33
+  },
+  "soft-palate": {
+    "en": "Soft palate",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 6
+  },
+  "soleus-muscle": {
+    "en": "Soleus",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 47
+  },
+  "sphenoid-bone": {
+    "en": "Sphenoid",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 51,
+    "he": "עצם הספנואיד",
+    "heSource": "https://medintzfat.com/anatomy/skull-cranial-nerves"
+  },
+  "sphenomandibular-ligament": {
+    "en": "Sphenomandibular ligament",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 11
+  },
+  "spinal-cord": {
+    "en": "Spinal cord",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 8,
+    "he": "חוט השדרה",
+    "heSource": "https://medintzfat.com/anatomy/class1"
+  },
+  "spleen": {
+    "en": "Spleen",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 11,
+    "he": "טחול",
+    "heSource": "https://medintzfat.com/anatomy/labs-semester-b"
+  },
+  "splenic-artery": {
+    "en": "Splenic artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 39
+  },
+  "splenic-vein": {
+    "en": "Splenic vein",
+    "source": "https://medintzfat.com/anatomy/abdominal-organs",
+    "uses": 21
+  },
+  "splenius-capitis-muscle": {
+    "en": "Splenius capitis",
+    "source": "https://medintzfat.com/anatomy/back-and-spine",
+    "uses": 10
+  },
+  "stapes": {
+    "en": "Stapes",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 25
+  },
+  "sternocleidomastoid-muscle": {
+    "en": "Sternocleidomastoid",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 30
+  },
+  "sternohyoid-muscle": {
+    "en": "Sternohyoid",
+    "source": "https://medintzfat.com/anatomy/neck",
+    "uses": 13
+  },
+  "sternothyroid-muscle": {
+    "en": "Sternothyroid",
+    "source": "https://medintzfat.com/anatomy/neck",
+    "uses": 14
+  },
+  "stomach": {
+    "en": "Stomach",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 11,
+    "he": "קיבה",
+    "heSource": "https://medintzfat.com/anatomy/quiz-abdomen"
+  },
+  "stylohyoid-muscle": {
+    "en": "Stylohyoid",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 22
+  },
+  "stylomandibular-ligament": {
+    "en": "Stylomandibular ligament",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 10
+  },
+  "stylopharyngeus-muscle": {
+    "en": "Stylopharyngeus",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 5
+  },
+  "subclavian-artery": {
+    "en": "Subclavian artery",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 46
+  },
+  "subclavian-vein": {
+    "en": "Subclavian vein",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 23
+  },
+  "subclavius-muscle": {
+    "en": "Subclavius",
+    "source": "https://medintzfat.com/anatomy/class7",
+    "uses": 7
+  },
+  "subcostal-artery": {
+    "en": "Subcostal artery",
+    "source": "https://medintzfat.com/anatomy/back-and-spine",
+    "uses": 1
+  },
+  "sublingual-gland": {
+    "en": "Sublingual gland",
+    "source": "https://medintzfat.com/anatomy/oral-cavity",
+    "uses": 8
+  },
+  "submandibular-duct": {
+    "en": "Submandibular duct",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 2
+  },
+  "submandibular-gland": {
+    "en": "Submandibular gland",
+    "source": "https://medintzfat.com/anatomy/oral-cavity",
+    "uses": 14
+  },
+  "subscapular-artery": {
+    "en": "Subscapular artery",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 3
+  },
+  "subscapular-vein": {
+    "en": "Subscapular vein",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 2
+  },
+  "subscapularis-muscle": {
+    "en": "Subscapularis",
+    "source": "https://medintzfat.com/anatomy/class6",
+    "uses": 9
+  },
+  "superficial-branch-of-radial-nerve": {
+    "en": "Superficial branch of radial nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 6
+  },
+  "superficial-epigastric-artery": {
+    "en": "Superficial epigastric artery",
+    "source": "https://medintzfat.com/anatomy/lab3",
+    "uses": 2
+  },
+  "superficial-fibular-nerve": {
+    "en": "Superficial fibular nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 20
+  },
+  "superficial-palmar-arch": {
+    "en": "Superficial palmar arch",
+    "source": "https://medintzfat.com/anatomy/class9",
+    "uses": 2
+  },
+  "superficial-temporal-artery": {
+    "en": "Superficial temporal artery",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 18
+  },
+  "superior-anorectal-artery": {
+    "en": "Superior rectal artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 7
+  },
+  "superior-epigastric-artery": {
+    "en": "Superior epigastric artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 10
+  },
+  "superior-gemellus-muscle": {
+    "en": "Superior gemellus",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 1
+  },
+  "superior-gluteal-artery": {
+    "en": "Superior gluteal artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 23
+  },
+  "superior-gluteal-nerve": {
+    "en": "Superior gluteal nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 24
+  },
+  "superior-labial-artery": {
+    "en": "Superior labial artery",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 2
+  },
+  "superior-lateral-brachial-cutaneous-nerve": {
+    "en": "Superior lateral brachial cutaneous nerve",
+    "source": "https://medintzfat.com/anatomy/class6",
+    "uses": 1
+  },
+  "superior-lateral-genicular-artery": {
+    "en": "Superior lateral genicular artery",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 1
+  },
+  "superior-medial-genicular-artery": {
+    "en": "Superior medial genicular artery",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 1
+  },
+  "superior-mesenteric-artery": {
+    "en": "Superior mesenteric artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 42
+  },
+  "superior-mesenteric-vein": {
+    "en": "Superior mesenteric vein",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 27
+  },
+  "superior-oblique-muscle": {
+    "en": "Superior oblique",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 26
+  },
+  "superior-pharyngeal-constrictor": {
+    "en": "Superior pharyngeal constrictor",
+    "source": "https://medintzfat.com/anatomy/nasal-cavity",
+    "uses": 2
+  },
+  "superior-phrenic-arteries": {
+    "en": "Superior phrenic arteries",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 1
+  },
+  "superior-rectus-muscle": {
+    "en": "Superior rectus",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 12
+  },
+  "superior-tarsus": {
+    "en": "Superior tarsus",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 2
+  },
+  "superior-thyroid-vein": {
+    "en": "Superior thyroid vein",
+    "source": "https://medintzfat.com/anatomy/neck",
+    "uses": 1
+  },
+  "superior-ulnar-collateral-artery": {
+    "en": "Superior ulnar collateral artery",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 2
+  },
+  "superior-vena-cava": {
+    "en": "Superior vena cava",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 17
+  },
+  "supinator": {
+    "en": "Supinator",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 15
+  },
+  "suprarenal-gland": {
+    "en": "Suprarenal gland",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 3,
+    "aliases": ["Adrenal gland"]
+  },
+  "suprascapular-artery": {
+    "en": "Suprascapular artery",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 2
+  },
+  "suprascapular-nerve": {
+    "en": "Suprascapular nerve",
+    "source": "https://medintzfat.com/anatomy/class6",
+    "uses": 10
+  },
+  "supraspinatus-muscle": {
+    "en": "Supraspinatus",
+    "source": "https://medintzfat.com/anatomy/class6",
+    "uses": 19
+  },
+  "supraspinous-ligament": {
+    "en": "Supraspinous ligament",
+    "source": "https://medintzfat.com/anatomy/back-and-spine",
+    "uses": 2
+  },
+  "sural-nerve": {
+    "en": "Sural nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 38
+  },
+  "sympathetic-trunk": {
+    "en": "Sympathetic trunk",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 4,
+    "aliases": ["Sympathetic chain"],
+    "he": "השרשרת הסימפתטית",
+    "heSource": "https://medintzfat.com/anatomy/lab2"
+  },
+  "talus": {
+    "en": "Talus",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 42,
+    "he": "עצם הטלוס",
+    "heSource": "https://medintzfat.com/anatomy/lower-limb-part5"
+  },
+  "temporal-bone": {
+    "en": "Temporal bone",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 37,
+    "he": "העצם הטמפורלית",
+    "heSource": "https://medintzfat.com/anatomy/lab9"
+  },
+  "temporalis-muscle": {
+    "en": "Temporalis",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 34
+  },
+  "tendinous-arch-of-levator-ani": {
+    "en": "Tendinous arch of levator ani",
+    "source": "https://medintzfat.com/anatomy/lab6",
+    "uses": 3
+  },
+  "tentorium-cerebelli": {
+    "en": "Tentorium cerebelli",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 3
+  },
+  "teres-major-muscle": {
+    "en": "Teres major",
+    "source": "https://medintzfat.com/anatomy/class7",
+    "uses": 21,
+    "he": "הַשְּׁרִיר הֶעָגֹל הַגָּדוֹל",
+    "heSource": "https://medintzfat.com/anatomy/class6"
+  },
+  "teres-minor-muscle": {
+    "en": "Teres minor",
+    "source": "https://medintzfat.com/anatomy/class6",
+    "uses": 11,
+    "he": "הַשְּׁרִיר הֶעָגֹל הַקָּטָן",
+    "heSource": "https://medintzfat.com/anatomy/class6"
+  },
+  "testicular-artery": {
+    "en": "Testicular artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 14
+  },
+  "testicular-vein": {
+    "en": "Testicular vein",
+    "source": "https://medintzfat.com/anatomy/lab6",
+    "uses": 1
+  },
+  "testis": {
+    "en": "Testis",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 2
+  },
+  "thalamus": {
+    "en": "Thalamus",
+    "source": "https://medintzfat.com/anatomy/class1",
+    "uses": 1,
+    "he": "תלמוס",
+    "heSource": "https://medintzfat.com/anatomy/class1"
+  },
+  "thoracic-aorta": {
+    "en": "Thoracic aorta",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 2
+  },
+  "thoraco-acromial-artery": {
+    "en": "Thoracoacromial artery",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 4
+  },
+  "thoracodorsal-artery": {
+    "en": "Thoracodorsal artery",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 5
+  },
+  "thoracodorsal-nerve": {
+    "en": "Thoracodorsal nerve",
+    "source": "https://medintzfat.com/anatomy/class6",
+    "uses": 3
+  },
+  "thymus": {
+    "en": "Thymus",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 4
+  },
+  "thyrocervical-trunk": {
+    "en": "Thyrocervical trunk",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 3
+  },
+  "thyrohyoid-muscle": {
+    "en": "Thyrohyoid",
+    "source": "https://medintzfat.com/anatomy/neck",
+    "uses": 11
+  },
+  "thyroid-cartilage": {
+    "en": "Thyroid cartilage",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 69
+  },
+  "thyroid-gland": {
+    "en": "Thyroid gland",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 10,
+    "he": "בלוטת התריס",
+    "heSource": "https://medintzfat.com/anatomy/lab9"
+  },
+  "tibia": {
+    "en": "Tibia",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 99
+  },
+  "tibial-nerve": {
+    "en": "Tibial nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 75
+  },
+  "tibialis-anterior-muscle": {
+    "en": "Tibialis anterior",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 43
+  },
+  "tibialis-posterior-muscle": {
+    "en": "Tibialis posterior",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 69
+  },
+  "trachea": {
+    "en": "Trachea",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 32,
+    "he": "טרכיאה",
+    "heSource": "https://medintzfat.com/anatomy/thorax-part2"
+  },
+  "transverse-acetabular-ligament": {
+    "en": "Transverse acetabular ligament",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part1",
+    "uses": 6
+  },
+  "transverse-arytenoid-muscle": {
+    "en": "Transverse arytenoid",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 2
+  },
+  "transverse-cervical-artery": {
+    "en": "Transverse cervical artery",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 1
+  },
+  "transverse-colon": {
+    "en": "Transverse colon",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 48,
+    "he": "מעי גס חוצה",
+    "heSource": "https://medintzfat.com/anatomy/quiz-abdomen"
+  },
+  "transverse-facial-artery": {
+    "en": "Transverse facial artery",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 1
+  },
+  "transverse-humeral-ligament": {
+    "en": "Transverse humeral ligament",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 5
+  },
+  "transverse-sinus": {
+    "en": "Transverse sinus",
+    "source": "https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01",
+    "uses": 5
+  },
+  "transversus-abdominis-muscle": {
+    "en": "Transversus abdominis",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 31
+  },
+  "transversus-thoracis-muscle": {
+    "en": "Transversus thoracis",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 4
+  },
+  "trapezium-bone": {
+    "en": "Trapezium",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 10
+  },
+  "trapezius-muscle": {
+    "en": "Trapezius",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 44
+  },
+  "trapezoid-bone": {
+    "en": "Trapezoid",
+    "source": "https://medintzfat.com/anatomy/class5",
+    "uses": 6
+  },
+  "trapezoid-ligament": {
+    "en": "Trapezoid ligament",
+    "source": "https://medintzfat.com/anatomy/class5",
+    "uses": 1
+  },
+  "triceps-brachii-muscle": {
+    "en": "Triceps brachii",
+    "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
+    "uses": 14,
+    "he": "תלת ראשי",
+    "heSource": "https://medintzfat.com/anatomy/class6"
+  },
+  "trigeminal-nerve-v": {
+    "en": "Trigeminal nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 28
+  },
+  "triquetrum-bone": {
+    "en": "Triquetrum",
+    "source": "https://medintzfat.com/anatomy/class9",
+    "uses": 2
+  },
+  "trochlear-nerve-iv": {
+    "en": "Trochlear nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 11
+  },
+  "tympanic-membrane": {
+    "en": "Tympanic membrane",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 11,
+    "he": "עור התוף",
+    "heSource": "https://medintzfat.com/anatomy/ear"
+  },
+  "ulna": {
+    "en": "Ulna",
+    "source": "https://medintzfat.com/anatomy/class8",
+    "uses": 17,
+    "he": "אולנה",
+    "heSource": "https://medintzfat.com/anatomy/class8"
+  },
+  "ulnar-artery": {
+    "en": "Ulnar artery",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 11
+  },
+  "ulnar-collateral-ligament": {
+    "en": "Ulnar collateral ligament",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 5
+  },
+  "ulnar-nerve": {
+    "en": "Ulnar nerve",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 51,
+    "he": "העצב האולנרי",
+    "heSource": "https://medintzfat.com/anatomy/class8"
+  },
+  "ulnar-recurrent-artery": {
+    "en": "Ulnar recurrent artery",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 1
+  },
+  "ureter": {
+    "en": "Ureter",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 53,
+    "he": "צינור הכליה",
+    "heSource": "https://medintzfat.com/anatomy/pelvis"
+  },
+  "urethra": {
+    "en": "Urethra",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 47
+  },
+  "urinary-bladder": {
+    "en": "Urinary bladder",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 12
+  },
+  "vagus-nerve-x": {
+    "en": "Vagus nerve",
+    "source": "https://medintzfat.com/anatomy/neck",
+    "uses": 33,
+    "he": "עצב הוואגוס",
+    "heSource": "https://medintzfat.com/anatomy/thorax-autonomic-innervation"
+  },
+  "vastus-intermedius-muscle": {
+    "en": "Vastus intermedius",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 10
+  },
+  "vastus-lateralis-muscle": {
+    "en": "Vastus lateralis",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 14
+  },
+  "vastus-medialis-muscle": {
+    "en": "Vastus medialis",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 24
+  },
+  "ventricle": {
+    "en": "Ventricle",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 6
+  },
+  "vermiform-appendix": {
+    "en": "Vermiform appendix",
+    "source": "https://medintzfat.com/anatomy/abdominal-organs",
+    "uses": 9,
+    "aliases": ["Appendix"],
+    "he": "תוספתן",
+    "heSource": "https://medintzfat.com/anatomy/abdominal-organs"
+  },
+  "vertebral-artery": {
+    "en": "Vertebral artery",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 43
+  },
+  "vestibulocochlear-nerve-viii": {
+    "en": "Vestibulocochlear nerve",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 4
+  },
+  "vitreous-body": {
+    "en": "Vitreous body",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 10
+  },
+  "vomer": {
+    "en": "Vomer",
+    "source": "https://medintzfat.com/anatomy/nasal-cavity",
+    "uses": 4
+  },
+  "xiphoid-process": {
+    "en": "Xiphoid process",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 17,
+    "he": "זיז החרב",
+    "heSource": "https://medintzfat.com/anatomy/thorax-part1"
+  },
+  "zona-orbicularis": {
+    "en": "Zona orbicularis",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part1",
+    "uses": 4
+  },
+  "zygomatic-bone": {
+    "en": "Zygomatic bone",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 14
+  },
+  "zygomaticus-major-muscle": {
+    "en": "Zygomaticus major",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 12
+  },
+  "zygomaticus-minor-muscle": {
+    "en": "Zygomaticus minor",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 8
+  }
+}

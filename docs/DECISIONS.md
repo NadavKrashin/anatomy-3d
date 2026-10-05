@@ -393,3 +393,32 @@ questions.
 match: drop m./n./a./v., sort the words, singularise. A wrong id would
 silently teach the wrong structure, so a miss is better. That is why only
 ~35% of rows match. The rest need a person.
+
+## 2026-10-05 — Structure names follow her course site
+
+**Context.** The user asked for "the names of every part to be exactly as
+shown in this website since that is what they are actually learning". The
+model's names are Z-Anatomy's TA-based English, e.g. "Biceps brachii
+muscle", "Oesophagus", "Vagus nerve (X)". The course writes "Biceps
+brachii", "Esophagus", "Vagus nerve".
+
+**Decision.**
+
+- A generated table, `z-anatomy/courseNames.json`, is applied on top of the
+  built dataset (`withCourseName`). The model build and its ids stay
+  untouched, so progress and links keep working. Displayed names change
+  only.
+- Course names are facts (names of structures), so they may be committed
+  (see "commit facts only" above).
+- Matching is automatic but conservative. Anything ambiguous keeps the
+  model name, because a wrong name teaches the wrong structure. Synonyms
+  and Hebrew are hand-picked lists with the page each comes from.
+- **Sentence case** is used because the site itself mixes Title Case and
+  sentence case. Abbreviation-only names are spelled out. The wording and
+  spelling are the course's.
+- Both sides of a paired structure must share one name (a dataset
+  invariant used by quizzes and search). Side-specific course names
+  ("Right coronary artery") become search aliases.
+- Hebrew: the course hardly uses Hebrew names. Our earlier Hebrew (Academy
+  forms such as עצב הגומד) is no longer shown for structures the course
+  names only in English. It stays searchable.

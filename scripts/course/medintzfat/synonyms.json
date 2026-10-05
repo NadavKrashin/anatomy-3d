@@ -1,0 +1,49 @@
+{
+  "about": "Course wordings the automatic matcher in course_names.py cannot find (different words or spelling). Keys are side-less structure ids. Every wording must appear on the course site. sideAliases: course names for one side only (e.g. 'Right coronary artery'); the app shows one name for both sides, so these are search aliases.",
+  "synonyms": {
+    "bucinator": ["Buccinator"],
+    "ligamenta-flava": ["Ligamentum flavum"],
+    "corpus-spongiosum-of-penis": ["Corpus spongiosum"],
+    "annular-ligament-of-radius": ["Annular ligament"],
+    "long-head-of-biceps-brachii": ["Long head of biceps"],
+    "manubrium-of-sternum": ["Manubrium"],
+    "inferior-vena-cava-abdominal-part": ["Inferior vena cava"],
+    "deep-femoral-artery": ["Profunda femoris artery"],
+    "sympathetic-trunk": ["Sympathetic chain"],
+    "hepatic-portal-vein": ["Portal vein"],
+    "seminal-gland": ["Seminal vesicle"],
+    "vermiform-appendix": ["Appendix"],
+    "superior-anorectal-artery": ["Superior rectal artery"],
+    "abducens-nerve-vi": ["Abducent nerve"],
+    "proper-hepatic-artery": ["Hepatic artery proper"],
+    "ductus-deferens": ["Vas deferens"],
+    "suprarenal-gland": ["Adrenal gland"]
+  },
+  "sideAliases": [
+    {
+      "id": "coronary-artery-right",
+      "alias": "Right coronary artery",
+      "source": "https://medintzfat.com/anatomy/thorax-part3"
+    },
+    {
+      "id": "coronary-artery-left",
+      "alias": "Left coronary artery",
+      "source": "https://medintzfat.com/anatomy/thorax-part3"
+    },
+    {
+      "id": "gastric-artery-left",
+      "alias": "Left gastric artery",
+      "source": "https://medintzfat.com/anatomy/labs-semester-b"
+    },
+    {
+      "id": "colic-artery-right",
+      "alias": "Right colic artery",
+      "source": "https://medintzfat.com/anatomy/labs-semester-b"
+    },
+    {
+      "id": "colic-artery-left",
+      "alias": "Left colic artery",
+      "source": "https://medintzfat.com/anatomy/labs-semester-b"
+    }
+  ]
+}

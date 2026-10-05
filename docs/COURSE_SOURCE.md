@@ -103,3 +103,56 @@ That makes 586 questions, 563 of them unique. Some repeat across pages.
   pair recurs. Many pairs are not translations at all, e.g. "Dorsal |
   אבדוקציה", where the parentheses held an aside. Use them only as leads
   for a reviewer. Never import them as verified names.
+
+## Course names (what the app shows)
+
+The user's decision (2026-10-05): every structure is named **exactly as the
+course site names it**, since that is what she learns.
+`scripts/course/medintzfat/course_names.py` writes
+`src/data/anatomy/z-anatomy/courseNames.json`, and the app applies it
+(`z-anatomy/courseNames.ts`):
+
+- **579 of 1,571** structures (side-less) get the course's English name,
+  e.g. "Biceps brachii", "Esophagus", "Celiac trunk", "Buccinator",
+  "Vagus nerve". 175 of these differ from the Z-Anatomy name. Each name
+  records the course page it comes from and how often the site uses it.
+- **How a name is chosen.** All English runs in the 53 pages and the 586
+  questions count as uses of a wording. A model name matches a course
+  wording when the two agree after normalising:
+  - abbreviations and "muscle"/"bone" are ignored;
+  - British spelling is mapped to American (oe/ae);
+  - hyphens and a plural "-s" are ignored;
+  - the words may come in another order;
+  - a parenthesised qualifier is dropped ("Vagus nerve (X)").
+
+  `synonyms.json` adds hand-checked synonyms: "Portal vein", "Buccinator",
+  "Seminal vesicle"… When there are several wordings, the semester-B
+  checklist's wording wins ("Hepatic portal vein", "Hepatic artery
+  proper"). Otherwise the most used wording wins. Capitalisation is
+  normalised to sentence case, because the site mixes "Ulnar Nerve" and
+  "Ulnar nerve". A name the site only abbreviates is spelled out ("n." →
+  "nerve").
+
+- **Kept as Z-Anatomy names:**
+  - structures the course never names: most branches, nuclei and nodes;
+  - wordings that fit two structures (e.g. "Abductor digiti minimi" of hand
+    and of foot);
+  - singular/plural mismatches ("Lungs" for one lung);
+  - side-specific course names ("Right coronary artery", "Left gastric
+    artery"). Both sides share one name in the app, so these are search
+    aliases.
+
+  The replaced Z-Anatomy name always stays searchable.
+
+- **Hebrew:** 71 hand-picked names as the course writes them
+  (`hebrew-names.json`, each with its page; listed in `CONTENT_REVIEW.md`).
+  Structures the course names only in English show no Hebrew.
+
+Regenerate after changing `synonyms.json` / `hebrew-names.json` or re-reading
+the site:
+
+```bash
+npx tsx scripts/course/medintzfat/dump-structures.ts
+python3 scripts/course/medintzfat/course_names.py
+npm run format
+```
