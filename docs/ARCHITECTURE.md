@@ -74,10 +74,13 @@ ancestors are tried (multi-primitive meshes load as a group of meshes).
   localized side label, in the user's preferred term language with English
   fallback.
 - Parts: a structure with `parentId` is a part of a whole (a head of a
-  muscle). `meshMap` maps every mesh to its **whole** structure;
+  muscle; a chamber of the heart, a lobe of a lung, a gyrus of a cerebral
+  lobe — organ wholes come from the export's `ORGAN_GROUPS`, with
+  `groupSide` for wholes that aren't the part's own side). `meshMap` maps every mesh to its **whole** structure;
   `partMeshMap` (optional) additionally maps part meshes to the part.
-  `registry.structures` / `bySystem` list **wholes only** (so scopes, counts,
-  quizzes and `showOnly` never see parts); `registry.get`, search and the
+  `registry.structures` / `bySystem` list **wholes only** (legend counts,
+  region views and `showOnly` never see parts); `registry.all` adds the parts
+  — what can be studied (quiz scopes, progress, distractors); `registry.get`, search and the
   info panel include parts; `partsOf` / `wholeOf` relate them. The scene index
   tags meshes with `userData.partId`, `getStructureVisibility(..., partId)`
   applies hide/isolate of either the part or the whole, selection/hover match

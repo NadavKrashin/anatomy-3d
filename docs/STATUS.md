@@ -2,7 +2,7 @@
 
 > Living document. **Update it with every commit that changes the code, not
 > just at the end of a session** — it must always match the code as it is.
-> Last updated: 2026-10-05 (session 2, whole body).
+> Last updated: 2026-10-05 (session 2, whole organs).
 
 ## Orientation (read in this order)
 
@@ -28,7 +28,7 @@ npx next start -p 3100         # in the background (after verify, which builds)
 npm run e2e:smoke              # real-browser explore + quiz flows, writes docs/screenshots/
 ```
 
-Expected today: **171 unit/component tests, 31 e2e checks, all passing; CI green.**
+Expected today: **175 unit/component tests, 32 e2e checks, all passing; CI green.**
 
 ## User decisions & preferences (do not re-ask)
 
@@ -45,6 +45,7 @@ Expected today: **171 unit/component tests, 31 e2e checks, all passing; CI green
 | 2026-10-05 | Next features chosen by the user: **muscle parts**, then **origins & insertions**.                                                                                                                                                                           |
 | 2026-10-05 | **Whole body next**: add all remaining body parts. More quizzes, Hebrew names and study tools wait until the user has her course's study sources.                                                                                                            |
 | 2026-10-05 | Wants to **switch between a male and a female model** — **deferred** ("document the options, future addition"). Options and research: `docs/DECISIONS.md` → "Male/female model switch".                                                                      |
+| 2026-10-05 | Whole body merged (PR #4). Next: **select whole organs** (brain parts, lungs, heart… as wholes).                                                                                                                                                             |
 | 2026-10-05 | **Docs must be kept updated continuously** as work happens (every commit), not at the end of a session. Enforced by the docs-gate hook.                                                                                                                      |
 | 2026-10-05 | **Deployed** by the user on Vercel: production URL **https://ors-anatomy.vercel.app** (production branch `main`).                                                                                                                                            |
 
@@ -97,10 +98,12 @@ All verified by `npm run e2e:smoke` against a production build.
   visible), hover, info panel, search (he/en/la), focus with panel-aware
   framing, hide, isolate, legend toggles, **layer peeling** (peel the
   structures outermost from the current view, never bones; restore one layer
-  at a time; the selected structure is kept), **muscle parts** (52 parts —
-  heads of biceps/triceps, parts of deltoid, pectoralis major, trapezius… —
-  searchable and selectable; "Muscle parts" toolbar toggle makes clicks pick
-  parts; info panel links part ↔ whole), **origins & insertions** (select a
+  at a time; the selected structure is kept), **muscle parts** and **whole organs** (parts of muscles —
+  heads of biceps/triceps, parts of deltoid… — and of organs — heart chambers
+  and valves, lung lobes, brain gyri… — searchable and selectable; a tap picks
+  the whole, the "Select parts" toggle picks parts; info panel links part ↔
+  whole; parts are quizzable, with part-picking switched on for those
+  questions), **origins & insertions** (select a
   muscle → its attachment patches on the bones, violet origin / amber
   insertion, with the bones named in the info panel; select a bone → the
   muscles attached to it; from Z-Anatomy patches — 679 for the whole body,
@@ -132,10 +135,10 @@ All verified by `npm run e2e:smoke` against a production build.
    in five files): load time, rotation smoothness, tap latency, peel speed.
    If sluggish: lower `--simplify` for nerves/vessels, load packs on demand
    (e.g. only when their legend entry is on), or add a BVH for picking.
-3. **Organ-level wholes:** the source models the brain as gyri/lobules, the
-   lungs as lobes, the heart as chambers/valves — there is no single
-   "cerebellum", "lung" or "heart" to select. Group them like muscle parts
-   (Z-Anatomy's ".g" hierarchy has the groupings).
+3. ~~Organ-level wholes~~ — done: heart, lungs, cerebral lobes, cerebellum,
+   brainstem, diencephalon, spinal cord, eyeballs, colon, small intestine,
+   pharynx, hypophysis, thymus, penis (`ORGAN_GROUPS` in the export). One
+   level only (gyrus → lobe, not → hemisphere → brain).
 4. **Hebrew names** (when the user has her course sources) — ideally from
    her course's term list; add to curated concepts + `docs/CONTENT_REVIEW.md`.
 5. ~~Muscle heads as sub-structures~~ — done (52 parts); quizzing on parts
@@ -163,12 +166,15 @@ All verified by `npm run e2e:smoke` against a production build.
   muscles' origins are missing (rhomboids, deltoid parts' insertion is on the
   whole muscle). 7 patches carried the wrong side suffix and are placed by
   position instead.
+- Organ wholes are one level deep (a gyrus belongs to its lobe; there is no
+  "cerebral hemisphere" or "brain" whole); deep brain nuclei outside a lobe
+  group stay on their own; a whole with a single part (insula) exists.
 - Whole body: the source is a **male** model (no female reproductive
   organs); no kidneys or inner ear (non-commercial licences); pleura, greater
   omentum, meninges and fasciae left out so they don't hide everything; the
   liver is one mesh (segments omitted). Regions for organs and midline
   structures come from their height against skeletal landmarks (navigation
-  aid). The brain/lungs/heart are only selectable as their parts (next steps).
+  aid).
 - Peeling inside the ribcage also removes the lungs (they show between the
   ribs and bones are never peeled) — hide the skeleton in the legend first
   to study thoracic organs.
@@ -237,3 +243,9 @@ All verified by `npm run e2e:smoke` against a production build.
 - **2026-10-05 · session 2 (cont.)** — Researched a female model for a
   male/female switch; user deferred the feature — options documented in
   DECISIONS.
+- **2026-10-05 · session 2 (cont.)** — Whole organs (user request): export
+  groups organ pieces by Z-Anatomy's hierarchy (`ORGAN_GROUPS` → manifest
+  `group`/`groupSide`); heart, lungs, brain lobes, cerebellum… are wholes
+  with parts; parts now count as studyable (`registry.all`: quiz scopes,
+  progress, distractors — siblings preferred, own whole/parts never);
+  "Muscle parts" toggle renamed "Select parts".

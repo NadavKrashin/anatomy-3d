@@ -24,7 +24,9 @@ What it must never include (non-commercial licences, see THIRD_PARTY_ASSETS.md):
   - the kidney model (kidneys, renal pelvis, intrarenal vessels).
 
 Per node it records: system, tissue (for one shared material per tissue),
-region, pack and, for muscle parts, the whole muscle (group).
+region, pack and, for parts, the whole they belong to (group): the whole
+muscle for muscle parts, or the whole organ (ORGAN_GROUPS, with groupSide)
+for e.g. heart chambers, lung lobes, brain gyri.
 
 Licence: Z-Anatomy CC BY-SA 4.0, BodyParts3D CC BY-SA 2.1 JP.
 """
@@ -112,6 +114,46 @@ REGION_COLLECTIONS = [
     (("Back", "Spine", "Spinal cord"), "back"),
     (("Thorax",), "thorax"),
 ]
+
+# Organs made of several meshes: source group (".g" empty) → whole organ
+# name, and whether the whole is one midline organ or one per side (the
+# parts' side). A mesh joins the nearest listed group among its ancestors.
+ORGAN_GROUPS: dict[str, tuple[str, str]] = {
+    "Heart.g": ("Heart", "midline"),
+    "Right lung.g": ("Lung", "right"),
+    "Left lung.g": ("Lung", "left"),
+    "Frontal lobe.g": ("Frontal lobe", "sided"),
+    "Parietal lobe.g": ("Parietal lobe", "sided"),
+    "Temporal lobe.g": ("Temporal lobe", "sided"),
+    "Occipital lobe.g": ("Occipital lobe", "sided"),
+    "Limbic lobe.g": ("Limbic lobe", "sided"),
+    "Insula.g": ("Insula", "sided"),
+    "Cerebellum.g": ("Cerebellum", "midline"),
+    "Brainstem.g": ("Brainstem", "midline"),
+    "Diencephalon.g": ("Diencephalon", "midline"),
+    "Spinal cord.g": ("Spinal cord", "midline"),
+    "Eyeball.g": ("Eyeball", "sided"),
+    "Colon.g": ("Colon", "midline"),
+    "Small intestine.g": ("Small intestine", "midline"),
+    "Pharynx.g": ("Pharynx", "midline"),
+    "Hypophysis.g": ("Hypophysis", "midline"),
+    "Thymus.g": ("Thymus", "midline"),
+    "Penis.g": ("Penis", "midline"),
+}
+
+
+def organ_group(obj: bpy.types.Object) -> tuple[str, str] | None:
+    """(whole organ name, its side) for a mesh that is part of a listed organ."""
+    for ancestor in ancestors(obj):
+        if ancestor in ORGAN_GROUPS:
+            name, side = ORGAN_GROUPS[ancestor]
+            if side == "sided":
+                if not obj.name.endswith((".l", ".r")):
+                    return None  # a midline piece of a paired organ stays on its own
+                side = "left" if obj.name.endswith(".l") else "right"
+            return name, side
+    return None
+
 
 NOT_MUSCLE_GROUPS = {"Common flexor tendon", "Common extensor tendon", "Trochanteric insertion"}
 
@@ -350,6 +392,7 @@ def main() -> None:
     by_name = {obj.name: obj for obj, *_ in keep}
     region_of = Regions(read_columns("Collections - BONUS.csv"), by_name)
     regions = {obj.name: region_of(obj, system) for obj, system, _, _ in keep}
+    organs = {obj.name: organ_group(obj) for obj, *_ in keep}  # before unparenting
     renamed = (
         complete_sides(set(by_name), [obj for obj, *_ in keep])
         | {old: new for old, new in RENAMES.items() if old in by_name}
@@ -360,6 +403,7 @@ def main() -> None:
             old = obj.name
             obj.name = renamed[old]
             regions[obj.name] = regions.pop(old)
+            organs[obj.name] = organs.pop(old)
     print("Renamed:", renamed)
     regions = harmonize_sides(regions)
 
@@ -390,6 +434,8 @@ def main() -> None:
         group = groups.get(base_name(obj.name).strip("()"))
         if group and system == "muscular":
             entry["group"] = group
+        elif organs[obj.name]:
+            entry["group"], entry["groupSide"] = organs[obj.name]
         manifest.append(entry)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)

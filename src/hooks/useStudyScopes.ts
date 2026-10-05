@@ -19,7 +19,7 @@ export function useStudyScopes(): StudyScope[] {
   return useMemo(() => {
     const due = dueForReview(
       progress,
-      registry.structures.map((s) => s.id),
+      registry.all.map((s) => s.id),
       now,
     );
     const dueScope: StudyScope[] =

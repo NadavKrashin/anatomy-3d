@@ -221,4 +221,24 @@ describe("the Z-Anatomy whole-body dataset", () => {
     expect(region("urinary-bladder")).toBe("pelvis");
     expect(region("thyroid-gland")).toBe("neck");
   });
+
+  it("groups organ pieces into whole organs, one per side where paired", () => {
+    expect(registry.partsOf("heart").map((p) => p.id)).toEqual(
+      expect.arrayContaining(["ventricle-left", "atrium-right"]),
+    );
+    expect(registry.partsOf("lung-right")).toHaveLength(3);
+    expect(registry.partsOf("lung-left")).toHaveLength(2);
+    expect(registry.get("frontal-lobe-left")?.side).toBe("left");
+    expect(registry.get("cerebellum")?.side).toBe("midline");
+    expect(registry.wholeOf("superior-lobe-of-right-lung")?.id).toBe(
+      "lung-right",
+    );
+  });
+
+  it("studyable structures include parts, the wholes list does not", () => {
+    expect(registry.all.some((s) => s.id === "ventricle-left")).toBe(true);
+    expect(registry.structures.some((s) => s.id === "ventricle-left")).toBe(
+      false,
+    );
+  });
 });

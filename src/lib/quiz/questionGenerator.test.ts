@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { demoDataset } from "@/data/anatomy/demo";
+import { zAnatomyDataset } from "@/data/anatomy/z-anatomy";
 import { createRegistry } from "@/lib/anatomy/registry";
 import { builtInScopes, findScope } from "@/lib/study/scopes";
 import { eligibleStructures } from "./eligibility";
@@ -187,6 +188,28 @@ describe("pickDistractors", () => {
       expect(picks.map((p) => p.id)).not.toContain("biceps-brachii-right");
       const groups = picks.map((p) => p.bilateralGroupId).filter(Boolean);
       expect(new Set(groups).size).toBe(groups.length);
+    }
+  });
+});
+
+describe("pickDistractors — parts of a whole", () => {
+  const z = createRegistry(zAnatomyDataset.structures);
+  const ventricle = z.get("ventricle-left")!;
+
+  it("prefers other parts of the same organ", () => {
+    const picks = pickDistractors(ventricle, z.all, 3, createRng(1));
+    expect(picks.every((p) => p.parentId === "heart")).toBe(true);
+  });
+
+  it("never offers the target's own whole or its parts", () => {
+    for (let seed = 0; seed < 20; seed++) {
+      const ids = pickDistractors(ventricle, z.all, 3, createRng(seed)).map(
+        (p) => p.id,
+      );
+      expect(ids).not.toContain("heart");
+      const heart = z.get("heart")!;
+      const forHeart = pickDistractors(heart, z.all, 3, createRng(seed));
+      expect(forHeart.some((p) => p.parentId === "heart")).toBe(false);
     }
   });
 });

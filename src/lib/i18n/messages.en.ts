@@ -44,7 +44,7 @@ export const en: Messages = {
     isolating: "Isolate mode",
     peelLayer: "Peel layer",
     restoreLayer: "Restore layer",
-    pickParts: "Muscle parts",
+    pickParts: "Select parts",
   },
   search: {
     placeholder: "Search structures…",

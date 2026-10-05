@@ -160,7 +160,7 @@ export async function exploreFlow(browser: Browser, errors: string[]) {
   const patches = desktop.waitForResponse((r) =>
     r.url().includes("attachments.glb"),
   );
-  // Muscle parts: search a head, see what it belongs to, go to the whole.
+  // Parts: search a head of a muscle, see what it belongs to, go to the whole.
   await desktop.locator("#structure-search").fill("long head of biceps");
   await desktop.waitForSelector('[role="option"]');
   await desktop.keyboard.press("Enter");
@@ -198,13 +198,31 @@ export async function exploreFlow(browser: Browser, errors: string[]) {
   );
   await desktop.screenshot({ path: `${SHOTS}/attachments-scapula.png` });
 
-  await desktop.getByRole("button", { name: "Muscle parts" }).click();
+  await desktop.getByRole("button", { name: "Select parts" }).click();
   assert(
     (await desktop
-      .getByRole("button", { name: "Muscle parts" })
+      .getByRole("button", { name: "Select parts" })
       .getAttribute("aria-pressed")) === "true",
-    "the muscle parts toggle switches on",
+    "the parts toggle switches on",
   );
+
+  // Whole organs: the heart is one structure made of its chambers and valves.
+  await desktop.getByRole("button", { name: "Select parts" }).click(); // back to wholes
+  await desktop.locator("#structure-search").fill("heart");
+  await desktop.waitForSelector('[role="option"]');
+  await desktop
+    .getByRole("option", { name: /^Heart/ })
+    .first()
+    .click();
+  await desktop.waitForTimeout(1200);
+  assert(
+    (await infoTitle(desktop)) === "Heart" &&
+      (await desktop
+        .getByRole("button", { name: /Ventricle \(left\)/ })
+        .count()) === 1,
+    "the heart is selectable as a whole organ that lists its chambers",
+  );
+  await desktop.screenshot({ path: `${SHOTS}/organ-heart.png` });
 
   // iPad landscape, Hebrew, region scope.
   const ipad = await openPage(browser, errors, {

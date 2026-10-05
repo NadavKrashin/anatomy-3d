@@ -41,6 +41,7 @@ function syncViewer(
 
   if (run.phase === "complete") {
     viewer.restoreAllLayers();
+    viewer.setPickParts(false);
     viewer.setSelectionLocked(false);
     viewer.select(null);
     viewer.setHiddenSystems([]);
@@ -54,6 +55,8 @@ function syncViewer(
     // Layers peeled for the previous question would give this one away.
     viewer.restoreAllLayers();
     viewer.setHiddenSystems(target ? systemsToHideFor(target) : []);
+    // "Find the left ventricle" needs clicks to pick parts; "find the heart" wholes.
+    viewer.setPickParts(Boolean(target?.parentId));
     if (question.type === "identify") {
       // Highlight the structure to identify and keep clicks from moving it.
       // (It is visible: the quiz shows exactly its scope, which contains it.)
@@ -97,7 +100,7 @@ export function useQuizRun(config: QuizConfig) {
       const questions = generateQuiz({
         structures: eligibleStructures(config.scope, registry, selectable),
         // Wrong options come from core structures only, never tiny branches.
-        distractorPool: registry.structures.filter(
+        distractorPool: registry.all.filter(
           (s) => selectable.has(s.id) && !s.tags.includes(DETAIL_TAG),
         ),
         mode: config.mode,

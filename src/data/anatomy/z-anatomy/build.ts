@@ -24,8 +24,17 @@ export interface ManifestEntry {
     | "vein";
   region: AnatomyRegion;
   vertices: number;
-  /** Whole muscle this mesh is a part of (e.g. a head of biceps brachii). */
+  /**
+   * The whole this mesh is a part of: a muscle (a head of biceps brachii →
+   * "Biceps brachii muscle") or an organ (a lobe → "Lung").
+   */
   group?: string;
+  /**
+   * Side of the whole when it isn't the part's own side: organ wholes are
+   * either one midline organ ("Heart", from midline or sided parts) or one per
+   * side whose parts carry no side suffix ("Lung", right/left lobes).
+   */
+  groupSide?: BodySide;
 }
 
 export const Z_ANATOMY_SOURCE = "Z-Anatomy";
@@ -100,11 +109,11 @@ function systemFor(entry: ManifestEntry): AnatomySystem {
 }
 
 /**
- * Turns the export manifest into app structures + mesh maps. Muscle parts
- * listed under a group (heads of biceps, parts of deltoid…) become one
- * whole-muscle structure with several meshes, and each part also becomes a
- * structure of its own (`parentId` = the whole muscle) mapped in
- * `partMeshMap`.
+ * Turns the export manifest into app structures + mesh maps. Parts listed
+ * under a group — heads of a muscle (biceps), pieces of an organ (heart
+ * chambers, lung lobes, brain gyri) — become one whole structure with
+ * several meshes, and each part also becomes a structure of its own
+ * (`parentId` = the whole) mapped in `partMeshMap`.
  */
 export function buildZAnatomyDataset(manifest: readonly ManifestEntry[]): {
   structures: AnatomicalStructure[];
@@ -118,7 +127,8 @@ export function buildZAnatomyDataset(manifest: readonly ManifestEntry[]): {
 
   for (const entry of manifest) {
     const parsed = parseName(entry.name);
-    const id = toId(entry.group ?? parsed.base, parsed.side);
+    const wholeSide = entry.groupSide ?? parsed.side;
+    const id = toId(entry.group ?? parsed.base, wholeSide);
     meshMap[entry.name] = id;
     // A whole muscle spans its parts' regions (e.g. erector spinae: neck + back).
     if (entry.group)
@@ -129,13 +139,14 @@ export function buildZAnatomyDataset(manifest: readonly ManifestEntry[]): {
         structureFor(
           entry,
           entry.group ?? parsed.base,
-          parsed,
+          { ...parsed, side: wholeSide },
           !entry.group && parsed.inconstant,
         ),
       );
     }
-    if (entry.group) {
-      const partId = toId(parsed.base, parsed.side);
+    // A part named exactly like its whole is the whole itself, not a part.
+    const partId = toId(parsed.base, parsed.side);
+    if (entry.group && partId !== id) {
       partMeshMap[entry.name] = partId;
       if (!byId.has(partId)) {
         byId.set(partId, {

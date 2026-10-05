@@ -90,3 +90,9 @@ costal cartilages), part of adductor pollicis (capitate).
   skeletal landmarks (e.g. the liver and stomach → abdomen, the thyroid →
   neck). Adjust in the export if the course divides regions differently.
 - The model is male; no kidneys or inner ear (licences), no female organs.
+- **Organ wholes** (`ORGAN_GROUPS` in the export) are named after Z-Anatomy's
+  groups: Heart, Lung, Frontal/Parietal/Temporal/Occipital/Limbic lobe,
+  Insula, Cerebellum, Brainstem, Diencephalon, Spinal cord, Eyeball, Colon,
+  Small intestine, Pharynx, Hypophysis, Thymus, Penis — check membership
+  (e.g. the source puts the duodenum and jejunum, but no ileum, in the small
+  intestine).
