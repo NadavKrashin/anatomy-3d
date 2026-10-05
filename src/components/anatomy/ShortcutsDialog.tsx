@@ -30,6 +30,8 @@ export function ShortcutsDialog({
     ["I", t.shortcuts.isolate],
     ["H", t.shortcuts.hide],
     ["R", t.shortcuts.reset],
+    ["P", t.shortcuts.peel],
+    ["⇧P", t.shortcuts.restore],
     ["Q", t.shortcuts.quiz],
     ["?", t.shortcuts.help],
   ];

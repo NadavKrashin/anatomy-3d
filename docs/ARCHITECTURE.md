@@ -89,13 +89,13 @@ ancestors are tried (multi-primitive meshes load as a group of meshes).
 
 ## 4. State
 
-| Store                      | Holds                                                                                     | Persisted                                                    |
-| -------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| `store/viewerStore.ts`     | selection, hover, hidden ids, hidden systems, isolated id, camera command, selection lock | no                                                           |
-| `store/settingsStore.ts`   | UI locale, term-language preference                                                       | localStorage (`anatomy.settings`)                            |
-| `store/sceneIndexStore.ts` | structure id → three.js meshes of the loaded model                                        | no (runtime objects)                                         |
-| `store/quizStore.ts`       | the active `QuizRun` (state of the pure quiz engine)                                      | no                                                           |
-| `store/progressStore.ts`   | `ProgressData`: per-structure progress + session history                                  | via `ProgressRepository` → localStorage (`anatomy.progress`) |
+| Store                      | Holds                                                                                                                   | Persisted                                                    |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| `store/viewerStore.ts`     | selection, hover, hidden ids, hidden systems, isolated id, camera command, selection lock, peeled layers + peel request | no                                                           |
+| `store/settingsStore.ts`   | UI locale, term-language preference                                                                                     | localStorage (`anatomy.settings`)                            |
+| `store/sceneIndexStore.ts` | structure id → three.js meshes of the loaded model                                                                      | no (runtime objects)                                         |
+| `store/quizStore.ts`       | the active `QuizRun` (state of the pure quiz engine)                                                                    | no                                                           |
+| `store/progressStore.ts`   | `ProgressData`: per-structure progress + session history                                                                | via `ProgressRepository` → localStorage (`anatomy.progress`) |
 
 Conventions:
 
@@ -137,6 +137,15 @@ AnatomyModel.apply()
   `SelectionLabel` (explore only — it would give away quiz answers) puts an
   atlas-style leader label at the selection's bounding-box centre via drei
   `<Html>`.
+- Layer peeling: `requestPeel()` bumps a nonce in the viewer store;
+  `useLayerPeeling` (inside the canvas) answers with one off-screen render
+  (`three/structureIdPass.ts`: every interactive mesh in a flat colour that
+  encodes its index, ≤512px, linear/untone-mapped so bytes decode exactly),
+  counts front pixels per structure, and `lib/anatomy/peel.ts` (pure, tested)
+  picks the outer layer: non-skeletal, ≥3 pixels. `applyPeel` hides it as one
+  batch on a stack (`peeledLayers`), never the selected structure;
+  `restoreLayer` pops one batch, `showAll`/`showOnly`/quiz question changes
+  clear them. UI: `LayerControls` (explore toolbar, quiz find questions).
 - `AnatomyCanvas` is loaded with `next/dynamic({ ssr: false })`, wrapped in an
   error boundary with retry, a WebGL capability check and a loading overlay.
 

@@ -121,6 +121,41 @@ export async function exploreFlow(browser: Browser, errors: string[]) {
   );
   await desktop.screenshot({ path: `${SHOTS}/explore-en.png` });
 
+  // Layer peeling: each peel hides the structures outermost from the camera.
+  await desktop.getByRole("button", { name: "Peel layer" }).click();
+  await desktop
+    .getByRole("button", { name: "Restore layer (1)" })
+    .waitFor({ timeout: 5000 });
+  await desktop.screenshot({ path: `${SHOTS}/peel-1.png` });
+  await desktop.keyboard.press("KeyP");
+  await desktop.keyboard.press("KeyP");
+  await desktop
+    .getByRole("button", { name: "Restore layer (3)" })
+    .waitFor({ timeout: 5000 });
+  await desktop.screenshot({ path: `${SHOTS}/peel-3.png` });
+  const hiddenAfterPeel = Number(
+    /\((\d+)\)/.exec(
+      await desktop.getByRole("button", { name: /Show all/ }).innerText(),
+    )?.[1],
+  );
+  assert(
+    hiddenAfterPeel > 10,
+    `three peels hide the outer layers (${hiddenAfterPeel} structures)`,
+  );
+  await desktop.keyboard.press("Shift+KeyP");
+  assert(
+    (await desktop
+      .getByRole("button", { name: "Restore layer (2)" })
+      .count()) === 1,
+    "⇧P restores the last peeled layer",
+  );
+  await desktop.getByRole("button", { name: /Show all/ }).click();
+  assert(
+    (await desktop.getByRole("button", { name: /Restore layer/ }).count()) ===
+      0,
+    "Show all also clears peeled layers",
+  );
+
   // iPad landscape, Hebrew, region scope.
   const ipad = await openPage(browser, errors, {
     viewport: { width: 1180, height: 820 },

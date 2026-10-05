@@ -18,6 +18,13 @@ interface ViewerState {
   cameraCommand: CameraCommand | null;
   /** While true, clicks in the 3D view don't change the selection (quiz highlights). */
   selectionLocked: boolean;
+  /**
+   * Layer peeling: each entry is one peeled batch (the structures that were
+   * outermost from the camera at the time), most recent last.
+   */
+  peeledLayers: readonly (readonly string[])[];
+  /** Nonce of the latest peel request; the 3D scene answers with `applyPeel`. */
+  peelRequest: number;
 
   select: (structureId: string | null) => void;
   /** Selection from a click in the 3D view; ignored while the selection is locked. */
@@ -39,6 +46,14 @@ interface ViewerState {
   reveal: (structureId: string, system: AnatomySystem) => void;
   focus: (structureId: string) => void;
   resetCamera: () => void;
+  /** Ask the scene to peel the outer layer as seen from the camera (not while isolating). */
+  requestPeel: () => void;
+  /** Hide one peeled batch; the selected structure is always kept. */
+  applyPeel: (structureIds: readonly string[]) => void;
+  /** Show the most recently peeled batch again. */
+  restoreLayer: () => void;
+  /** Show every peeled batch again (e.g. on a new quiz question). */
+  restoreAllLayers: () => void;
 }
 
 let nonce = 0;
@@ -57,6 +72,8 @@ const initialState = {
   isolatedStructureId: null,
   cameraCommand: null,
   selectionLocked: false,
+  peeledLayers: [],
+  peelRequest: 0,
 } satisfies Partial<ViewerState>;
 
 export const useViewerStore = create<ViewerState>()((set, get) => ({
@@ -99,6 +116,7 @@ export const useViewerStore = create<ViewerState>()((set, get) => ({
       hiddenStructureIds: new Set(),
       hiddenSystems: new Set(),
       isolatedStructureId: null,
+      peeledLayers: [],
     }),
 
   showOnly: (visibleIds, allIds) => {
@@ -108,6 +126,7 @@ export const useViewerStore = create<ViewerState>()((set, get) => ({
       hiddenSystems: new Set(),
       isolatedStructureId: null,
       selectedStructureId: null,
+      peeledLayers: [],
     });
   },
 
@@ -145,4 +164,46 @@ export const useViewerStore = create<ViewerState>()((set, get) => ({
   focus: (structureId) =>
     set({ cameraCommand: { type: "focus", structureId, nonce: ++nonce } }),
   resetCamera: () => set({ cameraCommand: { type: "reset", nonce: ++nonce } }),
+
+  requestPeel: () => {
+    if (get().isolatedStructureId === null)
+      set({ peelRequest: get().peelRequest + 1 });
+  },
+
+  applyPeel: (structureIds) =>
+    set((state) => {
+      const layer = structureIds.filter(
+        (id) =>
+          id !== state.selectedStructureId && !state.hiddenStructureIds.has(id),
+      );
+      if (layer.length === 0) return {};
+      return {
+        peeledLayers: [...state.peeledLayers, layer],
+        hiddenStructureIds: new Set([...state.hiddenStructureIds, ...layer]),
+        hoveredStructureId:
+          state.hoveredStructureId && layer.includes(state.hoveredStructureId)
+            ? null
+            : state.hoveredStructureId,
+      };
+    }),
+
+  restoreLayer: () =>
+    set((state) => {
+      const last = state.peeledLayers.at(-1);
+      if (!last) return {};
+      const hidden = new Set(state.hiddenStructureIds);
+      for (const id of last) hidden.delete(id);
+      return {
+        peeledLayers: state.peeledLayers.slice(0, -1),
+        hiddenStructureIds: hidden,
+      };
+    }),
+
+  restoreAllLayers: () =>
+    set((state) => {
+      if (state.peeledLayers.length === 0) return {};
+      const hidden = new Set(state.hiddenStructureIds);
+      for (const id of state.peeledLayers.flat()) hidden.delete(id);
+      return { peeledLayers: [], hiddenStructureIds: hidden };
+    }),
 }));

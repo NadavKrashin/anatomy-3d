@@ -79,6 +79,20 @@ async function runQuizFlow(page: Page) {
   );
   await page.screenshot({ path: `${SHOTS}/quiz-find.png` });
 
+  // Peeling is offered in find questions (deep muscles hide under others).
+  await page.getByRole("button", { name: he.viewer.peelLayer }).click();
+  await page
+    .getByRole("button", { name: `${he.viewer.restoreLayer} (1)` })
+    .waitFor({ timeout: 5000 });
+  await page.screenshot({ path: `${SHOTS}/quiz-find-peeled.png` });
+  await page.keyboard.press("Shift+KeyP");
+  assert(
+    (await page
+      .getByRole("button", { name: new RegExp(he.viewer.restoreLayer) })
+      .count()) === 0,
+    "a find question can peel a layer and restore it (⇧P)",
+  );
+
   let sawFeedback = false;
   for (
     let guard = 0;

@@ -2,7 +2,7 @@
 
 > Living document. **Update it with every commit that changes the code, not
 > just at the end of a session** — it must always match the code as it is.
-> Last updated: 2026-10-05 (session 2, deployed to Vercel).
+> Last updated: 2026-10-05 (session 2, layer peeling).
 
 ## Orientation (read in this order)
 
@@ -28,7 +28,7 @@ npx next start -p 3100         # in the background (after verify, which builds)
 npm run e2e:smoke              # real-browser explore + quiz flows, writes docs/screenshots/
 ```
 
-Expected today: **135 unit/component tests, 21 e2e checks, all passing; CI green.**
+Expected today: **146 unit/component tests, 25 e2e checks, all passing; CI green.**
 
 ## User decisions & preferences (do not re-ask)
 
@@ -87,8 +87,13 @@ All verified by `npm run e2e:smoke` against a production build.
   selected structure, ruled lists (`docs/DESIGN.md`).
 - **Viewer:** selection with teal x-ray highlight (buried structures stay
   visible), hover, info panel, search (he/en/la), focus with panel-aware
-  framing, hide, isolate, legend toggles, shortcuts (`/ Esc F I H R Q ?`).
-- **Quiz:** find (click in 3D; muscles auto-hidden for non-muscle targets),
+  framing, hide, isolate, legend toggles, **layer peeling** (peel the
+  structures outermost from the current view, never bones; restore one layer
+  at a time; the selected structure is kept), shortcuts
+  (`/ Esc F I H R P ⇧P Q ?`).
+- **Quiz:** find (click in 3D; muscles auto-hidden for non-muscle targets;
+  peel/restore buttons and P/⇧P to reach deep structures — layers reset per
+  question and when the answer is revealed),
   identify (multiple choice, plausible core distractors), mixed; scopes by
   region / system / due / review mistakes; built-in scopes skip `detail`
   structures (small branches).
@@ -123,8 +128,10 @@ All verified by `npm run e2e:smoke` against a production build.
 
 - All medical terms are `verified: false`; Hebrew exists only for ~16 curated
   concepts; the other structures show English (validator warnings, expected).
-- Deep muscles can be covered by superficial ones in muscle "find" questions
-  (no layer peeling yet; x-ray applies to the selected structure only).
+- Peeling is view-based: from far away one peel removes a lot (the whole
+  superficial layer of both arms); zoom in to peel finely. Structures showing
+  fewer than 3 pixels in the 512px pass count as slivers and stay. Peel speed
+  on a real iPad not yet measured (one extra off-screen render + readback).
 - Long structures (nerves) are framed along their whole length.
 - Viewer state (hidden/isolated) is not persisted across reloads (by design).
 - Progress is per browser/device (localStorage) — no sync.
@@ -164,3 +171,7 @@ All verified by `npm run e2e:smoke` against a production build.
   deployed: https://ors-anatomy.vercel.app. Recorded in STATUS/DEPLOYMENT.
 - **2026-10-05 · session 2 (cont.)** — User checked production: "looks
   good". Awaiting the user's pick of the next feature.
+- **2026-10-05 · session 2 (cont.)** — Layer peeling (user picked it as the
+  next feature): off-screen structure-ID render finds what's outermost from
+  the camera; Peel / Restore in the toolbar and in find questions; P / ⇧P.
+  Also: toolbar labels no longer wrap on phones.

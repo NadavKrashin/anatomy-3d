@@ -47,6 +47,10 @@ export function useViewerShortcuts({
         case "KeyR":
           viewer.resetCamera();
           break;
+        case "KeyP":
+          if (event.shiftKey) viewer.restoreLayer();
+          else viewer.requestPeel();
+          break;
         case "KeyQ":
           onQuiz();
           break;

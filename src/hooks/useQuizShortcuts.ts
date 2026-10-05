@@ -8,7 +8,8 @@ const DIGITS = ["Digit1", "Digit2", "Digit3", "Digit4", "Digit5", "Digit6"];
 
 /**
  * Quiz keys (physical codes, so a Hebrew layout works): 1–4 answer identify
- * questions, Enter moves on after an answer, R resets the camera, Q exits.
+ * questions, Enter moves on after an answer, R resets the camera, P / ⇧P
+ * peel / restore a layer, Q exits.
  */
 export function useQuizShortcuts({
   onExitToExplore,
@@ -50,6 +51,10 @@ export function useQuizShortcuts({
           break;
         case "KeyR":
           useViewerStore.getState().resetCamera();
+          break;
+        case "KeyP":
+          if (event.shiftKey) useViewerStore.getState().restoreLayer();
+          else useViewerStore.getState().requestPeel();
           break;
         case "KeyQ":
           onExitToExplore();

@@ -93,3 +93,59 @@ describe("viewer store", () => {
     expect(state.selectedStructureId).toBeNull();
   });
 });
+
+describe("viewer store — layer peeling", () => {
+  beforeEach(() => useViewerStore.setState(initial, true));
+
+  it("a peel request is a new nonce, ignored while isolating", () => {
+    const { requestPeel, isolate } = useViewerStore.getState();
+    requestPeel();
+    expect(useViewerStore.getState().peelRequest).toBe(1);
+    isolate("heart");
+    requestPeel();
+    expect(useViewerStore.getState().peelRequest).toBe(1);
+  });
+
+  it("applying a peel hides the batch but keeps the selection", () => {
+    const { select, applyPeel } = useViewerStore.getState();
+    select("biceps");
+    applyPeel(["deltoid", "biceps", "cephalic-vein"]);
+    const state = useViewerStore.getState();
+    expect(state.peeledLayers).toEqual([["deltoid", "cephalic-vein"]]);
+    expect([...state.hiddenStructureIds].sort()).toEqual([
+      "cephalic-vein",
+      "deltoid",
+    ]);
+    expect(state.selectedStructureId).toBe("biceps");
+  });
+
+  it("an empty peel records no layer", () => {
+    useViewerStore.getState().applyPeel([]);
+    expect(useViewerStore.getState().peeledLayers).toEqual([]);
+  });
+
+  it("restoring brings back only the last layer, not manual hides", () => {
+    const { hide, applyPeel, restoreLayer } = useViewerStore.getState();
+    hide("liver");
+    applyPeel(["deltoid"]);
+    applyPeel(["biceps"]);
+    restoreLayer();
+    let state = useViewerStore.getState();
+    expect([...state.hiddenStructureIds].sort()).toEqual(["deltoid", "liver"]);
+    expect(state.peeledLayers).toEqual([["deltoid"]]);
+    useViewerStore.getState().restoreAllLayers();
+    state = useViewerStore.getState();
+    expect([...state.hiddenStructureIds]).toEqual(["liver"]);
+    expect(state.peeledLayers).toEqual([]);
+  });
+
+  it("show all and show only forget peeled layers", () => {
+    const { applyPeel, showAll, showOnly } = useViewerStore.getState();
+    applyPeel(["deltoid"]);
+    showAll();
+    expect(useViewerStore.getState().peeledLayers).toEqual([]);
+    useViewerStore.getState().applyPeel(["deltoid"]);
+    showOnly(["biceps"], ["biceps", "deltoid"]);
+    expect(useViewerStore.getState().peeledLayers).toEqual([]);
+  });
+});

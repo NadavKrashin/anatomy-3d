@@ -5,6 +5,7 @@ import { Eye, Keyboard, Layers, ListTree, RotateCcw } from "lucide-react";
 import { IconButton } from "@/components/ui/IconButton";
 import { useMessages } from "@/hooks/useMessages";
 import { useViewerStore } from "@/store/viewerStore";
+import { LayerControls } from "./LayerControls";
 
 interface ViewerToolbarProps {
   systemsOpen: boolean;
@@ -47,6 +48,7 @@ export function ViewerToolbar({
         icon={<RotateCcw />}
         onClick={resetCamera}
       />
+      <LayerControls />
       {isolating && (
         <IconButton
           showLabel

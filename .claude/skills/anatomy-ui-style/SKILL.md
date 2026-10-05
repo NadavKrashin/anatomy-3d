@@ -30,7 +30,7 @@ Utilities: `sheet` (floating surface), `shadow-[var(--shadow-float)]`,
 ## Components to reuse (src/components/ui, anatomy, layout)
 
 `Button` / `ButtonLink` (`variant`: primary | secondary | quiet, `size`: md |
-sm) · `IconButton` (quiet, rounded, `showLabel`, `active`) · `Segmented` ·
+sm) · `IconButton` (quiet, rounded, `showLabel` — `"wide"` = icon-only on phones — `active`; labels never wrap) · `Segmented` ·
 `Kbd` · `PageShell` (regular pages) · `ViewerFrame` + `ViewerPanel` (3D pages)
 · `TermText` / `StructureLabel` (anatomical names, bidi-safe).
 
