@@ -175,3 +175,5 @@ All verified by `npm run e2e:smoke` against a production build.
   next feature): off-screen structure-ID render finds what's outermost from
   the camera; Peel / Restore in the toolbar and in find questions; P / ⇧P.
   Also: toolbar labels no longer wrap on phones.
+- **2026-10-05 · session 2 (cont.)** — Layer peeling merged to `main` via
+  PR #2 (user asked); Vercel redeploys production from `main`.
