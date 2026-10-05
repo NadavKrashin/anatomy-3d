@@ -47,9 +47,36 @@ async function modelIssues(): Promise<DatasetIssue[]> {
   ];
 }
 
+/** Every attachment must name a patch node in the attachments model. */
+async function attachmentModelIssues(): Promise<DatasetIssue[]> {
+  const { attachments } = activeDataset;
+  if (!attachments) return [];
+  const path = resolve(
+    process.cwd(),
+    "public",
+    attachments.modelUrl.replace(/^\//, ""),
+  );
+  const names = new Set(
+    (await (await createIO()).read(path))
+      .getRoot()
+      .listNodes()
+      .map((n) => n.getName()),
+  );
+  return attachments.items
+    .filter((item) => !names.has(item.meshName))
+    .map((item) => ({
+      severity: "error" as const,
+      message: `attachment "${item.meshName}" not found in ${attachments.modelUrl}`,
+    }));
+}
+
 async function main() {
   const { info, structures, meshMap } = activeDataset;
-  const issues = [...validateDataset(activeDataset), ...(await modelIssues())];
+  const issues = [
+    ...validateDataset(activeDataset),
+    ...(await modelIssues()),
+    ...(await attachmentModelIssues()),
+  ];
   const errors = issues.filter((i) => i.severity === "error");
 
   console.log(

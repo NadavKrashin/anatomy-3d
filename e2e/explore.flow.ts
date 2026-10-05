@@ -156,6 +156,10 @@ export async function exploreFlow(browser: Browser, errors: string[]) {
     "Show all also clears peeled layers",
   );
 
+  // Selecting a muscle fetches the attachment patches model (once).
+  const patches = desktop.waitForResponse((r) =>
+    r.url().includes("attachments.glb"),
+  );
   // Muscle parts: search a head, see what it belongs to, go to the whole.
   await desktop.locator("#structure-search").fill("long head of biceps");
   await desktop.waitForSelector('[role="option"]');
@@ -171,6 +175,29 @@ export async function exploreFlow(browser: Browser, errors: string[]) {
     (await desktop.getByRole("heading", { name: "Parts" }).count()) === 1,
     "a part links to its whole muscle, which lists its parts",
   );
+  // Origins & insertions: the whole biceps is selected now; its patches
+  // come from a separate model fetched on demand.
+  assert(
+    (await desktop
+      .getByRole("heading", { name: "Origin and insertion" })
+      .count()) === 1,
+    "a muscle shows its origin and insertion",
+  );
+  assert((await patches).ok(), "the attachment patches model loads on demand");
+  await desktop.keyboard.press("KeyF");
+  await desktop.waitForTimeout(1200);
+  await desktop.screenshot({ path: `${SHOTS}/attachments-biceps.png` });
+  await desktop.getByRole("button", { name: "Scapula (left)" }).click();
+  await desktop.keyboard.press("KeyF");
+  await desktop.waitForTimeout(1200);
+  assert(
+    (await desktop
+      .getByRole("heading", { name: "Muscles attached to this bone" })
+      .count()) === 1,
+    "a bone lists the muscles attached to it",
+  );
+  await desktop.screenshot({ path: `${SHOTS}/attachments-scapula.png` });
+
   await desktop.getByRole("button", { name: "Muscle parts" }).click();
   assert(
     (await desktop

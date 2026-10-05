@@ -70,6 +70,18 @@ export const en: Messages = {
     },
     clinicalNote: "Clinical note",
   },
+  attachments: {
+    title: "Origin and insertion",
+    boneTitle: "Muscles attached to this bone",
+    kinds: {
+      origin: "Origin",
+      insertion: "Insertion",
+      attachment: "Attachment (origin or insertion not confirmed)",
+    },
+    showOnModel: "Show on model",
+    none: "No attachment data for this muscle in the model.",
+    source: "Attachment sites from the Z-Anatomy model, not yet verified.",
+  },
   shortcuts: {
     search: "Search",
     escape: "Close / deselect",

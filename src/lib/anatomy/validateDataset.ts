@@ -114,10 +114,20 @@ export function validateDataset(dataset: AnatomyDataset): DatasetIssue[] {
       structureId: s.id,
       message: `parent "${s.parentId}" does not exist`,
     }));
+  const attachmentIssues = (dataset.attachments?.items ?? []).flatMap((item) =>
+    [item.structureId, item.boneId ?? item.structureId]
+      .filter((id) => !known.has(id))
+      .map((id) => ({
+        severity: "error" as const,
+        structureId: id,
+        message: `attachment "${item.meshName}" refers to an unknown structure`,
+      })),
+  );
   return [
     ...dataset.structures.flatMap(validateStructure),
     ...validateBilateralGroups(dataset.structures),
     ...partIssues,
+    ...attachmentIssues,
     ...meshIssues.unknownStructureIds.map((id) => ({
       severity: "error" as const,
       structureId: id,

@@ -117,6 +117,29 @@ export interface AnatomicalStructure {
   sourceAttribution?: string;
 }
 
+/**
+ * Where a muscle attaches, as a surface patch on a bone. "attachment" means
+ * the source doesn't reliably say whether it is the origin or the insertion.
+ */
+export const ATTACHMENT_KINDS = ["origin", "insertion", "attachment"] as const;
+export type AttachmentKind = (typeof ATTACHMENT_KINDS)[number];
+
+export interface MuscleAttachment {
+  /** Node name in the attachments model. */
+  meshName: string;
+  /** The muscle or muscle part that attaches here. */
+  structureId: string;
+  kind: AttachmentKind;
+  /** The bone (or cartilage) the patch lies on, when known. */
+  boneId?: string;
+}
+
+export interface AttachmentData {
+  /** Model with one patch mesh per attachment, loaded on demand. */
+  modelUrl: string;
+  items: MuscleAttachment[];
+}
+
 /** Maps raw mesh/node names in a model file to structure ids. */
 export type MeshMap = Record<string, string>;
 
@@ -134,4 +157,6 @@ export interface AnatomyDataset {
   meshMap: MeshMap;
   /** Mesh → part structure, for meshes that are a part of a whole (optional). */
   partMeshMap?: MeshMap;
+  /** Origins/insertions as patches on bones (optional). */
+  attachments?: AttachmentData;
 }

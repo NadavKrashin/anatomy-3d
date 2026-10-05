@@ -3,6 +3,7 @@
 import { useAnatomyData } from "@/components/providers/AnatomyDataProvider";
 import { useViewerStore } from "@/store/viewerStore";
 import { StructureActions } from "./structure/StructureActions";
+import { StructureAttachments } from "./structure/StructureAttachments";
 import { StructureDetails } from "./structure/StructureDetails";
 import { StructureHeader } from "./structure/StructureHeader";
 import { StructureRelations } from "./structure/StructureRelations";
@@ -24,6 +25,7 @@ export function StructureInfoPanel() {
       <StructureActions structureId={structure.id} />
       <div className="flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto px-5 py-4">
         <StructureRelations structure={structure} />
+        <StructureAttachments structure={structure} />
         <StructureDetails structure={structure} />
       </div>
     </ViewerPanel>

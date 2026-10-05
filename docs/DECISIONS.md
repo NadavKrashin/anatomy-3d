@@ -229,3 +229,26 @@ lucide-react · Vitest 5 · Playwright 1.56 · gltf-transform 4.5.
   toggle switches to parts. Quizzes don't ask about parts yet and always
   start with part picking off, so a click on a head still answers "find the
   biceps".
+
+## 2026-10-05 — Origins & insertions from Z-Anatomy patches, conservatively labelled
+
+- **Source:** Z-Anatomy ships origin/insertion surface patches on the bones
+  (names ".o…"/".e…", plus "Origin-…"/"End-…" materials). They were dropped
+  from the main export; now exported separately (`export_attachments.py`)
+  as `z-anatomy-upper-limb-attachments.glb` (227 patches, simplified 50%,
+  0.8 MB) and loaded only when a muscle or bone with attachments is selected.
+- **Kind:** origin/insertion only when the name suffix and the material agree;
+  12 disagreeing patches become "attachment" (not confirmed).
+- **Review demotion:** a check of every upper-limb muscle against standard
+  descriptions found source labels that contradict them (serratus anterior,
+  pectoralis minor, subclavius reversed; trapezius parts and latissimus
+  scapular patch mislabelled; extensor carpi ulnaris, deep head of flexor
+  pollicis brevis doubtful). Those muscles are shown as "not confirmed" —
+  we withhold the claim, we never flip it (`KIND_UNDER_REVIEW`).
+- **Side:** 7 patches have a wrong ".l/.r" suffix; the side comes from the
+  patch's position (geometry, not a medical claim).
+- **Display:** x-ray like the selection (attachments are nearly always under
+  other muscles); violet/amber/slate are outside the tissue palette and the
+  teal selection; the info panel names the bones (registry names, so Hebrew
+  appears where curated) and, for a bone, the muscles attached to it.
+- **Not shown in quizzes** (explore only), like the leader label.
