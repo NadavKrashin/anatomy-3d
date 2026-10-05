@@ -79,18 +79,23 @@ async function runQuizFlow(page: Page) {
   );
   await page.screenshot({ path: `${SHOTS}/quiz-find.png` });
 
-  // Peeling is offered in find questions (deep muscles hide under others).
-  await page.getByRole("button", { name: he.viewer.peelLayer }).click();
+  // Peel mode is offered in find questions (deep muscles hide under others):
+  // a tap then peels instead of answering.
+  await page.getByRole("button", { name: he.viewer.peelMode }).click();
+  const view = await page.locator("canvas").boundingBox();
+  assert(view, "canvas is laid out");
+  await page.mouse.click(view.x + view.width / 2, view.y + view.height / 2);
   await page
     .getByRole("button", { name: `${he.viewer.restoreLayer} (1)` })
     .waitFor({ timeout: 5000 });
   await page.screenshot({ path: `${SHOTS}/quiz-find-peeled.png` });
   await page.keyboard.press("Shift+KeyP");
+  await page.keyboard.press("KeyP"); // peel mode off: taps answer again
   assert(
     (await page
       .getByRole("button", { name: new RegExp(he.viewer.restoreLayer) })
-      .count()) === 0,
-    "a find question can peel a layer and restore it (⇧P)",
+      .count()) === 0 && (await page.getByText(he.quiz.findPrompt).isVisible()),
+    "a find question can peel a structure by tapping and restore it (⇧P)",
   );
 
   let sawFeedback = false;

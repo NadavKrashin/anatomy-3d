@@ -130,8 +130,9 @@ export function AnatomyModel({ id, url }: { id: string; url: string }) {
         event.stopPropagation();
         const id = pickStructureId(event);
         if (!id) return;
-        const { pick, focus, selectionLocked } = useViewerStore.getState();
-        if (selectionLocked) return;
+        const { pick, focus, selectionLocked, peelMode } =
+          useViewerStore.getState();
+        if (selectionLocked || peelMode) return;
         pick(id);
         focus(id);
       }}

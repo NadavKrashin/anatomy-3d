@@ -2,7 +2,7 @@
 
 > Living document. **Update it with every commit that changes the code, not
 > just at the end of a session** — it must always match the code as it is.
-> Last updated: 2026-10-05 (session 2, whole organs).
+> Last updated: 2026-10-05 (session 2, tap to peel).
 
 ## Orientation (read in this order)
 
@@ -28,7 +28,7 @@ npx next start -p 3100         # in the background (after verify, which builds)
 npm run e2e:smoke              # real-browser explore + quiz flows, writes docs/screenshots/
 ```
 
-Expected today: **175 unit/component tests, 32 e2e checks, all passing; CI green.**
+Expected today: **171 unit/component tests, 35 e2e checks, all passing; CI green.**
 
 ## User decisions & preferences (do not re-ask)
 
@@ -46,6 +46,7 @@ Expected today: **175 unit/component tests, 32 e2e checks, all passing; CI green
 | 2026-10-05 | **Whole body next**: add all remaining body parts. More quizzes, Hebrew names and study tools wait until the user has her course's study sources.                                                                                                            |
 | 2026-10-05 | Wants to **switch between a male and a female model** — **deferred** ("document the options, future addition"). Options and research: `docs/DECISIONS.md` → "Male/female model switch".                                                                      |
 | 2026-10-05 | Whole body merged (PR #4). Next: **select whole organs** (brain parts, lungs, heart… as wholes).                                                                                                                                                             |
+| 2026-10-05 | **Peeling: tap to peel only.** The automatic peel button removed too much at once ("everything disappears"); the user chose a peel mode where each tap removes one structure.                                                                                |
 | 2026-10-05 | **Docs must be kept updated continuously** as work happens (every commit), not at the end of a session. Enforced by the docs-gate hook.                                                                                                                      |
 | 2026-10-05 | **Deployed** by the user on Vercel: production URL **https://ors-anatomy.vercel.app** (production branch `main`).                                                                                                                                            |
 
@@ -96,9 +97,10 @@ All verified by `npm run e2e:smoke` against a production build.
   selected structure, ruled lists (`docs/DESIGN.md`).
 - **Viewer:** selection with teal x-ray highlight (buried structures stay
   visible), hover, info panel, search (he/en/la), focus with panel-aware
-  framing, hide, isolate, legend toggles, **layer peeling** (peel the
-  structures outermost from the current view, never bones; restore one layer
-  at a time; the selected structure is kept), **muscle parts** and **whole organs** (parts of muscles —
+  framing, hide, isolate, legend toggles, **tap to peel** (a peel mode:
+  each tap removes just the tapped structure — whole or part — with a hint
+  pill; "Restore (n)" undoes one tap at a time; P toggles, ⇧P restores, Esc
+  leaves; off while isolating), **muscle parts** and **whole organs** (parts of muscles —
   heads of biceps/triceps, parts of deltoid… — and of organs — heart chambers
   and valves, lung lobes, brain gyri… — searchable and selectable; a tap picks
   the whole, the "Select parts" toggle picks parts; info panel links part ↔
@@ -113,8 +115,9 @@ All verified by `npm run e2e:smoke` against a production build.
   (`/ Esc F I H R P ⇧P Q ?`).
 - **Quiz:** find (click in 3D; muscles auto-hidden for non-muscle targets,
   and bones too for organs/brain/heart;
-  peel/restore buttons and P/⇧P to reach deep structures — layers reset per
-  question and when the answer is revealed),
+  peel mode in find questions to clear what covers the target — a tap then
+  peels instead of answering; peels reset per question and when the answer
+  is revealed),
   identify (multiple choice, plausible core distractors), mixed; scopes by
   region / system / due / review mistakes; built-in scopes skip `detail`
   structures (small branches).
@@ -132,7 +135,7 @@ All verified by `npm run e2e:smoke` against a production build.
 1. ~~Post-deploy check~~ — user reported production "looks good"
    (2026-10-05). Keep an eye out for iPad performance feedback.
 2. **Real-device check on iPad** with the whole body (≈3.1M triangles, 16 MB
-   in five files): load time, rotation smoothness, tap latency, peel speed.
+   in five files): load time, rotation smoothness, tap latency.
    If sluggish: lower `--simplify` for nerves/vessels, load packs on demand
    (e.g. only when their legend entry is on), or add a BVH for picking.
 3. ~~Organ-level wholes~~ — done: heart, lungs, cerebral lobes, cerebellum,
@@ -156,10 +159,6 @@ All verified by `npm run e2e:smoke` against a production build.
 
 - All medical terms are `verified: false`; Hebrew exists only for ~16 curated
   concepts; the other structures show English (validator warnings, expected).
-- Peeling is view-based: from far away one peel removes a lot (the whole
-  superficial layer of both arms); zoom in to peel finely. Structures showing
-  fewer than 3 pixels in the 512px pass count as slivers and stay. Peel speed
-  on a real iPad not yet measured (one extra off-screen render + readback).
 - Origins/insertions: source gaps — 7 muscles have no patches (e.g.
   palmaris longus, lumbricals, flexor carpi radialis); pronator quadratus and
   the short head of biceps have patches on the right side only; some
@@ -175,9 +174,8 @@ All verified by `npm run e2e:smoke` against a production build.
   liver is one mesh (segments omitted). Regions for organs and midline
   structures come from their height against skeletal landmarks (navigation
   aid).
-- Peeling inside the ribcage also removes the lungs (they show between the
-  ribs and bones are never peeled) — hide the skeleton in the legend first
-  to study thoracic organs.
+- On phones, a long name's leader label can run off the screen edge (user:
+  fine as is, 2026-10-05).
 - Long structures (nerves) are framed along their whole length.
 - Viewer state (hidden/isolated) is not persisted across reloads (by design).
 - Progress is per browser/device (localStorage) — no sync.
@@ -249,3 +247,11 @@ All verified by `npm run e2e:smoke` against a production build.
   with parts; parts now count as studyable (`registry.all`: quiz scopes,
   progress, distractors — siblings preferred, own whole/parts never);
   "Muscle parts" toggle renamed "Select parts".
+- **2026-10-05 · session 2 (cont.)** — User checked the superior lateral
+  brachial cutaneous nerve's loop shape: verified identical to the source
+  and anatomically consistent (wraps the posterior border of the deltoid);
+  not a bug. Whole organs merged to `main` via PR #5.
+- **2026-10-05 · session 2 (cont.)** — Peeling reworked (user found the
+  automatic peel too drastic — ~250 structures per tap when zoomed in on the
+  chest): tap-to-peel mode replaces it; the view-based ID-pass peeling
+  (`structureIdPass`, `peel.ts`, `useLayerPeeling`) was removed.

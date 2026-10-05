@@ -42,8 +42,9 @@ export const en: Messages = {
     close: "Close",
     hiddenCount: (n: number) => `${n} hidden`,
     isolating: "Isolate mode",
-    peelLayer: "Peel layer",
-    restoreLayer: "Restore layer",
+    peelMode: "Tap to peel",
+    peelHint: "Tap a structure to peel it away",
+    restoreLayer: "Restore",
     pickParts: "Select parts",
   },
   search: {
@@ -93,8 +94,8 @@ export const en: Messages = {
     reset: "Reset camera",
     help: "Show shortcuts",
     quiz: "Go to quiz / back to explore",
-    peel: "Peel the outer layer (as seen now)",
-    restore: "Restore the last peeled layer",
+    peel: "Peel mode on / off",
+    restore: "Restore the last peeled structure",
   },
   quiz: {
     setupTitle: "Quiz",

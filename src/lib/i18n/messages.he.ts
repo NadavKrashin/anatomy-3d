@@ -47,8 +47,9 @@ export const he = {
     close: "סגירה",
     hiddenCount: (n: number) => `${n} מוסתרים`,
     isolating: "מצב בידוד",
-    peelLayer: "הסרת שכבה",
-    restoreLayer: "החזרת שכבה",
+    peelMode: "קילוף בהקשה",
+    peelHint: "הקישו על מבנה כדי לקלף אותו",
+    restoreLayer: "החזרה",
     pickParts: "בחירת חלקים",
   },
   search: {
@@ -99,8 +100,8 @@ export const he = {
     reset: "איפוס מצלמה",
     help: "הצגת קיצורים",
     quiz: "מעבר לבוחן / חזרה לחקירה",
-    peel: "הסרת השכבה החיצונית (מהזווית הנוכחית)",
-    restore: "החזרת השכבה האחרונה שהוסרה",
+    peel: "הפעלה / כיבוי של מצב קילוף",
+    restore: "החזרת המבנה האחרון שקולף",
   },
   quiz: {
     setupTitle: "בוחן",

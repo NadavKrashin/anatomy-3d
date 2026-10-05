@@ -121,39 +121,41 @@ export async function exploreFlow(browser: Browser, errors: string[]) {
   );
   await desktop.screenshot({ path: `${SHOTS}/explore-en.png` });
 
-  // Layer peeling: each peel hides the structures outermost from the camera.
-  await desktop.getByRole("button", { name: "Peel layer" }).click();
+  // Tap to peel: in peel mode each tap removes just the tapped structure.
+  await desktop.getByRole("button", { name: "Tap to peel" }).click();
+  const view = await desktop.locator("canvas").boundingBox();
+  assert(view, "canvas is laid out");
+  const center = { x: view.x + view.width / 2, y: view.y + view.height / 2 };
+  await desktop.mouse.click(center.x, center.y);
   await desktop
-    .getByRole("button", { name: "Restore layer (1)" })
+    .getByRole("button", { name: "Restore (1)" })
     .waitFor({ timeout: 5000 });
-  await desktop.screenshot({ path: `${SHOTS}/peel-1.png` });
-  await desktop.keyboard.press("KeyP");
-  await desktop.keyboard.press("KeyP");
+  await desktop.waitForTimeout(400); // not a double click
+  await desktop.mouse.click(center.x, center.y);
   await desktop
-    .getByRole("button", { name: "Restore layer (3)" })
+    .getByRole("button", { name: "Restore (2)" })
     .waitFor({ timeout: 5000 });
-  await desktop.screenshot({ path: `${SHOTS}/peel-3.png` });
-  const hiddenAfterPeel = Number(
-    /\((\d+)\)/.exec(
-      await desktop.getByRole("button", { name: /Show all/ }).innerText(),
-    )?.[1],
-  );
   assert(
-    hiddenAfterPeel > 10,
-    `three peels hide the outer layers (${hiddenAfterPeel} structures)`,
+    (await infoTitle(desktop)) === null,
+    "two taps in peel mode peel two structures, one each, without selecting",
   );
+  await desktop.screenshot({ path: `${SHOTS}/peel-tap.png` });
   await desktop.keyboard.press("Shift+KeyP");
   assert(
+    (await desktop.getByRole("button", { name: "Restore (1)" }).count()) === 1,
+    "⇧P restores the last peeled structure",
+  );
+  await desktop.keyboard.press("Escape");
+  assert(
     (await desktop
-      .getByRole("button", { name: "Restore layer (2)" })
-      .count()) === 1,
-    "⇧P restores the last peeled layer",
+      .getByRole("button", { name: "Tap to peel" })
+      .getAttribute("aria-pressed")) === null,
+    "Escape leaves peel mode",
   );
   await desktop.getByRole("button", { name: /Show all/ }).click();
   assert(
-    (await desktop.getByRole("button", { name: /Restore layer/ }).count()) ===
-      0,
-    "Show all also clears peeled layers",
+    (await desktop.getByRole("button", { name: /Restore/ }).count()) === 0,
+    "Show all also clears peeled structures",
   );
 
   // Selecting a muscle fetches the attachment patches model (once).

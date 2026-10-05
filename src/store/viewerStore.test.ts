@@ -94,59 +94,61 @@ describe("viewer store", () => {
   });
 });
 
-describe("viewer store — layer peeling", () => {
+describe("viewer store — peel mode", () => {
   beforeEach(() => useViewerStore.setState(initial, true));
 
-  it("a peel request is a new nonce, ignored while isolating", () => {
-    const { requestPeel, isolate } = useViewerStore.getState();
-    requestPeel();
-    expect(useViewerStore.getState().peelRequest).toBe(1);
-    isolate("heart");
-    requestPeel();
-    expect(useViewerStore.getState().peelRequest).toBe(1);
-  });
-
-  it("applying a peel hides the batch but keeps the selection", () => {
-    const { select, applyPeel } = useViewerStore.getState();
-    select("biceps");
-    applyPeel(["deltoid", "biceps", "cephalic-vein"]);
+  it("in peel mode a tap peels the structure instead of selecting it", () => {
+    const { setPeelMode, pick } = useViewerStore.getState();
+    setPeelMode(true);
+    pick("deltoid");
+    pick(null); // a tap on empty space does nothing
     const state = useViewerStore.getState();
-    expect(state.peeledLayers).toEqual([["deltoid", "cephalic-vein"]]);
-    expect([...state.hiddenStructureIds].sort()).toEqual([
-      "cephalic-vein",
-      "deltoid",
-    ]);
-    expect(state.selectedStructureId).toBe("biceps");
+    expect(state.selectedStructureId).toBeNull();
+    expect(state.peeledLayers).toEqual([["deltoid"]]);
+    expect(state.hiddenStructureIds.has("deltoid")).toBe(true);
   });
 
-  it("an empty peel records no layer", () => {
-    useViewerStore.getState().applyPeel([]);
-    expect(useViewerStore.getState().peeledLayers).toEqual([]);
+  it("peeling the selected structure deselects it; peeling twice is a no-op", () => {
+    const { select, peelStructure } = useViewerStore.getState();
+    select("biceps");
+    peelStructure("biceps");
+    peelStructure("biceps");
+    const state = useViewerStore.getState();
+    expect(state.selectedStructureId).toBeNull();
+    expect(state.peeledLayers).toEqual([["biceps"]]);
   });
 
-  it("restoring brings back only the last layer, not manual hides", () => {
-    const { hide, applyPeel, restoreLayer } = useViewerStore.getState();
+  it("is not available while isolating, and isolating turns it off", () => {
+    const { setPeelMode, isolate } = useViewerStore.getState();
+    setPeelMode(true);
+    isolate("heart");
+    expect(useViewerStore.getState().peelMode).toBe(false);
+    useViewerStore.getState().setPeelMode(true);
+    expect(useViewerStore.getState().peelMode).toBe(false);
+  });
+
+  it("restoring brings back one peel at a time, not manual hides", () => {
+    const { hide, peelStructure, restoreLayer } = useViewerStore.getState();
     hide("liver");
-    applyPeel(["deltoid"]);
-    applyPeel(["biceps"]);
+    peelStructure("deltoid");
+    peelStructure("biceps");
     restoreLayer();
     let state = useViewerStore.getState();
     expect([...state.hiddenStructureIds].sort()).toEqual(["deltoid", "liver"]);
-    expect(state.peeledLayers).toEqual([["deltoid"]]);
     useViewerStore.getState().restoreAllLayers();
     state = useViewerStore.getState();
     expect([...state.hiddenStructureIds]).toEqual(["liver"]);
     expect(state.peeledLayers).toEqual([]);
   });
 
-  it("show all and show only forget peeled layers", () => {
-    const { applyPeel, showAll, showOnly } = useViewerStore.getState();
-    applyPeel(["deltoid"]);
+  it("show all and show only forget peels; show only ends peel mode", () => {
+    const { peelStructure, showAll, setPeelMode } = useViewerStore.getState();
+    peelStructure("deltoid");
     showAll();
     expect(useViewerStore.getState().peeledLayers).toEqual([]);
-    useViewerStore.getState().applyPeel(["deltoid"]);
-    showOnly(["biceps"], ["biceps", "deltoid"]);
-    expect(useViewerStore.getState().peeledLayers).toEqual([]);
+    setPeelMode(true);
+    useViewerStore.getState().showOnly(["biceps"], ["biceps", "deltoid"]);
+    expect(useViewerStore.getState().peelMode).toBe(false);
   });
 });
 

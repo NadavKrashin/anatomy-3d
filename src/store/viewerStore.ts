@@ -23,12 +23,12 @@ interface ViewerState {
   /** Draw the selected muscle's origin/insertion patches (explore). */
   showAttachments: boolean;
   /**
-   * Layer peeling: each entry is one peeled batch (the structures that were
-   * outermost from the camera at the time), most recent last.
+   * Peel mode: taps in the 3D view peel (hide) the tapped structure instead
+   * of selecting it — a hands-on dissection, one structure at a time.
    */
+  peelMode: boolean;
+  /** Peeled structures, most recent last (an undo stack for "restore"). */
   peeledLayers: readonly (readonly string[])[];
-  /** Nonce of the latest peel request; the 3D scene answers with `applyPeel`. */
-  peelRequest: number;
 
   select: (structureId: string | null) => void;
   /** Selection from a click in the 3D view; ignored while the selection is locked. */
@@ -52,13 +52,13 @@ interface ViewerState {
   reveal: (structureId: string, system: AnatomySystem) => void;
   focus: (structureId: string) => void;
   resetCamera: () => void;
-  /** Ask the scene to peel the outer layer as seen from the camera (not while isolating). */
-  requestPeel: () => void;
-  /** Hide one peeled batch; the selected structure is always kept. */
-  applyPeel: (structureIds: readonly string[]) => void;
-  /** Show the most recently peeled batch again. */
+  /** Turn peel mode on/off (not while isolating — everything else is ghosted then). */
+  setPeelMode: (on: boolean) => void;
+  /** Peel one structure: hide it and remember it so it can be restored. */
+  peelStructure: (structureId: string) => void;
+  /** Show the most recently peeled structure again. */
   restoreLayer: () => void;
-  /** Show every peeled batch again (e.g. on a new quiz question). */
+  /** Show every peeled structure again (e.g. on a new quiz question). */
   restoreAllLayers: () => void;
 }
 
@@ -80,8 +80,8 @@ const initialState = {
   selectionLocked: false,
   pickParts: false,
   showAttachments: true,
+  peelMode: false,
   peeledLayers: [],
-  peelRequest: 0,
 } satisfies Partial<ViewerState>;
 
 export const useViewerStore = create<ViewerState>()((set, get) => ({
@@ -89,7 +89,10 @@ export const useViewerStore = create<ViewerState>()((set, get) => ({
 
   select: (selectedStructureId) => set({ selectedStructureId }),
   pick: (structureId) => {
-    if (!get().selectionLocked) set({ selectedStructureId: structureId });
+    const { peelMode, selectionLocked, peelStructure } = get();
+    if (peelMode) {
+      if (structureId) peelStructure(structureId);
+    } else if (!selectionLocked) set({ selectedStructureId: structureId });
   },
   setSelectionLocked: (selectionLocked) => set({ selectionLocked }),
   setPickParts: (pickParts) => set({ pickParts }),
@@ -138,6 +141,7 @@ export const useViewerStore = create<ViewerState>()((set, get) => ({
       selectedStructureId: null,
       peeledLayers: [],
       pickParts: false,
+      peelMode: false,
     });
   },
 
@@ -149,7 +153,11 @@ export const useViewerStore = create<ViewerState>()((set, get) => ({
     }),
 
   isolate: (structureId) =>
-    set({ isolatedStructureId: structureId, selectedStructureId: structureId }),
+    set({
+      isolatedStructureId: structureId,
+      selectedStructureId: structureId,
+      peelMode: false,
+    }),
   exitIsolate: () => set({ isolatedStructureId: null }),
 
   setHiddenSystems: (systems) => set({ hiddenSystems: new Set(systems) }),
@@ -176,25 +184,18 @@ export const useViewerStore = create<ViewerState>()((set, get) => ({
     set({ cameraCommand: { type: "focus", structureId, nonce: ++nonce } }),
   resetCamera: () => set({ cameraCommand: { type: "reset", nonce: ++nonce } }),
 
-  requestPeel: () => {
-    if (get().isolatedStructureId === null)
-      set({ peelRequest: get().peelRequest + 1 });
-  },
+  setPeelMode: (on) =>
+    set({ peelMode: on && get().isolatedStructureId === null }),
 
-  applyPeel: (structureIds) =>
+  peelStructure: (structureId) =>
     set((state) => {
-      const layer = structureIds.filter(
-        (id) =>
-          id !== state.selectedStructureId && !state.hiddenStructureIds.has(id),
-      );
-      if (layer.length === 0) return {};
+      if (state.hiddenStructureIds.has(structureId)) return {};
+      const clear = (id: string | null) => (id === structureId ? null : id);
       return {
-        peeledLayers: [...state.peeledLayers, layer],
-        hiddenStructureIds: new Set([...state.hiddenStructureIds, ...layer]),
-        hoveredStructureId:
-          state.hoveredStructureId && layer.includes(state.hoveredStructureId)
-            ? null
-            : state.hoveredStructureId,
+        peeledLayers: [...state.peeledLayers, [structureId]],
+        hiddenStructureIds: new Set(state.hiddenStructureIds).add(structureId),
+        selectedStructureId: clear(state.selectedStructureId),
+        hoveredStructureId: clear(state.hoveredStructureId),
       };
     }),
 
