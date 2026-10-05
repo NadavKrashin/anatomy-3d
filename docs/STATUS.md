@@ -102,9 +102,11 @@ All verified by `npm run e2e:smoke` against a production build.
 
 ## Next steps (in order)
 
-1. **Deploy to Vercel** — follow `docs/DEPLOYMENT.md` (merge to `main` via a
-   PR once CI is green; the user connects the repo in Vercel; Node 22; no
-   env vars). Then run its post-deploy checklist on the iPad.
+1. **Deploy to Vercel** — `main` is deployable (PR #1 merged 2026-10-05, CI
+   green). Remaining: the user imports `NadavKrashin/anatomy-3d` in Vercel
+   (Next.js preset, Node 22, no env vars — `docs/DEPLOYMENT.md`); a cloud
+   session has no Vercel access. Then run the post-deploy checklist on the
+   iPad and record the production URL here.
 2. **Real-device check on iPad:** load time and frame rate with the 1.35M
    triangle model. If sluggish: simplify non-upper-limb bones
    (`optimize-glb.ts --simplify 0.5`), or split the GLB per system/region and
@@ -130,7 +132,8 @@ All verified by `npm run e2e:smoke` against a production build.
 - Progress is per browser/device (localStorage) — no sync.
 - The e2e find-quiz helper answers by clicking the body centre and revealing;
   it verifies the flow, not answer accuracy.
-- Not yet deployed; untested on a real iPad.
+- `main` is deployable but the Vercel project isn't connected yet; untested on
+  a real iPad.
 - `npm audit` reports 5 high-severity advisories in dev dependencies
   (transitive, from the Next/ESLint toolchain at scaffold time); not shipped
   to the browser. Re-check with `npm audit` when upgrading.
@@ -157,3 +160,5 @@ All verified by `npm run e2e:smoke` against a production build.
   prominent instruction in CLAUDE.md, CONTRIBUTING, anatomy-workflow skill and
   the SessionStart message; `scripts/hooks/docs-gate.mjs` PreToolUse hook blocks
   `git commit`s that change code without a doc (`[docs: none]` escape hatch).
+- **2026-10-05 · session 2 (cont.)** — Opened and merged PR #1 into `main`
+  (CI green) so Vercel can deploy production from `main`.
