@@ -32,23 +32,24 @@ Expected today: **171 unit/component tests, 35 e2e checks, all passing; CI green
 
 ## User decisions & preferences (do not re-ask)
 
-| Date       | Decision                                                                                                                                                                                                                                                     |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 2026-10-04 | App is for the user's girlfriend, a medical student in **Israel**; the course hasn't started yet.                                                                                                                                                            |
-| 2026-10-04 | **UI in Hebrew (RTL)** by default, English available. Term display defaults to **English primary, Hebrew secondary** (Latin also shown) — changeable in settings once her course's terminology is known.                                                     |
-| 2026-10-04 | Devices: **iPad and laptop**. No personalisation/name in the UI.                                                                                                                                                                                             |
-| 2026-10-04 | Quality bar: clean code, best practices, tests and linting; document thoroughly for future sessions.                                                                                                                                                         |
-| 2026-10-05 | Real model: **Z-Anatomy approved; CC BY-SA licence accepted.** Upper limb first.                                                                                                                                                                             |
-| 2026-10-05 | **Lower limb / other regions deferred** — "we will add everything later". Legs show bones only for now.                                                                                                                                                      |
-| 2026-10-05 | **Redesign requested**: the first UI looked "blocky and AI-made". New direction in `docs/DESIGN.md` (light atlas style). Design plugins (`frontend-design`, `design-skills`) were suggested for install; `frontend-design` is vendored in `.claude/skills/`. |
-| 2026-10-05 | Next: **deploy the first version to Vercel** (user does the Vercel side — see `docs/DEPLOYMENT.md`).                                                                                                                                                         |
-| 2026-10-05 | Next features chosen by the user: **muscle parts**, then **origins & insertions**.                                                                                                                                                                           |
-| 2026-10-05 | **Whole body next**: add all remaining body parts. More quizzes, Hebrew names and study tools wait until the user has her course's study sources.                                                                                                            |
-| 2026-10-05 | Wants to **switch between a male and a female model** — **deferred** ("document the options, future addition"). Options and research: `docs/DECISIONS.md` → "Male/female model switch".                                                                      |
-| 2026-10-05 | Whole body merged (PR #4). Next: **select whole organs** (brain parts, lungs, heart… as wholes).                                                                                                                                                             |
-| 2026-10-05 | **Peeling: tap to peel only.** The automatic peel button removed too much at once ("everything disappears"); the user chose a peel mode where each tap removes one structure.                                                                                |
-| 2026-10-05 | **Docs must be kept updated continuously** as work happens (every commit), not at the end of a session. Enforced by the docs-gate hook.                                                                                                                      |
-| 2026-10-05 | **Deployed** by the user on Vercel: production URL **https://ors-anatomy.vercel.app** (production branch `main`).                                                                                                                                            |
+| Date       | Decision                                                                                                                                                                                                                                                                                                                       |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2026-10-04 | App is for the user's girlfriend, a medical student in **Israel**; the course hasn't started yet.                                                                                                                                                                                                                              |
+| 2026-10-04 | **UI in Hebrew (RTL)** by default, English available. Term display defaults to **English primary, Hebrew secondary** (Latin also shown) — changeable in settings once her course's terminology is known.                                                                                                                       |
+| 2026-10-04 | Devices: **iPad and laptop**. No personalisation/name in the UI.                                                                                                                                                                                                                                                               |
+| 2026-10-04 | Quality bar: clean code, best practices, tests and linting; document thoroughly for future sessions.                                                                                                                                                                                                                           |
+| 2026-10-05 | Real model: **Z-Anatomy approved; CC BY-SA licence accepted.** Upper limb first.                                                                                                                                                                                                                                               |
+| 2026-10-05 | **Lower limb / other regions deferred** — "we will add everything later". Legs show bones only for now.                                                                                                                                                                                                                        |
+| 2026-10-05 | **Redesign requested**: the first UI looked "blocky and AI-made". New direction in `docs/DESIGN.md` (light atlas style). Design plugins (`frontend-design`, `design-skills`) were suggested for install; `frontend-design` is vendored in `.claude/skills/`.                                                                   |
+| 2026-10-05 | Next: **deploy the first version to Vercel** (user does the Vercel side — see `docs/DEPLOYMENT.md`).                                                                                                                                                                                                                           |
+| 2026-10-05 | Next features chosen by the user: **muscle parts**, then **origins & insertions**.                                                                                                                                                                                                                                             |
+| 2026-10-05 | **Whole body next**: add all remaining body parts. More quizzes, Hebrew names and study tools wait until the user has her course's study sources.                                                                                                                                                                              |
+| 2026-10-05 | Wants to **switch between a male and a female model** — **deferred** ("document the options, future addition"). Options and research: `docs/DECISIONS.md` → "Male/female model switch".                                                                                                                                        |
+| 2026-10-05 | Whole body merged (PR #4). Next: **select whole organs** (brain parts, lungs, heart… as wholes).                                                                                                                                                                                                                               |
+| 2026-10-05 | **Peeling: tap to peel only.** The automatic peel button removed too much at once ("everything disappears"); the user chose a peel mode where each tap removes one structure.                                                                                                                                                  |
+| 2026-10-05 | **Study source: https://medintzfat.com** (her course site, Bar-Ilan Tzfat; anatomy section `/anatomy/` — labs `lab1`…`lab9`, lectures `class*`, `lower-limb-part1`; public pages). Use it for Hebrew names, quizzes and study tools. Needs `medintzfat.com` in the cloud environment's allowed domains (blocked in session 2). |
+| 2026-10-05 | **Docs must be kept updated continuously** as work happens (every commit), not at the end of a session. Enforced by the docs-gate hook.                                                                                                                                                                                        |
+| 2026-10-05 | **Deployed** by the user on Vercel: production URL **https://ors-anatomy.vercel.app** (production branch `main`).                                                                                                                                                                                                              |
 
 ## Phase tracker (§48)
 
@@ -142,7 +143,12 @@ All verified by `npm run e2e:smoke` against a production build.
    brainstem, diencephalon, spinal cord, eyeballs, colon, small intestine,
    pharynx, hypophysis, thymus, penis (`ORGAN_GROUPS` in the export). One
    level only (gyrus → lobe, not → hemisphere → brain).
-4. **Hebrew names** (when the user has her course sources) — ideally from
+4. **Next task: read her course site** https://medintzfat.com/anatomy/ (all
+   labs and lectures; first check the domain is reachable — `curl -sI`). Collect
+   Hebrew terms as the course uses them, per-lab structure lists, syllabus order
+   and practice questions; save the extract under `docs/` with page URLs, then
+   map terms to structure ids. Source every term; never invent.
+   4a. **Hebrew names** (from her course sources) — ideally from
    her course's term list; add to curated concepts + `docs/CONTENT_REVIEW.md`.
 5. ~~Muscle heads as sub-structures~~ — done (52 parts); quizzing on parts
    is a possible follow-up.
@@ -255,3 +261,5 @@ All verified by `npm run e2e:smoke` against a production build.
   automatic peel too drastic — ~250 structures per tap when zoomed in on the
   chest): tap-to-peel mode replaces it; the view-based ID-pass peeling
   (`structureIdPass`, `peel.ts`, `useLayerPeeling`) was removed.
+- **2026-10-05 · session 2 (cont.)** — Tap to peel merged to `main` via
+  PR #6.
