@@ -19,25 +19,35 @@ export interface GenerateQuizOptions {
 }
 
 /**
- * How plausible `candidate` is as a wrong answer for `target`: same system
- * and region is the hardest (radial vs ulnar nerve), unrelated is easiest.
+ * How plausible `candidate` is as a wrong answer for `target`: another part
+ * of the same whole is the hardest (left vs right ventricle), then same
+ * system and region (radial vs ulnar nerve); unrelated is easiest.
  */
 function distractorScore(
   target: AnatomicalStructure,
   candidate: AnatomicalStructure,
 ): number {
+  const sibling =
+    target.parentId !== undefined && candidate.parentId === target.parentId;
   return (
+    (sibling ? 3 : 0) +
     (candidate.system === target.system ? 2 : 0) +
     (candidate.region === target.region ? 1 : 0)
   );
 }
 
-/** A distractor must not share a name with the target (e.g. its other side). */
+/**
+ * A distractor must not share a name with the target (e.g. its other side),
+ * and must not be its whole or one of its parts — "Heart" isn't a wrong
+ * answer for the left ventricle.
+ */
 function isValidDistractor(
   target: AnatomicalStructure,
   candidate: AnatomicalStructure,
 ): boolean {
   if (candidate.id === target.id) return false;
+  if (candidate.id === target.parentId || candidate.parentId === target.id)
+    return false;
   if (
     target.bilateralGroupId &&
     candidate.bilateralGroupId === target.bilateralGroupId

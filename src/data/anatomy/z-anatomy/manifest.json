@@ -423,7 +423,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Accessory nucleus of oculomotor nerve.r",
@@ -431,7 +433,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Accessory pancreatic duct",
@@ -545,7 +549,9 @@
     "tissue": "endocrine",
     "region": "head",
     "pack": "organs",
-    "vertices": 369
+    "vertices": 369,
+    "group": "Hypophysis",
+    "groupSide": "midline"
   },
   {
     "name": "Ampulla of lacrimal canaliculus.l",
@@ -617,7 +623,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 759
+    "vertices": 759,
+    "group": "Parietal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Angular gyrus.r",
@@ -625,7 +633,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 759
+    "vertices": 759,
+    "group": "Parietal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Angular vein.l",
@@ -811,7 +821,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 4354
+    "vertices": 4354,
+    "group": "Eyeball",
+    "groupSide": "left"
   },
   {
     "name": "Anterior chamber of eyeball.r",
@@ -819,7 +831,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 4354
+    "vertices": 4354,
+    "group": "Eyeball",
+    "groupSide": "right"
   },
   {
     "name": "Anterior circumflex humeral artery.l",
@@ -859,7 +873,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 98
+    "vertices": 98,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Anterior cochlear nucleus.r",
@@ -867,7 +883,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 98
+    "vertices": 98,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Anterior commissure",
@@ -891,7 +909,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 3672
+    "vertices": 3672,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Anterior cruciate ligament.l",
@@ -1059,7 +1079,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 4692
+    "vertices": 4692,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Anterior horn of spinal cord",
@@ -1067,7 +1089,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 4488
+    "vertices": 4488,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Anterior inferior cerebellar artery.l",
@@ -1235,7 +1259,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 318
+    "vertices": 318,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Anterior quadrangular lobule.l",
@@ -1243,7 +1269,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 3270
+    "vertices": 3270,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Anterior quadrangular lobule.r",
@@ -1251,7 +1279,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 3270
+    "vertices": 3270,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Anterior root of posterior femoral cutaneous nerve.l",
@@ -1307,7 +1337,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1664
+    "vertices": 1664,
+    "group": "Eyeball",
+    "groupSide": "left"
   },
   {
     "name": "Anterior segment of eyeball.r",
@@ -1315,7 +1347,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1664
+    "vertices": 1664,
+    "group": "Eyeball",
+    "groupSide": "right"
   },
   {
     "name": "Anterior segmental artery of left lung",
@@ -1355,7 +1389,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 523
+    "vertices": 523,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Anterior septal branches of anterior ethmoidal artery.l",
@@ -1395,7 +1431,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 5916
+    "vertices": 5916,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Anterior spinothalamic tract",
@@ -1403,7 +1441,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 4080
+    "vertices": 4080,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Anterior sternoclavicular ligament.l",
@@ -1627,7 +1667,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 235
+    "vertices": 235,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Arcuate artery.l",
@@ -1827,7 +1869,9 @@
     "tissue": "digestive",
     "region": "abdomen",
     "pack": "organs",
-    "vertices": 8758
+    "vertices": 8758,
+    "group": "Colon",
+    "groupSide": "midline"
   },
   {
     "name": "Ascending part of trapezius muscle.l",
@@ -1957,7 +2001,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 2531
+    "vertices": 2531,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Base of peduncle.r",
@@ -1965,7 +2011,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 2531
+    "vertices": 2531,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Basilar artery",
@@ -2021,7 +2069,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 4464
+    "vertices": 4464,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Biventral lobule.r",
@@ -2029,7 +2079,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 4464
+    "vertices": 4464,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Body of sternum",
@@ -2335,7 +2387,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 437
+    "vertices": 437,
+    "group": "Occipital lobe",
+    "groupSide": "left"
   },
   {
     "name": "Calcarine sulcus.r",
@@ -2343,7 +2397,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 437
+    "vertices": 437,
+    "group": "Occipital lobe",
+    "groupSide": "right"
   },
   {
     "name": "Callosomarginal artery.l",
@@ -2455,7 +2511,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1632
+    "vertices": 1632,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Central canal'",
@@ -2463,7 +2521,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 300
+    "vertices": 300,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Central lobule",
@@ -2471,7 +2531,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 505
+    "vertices": 505,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Central retinal artery.l",
@@ -2567,7 +2629,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 48
+    "vertices": 48,
+    "group": "Eyeball",
+    "groupSide": "right"
   },
   {
     "name": "Cingulate gyrus (Posteroventral part*).l",
@@ -2575,7 +2639,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 153
+    "vertices": 153,
+    "group": "Limbic lobe",
+    "groupSide": "left"
   },
   {
     "name": "Cingulate gyrus (Posteroventral part*).r",
@@ -2583,7 +2649,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 153
+    "vertices": 153,
+    "group": "Limbic lobe",
+    "groupSide": "right"
   },
   {
     "name": "Cingulate gyrus and sulcus (Middle anterior part).l",
@@ -2591,7 +2659,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 370
+    "vertices": 370,
+    "group": "Limbic lobe",
+    "groupSide": "left"
   },
   {
     "name": "Cingulate gyrus and sulcus (Middle anterior part).r",
@@ -2599,7 +2669,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 370
+    "vertices": 370,
+    "group": "Limbic lobe",
+    "groupSide": "right"
   },
   {
     "name": "Cingulate gyrus and sulcus (Middle posterior part).l",
@@ -2607,7 +2679,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 302
+    "vertices": 302,
+    "group": "Limbic lobe",
+    "groupSide": "left"
   },
   {
     "name": "Cingulate gyrus and sulcus (Middle posterior part).r",
@@ -2615,7 +2689,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 302
+    "vertices": 302,
+    "group": "Limbic lobe",
+    "groupSide": "right"
   },
   {
     "name": "Cingulate gyrus and sulcus (Posterior dorsal part).l",
@@ -2623,7 +2699,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 207
+    "vertices": 207,
+    "group": "Limbic lobe",
+    "groupSide": "left"
   },
   {
     "name": "Cingulate gyrus and sulcus (Posterior dorsal part).r",
@@ -2631,7 +2709,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 207
+    "vertices": 207,
+    "group": "Limbic lobe",
+    "groupSide": "right"
   },
   {
     "name": "Cingulate sulcus (Marginal part*).l",
@@ -2639,7 +2719,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 274
+    "vertices": 274,
+    "group": "Limbic lobe",
+    "groupSide": "left"
   },
   {
     "name": "Cingulate sulcus (Marginal part*).r",
@@ -2647,7 +2729,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 274
+    "vertices": 274,
+    "group": "Limbic lobe",
+    "groupSide": "right"
   },
   {
     "name": "Circular sulcus of insula.l",
@@ -3171,7 +3255,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1346
+    "vertices": 1346,
+    "group": "Eyeball",
+    "groupSide": "left"
   },
   {
     "name": "Cornea.r",
@@ -3179,7 +3265,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1346
+    "vertices": 1346,
+    "group": "Eyeball",
+    "groupSide": "right"
   },
   {
     "name": "Corniculate cartilage.l",
@@ -3219,7 +3307,9 @@
     "tissue": "reproductive",
     "region": "pelvis",
     "pack": "organs",
-    "vertices": 646
+    "vertices": 646,
+    "group": "Penis",
+    "groupSide": "midline"
   },
   {
     "name": "Corpus spongiosum of penis",
@@ -3227,7 +3317,9 @@
     "tissue": "reproductive",
     "region": "pelvis",
     "pack": "organs",
-    "vertices": 282
+    "vertices": 282,
+    "group": "Penis",
+    "groupSide": "midline"
   },
   {
     "name": "Corrugator supercilii.l",
@@ -3515,7 +3607,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1194
+    "vertices": 1194,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Cuneate fasciculus",
@@ -3523,7 +3617,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 1584
+    "vertices": 1584,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Cuneocuboid interosseous ligament.l",
@@ -3563,7 +3659,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 475
+    "vertices": 475,
+    "group": "Occipital lobe",
+    "groupSide": "left"
   },
   {
     "name": "Cuneus.r",
@@ -3571,7 +3669,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 475
+    "vertices": 475,
+    "group": "Occipital lobe",
+    "groupSide": "right"
   },
   {
     "name": "Cystic node",
@@ -3587,7 +3687,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1067
+    "vertices": 1067,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Deep artery of penis.l",
@@ -3985,7 +4087,9 @@
     "tissue": "digestive",
     "region": "abdomen",
     "pack": "organs",
-    "vertices": 12372
+    "vertices": 12372,
+    "group": "Colon",
+    "groupSide": "midline"
   },
   {
     "name": "Descending palatine artery.l",
@@ -4821,7 +4925,9 @@
     "tissue": "digestive",
     "region": "abdomen",
     "pack": "organs",
-    "vertices": 887
+    "vertices": 887,
+    "group": "Small intestine",
+    "groupSide": "midline"
   },
   {
     "name": "Eighth rib.l",
@@ -4901,7 +5007,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 64
+    "vertices": 64,
+    "group": "Eyeball",
+    "groupSide": "right"
   },
   {
     "name": "Ethmoid bone",
@@ -5751,7 +5859,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1869
+    "vertices": 1869,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Flocculus.r",
@@ -5759,7 +5869,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1869
+    "vertices": 1869,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Folium of vermis",
@@ -5767,7 +5879,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 410
+    "vertices": 410,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Fornix.l",
@@ -5839,7 +5953,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 2915
+    "vertices": 2915,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Free taenia",
@@ -5847,7 +5963,9 @@
     "tissue": "digestive",
     "region": "abdomen",
     "pack": "organs",
-    "vertices": 3358
+    "vertices": 3358,
+    "group": "Colon",
+    "groupSide": "midline"
   },
   {
     "name": "Frenula capsulae.l",
@@ -6047,7 +6165,9 @@
     "tissue": "reproductive",
     "region": "pelvis",
     "pack": "organs",
-    "vertices": 694
+    "vertices": 694,
+    "group": "Penis",
+    "groupSide": "midline"
   },
   {
     "name": "Glenoid labrum.l",
@@ -6151,7 +6271,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 3876
+    "vertices": 3876,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Gracile lobule.l",
@@ -6159,7 +6281,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 3488
+    "vertices": 3488,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Gracile lobule.r",
@@ -6167,7 +6291,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 3488
+    "vertices": 3488,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Gracilis muscle.l",
@@ -6231,7 +6357,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 204
+    "vertices": 204,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Hamate bone.l",
@@ -6303,7 +6431,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 512
+    "vertices": 512,
+    "group": "Limbic lobe",
+    "groupSide": "left"
   },
   {
     "name": "Hippocampus.r",
@@ -6311,7 +6441,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 512
+    "vertices": 512,
+    "group": "Limbic lobe",
+    "groupSide": "right"
   },
   {
     "name": "Humeral head of extensor carpi ulnaris.l",
@@ -6429,7 +6561,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 2148
+    "vertices": 2148,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Ileal branch of ileocolic artery",
@@ -6741,7 +6875,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 236
+    "vertices": 236,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Inferior colliculus.r",
@@ -6749,7 +6885,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 236
+    "vertices": 236,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Inferior deep lateral cervical nodes.l",
@@ -6829,7 +6967,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 413
+    "vertices": 413,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Inferior frontal sulcus.r",
@@ -6837,7 +6977,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 413
+    "vertices": 413,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Inferior gemellus muscle.l",
@@ -7007,7 +7149,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 2005
+    "vertices": 2005,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Inferior lingular artery of left lung",
@@ -7047,7 +7191,9 @@
     "tissue": "respiratory",
     "region": "thorax",
     "pack": "organs",
-    "vertices": 4637
+    "vertices": 4637,
+    "group": "Lung",
+    "groupSide": "left"
   },
   {
     "name": "Inferior lobe of right lung",
@@ -7055,7 +7201,9 @@
     "tissue": "respiratory",
     "region": "thorax",
     "pack": "organs",
-    "vertices": 4231
+    "vertices": 4231,
+    "group": "Lung",
+    "groupSide": "right"
   },
   {
     "name": "Inferior medial genicular artery.l",
@@ -7127,7 +7275,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 449
+    "vertices": 449,
+    "group": "Occipital lobe",
+    "groupSide": "left"
   },
   {
     "name": "Inferior occipital gyrus and sulcus*.r",
@@ -7135,7 +7285,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 449
+    "vertices": 449,
+    "group": "Occipital lobe",
+    "groupSide": "right"
   },
   {
     "name": "Inferior ophthalmic vein.l",
@@ -7175,7 +7327,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 321
+    "vertices": 321,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Inferior papillary muscle of right ventricle",
@@ -7183,7 +7337,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 225
+    "vertices": 225,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Inferior parathyroid gland.l",
@@ -7279,7 +7435,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Inferior salivatory nucleus.r",
@@ -7287,7 +7445,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Inferior semilunar lobule.l",
@@ -7295,7 +7455,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 3901
+    "vertices": 3901,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Inferior semilunar lobule.r",
@@ -7303,7 +7465,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 3901
+    "vertices": 3901,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Inferior subscapular nerve.l",
@@ -7375,7 +7539,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 750
+    "vertices": 750,
+    "group": "Temporal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Inferior temporal gyrus.r",
@@ -7383,7 +7549,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 750
+    "vertices": 750,
+    "group": "Temporal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Inferior temporal sulcus.l",
@@ -7391,7 +7559,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 125
+    "vertices": 125,
+    "group": "Temporal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Inferior temporal sulcus.r",
@@ -7399,7 +7569,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 125
+    "vertices": 125,
+    "group": "Temporal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Inferior thyroid artery.l",
@@ -7639,7 +7811,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 372
+    "vertices": 372,
+    "group": "Insula",
+    "groupSide": "left"
   },
   {
     "name": "Insula (Subcentral gyrus and ant. and post. sulci*).r",
@@ -7647,7 +7821,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 372
+    "vertices": 372,
+    "group": "Insula",
+    "groupSide": "right"
   },
   {
     "name": "Insular branches of middle cerebral artery (M2).r",
@@ -7857,7 +8033,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 2856
+    "vertices": 2856,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Intermediomedial nucleus",
@@ -7865,7 +8043,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 3264
+    "vertices": 3264,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Internal abdominal oblique muscle.l",
@@ -7889,7 +8069,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 3
+    "vertices": 3,
+    "group": "Eyeball",
+    "groupSide": "right"
   },
   {
     "name": "Internal carotid artery.l",
@@ -8137,7 +8319,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 31
+    "vertices": 31,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Interpeduncular fossa.r",
@@ -8145,7 +8329,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 31
+    "vertices": 31,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Interpubic disc",
@@ -8465,7 +8651,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 428
+    "vertices": 428,
+    "group": "Parietal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Intraparietal sulcus.r",
@@ -8473,7 +8661,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 428
+    "vertices": 428,
+    "group": "Parietal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Intrapulmonary nodes",
@@ -8489,7 +8679,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1734
+    "vertices": 1734,
+    "group": "Eyeball",
+    "groupSide": "left"
   },
   {
     "name": "Iris.r",
@@ -8497,7 +8689,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1734
+    "vertices": 1734,
+    "group": "Eyeball",
+    "groupSide": "right"
   },
   {
     "name": "Ischiofemoral ligament.l",
@@ -8521,7 +8715,9 @@
     "tissue": "digestive",
     "region": "abdomen",
     "pack": "organs",
-    "vertices": 13836
+    "vertices": 13836,
+    "group": "Small intestine",
+    "groupSide": "midline"
   },
   {
     "name": "Jugulodigastric node.l",
@@ -8641,7 +8837,9 @@
     "tissue": "digestive",
     "region": "neck",
     "pack": "organs",
-    "vertices": 1238
+    "vertices": 1238,
+    "group": "Pharynx",
+    "groupSide": "midline"
   },
   {
     "name": "Lat_Fis-ant-Horizont.l",
@@ -8649,7 +8847,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 89
+    "vertices": 89,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Lat_Fis-ant-Horizont.r",
@@ -8657,7 +8857,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 89
+    "vertices": 89,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Lat_Fis-ant-Vertical.l",
@@ -8665,7 +8867,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 99
+    "vertices": 99,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Lat_Fis-ant-Vertical.r",
@@ -8673,7 +8877,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 99
+    "vertices": 99,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Lat_Fis-post.l",
@@ -8817,7 +9023,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 3876
+    "vertices": 3876,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Lateral crico-arytenoid muscle.l",
@@ -8857,7 +9065,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 10200
+    "vertices": 10200,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Lateral femoral cutaneous nerve.l",
@@ -8897,7 +9107,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 304
+    "vertices": 304,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Lateral geniculate body.r",
@@ -8905,7 +9117,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 304
+    "vertices": 304,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Lateral head of flexor hallucis brevis.l",
@@ -8965,7 +9179,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 6732
+    "vertices": 6732,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Lateral meniscus.l",
@@ -9005,7 +9221,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 429
+    "vertices": 429,
+    "group": "Occipital lobe",
+    "groupSide": "left"
   },
   {
     "name": "Lateral occipital gyrus (Middle occipital gyrus*).r",
@@ -9013,7 +9231,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 429
+    "vertices": 429,
+    "group": "Occipital lobe",
+    "groupSide": "right"
   },
   {
     "name": "Lateral occipitotemporal gyrus.l",
@@ -9021,7 +9241,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 470
+    "vertices": 470,
+    "group": "Temporal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Lateral occipitotemporal gyrus.r",
@@ -9029,7 +9251,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 470
+    "vertices": 470,
+    "group": "Temporal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Lateral pectoral nerve.l",
@@ -9157,7 +9381,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 1632
+    "vertices": 1632,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Lateral sacral nodes.l",
@@ -9213,7 +9439,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 4488
+    "vertices": 4488,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Lateral superior jugular node.l",
@@ -9373,7 +9601,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 4896
+    "vertices": 4896,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Latissimus dorsi muscle.l",
@@ -9405,7 +9635,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 1092
+    "vertices": 1092,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Left brachiocephalic vein",
@@ -9453,7 +9685,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 189
+    "vertices": 189,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Left gastric artery",
@@ -9493,7 +9727,9 @@
     "tissue": "lymphatic",
     "region": "thorax",
     "pack": "organs",
-    "vertices": 4596
+    "vertices": 4596,
+    "group": "Thymus",
+    "groupSide": "midline"
   },
   {
     "name": "Left main bronchus",
@@ -9533,7 +9769,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 410
+    "vertices": 410,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Left subclavian artery",
@@ -9605,7 +9843,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 4718
+    "vertices": 4718,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Lens.l",
@@ -9613,7 +9853,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 801
+    "vertices": 801,
+    "group": "Eyeball",
+    "groupSide": "left"
   },
   {
     "name": "Lens.r",
@@ -9621,7 +9863,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 801
+    "vertices": 801,
+    "group": "Eyeball",
+    "groupSide": "right"
   },
   {
     "name": "Lentiform nucleus.l",
@@ -9801,7 +10045,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 841
+    "vertices": 841,
+    "group": "Occipital lobe",
+    "groupSide": "left"
   },
   {
     "name": "Lingual gyrus.r",
@@ -9809,7 +10055,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 841
+    "vertices": 841,
+    "group": "Occipital lobe",
+    "groupSide": "right"
   },
   {
     "name": "Lingual nerve.l",
@@ -9849,7 +10097,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 530
+    "vertices": 530,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Lingular vein of left lung",
@@ -10269,7 +10519,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 195
+    "vertices": 195,
+    "group": "Occipital lobe",
+    "groupSide": "left"
   },
   {
     "name": "Lunate sulcus.r",
@@ -10277,7 +10529,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 195
+    "vertices": 195,
+    "group": "Occipital lobe",
+    "groupSide": "right"
   },
   {
     "name": "Lunotriquetral interosseous ligament.l",
@@ -10341,7 +10595,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 112
+    "vertices": 112,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Mamillary body.r",
@@ -10349,7 +10605,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 112
+    "vertices": 112,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Mandible",
@@ -10645,7 +10903,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 101
+    "vertices": 101,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Medial geniculate body.r",
@@ -10653,7 +10913,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 101
+    "vertices": 101,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Medial head of flexor hallucis brevis.l",
@@ -10745,7 +11007,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 477
+    "vertices": 477,
+    "group": "Temporal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Medial occipitotemporal gyrus (Parahippocampal*).r",
@@ -10753,7 +11017,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 477
+    "vertices": 477,
+    "group": "Temporal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Medial pectoral nerve.l",
@@ -10873,7 +11139,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 4080
+    "vertices": 4080,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Medial segmental artery of right lung",
@@ -10937,7 +11205,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 1632
+    "vertices": 1632,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Median antebrachial vein.l",
@@ -11025,7 +11295,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 3042
+    "vertices": 3042,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Medulla oblongata.r",
@@ -11033,7 +11305,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 3042
+    "vertices": 3042,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Medulla-path",
@@ -11113,7 +11387,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 134
+    "vertices": 134,
+    "group": "Eyeball",
+    "groupSide": "right"
   },
   {
     "name": "Meso-appendix",
@@ -11129,7 +11405,9 @@
     "tissue": "digestive",
     "region": "abdomen",
     "pack": "organs",
-    "vertices": 3398
+    "vertices": 3398,
+    "group": "Colon",
+    "groupSide": "midline"
   },
   {
     "name": "Mesocolon",
@@ -11161,7 +11439,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 3049
+    "vertices": 3049,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Midbrain.r",
@@ -11169,7 +11449,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 3049
+    "vertices": 3049,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Middle cardiac vein",
@@ -11273,7 +11555,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1141
+    "vertices": 1141,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Middle frontal gyrus.r",
@@ -11281,7 +11565,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1141
+    "vertices": 1141,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Middle genicular artery.l",
@@ -11337,7 +11623,9 @@
     "tissue": "respiratory",
     "region": "thorax",
     "pack": "organs",
-    "vertices": 3708
+    "vertices": 3708,
+    "group": "Lung",
+    "groupSide": "right"
   },
   {
     "name": "Middle phalanx of fifth finger of foot.l",
@@ -11489,7 +11777,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 657
+    "vertices": 657,
+    "group": "Temporal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Middle temporal gyrus.r",
@@ -11497,7 +11787,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 657
+    "vertices": 657,
+    "group": "Temporal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Middle trunk of brachial plexus.l",
@@ -11521,7 +11813,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Motor nucleus of facial nerve.r",
@@ -11529,7 +11823,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Motor root of trigeminal nerve.l",
@@ -11849,7 +12145,9 @@
     "tissue": "respiratory",
     "region": "head",
     "pack": "organs",
-    "vertices": 978
+    "vertices": 978,
+    "group": "Pharynx",
+    "groupSide": "midline"
   },
   {
     "name": "Navicular bone.l",
@@ -11921,7 +12219,9 @@
     "tissue": "endocrine",
     "region": "head",
     "pack": "organs",
-    "vertices": 325
+    "vertices": 325,
+    "group": "Hypophysis",
+    "groupSide": "midline"
   },
   {
     "name": "Ninth rib.l",
@@ -11961,7 +12261,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 512
+    "vertices": 512,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Non-coronary leaflet",
@@ -11969,7 +12271,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 66
+    "vertices": 66,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Nuchal ligament",
@@ -11985,7 +12289,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Nucleus ambiguus.r",
@@ -11993,7 +12299,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Nucleus of abducens nerve.l",
@@ -12001,7 +12309,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Nucleus of abducens nerve.r",
@@ -12009,7 +12319,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Nucleus of accessory nerve.l",
@@ -12017,7 +12329,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 898
+    "vertices": 898,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Nucleus of accessory nerve.r",
@@ -12025,7 +12339,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 898
+    "vertices": 898,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Nucleus of hypoglossal nerve.l",
@@ -12033,7 +12349,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Nucleus of hypoglossal nerve.r",
@@ -12041,7 +12359,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Nucleus of oculomotor nerve.l",
@@ -12049,7 +12369,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Nucleus of oculomotor nerve.r",
@@ -12057,7 +12379,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Nucleus of solitary tract.l",
@@ -12065,7 +12389,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 674
+    "vertices": 674,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Nucleus of solitary tract.r",
@@ -12073,7 +12399,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 674
+    "vertices": 674,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Nucleus of trochlear nerve.l",
@@ -12081,7 +12409,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Nucleus of trochlear nerve.r",
@@ -12089,7 +12419,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Nucleus proprius",
@@ -12097,7 +12429,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 1632
+    "vertices": 1632,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Nucleus pulposus C2-C3",
@@ -12543,7 +12877,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 479
+    "vertices": 479,
+    "group": "Occipital lobe",
+    "groupSide": "left"
   },
   {
     "name": "Occipital pole.r",
@@ -12551,7 +12887,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 479
+    "vertices": 479,
+    "group": "Occipital lobe",
+    "groupSide": "right"
   },
   {
     "name": "Occipital sinus",
@@ -12599,7 +12937,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 245
+    "vertices": 245,
+    "group": "Temporal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Occipitotemporal sulcus (Lateral part*).r",
@@ -12607,7 +12947,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 245
+    "vertices": 245,
+    "group": "Temporal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Oculomotor nerve (III).l",
@@ -12655,7 +12997,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 275
+    "vertices": 275,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Olfactory sulcus.r",
@@ -12663,7 +13007,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 275
+    "vertices": 275,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Olive.l",
@@ -12671,7 +13017,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 482
+    "vertices": 482,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Olive.r",
@@ -12679,7 +13027,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 482
+    "vertices": 482,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Omental taenia",
@@ -12687,7 +13037,9 @@
     "tissue": "digestive",
     "region": "abdomen",
     "pack": "organs",
-    "vertices": 3118
+    "vertices": 3118,
+    "group": "Colon",
+    "groupSide": "midline"
   },
   {
     "name": "Omohyoid muscle.l",
@@ -12711,7 +13063,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 372
+    "vertices": 372,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Opercular part of inferior frontal gyrus.r",
@@ -12719,7 +13073,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 372
+    "vertices": 372,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Ophthalmic artery.l",
@@ -12791,7 +13147,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 448
+    "vertices": 448,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Optic chiasm.r",
@@ -12799,7 +13157,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 448
+    "vertices": 448,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Optic nerve (II).l",
@@ -12823,7 +13183,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1168
+    "vertices": 1168,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Optic tract.r",
@@ -12831,7 +13193,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1168
+    "vertices": 1168,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Orbicularis oris muscle.l",
@@ -12855,7 +13219,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 330
+    "vertices": 330,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Orbital gyri (Frontomarginal gyrus and sulcus*).r",
@@ -12863,7 +13229,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 330
+    "vertices": 330,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Orbital gyri.l",
@@ -12871,7 +13239,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 756
+    "vertices": 756,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Orbital gyri.r",
@@ -12879,7 +13249,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 756
+    "vertices": 756,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Orbital part of  inferior frontal gyrus.l",
@@ -12887,7 +13259,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 95
+    "vertices": 95,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Orbital part of  inferior frontal gyrus.r",
@@ -12895,7 +13269,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 95
+    "vertices": 95,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Orbital part of orbicularis oculi.l",
@@ -12919,7 +13295,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 383
+    "vertices": 383,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Orbital sulci (H-shaped orbital sulci*).r",
@@ -12927,7 +13305,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 383
+    "vertices": 383,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Orbital sulci (Lateral Orbital sulcus*).l",
@@ -12935,7 +13315,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 102
+    "vertices": 102,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Orbital sulci (Lateral Orbital sulcus*).r",
@@ -12943,7 +13325,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 102
+    "vertices": 102,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Orbitofrontal branches of anterior cerebral artery.l",
@@ -12967,7 +13351,9 @@
     "tissue": "digestive",
     "region": "head",
     "pack": "organs",
-    "vertices": 1274
+    "vertices": 1274,
+    "group": "Pharynx",
+    "groupSide": "midline"
   },
   {
     "name": "Palatine bone.l",
@@ -13295,7 +13681,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 377
+    "vertices": 377,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Paracentral gyrus and sulcus*.r",
@@ -13303,7 +13691,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 377
+    "vertices": 377,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Paracentral sulcus.l",
@@ -13311,7 +13701,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 338
+    "vertices": 338,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Paracentral sulcus.r",
@@ -13319,7 +13711,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 338
+    "vertices": 338,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Paracolic superior mesenteric nodes",
@@ -13551,7 +13945,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1216
+    "vertices": 1216,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Peduncle of flocculus.r",
@@ -13559,7 +13955,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1216
+    "vertices": 1216,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Perforating branches of plantar metatarsal arteries.l",
@@ -14007,7 +14405,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 5088
+    "vertices": 5088,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Pons.r",
@@ -14015,7 +14415,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 5088
+    "vertices": 5088,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Popliteal artery.l",
@@ -14103,7 +14505,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 578
+    "vertices": 578,
+    "group": "Parietal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Postcentral gyrus.r",
@@ -14111,7 +14515,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 578
+    "vertices": 578,
+    "group": "Parietal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Postcentral sulcus.l",
@@ -14119,7 +14525,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 595
+    "vertices": 595,
+    "group": "Parietal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Postcentral sulcus.r",
@@ -14127,7 +14535,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 595
+    "vertices": 595,
+    "group": "Parietal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Posterior antebrachial cutaneous nerve.l",
@@ -14345,7 +14755,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 482
+    "vertices": 482,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Posterior cochlear nucleus.r",
@@ -14353,7 +14765,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 482
+    "vertices": 482,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Posterior commissure",
@@ -14361,7 +14775,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 434
+    "vertices": 434,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Posterior communicating artery.l",
@@ -14561,7 +14977,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 6528
+    "vertices": 6528,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Posterior femoral cutaneous nerve.l",
@@ -14585,7 +15003,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 6528
+    "vertices": 6528,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Posterior inferior cerebellar artery.l",
@@ -14681,7 +15101,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 1544
+    "vertices": 1544,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Posterior ligament of fibular head.l",
@@ -14745,7 +15167,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Posterior nucleus of vagus nerve.r",
@@ -14753,7 +15177,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Posterior parietal artery.l",
@@ -14777,7 +15203,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1816
+    "vertices": 1816,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Posterior quadrangular lobule.r",
@@ -14785,7 +15213,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1816
+    "vertices": 1816,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Posterior root of posterior femoral cutaneous nerve.l",
@@ -14841,7 +15271,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 3266
+    "vertices": 3266,
+    "group": "Eyeball",
+    "groupSide": "left"
   },
   {
     "name": "Posterior segment of eyeball.r",
@@ -14849,7 +15281,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 3266
+    "vertices": 3266,
+    "group": "Eyeball",
+    "groupSide": "right"
   },
   {
     "name": "Posterior segmental artery of left lung",
@@ -14897,7 +15331,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 5916
+    "vertices": 5916,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Posterior sternoclavicular ligament.l",
@@ -15073,7 +15509,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 4488
+    "vertices": 4488,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Postvesical nodes",
@@ -15129,7 +15567,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 767
+    "vertices": 767,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Precentral gyrus.r",
@@ -15137,7 +15577,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 767
+    "vertices": 767,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Precentral sulcus (Superior part)*.l",
@@ -15145,7 +15587,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 286
+    "vertices": 286,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Precentral sulcus (Superior part)*.r",
@@ -15153,7 +15597,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 286
+    "vertices": 286,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Precentral sulcus (inferior part)*.l",
@@ -15161,7 +15607,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 391
+    "vertices": 391,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Precentral sulcus (inferior part)*.r",
@@ -15169,7 +15617,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 391
+    "vertices": 391,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Precuneus.l",
@@ -15177,7 +15627,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 652
+    "vertices": 652,
+    "group": "Parietal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Precuneus.r",
@@ -15185,7 +15637,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 652
+    "vertices": 652,
+    "group": "Parietal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Prefrontal artery.l",
@@ -15699,7 +16153,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 482
+    "vertices": 482,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Pyramid of medulla oblongata.r",
@@ -15707,7 +16163,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 482
+    "vertices": 482,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Pyramidalis muscle.l",
@@ -15731,7 +16189,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 593
+    "vertices": 593,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Quadrangular membrane.l",
@@ -16127,7 +16587,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 354
+    "vertices": 354,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Red nucleus.r",
@@ -16135,7 +16597,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 354
+    "vertices": 354,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Retina.l",
@@ -16143,7 +16607,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 3154
+    "vertices": 3154,
+    "group": "Eyeball",
+    "groupSide": "left"
   },
   {
     "name": "Retina.r",
@@ -16151,7 +16617,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 3154
+    "vertices": 3154,
+    "group": "Eyeball",
+    "groupSide": "right"
   },
   {
     "name": "Retro-aortic nodes",
@@ -16255,7 +16723,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 4756
+    "vertices": 4756,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Right brachiocephalic vein",
@@ -16311,7 +16781,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 190
+    "vertices": 190,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Right gastric nodes",
@@ -16367,7 +16839,9 @@
     "tissue": "lymphatic",
     "region": "thorax",
     "pack": "organs",
-    "vertices": 3228
+    "vertices": 3228,
+    "group": "Thymus",
+    "groupSide": "midline"
   },
   {
     "name": "Right main bronchus",
@@ -16407,7 +16881,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 565
+    "vertices": 565,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Right subclavian artery",
@@ -16487,7 +16963,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 4726
+    "vertices": 4726,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Risorius muscle.l",
@@ -16543,7 +17021,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 3264
+    "vertices": 3264,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Sacrococcygeal symphysis",
@@ -16793,7 +17273,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 2305
+    "vertices": 2305,
+    "group": "Eyeball",
+    "groupSide": "left"
   },
   {
     "name": "Sclera.r",
@@ -16801,7 +17283,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 2305
+    "vertices": 2305,
+    "group": "Eyeball",
+    "groupSide": "right"
   },
   {
     "name": "Second metacarpal bone.l",
@@ -16993,7 +17477,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 1839
+    "vertices": 1839,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Septal nuclei",
@@ -17009,7 +17495,9 @@
     "tissue": "heart",
     "region": "thorax",
     "pack": "vessels",
-    "vertices": 175
+    "vertices": 175,
+    "group": "Heart",
+    "groupSide": "midline"
   },
   {
     "name": "Serratus anterior muscle.l",
@@ -17157,7 +17645,9 @@
     "tissue": "digestive",
     "region": "pelvis",
     "pack": "organs",
-    "vertices": 1716
+    "vertices": 1716,
+    "group": "Colon",
+    "groupSide": "midline"
   },
   {
     "name": "Sigmoid nodes",
@@ -17327,7 +17817,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 3468
+    "vertices": 3468,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Spinalis capitis muscle.l",
@@ -17383,7 +17875,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 1632
+    "vertices": 1632,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Spleen",
@@ -17549,7 +18043,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 256
+    "vertices": 256,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Straight gyrus (Gyrus rectus).r",
@@ -17557,7 +18053,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 256
+    "vertices": 256,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Straight part of cricothyroid muscle.l",
@@ -17591,7 +18089,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 423
+    "vertices": 423,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Stria medullaris thalami.r",
@@ -17599,7 +18099,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 423
+    "vertices": 423,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Stria terminalis.l",
@@ -18317,7 +18819,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 4344
+    "vertices": 4344,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Superior cerebellar peduncle.r",
@@ -18325,7 +18829,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 4344
+    "vertices": 4344,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Superior colliculus.l",
@@ -18333,7 +18839,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 233
+    "vertices": 233,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Superior colliculus.r",
@@ -18341,7 +18849,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 233
+    "vertices": 233,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Superior diaphragmatic nodes",
@@ -18389,7 +18899,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1872
+    "vertices": 1872,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Superior frontal gyrus.r",
@@ -18397,7 +18909,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1872
+    "vertices": 1872,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Superior frontal sulcus.l",
@@ -18405,7 +18919,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 647
+    "vertices": 647,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Superior frontal sulcus.r",
@@ -18413,7 +18929,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 647
+    "vertices": 647,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Superior gemellus muscle.l",
@@ -18631,7 +19149,9 @@
     "tissue": "respiratory",
     "region": "thorax",
     "pack": "organs",
-    "vertices": 4662
+    "vertices": 4662,
+    "group": "Lung",
+    "groupSide": "left"
   },
   {
     "name": "Superior lobe of right lung",
@@ -18639,7 +19159,9 @@
     "tissue": "respiratory",
     "region": "thorax",
     "pack": "organs",
-    "vertices": 3902
+    "vertices": 3902,
+    "group": "Lung",
+    "groupSide": "right"
   },
   {
     "name": "Superior medial genicular artery.l",
@@ -18695,7 +19217,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 337
+    "vertices": 337,
+    "group": "Occipital lobe",
+    "groupSide": "left"
   },
   {
     "name": "Superior occipital gyri.r",
@@ -18703,7 +19227,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 337
+    "vertices": 337,
+    "group": "Occipital lobe",
+    "groupSide": "right"
   },
   {
     "name": "Superior ophthalmic vein.l",
@@ -18759,7 +19285,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 603
+    "vertices": 603,
+    "group": "Parietal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Superior parietal lobule.r",
@@ -18767,7 +19295,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 603
+    "vertices": 603,
+    "group": "Parietal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Superior petrosal sinus.l",
@@ -18847,7 +19377,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Superior salivatory nucleus.r",
@@ -18855,7 +19387,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 386
+    "vertices": 386,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Superior segmental artery of left lung",
@@ -18895,7 +19429,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 4368
+    "vertices": 4368,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Superior semilunar lobule.r",
@@ -18903,7 +19439,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 4368
+    "vertices": 4368,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Superior subscapular nerve.l",
@@ -18943,7 +19481,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 538
+    "vertices": 538,
+    "group": "Temporal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Superior temporal gyrus (Lateral part).r",
@@ -18951,7 +19491,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 538
+    "vertices": 538,
+    "group": "Temporal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Superior temporal sulcus.l",
@@ -18959,7 +19501,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1189
+    "vertices": 1189,
+    "group": "Temporal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Superior temporal sulcus.r",
@@ -18967,7 +19511,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1189
+    "vertices": 1189,
+    "group": "Temporal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Superior thyroid vein.l",
@@ -19151,7 +19697,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 756
+    "vertices": 756,
+    "group": "Parietal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Supramarginal gyrus.r",
@@ -19159,7 +19707,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 756
+    "vertices": 756,
+    "group": "Parietal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Suprarenal gland.l",
@@ -19431,7 +19981,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 1632
+    "vertices": 1632,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "Temporal bone.l",
@@ -19471,7 +20023,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 280
+    "vertices": 280,
+    "group": "Temporal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Temporal plane.r",
@@ -19479,7 +20033,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 280
+    "vertices": 280,
+    "group": "Temporal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Temporal pole.l",
@@ -19487,7 +20043,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 274
+    "vertices": 274,
+    "group": "Temporal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Temporal pole.r",
@@ -19495,7 +20053,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 274
+    "vertices": 274,
+    "group": "Temporal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Temporalis muscle.l",
@@ -19665,7 +20225,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 381
+    "vertices": 381,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Thalamus.r",
@@ -19673,7 +20235,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 381
+    "vertices": 381,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Third metacarpal bone.l",
@@ -19729,7 +20293,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 2158
+    "vertices": 2158,
+    "group": "Diencephalon",
+    "groupSide": "midline"
   },
   {
     "name": "Thoracic aorta",
@@ -19993,7 +20559,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1821
+    "vertices": 1821,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Tonsil of cerebellum.r",
@@ -20001,7 +20569,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1821
+    "vertices": 1821,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Trachea",
@@ -20057,7 +20627,9 @@
     "tissue": "digestive",
     "region": "abdomen",
     "pack": "organs",
-    "vertices": 8308
+    "vertices": 8308,
+    "group": "Colon",
+    "groupSide": "midline"
   },
   {
     "name": "Transverse facial artery.l",
@@ -20081,7 +20653,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 123
+    "vertices": 123,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Transverse frontopolar gyrus and sulcus*.r",
@@ -20089,7 +20663,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 123
+    "vertices": 123,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Transverse head of adductor hallucis.l",
@@ -20165,7 +20741,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 345
+    "vertices": 345,
+    "group": "Occipital lobe",
+    "groupSide": "left"
   },
   {
     "name": "Transverse occipital sulcus.r",
@@ -20173,7 +20751,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 345
+    "vertices": 345,
+    "group": "Occipital lobe",
+    "groupSide": "right"
   },
   {
     "name": "Transverse part of iliofemoral ligament.l",
@@ -20231,7 +20811,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 119
+    "vertices": 119,
+    "group": "Temporal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Transverse temporal gyri.r",
@@ -20239,7 +20821,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 119
+    "vertices": 119,
+    "group": "Temporal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Transverse tibiofibular ligament.l",
@@ -20375,7 +20959,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 254
+    "vertices": 254,
+    "group": "Frontal lobe",
+    "groupSide": "left"
   },
   {
     "name": "Triangular part of inferior frontal gyrus.r",
@@ -20383,7 +20969,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 254
+    "vertices": 254,
+    "group": "Frontal lobe",
+    "groupSide": "right"
   },
   {
     "name": "Trigeminal nerve (V).l",
@@ -20505,7 +21093,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 591
+    "vertices": 591,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Twelfth rib.l",
@@ -20893,7 +21483,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1118
+    "vertices": 1118,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Vagus nerve (X).l",
@@ -20987,7 +21579,9 @@
     "tissue": "digestive",
     "region": "pelvis",
     "pack": "organs",
-    "vertices": 223
+    "vertices": 223,
+    "group": "Colon",
+    "groupSide": "midline"
   },
   {
     "name": "Vertebra C3",
@@ -21219,7 +21813,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 786
+    "vertices": 786,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Vestibular nuclei.r",
@@ -21227,7 +21823,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 786
+    "vertices": 786,
+    "group": "Brainstem",
+    "groupSide": "midline"
   },
   {
     "name": "Vestibulocochlear nerve (VIII).l",
@@ -21251,7 +21849,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 2775
+    "vertices": 2775,
+    "group": "Eyeball",
+    "groupSide": "left"
   },
   {
     "name": "Vitreous body.r",
@@ -21259,7 +21859,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 2775
+    "vertices": 2775,
+    "group": "Eyeball",
+    "groupSide": "right"
   },
   {
     "name": "Vomer",
@@ -21275,7 +21877,9 @@
     "tissue": "brain",
     "region": "back",
     "pack": "nerves",
-    "vertices": 7854
+    "vertices": 7854,
+    "group": "Spinal cord",
+    "groupSide": "midline"
   },
   {
     "name": "White matter of telencephalon.l",
@@ -21299,7 +21903,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1585
+    "vertices": 1585,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Wing of central lobule.r",
@@ -21307,7 +21913,9 @@
     "tissue": "brain",
     "region": "head",
     "pack": "nerves",
-    "vertices": 1585
+    "vertices": 1585,
+    "group": "Cerebellum",
+    "groupSide": "midline"
   },
   {
     "name": "Xiphoid process",
@@ -21339,7 +21947,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 48
+    "vertices": 48,
+    "group": "Eyeball",
+    "groupSide": "right"
   },
   {
     "name": "Zonular fibres.l",
@@ -21347,7 +21957,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 354
+    "vertices": 354,
+    "group": "Eyeball",
+    "groupSide": "left"
   },
   {
     "name": "Zonular fibres.r",
@@ -21355,7 +21967,9 @@
     "tissue": "sense",
     "region": "head",
     "pack": "nerves",
-    "vertices": 34338
+    "vertices": 34338,
+    "group": "Eyeball",
+    "groupSide": "right"
   },
   {
     "name": "Zygomatic bone.l",

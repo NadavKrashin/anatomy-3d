@@ -2,8 +2,13 @@ import type { AnatomicalStructure, AnatomySystem } from "@/types/anatomy";
 import { ANATOMY_SYSTEMS } from "@/types/anatomy";
 
 export interface AnatomyRegistry {
-  /** Whole structures only — what scopes, counts and quizzes work on. */
+  /** Whole structures only — what the legend, region views and filters work on. */
   readonly structures: readonly AnatomicalStructure[];
+  /**
+   * Wholes and parts (heads of a muscle, lobes of a lung…) — what can be
+   * studied: quiz scopes, progress.
+   */
+  readonly all: readonly AnatomicalStructure[];
   /** Any structure, parts included. */
   get(id: string): AnatomicalStructure | undefined;
   /** Parts of a whole structure (e.g. the heads of a muscle), in dataset order. */
@@ -36,6 +41,7 @@ export function createRegistry(
 
   return {
     structures: wholes,
+    all: structures,
     get: (id) => byId.get(id),
     partsOf: (id) => [...(parts.get(id) ?? [])],
     wholeOf: (id) => {

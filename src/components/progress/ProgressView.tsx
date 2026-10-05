@@ -21,7 +21,7 @@ export function ProgressView() {
   const { registry } = useAnatomyData();
   const { data, status } = useProgressStore();
   const [now] = useState(() => Date.now());
-  const ids = useMemo(() => registry.structures.map((s) => s.id), [registry]);
+  const ids = useMemo(() => registry.all.map((s) => s.id), [registry]);
 
   const overview = progressOverview(data, ids);
   const due = dueForReview(data, ids, now);

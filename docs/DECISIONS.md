@@ -338,3 +338,20 @@ settings store; structures tagged `male`/`female` hidden by
 `getStructureVisibility` when the other sex is chosen (or packs loaded per
 sex); quiz scopes skip the hidden sex; THIRD_PARTY_ASSETS row with the HRA
 attribution ("Human Reference Atlas, HuBMAP — CC BY 4.0").
+
+## 2026-10-05 — Whole organs from the source hierarchy; parts are studyable
+
+- **Need:** the source models the heart as chambers/valves, the lungs as
+  lobes, the brain as gyri/lobules — there was no "heart" or "lung" to select.
+- **Grouping:** Z-Anatomy's own group empties (`Heart.g`, `Right lung.g`,
+  `Frontal lobe.g`, `Cerebellum.g`…) define the wholes; an explicit list in
+  the export (`ORGAN_GROUPS`) chooses which groups are organs and whether the
+  whole is midline (heart, cerebellum) or one per side (lungs, lobes). The
+  existing part/whole mechanism (muscle parts) carries them unchanged. One
+  level only; a two-level hierarchy (gyrus → lobe → hemisphere) was not
+  worth the complexity yet.
+- **Studyable = wholes + parts** (`registry.all`). Without it, making heart
+  chambers and gyri "parts" would have dropped them from quizzes. Find
+  questions about a part switch on part-picking; distractors prefer sibling
+  parts and never offer the target's own whole or parts. The legend and
+  region views still count wholes.

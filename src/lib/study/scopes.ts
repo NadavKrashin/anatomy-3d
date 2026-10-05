@@ -12,7 +12,7 @@ export const WHOLE_BODY_SCOPE_ID = "all";
 export function builtInScopes(registry: AnatomyRegistry): StudyScope[] {
   const ids = (
     predicate: (s: AnatomyRegistry["structures"][number]) => boolean,
-  ) => registry.structures.filter(predicate).map((s) => s.id);
+  ) => registry.all.filter(predicate).map((s) => s.id);
 
   const regionScopes = ANATOMY_REGIONS.filter(
     (r) => r !== "whole-body" && r !== "other",

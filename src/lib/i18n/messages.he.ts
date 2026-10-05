@@ -49,7 +49,7 @@ export const he = {
     isolating: "מצב בידוד",
     peelLayer: "הסרת שכבה",
     restoreLayer: "החזרת שכבה",
-    pickParts: "חלקי שרירים",
+    pickParts: "בחירת חלקים",
   },
   search: {
     placeholder: "חיפוש מבנה…",

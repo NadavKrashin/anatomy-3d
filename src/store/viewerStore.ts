@@ -18,7 +18,7 @@ interface ViewerState {
   cameraCommand: CameraCommand | null;
   /** While true, clicks in the 3D view don't change the selection (quiz highlights). */
   selectionLocked: boolean;
-  /** Clicks pick parts (heads of a muscle) instead of whole structures. */
+  /** Clicks pick parts (heads of a muscle, lobes of a lung…) instead of wholes. */
   pickParts: boolean;
   /** Draw the selected muscle's origin/insertion patches (explore). */
   showAttachments: boolean;
