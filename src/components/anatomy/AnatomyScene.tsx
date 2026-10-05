@@ -1,6 +1,5 @@
 "use client";
 
-import { useLayerPeeling } from "@/hooks/useLayerPeeling";
 import { Suspense, useEffect } from "react";
 import { useSceneIndexStore } from "@/store/sceneIndexStore";
 import type { AnatomyModelFile } from "@/types/anatomy";
@@ -47,7 +46,6 @@ export function AnatomyScene({
   /** Explore extras: leader label and attachment patches (would give quiz answers away). */
   showSelectionLabel: boolean;
 }) {
-  useLayerPeeling();
   return (
     <>
       {/* Even, soft light suited to the pale plate: a bright sky/ground fill,

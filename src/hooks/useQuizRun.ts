@@ -42,6 +42,7 @@ function syncViewer(
   if (run.phase === "complete") {
     viewer.restoreAllLayers();
     viewer.setPickParts(false);
+    viewer.setPeelMode(false);
     viewer.setSelectionLocked(false);
     viewer.select(null);
     viewer.setHiddenSystems([]);
@@ -52,8 +53,9 @@ function syncViewer(
 
   if (run.phase === "answering" && questionChanged) {
     const target = registry.get(question.structureId);
-    // Layers peeled for the previous question would give this one away.
+    // Structures peeled for the previous question would give this one away.
     viewer.restoreAllLayers();
+    viewer.setPeelMode(false);
     viewer.setHiddenSystems(target ? systemsToHideFor(target) : []);
     // "Find the left ventricle" needs clicks to pick parts; "find the heart" wholes.
     viewer.setPickParts(Boolean(target?.parentId));
@@ -73,6 +75,7 @@ function syncViewer(
   }
 
   if (run.phase === "answered") {
+    viewer.setPeelMode(false);
     viewer.setSelectionLocked(true);
     if (run.feedback?.kind === "revealed") {
       // The answer may have been peeled away; show it in context (x-ray).

@@ -113,13 +113,13 @@ ancestors are tried (multi-primitive meshes load as a group of meshes).
 
 ## 4. State
 
-| Store                      | Holds                                                                                                                   | Persisted                                                    |
-| -------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| `store/viewerStore.ts`     | selection, hover, hidden ids, hidden systems, isolated id, camera command, selection lock, peeled layers + peel request | no                                                           |
-| `store/settingsStore.ts`   | UI locale, term-language preference                                                                                     | localStorage (`anatomy.settings`)                            |
-| `store/sceneIndexStore.ts` | loaded model files (root + scene index each), merged structure id → meshes, `complete`                                  | no (runtime objects)                                         |
-| `store/quizStore.ts`       | the active `QuizRun` (state of the pure quiz engine)                                                                    | no                                                           |
-| `store/progressStore.ts`   | `ProgressData`: per-structure progress + session history                                                                | via `ProgressRepository` → localStorage (`anatomy.progress`) |
+| Store                      | Holds                                                                                                               | Persisted                                                    |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| `store/viewerStore.ts`     | selection, hover, hidden ids, hidden systems, isolated id, camera command, selection lock, peel mode + peeled stack | no                                                           |
+| `store/settingsStore.ts`   | UI locale, term-language preference                                                                                 | localStorage (`anatomy.settings`)                            |
+| `store/sceneIndexStore.ts` | loaded model files (root + scene index each), merged structure id → meshes, `complete`                              | no (runtime objects)                                         |
+| `store/quizStore.ts`       | the active `QuizRun` (state of the pure quiz engine)                                                                | no                                                           |
+| `store/progressStore.ts`   | `ProgressData`: per-structure progress + session history                                                            | via `ProgressRepository` → localStorage (`anatomy.progress`) |
 
 Conventions:
 
@@ -161,15 +161,13 @@ AnatomyModel.apply()
   `SelectionLabel` (explore only — it would give away quiz answers) puts an
   atlas-style leader label at the selection's bounding-box centre via drei
   `<Html>`.
-- Layer peeling: `requestPeel()` bumps a nonce in the viewer store;
-  `useLayerPeeling` (inside the canvas) answers with one off-screen render
-  (`three/structureIdPass.ts`: every interactive mesh in a flat colour that
-  encodes its index, ≤512px, linear/untone-mapped so bytes decode exactly),
-  counts front pixels per structure, and `lib/anatomy/peel.ts` (pure, tested)
-  picks the outer layer: non-skeletal, ≥3 pixels. `applyPeel` hides it as one
-  batch on a stack (`peeledLayers`), never the selected structure;
-  `restoreLayer` pops one batch, `showAll`/`showOnly`/quiz question changes
-  clear them. UI: `LayerControls` (explore toolbar, quiz find questions).
+- Peeling (tap to peel): `viewerStore.peelMode` turns taps into peels —
+  `pick(id)` calls `peelStructure(id)` instead of selecting (whole or part,
+  per `pickParts`); each peel is pushed on `peeledLayers` (one id per entry)
+  and hidden; `restoreLayer` pops one, `restoreAllLayers` / `showAll` /
+  `showOnly` / quiz question changes clear them; isolating turns peel mode
+  off. UI: `LayerControls` (toggle + restore; explore toolbar, quiz find
+  questions) and `PeelModeHint` (pill over the canvas).
 - Attachment patches (explore only, with the leader label):
   `AttachmentPatches` mounts once the selection has attachments, lazy-loads
   the patch GLB in its own Suspense, and shows the patches of the selection
@@ -187,9 +185,7 @@ AnatomyModel.apply()
   registration only (the primary file is the whole skeleton), so streaming
   files never move it. Quizzes start on `complete`; deep links wait only for
   their structure (`useStructureLoaded`); `LoadingOverlay` shows a centred bar
-  until the primary file, then a small "n/5" pill. Peeling renders all file
-  roots into one ID pass sharing a depth buffer (`useLayerPeeling` at scene
-  level).
+  until the primary file, then a small "n/5" pill.
 - `AnatomyCanvas` is loaded with `next/dynamic({ ssr: false })`, wrapped in an
   error boundary with retry, a WebGL capability check and a loading overlay.
 

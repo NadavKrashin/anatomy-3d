@@ -355,3 +355,19 @@ attribution ("Human Reference Atlas, HuBMAP — CC BY 4.0").
   questions about a part switch on part-picking; distractors prefer sibling
   parts and never offer the target's own whole or parts. The legend and
   region views still count wholes.
+
+## 2026-10-05 — Peeling becomes tap-to-peel (supersedes the view-based peel)
+
+- **Why:** the user found the automatic peel too drastic — zoomed in on the
+  chest of the whole-body model, one tap removed ~250 structures (every
+  small vessel, nerve and node on the surface counts as "outermost"), lungs
+  and heart included. She wants a controlled, hands-on dissection.
+- **Options offered:** tap to peel; a gentler button (only the few biggest
+  outer structures); peel only the centre of the view; fade-out. The user
+  chose **tap to peel** only.
+- **Now:** a peel mode toggle — each tap hides just the tapped structure (an
+  undo stack restores one tap at a time). The view-based ID-pass code
+  (`three/structureIdPass.ts`, `lib/anatomy/peel.ts`, `useLayerPeeling`) was
+  removed rather than kept unused; see the 2026-10-05 "Layer peeling is
+  view-based" entry and git history if a view-based peel is wanted again.
+- Bones can be peeled too now (the user chooses each structure).

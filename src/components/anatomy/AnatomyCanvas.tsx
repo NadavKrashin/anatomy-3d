@@ -9,6 +9,7 @@ import { useMessages } from "@/hooks/useMessages";
 import { useSceneIndexStore } from "@/store/sceneIndexStore";
 import { useViewerStore } from "@/store/viewerStore";
 import { AnatomyScene } from "./AnatomyScene";
+import { PeelModeHint } from "./LayerControls";
 import { ViewerErrorBoundary } from "./ViewerErrorBoundary";
 
 let webGLSupport: boolean | undefined;
@@ -159,6 +160,7 @@ export default function AnatomyCanvas({
         </Suspense>
       </Canvas>
       <LoadingOverlay />
+      <PeelModeHint />
     </ViewerErrorBoundary>
   );
 }

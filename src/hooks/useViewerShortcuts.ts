@@ -29,7 +29,9 @@ export function useViewerShortcuts({
           else document.getElementById(STRUCTURE_SEARCH_INPUT_ID)?.focus();
           break;
         case "Escape":
-          if (viewer.isolatedStructureId && !selected) viewer.exitIsolate();
+          if (viewer.peelMode) viewer.setPeelMode(false);
+          else if (viewer.isolatedStructureId && !selected)
+            viewer.exitIsolate();
           else viewer.select(null);
           break;
         case "KeyF":
@@ -49,7 +51,7 @@ export function useViewerShortcuts({
           break;
         case "KeyP":
           if (event.shiftKey) viewer.restoreLayer();
-          else viewer.requestPeel();
+          else viewer.setPeelMode(!viewer.peelMode);
           break;
         case "KeyQ":
           onQuiz();
