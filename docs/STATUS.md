@@ -2,7 +2,7 @@
 
 > Living document. **Update it with every commit that changes the code, not
 > just at the end of a session** — it must always match the code as it is.
-> Last updated: 2026-10-05 (session 2, tap to peel).
+> Last updated: 2026-10-05 (session 3, course site extracted).
 
 ## Orientation (read in this order)
 
@@ -14,7 +14,9 @@
    supersedes its visual sections.
 6. `docs/DECISIONS.md` — why things are the way they are.
 7. As needed: `docs/DEPLOYMENT.md`, `docs/CONTENT_REVIEW.md`,
-   `THIRD_PARTY_ASSETS.md`, `scripts/anatomy/z-anatomy/README.md`.
+   `THIRD_PARTY_ASSETS.md`, `scripts/anatomy/z-anatomy/README.md`,
+   `docs/COURSE_SOURCE.md` (her course site: what was extracted, what may be
+   committed).
 
 Project skills in `.claude/skills/` (`anatomy-workflow`, `anatomy-ui-style`,
 `frontend-design`) load automatically in Claude Code and encode the same rules.
@@ -143,13 +145,21 @@ All verified by `npm run e2e:smoke` against a production build.
    brainstem, diencephalon, spinal cord, eyeballs, colon, small intestine,
    pharynx, hypophysis, thymus, penis (`ORGAN_GROUPS` in the export). One
    level only (gyrus → lobe, not → hemisphere → brain).
-4. **Next task: read her course site** https://medintzfat.com/anatomy/ (all
-   labs and lectures; first check the domain is reachable — `curl -sI`). Collect
-   Hebrew terms as the course uses them, per-lab structure lists, syllabus order
-   and practice questions; save the extract under `docs/` with page URLs, then
-   map terms to structure ids. Source every term; never invent.
-   4a. **Hebrew names** (from her course sources) — ideally from
-   her course's term list; add to curated concepts + `docs/CONTENT_REVIEW.md`.
+4. ~~Read her course site~~ — done (session 3): syllabus, per-lab structure
+   lists (863-row semester-B checklist with past-exam ★, labs 1–2 from the
+   lab pages), 815 Hebrew↔English term candidates and suggested structure
+   ids are in `data/course/medintzfat/`; the 586 practice questions and page
+   text are extracted **locally only** (`.course-cache/`, git-ignored)
+   because the site's terms forbid copying. See `docs/COURSE_SOURCE.md`.
+   4a. **Ask the user** how to use the questions: permission from the site
+   (contact@dorpascal.com), link out to the site's quizzes, or write our own
+   from the structure lists.
+   4b. **Lab study lists in the app** — "Lab 7" / "past-exam structures"
+   quiz scopes and explore lists from `lab-structures.json`; first review the
+   suggested `structureId`s (299/863 matched) and map the rest by hand.
+   4c. **Hebrew names** — the course writes structure names in English and
+   transliterates when it uses Hebrew (העצב האולנרי, not עצב הגומד); review
+   the curated Hebrew against this (CONTENT_REVIEW) before adding more.
 5. ~~Muscle heads as sub-structures~~ — done (52 parts); quizzing on parts
    is a possible follow-up.
    5b. **Male/female switch** — deferred by the user; options, source (Human
@@ -263,3 +273,8 @@ All verified by `npm run e2e:smoke` against a production build.
   (`structureIdPass`, `peel.ts`, `useLayerPeeling`) was removed.
 - **2026-10-05 · session 2 (cont.)** — Tap to peel merged to `main` via
   PR #6.
+- **2026-10-05 · session 3** — Read her course site (medintzfat.com, now
+  reachable): `scripts/course/medintzfat/extract.py` → syllabus, lab
+  structure lists with past-exam marks, Hebrew term candidates and suggested
+  structure ids (`data/course/medintzfat/`); questions and page text kept
+  local (site terms forbid copying; repo is public). `docs/COURSE_SOURCE.md`.

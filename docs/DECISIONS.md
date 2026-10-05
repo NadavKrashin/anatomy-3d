@@ -371,3 +371,25 @@ attribution ("Human Reference Atlas, HuBMAP — CC BY 4.0").
   removed rather than kept unused; see the 2026-10-05 "Layer peeling is
   view-based" entry and git history if a view-based peel is wanted again.
 - Bones can be peeled too now (the user chooses each structure).
+
+## 2026-10-05 — Course site: commit facts only, keep its content local
+
+**Context.** The user named her course site (https://medintzfat.com/anatomy/)
+as the study source. Its terms of use (https://medintzfat.com/terms/) allow
+personal study use but forbid copying or embedding its content, in whole or
+in part, and rewriting it as original. This repo is public and the app is
+deployed publicly.
+
+**Decision.** `scripts/course/medintzfat/extract.py` commits only facts to
+`data/course/medintzfat/`: the syllabus (titles + URLs), structure names per
+lab with the site's past-exam marks, Hebrew↔English term pairs and suggested
+structure ids. The practice questions, explanations and page text go to the
+git-ignored `.course-cache/` for personal study and as a reference while we
+build. Nothing from the site ships in the app until the user picks one of
+these: ask the site for permission, link out to it, or write our own
+questions.
+
+**Matching.** Suggested ids use a deliberately strict normalised exact-name
+match: drop m./n./a./v., sort the words, singularise. A wrong id would
+silently teach the wrong structure, so a miss is better. That is why only
+~35% of rows match. The rest need a person.

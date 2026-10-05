@@ -1,0 +1,302 @@
+[
+  {
+    "section": "מבואות",
+    "pages": [
+      {
+        "label": "שיעור 1",
+        "title": "אנטומיה של מערכת העצבים - מבנה הנוירון, סינאפסות, המוח וחוט השדרה",
+        "url": "https://medintzfat.com/anatomy/class1"
+      },
+      {
+        "label": "שיעור 2",
+        "title": "מבוא לאנטומיה והיסטולוגיה: שלד שריר",
+        "url": "https://medintzfat.com/anatomy/class2"
+      },
+      {
+        "label": "שיעור 3",
+        "title": "מבוא לאנטומיה - עמידה אנטומית, מפרקים, עצמות ורקמות חיבור",
+        "url": "https://medintzfat.com/anatomy/class3"
+      },
+      {
+        "label": "שיעור 4",
+        "title": "מבוא לאנטומיה של מערכת השריר",
+        "url": "https://medintzfat.com/anatomy/class4"
+      },
+      {
+        "label": "שיעור מיוחד",
+        "title": "אתיקה של דיסקציות באנטומיה: בין מקצוענות לכבוד האדם",
+        "url": "https://medintzfat.com/anatomy/dissection-ethics"
+      },
+      {
+        "label": "דימות",
+        "title": "מבוא לדימות רפואי: רנטגן, CT ואולטרסאונד - עקרונות, קרינה ופענוח בסיסי",
+        "url": "https://medintzfat.com/anatomy/imaging"
+      },
+      {
+        "label": "רנטגן ו־CT בסיסיים",
+        "title": "יסודות רנטגן ו-CT: HU, חלונות, חומר ניגוד ו-CTA",
+        "url": "https://medintzfat.com/anatomy/xray-ct-basics"
+      },
+      {
+        "label": "אמנות ודיסקציות",
+        "title": "אמנות, מוות ודיסקציה - סיכום הרצאה",
+        "url": "https://medintzfat.com/anatomy/art-death-dissection"
+      }
+    ]
+  },
+  {
+    "section": "גפה עליונה",
+    "pages": [
+      {
+        "label": "שיעור 5",
+        "title": "אנטומיה של חגורת הכתף והזרוע - עצמות, מפרקים, תנועות ופתולוגיות שכיחות",
+        "url": "https://medintzfat.com/anatomy/class5"
+      },
+      {
+        "label": "שיעור 6",
+        "title": "שרירי חגורת הכתף והזרוע - אנטומיה שטחית, עצבוב, ורידים ופתולוגיות",
+        "url": "https://medintzfat.com/anatomy/class6"
+      },
+      {
+        "label": "שיעור 7",
+        "title": "אנטומיית שרירי חגורת הכתף והזרוע - כולל Brachial Plexus",
+        "url": "https://medintzfat.com/anatomy/class7"
+      },
+      {
+        "label": "שיעור 8",
+        "title": "אנטומיה של המרפק והאמה - עצמות, מפרקים, רצועות, שרירים, עצבים וקליניקה",
+        "url": "https://medintzfat.com/anatomy/class8"
+      },
+      {
+        "label": "שיעור 9",
+        "title": "אנטומיה של האמה ושורש כף היד - עצמות, מפרקים, פאסיות, שרירים ותנועות",
+        "url": "https://medintzfat.com/anatomy/class9"
+      },
+      {
+        "label": "מעבדה 1",
+        "title": "סיכומים ושאלות לקראת מעבדת אנטומיה על הגפה העליונה",
+        "url": "https://medintzfat.com/anatomy/lab1"
+      },
+      {
+        "label": "בוחן 1",
+        "title": "בוחן דינמי - אנטומיה גפה עליונה (תרגול עם משוב)",
+        "url": "https://medintzfat.com/anatomy/quiz-upper-limb-01"
+      }
+    ]
+  },
+  {
+    "section": "בית חזה",
+    "pages": [
+      {
+        "label": "שיעור 10",
+        "title": "אנטומיה של בית החזה - צלעות, חוליות ושרירים בין-צלעיים",
+        "url": "https://medintzfat.com/anatomy/thorax-part1"
+      },
+      {
+        "label": "שיעור 11",
+        "title": "אנטומיית בית החזה - מערכת הנשימה",
+        "url": "https://medintzfat.com/anatomy/respiratory-system"
+      },
+      {
+        "label": "שיעור 12",
+        "title": "אנטומיית בית החזה - מדיאסטינום",
+        "url": "https://medintzfat.com/anatomy/thorax-part2"
+      },
+      {
+        "label": "שיעור 13",
+        "title": "אנטומיית הלב - מבנה, מסתמים, כלי דם קורונריים ומחזור הדם",
+        "url": "https://medintzfat.com/anatomy/thorax-part3"
+      },
+      {
+        "label": "שיעור 14",
+        "title": "העצבוב האוטונומי של בית החזה: סימפתטי, פאראסימפתטי ועצבוב תחושתי",
+        "url": "https://medintzfat.com/anatomy/thorax-autonomic-innervation"
+      },
+      {
+        "label": "מעבדה 2",
+        "title": "מעבדת אנטומיה על בית החזה - סיכומים ושאלות הכנה",
+        "url": "https://medintzfat.com/anatomy/lab2"
+      },
+      {
+        "label": "בוחן 2",
+        "title": "בוחן דינמי - בית חזה ומדיאסטינום (תרגול עם משוב)",
+        "url": "https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01"
+      }
+    ]
+  },
+  {
+    "section": "בטן ואגן",
+    "pages": [
+      {
+        "label": "שיעור 1",
+        "title": "אנטומיה - קירות הבטן, התעלה האינגווינלית ופריטונאום",
+        "url": "https://medintzfat.com/anatomy/abdominal-wall"
+      },
+      {
+        "label": "שיעור 2",
+        "title": "סיכום - איברי הבטן - מערכת העיכול והאיברים הנלווים",
+        "url": "https://medintzfat.com/anatomy/abdominal-organs"
+      },
+      {
+        "label": "שיעור 3",
+        "title": "עצבוב איברי הבטן, מערכת פורטלית ורטרופריטונאום",
+        "url": "https://medintzfat.com/anatomy/abdominal-innervation"
+      },
+      {
+        "label": "שיעור 4",
+        "title": "אנטומיית האגן והפרינאום",
+        "url": "https://medintzfat.com/anatomy/pelvis"
+      },
+      {
+        "label": "שיעור 5",
+        "title": "האגן הזכרי - אנטומיה ופיזיולוגיה",
+        "url": "https://medintzfat.com/anatomy/pelvis-male"
+      },
+      {
+        "label": "דימות",
+        "title": "אנטומיה בדימות הבטן - קיבה, מעיים וכלי דם",
+        "url": "https://medintzfat.com/anatomy/abdominal-imaging"
+      },
+      {
+        "label": "מעבדה 3",
+        "title": "מעבדת אנטומיה על דופן הבטן והתעלה האינגווינלית - סיכומים",
+        "url": "https://medintzfat.com/anatomy/lab3"
+      },
+      {
+        "label": "מעבדה 4",
+        "title": "מעבדת אנטומיה - החלל הפריטוניאלי ואיברי הבטן",
+        "url": "https://medintzfat.com/anatomy/lab4"
+      },
+      {
+        "label": "מעבדה 5",
+        "title": "מעבדת אנטומיה - איברי הבטן ואספקת דם",
+        "url": "https://medintzfat.com/anatomy/lab5"
+      },
+      {
+        "label": "מעבדה 6",
+        "title": "מעבדת אנטומיה על דופן הבטן האחורית, האגן והפרינאום - סיכומים",
+        "url": "https://medintzfat.com/anatomy/lab6"
+      }
+    ]
+  },
+  {
+    "section": "גפה תחתונה וגב",
+    "pages": [
+      {
+        "label": "שיעור 1",
+        "title": "אנטומיית הגפה התחתונה: האגן ומפרק הירך",
+        "url": "https://medintzfat.com/anatomy/lower-limb-part1"
+      },
+      {
+        "label": "שיעור 2",
+        "title": "אנטומיית הגפה התחתונה: מבנים שטחיים, פאסיות ושרירי האגן והירך",
+        "url": "https://medintzfat.com/anatomy/lower-limb-part2"
+      },
+      {
+        "label": "שיעור 3",
+        "title": "אנטומיית הגפה התחתונה: מבנים אנטומיים, עצבים וכלי דם",
+        "url": "https://medintzfat.com/anatomy/lower-limb-part3"
+      },
+      {
+        "label": "שיעור 4",
+        "title": "אזור הברך – עצמות, מפרקים, רקמות רכות, שרירים, עצבים וכלי דם",
+        "url": "https://medintzfat.com/anatomy/lower-limb-part4"
+      },
+      {
+        "label": "שיעור 5",
+        "title": "אנטומיית הגפה התחתונה: שוק, קרסול וכף הרגל",
+        "url": "https://medintzfat.com/anatomy/lower-limb-part5"
+      },
+      {
+        "label": "מעבדה 7",
+        "title": "מעבדת הגפה התחתונה - עצמות, מפרקים, מדורים, כלי דם ועצבים",
+        "url": "https://medintzfat.com/anatomy/lab7"
+      },
+      {
+        "label": "שיעור 6",
+        "title": "אנטומיית הגב ועמוד השדרה",
+        "url": "https://medintzfat.com/anatomy/back-and-spine"
+      },
+      {
+        "label": "מעבדה 8",
+        "title": "מעבדת אנטומיה של הגב - סיכומים",
+        "url": "https://medintzfat.com/anatomy/lab8"
+      }
+    ]
+  },
+  {
+    "section": "ראש וצוואר",
+    "pages": [
+      {
+        "label": "שיעור 1",
+        "title": "גולגולת, שיניים ועצבים קרניאליים",
+        "url": "https://medintzfat.com/anatomy/skull-cranial-nerves"
+      },
+      {
+        "label": "שיעור 2",
+        "title": "הצוואר השטחי וכלי הדם של הצוואר",
+        "url": "https://medintzfat.com/anatomy/neck"
+      },
+      {
+        "label": "שיעור 3",
+        "title": "הפנים, עצבוב הפנים ומפרק הלסת",
+        "url": "https://medintzfat.com/anatomy/face-mastication"
+      },
+      {
+        "label": "שיעור 4",
+        "title": "חלל האף, הסינוסים וה-Pterygopalatine Fossa",
+        "url": "https://medintzfat.com/anatomy/nasal-cavity"
+      },
+      {
+        "label": "שיעור 5",
+        "title": "אנטומיית חלל הפה והלשון",
+        "url": "https://medintzfat.com/anatomy/oral-cavity"
+      },
+      {
+        "label": "שיעור 6",
+        "title": "הגרון - Larynx, מיתרי הקול ובליעה",
+        "url": "https://medintzfat.com/anatomy/throat"
+      },
+      {
+        "label": "שיעור 7",
+        "title": "העין - ארובת העין, שרירי העין ומבנה גלגל העין",
+        "url": "https://medintzfat.com/anatomy/eye"
+      },
+      {
+        "label": "שיעור 8",
+        "title": "אנטומיית האוזן - שמיעה ושיווי משקל",
+        "url": "https://medintzfat.com/anatomy/ear"
+      },
+      {
+        "label": "מעבדה 9",
+        "title": "מעבדת אנטומיה - ראש וצוואר",
+        "url": "https://medintzfat.com/anatomy/lab9"
+      }
+    ]
+  },
+  {
+    "section": "practice and lab lists (site extras)",
+    "pages": [
+      {
+        "label": "",
+        "title": "בוחן דינמי - אנטומיה של הגפה התחתונה (תרגול עם משוב)",
+        "url": "https://medintzfat.com/anatomy/quiz-lower-limb"
+      },
+      {
+        "label": "",
+        "title": "בוחן דינמי - אנטומיה של הראש והצוואר (תרגול עם משוב)",
+        "url": "https://medintzfat.com/anatomy/quiz-head-neck"
+      },
+      {
+        "label": "",
+        "title": "בוחן דינמי - אנטומיה של הבטן (תרגול עם משוב)",
+        "url": "https://medintzfat.com/anatomy/quiz-abdomen"
+      },
+      {
+        "label": "",
+        "title": "מעבדות אנטומיה - רשימת מבנים סמסטר ב",
+        "url": "https://medintzfat.com/anatomy/labs-semester-b"
+      }
+    ]
+  }
+]

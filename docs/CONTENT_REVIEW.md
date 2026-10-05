@@ -36,6 +36,21 @@ Z-Anatomy datasets. The other ~560 Z-Anatomy structures have no Hebrew name yet
 | Lung            | ריאה                    |                |                                 |
 | Liver           | כבד                     |                |                                 |
 
+### What her course writes (medintzfat.com, read 2026-10-05)
+
+From `docs/COURSE_SOURCE.md` (counts over all 53 anatomy pages): the course
+names structures **in English** (Ulnar/Radial/Median nerve ≈ 30 times each);
+its Hebrew, when used, is the transliteration — **העצב האולנרי**, **העצב
+הרדיאלי**, **העצב המדיאני** — while **עצב הגומד / עצב החישור / עצם הגומד /
+עצם החישור never appear**. Bones it does name in Hebrew: עצם השכמה, עצם
+הבריח, עצם הזרוע, עצם הירך (as in the table above). A reviewer should decide
+whether the curated nerve names switch to the transliterated forms (now
+aliases).
+
+More Hebrew↔English pairs as the course writes them:
+`data/course/medintzfat/hebrew-term-candidates.json` (815 candidates, each
+with its pages; noisy — leads for a reviewer, never imported as verified).
+
 Z-Anatomy English names come from the atlas itself (TA-based English).
 English/Latin names and the medical details (function, origin, insertion,
 innervation, blood supply, clinical notes) are standard textbook anatomy but

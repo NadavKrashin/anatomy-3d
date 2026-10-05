@@ -43,3 +43,6 @@ next-env.d.ts
 # playwright / screenshots
 /test-results
 /playwright-report
+
+# course-site extracts (personal study use only — see docs/COURSE_SOURCE.md)
+/.course-cache

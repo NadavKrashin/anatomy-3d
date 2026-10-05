@@ -13,6 +13,12 @@
 | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
 | `.claude/skills/frontend-design/` (Claude Code skill, vendored unchanged) | [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/frontend-design) | Apache-2.0 (`LICENSE.txt` alongside) |
 
+## Course reference data
+
+| Item                                                                         | Source                                                                   | Terms                                                                                                                                           |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data/course/medintzfat/*.json` (syllabus, structure names, term pairs only) | [Med in Tzfat](https://medintzfat.com/anatomy/), each row cites its page | [Site terms](https://medintzfat.com/terms/): personal study use; no copying of content. Only facts are committed — see `docs/COURSE_SOURCE.md`. |
+
 ## ShareAlike
 
 The Z-Anatomy-derived GLB and manifest must be distributed under CC BY-SA

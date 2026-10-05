@@ -1,0 +1,5810 @@
+[
+  {
+    "he": "עורק",
+    "en": "A rtery",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "חלל הבטן",
+    "en": "Abdominal cavity",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "חלוקת אזורי הבטן",
+    "en": "Abdominopelvic Regions",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "הרחקה",
+    "en": "Abduction",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "הרחקה - הזזה הצידה",
+    "en": "Abduction",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "עיקרי",
+    "en": "Abduction",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "שכבה ראשונה",
+    "en": "Abductor Hallucis",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part5"]
+  },
+  {
+    "he": "גבול לטרלי",
+    "en": "Abductor pollicis longus",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/quiz-upper-limb-01"]
+  },
+  {
+    "he": "ריאה שמאלית",
+    "en": "ABV",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "כשקיים",
+    "en": "Accessory hemiazygos",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01"]
+  },
+  {
+    "he": "צד שמאל עליון",
+    "en": "Accessory Hemiazygos Vein",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "שקע מפרק הירך",
+    "en": "Acetabulum",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part1"]
+  },
+  {
+    "he": "גיד אכילס",
+    "en": "Achilles Tendon",
+    "count": 4,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lower-limb-part4",
+      "https://medintzfat.com/anatomy/lower-limb-part5"
+    ]
+  },
+  {
+    "he": "נקודות חשובות",
+    "en": "Achilles Tendon",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part5"]
+  },
+  {
+    "he": "קירוב",
+    "en": "Adduction",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "״בין לבין״",
+    "en": "Adductor Brevis",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "בהמשך",
+    "en": "Adductor Canal",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "התעלה האדקטורית",
+    "en": "Adductor Canal / Hunter’s Canal",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part3"]
+  },
+  {
+    "he": "המדור המדיאלי",
+    "en": "Adductor Compartment",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "הפתח באדקטור מגנוס",
+    "en": "Adductor Hiatus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part3"]
+  },
+  {
+    "he": "חור שחשוב לחיים",
+    "en": "Adductor Hiatus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "חלקו",
+    "en": "Adductor longus/brevis/magnus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/quiz-lower-limb"]
+  },
+  {
+    "he": "חלקו",
+    "en": "Adductor magnus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/quiz-lower-limb"]
+  },
+  {
+    "he": "מקרב האגודל",
+    "en": "Adductor Pollicis",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "האיברים הנלווים לרחם",
+    "en": "Adnexa",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "אפרנטי",
+    "en": "Afferent",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "כנף האיליום",
+    "en": "Ala of Ilium",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "התעלה האנאלית",
+    "en": "Anal Canal",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "מישורי הגוף",
+    "en": "Anatomical Planes",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "המנח האנטומי",
+    "en": "Anatomical Position",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "זווית הצלע",
+    "en": "Angle",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "אנטגוניסט",
+    "en": "Antagonist",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class4"]
+  },
+  {
+    "he": "בית החזה",
+    "en": "Anterior",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "ללא פתחים קורונריים",
+    "en": "Anterior",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "רצועה צולבת קדמית",
+    "en": "Anterior Cruciate Ligament - ACL",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "מגרה קדמית",
+    "en": "Anterior Drawer",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "מבנים",
+    "en": "Anterior Mediastinum",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "גבולות",
+    "en": "Anterior Triangle",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab9"]
+  },
+  {
+    "he": "המשולש הקדמי",
+    "en": "Anterior Triangle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/neck"]
+  },
+  {
+    "he": "מהשמאלי",
+    "en": "Anterior Vagal Trunk",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "מקורו בוואגוס השמאלי",
+    "en": "Anterior Vagal Trunk",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-autonomic-innervation"]
+  },
+  {
+    "he": "קדמית-תחתונה",
+    "en": "Anterior-Inferior",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class5"]
+  },
+  {
+    "he": "שורש קדמי",
+    "en": "Anterior/Ventral Root",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "קירות הבטן",
+    "en": "Anterolateral Abdominal wall",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "הקירות האנטרולטרליים",
+    "en": "Anterolateral Wall",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "האורטה",
+    "en": "Aorta",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "קשת האאורטה",
+    "en": "Aortic Arch",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "פתח האורטה",
+    "en": "Aortic Hiatus",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "בשכיבה",
+    "en": "AP",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/imaging"]
+  },
+  {
+    "he": "פחות הגדלת לב",
+    "en": "AP",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "קדמי-אחורי",
+    "en": "AP",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "קודקוד",
+    "en": "Apex",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "ראש",
+    "en": "Apex",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "עליונה",
+    "en": "Apical",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "גיד מפושט",
+    "en": "Aponeurosis",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab3"]
+  },
+  {
+    "he": "דלקת התוספתן",
+    "en": "Appendicitis",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "הקו הקשתי",
+    "en": "Arcuate Line",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab3"]
+  },
+  {
+    "he": "קו הקשת",
+    "en": "Arcuate Line",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "יוסבר בסעיף השרירים",
+    "en": "Articularis Genu",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "צלעות לא טיפוסיות",
+    "en": "Atypical Ribs",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "חצוצרת השמע",
+    "en": "Auditory Tube",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/ear"]
+  },
+  {
+    "he": "האפרכסת",
+    "en": "Auricle / Pinna",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/ear"]
+  },
+  {
+    "he": "אוזניות",
+    "en": "Auricles",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "מערכת העצבים האוטונומית",
+    "en": "Autonomic Nervous System",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "טריקוספידי ומיטרלי",
+    "en": "AV",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "נמק אווסקולרי",
+    "en": "AVN",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "אקסיאלי",
+    "en": "Axial",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/imaging"]
+  },
+  {
+    "he": "המישור האקסיאלי",
+    "en": "Axial Plane",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "אחד",
+    "en": "Axillary",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "בית השחי",
+    "en": "Axillary Lymph Nodes",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "חמש קבוצות",
+    "en": "Axillary Lymph Nodes",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "אקסון",
+    "en": "Axon",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "מעל ההילום",
+    "en": "Azygos",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "מערכת האזיגוס",
+    "en": "Azygos System",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "מערכת ניקוז ורידי",
+    "en": "Azygos System",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "צד ימין",
+    "en": "Azygos Vein",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab2",
+      "https://medintzfat.com/anatomy/thorax-part2"
+    ]
+  },
+  {
+    "he": "גב",
+    "en": "Back",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "מפרק כדורי",
+    "en": "Ball and Socket Joint",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "אחורי",
+    "en": "Base",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "בסיס",
+    "en": "Base",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "פרוקסימלי",
+    "en": "Base",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "מדיאלי",
+    "en": "Basilic",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/class7",
+      "https://medintzfat.com/anatomy/lab1"
+    ]
+  },
+  {
+    "he": "מדיאלי",
+    "en": "Basilic Vein",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "ריאה ימנית",
+    "en": "BAV",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "מתיחה מירבית",
+    "en": "Biceps",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "הַשְּׁרִיר הַדוּ-רֹאשִׁי",
+    "en": "Biceps Brachii",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "ראש קצר",
+    "en": "Biceps brachii",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/quiz-upper-limb-01"]
+  },
+  {
+    "he": "בצד הלטרלי",
+    "en": "Biceps Femoris",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "צינור המרה",
+    "en": "Bile Duct",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab5"]
+  },
+  {
+    "he": "כלי הדם",
+    "en": "Blood Vessels",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "גוף",
+    "en": "Body",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "גוף הסטרנום",
+    "en": "Body",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "גוף הצלע",
+    "en": "Body/Shaft",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "רקמת עצם",
+    "en": "Bone Tissue",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "מקלעת העצבים",
+    "en": "Brachial Plexus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "מקלעת העצבים של הזרוע",
+    "en": "Brachial Plexus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "הוורידים העמוקים",
+    "en": "Brachial veins",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "קדמי",
+    "en": "Brachiocephalic Trunk",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "ימני ושמאלי",
+    "en": "Brachiocephalic Veins",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "מקצועיות רחבה",
+    "en": "Broad Professionalism",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/dissection-ethics"]
+  },
+  {
+    "he": "הסימפונות",
+    "en": "Bronchi",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "כיווץ",
+    "en": "Bronchoconstriction",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "הרחבה",
+    "en": "Bronchodilation",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "הרחבת הסמפונות",
+    "en": "Bronchodilation",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01"]
+  },
+  {
+    "he": "הסגמנטים הריאתיים",
+    "en": "Bronchopulmonary Segments",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "קרע ״ידית דלי״ במיניסקוסים",
+    "en": "Bucket-Handle Tear",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "פתוחות מאחור",
+    "en": "C",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "״פרסה״",
+    "en": "C",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "חוליות צוואריות",
+    "en": "C1-C7",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab8"]
+  },
+  {
+    "he": "חוליה צווארית טיפוסית",
+    "en": "C3-C6",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab8"]
+  },
+  {
+    "he": "עצם הקלקנאוס",
+    "en": "Calcaneus",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part5"]
+  },
+  {
+    "he": "הסתיידות",
+    "en": "Calcification",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "לרדיוס",
+    "en": "Capitulum",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "קפסולה",
+    "en": "Capsule",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "ראש מדוזה",
+    "en": "Caput Medusae",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab3"]
+  },
+  {
+    "he": "שלד הלב",
+    "en": "Cardiac Skeleton",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "הוורידים הקורונריים",
+    "en": "Cardiac Veins",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "המשולש הקרוטי",
+    "en": "Carotid Triangle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/neck"]
+  },
+  {
+    "he": "המשולש הקרוטידי",
+    "en": "Carotid Triangle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab9"]
+  },
+  {
+    "he": "התעלה הקרפלית",
+    "en": "Carpal Tunnel",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "זווית הנשיאה",
+    "en": "Carrying Angle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class8"]
+  },
+  {
+    "he": "סחוס",
+    "en": "Cartilage",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "מפרק סחוסי",
+    "en": "Cartilaginous",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "סחוסי",
+    "en": "Cartilaginous",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "צינתור לב",
+    "en": "Catheterization",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "פתח הווריד הנבוב",
+    "en": "Caval Foramen",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "ענפים ראשיים",
+    "en": "Celiac trunk",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "גוף התא",
+    "en": "Cell Body/Soma",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "מרכזית",
+    "en": "Central",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "הגיד המרכזי",
+    "en": "Central Tendon",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab4",
+      "https://medintzfat.com/anatomy/respiratory-system"
+    ]
+  },
+  {
+    "he": "לטרלי",
+    "en": "Cephalic",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/class7",
+      "https://medintzfat.com/anatomy/lab1"
+    ]
+  },
+  {
+    "he": "לטרלי",
+    "en": "Cephalic Vein",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "ההיצרות העליונה",
+    "en": "Cervical / Pharyngoesophageal Constriction",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "אזור צווארי",
+    "en": "Cervical Enlargement",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "מקלעת צווארית",
+    "en": "Cervical plexus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "חצי מדיאלי",
+    "en": "Clavicle",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "שליש לטרלי",
+    "en": "Clavicle",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "תחתית",
+    "en": "Clavicle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "עצמות הבריח",
+    "en": "Clavicles",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab1",
+      "https://medintzfat.com/anatomy/lab2"
+    ]
+  },
+  {
+    "he": "מרכזית",
+    "en": "CNS",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "אותו לא נלמד",
+    "en": "Coccygeal plexus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "עצם הזנב",
+    "en": "Coccyx",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab6",
+      "https://medintzfat.com/anatomy/pelvis"
+    ]
+  },
+  {
+    "he": "השבלול",
+    "en": "Cochlea",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/ear"]
+  },
+  {
+    "he": "כלי דם עקיפיים",
+    "en": "Collaterals",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "מלמעלה",
+    "en": "Collaterals",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class8"]
+  },
+  {
+    "he": "צינור המרה הראשי",
+    "en": "Common Bile Duct",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab4"]
+  },
+  {
+    "he": "שכבה שטחית של אקסטנסורים",
+    "en": "Common Extensor Tendon",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "החריג היחיד",
+    "en": "Common Fibular",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part3"]
+  },
+  {
+    "he": "ענפי הסיאטיק",
+    "en": "Common Fibular Nerve",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "שכבה שטחית של פלקסורים",
+    "en": "Common Flexor Tendon",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "צפופה",
+    "en": "Compact/Cortical",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "תסמונת המדור",
+    "en": "Compartment Syndrome",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part5"]
+  },
+  {
+    "he": "דחיסה",
+    "en": "Compression",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "רקמות חיבור",
+    "en": "Connective Tissue",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "מנקב אותו",
+    "en": "Coracobrachialis",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "קורקו ברכיאלי",
+    "en": "Coracobrachialis",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "לטרלי",
+    "en": "Coracoid Process Long Head",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "מיתרים",
+    "en": "Cords",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "מיתרים",
+    "en": "CORDS",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "קורונלי",
+    "en": "Coronal",
+    "count": 4,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/imaging",
+      "https://medintzfat.com/anatomy/xray-ct-basics"
+    ]
+  },
+  {
+    "he": "העורקים הקורונריים",
+    "en": "Coronary Arteries",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab2",
+      "https://medintzfat.com/anatomy/thorax-part3"
+    ]
+  },
+  {
+    "he": "דם מהלב עצמו",
+    "en": "Coronary Sinus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "ניקוז ורידי מהלב עצמו",
+    "en": "Coronary Sinus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "הפרוגסטרון והגופיף הצהוב",
+    "en": "Corpus Luteum",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "היפוספדיאס",
+    "en": "Corpus Spongiosum",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis-male"]
+  },
+  {
+    "he": "קורטקס המוח",
+    "en": "Cortex",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "הסחוס הצלעי",
+    "en": "Costal Cartilage",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "מגרעת הצלע",
+    "en": "Costal Groove",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "מלמעלה למטה",
+    "en": "Costal Groove",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "חלק צלעי",
+    "en": "Costal Part",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "צמודה לצלעות",
+    "en": "Costal Pleura",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "פונה לצלעות",
+    "en": "Costal Surface",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "הקשר לבובת אנני",
+    "en": "CPR Annie",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/art-death-dissection"]
+  },
+  {
+    "he": "שקעים בבסיס הגולגולת",
+    "en": "Cranial Fossae",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/skull-cranial-nerves"]
+  },
+  {
+    "he": "שריר שלד",
+    "en": "Cremaster Muscle and Fascia",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab3"]
+  },
+  {
+    "he": "החריג",
+    "en": "Cricothyroid Muscle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/throat"]
+  },
+  {
+    "he": "פאסיית השוק",
+    "en": "Crural Fascia",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "נוזל מוחי-שדרתי",
+    "en": "CSF",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "נוזל מוחי-שדרתי",
+    "en": "CSF - Cerebrospinal Fluid",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "סריקה ממוחשבת",
+    "en": "CT",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/imaging"]
+  },
+  {
+    "he": "צינתור וירטואלי",
+    "en": "CT",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "מלטרלי למדיאלי",
+    "en": "Cubital Fossa",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class8"]
+  },
+  {
+    "he": "שקע המרפק",
+    "en": "Cubital Fossa",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "שריר חלק",
+    "en": "Dartos fascia",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab3"]
+  },
+  {
+    "he": "פאסיה עמוקה",
+    "en": "Deep Fascia",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "למרות שהוא פיבולרי",
+    "en": "Deep Fibular Nerve",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part5"]
+  },
+  {
+    "he": "שרירים עמוקים בעכוז",
+    "en": "Deep lateral rotators",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "טבעת פנימית עמוקה",
+    "en": "Deep/Internal Ring",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab3"]
+  },
+  {
+    "he": "דה הומניזציה",
+    "en": "Dehumanization",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/dissection-ethics"]
+  },
+  {
+    "he": "מוטורית",
+    "en": "Deltoid",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "דנדריטים",
+    "en": "Dendrites",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "״שן״",
+    "en": "Dens",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/back-and-spine"]
+  },
+  {
+    "he": "צפיפות",
+    "en": "Density",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "שמאל",
+    "en": "Descending aorta",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01"]
+  },
+  {
+    "he": "הסרעפת",
+    "en": "Diaphragm",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab2",
+      "https://medintzfat.com/anatomy/respiratory-system"
+    ]
+  },
+  {
+    "he": "סרעפת",
+    "en": "Diaphragm",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "עצבוב הסרעפת",
+    "en": "Diaphragm Innervation",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "תחתון",
+    "en": "Diaphragmatic",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "ההיצרות התחתונה",
+    "en": "Diaphragmatic Constriction",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "צמודה לסרעפת",
+    "en": "Diaphragmatic Pleura",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "פריצת דיסק",
+    "en": "Disc Herniation",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/class1",
+      "https://medintzfat.com/anatomy/xray-ct-basics"
+    ]
+  },
+  {
+    "he": "חלוקות",
+    "en": "DIVISIONS",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "מחלקות",
+    "en": "Divisions",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "אי גרימת נזק",
+    "en": "Do No Harm",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/dissection-ethics"]
+  },
+  {
+    "he": "אבדוקציה",
+    "en": "Dorsal",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "עיצבוב סנסורי",
+    "en": "Dorsal Root Ganglion",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "דורסל רוט גנגליון",
+    "en": "Dorsal Root Ganglion - DRG",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "דורסיפלקציה",
+    "en": "Dorsiflexion",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "צינור הזרע",
+    "en": "Ductus Deferens",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "צינור הזרע",
+    "en": "Ductus/Vas Deferens",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab3"]
+  },
+  {
+    "he": "התריסריון",
+    "en": "Duodenum",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "תריסריון",
+    "en": "Duodenum",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/labs-semester-b",
+      "https://medintzfat.com/anatomy/quiz-abdomen"
+    ]
+  },
+  {
+    "he": "מעטפת חוט השדרה",
+    "en": "Dura",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "אפרנטי",
+    "en": "Efferent",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "צינור השפיכה",
+    "en": "Ejaculatory duct",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab6"]
+  },
+  {
+    "he": "אלסטי",
+    "en": "Elastic",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "מפרק המרפק",
+    "en": "Elbow Joint",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "אליפסואידי",
+    "en": "Ellipsoid",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "מפרק עלי",
+    "en": "Ellipsoid Joint",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "אנדומטריוזיס",
+    "en": "Endometriosis",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "מערכת העצבים המעית",
+    "en": "Enteric Nervous System",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-innervation"]
+  },
+  {
+    "he": "מעל העורק",
+    "en": "Eparterial Bronchus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "יותרת האשך",
+    "en": "Epididymis",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab3"]
+  },
+  {
+    "he": "אפיזיוטומיה - חיתוך החיץ",
+    "en": "Episiotomy",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "זוקפי הגב",
+    "en": "Erector Spinae",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/back-and-spine"]
+  },
+  {
+    "he": "פתח הוושט",
+    "en": "Esophageal Hiatus",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "המעבר בין הוושט לקיבה",
+    "en": "Esophagogastric Junction",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "הוושט",
+    "en": "Esophagus",
+    "count": 5,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab2",
+      "https://medintzfat.com/anatomy/respiratory-system",
+      "https://medintzfat.com/anatomy/thorax-part2"
+    ]
+  },
+  {
+    "he": "מרכזי",
+    "en": "Esophagus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01"]
+  },
+  {
+    "he": "עצם האתמואיד",
+    "en": "Ethmoid Bone",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/skull-cranial-nerves"]
+  },
+  {
+    "he": "איוורסיה",
+    "en": "Eversion",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "זווית גדולה מדי",
+    "en": "Excessive anteversion",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part1"]
+  },
+  {
+    "he": "אקסיטטורית",
+    "en": "Excitatory",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "עובדים אקסצנטרית",
+    "en": "Extension",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "פשיטה",
+    "en": "Extension",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "לטרלי",
+    "en": "Extensor hallucis longus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "גבול מדיאלי",
+    "en": "Extensor pollicis longus",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/quiz-upper-limb-01"]
+  },
+  {
+    "he": "תעלת השמע החיצונית",
+    "en": "External Acoustic Meatus",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/ear"]
+  },
+  {
+    "he": "ענף מדיאלי",
+    "en": "External carotid",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "ענפים אחוריים",
+    "en": "External carotid",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "ענפים סופיים",
+    "en": "External carotid",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "ענפים קדמיים",
+    "en": "External carotid",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "בין צלעי חיצוני",
+    "en": "External Intercostal",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "סיבוב חיצוני",
+    "en": "External rotation",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "חצוצרות",
+    "en": "Fallopian Tubes",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "האגן המדומה",
+    "en": "False Pelvis",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "הפאסיה העמוקה של הירך",
+    "en": "Fascia Lata",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "מפשעה",
+    "en": "Femoral",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "בהמשך",
+    "en": "Femoral Triangle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "המשולש הפמורלי",
+    "en": "Femoral Triangle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part3"]
+  },
+  {
+    "he": "עצם הירך",
+    "en": "Femur",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab7",
+      "https://medintzfat.com/anatomy/lower-limb-part1"
+    ]
+  },
+  {
+    "he": "מפרק סיבי",
+    "en": "Fibrous",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "סיבי",
+    "en": "Fibrous",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "פריקרדיום פיברוטי",
+    "en": "Fibrous Pericardium",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "ממש צמוד לפיבולה",
+    "en": "Fibularis longus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "חריצים",
+    "en": "Fissures",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "פיקסייטור",
+    "en": "Fixator",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class4"]
+  },
+  {
+    "he": "כיפוף",
+    "en": "Flexion",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "כיפוף כתף",
+    "en": "Flexion",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "כפיפה",
+    "en": "Flexion",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "ראש קצר",
+    "en": "Flexion",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "שכבה ראשונה",
+    "en": "Flexor Digitorum Brevis",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part5"]
+  },
+  {
+    "he": "מדיאלי",
+    "en": "Flexor digitorum profundus",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class8"]
+  },
+  {
+    "he": "שכבה שלישית",
+    "en": "Flexor Hallucis Brevis",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part5"]
+  },
+  {
+    "he": "חור",
+    "en": "Foramen Ovale",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "העצם הפרונטלית",
+    "en": "Frontal Bone",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/skull-cranial-nerves"]
+  },
+  {
+    "he": "קרקעית",
+    "en": "Fundus",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "כיס המרה",
+    "en": "Gallbladder",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab4"]
+  },
+  {
+    "he": "קפלי הקיבה",
+    "en": "Gastric Folds / Rugae",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "בתמונה הוסרו שרירי התאומים",
+    "en": "Gastrocnemius",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part5"]
+  },
+  {
+    "he": "מדיאלי ולטרלי",
+    "en": "Gastrocnemius",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "שריר התאומים",
+    "en": "Gastrocnemius",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "אנסטומוזות הג’ניקולריות",
+    "en": "Genicular Anastomoses",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "ראו בהמשך",
+    "en": "Genitofemoral Nerve",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-innervation"]
+  },
+  {
+    "he": "בתמונה מצד ימין",
+    "en": "Genu Valgus",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "אמצעי בתמונה",
+    "en": "Genu Varus",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "ראש הדגדגן",
+    "en": "Glans Clitoris",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "תאי גלייה",
+    "en": "Glial Cells",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "החלקה",
+    "en": "Gliding",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class5"]
+  },
+  {
+    "he": "שרירי העכוז השטחיים",
+    "en": "Gluteal superficial",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "הדו מפרקי במדור האדקטורי",
+    "en": "Gracilis",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "מעצם הפיוביס",
+    "en": "Gracilis",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "בולט בסמיכות לעור",
+    "en": "Great Saphenous Vein",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab7"]
+  },
+  {
+    "he": "הסינר הגדול",
+    "en": "Greater Omentum",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab4"]
+  },
+  {
+    "he": "משטח מדיאלי",
+    "en": "Greater tubercle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "תעלה נפרדת בצד האולנרי",
+    "en": "Guyon's canal",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/quiz-upper-limb-01"]
+  },
+  {
+    "he": "לא התעלה הקרפלית",
+    "en": "Guyon’s Canal",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "ג’יירוס",
+    "en": "Gyrus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "הירך הפוסטריורית",
+    "en": "Hamstrings",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab7"]
+  },
+  {
+    "he": "חלקם",
+    "en": "Hamstrings",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/quiz-lower-limb"]
+  },
+  {
+    "he": "פוסטריורית",
+    "en": "Hamstrings",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "שרירי הירך האחורית",
+    "en": "Hamstrings",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "שרירי המיתרים",
+    "en": "Hamstrings",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lower-limb-part2",
+      "https://medintzfat.com/anatomy/lower-limb-part4"
+    ]
+  },
+  {
+    "he": "תעלת הברס",
+    "en": "Haversian Canal",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "דיסטלי",
+    "en": "Head",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "ראש",
+    "en": "Head",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "ראש הצלע",
+    "en": "Head",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "ראש הלבלב",
+    "en": "Head of Pancreas",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab5"]
+  },
+  {
+    "he": "צד שמאל",
+    "en": "Hemi-azygos Vein",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "צד שמאל תחתון",
+    "en": "Hemiazygos Vein",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "רקמת הכבד",
+    "en": "Hepatic Parenchyma",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "הווריד הפורטלי",
+    "en": "Hepatic Portal Vein",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab5"]
+  },
+  {
+    "he": "שלבקת חוגרת",
+    "en": "Herpes zoster",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "משולש הסלבך",
+    "en": "Hesselbach’s Triangle",
+    "count": 5,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/abdominal-wall",
+      "https://medintzfat.com/anatomy/lab3"
+    ]
+  },
+  {
+    "he": "בקע סרעפתי",
+    "en": "Hiatal Hernia",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "שורש הריאות",
+    "en": "Hilum",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "שער הריאה",
+    "en": "Hilum",
+    "count": 4,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "ציר",
+    "en": "Hinge",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "מפרק חיצי",
+    "en": "Hinge Joint",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "עצם האגן",
+    "en": "Hip Bone / Coxa",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab7"]
+  },
+  {
+    "he": "עצמות האגן",
+    "en": "Hip bone / Coxa / Innominate",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part1"]
+  },
+  {
+    "he": "שתי הפעולות ההפוכות",
+    "en": "Hip Extension",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "מפרק הירך",
+    "en": "Hip Joint",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab7"]
+  },
+  {
+    "he": "וו",
+    "en": "Hook",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "המישור ההוריזונטלי",
+    "en": "Horizontal Plane",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "הומניזציה",
+    "en": "Humanization",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/dissection-ethics"]
+  },
+  {
+    "he": "לטרלית",
+    "en": "Humeral",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "חלק תחתון",
+    "en": "Humerus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "משטח מדיאלי",
+    "en": "Humerus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "משטח עליון",
+    "en": "Humerus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "לחץ באזור המרובע",
+    "en": "Humerus Quadrangular space syndrome",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "היאליני",
+    "en": "Hyaline",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "סחוס היאליני",
+    "en": "Hyaline Cartilage",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "גנו רקורבאטום",
+    "en": "Hyperextension",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "כמו בפציעות סקי",
+    "en": "Hyperextension",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "פשיטת יתר",
+    "en": "Hyperextension",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "גבעת הזרת",
+    "en": "Hypothenar",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "שרירי גבעת הזרת",
+    "en": "Hypothenar",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "גבעת הזרת",
+    "en": "Hypothenar Compartment",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "כלי דם",
+    "en": "Iliac",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "רכס האיליום",
+    "en": "Iliac Crest",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "חיצוני",
+    "en": "Iliococcygeus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "נראה גם ממבט אחורי",
+    "en": "Iliolumbar Ligament",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "נקודות ציון גרמיות",
+    "en": "Ilium",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part1"]
+  },
+  {
+    "he": "עצם האגן",
+    "en": "Ilium",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "תסמונת הצביטה",
+    "en": "Impingement Syndrome",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "הטבעות על שטח הריאות",
+    "en": "Impressions",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "לקיר הבטן",
+    "en": "Inferior Epigastric Artery",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis-male"]
+  },
+  {
+    "he": "מבנים תפקודיים",
+    "en": "Inferior epigastric vessels",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "לעצבב את איברי האגן",
+    "en": "Inferior Hypogastric Plexus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis-male"]
+  },
+  {
+    "he": "לדופן הבטן הקדמיץ",
+    "en": "Inferior phrenic arteries",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "הפתח התחתון",
+    "en": "Inferior Thoracic Aperture/Outlet",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "עליון",
+    "en": "Inferior Thyroid Artery",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "הווריד הנבוב התחתון",
+    "en": "Inferior Vena Cava",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "מהחלק התחתון של הגוף",
+    "en": "Inferior Vena Cava",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "ענפים מתחת לקלוויקולה",
+    "en": "Infraclavicular",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "השרירים האינפרהיואידיים",
+    "en": "Infrahyoid Muscles",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/neck"]
+  },
+  {
+    "he": "תחושה מתחת לפיקה",
+    "en": "Infrapatellar Branch",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part3"]
+  },
+  {
+    "he": "שכמה",
+    "en": "Infraspinous fossa",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "התעלה האינגווינלית",
+    "en": "Inguinal Canal",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab3"]
+  },
+  {
+    "he": "בקעים מפשעתיים",
+    "en": "Inguinal Hernias",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab3"]
+  },
+  {
+    "he": "באזור המשולש הפמורלי",
+    "en": "Inguinal Ligament",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "רצועת המפשעה",
+    "en": "Inguinal Ligament",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab3"]
+  },
+  {
+    "he": "אינהיביטורית",
+    "en": "Inhibitory",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "בין צלעי פנימי ביותר",
+    "en": "Innermost Intercostal",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "אין שם",
+    "en": "Innominate",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "תחל ואחז",
+    "en": "Insertion",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class4"]
+  },
+  {
+    "he": "השרירים הבין צלעיים",
+    "en": "Intercostal Muscles",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "עצב אינטרקוסטלי",
+    "en": "Intercostal Nerve",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "הרווח הבין צלעי",
+    "en": "Intercostal Space",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "כלי הדם הבין צלעיים",
+    "en": "Intercostal Vessels",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "בין צלעי פנימי",
+    "en": "Internal Intercostal",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "קרוב לסטרנום",
+    "en": "Internal Intercostal",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "מהראש",
+    "en": "Internal Jugular Vein",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "מנקז דם מהראש והצוואר",
+    "en": "Internal Jugular Vein",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "בגלל המיקום האנטרו לטרלי",
+    "en": "Internal Rotation",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "במוצא",
+    "en": "Internal Thoracic Artery",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "עורק החזה הפנימי",
+    "en": "Internal Thoracic Artery",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "איבר תוך צפקי",
+    "en": "Intraperitoneal",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "השרירים הבין צלעיים",
+    "en": "Intrinsic Muscles",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "אינוורסיה",
+    "en": "Inversion",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "סיבוב כלפי פנים",
+    "en": "Inversion Sprain",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part5"]
+  },
+  {
+    "he": "יוד",
+    "en": "Iodine",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "אקסטנציה",
+    "en": "IP",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "כמעט ״מתחזה״ להמסטרינגס",
+    "en": "Ischial Tuberosity",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "״העצם שיושבים עליה״",
+    "en": "Ischial tuberosity",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part1"]
+  },
+  {
+    "he": "עצם הישבן",
+    "en": "Ischium",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "פתחים ובליטות קליניות",
+    "en": "Ischium and Pubis",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part1"]
+  },
+  {
+    "he": "מיצר",
+    "en": "Isthmus",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "מנקז את האשך הימני",
+    "en": "IVC",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab6"]
+  },
+  {
+    "he": "פלג גוף תחתון",
+    "en": "IVC",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "מפרקים",
+    "en": "Joints",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "ברך קופצים",
+    "en": "Jumper’s Knee",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "חוליה לומברית טיפוסית",
+    "en": "L1-L5",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab8"]
+  },
+  {
+    "he": "שפתיים גדולות",
+    "en": "Labia Majora",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "שפתיים קטנות",
+    "en": "Labia Minora",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "הלברום",
+    "en": "Labrum",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part1"]
+  },
+  {
+    "he": "עצם הדמעות",
+    "en": "Lacrimal Bone",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/skull-cranial-nerves"]
+  },
+  {
+    "he": "לקונות",
+    "en": "Lacunae",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "למלות",
+    "en": "Lamellae",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "המעי הגס",
+    "en": "Large Intestine",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "חלקים",
+    "en": "Large intestine",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "סימני זיהוי",
+    "en": "Large intestine",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "בית הקול",
+    "en": "Larynx",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/nasal-cavity"]
+  },
+  {
+    "he": "צדדי",
+    "en": "Lateral",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "מעטפות האשך",
+    "en": "Layers of Spermatic Cord",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "העלייה השמאלית",
+    "en": "Left Atrium",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "עלייה שמאל",
+    "en": "Left Atrium",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "עלייה שמאלית",
+    "en": "Left Atrium",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "סמוך לטחול",
+    "en": "Left Colic Flexure / Splenic Flexure",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab4"]
+  },
+  {
+    "he": "לראש",
+    "en": "Left Common Carotid",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "אמצעי",
+    "en": "Left Common Carotid Artery",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "הכרע השמאלית",
+    "en": "Left Crus",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "תחתון",
+    "en": "Left Gastric Artery",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "ליד",
+    "en": "Left Subclavian",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "אחורי",
+    "en": "Left Subclavian Artery",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "חדר שמאל",
+    "en": "Left Ventricle",
+    "count": 4,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab2",
+      "https://medintzfat.com/anatomy/thorax-part3"
+    ]
+  },
+  {
+    "he": "חדר שמאלי",
+    "en": "Left Ventricle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "יש ביניהם רווח",
+    "en": "Levator Ani",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "מֵרִים הַשֶּׁכֶם",
+    "en": "Levator Scapulae",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "מכוסה במוקוזה",
+    "en": "Levator veli palatini",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "רצועה",
+    "en": "Ligament",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "רצועות",
+    "en": "Ligaments",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "שריד עוברי",
+    "en": "Ligamentum Arteriosum",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "הקו הלבן",
+    "en": "Linea Alba",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab3"]
+  },
+  {
+    "he": "כמו אדקטורים",
+    "en": "Linea Aspera",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "הסופריורי ביותר בתמונה",
+    "en": "Lingual Nerve",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/oral-cavity"]
+  },
+  {
+    "he": "הכבד",
+    "en": "Liver",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "שמאל תחתון",
+    "en": "LLQ",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "לטרלי",
+    "en": "Long Head",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "עצב ארוך חזה",
+    "en": "Long thoracic nerve",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "גפה תחתונה",
+    "en": "Lower limb",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "דיקור מותני",
+    "en": "Lumbar Puncture",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/back-and-spine"]
+  },
+  {
+    "he": "ניקור מותני",
+    "en": "Lumbar Puncture",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "אזור לומבו סקרלי",
+    "en": "Lumbosacral Enlargement",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "השרירים המוזרים",
+    "en": "Lumbricals",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "הריאות",
+    "en": "Lungs",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab2",
+      "https://medintzfat.com/anatomy/respiratory-system"
+    ]
+  },
+  {
+    "he": "שמאל עליון",
+    "en": "LUQ",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "בלוטת השד",
+    "en": "Mammary Gland",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "הלסת התחתונה",
+    "en": "Mandible",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/skull-cranial-nerves"]
+  },
+  {
+    "he": "המנדיבולה",
+    "en": "Mandible",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab9"]
+  },
+  {
+    "he": "העצמות המקסילריות",
+    "en": "Maxilla",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/skull-cranial-nerves"]
+  },
+  {
+    "he": "פלקציה",
+    "en": "MCP",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "גורם ל״מכת חשמל״ במרפק",
+    "en": "Medial Epicondyle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "הפטישון המדיאלי",
+    "en": "Medial Malleolus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part5"]
+  },
+  {
+    "he": "שני שרירים",
+    "en": "Median",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "מסלול מלא",
+    "en": "Median Nerve",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "עצב מדיאני",
+    "en": "Median nerve",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "עצב מרכזי במדור האנטריורי",
+    "en": "Median Nerve",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "גובלת עם המדיאסטינום",
+    "en": "Mediastinal Pleura",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "המקלעת הסאב מוקוזלית",
+    "en": "Meissner / Submucosal Plexus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-innervation"]
+  },
+  {
+    "he": "המניסקוסים",
+    "en": "Menisci",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "מניסקוס",
+    "en": "Meniscus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "המחזור החודשי",
+    "en": "Menstrual Cycle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "מִתְלֵה הַמְּעִי",
+    "en": "Mesentery",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "מאמצע בית השחי",
+    "en": "Midaxillary Line",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "שרירי סקלנים",
+    "en": "Middle scalene muscles",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "מישור מיד-סגיטלי",
+    "en": "Midsagittal Plane",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "במרכז הסטרנום",
+    "en": "Midsternal Line",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "מובילים",
+    "en": "mobile",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "תנועתי",
+    "en": "Motor/Efferent",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "המשולש המוסקולרי",
+    "en": "Muscular Triangle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab9"]
+  },
+  {
+    "he": "מיאלין",
+    "en": "Myelin",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "תאים יוצרי מיילין",
+    "en": "Myelin",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "עצב",
+    "en": "N erve",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "מקצועיות צרה",
+    "en": "Narrow Professionalism",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/dissection-ethics"]
+  },
+  {
+    "he": "עצמות האף",
+    "en": "Nasal Bones",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/skull-cranial-nerves"]
+  },
+  {
+    "he": "חלל האף",
+    "en": "Nasal Cavity",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab9"]
+  },
+  {
+    "he": "מחזור הנשימה האפי",
+    "en": "Nasal Cycle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/nasal-cavity"]
+  },
+  {
+    "he": "מלטרלי למדיאלי",
+    "en": "NAVL",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part3"]
+  },
+  {
+    "he": "תוכן המשולש",
+    "en": "NAVL",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab7"]
+  },
+  {
+    "he": "צוואר",
+    "en": "Neck",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/abdominal-organs",
+      "https://medintzfat.com/anatomy/labs-semester-b"
+    ]
+  },
+  {
+    "he": "צוואר הפיבולה",
+    "en": "Neck",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "צוואר הצלע",
+    "en": "Neck",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "שורשים עצביים",
+    "en": "Nerve Roots",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "מבנה הנוירון",
+    "en": "Neuron",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "נוירוטרנסמיטר",
+    "en": "Neurotransmitter",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "חומרים כימיים",
+    "en": "Neurotransmitters",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "מיקום אנטומי",
+    "en": "Nipple",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "מתחת לפטמה",
+    "en": "Nipple",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01"]
+  },
+  {
+    "he": "לא ילדה",
+    "en": "Nulliparous",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "שכבת שריר אלכסונית",
+    "en": "Oblique layer",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/quiz-abdomen"]
+  },
+  {
+    "he": "עם חריגים",
+    "en": "Obturator Nerve",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "עצם העורף",
+    "en": "Occipital Bone",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/skull-cranial-nerves"]
+  },
+  {
+    "he": "ארובת העין",
+    "en": "Orbit",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "שחלות",
+    "en": "Ovaries",
+    "count": 4,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "אחורי-קדמי",
+    "en": "PA",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "בעמידה",
+    "en": "PA",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/imaging"]
+  },
+  {
+    "he": "אדוקציה",
+    "en": "Palmar",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "עובר מעל התעלה",
+    "en": "Palmar Cutaneous Branch",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "אם קיים",
+    "en": "Palmaris longus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "הלבלב",
+    "en": "Pancreas",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "לבלב",
+    "en": "Pancreas",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/quiz-abdomen"]
+  },
+  {
+    "he": "מישור פרה סגיטלי",
+    "en": "Parasagittal Plane",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "לצד הסטרנום",
+    "en": "Parasternal Line",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "בלוטות יותרת התריס",
+    "en": "Parathyroid Glands",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/neck"]
+  },
+  {
+    "he": "לצד עמוד השדרה",
+    "en": "Paravertebral Line",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "צמודה לפריקרדיום הפיברוטי מבפנים",
+    "en": "Parietal",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "הפלאורה הפריאטלית",
+    "en": "Parietal Pleura",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-autonomic-innervation"]
+  },
+  {
+    "he": "פלאורה פריאטלית",
+    "en": "Parietal Pleura",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "ילדה",
+    "en": "Parous",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "פיקה",
+    "en": "Patella",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab7"]
+  },
+  {
+    "he": "פיקה גבוהה",
+    "en": "Patella Alta",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "פיקה נמוכה",
+    "en": "Patella Baja",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "ובאופן עקיף לארבע ראשי",
+    "en": "Patellar Ligament",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "רפלקס הפיקה",
+    "en": "Patellar Reflex",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "המפרק הפטלו פמורלי",
+    "en": "Patellofemoral Joint",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "החריג ״החצי קדמי״",
+    "en": "Pectineus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "חלקו",
+    "en": "Pectineus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/quiz-lower-limb"]
+  },
+  {
+    "he": "הקרובות לשד",
+    "en": "Pectoral",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "קדמית",
+    "en": "Pectoral",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "בעיקר",
+    "en": "Pectoralis major",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "לאחר חיתוך והרחקה",
+    "en": "Pectoralis Major",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "שְׁרִיר הֶחָזֶה הַגָּדוֹל",
+    "en": "Pectoralis Major",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "החזה הקטן",
+    "en": "Pectoralis Minor",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "מנקב אותו",
+    "en": "Pectoralis minor",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "רצפת האגן",
+    "en": "Pelvic Floor",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab6"]
+  },
+  {
+    "he": "סינוסים פריקרדיאליים",
+    "en": "Pericardial Sinuses",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "מעטפות הלב",
+    "en": "Pericardium",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab2",
+      "https://medintzfat.com/anatomy/thorax-part3"
+    ]
+  },
+  {
+    "he": "כללי",
+    "en": "Perineum",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "על טיביה מדיאלית",
+    "en": "Pes Anserinus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "רגל ברווז",
+    "en": "Pes Anserinus",
+    "count": 5,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "השקד השלישי",
+    "en": "Pharyngeal Tonsil",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab9"]
+  },
+  {
+    "he": "לוע",
+    "en": "Pharynx",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/labs-semester-b",
+      "https://medintzfat.com/anatomy/nasal-cavity"
+    ]
+  },
+  {
+    "he": "מבנה כללי",
+    "en": "Pharynx",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab9",
+      "https://medintzfat.com/anatomy/nasal-cavity"
+    ]
+  },
+  {
+    "he": "ימני ושמאלי",
+    "en": "Phrenic",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "עצב הסרעפת",
+    "en": "Phrenic Nerve",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "עצב הפרניק",
+    "en": "Phrenic nerve",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "אנטריורי לשורש",
+    "en": "Phrenic Nerves",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "אוקסיטוצין סינתטי",
+    "en": "Pitocin",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "ציר",
+    "en": "Pivot",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "מפרק צירי",
+    "en": "Pivot Joint",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "מפרק מישורי",
+    "en": "Planar Joint",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "מישורי",
+    "en": "Plane",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "עלייה על קצות האצבעות",
+    "en": "Plantar Flexion",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "פלנטרפלקציה",
+    "en": "Plantarflexion",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "פלטיזמה",
+    "en": "Platysma",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/neck"]
+  },
+  {
+    "he": "מעטפות הריאות",
+    "en": "Pleura",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "ניקוז חזה",
+    "en": "Pneumothorax",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "היקפית",
+    "en": "PNS",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "שקע הברך",
+    "en": "Popliteal Fossa",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "שער הכבד",
+    "en": "Portal Triad",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "בטן",
+    "en": "Posterior",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "דופן בטן אחורית",
+    "en": "Posterior abdominal wall",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "מהקפל האחורי",
+    "en": "Posterior Axillary Line",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "משולש צווארי אחורי",
+    "en": "Posterior cervical triangle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "רצועה צולבת אחורית",
+    "en": "Posterior Cruciate Ligament - PCL",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "יוצאים מהאאורטה",
+    "en": "Posterior Intercostal",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "מהאאורטה היורדת",
+    "en": "Posterior Intercostal",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "גבולות",
+    "en": "Posterior Triangle",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab9"]
+  },
+  {
+    "he": "המשולש האחורי",
+    "en": "Posterior Triangle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/neck"]
+  },
+  {
+    "he": "מהימני",
+    "en": "Posterior Vagal Trunk",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "מקורו בוואגוס הימני",
+    "en": "Posterior Vagal Trunk",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-autonomic-innervation"]
+  },
+  {
+    "he": "שורש אחורי",
+    "en": "Posterior/Dorsal Root",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "עורלה",
+    "en": "Prepuce",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "אגוניסט",
+    "en": "Prime Mover",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class4"]
+  },
+  {
+    "he": "חשוב במיוחד בהמשך",
+    "en": "Profunda Femoris",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "צניחת רחם",
+    "en": "Prolapse",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "כף יד מסובבת פנימה",
+    "en": "Pronation",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "פרונציה",
+    "en": "Pronation",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "העורק הראשי של הכבד",
+    "en": "Proper Hepatic Artery",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab4"]
+  },
+  {
+    "he": "עורק הכבד",
+    "en": "Proper Hepatic Artery",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab5"]
+  },
+  {
+    "he": "זה לא הוזכר בשיעור",
+    "en": "Proprioceptive",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part5"]
+  },
+  {
+    "he": "הגנתי",
+    "en": "Protective spasm",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "פרוטרקציה",
+    "en": "Protraction",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "קדימה",
+    "en": "Protraction",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "המפרק הטיביו פיבולרי הפרוקסימלי",
+    "en": "Proximal Tibiofibular Joint",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "בדם",
+    "en": "PSA",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis-male"]
+  },
+  {
+    "he": "פסאודו יוניפולר",
+    "en": "Pseudo-Unipolar",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "ראו להלן",
+    "en": "Pubic tubercle",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part1"]
+  },
+  {
+    "he": "עצם הערווה",
+    "en": "Pubis",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "פנימי ביותר",
+    "en": "Puborectalis",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "העצב הפודנדלי",
+    "en": "Pudendal Nerve",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis-male"]
+  },
+  {
+    "he": "גלגלות",
+    "en": "Pulleys",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "תמיד למעלה",
+    "en": "Pulmonary Artery",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "עקיפת הריאות בחיים העובריים",
+    "en": "Pulmonary Trunk",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "המסתם הפולמונרי",
+    "en": "Pulmonary Valve",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "מלמעלה למטה",
+    "en": "Pulmonary vein",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01"]
+  },
+  {
+    "he": "מחזירים דם מחומצן ללב",
+    "en": "Pulmonary Veins",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "לחץ באזור המרובע",
+    "en": "Quadrangular space syndrome",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "הארבע ראשי",
+    "en": "Quadriceps Femoris",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "שרירים אנטריוריים",
+    "en": "Quadriceps Femoris",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "מפרק כף יד",
+    "en": "Radial",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "לטרלי",
+    "en": "Radial artery",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class8"]
+  },
+  {
+    "he": "בצד הלטרלי",
+    "en": "Radial Nerve",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "מסלול מלא",
+    "en": "Radial Nerve",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "עצם הרדיוס",
+    "en": "Radial tuberosity",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "העצם הלטרלית של האמה",
+    "en": "Radius",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "זרועות",
+    "en": "Rami",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "כיסים פלאורליים",
+    "en": "Recesses",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "מרווחים פלאורליים",
+    "en": "Recesses",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01"]
+  },
+  {
+    "he": "הקוביות",
+    "en": "Rectus Abdominis",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "היפרדות שרירי הבטן",
+    "en": "Rectus Diastasis",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab3"]
+  },
+  {
+    "he": "מלמטה",
+    "en": "Recurrents",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class8"]
+  },
+  {
+    "he": "קווי ציון",
+    "en": "Reference Lines",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "עורק הכליה",
+    "en": "Renal Artery",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab6"]
+  },
+  {
+    "he": "רטינקולה",
+    "en": "Retinacula",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "ריטרקציה",
+    "en": "Retraction",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "זווית קטנה מדי",
+    "en": "Retroversion",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part1"]
+  },
+  {
+    "he": "העלייה הימנית",
+    "en": "Right Atrium",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "עלייה ימין",
+    "en": "Right Atrium",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "עלייה ימנית",
+    "en": "Right Atrium",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "לראש",
+    "en": "Right Common Carotid",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "הכרע הימנית",
+    "en": "Right Crus",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "מרבית המקרים",
+    "en": "Right Dominant",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "ליד",
+    "en": "Right Subclavian",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "חדר ימין",
+    "en": "Right Ventricle",
+    "count": 4,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab2",
+      "https://medintzfat.com/anatomy/thorax-part3"
+    ]
+  },
+  {
+    "he": "חדר ימני",
+    "en": "Right Ventricle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "מרבית",
+    "en": "Right Ventricle",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "ריטלין",
+    "en": "Ritalin",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "ימין תחתון",
+    "en": "RLQ",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "שורש הריאה",
+    "en": "Root of Lung / Hilum",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "שורש הריאה",
+    "en": "Root of the Lung",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "שורשים",
+    "en": "Roots",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "שורשים",
+    "en": "ROOTS",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "סיבוב",
+    "en": "Rotation",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/class2",
+      "https://medintzfat.com/anatomy/xray-ct-basics"
+    ]
+  },
+  {
+    "he": "גיד משותף",
+    "en": "Rotator cuff interval",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "ימין עליון",
+    "en": "RUQ",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "קוצב הלב הראשי",
+    "en": "SA Node",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "עצם העצה",
+    "en": "Sacrum",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "אוכף",
+    "en": "Saddle",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/class5",
+      "https://medintzfat.com/anatomy/xray-ct-basics"
+    ]
+  },
+  {
+    "he": "מפרק אוכפי",
+    "en": "Saddle Joint",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "סגיטלי",
+    "en": "Sagittal",
+    "count": 4,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/imaging",
+      "https://medintzfat.com/anatomy/xray-ct-basics"
+    ]
+  },
+  {
+    "he": "המישור הסגיטלי",
+    "en": "Sagittal Plane",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "חשיבות קלינית",
+    "en": "Saphenous Nerve",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part3"]
+  },
+  {
+    "he": "גג התעלה",
+    "en": "Sartorius",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part3"]
+  },
+  {
+    "he": "שריר החייטים",
+    "en": "Sartorius",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lower-limb-part1",
+      "https://medintzfat.com/anatomy/lower-limb-part3"
+    ]
+  },
+  {
+    "he": "״שריר החייטים״",
+    "en": "Sartorius",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "עצם השכמה",
+    "en": "Scapula",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "שכמה",
+    "en": "Scapula",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "קצב סקפולו הומרלי",
+    "en": "Scapulohumeral Rhythm",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class5"]
+  },
+  {
+    "he": "תנועות הסקפולה",
+    "en": "Scapulothoracic Joint",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class5"]
+  },
+  {
+    "he": "כמו המסטרינגס",
+    "en": "Sciatic",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "בדומה לשרירי ההמסטרינגס",
+    "en": "Sciatic Nerve",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab7"]
+  },
+  {
+    "he": "הענף הטיביאלי שלו",
+    "en": "Sciatic Nerve",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab7"]
+  },
+  {
+    "he": "העצב הגדול ביותר",
+    "en": "Sciatic Nerve",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part3"]
+  },
+  {
+    "he": "מנגנון נעילת הברך",
+    "en": "Screw-Home Mechanism",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "איבר רטרופריטוניאלי משני",
+    "en": "Secondarily Retroperitoneal",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "רטרופריטוניאלי משני",
+    "en": "Secondarily Retroperitoneal",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "קווים חצי ירחיים",
+    "en": "Semilunar Lines",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab3"]
+  },
+  {
+    "he": "אחד משלושת שרירי ההמסטרינגס",
+    "en": "Semimembranosus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab7"]
+  },
+  {
+    "he": "יש שתיים",
+    "en": "Seminal Vesicles",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis-male"]
+  },
+  {
+    "he": "שאינן יושבות בקו האמצע",
+    "en": "Seminal Vesicles",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis-male"]
+  },
+  {
+    "he": "בלוטות הזרע",
+    "en": "Seminal Vesicles / Seminal Glands",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab6"]
+  },
+  {
+    "he": "המערכת הסנסורית",
+    "en": "Sensory",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "תחושתי",
+    "en": "Sensory/Afferent",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "פריקרדיום סרוזי",
+    "en": "Serous Pericardium",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "סיכום",
+    "en": "Shin Splints",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part5"]
+  },
+  {
+    "he": "מדיאלי",
+    "en": "Short Head",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "פריקת כתף",
+    "en": "Shoulder Dislocation",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class5"]
+  },
+  {
+    "he": "מפרק הכתף",
+    "en": "Shoulder Joint",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "גולגולת",
+    "en": "Skull",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "שרשראות כוח",
+    "en": "Slings",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "המעי הדק",
+    "en": "Small Intestine",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "הכחול בתמונה",
+    "en": "Small Saphenous Vein",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "כדורי",
+    "en": "Socket",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class5"]
+  },
+  {
+    "he": "למעה",
+    "en": "Soleus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "מערכת סומטו מוטורית",
+    "en": "Somatic Motor",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "סומטו סנסורי",
+    "en": "Somatosensory",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "חושים מיוחדים",
+    "en": "Special Sensory",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "סנסורי מיוחד",
+    "en": "Special Sensory",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "חבל הזרע",
+    "en": "Spermatic Cord",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/abdominal-wall",
+      "https://medintzfat.com/anatomy/lab3"
+    ]
+  },
+  {
+    "he": "עצם הספנואיד",
+    "en": "Sphenoid Bone",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/skull-cranial-nerves"]
+  },
+  {
+    "he": "התעלה השדרתית",
+    "en": "Spinal Canal",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "חוט השדרה",
+    "en": "Spinal Cord",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "כל עצב שדרתי",
+    "en": "Spinal Nerve",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "עצב ספינלי",
+    "en": "Spinal Nerve",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "אחד",
+    "en": "Spinous Process",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/back-and-spine"]
+  },
+  {
+    "he": "עצבים לאיברים פנימיים",
+    "en": "Splanchnic Nerves",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "הטחול",
+    "en": "Spleen",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "טחול",
+    "en": "Spleen",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/labs-semester-b",
+      "https://medintzfat.com/anatomy/quiz-abdomen"
+    ]
+  },
+  {
+    "he": "כריתת טחול",
+    "en": "Splenectomy",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "הגדלת טחול",
+    "en": "Splenomegaly",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "ספוגית",
+    "en": "Spongy/Cancellous",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "להלן",
+    "en": "Stapedius",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/ear"]
+  },
+  {
+    "he": "זווית הסטרנום",
+    "en": "Sternal Angle",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "נקודת ציון חשובה",
+    "en": "Sternal Angle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "חלק סטרנלי",
+    "en": "Sternal Part",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "קדמי",
+    "en": "Sternocostal",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab2",
+      "https://medintzfat.com/anatomy/thorax-part3"
+    ]
+  },
+  {
+    "he": "הדופן האחורית שלו",
+    "en": "Sternum",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "עצם החזה",
+    "en": "Sternum",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab1",
+      "https://medintzfat.com/anatomy/lab2"
+    ]
+  },
+  {
+    "he": "טבע דומם",
+    "en": "Still Life",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/art-death-dissection"]
+  },
+  {
+    "he": "קיבה",
+    "en": "Stomach",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/quiz-abdomen"]
+  },
+  {
+    "he": "צביטה תת אקרומיאלית",
+    "en": "Subacromial impingement",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "יוצא מהאזור",
+    "en": "Subclavian trunk",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "מהזרוע",
+    "en": "Subclavian Vein",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "מנקז דם מהזרוע",
+    "en": "Subclavian Vein",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "בלוטות הרוק התת לסתיות",
+    "en": "Submandibular Glands",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/neck"]
+  },
+  {
+    "he": "המשולש הסאבמנדיבולרי",
+    "en": "Submandibular Triangle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab9"]
+  },
+  {
+    "he": "המשולש הסאבמנטלי",
+    "en": "Submental Triangle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab9"]
+  },
+  {
+    "he": "הזוקפים הקצרים",
+    "en": "Suboccipital Region",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/back-and-spine"]
+  },
+  {
+    "he": "המשולש הסאב אוקסיפיטלי",
+    "en": "Suboccipital Triangle",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/back-and-spine"]
+  },
+  {
+    "he": "אחורית",
+    "en": "Subscapular",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "שקע קדמי של השכמה",
+    "en": "Subscapular fossa",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "אחד",
+    "en": "Subscapular nerves",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "סולקוס",
+    "en": "Sulcus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "פאסיה שטחית",
+    "en": "Superficial Fascia",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "טבעת חיצונית שטחית",
+    "en": "Superficial/External Ring",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab3"]
+  },
+  {
+    "he": "שאר הגלוטאליים כן",
+    "en": "Superior Gluteal Nerve",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "כלי דם",
+    "en": "Superior Mediastinum",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "עצבים",
+    "en": "Superior Mediastinum",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "הפתח העליון",
+    "en": "Superior Thoracic Aperture/Inlet",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "מהחלק העליון של הגוף",
+    "en": "Superior Vena Cava",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "צד ימין",
+    "en": "Superior Vena Cava",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "סופינציה",
+    "en": "Supination",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "״נרות״",
+    "en": "Suppositories",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "שקעים עמוקים",
+    "en": "Supra/Infra fossae",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "ענפים מעל לקלוויקולה",
+    "en": "Supraclavicular",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "השרירים הסופרהיואידיים",
+    "en": "Suprahyoid Muscles",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/neck"]
+  },
+  {
+    "he": "שניים",
+    "en": "Suprascapular",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "חריץ עליון בשכמה",
+    "en": "Suprascapular notch",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "שכמה",
+    "en": "Supraspinous fossa",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "קווי ציון אנטומיים",
+    "en": "Surface Landmarks",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "משטחי הלב",
+    "en": "Surfaces",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "תפרים",
+    "en": "Sutures",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "פלג גוף עליון",
+    "en": "SVC",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "השרשרת הסימפתטית",
+    "en": "Sympathetic Chain",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "השרשרת הסימפתטית",
+    "en": "Sympathetic Chain/Trunk",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/thorax-autonomic-innervation",
+      "https://medintzfat.com/anatomy/xray-ct-basics"
+    ]
+  },
+  {
+    "he": "השרשרת הסימפתטית",
+    "en": "Sympathetic trunk",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "משני הצדדים",
+    "en": "Sympathetic Trunks",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "היפרדות הסימפיזיס פוביס",
+    "en": "Symphysiolysis",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "סימפיזיס פוביס",
+    "en": "Symphysis Pubis",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "הסינאפסה",
+    "en": "Synapse",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "סינאפסה",
+    "en": "Synapse",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "סינרגיסט",
+    "en": "Synergist",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class4"]
+  },
+  {
+    "he": "סינוביאלי",
+    "en": "Synovial",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "סוגי מפרקים סינוביאליים",
+    "en": "Synovial Joints",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "חוליות טורקליות",
+    "en": "T1-T12",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab8"]
+  },
+  {
+    "he": "זנב",
+    "en": "Tail",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "מפרק הקרסול",
+    "en": "Talocrural Joint",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part5"]
+  },
+  {
+    "he": "עצם הטלוס",
+    "en": "Talus",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part5"]
+  },
+  {
+    "he": "העצם הטמפורלית",
+    "en": "Temporal Bone",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab9",
+      "https://medintzfat.com/anatomy/skull-cranial-nerves"
+    ]
+  },
+  {
+    "he": "גיד",
+    "en": "Tendon",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "מעטפת גידית",
+    "en": "Tendon Sheath",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class4"]
+  },
+  {
+    "he": "מתיחה",
+    "en": "Tension",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "הַשְּׁרִיר הֶעָגֹל הַגָּדוֹל",
+    "en": "Teres Major",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "הַשְּׁרִיר הֶעָגֹל הַקָּטָן",
+    "en": "Teres Minor",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "ענפים טרמינאליים",
+    "en": "Terminal branches",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "ענפים סופיים",
+    "en": "TERMINAL BRANCHES",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "ירידת האשך",
+    "en": "Testicular Descent",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "תלמוס",
+    "en": "Thalamus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "התעלה האינגווינלית",
+    "en": "The Inguinal Canal",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "האגן",
+    "en": "The Pelvis",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "גבעת האגודל",
+    "en": "Thenar",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "גבעת האגודל",
+    "en": "Thenar Compartment",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "אזור חזה",
+    "en": "Thoracic",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "הפתחים של בית החזה",
+    "en": "Thoracic Apertures",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "ההיצרות האמצעית",
+    "en": "Thoracic Constriction",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "הצינור הלימפטי הראשי",
+    "en": "Thoracic Duct",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab4"]
+  },
+  {
+    "he": "ימין-מרכז",
+    "en": "Thoracic Duct",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "צינור הלימפה החזי",
+    "en": "Thoracic Duct",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "חוליות החזה",
+    "en": "Thoracic Vertebrae",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "פסציה חשובה",
+    "en": "Thoracolumbar fascia",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "בילדים",
+    "en": "Thymus",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "בלוטת התריס",
+    "en": "Thyroid",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab9"]
+  },
+  {
+    "he": "בלוטת התריס",
+    "en": "Thyroid Gland",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/throat"]
+  },
+  {
+    "he": "נראה מאחורי המיניסקוס המדיאלי",
+    "en": "Tibia",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "מדיאלי",
+    "en": "Tibialis anterior",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "המפרק הטיביו פמורלי",
+    "en": "Tibiofemoral Joint",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "תזמון",
+    "en": "Timing",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "כולל הדיסק הארטיקורי",
+    "en": "TMJ",
+    "count": 6,
+    "likelyTerm": true,
+    "pages": [
+      "https://medintzfat.com/anatomy/lab9",
+      "https://medintzfat.com/anatomy/labs-semester-b"
+    ]
+  },
+  {
+    "he": "הטרכיאה",
+    "en": "Trachea",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "ובהמשך גם פריטונאום",
+    "en": "Transversalis fascia",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-wall"]
+  },
+  {
+    "he": "אקסיאלי",
+    "en": "Transverse",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "הקשת הרוחבית",
+    "en": "Transverse Arch",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part5"]
+  },
+  {
+    "he": "מעי גס חוצה",
+    "en": "Transverse colon",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/quiz-abdomen"]
+  },
+  {
+    "he": "המישור הרוחבי",
+    "en": "Transverse Plane",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class2"]
+  },
+  {
+    "he": "הליכה ״ברווזית״",
+    "en": "Trendelenburg Gait",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part2"]
+  },
+  {
+    "he": "בתמונה למטה",
+    "en": "Triceps",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class8"]
+  },
+  {
+    "he": "תלת ראשי",
+    "en": "Triceps Brachii",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "המסתם הטריקוספידלי",
+    "en": "Tricuspid Valve",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part3"]
+  },
+  {
+    "he": "עצבוב סנסורי של הפנים",
+    "en": "Trigeminal Nerve",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/face-mastication"]
+  },
+  {
+    "he": "המשולש",
+    "en": "Trigone",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "לאולנה",
+    "en": "Trochlea",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab1"]
+  },
+  {
+    "he": "גזעים",
+    "en": "Trunks",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "גזעים",
+    "en": "TRUNKS",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "נקבה",
+    "en": "Tube/Ovary",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "פקעת",
+    "en": "Tubercle",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "עור התוף",
+    "en": "Tympanic Membrane",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/ear"]
+  },
+  {
+    "he": "מבנה צלע טיפוסית",
+    "en": "Typical Rib",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "קשת",
+    "en": "U-shape",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "רוב",
+    "en": "Ulnar",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class8"]
+  },
+  {
+    "he": "מדיאלי",
+    "en": "Ulnar artery",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class8"]
+  },
+  {
+    "he": "מסלול מלא",
+    "en": "Ulnar Nerve",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class9"]
+  },
+  {
+    "he": "בחוליות צוואר",
+    "en": "Uncinate process",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/labs-semester-b"]
+  },
+  {
+    "he": "שלישיית הפגיעות",
+    "en": "Unhappy Triad",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "סיבוב חיצוני",
+    "en": "Upward Rotation",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class5"]
+  },
+  {
+    "he": "צינור הכליה",
+    "en": "Ureter",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "החצוצרה",
+    "en": "Uterine Tube / Fallopian Tube",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab6"]
+  },
+  {
+    "he": "רחם",
+    "en": "Uterus",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "הענבל",
+    "en": "Uvula",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/lab9"]
+  },
+  {
+    "he": "וריד",
+    "en": "V ein",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "ליד גזע המוח",
+    "en": "Vagal Ganglion",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "קדמי ואחורי",
+    "en": "Vagal trunks",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01"]
+  },
+  {
+    "he": "פתח הנרתיק",
+    "en": "Vaginal Orifice",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/pelvis"]
+  },
+  {
+    "he": "עצב הוואגוס",
+    "en": "Vagus Nerve",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-autonomic-innervation"]
+  },
+  {
+    "he": "עצב הוואגוס",
+    "en": "Vagus nerve",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "עצב הווגוס",
+    "en": "Vagus Nerve",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "פוסטריורי לשורש",
+    "en": "Vagus Nerves",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "המסתמים",
+    "en": "Valves",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "צרור נוירו וסקולרי",
+    "en": "VAN",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab2"]
+  },
+  {
+    "he": "כיווץ",
+    "en": "Vasoconstriction",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "הרחבה",
+    "en": "Vasodilation",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "מוטורי",
+    "en": "Vastus Medialis",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part3"]
+  },
+  {
+    "he": "ציסטו אורתרוגרפיה",
+    "en": "VCUG",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/quiz-abdomen"]
+  },
+  {
+    "he": "שורשי עצב קדמיים",
+    "en": "Ventral rami",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "שורשים קדמיים",
+    "en": "Ventral Rami",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "תוספתן",
+    "en": "Vermiform Appendix",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/abdominal-organs"]
+  },
+  {
+    "he": "לא זיהינו אותו בדיסקציה",
+    "en": "Vertebral Artery",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab8"]
+  },
+  {
+    "he": "גבול מדיאלי",
+    "en": "Vertebral border",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "חלק חולייתי",
+    "en": "Vertebral Part",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "הפלאורה הוויסצרלית",
+    "en": "Visceral Pleura",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-autonomic-innervation"]
+  },
+  {
+    "he": "פלאורה ויסצרלית",
+    "en": "Visceral Pleura",
+    "count": 3,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/respiratory-system"]
+  },
+  {
+    "he": "שני שמות לאותו דבר",
+    "en": "Visceral Serous Pericardium",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part2"]
+  },
+  {
+    "he": "ויסצרו סנסורי",
+    "en": "Viscerosensory",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class1"]
+  },
+  {
+    "he": "סיבים אלכסוניים",
+    "en": "VMO - Vastus Medialis Oblique",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lower-limb-part4"]
+  },
+  {
+    "he": "חלונות",
+    "en": "Windows",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "כנף מלאך",
+    "en": "Winged Scapula",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "כנף מלאך",
+    "en": "Winged scapula",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/class6"]
+  },
+  {
+    "he": "שכמה מכונפת",
+    "en": "Winged Scapula",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/class7"]
+  },
+  {
+    "he": "צילומי רנטגן",
+    "en": "X-Ray",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/xray-ct-basics"]
+  },
+  {
+    "he": "רנטגן",
+    "en": "X-Ray",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/imaging"]
+  },
+  {
+    "he": "זיז החרב",
+    "en": "Xiphoid Process",
+    "count": 2,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/thorax-part1"]
+  },
+  {
+    "he": "הקשת של עצם הלחי",
+    "en": "Zygomatic Arch",
+    "count": 1,
+    "likelyTerm": false,
+    "pages": ["https://medintzfat.com/anatomy/lab9"]
+  },
+  {
+    "he": "עצמות הלחי",
+    "en": "Zygomatic Bones",
+    "count": 1,
+    "likelyTerm": true,
+    "pages": ["https://medintzfat.com/anatomy/skull-cranial-nerves"]
+  }
+]
