@@ -255,3 +255,5 @@ All verified by `npm run e2e:smoke` against a production build.
   automatic peel too drastic — ~250 structures per tap when zoomed in on the
   chest): tap-to-peel mode replaces it; the view-based ID-pass peeling
   (`structureIdPass`, `peel.ts`, `useLayerPeeling`) was removed.
+- **2026-10-05 · session 2 (cont.)** — Tap to peel merged to `main` via
+  PR #6.
