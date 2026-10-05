@@ -31,6 +31,11 @@ on screen, the UI stays out of their way):
 Feedback: correct `#1F7A4D` (with ✓ icon + text), incorrect `#B3261E`
 (with ✕ icon + text). Never colour alone.
 
+Attachments (origin/insertion patches and their key,
+`components/anatomy/attachmentColors.ts`): origin violet `#7A4FB3`,
+insertion amber `#D9822B`, unconfirmed slate `#6F7A85` — outside the tissue
+palette and the teal selection; always paired with a text label.
+
 Type:
 
 - **Frank Ruhl Libre** (serif, Hebrew + Latin) — structure names, page

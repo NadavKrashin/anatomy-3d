@@ -19,16 +19,20 @@ type ViewerSnapshot = ReturnType<typeof useViewerStore.getState>;
 
 function visualStateFor(
   structure: AnatomicalStructure,
+  part: AnatomicalStructure | undefined,
   state: ViewerSnapshot,
 ): MeshVisualState {
   const visibility = getStructureVisibility(
     structure.id,
     structure.system,
     state,
+    part?.id,
   );
   if (visibility !== "visible") return visibility;
-  if (structure.id === state.selectedStructureId) return "selected";
-  if (structure.id === state.hoveredStructureId) return "hovered";
+  const is = (id: string | null) =>
+    id !== null && (id === structure.id || id === part?.id);
+  if (is(state.selectedStructureId)) return "selected";
+  if (is(state.hoveredStructureId)) return "hovered";
   return "default";
 }
 
@@ -39,18 +43,22 @@ const affectsVisuals = (a: ViewerSnapshot, b: ViewerSnapshot) =>
   a.hiddenSystems !== b.hiddenSystems ||
   a.isolatedStructureId !== b.isolatedStructureId;
 
-/** First structure under the pointer that is currently visible and not ghosted. */
+/**
+ * First structure under the pointer that is currently visible and not
+ * ghosted — the part (e.g. a head of a muscle) when picking parts.
+ */
 function pickStructureId(
   event: ThreeEvent<PointerEvent | MouseEvent>,
 ): string | null {
+  const { pickParts } = useViewerStore.getState();
   for (const hit of event.intersections) {
-    const { structureId, interactive } = hit.object.userData;
+    const { structureId, partId, interactive } = hit.object.userData;
     if (
       typeof structureId === "string" &&
       interactive === true &&
       hit.object.visible
     )
-      return structureId;
+      return pickParts && typeof partId === "string" ? partId : structureId;
   }
   return null;
 }
@@ -79,7 +87,10 @@ export function AnatomyModel({ url }: { url: string }) {
     const controller = new MaterialStateController();
     const apply = (state: ViewerSnapshot) => {
       for (const [mesh, structure] of index.structureByMesh) {
-        controller.apply(mesh, visualStateFor(structure, state));
+        controller.apply(
+          mesh,
+          visualStateFor(structure, index.partByMesh.get(mesh), state),
+        );
       }
       getThree().gl.domElement.style.cursor = state.hoveredStructureId
         ? "pointer"

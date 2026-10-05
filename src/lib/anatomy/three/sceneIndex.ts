@@ -4,8 +4,12 @@ import { getSourceName } from "../meshNames";
 import type { AnatomyModelAdapter } from "../modelAdapter";
 
 export interface SceneIndex {
+  /** Meshes per structure id — whole structures and parts. */
   meshesByStructure: Map<string, Mesh[]>;
+  /** The whole structure each mesh belongs to. */
   structureByMesh: Map<Mesh, AnatomicalStructure>;
+  /** The part each mesh belongs to, for meshes that are part of a whole. */
+  partByMesh: Map<Mesh, AnatomicalStructure>;
 }
 
 const isMesh = (object: Object3D): object is Mesh =>
@@ -22,23 +26,34 @@ export function buildSceneIndex(
 ): SceneIndex {
   const meshesByStructure = new Map<string, Mesh[]>();
   const structureByMesh = new Map<Mesh, AnatomicalStructure>();
+  const partByMesh = new Map<Mesh, AnatomicalStructure>();
+  const add = (id: string, mesh: Mesh) => {
+    const list = meshesByStructure.get(id) ?? [];
+    list.push(mesh);
+    meshesByStructure.set(id, list);
+  };
 
   root.traverse((object) => {
     if (!isMesh(object)) return;
     let node: Object3D | null = object;
     while (node && node !== root.parent) {
-      const structure = adapter.getStructureForMesh(getSourceName(node));
+      const name = getSourceName(node);
+      const structure = adapter.getStructureForMesh(name);
       if (structure) {
         object.userData.structureId = structure.id;
         structureByMesh.set(object, structure);
-        const list = meshesByStructure.get(structure.id) ?? [];
-        list.push(object);
-        meshesByStructure.set(structure.id, list);
+        add(structure.id, object);
+        const part = adapter.getPartForMesh(name);
+        if (part) {
+          object.userData.partId = part.id;
+          partByMesh.set(object, part);
+          add(part.id, object);
+        }
         return;
       }
       node = node.parent;
     }
   });
 
-  return { meshesByStructure, structureByMesh };
+  return { meshesByStructure, structureByMesh, partByMesh };
 }

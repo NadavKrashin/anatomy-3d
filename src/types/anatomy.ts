@@ -104,12 +104,40 @@ export interface AnatomicalStructure {
    * accept either side when the side is not what is being tested.
    */
   bilateralGroupId?: string;
+  /**
+   * Set on a part of a larger structure (a head of a muscle). Parts are
+   * selectable and searchable, but scopes, counts and quizzes work on whole
+   * structures (`AnatomyRegistry.structures` lists only those).
+   */
   parentId?: string;
   details?: StructureDetails;
   tags: string[];
   modelSource?: string;
   sourceLicense?: string;
   sourceAttribution?: string;
+}
+
+/**
+ * Where a muscle attaches, as a surface patch on a bone. "attachment" means
+ * the source doesn't reliably say whether it is the origin or the insertion.
+ */
+export const ATTACHMENT_KINDS = ["origin", "insertion", "attachment"] as const;
+export type AttachmentKind = (typeof ATTACHMENT_KINDS)[number];
+
+export interface MuscleAttachment {
+  /** Node name in the attachments model. */
+  meshName: string;
+  /** The muscle or muscle part that attaches here. */
+  structureId: string;
+  kind: AttachmentKind;
+  /** The bone (or cartilage) the patch lies on, when known. */
+  boneId?: string;
+}
+
+export interface AttachmentData {
+  /** Model with one patch mesh per attachment, loaded on demand. */
+  modelUrl: string;
+  items: MuscleAttachment[];
 }
 
 /** Maps raw mesh/node names in a model file to structure ids. */
@@ -125,5 +153,10 @@ export interface AnatomyDatasetInfo {
 export interface AnatomyDataset {
   info: AnatomyDatasetInfo;
   structures: AnatomicalStructure[];
+  /** Mesh → whole structure. Every mesh of a part maps to its parent here. */
   meshMap: MeshMap;
+  /** Mesh → part structure, for meshes that are a part of a whole (optional). */
+  partMeshMap?: MeshMap;
+  /** Origins/insertions as patches on bones (optional). */
+  attachments?: AttachmentData;
 }

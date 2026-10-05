@@ -1,6 +1,7 @@
 "use client";
 
 import { AnatomyModel } from "./AnatomyModel";
+import { AttachmentPatches } from "./AttachmentPatches";
 import { CameraController } from "./CameraController";
 import { SelectionLabel } from "./SelectionLabel";
 
@@ -9,6 +10,7 @@ export function AnatomyScene({
   showSelectionLabel,
 }: {
   modelUrl: string;
+  /** Explore extras: leader label and attachment patches (would give quiz answers away). */
   showSelectionLabel: boolean;
 }) {
   return (
@@ -21,6 +23,7 @@ export function AnatomyScene({
       <AnatomyModel url={modelUrl} />
       <CameraController />
       {showSelectionLabel && <SelectionLabel />}
+      {showSelectionLabel && <AttachmentPatches />}
     </>
   );
 }

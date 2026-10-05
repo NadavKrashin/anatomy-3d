@@ -149,3 +149,16 @@ describe("viewer store — layer peeling", () => {
     expect(useViewerStore.getState().peeledLayers).toEqual([]);
   });
 });
+
+describe("viewer store — muscle parts", () => {
+  beforeEach(() => useViewerStore.setState(initial, true));
+
+  it("picking parts is off by default and switched off by show only (quiz start)", () => {
+    const { setPickParts, showOnly } = useViewerStore.getState();
+    expect(useViewerStore.getState().pickParts).toBe(false);
+    setPickParts(true);
+    expect(useViewerStore.getState().pickParts).toBe(true);
+    showOnly(["biceps"], ["biceps"]);
+    expect(useViewerStore.getState().pickParts).toBe(false);
+  });
+});

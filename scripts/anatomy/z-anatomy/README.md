@@ -50,6 +50,22 @@ npm test
 The app builds structures from the manifest at runtime
 (`src/data/anatomy/z-anatomy/build.ts`), so no other file needs regenerating.
 
+## 5. Origins & insertions (attachment patches)
+
+```bash
+./bpyenv/bin/python scripts/anatomy/z-anatomy/export_attachments.py -- zanat \
+  src/data/anatomy/z-anatomy/manifest.json out/attachments-raw.glb out/attachments.json
+npx tsx scripts/anatomy/z-anatomy/optimize-glb.ts out/attachments-raw.glb \
+  public/models/z-anatomy-upper-limb-attachments.glb --simplify 0.5
+# keep only name/muscle/side/kind/on:
+python3 -c "import json;e=json.load(open('out/attachments.json'));json.dump([{k:x[k] for k in ('name','muscle','side','kind','on')} for x in e],open('src/data/anatomy/z-anatomy/attachments.json','w'),indent=1,ensure_ascii=False)"
+npm run anatomy:validate
+```
+
+Run it after the main export (it reads the dataset manifest to pick the
+muscles). The script documents the kind/side rules; muscles whose labels
+are known to be wrong are demoted in `src/data/anatomy/z-anatomy/attachments.ts`.
+
 ## Extending the scope
 
 Add regions by changing `in_scope` / `EXTRA_UPPER_LIMB` in `export_glb.py`

@@ -55,7 +55,8 @@ GLB file ──► GLTFLoader ──► three.js scene
 ```
 
 Only `modelAdapter.ts`, `meshNames.ts`, `three/sceneIndex.ts` and the dataset's
-`meshMap.json` know raw node names. Everything else speaks structure ids. That
+`meshMap.json` know raw node names (plus the attachment patch names in
+`attachments.json`, used only by `AttachmentPatches.tsx`). Everything else speaks structure ids. That
 is what makes the model swappable.
 
 Name resolution details (`three/sceneIndex.ts`): the original glTF name from
@@ -72,7 +73,27 @@ ancestors are tried (multi-primitive meshes load as a group of meshes).
 - Display names are composed at runtime (`lib/anatomy/names.ts`): base name +
   localized side label, in the user's preferred term language with English
   fallback.
-- `AnatomyDataset` = `{ info, structures, meshMap }`. The app runs on
+- Parts: a structure with `parentId` is a part of a whole (a head of a
+  muscle). `meshMap` maps every mesh to its **whole** structure;
+  `partMeshMap` (optional) additionally maps part meshes to the part.
+  `registry.structures` / `bySystem` list **wholes only** (so scopes, counts,
+  quizzes and `showOnly` never see parts); `registry.get`, search and the
+  info panel include parts; `partsOf` / `wholeOf` relate them. The scene index
+  tags meshes with `userData.partId`, `getStructureVisibility(..., partId)`
+  applies hide/isolate of either the part or the whole, selection/hover match
+  either id, and clicks pick the part only when `viewerStore.pickParts` is on
+  (off on quiz start via `showOnly`).
+- Attachments (origins/insertions): `AnatomyDataset.attachments` =
+  `{ modelUrl, items: MuscleAttachment[] }` — one patch mesh per attachment
+  in a separate GLB (`z-anatomy-upper-limb-attachments.glb`, exported by
+  `export_attachments.py`), each with the muscle/part `structureId`, `kind`
+  (`origin` | `insertion` | `attachment` = not confirmed) and the `boneId` it
+  lies on. `lib/anatomy/attachments.ts` (pure): `attachmentsFor` (a muscle →
+  its own + its parts' + its whole's patches; a bone → every patch on it)
+  and `summarizeAttachments` (rows for the info panel).
+  `KIND_UNDER_REVIEW` in `data/anatomy/z-anatomy/attachments.ts` demotes
+  muscles whose source labels contradict standard anatomy to `attachment`.
+- `AnatomyDataset` = `{ info, structures, meshMap, partMeshMap?, attachments? }`. The app runs on
   `data/anatomy/index.ts → activeDataset`, provided via
   `components/providers/AnatomyDataProvider.tsx` (registry, adapter, search
   are built once per dataset).
@@ -146,6 +167,13 @@ AnatomyModel.apply()
   batch on a stack (`peeledLayers`), never the selected structure;
   `restoreLayer` pops one batch, `showAll`/`showOnly`/quiz question changes
   clear them. UI: `LayerControls` (explore toolbar, quiz find questions).
+- Attachment patches (explore only, with the leader label):
+  `AttachmentPatches` mounts once the selection has attachments, lazy-loads
+  the patch GLB in its own Suspense, and shows the patches of the selection
+  in `ATTACHMENT_COLORS` (violet origin, amber insertion, slate unconfirmed),
+  x-ray like the selection (no depth test, drawn after it), unpickable.
+  `viewerStore.showAttachments` toggles them; `StructureAttachments` is the
+  info-panel key (bones per kind for a muscle, muscles per kind for a bone).
 - `AnatomyCanvas` is loaded with `next/dynamic({ ssr: false })`, wrapped in an
   error boundary with retry, a WebGL capability check and a loading overlay.
 

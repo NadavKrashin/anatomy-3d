@@ -1,6 +1,7 @@
 import type {
   AnatomyRegion,
   AnatomySystem,
+  AttachmentKind,
   DetailSection,
   TermLanguage,
 } from "@/types/anatomy";
@@ -46,6 +47,7 @@ export const he = {
     isolating: "מצב בידוד",
     peelLayer: "הסרת שכבה",
     restoreLayer: "החזרת שכבה",
+    pickParts: "חלקי שרירים",
   },
   search: {
     placeholder: "חיפוש מבנה…",
@@ -56,6 +58,8 @@ export const he = {
     focus: "מיקוד",
     isolate: "בידוד",
     hide: "הסתרה",
+    partOf: "חלק מתוך",
+    parts: "חלקים",
     unverified: "לא אומת",
     unverifiedHint: "התרגום טרם אומת מול מקור מוסמך",
     noDetails: "אין עדיין מידע מאומת על מבנה זה.",
@@ -69,6 +73,20 @@ export const he = {
       articulations: "מפרקים",
     } satisfies Record<DetailSection, string>,
     clinicalNote: "הערה קלינית",
+  },
+  attachments: {
+    // "מוצא" / "אחיזה" are listed in docs/CONTENT_REVIEW.md (unverified);
+    // the English term stays alongside until the course's terms are known.
+    title: "מוצא ואחיזה (Origin / Insertion)",
+    boneTitle: "שרירים המחוברים לעצם",
+    kinds: {
+      origin: "מוצא (Origin)",
+      insertion: "אחיזה (Insertion)",
+      attachment: "נקודת חיבור (לא ברור אם מוצא או אחיזה)",
+    } satisfies Record<AttachmentKind, string>,
+    showOnModel: "הצגה על המודל",
+    none: "אין במודל נתוני חיבור לשריר זה.",
+    source: "אתרי החיבור לקוחים מהמודל של Z-Anatomy ועדיין לא אומתו.",
   },
   shortcuts: {
     search: "חיפוש",

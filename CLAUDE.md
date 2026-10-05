@@ -57,7 +57,9 @@ skeleton (CC BY-SA).
   Components orchestrate; stores hold state + intent-named actions.
 - Components ≲150 lines and single-purpose; split otherwise.
 - Only `modelAdapter.ts`, `three/sceneIndex.ts` and dataset `meshMap.json` /
-  manifest know raw model node names.
+  manifest know raw model node names (for the attachment patches:
+  `attachments.json` → `MuscleAttachment.meshName`, read only by
+  `AttachmentPatches.tsx`).
 
 **UI style** (details: `docs/DESIGN.md`, skill `anatomy-ui-style`):
 

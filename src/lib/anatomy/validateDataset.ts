@@ -104,10 +104,30 @@ export function validateDataset(dataset: AnatomyDataset): DatasetIssue[] {
   const meshIssues = findMeshMapIssues(
     createRegistry(dataset.structures),
     dataset.meshMap,
+    dataset.partMeshMap,
+  );
+  const known = new Set(ids);
+  const partIssues = dataset.structures
+    .filter((s) => s.parentId !== undefined && !known.has(s.parentId))
+    .map((s) => ({
+      severity: "error" as const,
+      structureId: s.id,
+      message: `parent "${s.parentId}" does not exist`,
+    }));
+  const attachmentIssues = (dataset.attachments?.items ?? []).flatMap((item) =>
+    [item.structureId, item.boneId ?? item.structureId]
+      .filter((id) => !known.has(id))
+      .map((id) => ({
+        severity: "error" as const,
+        structureId: id,
+        message: `attachment "${item.meshName}" refers to an unknown structure`,
+      })),
   );
   return [
     ...dataset.structures.flatMap(validateStructure),
     ...validateBilateralGroups(dataset.structures),
+    ...partIssues,
+    ...attachmentIssues,
     ...meshIssues.unknownStructureIds.map((id) => ({
       severity: "error" as const,
       structureId: id,

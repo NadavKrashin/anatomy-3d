@@ -42,6 +42,7 @@ export const en: Messages = {
     isolating: "Isolate mode",
     peelLayer: "Peel layer",
     restoreLayer: "Restore layer",
+    pickParts: "Muscle parts",
   },
   search: {
     placeholder: "Search structures…",
@@ -52,6 +53,8 @@ export const en: Messages = {
     focus: "Focus",
     isolate: "Isolate",
     hide: "Hide",
+    partOf: "Part of",
+    parts: "Parts",
     unverified: "Unverified",
     unverifiedHint:
       "This term has not yet been checked against an authoritative source",
@@ -66,6 +69,18 @@ export const en: Messages = {
       articulations: "Articulations",
     },
     clinicalNote: "Clinical note",
+  },
+  attachments: {
+    title: "Origin and insertion",
+    boneTitle: "Muscles attached to this bone",
+    kinds: {
+      origin: "Origin",
+      insertion: "Insertion",
+      attachment: "Attachment (origin or insertion not confirmed)",
+    },
+    showOnModel: "Show on model",
+    none: "No attachment data for this muscle in the model.",
+    source: "Attachment sites from the Z-Anatomy model, not yet verified.",
   },
   shortcuts: {
     search: "Search",

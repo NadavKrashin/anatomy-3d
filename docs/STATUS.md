@@ -2,7 +2,7 @@
 
 > Living document. **Update it with every commit that changes the code, not
 > just at the end of a session** — it must always match the code as it is.
-> Last updated: 2026-10-05 (session 2, layer peeling).
+> Last updated: 2026-10-05 (session 2, origins & insertions).
 
 ## Orientation (read in this order)
 
@@ -28,7 +28,7 @@ npx next start -p 3100         # in the background (after verify, which builds)
 npm run e2e:smoke              # real-browser explore + quiz flows, writes docs/screenshots/
 ```
 
-Expected today: **146 unit/component tests, 25 e2e checks, all passing; CI green.**
+Expected today: **164 unit/component tests, 31 e2e checks, all passing; CI green.**
 
 ## User decisions & preferences (do not re-ask)
 
@@ -42,6 +42,7 @@ Expected today: **146 unit/component tests, 25 e2e checks, all passing; CI green
 | 2026-10-05 | **Lower limb / other regions deferred** — "we will add everything later". Legs show bones only for now.                                                                                                                                                      |
 | 2026-10-05 | **Redesign requested**: the first UI looked "blocky and AI-made". New direction in `docs/DESIGN.md` (light atlas style). Design plugins (`frontend-design`, `design-skills`) were suggested for install; `frontend-design` is vendored in `.claude/skills/`. |
 | 2026-10-05 | Next: **deploy the first version to Vercel** (user does the Vercel side — see `docs/DEPLOYMENT.md`).                                                                                                                                                         |
+| 2026-10-05 | Next features chosen by the user: **muscle parts**, then **origins & insertions**.                                                                                                                                                                           |
 | 2026-10-05 | **Docs must be kept updated continuously** as work happens (every commit), not at the end of a session. Enforced by the docs-gate hook.                                                                                                                      |
 | 2026-10-05 | **Deployed** by the user on Vercel: production URL **https://ors-anatomy.vercel.app** (production branch `main`).                                                                                                                                            |
 
@@ -89,7 +90,15 @@ All verified by `npm run e2e:smoke` against a production build.
   visible), hover, info panel, search (he/en/la), focus with panel-aware
   framing, hide, isolate, legend toggles, **layer peeling** (peel the
   structures outermost from the current view, never bones; restore one layer
-  at a time; the selected structure is kept), shortcuts
+  at a time; the selected structure is kept), **muscle parts** (52 parts —
+  heads of biceps/triceps, parts of deltoid, pectoralis major, trapezius… —
+  searchable and selectable; "Muscle parts" toolbar toggle makes clicks pick
+  parts; info panel links part ↔ whole), **origins & insertions** (select a
+  muscle → its attachment patches on the bones, violet origin / amber
+  insertion, with the bones named in the info panel; select a bone → the
+  muscles attached to it; from Z-Anatomy patches, lazy-loaded 0.8 MB model;
+  unverified, 9 muscles shown as "not confirmed" — see CONTENT_REVIEW),
+  shortcuts
   (`/ Esc F I H R P ⇧P Q ?`).
 - **Quiz:** find (click in 3D; muscles auto-hidden for non-muscle targets;
   peel/restore buttons and P/⇧P to reach deep structures — layers reset per
@@ -119,10 +128,11 @@ All verified by `npm run e2e:smoke` against a production build.
    region once more than two regions exist.
 4. **Hebrew names** for the most-studied upper-limb structures — ideally from
    her course's term list; add to curated concepts + `docs/CONTENT_REVIEW.md`.
-5. **Muscle heads as sub-structures** (biceps long/short, triceps heads) via
-   `parentId`, selectable in a "parts" mode.
+5. ~~Muscle heads as sub-structures~~ — done (52 parts); quizzing on parts
+   is a possible follow-up.
 6. Custom study lists (§27), progress export/import, first-run tutorial,
-   origins/insertions mode (Z-Anatomy ships attachment patches).
+   ~~origins/insertions mode~~ (done; verify kinds + Hebrew terms per
+   CONTENT_REVIEW).
 
 ## Known issues / limitations
 
@@ -132,6 +142,12 @@ All verified by `npm run e2e:smoke` against a production build.
   superficial layer of both arms); zoom in to peel finely. Structures showing
   fewer than 3 pixels in the 512px pass count as slivers and stay. Peel speed
   on a real iPad not yet measured (one extra off-screen render + readback).
+- Origins/insertions: source gaps — 7 muscles have no patches (e.g.
+  palmaris longus, lumbricals, flexor carpi radialis); pronator quadratus and
+  the short head of biceps have patches on the right side only; some
+  muscles' origins are missing (rhomboids, deltoid parts' insertion is on the
+  whole muscle). 7 patches carried the wrong side suffix and are placed by
+  position instead.
 - Long structures (nerves) are framed along their whole length.
 - Viewer state (hidden/isolated) is not persisted across reloads (by design).
 - Progress is per browser/device (localStorage) — no sync.
@@ -175,3 +191,13 @@ All verified by `npm run e2e:smoke` against a production build.
   next feature): off-screen structure-ID render finds what's outermost from
   the camera; Peel / Restore in the toolbar and in find questions; P / ⇧P.
   Also: toolbar labels no longer wrap on phones.
+- **2026-10-05 · session 2 (cont.)** — Layer peeling merged to `main` via
+  PR #2 (user asked); Vercel redeploys production from `main`.
+- **2026-10-05 · session 2 (cont.)** — Muscle parts as child structures
+  (`parentId`, `partMeshMap`); registry lists wholes only so scopes/counts/
+  quizzes are unchanged; parts toggle + whole↔part navigation.
+- **2026-10-05 · session 2 (cont.)** — Origins & insertions from
+  Z-Anatomy's attachment patches: separate lazy-loaded GLB, kinds from
+  suffix+material agreement, side from position, muscles whose labels
+  contradict standard anatomy shown as unconfirmed; muscle ⇄ bone views in
+  the info panel.

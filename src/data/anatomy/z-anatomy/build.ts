@@ -95,47 +95,77 @@ function systemFor(entry: ManifestEntry): AnatomySystem {
 }
 
 /**
- * Turns the export manifest into app structures + mesh map. Muscle parts
- * listed under a group become one whole-muscle structure with several meshes.
+ * Turns the export manifest into app structures + mesh maps. Muscle parts
+ * listed under a group (heads of biceps, parts of deltoid…) become one
+ * whole-muscle structure with several meshes, and each part also becomes a
+ * structure of its own (`parentId` = the whole muscle) mapped in
+ * `partMeshMap`.
  */
 export function buildZAnatomyDataset(manifest: readonly ManifestEntry[]): {
   structures: AnatomicalStructure[];
   meshMap: MeshMap;
+  partMeshMap: MeshMap;
 } {
   const byId = new Map<string, AnatomicalStructure>();
   const meshMap: MeshMap = {};
+  const partMeshMap: MeshMap = {};
 
   for (const entry of manifest) {
     const parsed = parseName(entry.name);
-    const base = entry.group ?? parsed.base;
-    const inconstant = !entry.group && parsed.inconstant;
-    const id = toId(base, parsed.side);
+    const id = toId(entry.group ?? parsed.base, parsed.side);
     meshMap[entry.name] = id;
-    if (byId.has(id)) continue;
-
-    const detail = inconstant || DETAIL_PATTERN.test(base);
-    const structure: AnatomicalStructure = {
-      id,
-      names: { en: { text: base, verified: false } },
-      aliases: {},
-      system: systemFor(entry),
-      region: entry.region,
-      side: parsed.side,
-      ...(parsed.side === "midline"
-        ? {}
-        : { bilateralGroupId: toId(base, "midline") }),
-      tags: [
-        entry.tissue,
-        ...(inconstant ? ["inconstant"] : []),
-        ...(detail ? [DETAIL_TAG] : []),
-      ],
-      modelSource: Z_ANATOMY_SOURCE,
-      sourceLicense: Z_ANATOMY_LICENSE,
-      sourceAttribution: Z_ANATOMY_ATTRIBUTION,
-    };
-    const concept = CONCEPT_BY_NAME[base];
-    byId.set(id, concept ? withConcept(structure, concept) : structure);
+    if (!byId.has(id)) {
+      byId.set(
+        id,
+        structureFor(
+          entry,
+          entry.group ?? parsed.base,
+          parsed,
+          !entry.group && parsed.inconstant,
+        ),
+      );
+    }
+    if (entry.group) {
+      const partId = toId(parsed.base, parsed.side);
+      partMeshMap[entry.name] = partId;
+      if (!byId.has(partId)) {
+        byId.set(partId, {
+          ...structureFor(entry, parsed.base, parsed, parsed.inconstant),
+          parentId: id,
+        });
+      }
+    }
   }
 
-  return { structures: [...byId.values()], meshMap };
+  return { structures: [...byId.values()], meshMap, partMeshMap };
+}
+
+function structureFor(
+  entry: ManifestEntry,
+  base: string,
+  parsed: ParsedName,
+  inconstant: boolean,
+): AnatomicalStructure {
+  const detail = inconstant || DETAIL_PATTERN.test(base);
+  const structure: AnatomicalStructure = {
+    id: toId(base, parsed.side),
+    names: { en: { text: base, verified: false } },
+    aliases: {},
+    system: systemFor(entry),
+    region: entry.region,
+    side: parsed.side,
+    ...(parsed.side === "midline"
+      ? {}
+      : { bilateralGroupId: toId(base, "midline") }),
+    tags: [
+      entry.tissue,
+      ...(inconstant ? ["inconstant"] : []),
+      ...(detail ? [DETAIL_TAG] : []),
+    ],
+    modelSource: Z_ANATOMY_SOURCE,
+    sourceLicense: Z_ANATOMY_LICENSE,
+    sourceAttribution: Z_ANATOMY_ATTRIBUTION,
+  };
+  const concept = CONCEPT_BY_NAME[base];
+  return concept ? withConcept(structure, concept) : structure;
 }

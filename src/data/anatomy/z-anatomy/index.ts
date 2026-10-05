@@ -4,6 +4,7 @@ import {
   Z_ANATOMY_ATTRIBUTION,
   type ManifestEntry,
 } from "./build";
+import { zAnatomyAttachments } from "./attachments";
 import manifest from "./manifest.json";
 
 /**
@@ -11,6 +12,9 @@ import manifest from "./manifest.json";
  * the muscles, nerves and vessels of both upper limbs (incl. pectoral,
  * axillary and scapular regions). Rebuild with scripts/anatomy/z-anatomy/README.md.
  */
+const built = buildZAnatomyDataset(manifest as ManifestEntry[]);
+const ids = new Set(built.structures.map((s) => s.id));
+
 export const zAnatomyUpperLimbDataset: AnatomyDataset = {
   info: {
     id: "z-anatomy-upper-limb",
@@ -18,5 +22,6 @@ export const zAnatomyUpperLimbDataset: AnatomyDataset = {
     isDemo: false,
     attribution: Z_ANATOMY_ATTRIBUTION,
   },
-  ...buildZAnatomyDataset(manifest as ManifestEntry[]),
+  ...built,
+  attachments: zAnatomyAttachments((id) => ids.has(id)),
 };

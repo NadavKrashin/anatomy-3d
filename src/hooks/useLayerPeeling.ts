@@ -26,12 +26,21 @@ export function useLayerPeeling(root: Object3D, index: SceneIndex) {
           (mesh) => index.structureByMesh.get(mesh)?.id,
         );
         const structures = new Map(
-          [...index.structureByMesh.values()].map((s) => [s.id, s]),
+          [...index.structureByMesh.values(), ...index.partByMesh.values()].map(
+            (s) => [s.id, s],
+          ),
         );
+        // A selected part keeps its whole muscle (peeling works on wholes).
+        const selected = state.selectedStructureId;
+        const keep = selected
+          ? (structures.get(selected)?.parentId ?? selected)
+          : null;
         state.applyPeel(
           outerLayer(counts, (id) => {
             const structure = structures.get(id);
-            return structure !== undefined && isPeelable(structure);
+            return (
+              id !== keep && structure !== undefined && isPeelable(structure)
+            );
           }),
         );
         invalidate();

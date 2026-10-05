@@ -1,0 +1,1591 @@
+[
+  {
+    "name": "(Abdominal part of pectoralis major muscle).ol",
+    "muscle": "Abdominal part of pectoralis major muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Costal cartilage of seventh rib"
+  },
+  {
+    "name": "(Abdominal part of pectoralis major muscle).or",
+    "muscle": "Abdominal part of pectoralis major muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Costal cartilage of seventh rib"
+  },
+  {
+    "name": "Abductor digiti minimi of hand.el",
+    "muscle": "Abductor digiti minimi of hand",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Proximal phalanx of fifth finger of hand"
+  },
+  {
+    "name": "Abductor digiti minimi of hand.er",
+    "muscle": "Abductor digiti minimi of hand",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Proximal phalanx of fifth finger of hand"
+  },
+  {
+    "name": "Abductor digiti minimi of hand.ol",
+    "muscle": "Abductor digiti minimi of hand",
+    "side": "left",
+    "kind": "origin",
+    "on": "Pisiform bone"
+  },
+  {
+    "name": "Abductor digiti minimi of hand.or",
+    "muscle": "Abductor digiti minimi of hand",
+    "side": "right",
+    "kind": "origin",
+    "on": "Pisiform bone"
+  },
+  {
+    "name": "Abductor pollicis longus.el",
+    "muscle": "Abductor pollicis longus",
+    "side": "left",
+    "kind": "insertion",
+    "on": "First metacarpal bone"
+  },
+  {
+    "name": "Abductor pollicis longus.er",
+    "muscle": "Abductor pollicis longus",
+    "side": "right",
+    "kind": "insertion",
+    "on": "First metacarpal bone"
+  },
+  {
+    "name": "Abductor pollicis longus.ol",
+    "muscle": "Abductor pollicis longus",
+    "side": "left",
+    "kind": "origin",
+    "on": "Radius"
+  },
+  {
+    "name": "Abductor pollicis longus.or",
+    "muscle": "Abductor pollicis longus",
+    "side": "right",
+    "kind": "origin",
+    "on": "Radius"
+  },
+  {
+    "name": "Acromial part of deltoid muscle.ol",
+    "muscle": "Acromial part of deltoid muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Acromial part of deltoid muscle.or",
+    "muscle": "Acromial part of deltoid muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Adductor pollicis.e1l",
+    "muscle": "Adductor pollicis",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Proximal phalanx of first finger of hand"
+  },
+  {
+    "name": "Adductor pollicis.e1r",
+    "muscle": "Adductor pollicis",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Proximal phalanx of first finger of hand"
+  },
+  {
+    "name": "Adductor pollicis.el",
+    "muscle": "Adductor pollicis",
+    "side": "left",
+    "kind": "attachment",
+    "on": "Capitate bone"
+  },
+  {
+    "name": "Adductor pollicis.er",
+    "muscle": "Adductor pollicis",
+    "side": "right",
+    "kind": "attachment",
+    "on": "Capitate bone"
+  },
+  {
+    "name": "Anconeus muscle.el",
+    "muscle": "Anconeus muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Ulna"
+  },
+  {
+    "name": "Anconeus muscle.er",
+    "muscle": "Anconeus muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Ulna"
+  },
+  {
+    "name": "Anconeus muscle.ol",
+    "muscle": "Anconeus muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Humerus"
+  },
+  {
+    "name": "Anconeus muscle.or",
+    "muscle": "Anconeus muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Humerus"
+  },
+  {
+    "name": "Ascending part of trapezius muscle.el",
+    "muscle": "Ascending part of trapezius muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Occipital bone"
+  },
+  {
+    "name": "Ascending part of trapezius muscle.er",
+    "muscle": "Ascending part of trapezius muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Occipital bone"
+  },
+  {
+    "name": "Ascending part of trapezius muscle.ol",
+    "muscle": "Ascending part of trapezius muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Clavicle"
+  },
+  {
+    "name": "Ascending part of trapezius muscle.or",
+    "muscle": "Ascending part of trapezius muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Clavicle"
+  },
+  {
+    "name": "Biceps brachii muscle.el",
+    "muscle": "Biceps brachii muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Radius"
+  },
+  {
+    "name": "Biceps brachii muscle.er",
+    "muscle": "Biceps brachii muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Radius"
+  },
+  {
+    "name": "Brachialis muscle.el",
+    "muscle": "Brachialis muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Ulna"
+  },
+  {
+    "name": "Brachialis muscle.er",
+    "muscle": "Brachialis muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Ulna"
+  },
+  {
+    "name": "Brachialis muscle.ol",
+    "muscle": "Brachialis muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Humerus"
+  },
+  {
+    "name": "Brachialis muscle.or",
+    "muscle": "Brachialis muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Humerus"
+  },
+  {
+    "name": "Brachioradialis muscle.el",
+    "muscle": "Brachioradialis muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Radius"
+  },
+  {
+    "name": "Brachioradialis muscle.er",
+    "muscle": "Brachioradialis muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Radius"
+  },
+  {
+    "name": "Brachioradialis muscle.ol",
+    "muscle": "Brachioradialis muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Humerus"
+  },
+  {
+    "name": "Brachioradialis muscle.or",
+    "muscle": "Brachioradialis muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Humerus"
+  },
+  {
+    "name": "Clavicular part of deltoid muscle.ol",
+    "muscle": "Clavicular part of deltoid muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Clavicle"
+  },
+  {
+    "name": "Clavicular part of deltoid muscle.or",
+    "muscle": "Clavicular part of deltoid muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Clavicle"
+  },
+  {
+    "name": "Coracobrachialis muscle.ol",
+    "muscle": "Coracobrachialis muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Coracobrachialis muscle.or",
+    "muscle": "Coracobrachialis muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Deep head of flexor pollicis brevis.o1l",
+    "muscle": "Deep head of flexor pollicis brevis",
+    "side": "left",
+    "kind": "origin",
+    "on": "First metacarpal bone"
+  },
+  {
+    "name": "Deep head of flexor pollicis brevis.o1r",
+    "muscle": "Deep head of flexor pollicis brevis",
+    "side": "right",
+    "kind": "origin",
+    "on": "First metacarpal bone"
+  },
+  {
+    "name": "Deep head of flexor pollicis brevis.ol",
+    "muscle": "Deep head of flexor pollicis brevis",
+    "side": "left",
+    "kind": "attachment",
+    "on": "Trapezium bone"
+  },
+  {
+    "name": "Deep head of flexor pollicis brevis.or",
+    "muscle": "Deep head of flexor pollicis brevis",
+    "side": "right",
+    "kind": "attachment",
+    "on": "Trapezium bone"
+  },
+  {
+    "name": "Deltoid muscle.el",
+    "muscle": "Deltoid muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Humerus"
+  },
+  {
+    "name": "Deltoid muscle.er",
+    "muscle": "Deltoid muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Humerus"
+  },
+  {
+    "name": "Descending part of trapezius muscle.ol",
+    "muscle": "Descending part of trapezius muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Descending part of trapezius muscle.or",
+    "muscle": "Descending part of trapezius muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Dorsal interossei muscles of hand.o1l",
+    "muscle": "Dorsal interossei muscles of hand",
+    "side": "left",
+    "kind": "origin",
+    "on": "Fourth metacarpal bone"
+  },
+  {
+    "name": "Dorsal interossei muscles of hand.o1r",
+    "muscle": "Dorsal interossei muscles of hand",
+    "side": "right",
+    "kind": "origin",
+    "on": "Fourth metacarpal bone"
+  },
+  {
+    "name": "Dorsal interossei muscles of hand.o2l",
+    "muscle": "Dorsal interossei muscles of hand",
+    "side": "left",
+    "kind": "origin",
+    "on": "Third metacarpal bone"
+  },
+  {
+    "name": "Dorsal interossei muscles of hand.o2r",
+    "muscle": "Dorsal interossei muscles of hand",
+    "side": "right",
+    "kind": "origin",
+    "on": "Third metacarpal bone"
+  },
+  {
+    "name": "Dorsal interossei muscles of hand.o3l",
+    "muscle": "Dorsal interossei muscles of hand",
+    "side": "left",
+    "kind": "origin",
+    "on": "Second metacarpal bone"
+  },
+  {
+    "name": "Dorsal interossei muscles of hand.o3r",
+    "muscle": "Dorsal interossei muscles of hand",
+    "side": "right",
+    "kind": "origin",
+    "on": "Second metacarpal bone"
+  },
+  {
+    "name": "Dorsal interossei muscles of hand.o4l",
+    "muscle": "Dorsal interossei muscles of hand",
+    "side": "left",
+    "kind": "origin",
+    "on": "First metacarpal bone"
+  },
+  {
+    "name": "Dorsal interossei muscles of hand.o4r",
+    "muscle": "Dorsal interossei muscles of hand",
+    "side": "right",
+    "kind": "origin",
+    "on": "First metacarpal bone"
+  },
+  {
+    "name": "Dorsal interossei muscles of hand.ol",
+    "muscle": "Dorsal interossei muscles of hand",
+    "side": "left",
+    "kind": "origin",
+    "on": "Fifth metacarpal bone"
+  },
+  {
+    "name": "Dorsal interossei muscles of hand.or",
+    "muscle": "Dorsal interossei muscles of hand",
+    "side": "right",
+    "kind": "origin",
+    "on": "Fifth metacarpal bone"
+  },
+  {
+    "name": "Extensor carpi radialis brevis.el",
+    "muscle": "Extensor carpi radialis brevis",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Third metacarpal bone"
+  },
+  {
+    "name": "Extensor carpi radialis brevis.er",
+    "muscle": "Extensor carpi radialis brevis",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Third metacarpal bone"
+  },
+  {
+    "name": "Extensor carpi radialis longus.el",
+    "muscle": "Extensor carpi radialis longus",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Second metacarpal bone"
+  },
+  {
+    "name": "Extensor carpi radialis longus.er",
+    "muscle": "Extensor carpi radialis longus",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Second metacarpal bone"
+  },
+  {
+    "name": "Extensor carpi radialis longus.ol",
+    "muscle": "Extensor carpi radialis longus",
+    "side": "left",
+    "kind": "origin",
+    "on": "Humerus"
+  },
+  {
+    "name": "Extensor carpi radialis longus.or",
+    "muscle": "Extensor carpi radialis longus",
+    "side": "right",
+    "kind": "origin",
+    "on": "Humerus"
+  },
+  {
+    "name": "Extensor carpi ulnaris.el",
+    "muscle": "Extensor carpi ulnaris",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Triquetrum bone"
+  },
+  {
+    "name": "Extensor carpi ulnaris.er",
+    "muscle": "Extensor carpi ulnaris",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Triquetrum bone"
+  },
+  {
+    "name": "Extensor carpi ulnaris.ol",
+    "muscle": "Extensor carpi ulnaris",
+    "side": "left",
+    "kind": "origin",
+    "on": "Ulna"
+  },
+  {
+    "name": "Extensor carpi ulnaris.or",
+    "muscle": "Extensor carpi ulnaris",
+    "side": "right",
+    "kind": "origin",
+    "on": "Ulna"
+  },
+  {
+    "name": "Extensor digitorum.e1l",
+    "muscle": "Extensor digitorum",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Proximal phalanx of fourth finger of hand"
+  },
+  {
+    "name": "Extensor digitorum.e1r",
+    "muscle": "Extensor digitorum",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Proximal phalanx of fourth finger of hand"
+  },
+  {
+    "name": "Extensor digitorum.e2l",
+    "muscle": "Extensor digitorum",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Proximal phalanx of third finger of hand"
+  },
+  {
+    "name": "Extensor digitorum.e2r",
+    "muscle": "Extensor digitorum",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Proximal phalanx of third finger of hand"
+  },
+  {
+    "name": "Extensor digitorum.e3l",
+    "muscle": "Extensor digitorum",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Proximal phalanx of second finger of hand"
+  },
+  {
+    "name": "Extensor digitorum.e3r",
+    "muscle": "Extensor digitorum",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Proximal phalanx of second finger of hand"
+  },
+  {
+    "name": "Extensor digitorum.e4l",
+    "muscle": "Extensor digitorum",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Middle phalanx of fifth finger of hand"
+  },
+  {
+    "name": "Extensor digitorum.e4r",
+    "muscle": "Extensor digitorum",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Middle phalanx of fifth finger of hand"
+  },
+  {
+    "name": "Extensor digitorum.e5l",
+    "muscle": "Extensor digitorum",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Middle phalanx of fourth finger of hand"
+  },
+  {
+    "name": "Extensor digitorum.e5r",
+    "muscle": "Extensor digitorum",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Middle phalanx of fourth finger of hand"
+  },
+  {
+    "name": "Extensor digitorum.e6l",
+    "muscle": "Extensor digitorum",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Middle phalanx of third finger of hand"
+  },
+  {
+    "name": "Extensor digitorum.e6r",
+    "muscle": "Extensor digitorum",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Middle phalanx of third finger of hand"
+  },
+  {
+    "name": "Extensor digitorum.e7l",
+    "muscle": "Extensor digitorum",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Middle phalanx of second finger of hand"
+  },
+  {
+    "name": "Extensor digitorum.e7r",
+    "muscle": "Extensor digitorum",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Middle phalanx of second finger of hand"
+  },
+  {
+    "name": "Extensor digitorum.el",
+    "muscle": "Extensor digitorum",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Proximal phalanx of fifth finger of hand"
+  },
+  {
+    "name": "Extensor digitorum.er",
+    "muscle": "Extensor digitorum",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Proximal phalanx of fifth finger of hand"
+  },
+  {
+    "name": "Extensor indicis.el",
+    "muscle": "Extensor indicis",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Distal phalanx of second finger of hand"
+  },
+  {
+    "name": "Extensor indicis.er",
+    "muscle": "Extensor indicis",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Distal phalanx of second finger of hand"
+  },
+  {
+    "name": "Extensor indicis.ol",
+    "muscle": "Extensor indicis",
+    "side": "left",
+    "kind": "origin",
+    "on": "Ulna"
+  },
+  {
+    "name": "Extensor indicis.or",
+    "muscle": "Extensor indicis",
+    "side": "right",
+    "kind": "origin",
+    "on": "Ulna"
+  },
+  {
+    "name": "Extensor pollicis brevis.el",
+    "muscle": "Extensor pollicis brevis",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Proximal phalanx of first finger of hand"
+  },
+  {
+    "name": "Extensor pollicis brevis.er",
+    "muscle": "Extensor pollicis brevis",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Proximal phalanx of first finger of hand"
+  },
+  {
+    "name": "Extensor pollicis brevis.ol",
+    "muscle": "Extensor pollicis brevis",
+    "side": "left",
+    "kind": "origin",
+    "on": "Radius"
+  },
+  {
+    "name": "Extensor pollicis brevis.or",
+    "muscle": "Extensor pollicis brevis",
+    "side": "right",
+    "kind": "origin",
+    "on": "Radius"
+  },
+  {
+    "name": "Extensor pollicis longus.el",
+    "muscle": "Extensor pollicis longus",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Distal phalanx of first finger of hand"
+  },
+  {
+    "name": "Extensor pollicis longus.er",
+    "muscle": "Extensor pollicis longus",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Distal phalanx of first finger of hand"
+  },
+  {
+    "name": "Extensor pollicis longus.ol",
+    "muscle": "Extensor pollicis longus",
+    "side": "left",
+    "kind": "origin",
+    "on": "Ulna"
+  },
+  {
+    "name": "Extensor pollicis longus.or",
+    "muscle": "Extensor pollicis longus",
+    "side": "right",
+    "kind": "origin",
+    "on": "Ulna"
+  },
+  {
+    "name": "Flexor carpi ulnaris.el",
+    "muscle": "Flexor carpi ulnaris",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Pisiform bone"
+  },
+  {
+    "name": "Flexor carpi ulnaris.er",
+    "muscle": "Flexor carpi ulnaris",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Pisiform bone"
+  },
+  {
+    "name": "Flexor digiti minimi of hand.el",
+    "muscle": "Flexor digiti minimi of hand",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Proximal phalanx of fifth finger of hand"
+  },
+  {
+    "name": "Flexor digiti minimi of hand.er",
+    "muscle": "Flexor digiti minimi of hand",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Proximal phalanx of fifth finger of hand"
+  },
+  {
+    "name": "Flexor digiti minimi of hand.ol",
+    "muscle": "Flexor digiti minimi of hand",
+    "side": "left",
+    "kind": "origin",
+    "on": "Hamate bone"
+  },
+  {
+    "name": "Flexor digiti minimi of hand.or",
+    "muscle": "Flexor digiti minimi of hand",
+    "side": "right",
+    "kind": "origin",
+    "on": "Hamate bone"
+  },
+  {
+    "name": "Flexor digitorum profundus.e1l",
+    "muscle": "Flexor digitorum profundus",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Distal phalanx of fourth finger of hand"
+  },
+  {
+    "name": "Flexor digitorum profundus.e1r",
+    "muscle": "Flexor digitorum profundus",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Distal phalanx of fourth finger of hand"
+  },
+  {
+    "name": "Flexor digitorum profundus.e2l",
+    "muscle": "Flexor digitorum profundus",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Distal phalanx of third finger of hand"
+  },
+  {
+    "name": "Flexor digitorum profundus.e2r",
+    "muscle": "Flexor digitorum profundus",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Distal phalanx of third finger of hand"
+  },
+  {
+    "name": "Flexor digitorum profundus.e3l",
+    "muscle": "Flexor digitorum profundus",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Distal phalanx of second finger of hand"
+  },
+  {
+    "name": "Flexor digitorum profundus.e3r",
+    "muscle": "Flexor digitorum profundus",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Distal phalanx of second finger of hand"
+  },
+  {
+    "name": "Flexor digitorum profundus.el",
+    "muscle": "Flexor digitorum profundus",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Distal phalanx of fifth finger of hand"
+  },
+  {
+    "name": "Flexor digitorum profundus.er",
+    "muscle": "Flexor digitorum profundus",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Distal phalanx of fifth finger of hand"
+  },
+  {
+    "name": "Flexor digitorum superficialis.e1l",
+    "muscle": "Flexor digitorum superficialis",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Middle phalanx of fourth finger of hand"
+  },
+  {
+    "name": "Flexor digitorum superficialis.e1r",
+    "muscle": "Flexor digitorum superficialis",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Middle phalanx of fourth finger of hand"
+  },
+  {
+    "name": "Flexor digitorum superficialis.e2l",
+    "muscle": "Flexor digitorum superficialis",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Middle phalanx of third finger of hand"
+  },
+  {
+    "name": "Flexor digitorum superficialis.e2r",
+    "muscle": "Flexor digitorum superficialis",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Middle phalanx of third finger of hand"
+  },
+  {
+    "name": "Flexor digitorum superficialis.e3l",
+    "muscle": "Flexor digitorum superficialis",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Middle phalanx of second finger of hand"
+  },
+  {
+    "name": "Flexor digitorum superficialis.e3r",
+    "muscle": "Flexor digitorum superficialis",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Middle phalanx of second finger of hand"
+  },
+  {
+    "name": "Flexor digitorum superficialis.el",
+    "muscle": "Flexor digitorum superficialis",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Middle phalanx of fifth finger of hand"
+  },
+  {
+    "name": "Flexor digitorum superficialis.er",
+    "muscle": "Flexor digitorum superficialis",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Middle phalanx of fifth finger of hand"
+  },
+  {
+    "name": "Flexor digitorum superficialis.ol",
+    "muscle": "Flexor digitorum superficialis",
+    "side": "left",
+    "kind": "origin",
+    "on": "Radius"
+  },
+  {
+    "name": "Flexor digitorum superficialis.or",
+    "muscle": "Flexor digitorum superficialis",
+    "side": "right",
+    "kind": "origin",
+    "on": "Radius"
+  },
+  {
+    "name": "Flexor pollicis longus.el",
+    "muscle": "Flexor pollicis longus",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Distal phalanx of first finger of hand"
+  },
+  {
+    "name": "Flexor pollicis longus.er",
+    "muscle": "Flexor pollicis longus",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Distal phalanx of first finger of hand"
+  },
+  {
+    "name": "Flexor pollicis longus.o1l",
+    "muscle": "Flexor pollicis longus",
+    "side": "left",
+    "kind": "origin",
+    "on": "Radius"
+  },
+  {
+    "name": "Flexor pollicis longus.o1r",
+    "muscle": "Flexor pollicis longus",
+    "side": "right",
+    "kind": "origin",
+    "on": "Radius"
+  },
+  {
+    "name": "Flexor pollicis longus.ol",
+    "muscle": "Flexor pollicis longus",
+    "side": "left",
+    "kind": "origin",
+    "on": "Ulna"
+  },
+  {
+    "name": "Flexor pollicis longus.or",
+    "muscle": "Flexor pollicis longus",
+    "side": "right",
+    "kind": "origin",
+    "on": "Ulna"
+  },
+  {
+    "name": "Infraspinatus muscle.el",
+    "muscle": "Infraspinatus muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Humerus"
+  },
+  {
+    "name": "Infraspinatus muscle.er",
+    "muscle": "Infraspinatus muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Humerus"
+  },
+  {
+    "name": "Infraspinatus muscle.ol",
+    "muscle": "Infraspinatus muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Infraspinatus muscle.or",
+    "muscle": "Infraspinatus muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Lateral head of triceps brachii.ol",
+    "muscle": "Lateral head of triceps brachii",
+    "side": "left",
+    "kind": "origin",
+    "on": "Humerus"
+  },
+  {
+    "name": "Lateral head of triceps brachii.or",
+    "muscle": "Lateral head of triceps brachii",
+    "side": "right",
+    "kind": "origin",
+    "on": "Humerus"
+  },
+  {
+    "name": "Latissimus dorsi muscle.el",
+    "muscle": "Latissimus dorsi muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Scapula"
+  },
+  {
+    "name": "Latissimus dorsi muscle.er",
+    "muscle": "Latissimus dorsi muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Scapula"
+  },
+  {
+    "name": "Latissimus dorsi muscle.ol",
+    "muscle": "Latissimus dorsi muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Hip bone"
+  },
+  {
+    "name": "Latissimus dorsi muscle.or",
+    "muscle": "Latissimus dorsi muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Hip bone"
+  },
+  {
+    "name": "Levator scapulae.el",
+    "muscle": "Levator scapulae",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Scapula"
+  },
+  {
+    "name": "Levator scapulae.er",
+    "muscle": "Levator scapulae",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Scapula"
+  },
+  {
+    "name": "Levator scapulae.o1l",
+    "muscle": "Levator scapulae",
+    "side": "left",
+    "kind": "origin",
+    "on": "Axis (C2)"
+  },
+  {
+    "name": "Levator scapulae.o1r",
+    "muscle": "Levator scapulae",
+    "side": "right",
+    "kind": "origin",
+    "on": "Axis (C2)"
+  },
+  {
+    "name": "Levator scapulae.o2l",
+    "muscle": "Levator scapulae",
+    "side": "left",
+    "kind": "origin",
+    "on": "Vertebra C3"
+  },
+  {
+    "name": "Levator scapulae.o2r",
+    "muscle": "Levator scapulae",
+    "side": "right",
+    "kind": "origin",
+    "on": "Vertebra C3"
+  },
+  {
+    "name": "Levator scapulae.o3l",
+    "muscle": "Levator scapulae",
+    "side": "left",
+    "kind": "origin",
+    "on": "Vertebra C4"
+  },
+  {
+    "name": "Levator scapulae.o3r",
+    "muscle": "Levator scapulae",
+    "side": "right",
+    "kind": "origin",
+    "on": "Vertebra C4"
+  },
+  {
+    "name": "Levator scapulae.ol",
+    "muscle": "Levator scapulae",
+    "side": "left",
+    "kind": "origin",
+    "on": "Atlas (C1)"
+  },
+  {
+    "name": "Levator scapulae.or",
+    "muscle": "Levator scapulae",
+    "side": "right",
+    "kind": "origin",
+    "on": "Atlas (C1)"
+  },
+  {
+    "name": "Long head of biceps brachii.ol",
+    "muscle": "Long head of biceps brachii",
+    "side": "left",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Long head of biceps brachii.or",
+    "muscle": "Long head of biceps brachii",
+    "side": "right",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Long head of triceps brachii.ol",
+    "muscle": "Long head of triceps brachii",
+    "side": "left",
+    "kind": "attachment",
+    "on": "Scapula"
+  },
+  {
+    "name": "Long head of triceps brachii.or",
+    "muscle": "Long head of triceps brachii",
+    "side": "right",
+    "kind": "attachment",
+    "on": "Scapula"
+  },
+  {
+    "name": "Medial head of triceps brachii.ol",
+    "muscle": "Medial head of triceps brachii",
+    "side": "left",
+    "kind": "origin",
+    "on": "Humerus"
+  },
+  {
+    "name": "Medial head of triceps brachii.or",
+    "muscle": "Medial head of triceps brachii",
+    "side": "right",
+    "kind": "origin",
+    "on": "Humerus"
+  },
+  {
+    "name": "Opponens digiti minimi muscle of hand.ol",
+    "muscle": "Opponens digiti minimi muscle of hand",
+    "side": "left",
+    "kind": "origin",
+    "on": "Hamate bone"
+  },
+  {
+    "name": "Opponens digiti minimi muscle of hand.or",
+    "muscle": "Opponens digiti minimi muscle of hand",
+    "side": "right",
+    "kind": "origin",
+    "on": "Hamate bone"
+  },
+  {
+    "name": "Pectoralis major muscle.el",
+    "muscle": "Pectoralis major muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Humerus"
+  },
+  {
+    "name": "Pectoralis major muscle.er",
+    "muscle": "Pectoralis major muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Humerus"
+  },
+  {
+    "name": "Pectoralis major muscle.ol",
+    "muscle": "Pectoralis major muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Clavicle"
+  },
+  {
+    "name": "Pectoralis major muscle.or",
+    "muscle": "Pectoralis major muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Clavicle"
+  },
+  {
+    "name": "Pectoralis minor muscle.e1l",
+    "muscle": "Pectoralis minor muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Fourth rib"
+  },
+  {
+    "name": "Pectoralis minor muscle.e1r",
+    "muscle": "Pectoralis minor muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Fourth rib"
+  },
+  {
+    "name": "Pectoralis minor muscle.e2l",
+    "muscle": "Pectoralis minor muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Fifth rib"
+  },
+  {
+    "name": "Pectoralis minor muscle.e2r",
+    "muscle": "Pectoralis minor muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Fifth rib"
+  },
+  {
+    "name": "Pectoralis minor muscle.el",
+    "muscle": "Pectoralis minor muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Third rib"
+  },
+  {
+    "name": "Pectoralis minor muscle.er",
+    "muscle": "Pectoralis minor muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Third rib"
+  },
+  {
+    "name": "Pectoralis minor muscle.ol",
+    "muscle": "Pectoralis minor muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Pectoralis minor muscle.or",
+    "muscle": "Pectoralis minor muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Pronator quadratus.el",
+    "muscle": "Pronator quadratus",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Radius"
+  },
+  {
+    "name": "Pronator quadratus.ol",
+    "muscle": "Pronator quadratus",
+    "side": "right",
+    "kind": "origin",
+    "on": "Ulna"
+  },
+  {
+    "name": "Pronator teres.el",
+    "muscle": "Pronator teres",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Radius"
+  },
+  {
+    "name": "Pronator teres.er",
+    "muscle": "Pronator teres",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Radius"
+  },
+  {
+    "name": "Pronator teres.ol",
+    "muscle": "Pronator teres",
+    "side": "left",
+    "kind": "origin",
+    "on": "Humerus"
+  },
+  {
+    "name": "Pronator teres.or",
+    "muscle": "Pronator teres",
+    "side": "right",
+    "kind": "origin",
+    "on": "Humerus"
+  },
+  {
+    "name": "Rhomboid major muscle.el",
+    "muscle": "Rhomboid major muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Scapula"
+  },
+  {
+    "name": "Rhomboid major muscle.er",
+    "muscle": "Rhomboid major muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Scapula"
+  },
+  {
+    "name": "Rhomboid minor muscle.el",
+    "muscle": "Rhomboid minor muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Scapula"
+  },
+  {
+    "name": "Rhomboid minor muscle.er",
+    "muscle": "Rhomboid minor muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Scapula"
+  },
+  {
+    "name": "Scapular spinal part of deltoid muscle.ol",
+    "muscle": "Scapular spinal part of deltoid muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Scapular spinal part of deltoid muscle.or",
+    "muscle": "Scapular spinal part of deltoid muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Serratus anterior muscle.e1l",
+    "muscle": "Serratus anterior muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Second rib"
+  },
+  {
+    "name": "Serratus anterior muscle.e2l",
+    "muscle": "Serratus anterior muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Third rib"
+  },
+  {
+    "name": "Serratus anterior muscle.e2r",
+    "muscle": "Serratus anterior muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Third rib"
+  },
+  {
+    "name": "Serratus anterior muscle.e3l",
+    "muscle": "Serratus anterior muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Fourth rib"
+  },
+  {
+    "name": "Serratus anterior muscle.e3r",
+    "muscle": "Serratus anterior muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Fourth rib"
+  },
+  {
+    "name": "Serratus anterior muscle.e4l",
+    "muscle": "Serratus anterior muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Fifth rib"
+  },
+  {
+    "name": "Serratus anterior muscle.e4r",
+    "muscle": "Serratus anterior muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Fifth rib"
+  },
+  {
+    "name": "Serratus anterior muscle.e5l",
+    "muscle": "Serratus anterior muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Sixth rib"
+  },
+  {
+    "name": "Serratus anterior muscle.e5r",
+    "muscle": "Serratus anterior muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Sixth rib"
+  },
+  {
+    "name": "Serratus anterior muscle.e6l",
+    "muscle": "Serratus anterior muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Seventh rib"
+  },
+  {
+    "name": "Serratus anterior muscle.e6r",
+    "muscle": "Serratus anterior muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Seventh rib"
+  },
+  {
+    "name": "Serratus anterior muscle.e7l",
+    "muscle": "Serratus anterior muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Eighth rib"
+  },
+  {
+    "name": "Serratus anterior muscle.e7r",
+    "muscle": "Serratus anterior muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Eighth rib"
+  },
+  {
+    "name": "Serratus anterior muscle.e8l",
+    "muscle": "Serratus anterior muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Ninth rib"
+  },
+  {
+    "name": "Serratus anterior muscle.el",
+    "muscle": "Serratus anterior muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "First rib"
+  },
+  {
+    "name": "Serratus anterior muscle.er",
+    "muscle": "Serratus anterior muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "First rib"
+  },
+  {
+    "name": "Serratus anterior muscle.ol",
+    "muscle": "Serratus anterior muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Serratus anterior muscle.or",
+    "muscle": "Serratus anterior muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Short head of biceps brachii.ol",
+    "muscle": "Short head of biceps brachii",
+    "side": "right",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Sternocostal head of pectoralis major muscle.e1l",
+    "muscle": "Sternocostal head of pectoralis major muscle",
+    "side": "left",
+    "kind": "attachment",
+    "on": "Body of sternum"
+  },
+  {
+    "name": "Sternocostal head of pectoralis major muscle.e1r",
+    "muscle": "Sternocostal head of pectoralis major muscle",
+    "side": "right",
+    "kind": "attachment",
+    "on": "Body of sternum"
+  },
+  {
+    "name": "Sternocostal head of pectoralis major muscle.e2l",
+    "muscle": "Sternocostal head of pectoralis major muscle",
+    "side": "left",
+    "kind": "attachment",
+    "on": "Manubrium of sternum"
+  },
+  {
+    "name": "Sternocostal head of pectoralis major muscle.e2r",
+    "muscle": "Sternocostal head of pectoralis major muscle",
+    "side": "right",
+    "kind": "attachment",
+    "on": "Manubrium of sternum"
+  },
+  {
+    "name": "Sternocostal head of pectoralis major muscle.el",
+    "muscle": "Sternocostal head of pectoralis major muscle",
+    "side": "left",
+    "kind": "attachment",
+    "on": "Costal cartilage of sixth rib"
+  },
+  {
+    "name": "Sternocostal head of pectoralis major muscle.er",
+    "muscle": "Sternocostal head of pectoralis major muscle",
+    "side": "right",
+    "kind": "attachment",
+    "on": "Costal cartilage of sixth rib"
+  },
+  {
+    "name": "Subclavius muscle.ol",
+    "muscle": "Subclavius muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Clavicle"
+  },
+  {
+    "name": "Subclavius muscle.or",
+    "muscle": "Subclavius muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Clavicle"
+  },
+  {
+    "name": "Subscapularis muscle.el",
+    "muscle": "Subscapularis muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Humerus"
+  },
+  {
+    "name": "Subscapularis muscle.er",
+    "muscle": "Subscapularis muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Humerus"
+  },
+  {
+    "name": "Subscapularis muscle.ol",
+    "muscle": "Subscapularis muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Subscapularis muscle.or",
+    "muscle": "Subscapularis muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Supinator.el",
+    "muscle": "Supinator",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Radius"
+  },
+  {
+    "name": "Supinator.er",
+    "muscle": "Supinator",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Radius"
+  },
+  {
+    "name": "Supinator.ol",
+    "muscle": "Supinator",
+    "side": "left",
+    "kind": "origin",
+    "on": "Ulna"
+  },
+  {
+    "name": "Supinator.or",
+    "muscle": "Supinator",
+    "side": "right",
+    "kind": "origin",
+    "on": "Ulna"
+  },
+  {
+    "name": "Supraspinatus muscle.el",
+    "muscle": "Supraspinatus muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Humerus"
+  },
+  {
+    "name": "Supraspinatus muscle.er",
+    "muscle": "Supraspinatus muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Humerus"
+  },
+  {
+    "name": "Supraspinatus muscle.ol",
+    "muscle": "Supraspinatus muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Supraspinatus muscle.or",
+    "muscle": "Supraspinatus muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Teres major muscle.ol",
+    "muscle": "Teres major muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Teres major muscle.or",
+    "muscle": "Teres major muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Teres minor muscle.el",
+    "muscle": "Teres minor muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Humerus"
+  },
+  {
+    "name": "Teres minor muscle.er",
+    "muscle": "Teres minor muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Humerus"
+  },
+  {
+    "name": "Teres minor muscle.ol",
+    "muscle": "Teres minor muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Teres minor muscle.or",
+    "muscle": "Teres minor muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Transverse part of trapezius muscle.ol",
+    "muscle": "Transverse part of trapezius muscle",
+    "side": "left",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Transverse part of trapezius muscle.or",
+    "muscle": "Transverse part of trapezius muscle",
+    "side": "right",
+    "kind": "origin",
+    "on": "Scapula"
+  },
+  {
+    "name": "Triceps brachii muscle.el",
+    "muscle": "Triceps brachii muscle",
+    "side": "left",
+    "kind": "insertion",
+    "on": "Ulna"
+  },
+  {
+    "name": "Triceps brachii muscle.er",
+    "muscle": "Triceps brachii muscle",
+    "side": "right",
+    "kind": "insertion",
+    "on": "Ulna"
+  },
+  {
+    "name": "Ulnar head of flexor carpi ulnaris.ol",
+    "muscle": "Ulnar head of flexor carpi ulnaris",
+    "side": "left",
+    "kind": "origin",
+    "on": "Ulna"
+  },
+  {
+    "name": "Ulnar head of flexor carpi ulnaris.or",
+    "muscle": "Ulnar head of flexor carpi ulnaris",
+    "side": "right",
+    "kind": "origin",
+    "on": "Ulna"
+  }
+]
