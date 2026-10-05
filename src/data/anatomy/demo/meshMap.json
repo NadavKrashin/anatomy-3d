@@ -1,0 +1,21 @@
+{
+  "demo_skull": "skull",
+  "demo_humerus_left": "humerus-left",
+  "demo_humerus_right": "humerus-right",
+  "demo_radius_left": "radius-left",
+  "demo_radius_right": "radius-right",
+  "demo_ulna_left": "ulna-left",
+  "demo_ulna_right": "ulna-right",
+  "demo_biceps_left": "biceps-brachii-left",
+  "demo_biceps_right": "biceps-brachii-right",
+  "demo_femur_left": "femur-left",
+  "demo_femur_right": "femur-right",
+  "demo_median_nerve_left": "median-nerve-left",
+  "demo_ulnar_nerve_left": "ulnar-nerve-left",
+  "demo_radial_nerve_left": "radial-nerve-left",
+  "demo_brachial_artery_left": "brachial-artery-left",
+  "demo_heart": "heart",
+  "demo_lung_left": "lung-left",
+  "demo_lung_right": "lung-right",
+  "demo_liver": "liver"
+}

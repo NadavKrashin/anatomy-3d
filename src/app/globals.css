@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — see docs/DESIGN.md. Light "atlas plate" theme: the model's
+ * tissue colours carry the screen; the UI stays quiet.
+ */
+@theme {
+  --color-plate: #e9edef;
+  --color-plate-deep: #dde3e6;
+  --color-sheet: #fbfcfc;
+  --color-ink: #18222d;
+  --color-graphite: #56616d;
+  --color-faint: #8a949e;
+  --color-rule: #d3d9de;
+  --color-wash: #f0f3f4;
+  --color-scrub: #0b7a75;
+  --color-scrub-soft: #dcefed;
+  --color-correct: #1f7a4d;
+  --color-correct-soft: #e2f1e8;
+  --color-wrong: #b3261e;
+  --color-wrong-soft: #f8e4e2;
+  --color-caution: #8a5a00;
+
+  --font-sans: var(--font-plex), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-frank), ui-serif, Georgia, serif;
+
+  --shadow-float:
+    0 1px 2px rgb(24 34 45 / 0.06), 0 12px 32px -12px rgb(24 34 45 / 0.18);
+  --shadow-pop:
+    0 2px 4px rgb(24 34 45 / 0.06), 0 20px 48px -16px rgb(24 34 45 / 0.28);
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background: var(--color-plate);
+    color: var(--color-ink);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-scrub);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--color-scrub-soft);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* A floating sheet over the plate: no border, soft wide shadow. */
+@utility sheet {
+  background: color-mix(in srgb, var(--color-sheet) 94%, transparent);
+  border-radius: 16px;
+  box-shadow: var(--shadow-float);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+}
