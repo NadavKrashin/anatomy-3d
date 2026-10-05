@@ -14,6 +14,13 @@ description: How to plan, verify and hand off any change in this anatomy app rep
 
 ## While working
 
+- **Update docs continuously** (user requirement): each commit that changes
+  code/data/tooling also updates `docs/STATUS.md` and any other affected doc
+  (list below). Record new user decisions in STATUS's table immediately. The
+  docs must be correct if the session ends right now. A hook
+  (`scripts/hooks/docs-gate.mjs`) blocks code-only commits; `[docs: none]` in
+  the message is only for formatting/typo commits.
+
 - Write/extend tests at the lowest sensible level (lib → store → component →
   e2e). Component tests: `// @vitest-environment jsdom` + `renderWithProviders`
   (uses the stable demo dataset).
@@ -29,7 +36,8 @@ description: How to plan, verify and hand off any change in this anatomy app rep
 2. UI/viewer changes: start `npx next start -p 3100` as a background task
    (after the build), `npm run e2e:smoke`, then **look at
    `docs/screenshots/*.png`** (desktop, iPad, phone) and fix what looks off.
-3. Update docs: `docs/STATUS.md` (phase table, what exists, next steps, known
+3. Check docs are current (they should already be, commit by commit):
+   `docs/STATUS.md` (phase table, what exists, next steps, known
    issues, session log, new user decisions) · `docs/DECISIONS.md` (non-obvious
    choices) · `docs/ARCHITECTURE.md` (flows/boundaries) · `docs/DESIGN.md`
    (visual language) · `docs/CONTENT_REVIEW.md` (new terms).

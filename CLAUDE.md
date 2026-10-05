@@ -7,6 +7,18 @@ Tailwind 4) for a Hebrew-speaking medical student in Israel. Hebrew/RTL UI
 first, English/Latin terminology alongside. Real model: Z-Anatomy upper limb +
 skeleton (CC BY-SA).
 
+> **Keep the docs current as you go — not at the end of the session.** The
+> user requires this (2026-10-05). Every commit that changes behaviour, code,
+> data or tooling updates the docs in the **same commit**: at minimum
+> `docs/STATUS.md` (what exists, next steps, known issues, session log), plus
+> `docs/DECISIONS.md` / `docs/ARCHITECTURE.md` / `docs/DESIGN.md` /
+> `docs/CONTENT_REVIEW.md` when relevant. A new user decision or preference
+> goes into STATUS's decisions table the moment it is made. Assume the session
+> can end at any time: the docs must always describe the code as it is now.
+> A PreToolUse hook (`scripts/hooks/docs-gate.mjs`) blocks `git commit`s that
+> touch code but no docs; use `[docs: none]` in the message only for commits
+> that genuinely need no doc change (formatting, a typo).
+
 ## 1. Start of every session
 
 1. Read **`docs/STATUS.md`** — current state, the user's decisions (don't
@@ -78,10 +90,11 @@ skeleton (CC BY-SA).
 1. Tests at the lowest sensible level; `npm run verify` green.
 2. UI/viewer changes: fresh build → `next start -p 3100` (background) →
    `npm run e2e:smoke` green → screenshots reviewed.
-3. Docs updated: `docs/STATUS.md` (always — phase table, next steps, session
-   log, new user decisions), `docs/DECISIONS.md` for non-obvious choices,
+3. Docs updated **in the same commit as the change** (not batched for later):
+   `docs/STATUS.md` (always — phase table, next steps, session log, new user
+   decisions), `docs/DECISIONS.md` for non-obvious choices,
    `docs/ARCHITECTURE.md` if a flow/boundary changed, `docs/DESIGN.md` if the
-   visual language changed.
+   visual language changed. The docs-gate hook enforces the minimum.
 4. Commit on a `claude/<topic>` branch with a what-and-why message; push.
    Don't open PRs unless the user asks. After pushing, check the GitHub CI run
    for the commit — local green is not enough.

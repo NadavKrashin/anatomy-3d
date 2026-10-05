@@ -177,3 +177,22 @@ lucide-react · Vitest 5 · Playwright 1.56 · gltf-transform 4.5.
   system (`lib/quiz/questionView.ts`).
 - **Demo dataset** stays for unit/component tests (stable ids) and as a
   template; the app runs on `activeDataset = zAnatomyUpperLimbDataset`.
+
+## 2026-10-05 — Docs kept current by rule and by hook
+
+- **Why:** the user asked that docs be updated continuously so any future
+  session can pick up exactly where work stopped. Cloud sessions can end
+  without warning, so "update docs at the end" loses information.
+- **Rule:** every commit that changes code/data/tooling updates
+  `docs/STATUS.md` and any other affected doc in the same commit (CLAUDE.md
+  top banner, CONTRIBUTING "Keeping docs current", anatomy-workflow skill,
+  SessionStart message).
+- **Enforcement:** a Claude Code PreToolUse hook on Bash
+  (`scripts/hooks/docs-gate.mjs`) blocks `git commit` when the staged or
+  working-tree changes touch code paths but no doc paths. It checks the
+  working tree too because `git add -A && git commit` arrives as a single
+  command, before anything is staged. It cannot judge doc _quality_ — it
+  only stops the "forgot entirely" case. `[docs: none]` in the message
+  bypasses it for formatting/typo commits. Not a git hook, so humans and CI
+  are unaffected; a git-level hook was rejected because it needs per-clone
+  installation (husky etc.) for little gain in a single-author repo.

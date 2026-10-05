@@ -12,10 +12,31 @@ A change is done only when all of these hold:
 2. Viewer/UI changes: `npm run e2e:smoke` passes against a fresh build, and the
    screenshots in `docs/screenshots/` were actually looked at.
 3. New behaviour has tests at the lowest sensible level (pure logic first).
-4. Docs are updated: `docs/STATUS.md` (always), `docs/DECISIONS.md` (for
-   non-obvious choices), `docs/ARCHITECTURE.md` (if a boundary or flow
-   changed), `docs/CONTENT_REVIEW.md` (for new medical terms).
+4. Docs are updated **in the same commit as the change**: `docs/STATUS.md`
+   (always), `docs/DECISIONS.md` (for non-obvious choices),
+   `docs/ARCHITECTURE.md` (if a boundary or flow changed), `docs/DESIGN.md`
+   (if the visual language changed), `docs/CONTENT_REVIEW.md` (for new
+   medical terms). See "Keeping docs current" below.
 5. Never report something as working without having run it.
+
+## Keeping docs current
+
+The user's standing requirement: documentation is updated **as work
+happens**, not at the end of a session. Any session may end without warning,
+so after every commit the docs must describe the code as it is.
+
+- Each commit that changes code, data, tooling or behaviour also updates
+  `docs/STATUS.md` (what exists, next steps, known issues, session log) and
+  whichever other docs the change affects.
+- A new user decision or preference goes into STATUS's decisions table as
+  soon as it is made.
+- Enforced for Claude sessions by a PreToolUse hook
+  (`.claude/settings.json` → `scripts/hooks/docs-gate.mjs`): a `git commit`
+  that changes code (`src/`, `scripts/`, `e2e/`, `public/models/`,
+  `.github/`, config files) without touching a doc (`docs/*.md`, `CLAUDE.md`,
+  `README.md`, `THIRD_PARTY_ASSETS.md`, `.claude/skills/`) is blocked. Put
+  `[docs: none]` in the message only for commits that truly need no doc
+  change (formatting, typos). Humans should follow the same rule.
 
 ## Code
 

@@ -1,7 +1,8 @@
 # Project status — START HERE
 
-> Living document. Every session updates it before finishing.
-> Last updated: 2026-10-05 (end of session 2, pre-deployment audit).
+> Living document. **Update it with every commit that changes the code, not
+> just at the end of a session** — it must always match the code as it is.
+> Last updated: 2026-10-05 (session 2, docs-gate hook added).
 
 ## Orientation (read in this order)
 
@@ -41,6 +42,7 @@ Expected today: **135 unit/component tests, 21 e2e checks, all passing; CI green
 | 2026-10-05 | **Lower limb / other regions deferred** — "we will add everything later". Legs show bones only for now.                                                                                                                                                      |
 | 2026-10-05 | **Redesign requested**: the first UI looked "blocky and AI-made". New direction in `docs/DESIGN.md` (light atlas style). Design plugins (`frontend-design`, `design-skills`) were suggested for install; `frontend-design` is vendored in `.claude/skills/`. |
 | 2026-10-05 | Next: **deploy the first version to Vercel** (user does the Vercel side — see `docs/DEPLOYMENT.md`).                                                                                                                                                         |
+| 2026-10-05 | **Docs must be kept updated continuously** as work happens (every commit), not at the end of a session. Enforced by the docs-gate hook.                                                                                                                      |
 
 ## Phase tracker (§48)
 
@@ -93,8 +95,10 @@ All verified by `npm run e2e:smoke` against a production build.
   localStorage (validated, corrupt data backed up).
 - **Tooling:** `verify`, `e2e:smoke`, `e2e/perf-probe.ts`, `anatomy:inspect`,
   `anatomy:validate`, `anatomy:generate-demo`, Z-Anatomy export/optimize
-  scripts; CI (`.github/workflows/ci.yml`); SessionStart hook
-  (`.claude/settings.json`); project skills (`.claude/skills/`).
+  scripts; CI (`.github/workflows/ci.yml`); Claude Code hooks in
+  `.claude/settings.json` — SessionStart (install deps, orientation message)
+  and PreToolUse docs-gate (`scripts/hooks/docs-gate.mjs`: blocks code-only
+  commits); project skills (`.claude/skills/`).
 
 ## Next steps (in order)
 
@@ -149,3 +153,7 @@ All verified by `npm run e2e:smoke` against a production build.
   checkout) → `typecheck` now runs `next typegen` first, CI actions bumped to
   v5, verified from a fresh clone. Added `docs/DEPLOYMENT.md`, user-decisions
   log, project skills, SPEC supersession note, expanded CLAUDE.md.
+- **2026-10-05 · session 2 (cont.)** — Continuous-docs rule (user request):
+  prominent instruction in CLAUDE.md, CONTRIBUTING, anatomy-workflow skill and
+  the SessionStart message; `scripts/hooks/docs-gate.mjs` PreToolUse hook blocks
+  `git commit`s that change code without a doc (`[docs: none]` escape hatch).
