@@ -178,6 +178,8 @@ All verified by `npm run e2e:smoke` against a production build.
 - Peeling inside the ribcage also removes the lungs (they show between the
   ribs and bones are never peeled) — hide the skeleton in the legend first
   to study thoracic organs.
+- On phones, a long name's leader label can run off the screen edge (user:
+  fine as is, 2026-10-05).
 - Long structures (nerves) are framed along their whole length.
 - Viewer state (hidden/isolated) is not persisted across reloads (by design).
 - Progress is per browser/device (localStorage) — no sync.
@@ -249,3 +251,7 @@ All verified by `npm run e2e:smoke` against a production build.
   with parts; parts now count as studyable (`registry.all`: quiz scopes,
   progress, distractors — siblings preferred, own whole/parts never);
   "Muscle parts" toggle renamed "Select parts".
+- **2026-10-05 · session 2 (cont.)** — User checked the superior lateral
+  brachial cutaneous nerve's loop shape: verified identical to the source
+  and anatomically consistent (wraps the posterior border of the deltoid);
+  not a bug. Whole organs merged to `main` via PR #5.
