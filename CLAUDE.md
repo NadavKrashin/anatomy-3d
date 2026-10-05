@@ -114,5 +114,7 @@ streamed model files (CC BY-SA).
   blob. Use name-only listings.
 - The Z-Anatomy pipeline needs Blender's Python module in a venv
   (`pip install "bpy==4.5.*"`, Python 3.11) — see its README.
+- Docs-only commits still run CI's `format:check`: after editing any `.md`
+  (tables especially), run `npm run format` before committing.
 - Mixing the teal highlight 50/50 with red tissue gives grey; selection uses a
   mostly-teal base colour (see `materialStates.ts`).
