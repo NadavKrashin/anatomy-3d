@@ -16,7 +16,7 @@
 7. As needed: `docs/DEPLOYMENT.md`, `docs/CONTENT_REVIEW.md`,
    `THIRD_PARTY_ASSETS.md`, `scripts/anatomy/z-anatomy/README.md`,
    `docs/COURSE_SOURCE.md` (her course site: what was extracted, what may be
-   committed).
+   committed), `docs/MODEL_SOURCES.md` (open 3D models to fill model gaps).
 
 Project skills in `.claude/skills/` (`anatomy-workflow`, `anatomy-ui-style`,
 `frontend-design`) load automatically in Claude Code and encode the same rules.
@@ -172,6 +172,13 @@ All verified by `npm run e2e:smoke` against a production build.
    "distinctions" and self-review questions (quiz material); 183 entries have
    no place in the model (female organs, kidneys, layers, nerves/vessels
    Z-Anatomy lacks).
+   4e. **Fill model gaps** — researched (`docs/MODEL_SOURCES.md`): easiest
+   win is **Open3DModel** (CC BY-SA, same frame as Z-Anatomy: brachial
+   plexus cords, lower-limb nerves/plexuses, psoas minor, retinacula…);
+   then Human Reference Atlas female organs + detailed kidney (CC BY, needs
+   alignment) and BodyParts3D (rectum, kidney, some nerves/arteries).
+   Phrenic nerve, cervical plexus, laryngeal nerves, thoracic duct have no
+   open source yet. Ask the user which to add first.
    4c. ~~Names as the course writes them~~ — done (user decision): English
    for 581 structures, Hebrew for 71 (the course mostly uses English). Next:
    her review of the Hebrew table in CONTENT_REVIEW; add synonyms for any
@@ -337,3 +344,6 @@ All verified by `npm run e2e:smoke` against a production build.
   height for such vessels (manifest only; GLBs unchanged); her "Ribs" note
   no longer lands on costal cartilages/rib ligaments; "X major/minor"
   entries reach both muscles; notes on 708 structures. Merged to `main`.
+- **2026-10-06 · session 3 (cont.)** — Researched open 3D models for the
+  gaps (user request): `docs/MODEL_SOURCES.md` (licences and contents
+  checked in the files; Open3DModel verified to share our coordinate frame).
