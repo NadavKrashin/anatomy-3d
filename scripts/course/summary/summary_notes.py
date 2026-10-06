@@ -17,7 +17,9 @@ course names and their aliases count too). Writes
 src/data/anatomy/z-anatomy/summaryNotes.json: per side-less structure id,
 its notes (text + where in the summary) and, from the organ guide, her
 Hebrew name (without the definite article; singular for one-sided
-structures — synonyms.json → hebrew). Entries naming several structures ("Superficial & Deep inguinal
+structures — synonyms.json → hebrew). Entries the rules can't place but that are about a part of a structure (a
+landmark on a bone, a lobe of the liver) go to that structure via
+parents.json, labelled with the entry's name. Entries naming several structures ("Superficial & Deep inguinal
 ring") go to each of them. See docs/COURSE_SOURCE.md → "Her summary".
 """
 
@@ -127,6 +129,26 @@ def split_names(name):
     return list(dict.fromkeys([name.strip()] + out))
 
 
+def resolve_parents(parents, structures):
+    """parents.json values → structure ids; 're:<regex>' matches side-less ids.
+    Unknown ids fail loudly so a model change can't silently drop notes."""
+    sided = {s["id"] for s in structures}
+    bases = sorted({re.sub(r"-(left|right)$", "", i) for i in sided})
+    resolved, unknown = {}, []
+    for term, targets in parents.items():
+        ids = []
+        for t in targets:
+            if t.startswith("re:"):
+                hits = [b for b in bases if re.search(t[3:], b)]
+                ids += hits or [f"(no match) {t}"]
+            else:
+                ids.append(t)
+        unknown += [i for i in ids if i not in sided and i not in bases]
+        resolved[term] = list(dict.fromkeys(ids))
+    assert not unknown, f"parents.json names unknown structures: {sorted(set(unknown))}"
+    return resolved
+
+
 def main(path):
     entries = read(path)
     with open(os.path.join(ROOT, ".course-cache", "structures.json"), encoding="utf-8") as f:
@@ -149,6 +171,9 @@ def main(path):
             if name:
                 index[key(name)].add(base)
 
+    with open(os.path.join(HERE, "parents.json"), encoding="utf-8") as f:
+        parents = resolve_parents(json.load(f)["parents"], structures)
+
     out, unmatched = defaultdict(lambda: {"notes": []}), []
     for e in entries:
         bases = list(synonyms.get(e["en"], []))
@@ -165,20 +190,27 @@ def main(path):
             if len(hits) == 1:
                 bases.extend(hits)
         bases = list(dict.fromkeys(bases))
+        part_of = not bases and e["en"] in parents
+        if part_of:
+            bases = parents[e["en"]]  # a landmark on a bone, a part of an organ, …
         if not bases:
             unmatched.append(e)
             continue
         for b in bases:
             note = {"text": e["text"], "section": e["section"], "term": e["en"]}
-            if len(bases) > 1:
-                note["shared"] = True  # the entry is about several structures
+            if len(bases) > 1 or part_of:
+                # The entry is about more than this structure, or a part of it:
+                # the panel labels the note with the entry's name.
+                note["shared"] = True
             if note not in out[b]["notes"]:
                 out[b]["notes"].append(note)
-            if e.get("he") and len(bases) == 1:
+            if e.get("he") and len(bases) == 1 and not part_of:
                 he = hebrew_overrides.get(b, dictionary_form(e["he"]))
                 if he:
                     out[b]["he"] = he
                     out[b]["heHeading"] = e["he"]
+    for entry in out.values():  # notes about the structure itself first
+        entry["notes"].sort(key=lambda n: n.get("shared", False))
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(dict(sorted(out.items())), f, ensure_ascii=False, indent=2)
         f.write("\n")

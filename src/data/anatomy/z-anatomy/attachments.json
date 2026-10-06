@@ -4403,6 +4403,20 @@
     "on": "Temporal bone"
   },
   {
+    "name": "Tensor fasciae latae.ol",
+    "muscle": "Tensor fasciae latae",
+    "side": "left",
+    "kind": "origin",
+    "on": "Hip bone"
+  },
+  {
+    "name": "Tensor fasciae latae.or",
+    "muscle": "Tensor fasciae latae",
+    "side": "right",
+    "kind": "origin",
+    "on": "Hip bone"
+  },
+  {
     "name": "Teres major muscle.ol",
     "muscle": "Teres major muscle",
     "side": "left",

@@ -85,8 +85,8 @@ def words(s):
     s = re.sub(r"[^a-z0-9 ]", " ", s)
     out = []
     for w in s.split():
+        w = SPELLING.get(w, w)  # before oe/ae, which would turn "fasciae" into "fascie"
         w = w.replace("oe", "e").replace("ae", "e")
-        w = SPELLING.get(w, w)
         out.append(w.rstrip("s") if len(w) > 3 else w)
     return out
 

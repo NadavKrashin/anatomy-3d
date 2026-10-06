@@ -1,6 +1,8 @@
 import { useMessages } from "@/hooks/useMessages";
 import type { AnatomicalStructure } from "@/types/anatomy";
 
+const HEBREW = /[\u0590-\u05FF]/;
+
 /** Study notes from her course summary, in her own words (Hebrew). */
 export function StructureNotes({
   structure,
@@ -22,7 +24,10 @@ export function StructureNotes({
             {/* An entry about more than this structure says which one it is. */}
             {note.shared && (
               <p className="text-graphite font-serif text-[14px]">
-                <bdi lang="en">{note.term}</bdi>
+                {/* Her entry names are English, sometimes with her Hebrew. */}
+                <bdi lang={HEBREW.test(note.term) ? undefined : "en"}>
+                  {note.term}
+                </bdi>
               </p>
             )}
             <p lang={note.language} dir="rtl" className="text-ink">

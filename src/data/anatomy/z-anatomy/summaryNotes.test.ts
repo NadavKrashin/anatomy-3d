@@ -65,6 +65,16 @@ describe("her summary in the Z-Anatomy dataset", () => {
     );
   });
 
+  it("puts notes on landmarks and organ parts on their bone or organ, labelled", () => {
+    const crest = byId
+      .get("hip-bone-left")
+      ?.studyNotes?.find((n) => n.term === "Iliac crest");
+    expect(crest?.shared).toBe(true);
+    const own = byId.get("liver")?.studyNotes ?? [];
+    expect(own[0]?.shared).toBeFalsy(); // notes on the liver itself come first
+    expect(own.some((n) => n.term === "Caudate lobe of liver")).toBe(true);
+  });
+
   it("tells hand and foot muscles apart by the summary's region", () => {
     expect(
       byId.get("abductor-digiti-minimi-of-foot-left")?.studyNotes?.[0]?.section,

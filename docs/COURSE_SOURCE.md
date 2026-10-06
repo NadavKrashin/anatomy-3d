@@ -112,7 +112,7 @@ course site names it**, since that is what she learns.
 `src/data/anatomy/z-anatomy/courseNames.json`, and the app applies it
 (`z-anatomy/courseNames.ts`):
 
-- **579 of 1,571** structures (side-less) get the course's English name,
+- **581 of 1,576** structures (side-less) get the course's English name,
   e.g. "Biceps brachii", "Esophagus", "Celiac trunk", "Buccinator",
   "Vagus nerve". 175 of these differ from the Z-Anatomy name. Each name
   records the course page it comes from and how often the site uses it.
@@ -181,35 +181,35 @@ not used yet.
 `z-anatomy/summaryNotes.ts` (`withSummaryNotes`, after `withCourseName`)
 applies:
 
-- **Notes for 511 structures.** They show as "סיכום" ("Summary") at the
-  top of the info panel. An entry about several structures ("Superficial &
-  Deep inguinal ring") goes to each of them and is labelled with its name.
-  Matching uses the course-name rules. Ambiguous names like "Abductor
-  digiti minimi" are resolved by the summary's region (the lower-limb
-  table → the foot's). Hand-checked synonyms ("LCL", "Spring ligament",
-  side-specific arteries) are in `scripts/course/summary/synonyms.json`.
+- **Notes for 717 structures.** They show as "סיכום" ("Summary") at the
+  top of the info panel, notes about the structure itself first. Matching
+  uses the course-name rules. Ambiguous names like "Abductor digiti minimi"
+  are resolved by the summary's region (the lower-limb table → the foot's).
+  Hand-checked synonyms ("LCL", "Spring ligament", side-specific arteries,
+  cranial nerves by short name) are in `scripts/course/summary/synonyms.json`.
+- **Notes on a part go to the whole** (`scripts/course/summary/parents.json`,
+  407 entries, hand-assigned). Examples: a bony landmark goes to its bone
+  ("Iliac crest" → hip bone), an organ part to its organ ("Caudate lobe of
+  liver" → liver), a region to what runs through it ("Carpal tunnel" →
+  median nerve and the long flexors), a heading to its structures
+  ("Rotator cuff" → its four muscles). An entry about several structures,
+  or about a part, is labelled with its name above the note. Unknown ids
+  make the script fail, so a model change can't silently drop notes.
 - **40 Hebrew names** from the organ guide (e.g. קנה הנשימה, שופכן, צינור
   הזרע, שלפוחית השתן). The definite article is dropped and plurals are made
   singular for one-sided structures. Her Hebrew wins over the site's: she
   wrote it and learns from it. The site's form stays searchable.
-- **592 entries name no model structure.** The model has 2,734 pieces, but
-  it is a mesh atlas: whole bones, muscles, vessels, nerves and organs. The
-  entries break down roughly as:
-  - ~165 bony landmarks: a spot on a bone mesh, e.g. ASIS, iliac crest,
-    linea aspera;
-  - ~90 soft-tissue layers, folds and spaces, e.g. fasciae, rectus sheath,
-    peritoneal folds, recesses;
-  - ~85 parts of organs the model keeps whole, e.g. liver lobes, stomach
-    curvatures, duodenal parts; and organs it lacks: brain as a whole, ear,
-    nose, larynx, teeth;
-  - ~60 vessels and nerves the export doesn't include, e.g. the cystic
-    artery and pampiniform plexus, **and the phrenic nerve** (worth
-    checking in the Z-Anatomy export);
-  - ~60 female organs, plus the kidneys and their parts (left out for
-    licence reasons);
-  - ~50 headings rather than structures (e.g. "התעלה הקרפלית (Carpal
-    Tunnel)");
-  - the rest are single muscles or ducts absent from the model.
+- **183 entries have no place in the model.** That is:
+  - female organs, and the kidneys and their parts (left out for licence
+    reasons);
+  - soft-tissue layers and spaces (fasciae, peritoneal folds, recesses,
+    meninges);
+  - nerves and vessels that **Z-Anatomy itself does not model**: the
+    phrenic, frontal, lacrimal, supra-/infra-orbital, recurrent laryngeal
+    and cervical plexus nerves; the cystic, right gastric, short gastric,
+    lingual and superior thyroid arteries; the thoracic duct (checked in
+    the source files on 2026-10-06);
+  - general concepts ("Tendon", "Systole", "Skin").
 
   The list is written to `.course-cache/summary/unmatched.json` when the
   script runs.

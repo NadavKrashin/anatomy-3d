@@ -1686,6 +1686,11 @@
     "source": "https://medintzfat.com/anatomy/quiz-abdomen",
     "uses": 13
   },
+  "middle-meningeal-artery": {
+    "en": "Middle meningeal artery",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 16
+  },
   "middle-pharyngeal-constrictor": {
     "en": "Middle pharyngeal constrictor",
     "source": "https://medintzfat.com/anatomy/nasal-cavity",
@@ -2732,6 +2737,11 @@
     "en": "Tendinous arch of levator ani",
     "source": "https://medintzfat.com/anatomy/lab6",
     "uses": 3
+  },
+  "tensor-fasciae-latae": {
+    "en": "Tensor fasciae latae",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 14
   },
   "tentorium-cerebelli": {
     "en": "Tentorium cerebelli",

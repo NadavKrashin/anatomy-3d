@@ -213,6 +213,21 @@ describe("the Z-Anatomy whole-body dataset", () => {
       ).toEqual([]);
   });
 
+  it("leaves coverings out but keeps structures named like them", () => {
+    const names = manifest.map((entry) => entry.name);
+    // Coverings (fasciae, bursae, meninges…) would hide what is inside.
+    expect(names.filter((n) => /^Fascia lata|^Spinal dura/.test(n))).toEqual(
+      [],
+    );
+    // …but a muscle, arteries and a brain part only share a word with them.
+    for (const kept of [
+      "Tensor fasciae latae.l",
+      "Middle meningeal artery.r",
+      "Septum pellucidum",
+    ])
+      expect(names).toContain(kept);
+  });
+
   it("places organs by region", () => {
     const region = (id: string) => registry.get(id)?.region;
     expect(region("liver")).toBe("abdomen");

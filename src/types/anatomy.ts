@@ -121,8 +121,10 @@ export interface AnatomicalStructure {
 
 /**
  * A note from her course summary (her own words). `term` is the entry it
- * comes from; `shared` marks an entry about several structures ("Superficial
- * & Deep inguinal ring"); `section` is where it sits in the summary.
+ * comes from; `shared` marks an entry about more than this structure —
+ * several structures ("Superficial & Deep inguinal ring") or a part of it
+ * (a landmark on a bone: "Iliac crest") — which the panel labels with
+ * `term`. `section` is where it sits in the summary.
  */
 export interface StudyNote {
   text: string;

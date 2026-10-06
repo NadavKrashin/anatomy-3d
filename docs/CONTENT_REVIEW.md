@@ -18,7 +18,7 @@ The user's decision (2026-10-05): **names are shown exactly as her course
 site writes them** (https://medintzfat.com/anatomy/). See
 `docs/COURSE_SOURCE.md` → "Course names" for how they are matched.
 
-- **English:** 579 of 1,571 structures carry the course's English name
+- **English:** 581 of 1,576 structures carry the course's English name
   (`src/data/anatomy/z-anatomy/courseNames.json`, with the page it comes
   from). The rest keep the Z-Anatomy name: the course never names them, or
   only in a form that would be ambiguous. To check: that each course name

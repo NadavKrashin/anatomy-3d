@@ -443,3 +443,26 @@ shared her own summary, written in her own words, for the app to use.
 - The .docx stays out of git, but the generated JSON with her text is
   committed and deployed (the repo and app are public). The user shared it
   for the app.
+
+## 2026-10-06 — Notes on a part of a structure go to the whole
+
+**Context.** About 400 entries of her summary are about something the mesh
+atlas has no separate piece for: a landmark on a bone, a lobe of an organ,
+a canal or space and what runs through it, a heading such as "Rotator
+cuff". The user chose to show these on the structure they belong to.
+
+**Decision.**
+
+- A hand-assigned map, `scripts/course/summary/parents.json` (term →
+  structure ids or `re:` patterns). It is used only when the normal
+  matching fails.
+- Such notes are labelled with the entry's name (`shared`) and come after
+  the structure's own notes.
+- They give no Hebrew name: a landmark's name isn't the bone's.
+- Unknown ids fail the script.
+
+**Model gaps.** The phrenic nerve and the other missing nerves and vessels
+are absent from Z-Anatomy itself, so there is nothing to export. The
+export's covering filter was too broad. It now has a reviewed exception
+list (`NOT_COVERINGS`) instead of looser patterns, so real coverings stay
+excluded.

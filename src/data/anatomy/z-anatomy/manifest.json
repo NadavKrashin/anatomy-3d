@@ -394,6 +394,22 @@
     "vertices": 1233
   },
   {
+    "name": "Accessory branch of middle meningeal artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "head",
+    "pack": "vessels",
+    "vertices": 304
+  },
+  {
+    "name": "Accessory branch of middle meningeal artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "head",
+    "pack": "vessels",
+    "vertices": 304
+  },
+  {
     "name": "Accessory hemi-azygos vein",
     "system": "cardiovascular",
     "tissue": "vein",
@@ -11318,6 +11334,22 @@
     "vertices": 506
   },
   {
+    "name": "Meningeal branch of maxillary nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "head",
+    "pack": "nerves",
+    "vertices": 3132
+  },
+  {
+    "name": "Meningeal branch of maxillary nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "head",
+    "pack": "nerves",
+    "vertices": 3132
+  },
+  {
     "name": "Meniscopatellar ligament.l",
     "system": "other",
     "tissue": "ligament",
@@ -11626,6 +11658,22 @@
     "vertices": 3708,
     "group": "Lung",
     "groupSide": "right"
+  },
+  {
+    "name": "Middle meningeal artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "head",
+    "pack": "vessels",
+    "vertices": 305
+  },
+  {
+    "name": "Middle meningeal artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "head",
+    "pack": "vessels",
+    "vertices": 305
   },
   {
     "name": "Middle phalanx of fifth finger of foot.l",
@@ -17500,6 +17548,14 @@
     "groupSide": "midline"
   },
   {
+    "name": "Septum pellucidum",
+    "system": "nervous",
+    "tissue": "brain",
+    "region": "head",
+    "pack": "nerves",
+    "vertices": 1187
+  },
+  {
     "name": "Serratus anterior muscle.l",
     "system": "muscular",
     "tissue": "muscle",
@@ -20138,6 +20194,22 @@
     "pack": "muscles",
     "vertices": 2640,
     "group": "Extensor digitorum longus"
+  },
+  {
+    "name": "Tensor fasciae latae.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "lower-limb",
+    "pack": "muscles",
+    "vertices": 933
+  },
+  {
+    "name": "Tensor fasciae latae.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "lower-limb",
+    "pack": "muscles",
+    "vertices": 933
   },
   {
     "name": "Tenth rib.l",

@@ -62,6 +62,12 @@ COVERINGS = re.compile(
     r"fascia|sheath|bursa|retinacul|aponeurosis|septum|capsule|dura|arachnoid|pia mater|meninge|^pleura$|greater omentum",
     re.I,
 )
+# Real structures whose names merely contain a covering word ("fasciae",
+# "meningeal", "septum"): a muscle, arteries/nerves, a brain part.
+NOT_COVERINGS = re.compile(
+    r"^tensor fasciae latae|meningeal (artery|branch)|middle meningeal|^septum pellucidum",
+    re.I,
+)
 HELPERS = re.compile(r"^take a picture$|^cross section|-profile$|\?", re.I)
 # Duplicates the whole liver mesh (overlapping surfaces would z-fight).
 LIVER_SEGMENT = re.compile(r"segment of liver", re.I)
@@ -283,7 +289,7 @@ def excluded(obj: bpy.types.Object) -> str | None:
         return "non-commercial licence"
     if HELPERS.search(name):
         return "helper object"
-    if COVERINGS.search(name):
+    if COVERINGS.search(name) and not NOT_COVERINGS.search(name):
         return "covering"
     if LIVER_SEGMENT.search(name):
         return "liver segment (duplicates the liver)"

@@ -37,7 +37,9 @@ python3.11 -m venv bpyenv
 or landmark/attachment patches); everything in the skeletal, joint,
 muscular, nervous, cardiovascular, visceral and lymphoid models except
 coverings (fasciae, sheaths, bursae, capsules, meninges, pleura, greater
-omentum), helper objects, the liver-segment duplicates and the
+omentum; `NOT_COVERINGS` keeps real structures that only share a word with
+them — tensor fasciae latae, meningeal arteries/branch, septum pellucidum),
+helper objects, the liver-segment duplicates and the
 **non-commercial inner ear and kidney models**; organ → system from an
 explicit list (`VISCERAL_SYSTEMS`); region from Z-Anatomy collections, else
 by height against skeletal landmarks; one material per tissue; muscle parts
