@@ -9,7 +9,10 @@ import {
   type ManifestEntry,
 } from "./build";
 import { zAnatomyDataset } from "./index";
-import manifest from "./manifest.json";
+import zManifest from "./manifest.json";
+import open3dManifest from "./manifest-open3d.json";
+
+const manifest = [...zManifest, ...open3dManifest];
 
 const entry = (
   name: string,
@@ -171,6 +174,34 @@ describe("the Z-Anatomy whole-body dataset", () => {
 
   it("maps every exported mesh", () => {
     expect(Object.keys(meshMap)).toHaveLength(manifest.length);
+  });
+
+  it("adds the Open3DModel pieces with their own attribution", () => {
+    for (const id of [
+      "lateral-cord-of-brachial-plexus-left",
+      "medial-cord-of-brachial-plexus-right",
+      "psoas-minor-right",
+      "inferior-gluteal-nerve-left",
+      "lumbosacral-trunk-right",
+    ]) {
+      const structure = registry.get(id);
+      expect(structure, id).toBeDefined();
+      expect(structure?.modelSource).toBe("Open3DModel");
+      expect(structure?.sourceLicense).toBe("CC BY-SA");
+    }
+    expect(registry.get("lateral-cord-of-brachial-plexus-left")?.region).toBe(
+      "upper-limb",
+    );
+    expect(registry.get("lumbosacral-trunk-left")?.region).not.toBe(
+      "upper-limb",
+    );
+    expect(registry.get("femur-left")?.modelSource).toBe("Z-Anatomy");
+  });
+
+  it("adds no Open3DModel piece that duplicates a Z-Anatomy one", () => {
+    const zNames = new Set(zManifest.map((entry) => entry.name));
+    expect(open3dManifest.filter((e) => zNames.has(e.name))).toEqual([]);
+    for (const e of open3dManifest) expect(e.pack).toBe("extras");
   });
 
   it("covers every region and the organ systems", () => {

@@ -1,5 +1,5 @@
 /**
- * Writes the Z-Anatomy structure ids and their raw model names (before the
+ * Writes the model's structure ids (Z-Anatomy and the Open3DModel extras) and their raw model names (before the
  * course names are applied) for extract.py and course_names.py.
  *
  *   npx tsx scripts/course/medintzfat/dump-structures.ts .course-cache/structures.json
@@ -11,8 +11,12 @@ import {
   type ManifestEntry,
 } from "../../../src/data/anatomy/z-anatomy/build";
 import manifest from "../../../src/data/anatomy/z-anatomy/manifest.json";
+import open3dManifest from "../../../src/data/anatomy/z-anatomy/manifest-open3d.json";
 
-const { structures } = buildZAnatomyDataset(manifest as ManifestEntry[]);
+const { structures } = buildZAnatomyDataset([
+  ...(manifest as ManifestEntry[]),
+  ...(open3dManifest as ManifestEntry[]),
+]);
 const out = process.argv[2] ?? ".course-cache/structures.json";
 mkdirSync(dirname(out), { recursive: true });
 writeFileSync(

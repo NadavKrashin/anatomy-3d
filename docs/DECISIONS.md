@@ -477,3 +477,28 @@ collection by height when its centre is below the diaphragm's lowest point
 (the crura). That line sits below the azygos vein and the lower ribs, which
 correctly stay "thorax". Only 21 manifest regions changed; the model files
 are identical.
+
+## 2026-10-06 — Open3DModel pieces join the Z-Anatomy dataset as a sixth file
+
+Open3DModel (AnatomyTOOL, CC BY-SA) is built on Z-Anatomy: same body and
+same coordinates (bones within ~2 mm), so its extra limb pieces fit without
+alignment. Integration choices:
+
+- **One extra model file, one extra manifest**, built into the same dataset
+  (not a second dataset): its structures behave like any other (regions,
+  systems, search, quiz, notes), and only `build.ts` knows the source, to
+  attach its licence and attribution. The viewer's attribution line names
+  both sources.
+- **Only what Z-Anatomy lacks.** A piece is dropped when Z-Anatomy has the
+  same name (after normalising Open3DModel's wording and spelling), a mesh
+  in the same box or the same place within the same tissue, or a reviewed
+  `sameAs` pair. Checking by place catches renamed duplicates; the
+  hand-reviewed list catches what geometry can't (a vein drawn differently).
+  Two copies of one structure would split clicks and quiz answers.
+- **Coverings stay out** (retinacula, tendon sheaths, fasciae, bursae, the
+  canal/space overlays), for the same reason as in the main export.
+- **Mirroring** right-only pieces is safe because Z-Anatomy is exactly
+  symmetric (mirror error 0.0 mm on paired bones); otherwise the left arm
+  would lack the brachial plexus cords.
+- Numbered lumbricals/interossei and aggregate veins are skipped: Z-Anatomy
+  has them under other cuts.

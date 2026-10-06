@@ -35,12 +35,21 @@ export interface ManifestEntry {
    * side whose parts carry no side suffix ("Lung", right/left lobes).
    */
   groupSide?: BodySide;
+  /**
+   * Set on meshes added from Open3DModel, which is built on Z-Anatomy (same
+   * body and coordinates; scripts/anatomy/open3dmodel/).
+   */
+  source?: "Open3DModel";
 }
 
 export const Z_ANATOMY_SOURCE = "Z-Anatomy";
 export const Z_ANATOMY_LICENSE = "CC BY-SA 4.0";
 export const Z_ANATOMY_ATTRIBUTION =
   "Z-Anatomy — the open source atlas of anatomy (CC BY-SA 4.0), based on BodyParts3D © The Database Center for Life Science (CC BY-SA 2.1 JP).";
+export const OPEN3DMODEL_SOURCE = "Open3DModel";
+export const OPEN3DMODEL_LICENSE = "CC BY-SA";
+export const OPEN3DMODEL_ATTRIBUTION =
+  "Open3DModel — AnatomyTOOL.org, CC BY-SA, built on Z-Anatomy.";
 
 /** Z-Anatomy English base names that have hand-curated content. */
 const CONCEPT_BY_NAME: Record<string, ConceptKey> = {
@@ -201,9 +210,17 @@ function structureFor(
       ...(inconstant ? ["inconstant"] : []),
       ...(detail ? [DETAIL_TAG] : []),
     ],
-    modelSource: Z_ANATOMY_SOURCE,
-    sourceLicense: Z_ANATOMY_LICENSE,
-    sourceAttribution: Z_ANATOMY_ATTRIBUTION,
+    ...(entry.source === "Open3DModel"
+      ? {
+          modelSource: OPEN3DMODEL_SOURCE,
+          sourceLicense: OPEN3DMODEL_LICENSE,
+          sourceAttribution: OPEN3DMODEL_ATTRIBUTION,
+        }
+      : {
+          modelSource: Z_ANATOMY_SOURCE,
+          sourceLicense: Z_ANATOMY_LICENSE,
+          sourceAttribution: Z_ANATOMY_ATTRIBUTION,
+        }),
   };
   const concept = CONCEPT_BY_NAME[base];
   return concept ? withConcept(structure, concept) : structure;

@@ -53,21 +53,22 @@ Expected today: **189 unit/component tests, 35 e2e checks, all passing; CI green
 | 2026-10-05 | **Docs must be kept updated continuously** as work happens (every commit), not at the end of a session. Enforced by the docs-gate hook.                                                                                                                                                                                        |
 | 2026-10-05 | **Deployed** by the user on Vercel: production URL **https://ors-anatomy.vercel.app** (production branch `main`).                                                                                                                                                                                                              |
 | 2026-10-05 | Course-site notes can't be copied or reworded (site terms); the user shared **her own summary** (Word, her own words) to use for **descriptions and names**. Her text is shown verbatim; her Hebrew names win over the site's.                                                                                                 |
+| 2026-10-06 | **Fill model gaps from open 3D models**, starting with **Open3DModel** (CC BY-SA, same body as Z-Anatomy) — "Ok start". Others (Human Reference Atlas, BodyParts3D) in `docs/MODEL_SOURCES.md` order.                                                                                                                          |
 | 2026-10-05 | **Structure names exactly as her course site writes them** ("that is what they are actually learning"). English and Hebrew names come from medintzfat.com; model names stay searchable. See `docs/COURSE_SOURCE.md` → "Course names".                                                                                          |
 
 ## Phase tracker (§48)
 
-| Phase | Scope                                         | State                                                                  |
-| ----- | --------------------------------------------- | ---------------------------------------------------------------------- |
-| 0     | Project skeleton, tooling, CI                 | ✅ done (CI fixed 2026-10-05: typecheck now runs `next typegen` first) |
-| 1     | Functional 3D viewer                          | ✅ done                                                                |
-| 2     | Structure selection                           | ✅ done                                                                |
-| 3     | Metadata & search (he/en/la)                  | ✅ done                                                                |
-| 4     | Hide / isolate / system visibility            | ✅ done                                                                |
-| 5     | Quiz engine + quiz UI (find, identify, mixed) | ✅ done                                                                |
-| 6     | Progress persistence + progress page          | ✅ done                                                                |
-| 7     | UI polish                                     | 🚧 redesign done (`docs/DESIGN.md`); polish continues                  |
-| 8     | Real model (Z-Anatomy)                        | ✅ whole body (2026-10-05), five streamed model files                  |
+| Phase | Scope                                         | State                                                                                   |
+| ----- | --------------------------------------------- | --------------------------------------------------------------------------------------- |
+| 0     | Project skeleton, tooling, CI                 | ✅ done (CI fixed 2026-10-05: typecheck now runs `next typegen` first)                  |
+| 1     | Functional 3D viewer                          | ✅ done                                                                                 |
+| 2     | Structure selection                           | ✅ done                                                                                 |
+| 3     | Metadata & search (he/en/la)                  | ✅ done                                                                                 |
+| 4     | Hide / isolate / system visibility            | ✅ done                                                                                 |
+| 5     | Quiz engine + quiz UI (find, identify, mixed) | ✅ done                                                                                 |
+| 6     | Progress persistence + progress page          | ✅ done                                                                                 |
+| 7     | UI polish                                     | 🚧 redesign done (`docs/DESIGN.md`); polish continues                                   |
+| 8     | Real model (Z-Anatomy)                        | ✅ whole body (2026-10-05), five streamed model files + Open3DModel extras (2026-10-06) |
 
 ## MVP v0 acceptance criteria (§45) — all met
 
@@ -87,22 +88,31 @@ All verified by `npm run e2e:smoke` against a production build.
   `public/models/z-anatomy/` — skeleton (bones, cartilage, joints/ligaments),
   muscles, nerves (brain, spinal cord, nerves, eye), vessels (heart, arteries,
   veins), organs (respiratory, digestive, urinary, male reproductive,
-  endocrine, lymphoid). 2,669 meshes → 2,743 structures (2,313 wholes,
-  430 parts of muscles and organs), ≈3.1M triangles, 15.8 MB; the skeleton loads first and frames the
-  camera, the rest streams in ("Loading body systems n/5"). Left out: the
-  non-commercial inner ear and kidney models, coverings (fasciae, meninges,
-  pleura, greater omentum), liver segments. Pipeline:
-  `scripts/anatomy/z-anatomy/README.md`. Placeholder demo model kept for tests.
+  endocrine, lymphoid), plus a sixth file
+  `public/models/open3dmodel/extras.glb`: 206 meshes from **Open3DModel**
+  (AnatomyTOOL, CC BY-SA, built on Z-Anatomy) that Z-Anatomy lacks —
+  brachial plexus cords, roots of the median nerve, lumbar/sacral plexus,
+  lumbosacral trunk, L1–S5 anterior rami, inferior gluteal nerve, psoas
+  minor, articularis genus, palmaris brevis, pes anserinus, small limb
+  arteries/veins/nerves and hand/foot ligaments (right-only upper-limb pieces
+  mirrored to the left). 2,875 meshes → 2,949 structures (2,519 wholes,
+  430 parts of muscles and organs), ≈3.4M triangles, 17.6 MB; the skeleton
+  loads first and frames the camera, the rest streams in ("Loading body
+  systems n/6"). Left out: the non-commercial inner ear and kidney models,
+  coverings (fasciae, meninges, pleura, greater omentum), liver segments.
+  Pipelines: `scripts/anatomy/z-anatomy/README.md`,
+  `scripts/anatomy/open3dmodel/README.md`. Placeholder demo model kept for
+  tests.
 - **Routes:** `/` contents-page home (regions list, start quiz, "N due for
   review"), `/explore` (`?region=<region>`, `?structure=<id>`), `/quiz`
   (`?scope=<id>`: `due`, `region:upper-limb`, `system:nervous`, …),
   `/progress`.
-- **Names:** structures are named as her course site names them — 581 of
-  1,576 with the course's English name, 71 with its Hebrew
+- **Names:** structures are named as her course site names them — 595 of
+  1,679 with the course's English name, 71 with its Hebrew
   (`z-anatomy/courseNames.json`, generated by
   `scripts/course/medintzfat/course_names.py`); others keep Z-Anatomy names;
   replaced names stay searchable. `docs/COURSE_SOURCE.md` → "Course names".
-- **Study notes:** her own anatomy summary → Hebrew notes for 708
+- **Study notes:** her own anatomy summary → Hebrew notes for 714
   structures ("סיכום" at the top of the info panel) and 40 of her Hebrew
   names (`z-anatomy/summaryNotes.json`, from
   `scripts/course/summary/summary_notes.py`; the .docx is not in git).
@@ -172,13 +182,13 @@ All verified by `npm run e2e:smoke` against a production build.
    "distinctions" and self-review questions (quiz material); 183 entries have
    no place in the model (female organs, kidneys, layers, nerves/vessels
    Z-Anatomy lacks).
-   4e. **Fill model gaps** — researched (`docs/MODEL_SOURCES.md`): easiest
-   win is **Open3DModel** (CC BY-SA, same frame as Z-Anatomy: brachial
-   plexus cords, lower-limb nerves/plexuses, psoas minor, retinacula…);
-   then Human Reference Atlas female organs + detailed kidney (CC BY, needs
-   alignment) and BodyParts3D (rectum, kidney, some nerves/arteries).
-   Phrenic nerve, cervical plexus, laryngeal nerves, thoracic duct have no
-   open source yet. Ask the user which to add first.
+   4e. **Fill model gaps** (`docs/MODEL_SOURCES.md`): **Open3DModel done**
+   (206 meshes, limbs + lumbosacral plexus). Next, in order: Human Reference
+   Atlas female organs + detailed kidney (CC BY, needs alignment), then
+   BodyParts3D (rectum, kidney, some nerves/arteries). Open3DModel's
+   retinacula, tendon sheaths and spaces (femoral/adductor canal) were left
+   out as coverings — could come back as a toggleable layer. Phrenic nerve,
+   cervical plexus, laryngeal nerves, thoracic duct have no open source yet.
    4c. ~~Names as the course writes them~~ — done (user decision): English
    for 581 structures, Hebrew for 71 (the course mostly uses English). Next:
    her review of the Hebrew table in CONTENT_REVIEW; add synonyms for any
@@ -347,3 +357,14 @@ All verified by `npm run e2e:smoke` against a production build.
 - **2026-10-06 · session 3 (cont.)** — Researched open 3D models for the
   gaps (user request): `docs/MODEL_SOURCES.md` (licences and contents
   checked in the files; Open3DModel verified to share our coordinate frame).
+- **2026-10-06 · session 3 (cont.)** — Open3DModel integrated (user: "Ok
+  start"): `scripts/anatomy/open3dmodel/export_open3d.py` keeps the
+  arteries/veins/nerves/muscles/ligaments of its upper-limb, lower-limb and
+  hand files that Z-Anatomy lacks (name, box and place checks + a
+  hand-reviewed `renames.json` `sameAs` list), mirrors right-only pieces,
+  writes `extras.glb` + `manifest-open3d.json`; `index.ts` builds from both
+  manifests, structures carry Open3DModel attribution. Course names and her
+  notes re-run: 14 more course names, notes now reach psoas minor, lumbosacral
+  trunk, sacral plexus, articularis genus, inferior gluteal nerve and the
+  lateral/medial cords (176 entries left); fixed her genicular-artery note
+  wrongly reaching the descending/middle genicular arteries.

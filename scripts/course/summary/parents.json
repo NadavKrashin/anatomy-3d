@@ -203,7 +203,7 @@
       "perforating-femoral-arteries"
     ],
     "Lateral & Medial / Superior & Inferior genicular artery": [
-      "re:genicular-artery$"
+      "re:^(superior|inferior)-(lateral|medial)-genicular-artery$"
     ],
     "Saphenous opening / Fossa ovalis": ["great-saphenous-vein"],
     "Femoral sheath & Femoral canal": ["femoral-artery", "femoral-vein"],

@@ -1,0 +1,1856 @@
+[
+  {
+    "name": "Accessory saphenous vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 4433,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Accessory saphenous vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 4433,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Accompanying veins of arcuate and dorsal arteries.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 7917,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Accompanying veins of arcuate and dorsal arteries.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 7917,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Accompanying veins of dorsal digital metatarsal arteries.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 5096,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Accompanying veins of dorsal digital metatarsal arteries.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 5096,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Acromial branch of thoracoacromial artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 542,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Acromial branch of thoracoacromial artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 542,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Anterior branch of iliohypogastric nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "pelvis",
+    "pack": "extras",
+    "vertices": 1515,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Anterior branch of iliohypogastric nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "pelvis",
+    "pack": "extras",
+    "vertices": 1515,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Anterior femoral cutaneous vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 7917,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Anterior femoral cutaneous vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 7917,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Anterior interosseous artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 2704,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Anterior interosseous artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 2704,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Anterior interosseous veins.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 2054,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Anterior interosseous veins.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 2054,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Anterior lateral malleolar artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1300,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Anterior lateral malleolar artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1300,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Anterior medial malleolar artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1456,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Anterior medial malleolar artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1456,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Anterior tibial recurrent artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 663,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Anterior tibial recurrent artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 663,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Anterior tibiotalar ligament.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 366,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Anterior tibiotalar ligament.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 366,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Articularis genus.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 234,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Articularis genus.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 234,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Ascending branch of lateral circumflex femoral artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 793,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Ascending branch of lateral circumflex femoral artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 793,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Bifurcate ligament.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 464,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Bifurcate ligament.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 464,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Coccygeal nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "pelvis",
+    "pack": "extras",
+    "vertices": 854,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Coccygeal nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "pelvis",
+    "pack": "extras",
+    "vertices": 854,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Cutaneous branch of obturator nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 3092,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Cutaneous branch of obturator nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 3092,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Deep branch of lateral plantar nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 3022,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Deep branch of lateral plantar nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 3022,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Deep branch of medial plantar artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 494,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Deep branch of medial plantar artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 494,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Deltoid branch of thoracoacromial artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 1612,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Deltoid branch of thoracoacromial artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 1612,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Descending genicular artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 819,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Descending genicular artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 819,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Dorsal artery of index finger.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 793,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Dorsal artery of index finger.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 793,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Dorsal artery of thumb.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 793,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Dorsal artery of thumb.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 793,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Dorsal digital vein of medial side of great toe.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1430,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Dorsal digital vein of medial side of great toe.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1430,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor apparatus of 1st toe.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 576,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor apparatus of 1st toe.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 576,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor apparatus of 2nd toe.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 576,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor apparatus of 2nd toe.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 576,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor apparatus of 3rd toe.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 576,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor apparatus of 3rd toe.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 576,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor apparatus of 4th toe.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 576,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor apparatus of 4th toe.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 576,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor apparatus of 5th toe.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 576,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor apparatus of 5th toe.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 576,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor hood of 2nd finger.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 581,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor hood of 2nd finger.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 581,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor hood of 3rd finger.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 581,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor hood of 3rd finger.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 581,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor hood of 4th finger.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 581,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor hood of 4th finger.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 581,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor hood of 5th finger.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 581,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Extensor hood of 5th finger.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 581,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Flexor digitorum superficialis radial head.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 691,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Flexor digitorum superficialis radial head.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 691,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Inferior clunial nerves.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "pelvis",
+    "pack": "extras",
+    "vertices": 3064,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Inferior clunial nerves.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "pelvis",
+    "pack": "extras",
+    "vertices": 3064,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Inferior gluteal nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 8041,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Inferior gluteal nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 8041,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Intercapitular veins of hand.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 975,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Intercapitular veins of hand.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 975,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Interosseous recurrent artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 325,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Interosseous recurrent artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 325,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Intertendinous connections of extensor digitorum.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 930,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Intertendinous connections of extensor digitorum.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 930,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "L1 anterior ramus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 698,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "L1 anterior ramus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 698,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "L2 anterior ramus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 542,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "L2 anterior ramus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 542,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "L3 anterior ramus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 698,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "L3 anterior ramus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 698,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "L4 anterior ramus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 854,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "L4 anterior ramus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 854,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "L5 anterior ramus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 1010,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "L5 anterior ramus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 1010,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral band of 2nd finger.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 928,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral band of 2nd finger.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 928,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral band of 3rd finger.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 1006,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral band of 3rd finger.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 1006,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral band of 4th finger.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 818,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral band of 4th finger.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 818,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral band of 5th finger.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 942,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral band of 5th finger.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 942,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral branch of deep fibular nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1433,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral branch of deep fibular nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1433,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral calcaneal nerves.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1996,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral calcaneal nerves.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1996,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral cord of brachial plexus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 193,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral cord of brachial plexus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 193,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral cutaneous branch of iliohypogastric nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "pelvis",
+    "pack": "extras",
+    "vertices": 4122,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral cutaneous branch of iliohypogastric nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "pelvis",
+    "pack": "extras",
+    "vertices": 4122,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral dorsal cutaneous nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1166,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral dorsal cutaneous nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1166,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral malleolar branches of fibular artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 494,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral malleolar branches of fibular artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 494,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral marginal vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 637,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral marginal vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 637,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral root of median nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 193,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral root of median nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 193,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral sural cutaneous nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 9073,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lateral sural cutaneous nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 9073,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lumbar plexus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 3475,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lumbar plexus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 3475,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lumbosacral trunk.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "pelvis",
+    "pack": "extras",
+    "vertices": 535,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Lumbosacral trunk.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "pelvis",
+    "pack": "extras",
+    "vertices": 535,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Medial branch of deep fibular nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 854,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Medial branch of deep fibular nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 854,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Medial calcaneal branches of tibial nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 698,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Medial calcaneal branches of tibial nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 698,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Medial cord of brachial plexus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 505,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Medial cord of brachial plexus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 505,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Medial malleolar arteries.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 650,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Medial malleolar arteries.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 650,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Medial marginal vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 637,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Medial marginal vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 637,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Medial root of median nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 193,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Medial root of median nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 193,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Medial tarsal arteries.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 2236,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Medial tarsal arteries.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 2236,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Muscular branches of femoral nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 7842,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Muscular branches of femoral nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 7842,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Nerve to levator ani and coccygeus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "pelvis",
+    "pack": "extras",
+    "vertices": 1708,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Nerve to levator ani and coccygeus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "pelvis",
+    "pack": "extras",
+    "vertices": 1708,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Nerve to obturator internus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 3223,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Nerve to obturator internus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 3223,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Nerve to psoas major and iliacus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1396,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Nerve to psoas major and iliacus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1396,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Oblique ligament of thumb.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 232,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Oblique ligament of thumb.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 232,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Palmar radiocarpal ligament.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 238,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Palmar radiocarpal ligament.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 238,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Palmar ulnocarpal ligament.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 284,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Palmar ulnocarpal ligament.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 284,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Palmaris brevis.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 1816,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Palmaris brevis.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 1816,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Perforating branch of arcuate artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 507,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Perforating branch of arcuate artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 507,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Perforating branches of fibular artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1287,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Perforating branches of fibular artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1287,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Pes anserinus.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 986,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Pes anserinus.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 986,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Posterior arch vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 2067,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Posterior arch vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 2067,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Posterior brachial cutaneous nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 1323,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Posterior brachial cutaneous nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 1323,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Posterior interosseous veins.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 1573,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Posterior interosseous veins.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 1573,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Posterior meniscofemoral ligament.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 146,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Posterior meniscofemoral ligament.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 146,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Posterior tibial recurrent artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 949,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Posterior tibial recurrent artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 949,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Princeps pollicis artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 2561,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Princeps pollicis artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 2561,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Psoas minor.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1255,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Psoas minor.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1255,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Quadriceps tendon and patellar ligament.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 2120,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Quadriceps tendon and patellar ligament.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 2120,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Radial recurrent artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 481,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Radial recurrent artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 481,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Radialis indicis artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 1729,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Radialis indicis artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 1729,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Recurrent branch of median nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 891,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Recurrent branch of median nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 891,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "S1 anterior ramus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 1010,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "S1 anterior ramus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 1010,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "S2 anterior ramus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 1010,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "S2 anterior ramus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 1010,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "S3 anterior ramus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 1010,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "S3 anterior ramus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 1010,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "S4 anterior ramus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 1166,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "S4 anterior ramus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 1166,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "S5 anterior ramus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 1478,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "S5 anterior ramus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 1478,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Sacral plexus.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "pelvis",
+    "pack": "extras",
+    "vertices": 2023,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Sacral plexus.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "pelvis",
+    "pack": "extras",
+    "vertices": 2023,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Superficial branch of lateral plantar nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 891,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Superficial branch of lateral plantar nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 891,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Superficial circumflex iliac artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 806,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Superficial circumflex iliac artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 806,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Superficial circumflex iliac vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 806,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Superficial circumflex iliac vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 806,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Superficial external pudendal vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1274,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Superficial external pudendal vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 1274,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Superior clunial nerves.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 5241,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Superior clunial nerves.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "extras",
+    "vertices": 5241,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Superior thoracic artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 975,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Superior thoracic artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 975,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Sural arteries.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 676,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Sural arteries.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 676,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Sural vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 832,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Sural vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "lower-limb",
+    "pack": "extras",
+    "vertices": 832,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Transverse carpal ligament.l",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 190,
+    "source": "Open3DModel"
+  },
+  {
+    "name": "Transverse carpal ligament.r",
+    "system": "muscular",
+    "tissue": "ligament",
+    "region": "upper-limb",
+    "pack": "extras",
+    "vertices": 190,
+    "source": "Open3DModel"
+  }
+]

@@ -127,6 +127,11 @@
     "source": "https://medintzfat.com/anatomy/abdominal-organs",
     "uses": 2
   },
+  "anterior-interosseous-artery": {
+    "en": "Anterior interosseous artery",
+    "source": "https://medintzfat.com/anatomy/class9",
+    "uses": 2
+  },
   "anterior-interventricular-artery": {
     "en": "Anterior interventricular artery",
     "source": "https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01",
@@ -183,6 +188,11 @@
     "en": "Arcuate popliteal ligament",
     "source": "https://medintzfat.com/anatomy/lower-limb-part4",
     "uses": 1
+  },
+  "articularis-genus": {
+    "en": "Articularis genu",
+    "source": "https://medintzfat.com/anatomy/lower-limb-part4",
+    "uses": 5
   },
   "arytenoid-cartilage": {
     "en": "Arytenoid cartilage",
@@ -1131,6 +1141,11 @@
     "source": "https://medintzfat.com/anatomy/quiz-abdomen",
     "uses": 22
   },
+  "inferior-gluteal-nerve": {
+    "en": "Inferior gluteal nerve",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 8
+  },
   "inferior-labial-artery": {
     "en": "Inferior labial artery",
     "source": "https://medintzfat.com/anatomy/lab9",
@@ -1414,6 +1429,11 @@
     "source": "https://medintzfat.com/anatomy/lab9",
     "uses": 13
   },
+  "lateral-root-of-median-nerve": {
+    "en": "Lateral root of median nerve",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 3
+  },
   "lateral-thoracic-artery": {
     "en": "Lateral thoracic artery",
     "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
@@ -1537,6 +1557,16 @@
     "source": "https://medintzfat.com/anatomy/abdominal-innervation",
     "uses": 3
   },
+  "lumbar-plexus": {
+    "en": "Lumbar plexus",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 33
+  },
+  "lumbosacral-trunk": {
+    "en": "Lumbosacral trunk",
+    "source": "https://medintzfat.com/anatomy/lab6",
+    "uses": 8
+  },
   "lunate-bone": {
     "en": "Lunate",
     "source": "https://medintzfat.com/anatomy/class9",
@@ -1633,6 +1663,11 @@
     "en": "Medial rectus",
     "source": "https://medintzfat.com/anatomy/lab9",
     "uses": 11
+  },
+  "medial-root-of-median-nerve": {
+    "en": "Medial root of median nerve",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 3
   },
   "median-cubital-vein": {
     "en": "Median cubital vein",
@@ -1880,6 +1915,11 @@
     "source": "https://medintzfat.com/anatomy/oral-cavity",
     "uses": 12
   },
+  "palmaris-brevis": {
+    "en": "Palmaris brevis",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 3
+  },
   "palmaris-longus-muscle": {
     "en": "Palmaris longus",
     "source": "https://medintzfat.com/anatomy/class9",
@@ -1947,6 +1987,11 @@
     "en": "Perforating veins",
     "source": "https://medintzfat.com/anatomy/class6",
     "uses": 1
+  },
+  "pes-anserinus": {
+    "en": "Pes anserinus",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 30
   },
   "pharynx": {
     "en": "Pharynx",
@@ -2123,6 +2168,11 @@
     "source": "https://medintzfat.com/anatomy/abdominal-innervation",
     "uses": 45
   },
+  "psoas-minor": {
+    "en": "Psoas minor",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 8
+  },
   "pubic-symphysis": {
     "en": "Pubic symphysis",
     "source": "https://medintzfat.com/anatomy/labs-semester-b",
@@ -2199,6 +2249,11 @@
     "he": "העצב הרדיאלי",
     "heSource": "https://medintzfat.com/anatomy/class8"
   },
+  "radial-recurrent-artery": {
+    "en": "Radial recurrent artery",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 1
+  },
   "radius": {
     "en": "Radius",
     "source": "https://medintzfat.com/anatomy/class8",
@@ -2230,6 +2285,11 @@
     "en": "Rectus capitis posterior minor",
     "source": "https://medintzfat.com/anatomy/lab8",
     "uses": 2
+  },
+  "recurrent-branch-of-median-nerve": {
+    "en": "Recurrent branch of the median nerve",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 3
   },
   "renal-artery": {
     "en": "Renal artery",
@@ -2277,6 +2337,11 @@
     "en": "Rotatores",
     "source": "https://medintzfat.com/anatomy/lab8",
     "uses": 13
+  },
+  "sacral-plexus": {
+    "en": "Sacral plexus",
+    "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
+    "uses": 26
   },
   "sacrospinous-ligament": {
     "en": "Sacrospinous ligament",
@@ -2654,6 +2719,11 @@
     "en": "Superior tarsus",
     "source": "https://medintzfat.com/anatomy/lab9",
     "uses": 2
+  },
+  "superior-thoracic-artery": {
+    "en": "Superior thoracic artery",
+    "source": "https://medintzfat.com/anatomy/lab1",
+    "uses": 3
   },
   "superior-thyroid-vein": {
     "en": "Superior thyroid vein",

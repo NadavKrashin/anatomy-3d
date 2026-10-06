@@ -119,7 +119,11 @@
     "External iliac vessels": ["external-iliac-artery", "external-iliac-vein"],
     "Anterior femoral cutaneous nerve of thigh": [
       "anterior-cutaneous-branches-of-femoral-nerve"
-    ]
+    ],
+    "Lateral Cord (לטרלי ל־Axillary Artery)": [
+      "lateral-cord-of-brachial-plexus"
+    ],
+    "Medial Cord (מדיאלי ל־Axillary Artery)": ["medial-cord-of-brachial-plexus"]
   },
   "hebrew": {
     "about": "Her organ-guide headings name some structures in the plural; the model has one per side. Singular forms (from her own text where she uses them), or null to show no Hebrew from the summary.",

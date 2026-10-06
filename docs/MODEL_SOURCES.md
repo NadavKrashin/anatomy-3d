@@ -16,6 +16,10 @@ Every source below was checked at its primary source on 2026-10-06:
 can be used. Non-commercial (NC) licences are out, as with Z-Anatomy's
 inner ear and kidney.
 
+**Status:** Open3DModel is integrated (206 meshes, 2026-10-06 — see
+`scripts/anatomy/open3dmodel/README.md`). The ~740 count below was before
+removing duplicates, coverings and spaces.
+
 ## Summary
 
 | Source                                                               | Licence         | Lines up with our body?                                                                       | Fills (from her list)                                                                                                                                                                                                                                                                                                                                                                                                                                     | Effort                                                                                |

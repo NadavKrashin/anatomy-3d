@@ -101,7 +101,10 @@ ancestors are tried (multi-primitive meshes load as a group of meshes).
   `components/providers/AnatomyDataProvider.tsx` (registry, adapter, search
   are built once per dataset).
 - Datasets: `data/anatomy/z-anatomy/` (active — real model; structures built
-  at runtime from the export `manifest.json` by `build.ts`) and
+  at runtime by `build.ts` from the export `manifest.json` plus
+  `manifest-open3d.json` — the Open3DModel extras, a sixth model file
+  `extras.glb`; entries with `source: "Open3DModel"` get that source's
+  licence and attribution) and
   `data/anatomy/demo/` (placeholder, used by tests). Curated names/Hebrew/
   details live once per concept in `data/anatomy/content/concepts.ts` and are
   attached with `withConcept()`. The Z-Anatomy dataset then applies **her

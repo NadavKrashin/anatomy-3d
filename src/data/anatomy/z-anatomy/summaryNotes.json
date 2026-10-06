@@ -429,6 +429,15 @@
       }
     ]
   },
+  "articularis-genus": {
+    "notes": [
+      {
+        "text": "שריר קטן המושך את המעטפת הסינוביאלית של הברך בזמן יישור.",
+        "section": "גפה תחתונה",
+        "term": "Articularis genus"
+      }
+    ]
+  },
   "arytenoid-cartilage": {
     "notes": [
       {
@@ -3432,6 +3441,15 @@
       }
     ]
   },
+  "inferior-gluteal-nerve": {
+    "notes": [
+      {
+        "text": "עצב המפעיל את גלוטאוס מקסימוס.",
+        "section": "גפה תחתונה",
+        "term": "Inferior gluteal nerve"
+      }
+    ]
+  },
   "inferior-lateral-genicular-artery": {
     "notes": [
       {
@@ -4352,6 +4370,15 @@
       }
     ]
   },
+  "lateral-cord-of-brachial-plexus": {
+    "notes": [
+      {
+        "text": "הצרור הלטרלי של המקלעת, הנקרא לפי יחסו לעורק האקסילרי.",
+        "section": "גפה עליונה",
+        "term": "Lateral Cord (לטרלי ל־Axillary Artery)"
+      }
+    ]
+  },
   "lateral-crico-arytenoid-muscle": {
     "notes": [
       {
@@ -4765,6 +4792,21 @@
       }
     ]
   },
+  "lumbosacral-trunk": {
+    "notes": [
+      {
+        "text": "סיבים מ־L4–L5 המחברים את המקלעת המותנית לסקרלית.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Lumbosacral trunk"
+      },
+      {
+        "text": "מקלעת עצבים על פני הפיריפורמיס, המספקת אגן וחלק גדול מהגפה התחתונה.",
+        "section": "אגן ופרינאום",
+        "term": "Sacral plexus - Ventral rami S1-S4 + Lumbosacral trunk",
+        "shared": true
+      }
+    ]
+  },
   "lumbrical-muscles-of-foot": {
     "notes": [
       {
@@ -5109,6 +5151,15 @@
       }
     ]
   },
+  "medial-cord-of-brachial-plexus": {
+    "notes": [
+      {
+        "text": "הצרור המדיאלי של המקלעת, מקור לאולנרי ולחלק מהמדיאני.",
+        "section": "גפה עליונה",
+        "term": "Medial Cord (מדיאלי ל־Axillary Artery)"
+      }
+    ]
+  },
   "medial-cuneiform-bone": {
     "notes": [
       {
@@ -5335,16 +5386,6 @@
         "text": "עורק מהמערכת המזנטרית העליונה אל המעי הרוחבי.",
         "section": "חלל הבטן ואיבריו",
         "term": "Middle colic artery"
-      }
-    ]
-  },
-  "middle-genicular-artery": {
-    "notes": [
-      {
-        "text": "ענפים עורקיים סביב הברך המשתתפים ברשת ההשקות המקומית.",
-        "section": "גפה תחתונה",
-        "term": "Lateral & Medial / Superior & Inferior genicular artery",
-        "shared": true
       }
     ]
   },
@@ -6941,6 +6982,15 @@
       }
     ]
   },
+  "psoas-minor": {
+    "notes": [
+      {
+        "text": "שריר מותני קטן שאינו קיים אצל כולם; מסייע מעט בכיפוף הגו.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Psoas minor"
+      }
+    ]
+  },
   "pubic-symphysis": {
     "notes": [
       {
@@ -7214,6 +7264,16 @@
         "text": "שרירים עמוקים בין חוליות, חשובים לייצוב ולבקרה תחושתית.",
         "section": "גב ועמוד שדרה",
         "term": "Rotatores (Brevis & Longus)"
+      }
+    ]
+  },
+  "sacral-plexus": {
+    "notes": [
+      {
+        "text": "מקלעת עצבים על פני הפיריפורמיס, המספקת אגן וחלק גדול מהגפה התחתונה.",
+        "section": "אגן ופרינאום",
+        "term": "Sacral plexus - Ventral rami S1-S4 + Lumbosacral trunk",
+        "shared": true
       }
     ]
   },
