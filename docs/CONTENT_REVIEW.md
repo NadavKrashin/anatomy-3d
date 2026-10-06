@@ -227,6 +227,13 @@ costal cartilages), part of adductor pollicis (capitate).
 - **Regions** of organs and midline structures are assigned by height against
   skeletal landmarks (e.g. the liver and stomach → abdomen, the thyroid →
   neck). Adjust in the export if the course divides regions differently.
+- **Rectum:** Z-Anatomy labels the rectum "Sigmoid colon"; the app shows it
+  as "Rectum" (`RELABEL` in `z-anatomy/build.ts`, reasons in
+  `docs/DECISIONS.md`). The sigmoid loop is inside Z-Anatomy's "Descending
+  colon" mesh, so there is no separate sigmoid colon. Please confirm on the
+  model.
+- BodyParts3D pieces use its English names ("Supra-orbital nerve",
+  "Gastro-omental artery (right)", "Anterior cardiac veins"…), unverified.
 - The model is male; the female body (settings) adds the Human Reference
   Atlas's female organs with their own English names (e.g. "Lower uterine
   segment", "Cornua of uterus", "Fundus/Dome of urinary bladder",

@@ -18,10 +18,16 @@ import zManifest from "./manifest.json";
 import open3dManifest from "./manifest-open3d.json";
 import nonCommercialManifest from "./manifest-non-commercial.json";
 import femaleManifest from "./manifest-female.json";
+import bp3dManifest from "./manifest-bp3d.json";
 import { datasetForSex } from "@/lib/anatomy/bodySex";
 
 /** The commercially usable manifests. */
-const manifest = [...zManifest, ...open3dManifest, ...femaleManifest];
+const manifest = [
+  ...zManifest,
+  ...open3dManifest,
+  ...bp3dManifest,
+  ...femaleManifest,
+];
 
 const entry = (
   name: string,
@@ -294,6 +300,21 @@ describe("the Z-Anatomy whole-body dataset", () => {
     expect(male.partMeshMap?.["Trigone of urinary bladder"]).toBeUndefined();
     expect(female.info.models.map((m) => m.id)).toContain("female");
     expect(male.info.models.map((m) => m.id)).not.toContain("female");
+  });
+
+  it("adds BodyParts3D's pieces and shows Z-Anatomy's rectum as the rectum", () => {
+    for (const id of [
+      "gastric-artery-right",
+      "small-cardiac-vein",
+      "frontal-nerve-left",
+      "semispinalis-capitis-muscle-right",
+    ])
+      expect(registry.get(id)?.modelSource, id).toBe("BodyParts3D");
+    const rectum = registry.get("rectum");
+    expect(rectum?.parentId).toBeUndefined();
+    expect(rectum?.region).toBe("pelvis");
+    expect(meshMap["Sigmoid colon"]).toBe("rectum");
+    expect(registry.has("sigmoid-colon")).toBe(false);
   });
 
   it("places the female organs in the pelvis and the breasts on the chest", () => {

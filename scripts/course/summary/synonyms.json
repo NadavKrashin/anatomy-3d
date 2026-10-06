@@ -137,7 +137,14 @@
       "fundus-of-urinary-bladder"
     ],
     "Trigone": ["urinary-bladder", "trigone-of-urinary-bladder"],
-    "Ureteric orifice": ["urinary-bladder", "ureteric-orifice"]
+    "Ureteric orifice": ["urinary-bladder", "ureteric-orifice"],
+    "Right gastric artery": ["gastric-artery-right"],
+    "Right gastro-omental/epiploic artery": ["gastro-omental-artery-right"],
+    "Left gastro-omental/epiploic artery": ["gastro-omental-artery-left"],
+    "Superior pancreaticoduodenal artery (Anterior & Posterior)": [
+      "anterior-superior-pancreaticoduodenal-artery",
+      "posterior-superior-pancreaticoduodenal-artery"
+    ]
   },
   "hebrew": {
     "about": "Her organ-guide headings name some structures in the plural; the model has one per side. Singular forms (from her own text where she uses them), or null to show no Hebrew from the summary.",

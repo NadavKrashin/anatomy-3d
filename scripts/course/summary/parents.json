@@ -582,6 +582,10 @@
     "Mesovarium": ["ovary"],
     "Vesicouterine pouch": ["uterus", "urinary-bladder"],
     "Rectouterine pouch (Douglas)": ["uterus"],
-    "בלוטת השד (Mammary Gland)": ["breast"]
+    "בלוטת השד (Mammary Gland)": ["breast"],
+    "Sigmoid colon": ["descending-colon"],
+    "Ampulla of rectum": ["rectum"],
+    "Anorectal flexure": ["rectum"],
+    "Transverse rectal folds": ["rectum"]
   }
 }

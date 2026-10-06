@@ -1,0 +1,209 @@
+[
+  {
+    "name": "Anterior cardiac veins",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "thorax",
+    "pack": "bodyparts3d",
+    "vertices": 480,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Anterior superior pancreaticoduodenal artery",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "abdomen",
+    "pack": "bodyparts3d",
+    "vertices": 287,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Bronchial artery",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "thorax",
+    "pack": "bodyparts3d",
+    "vertices": 917,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Dorsal pancreatic artery",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "abdomen",
+    "pack": "bodyparts3d",
+    "vertices": 687,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Dorsal scapular artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "bodyparts3d",
+    "vertices": 2335,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Dorsal scapular artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "upper-limb",
+    "pack": "bodyparts3d",
+    "vertices": 2293,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Frontal nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "head",
+    "pack": "bodyparts3d",
+    "vertices": 631,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Frontal nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "head",
+    "pack": "bodyparts3d",
+    "vertices": 631,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Lacrimal nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "head",
+    "pack": "bodyparts3d",
+    "vertices": 1014,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Lacrimal nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "head",
+    "pack": "bodyparts3d",
+    "vertices": 1039,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Left gastric vein",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "abdomen",
+    "pack": "bodyparts3d",
+    "vertices": 672,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Left gastro-omental artery",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "abdomen",
+    "pack": "bodyparts3d",
+    "vertices": 1232,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Levator veli palatini muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "head",
+    "pack": "bodyparts3d",
+    "vertices": 6821,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Levator veli palatini muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "head",
+    "pack": "bodyparts3d",
+    "vertices": 6835,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Posterior superior pancreaticoduodenal artery",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "abdomen",
+    "pack": "bodyparts3d",
+    "vertices": 278,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Right gastric artery",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "abdomen",
+    "pack": "bodyparts3d",
+    "vertices": 267,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Right gastric vein",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "abdomen",
+    "pack": "bodyparts3d",
+    "vertices": 257,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Right gastro-omental artery",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "abdomen",
+    "pack": "bodyparts3d",
+    "vertices": 1890,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Semispinalis capitis muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "neck",
+    "pack": "bodyparts3d",
+    "vertices": 2738,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Semispinalis capitis muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "neck",
+    "pack": "bodyparts3d",
+    "vertices": 2744,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Small cardiac vein",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "thorax",
+    "pack": "bodyparts3d",
+    "vertices": 748,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Supra-orbital nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "head",
+    "pack": "bodyparts3d",
+    "vertices": 1321,
+    "source": "BodyParts3D"
+  },
+  {
+    "name": "Supra-orbital nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "head",
+    "pack": "bodyparts3d",
+    "vertices": 1332,
+    "source": "BodyParts3D"
+  }
+]

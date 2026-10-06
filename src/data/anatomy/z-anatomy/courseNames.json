@@ -97,6 +97,11 @@
     "source": "https://medintzfat.com/anatomy/lab7",
     "uses": 2
   },
+  "anterior-cardiac-veins": {
+    "en": "Anterior cardiac veins",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 1
+  },
   "anterior-cerebral-artery": {
     "en": "Anterior cerebral artery",
     "source": "https://medintzfat.com/anatomy/quiz-head-neck",
@@ -160,6 +165,11 @@
   "anterior-spinal-artery": {
     "en": "Anterior spinal artery",
     "source": "https://medintzfat.com/anatomy/back-and-spine",
+    "uses": 2
+  },
+  "anterior-superior-pancreaticoduodenal-artery": {
+    "en": "Anterior superior pancreaticoduodenal artery",
+    "source": "https://medintzfat.com/anatomy/abdominal-organs",
     "uses": 2
   },
   "anterior-talofibular-ligament": {
@@ -642,6 +652,16 @@
     "source": "https://medintzfat.com/anatomy/lab1",
     "uses": 1
   },
+  "dorsal-pancreatic-artery": {
+    "en": "Dorsal pancreatic artery",
+    "source": "https://medintzfat.com/anatomy/abdominal-organs",
+    "uses": 3
+  },
+  "dorsal-scapular-artery": {
+    "en": "Dorsal scapular artery",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 2
+  },
   "dorsal-scapular-nerve": {
     "en": "Dorsal scapular nerve",
     "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
@@ -940,6 +960,11 @@
     "he": "העצם הפרונטלית",
     "heSource": "https://medintzfat.com/anatomy/skull-cranial-nerves"
   },
+  "frontal-nerve": {
+    "en": "Frontal nerve",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 6
+  },
   "frontalis-muscle": {
     "en": "Frontalis",
     "source": "https://medintzfat.com/anatomy/quiz-head-neck",
@@ -960,6 +985,11 @@
   "gastric-artery-left": {
     "aliases": ["Left gastric artery"],
     "source": "https://medintzfat.com/anatomy/labs-semester-b"
+  },
+  "gastric-vein": {
+    "en": "Gastric vein",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 1
   },
   "gastroduodenal-artery": {
     "en": "Gastroduodenal artery",
@@ -1389,6 +1419,11 @@
     "source": "https://medintzfat.com/anatomy/lab9",
     "uses": 8
   },
+  "lacrimal-nerve": {
+    "en": "Lacrimal nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 6
+  },
   "lacrimal-sac": {
     "en": "Lacrimal sac",
     "source": "https://medintzfat.com/anatomy/lab9",
@@ -1520,6 +1555,11 @@
     "uses": 22,
     "he": "מֵרִים הַשֶּׁכֶם",
     "heSource": "https://medintzfat.com/anatomy/class6"
+  },
+  "levator-veli-palatini-muscle": {
+    "en": "Levator veli palatini",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 23
   },
   "levatores-costarum": {
     "en": "Levatores costarum",
@@ -2172,6 +2212,11 @@
     "source": "https://medintzfat.com/anatomy/lower-limb-part1",
     "uses": 3
   },
+  "posterior-superior-pancreaticoduodenal-artery": {
+    "en": "Posterior superior pancreaticoduodenal artery",
+    "source": "https://medintzfat.com/anatomy/abdominal-organs",
+    "uses": 2
+  },
   "posterior-talofibular-ligament": {
     "en": "Posterior talofibular ligament",
     "source": "https://medintzfat.com/anatomy/lower-limb-part5",
@@ -2315,6 +2360,11 @@
     "uses": 27,
     "he": "רדיוס",
     "heSource": "https://medintzfat.com/anatomy/class3"
+  },
+  "rectum": {
+    "en": "Rectum",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 31
   },
   "rectus-abdominis-muscle": {
     "en": "Rectus abdominis",
@@ -2475,6 +2525,11 @@
     "uses": 9,
     "aliases": ["Seminal glands"]
   },
+  "semispinalis-capitis-muscle": {
+    "en": "Semispinalis capitis",
+    "source": "https://medintzfat.com/anatomy/lab8",
+    "uses": 4
+  },
   "semitendinosus-muscle": {
     "en": "Semitendinosus",
     "source": "https://medintzfat.com/anatomy/lab7",
@@ -2505,11 +2560,6 @@
     "source": "https://medintzfat.com/anatomy/abdominal-organs",
     "uses": 2
   },
-  "sigmoid-colon": {
-    "en": "Sigmoid colon",
-    "source": "https://medintzfat.com/anatomy/abdominal-imaging",
-    "uses": 24
-  },
   "sigmoid-sinus": {
     "en": "Sigmoid sinus",
     "source": "https://medintzfat.com/anatomy/quiz-head-neck",
@@ -2524,6 +2574,11 @@
     "en": "Sphenoid sinus",
     "source": "https://medintzfat.com/anatomy/quiz-head-neck",
     "uses": 24
+  },
+  "small-cardiac-vein": {
+    "en": "Small cardiac vein",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 3
   },
   "small-intestine": {
     "en": "Small intestine",
@@ -2809,6 +2864,11 @@
     "en": "Supinator",
     "source": "https://medintzfat.com/anatomy/lab1",
     "uses": 15
+  },
+  "supra-orbital-nerve": {
+    "en": "Supraorbital nerve",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 9
   },
   "suprarenal-gland": {
     "en": "Suprarenal gland",

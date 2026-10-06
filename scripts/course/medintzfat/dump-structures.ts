@@ -14,6 +14,7 @@ import {
 } from "../../../src/data/anatomy/z-anatomy/build";
 import manifest from "../../../src/data/anatomy/z-anatomy/manifest.json";
 import open3dManifest from "../../../src/data/anatomy/z-anatomy/manifest-open3d.json";
+import bp3dManifest from "../../../src/data/anatomy/z-anatomy/manifest-bp3d.json";
 import femaleManifest from "../../../src/data/anatomy/z-anatomy/manifest-female.json";
 import nonCommercialManifest from "../../../src/data/anatomy/z-anatomy/manifest-non-commercial.json";
 import { INCLUDE_NON_COMMERCIAL } from "../../../src/data/anatomy/z-anatomy/index";
@@ -21,6 +22,7 @@ import { INCLUDE_NON_COMMERCIAL } from "../../../src/data/anatomy/z-anatomy/inde
 const { structures } = buildZAnatomyDataset([
   ...(manifest as ManifestEntry[]),
   ...(open3dManifest as ManifestEntry[]),
+  ...(bp3dManifest as ManifestEntry[]),
   ...(femaleManifest as ManifestEntry[]),
   ...(INCLUDE_NON_COMMERCIAL ? (nonCommercialManifest as ManifestEntry[]) : []),
 ]);

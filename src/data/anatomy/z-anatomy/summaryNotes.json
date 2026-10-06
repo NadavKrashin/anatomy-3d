@@ -209,6 +209,15 @@
       }
     ]
   },
+  "anterior-cardiac-veins": {
+    "notes": [
+      {
+        "text": "ורידים קדמיים של הלב, המתנקזים ישירות לעלייה ימין.",
+        "section": "בית החזה",
+        "term": "Anterior Cardiac Veins"
+      }
+    ]
+  },
   "anterior-cells-of-ethmoid-bone": {
     "notes": [
       {
@@ -371,6 +380,16 @@
         "text": "עורקים אורכיים על פני חוט השדרה, עם תגבור מעורקים מקטעיים.",
         "section": "גב ועמוד שדרה",
         "term": "Posterior & Anterior spinal artery"
+      }
+    ]
+  },
+  "anterior-superior-pancreaticoduodenal-artery": {
+    "notes": [
+      {
+        "text": "ענפים המספקים את ראש הלבלב והתריסריון מלמעלה.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Superior pancreaticoduodenal artery (Anterior & Posterior)",
+        "shared": true
       }
     ]
   },
@@ -916,6 +935,15 @@
     ],
     "he": "שד",
     "heHeading": "השד"
+  },
+  "bronchial-artery": {
+    "notes": [
+      {
+        "text": "כלי דם המזינים ומנקזים את רקמות דרכי האוויר, בשונה מהמחזור הריאתי העיקרי.",
+        "section": "בית החזה",
+        "term": "Bronchial Arteries & Veins"
+      }
+    ]
   },
   "buccal-nerve": {
     "notes": [
@@ -1544,6 +1572,12 @@
         "section": "חלל הבטן ואיבריו",
         "term": "Left colic (splenic) flexure",
         "shared": true
+      },
+      {
+        "text": "מקטע המעי הגס בצורת לולאה המחבר בין היורד לרקטום.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Sigmoid colon",
+        "shared": true
       }
     ]
   },
@@ -1730,6 +1764,24 @@
         "text": "שרירים בין־גרמיים גביים המרחיקים אצבעות מציר האצבע האמצעית.",
         "section": "גפה עליונה",
         "term": "4 Dorsal Interossei"
+      }
+    ]
+  },
+  "dorsal-pancreatic-artery": {
+    "notes": [
+      {
+        "text": "ענף עורקי אל הלבלב, בעל שונות במוצא ובמהלך.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Dorsal pancreatic artery"
+      }
+    ]
+  },
+  "dorsal-scapular-artery": {
+    "notes": [
+      {
+        "text": "עורק לאזור המדיאלי של השכמה ולשרירים סמוכים.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Dorsal scapular artery"
       }
     ]
   },
@@ -2825,6 +2877,15 @@
       }
     ]
   },
+  "frontal-nerve": {
+    "notes": [
+      {
+        "text": "העצב הפרונטלי, ענף של V1 המתפצל באזור גג הארובה.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Frontal nerve"
+      }
+    ]
+  },
   "frontalis-muscle": {
     "notes": [
       {
@@ -2900,6 +2961,42 @@
         "text": "עורק לקיבה, בעיקר לאורך העקמומיות הקטנה.",
         "section": "חלל הבטן ואיבריו",
         "term": "Left gastric artery"
+      }
+    ]
+  },
+  "gastric-artery-right": {
+    "notes": [
+      {
+        "text": "עורק העובר לאורך הצד הימני של העקמומיות הקטנה של הקיבה.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Right gastric artery"
+      }
+    ]
+  },
+  "gastric-vein": {
+    "notes": [
+      {
+        "text": "ורידים המנקזים את הקיבה למערכת הפורטלית.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Gastric vein"
+      }
+    ]
+  },
+  "gastro-omental-artery-left": {
+    "notes": [
+      {
+        "text": "עורק ממערכת הטחול לאורך הצד השמאלי של העקמומיות הגדולה.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Left gastro-omental/epiploic artery"
+      }
+    ]
+  },
+  "gastro-omental-artery-right": {
+    "notes": [
+      {
+        "text": "עורק לאורך החלק הימני של העקמומיות הגדולה של הקיבה.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Right gastro-omental/epiploic artery"
       }
     ]
   },
@@ -4509,6 +4606,15 @@
     "he": "בלוטת הדמעות",
     "heHeading": "בלוטת הדמעות"
   },
+  "lacrimal-nerve": {
+    "notes": [
+      {
+        "text": "העצב הלקרימלי, ענף של V1 לתחושה בצד העליון־צדי של הארובה.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Lacrimal nerve"
+      }
+    ]
+  },
   "lacrimal-sac": {
     "notes": [
       {
@@ -4735,6 +4841,15 @@
         "text": "שריר מהצוואר לשכמה, המרים אותה ומסייע בסיבוב מטה.",
         "section": "גב ועמוד שדרה",
         "term": "Levator scapulae"
+      }
+    ]
+  },
+  "levator-veli-palatini-muscle": {
+    "notes": [
+      {
+        "text": "שריר המרים את החך הרך ומסייע בסגירת המעבר ללוע האפי.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Levator veli palatini (מכוסה במוקוזה)"
       }
     ]
   },
@@ -7013,6 +7128,16 @@
       }
     ]
   },
+  "posterior-superior-pancreaticoduodenal-artery": {
+    "notes": [
+      {
+        "text": "ענפים המספקים את ראש הלבלב והתריסריון מלמעלה.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Superior pancreaticoduodenal artery (Anterior & Posterior)",
+        "shared": true
+      }
+    ]
+  },
   "posterior-talofibular-ligament": {
     "notes": [
       {
@@ -7360,6 +7485,40 @@
         "shared": true
       }
     ]
+  },
+  "rectum": {
+    "notes": [
+      {
+        "text": "חלקו הסופי של המעי הגס באגן, בין הסיגמה לתעלה האנאלית. משמשת לאגירה זמנית של צואה. יחסיה הקדמיים משתנים בין אנטומיה זכרית לנקבית; החיבור לתעלה האנאלית מושפע מפעולת שריר הפובורקטליס.",
+        "section": "מערכת העיכול",
+        "term": "Rectum"
+      },
+      {
+        "text": "החלחולת, מקטע המעי באגן שלפני התעלה האנאלית.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Rectum"
+      },
+      {
+        "text": "הרחבה בחלחולת המשמשת לאגירה זמנית של צואה.",
+        "section": "אגן ופרינאום",
+        "term": "Ampulla of rectum",
+        "shared": true
+      },
+      {
+        "text": "הזווית בין הרקטום לתעלה האנאלית, הנשמרת בין השאר בידי הפובורקטליס.",
+        "section": "אגן ופרינאום",
+        "term": "Anorectal flexure",
+        "shared": true
+      },
+      {
+        "text": "קפלים רוחביים בדופן הרקטום.",
+        "section": "אגן ופרינאום",
+        "term": "Transverse rectal folds",
+        "shared": true
+      }
+    ],
+    "he": "חלחולת",
+    "heHeading": "החלחולת"
   },
   "rectus-abdominis-muscle": {
     "notes": [
@@ -7746,6 +7905,15 @@
     "he": "שלפוחית הזרע",
     "heHeading": "שלפוחיות הזרע"
   },
+  "semispinalis-capitis-muscle": {
+    "notes": [
+      {
+        "text": "שריר עמוק הפושט את הראש ומסייע בסיבובו לצד הנגדי.",
+        "section": "גב ועמוד שדרה",
+        "term": "Semispinalis capitis"
+      }
+    ]
+  },
   "semitendinosus-muscle": {
     "notes": [
       {
@@ -7833,15 +8001,6 @@
       }
     ]
   },
-  "sigmoid-colon": {
-    "notes": [
-      {
-        "text": "מקטע המעי הגס בצורת לולאה המחבר בין היורד לרקטום.",
-        "section": "חלל הבטן ואיבריו",
-        "term": "Sigmoid colon"
-      }
-    ]
-  },
   "sinus-of-frontal-bone": {
     "notes": [
       {
@@ -7891,6 +8050,15 @@
         "section": "השלמות בית החזה",
         "term": "Ribs",
         "shared": true
+      }
+    ]
+  },
+  "small-cardiac-vein": {
+    "notes": [
+      {
+        "text": "וריד לבבי קטן, המנקז בעיקר אזורים ימניים של הלב.",
+        "section": "בית החזה",
+        "term": "Small Cardiac Vein"
       }
     ]
   },
@@ -8688,6 +8856,15 @@
         "text": "שריר אמה מקורב המסובב אותה לסופינציה.",
         "section": "גפה עליונה",
         "term": "Supinator"
+      }
+    ]
+  },
+  "supra-orbital-nerve": {
+    "notes": [
+      {
+        "text": "ענף של V1 למצח ולקרקפת הקדמית.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Supra-orbital nerve"
       }
     ]
   },

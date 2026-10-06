@@ -80,6 +80,13 @@ export const MODEL_SOURCES = {
     credit: "University of Dundee",
     commercialUse: false,
   },
+  BodyParts3D: {
+    license: "CC BY-SA 2.1 JP",
+    attribution:
+      "BodyParts3D © The Database Center for Life Science (CC BY-SA 2.1 JP): pieces Z-Anatomy lacks, fitted into the Z-Anatomy body.",
+    credit: "BodyParts3D",
+    commercialUse: true,
+  },
   "Human Reference Atlas": {
     license: "CC BY 4.0",
     attribution:
@@ -123,6 +130,31 @@ const MALE_ONLY = new Set([
   "Deep dorsal vein of penis",
   "Superficial dorsal veins of penis",
 ]);
+
+/**
+ * Z-Anatomy meshes whose source label is wrong, by base name → the right
+ * structure (shown as a whole of its own). "Sigmoid colon" is the rectum:
+ * a midline tube in front of the sacrum from the pelvic floor to S2–S3,
+ * where BodyParts3D (Z-Anatomy's own source) places its "rectum"; the
+ * sigmoid loop is part of Z-Anatomy's "Descending colon" mesh.
+ * docs/DECISIONS.md → "Z-Anatomy's sigmoid colon is the rectum".
+ */
+const RELABEL: Readonly<Record<string, string>> = {
+  "Sigmoid colon": "Rectum",
+};
+
+function relabelled(raw: ManifestEntry): {
+  entry: ManifestEntry;
+  parsed: ParsedName;
+} {
+  const parsed = parseName(raw.name);
+  const base = RELABEL[parsed.base];
+  if (base === undefined) return { entry: raw, parsed };
+  const entry: ManifestEntry = { ...raw };
+  delete entry.group;
+  delete entry.groupSide;
+  return { entry, parsed: { ...parsed, base } };
+}
 
 /** Z-Anatomy English base names that have hand-curated content. */
 const CONCEPT_BY_NAME: Record<string, ConceptKey> = {
@@ -209,8 +241,8 @@ export function buildZAnatomyDataset(manifest: readonly ManifestEntry[]): {
   const meshSex: Record<string, BodySex> = {};
   const wholeRegions = new Map<string, AnatomyRegion[]>();
 
-  for (const entry of manifest) {
-    const parsed = parseName(entry.name);
+  for (const raw of manifest) {
+    const { entry, parsed } = relabelled(raw);
     const sex = entry.sex ?? (MALE_ONLY.has(parsed.base) ? "male" : undefined);
     if (sex) meshSex[entry.name] = sex;
     const wholeSide = entry.groupSide ?? parsed.side;

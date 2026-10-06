@@ -562,3 +562,29 @@ The user chose option 1 of the 2026-10-05 entry.
   ductus deferens, ejaculatory duct, seminal gland, prostate, the male
   urethra (it runs through the penis), the bladder mesh, testicular and
   penile vessels. The ureters are kept (they end at the bladder).
+
+## 2026-10-06 — Z-Anatomy's "Sigmoid colon" is the rectum
+
+Adding BodyParts3D's rectum showed that 84% of it lies within 1 cm of
+Z-Anatomy's "Sigmoid colon" mesh. That mesh is a midline tube in front of
+the sacrum, from the pelvic floor (the anal sphincter) up to S2–S3: the
+rectum's course. BodyParts3D, which Z-Anatomy is built from, has a rectum
+file but no sigmoid colon file, and Z-Anatomy's "Descending colon" reaches
+down to the midline, so the sigmoid loop is part of it.
+
+- The app shows that mesh as **Rectum** (`RELABEL` in `z-anatomy/build.ts`),
+  as a whole of its own (no longer a part of "Colon"); BodyParts3D's rectum
+  is not added (it would duplicate it). Her rectum notes go on it; her
+  sigmoid colon note goes on the descending colon.
+- Listed in `docs/CONTENT_REVIEW.md` for her to confirm.
+
+## 2026-10-06 — BodyParts3D pieces: global affine + local ICP
+
+BodyParts3D (CC BY-SA 2.1 JP, Z-Anatomy's own source) fills small gaps:
+cardiac veins, gastric/pancreatic arteries, orbital nerves, levator veli
+palatini, semispinalis capitis, dorsal scapular arteries. It is in
+millimetres in its own frame, and Z-Anatomy remodelled parts of it: one
+global affine from 607 name-matched anchors is ~12 mm off. Each piece
+therefore gets a local similarity correction by ICP on the anchors within
+7 cm (0.6–3.3 mm median). Alternative — per-piece manual placement — was
+slower and less reproducible.

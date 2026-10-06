@@ -103,10 +103,16 @@ All verified by `npm run e2e:smoke` against a production build.
   vessels), 12 meshes under **non-commercial** licences, behind
   `INCLUDE_NON_COMMERCIAL` (`THIRD_PARTY_ASSETS.md` → "Going commercial").
   An eighth file, `public/models/hra/female.glb`, holds the female organs
-  (female body only, below). Male body: 2,887 meshes → 2,961 structures
-  (2,531 wholes); female body: 2,913 meshes → 2,992 structures (2,527
-  wholes); ≈3.7M triangles, 18.9 MB in all; the skeleton loads first and
-  frames the camera, the rest streams in ("Loading body systems n/7", n/8
+  (female body only, below); a ninth, `public/models/bodyparts3d/extras.glb`,
+  23 small pieces from **BodyParts3D** (CC BY-SA 2.1 JP): small/anterior
+  cardiac veins, right gastric, dorsal pancreatic, superior
+  pancreaticoduodenal and gastro-omental arteries, gastric veins, a bronchial
+  artery, frontal/lacrimal/supra-orbital nerves, levator veli palatini,
+  semispinalis capitis, dorsal scapular arteries. Z-Anatomy's "Sigmoid
+  colon" mesh is shown as the **Rectum** (it is; DECISIONS). Male body: 2,910 meshes → 2,984 structures
+  (2,555 wholes); female body: 2,936 meshes → 3,015 structures (2,551
+  wholes); ≈3.7M triangles, 20 MB in all; the skeleton loads first and
+  frames the camera, the rest streams in ("Loading body systems n/8", n/9
   in the female body). Credits: full on
   the home page, source names in the viewer. Left out: coverings (fasciae, meninges, pleura, greater omentum), liver segments.
   Pipelines: `scripts/anatomy/z-anatomy/README.md`,
@@ -205,11 +211,11 @@ All verified by `npm run e2e:smoke` against a production build.
    4e. **Fill model gaps** (`docs/MODEL_SOURCES.md`): **Open3DModel done**
    (206 meshes, limbs + lumbosacral plexus); **Z-Anatomy's NC inner ear and
    kidney done** (user allowed NC); **female organs done** (Human Reference
-   Atlas, female body). The other NC sources were checked and
-   none fills a gap (`docs/MODEL_SOURCES.md` → "Non-commercial sources").
-   Next, in order: BodyParts3D (rectum, some nerves/arteries); then hand-made
-   models for the phrenic nerve, cervical plexus, laryngeal nerves and
-   thoracic duct (no source has them). NC models go into the
+   Atlas, female body); **BodyParts3D pieces done** (23 small pieces; its
+   rectum showed Z-Anatomy's "Sigmoid colon" is the rectum). The other NC
+   sources were checked and none fills a gap (`docs/MODEL_SOURCES.md` →
+   "Non-commercial sources"). Next: hand-made models for the phrenic nerve,
+   cervical plexus, laryngeal nerves and thoracic duct (no source has them). NC models go into the
    non-commercial file only. Open3DModel's
    retinacula, tendon sheaths and spaces (femoral/adductor canal) were left
    out as coverings — could come back as a toggleable layer. Phrenic nerve,
@@ -440,3 +446,12 @@ All verified by `npm run e2e:smoke` against a production build.
   shown, no prostate.
 - **2026-10-06 · session 3 (cont.)** — Male/female switch merged to `main`
   (user: "Yes").
+- **2026-10-06 · session 3 (cont.)** — BodyParts3D pieces (user: "continue"):
+  `scripts/anatomy/bodyparts3d/export_bp3d.py` fits 23 pieces Z-Anatomy
+  lacks (global affine from 607 name-matched anchors, then local ICP,
+  0.6–3.3 mm) → `bodyparts3d/extras.glb` + `manifest-bp3d.json`. Its rectum
+  overlapped Z-Anatomy's "Sigmoid colon" — which is the rectum (midline,
+  pelvic floor to S2–S3; the sigmoid loop is in "Descending colon"):
+  relabelled in `build.ts` (`RELABEL`), not duplicated. Her notes: +13
+  entries (rectum and its parts, cardiac veins, orbital nerves, gastric and
+  pancreatic arteries…), 112 left.
