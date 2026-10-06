@@ -396,3 +396,6 @@ All verified by `npm run e2e:smoke` against a production build.
   Hebrew "כליה" (her singular).
   Going-commercial checklist also notes Z-Anatomy's unlicensed-looking
   "Brainder"/"White matter" (University of Washington) credits.
+- **2026-10-06 · session 3 (cont.)** — Open3DModel extras and the
+  non-commercial inner ear/kidney merged to `main` (user: "Yes"), so they
+  reach production.
