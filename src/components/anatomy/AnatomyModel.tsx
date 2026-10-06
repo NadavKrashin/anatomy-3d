@@ -85,6 +85,7 @@ export function AnatomyModel({ id, url }: { id: string; url: string }) {
           visualStateFor(structure, index.partByMesh.get(mesh), state),
         );
       }
+      for (const mesh of index.unmapped) controller.apply(mesh, "hidden");
       getThree().gl.domElement.style.cursor = state.hoveredStructureId
         ? "pointer"
         : "";

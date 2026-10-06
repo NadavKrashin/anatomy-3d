@@ -181,6 +181,15 @@
       }
     ]
   },
+  "ampulla-of-uterine-tube": {
+    "notes": [
+      {
+        "text": "אמפולת החצוצרה: החלק הרחב שבו מתרחשת לרוב ההפריה.",
+        "section": "אגן ופרינאום",
+        "term": "Ampulla of uterine tube"
+      }
+    ]
+  },
   "anconeus-muscle": {
     "notes": [
       {
@@ -792,6 +801,15 @@
       }
     ]
   },
+  "body-of-uterus": {
+    "notes": [
+      {
+        "text": "גוף הרחם, החלק המרכזי השרירי שמעל הצוואר.",
+        "section": "השלמות איברי הבטן והאגן",
+        "term": "Body of uterus"
+      }
+    ]
+  },
   "brachial-artery": {
     "notes": [
       {
@@ -882,6 +900,23 @@
       }
     ]
   },
+  "breast": {
+    "notes": [
+      {
+        "text": "רקמת בלוטה ושומן בדופן החזה, שטחית לשריר החזה הגדול. בלוטות החלב מתנקזות בצינורות אל הפטמה. לניקוז הלימפתי, בעיקר לכיוון בית השחי, חשיבות אנטומית. השד עצמו אינו שריר.",
+        "section": "בית החזה",
+        "term": "Breast"
+      },
+      {
+        "text": "בלוטת החלב בתוך רקמת השד, המנקזת הפרשה דרך צינורות לפטמה.",
+        "section": "בית החזה",
+        "term": "בלוטת השד (Mammary Gland)",
+        "shared": true
+      }
+    ],
+    "he": "שד",
+    "heHeading": "השד"
+  },
   "buccal-nerve": {
     "notes": [
       {
@@ -966,6 +1001,15 @@
       }
     ]
   },
+  "cardinal-ligament": {
+    "notes": [
+      {
+        "text": "רקמת תמיכה צדדית בצוואר הרחם, שבה עוברים כלי דם רחמיים.",
+        "section": "אגן ופרינאום",
+        "term": "Transverse cervical ligament (Lateral cardinal ligament)"
+      }
+    ]
+  },
   "cauda-equina": {
     "notes": [
       {
@@ -1021,6 +1065,22 @@
         "shared": true
       }
     ]
+  },
+  "cervix-of-uterus": {
+    "notes": [
+      {
+        "text": "החלק התחתון של הרחם הבולט אל הנרתיק. התעלה הצווארית מחברת בין חלל הרחם לנרתיק באמצעות פתח פנימי וחיצוני. הכיפות הנרתיקיות מקיפות את חלקו הבולט. זהו חלק של הרחם ולא בלוטה נפרדת.",
+        "section": "מערכת הרבייה הנקבית",
+        "term": "Cervix"
+      },
+      {
+        "text": "החלק התחתון של הרחם המתחבר לנרתיק.",
+        "section": "אגן ופרינאום",
+        "term": "Cervix of uterus"
+      }
+    ],
+    "he": "צוואר הרחם",
+    "heHeading": "צוואר הרחם"
   },
   "chorda-tympani": {
     "notes": [
@@ -2472,6 +2532,15 @@
       }
     ]
   },
+  "fimbriae-of-uterine-tube": {
+    "notes": [
+      {
+        "text": "שלוחות בקצה החצוצרה המסייעות בקליטת הביצית.",
+        "section": "אגן ופרינאום",
+        "term": "Fimbriae of uterine tube"
+      }
+    ]
+  },
   "first-metacarpal-bone": {
     "notes": [
       {
@@ -2763,6 +2832,25 @@
         "section": "פנים ואזור טמפורלי",
         "term": "Occipitofrontalis - Frontalis & Occipitalis",
         "shared": true
+      }
+    ]
+  },
+  "fundus-of-urinary-bladder": {
+    "notes": [
+      {
+        "text": "קודקוד השלפוחית פונה קדימה; הקרקעית היא המשטח האחורי שלה.",
+        "section": "אגן ופרינאום",
+        "term": "Apex and fundus of urinary bladder",
+        "shared": true
+      }
+    ]
+  },
+  "fundus-of-uterus": {
+    "notes": [
+      {
+        "text": "קרקעית הרחם, הכיפה שמעל כניסת החצוצרות.",
+        "section": "השלמות איברי הבטן והאגן",
+        "term": "Fundus of uterus"
       }
     ]
   },
@@ -3726,6 +3814,15 @@
       }
     ]
   },
+  "infundibulum-of-uterine-tube": {
+    "notes": [
+      {
+        "text": "משפך החצוצרה, הסמוך לשחלה.",
+        "section": "אגן ופרינאום",
+        "term": "Infundibulum of uterine tube"
+      }
+    ]
+  },
   "inguinal-ligament": {
     "notes": [
       {
@@ -4294,6 +4391,15 @@
         "text": "הקשתית, השולטת בגודל האישון ובכמות האור הנכנסת.",
         "section": "ראש וצוואר ואיברי החישה",
         "term": "Iris"
+      }
+    ]
+  },
+  "isthmus-of-uterine-tube": {
+    "notes": [
+      {
+        "text": "האיסתמוס של החצוצרה: הקטע הצר הסמוך לרחם.",
+        "section": "אגן ופרינאום",
+        "term": "Isthmus of uterine tube"
       }
     ]
   },
@@ -5730,6 +5836,15 @@
       }
     ]
   },
+  "nipple": {
+    "notes": [
+      {
+        "text": "הפטמה היא מוצא צינורות החלב; מיקומה משתנה ואינו ציון גרמי קבוע.",
+        "section": "בית החזה",
+        "term": "Nipple - מיקום אנטומי"
+      }
+    ]
+  },
   "nucleus-pulposus-c2-c3": {
     "notes": [
       {
@@ -6309,6 +6424,37 @@
         "term": "Oropharynx"
       }
     ]
+  },
+  "ovarian-ligament": {
+    "notes": [
+      {
+        "text": "רצועה המחברת בין השחלה לרחם.",
+        "section": "אגן ופרינאום",
+        "term": "Ligament of the ovary / ovarian ligament"
+      }
+    ]
+  },
+  "ovary": {
+    "notes": [
+      {
+        "text": "איברי המין המייצרים ביציות ומפרישים הורמונים. נמצאות באגן בסמיכות לחצוצרות. רצועת השחלה מחברת לרחם; הרצועה התולה מכילה את כלי הדם השחלתיים. השחלה אינה מחוברת לחלל החצוצרה כצינור אטום.",
+        "section": "מערכת הרבייה הנקבית",
+        "term": "Ovaries"
+      },
+      {
+        "text": "בלוטת מין המייצרת ביציות והורמונים.",
+        "section": "אגן ופרינאום",
+        "term": "Ovary"
+      },
+      {
+        "text": "קפל קצר המחבר את השחלה לרצועה הרחבה.",
+        "section": "אגן ופרינאום",
+        "term": "Mesovarium",
+        "shared": true
+      }
+    ],
+    "he": "שחלה",
+    "heHeading": "השחלות"
   },
   "palatine-bone": {
     "notes": [
@@ -7340,6 +7486,20 @@
         "text": "שרירים עמוקים בין חוליות, חשובים לייצוב ולבקרה תחושתית.",
         "section": "גב ועמוד שדרה",
         "term": "Rotatores (Brevis & Longus)"
+      }
+    ]
+  },
+  "round-ligament-of-uterus": {
+    "notes": [
+      {
+        "text": "רצועה מהרחם העוברת בתעלה המפשעתית ומגיעה לשפתיים הגדולות.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Round ligament of the uterus"
+      },
+      {
+        "text": "רצועה מן הרחם דרך התעלה המפשעתית לשפתיים הגדולות.",
+        "section": "אגן ופרינאום",
+        "term": "Round ligament of uterus"
       }
     ]
   },
@@ -8602,6 +8762,24 @@
       }
     ]
   },
+  "suspensory-ligament-of-ovary": {
+    "notes": [
+      {
+        "text": "רצועה מהשחלה לדופן האגן, הנושאת כלי דם שחלתיים.",
+        "section": "אגן ופרינאום",
+        "term": "Suspensory ligament of the ovary"
+      }
+    ]
+  },
+  "suspensory-ligaments-of-breast": {
+    "notes": [
+      {
+        "text": "רצועות רקמת חיבור התומכות בשד ומקשרות בין שכבותיו לעור.",
+        "section": "בית החזה",
+        "term": "Suspensory Ligaments of Cooper"
+      }
+    ]
+  },
   "sympathetic-trunk": {
     "notes": [
       {
@@ -9376,6 +9554,16 @@
       }
     ]
   },
+  "trigone-of-urinary-bladder": {
+    "notes": [
+      {
+        "text": "אזור משולש בשלפוחית בין פתחי השופכנים לפתח השופכה.",
+        "section": "אגן ופרינאום",
+        "term": "Trigone",
+        "shared": true
+      }
+    ]
+  },
   "triquetrum-bone": {
     "notes": [
       {
@@ -9571,6 +9759,16 @@
     "he": "שופכן",
     "heHeading": "השופכנים"
   },
+  "ureteric-orifice": {
+    "notes": [
+      {
+        "text": "מקום כניסת כל שופכן אל שלפוחית השתן.",
+        "section": "אגן ופרינאום",
+        "term": "Ureteric orifice",
+        "shared": true
+      }
+    ]
+  },
   "urethra": {
     "notes": [
       {
@@ -9641,10 +9839,75 @@
         "section": "אגן ופרינאום",
         "term": "Apex and fundus of urinary bladder",
         "shared": true
+      },
+      {
+        "text": "שקע צפקי בין שלפוחית השתן לרחם.",
+        "section": "אגן ופרינאום",
+        "term": "Vesicouterine pouch",
+        "shared": true
       }
     ],
     "he": "שלפוחית השתן",
     "heHeading": "שלפוחית השתן"
+  },
+  "uterine-tube": {
+    "notes": [
+      {
+        "text": "צינורות בין אזור השחלות לרחם. כוללות משפך ופימבריות, אמפולה, איסתמוס וחלק רחמי. מניעות את הביצית והעובר המוקדם; הפריה מתרחשת בדרך כלל באמפולה. הפימבריות סמוכות לשחלה אך אינן המשך ישיר שלה.",
+        "section": "מערכת הרבייה הנקבית",
+        "term": "Uterine tubes"
+      },
+      {
+        "text": "צינור המוביל מאזור השחלה לכיוון הרחם.",
+        "section": "אגן ופרינאום",
+        "term": "Uterine (fallopian) tube"
+      }
+    ],
+    "he": "חצוצרה",
+    "heHeading": "החצוצרות"
+  },
+  "uterosacral-ligament": {
+    "notes": [
+      {
+        "text": "רצועה תומכת בין אזור צוואר הרחם לסקרום.",
+        "section": "אגן ופרינאום",
+        "term": "Uterosacral ligament"
+      }
+    ]
+  },
+  "uterus": {
+    "notes": [
+      {
+        "text": "איבר שרירי חלול בין השלפוחית לרקטום. כולל קרקעית, גוף וצוואר. האנדומטריום מצפה את חללו והמיומטריום הוא השכבה השרירית. משמש להשרשה ולהתפתחות ההיריון; מנחו עשוי להשתנות בין נשים.",
+        "section": "מערכת הרבייה הנקבית",
+        "term": "Uterus"
+      },
+      {
+        "text": "איבר שרירי חלול להשרשה ולהיריון.",
+        "section": "אגן ופרינאום",
+        "term": "Uterus"
+      },
+      {
+        "text": "קפל צפק כפול משני צדי הרחם.",
+        "section": "אגן ופרינאום",
+        "term": "Broad ligament of the uterus",
+        "shared": true
+      },
+      {
+        "text": "שקע צפקי בין שלפוחית השתן לרחם.",
+        "section": "אגן ופרינאום",
+        "term": "Vesicouterine pouch",
+        "shared": true
+      },
+      {
+        "text": "שקע צפקי בין הרחם לרקטום, המכונה כיס דאגלס.",
+        "section": "אגן ופרינאום",
+        "term": "Rectouterine pouch (Douglas)",
+        "shared": true
+      }
+    ],
+    "he": "רחם",
+    "heHeading": "הרחם"
   },
   "uvula-of-palate": {
     "notes": [
@@ -9654,6 +9917,28 @@
         "term": "Uvula"
       }
     ]
+  },
+  "vagina": {
+    "notes": [
+      {
+        "text": "תעלה שרירית וגמישה בין צוואר הרחם לפרוזדור הפות. ממוקמת מאחורי השופכה והשלפוחית ולפני הרקטום. סביב צוואר הרחם נוצרים הפורניקסים. יש להבדיל בין הנרתיק הפנימי לבין איברי המין החיצוניים.",
+        "section": "מערכת הרבייה הנקבית",
+        "term": "Vagina"
+      },
+      {
+        "text": "תעלה שרירית מצוואר הרחם אל הפרוזדור החיצוני.",
+        "section": "אגן ופרינאום",
+        "term": "Vagina"
+      },
+      {
+        "text": "שקעים בנרתיק סביב החלק הבולט של צוואר הרחם.",
+        "section": "אגן ופרינאום",
+        "term": "Vaginal fornix (Anterior/Lateral/Posterior)",
+        "shared": true
+      }
+    ],
+    "he": "נרתיק",
+    "heHeading": "הנרתיק"
   },
   "vagus-nerve-x": {
     "notes": [

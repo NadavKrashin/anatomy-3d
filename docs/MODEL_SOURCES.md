@@ -19,7 +19,8 @@ not commercial); they go into the separate non-commercial model file
 ear and kidney are in. The NC sources under "Not usable" below are now candidates;
 their contents still need checking.
 
-**Status:** Open3DModel is integrated (206 meshes, 2026-10-06 — see
+**Status:** the Human Reference Atlas female organs are integrated (female
+body, 2026-10-06 — `scripts/anatomy/hra/README.md`). Open3DModel is integrated (206 meshes, 2026-10-06 — see
 `scripts/anatomy/open3dmodel/README.md`). The ~740 count below was before
 removing duplicates, coverings and spaces.
 

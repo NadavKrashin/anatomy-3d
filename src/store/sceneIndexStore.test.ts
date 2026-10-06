@@ -9,6 +9,7 @@ const indexOf = (entries: [string, Mesh[]][]): SceneIndex => ({
   meshesByStructure: new Map(entries),
   structureByMesh: new Map(),
   partByMesh: new Map(),
+  unmapped: [],
 });
 
 describe("scene index store", () => {

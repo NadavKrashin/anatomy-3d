@@ -226,6 +226,35 @@ export async function exploreFlow(browser: Browser, errors: string[]) {
   );
   await desktop.screenshot({ path: `${SHOTS}/organ-heart.png` });
 
+  // Female body: the female organs replace the male ones.
+  await desktop.getByRole("button", { name: "Settings" }).first().click();
+  await desktop.getByText("Female", { exact: true }).click();
+  await desktop.screenshot({ path: `${SHOTS}/settings-body.png` });
+  await desktop.keyboard.press("Escape");
+  await waitForModel(desktop);
+  await desktop.locator("#structure-search").fill("uterus");
+  await desktop.waitForSelector('[role="option"]');
+  await desktop
+    .getByRole("option", { name: /^Uterus/ })
+    .first()
+    .click();
+  await desktop.waitForTimeout(1200);
+  assert(
+    (await infoTitle(desktop)) === "Uterus",
+    "the female body shows the uterus",
+  );
+  await desktop.screenshot({ path: `${SHOTS}/female-uterus.png` });
+  await desktop.locator("#structure-search").fill("prostate");
+  await desktop.waitForTimeout(600);
+  assert(
+    (await desktop.getByRole("option", { name: /^Prostate/ }).count()) === 0,
+    "the female body has no prostate",
+  );
+  await desktop.locator("#structure-search").fill("");
+  await desktop.getByRole("button", { name: "Settings" }).first().click();
+  await desktop.getByText("Male", { exact: true }).click();
+  await desktop.keyboard.press("Escape");
+
   // iPad landscape, Hebrew, region scope.
   const ipad = await openPage(browser, errors, {
     viewport: { width: 1180, height: 820 },

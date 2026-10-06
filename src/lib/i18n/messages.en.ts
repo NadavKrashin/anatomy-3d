@@ -171,6 +171,8 @@ export const en: Messages = {
     saveFailed: "Progress couldn't be saved on this device.",
   },
   settings: {
+    body: "Body",
+    bodySex: { male: "Male", female: "Female" },
     interfaceLanguage: "Interface language",
     primaryTerm: "Primary name language",
     secondaryTerm: "Secondary name language",

@@ -189,6 +189,11 @@
     "source": "https://medintzfat.com/anatomy/lower-limb-part4",
     "uses": 1
   },
+  "areola": {
+    "en": "Areola",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 1
+  },
   "articularis-genus": {
     "en": "Articularis genu",
     "source": "https://medintzfat.com/anatomy/lower-limb-part4",
@@ -285,6 +290,11 @@
     "source": "https://medintzfat.com/anatomy/lab2",
     "uses": 6
   },
+  "body-of-uterus": {
+    "en": "Body of uterus",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 8
+  },
   "brachial-artery": {
     "en": "Brachial artery",
     "source": "https://medintzfat.com/anatomy/lab1",
@@ -352,6 +362,11 @@
     "source": "https://medintzfat.com/anatomy/class9",
     "uses": 2
   },
+  "cardinal-ligament": {
+    "en": "Cardinal ligament",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 6
+  },
   "cauda-equina": {
     "en": "Cauda equina",
     "source": "https://medintzfat.com/anatomy/quiz-head-neck",
@@ -376,6 +391,11 @@
     "en": "Cerebellum",
     "source": "https://medintzfat.com/anatomy/lab9",
     "uses": 3
+  },
+  "cervix-of-uterus": {
+    "en": "Cervix of uterus",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 4
   },
   "chorda-tympani": {
     "en": "Chorda tympani",
@@ -925,6 +945,11 @@
     "source": "https://medintzfat.com/anatomy/quiz-head-neck",
     "uses": 10
   },
+  "fundus-of-uterus": {
+    "en": "Fundus of uterus",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 4
+  },
   "gallbladder": {
     "en": "Gallbladder",
     "source": "https://medintzfat.com/anatomy/quiz-abdomen",
@@ -1369,6 +1394,16 @@
     "source": "https://medintzfat.com/anatomy/lab9",
     "uses": 7
   },
+  "lactiferous-ducts": {
+    "en": "Lactiferous ducts",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 2
+  },
+  "lactiferous-sinuses": {
+    "en": "Lactiferous sinuses",
+    "source": "https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01",
+    "uses": 4
+  },
   "laryngopharynx": {
     "en": "Laryngopharynx",
     "source": "https://medintzfat.com/anatomy/lab9",
@@ -1786,6 +1821,11 @@
     "source": "https://medintzfat.com/anatomy/pelvis-male",
     "uses": 1
   },
+  "nipple": {
+    "en": "Nipple",
+    "source": "https://medintzfat.com/anatomy/lab2",
+    "uses": 4
+  },
   "oblique-popliteal-ligament": {
     "en": "Oblique popliteal ligament",
     "source": "https://medintzfat.com/anatomy/lower-limb-part4",
@@ -1904,6 +1944,16 @@
     "en": "Oropharynx",
     "source": "https://medintzfat.com/anatomy/nasal-cavity",
     "uses": 15
+  },
+  "ovarian-ligament": {
+    "en": "Ovarian ligament",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 25
+  },
+  "ovary": {
+    "en": "Ovary",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 13
   },
   "palatine-bone": {
     "en": "Palatine bone",
@@ -2348,6 +2398,11 @@
     "source": "https://medintzfat.com/anatomy/lab8",
     "uses": 13
   },
+  "round-ligament-of-uterus": {
+    "en": "Round ligament of uterus",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 16
+  },
   "sacral-plexus": {
     "en": "Sacral plexus",
     "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
@@ -2786,6 +2841,11 @@
     "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
     "uses": 38
   },
+  "suspensory-ligament-of-ovary": {
+    "en": "Suspensory ligament of ovary",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 15
+  },
   "sympathetic-trunk": {
     "en": "Sympathetic trunk",
     "source": "https://medintzfat.com/anatomy/labs-semester-b",
@@ -3070,6 +3130,11 @@
     "he": "צינור הכליה",
     "heSource": "https://medintzfat.com/anatomy/pelvis"
   },
+  "ureteric-orifice": {
+    "en": "Ureteric orifice",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 1
+  },
   "urethra": {
     "en": "Urethra",
     "source": "https://medintzfat.com/anatomy/quiz-abdomen",
@@ -3079,6 +3144,26 @@
     "en": "Urinary bladder",
     "source": "https://medintzfat.com/anatomy/labs-semester-b",
     "uses": 12
+  },
+  "uterine-tube": {
+    "en": "Uterine tube",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 14
+  },
+  "uterosacral-ligament": {
+    "en": "Uterosacral ligament",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 6
+  },
+  "uterus": {
+    "en": "Uterus",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 14
+  },
+  "vagina": {
+    "en": "Vagina",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 6
   },
   "vagus-nerve-x": {
     "en": "Vagus nerve",

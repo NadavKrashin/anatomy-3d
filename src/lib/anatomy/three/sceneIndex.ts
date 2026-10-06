@@ -10,6 +10,8 @@ export interface SceneIndex {
   structureByMesh: Map<Mesh, AnatomicalStructure>;
   /** The part each mesh belongs to, for meshes that are part of a whole. */
   partByMesh: Map<Mesh, AnatomicalStructure>;
+  /** Meshes no structure claims, e.g. the other body's (drawn hidden). */
+  unmapped: Mesh[];
 }
 
 const isMesh = (object: Object3D): object is Mesh =>
@@ -27,6 +29,7 @@ export function buildSceneIndex(
   const meshesByStructure = new Map<string, Mesh[]>();
   const structureByMesh = new Map<Mesh, AnatomicalStructure>();
   const partByMesh = new Map<Mesh, AnatomicalStructure>();
+  const unmapped: Mesh[] = [];
   const add = (id: string, mesh: Mesh) => {
     const list = meshesByStructure.get(id) ?? [];
     list.push(mesh);
@@ -53,7 +56,8 @@ export function buildSceneIndex(
       }
       node = node.parent;
     }
+    unmapped.push(object);
   });
 
-  return { meshesByStructure, structureByMesh, partByMesh };
+  return { meshesByStructure, structureByMesh, partByMesh, unmapped };
 }

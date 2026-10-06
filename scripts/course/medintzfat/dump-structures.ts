@@ -1,5 +1,6 @@
 /**
- * Writes the model's structure ids (Z-Anatomy, the Open3DModel extras and,
+ * Writes the model's structure ids (Z-Anatomy, the Open3DModel extras, the
+ * female organs (both bodies) and,
  * when included, the non-commercial models) and their raw model names (before the
  * course names are applied) for extract.py and course_names.py.
  *
@@ -13,12 +14,14 @@ import {
 } from "../../../src/data/anatomy/z-anatomy/build";
 import manifest from "../../../src/data/anatomy/z-anatomy/manifest.json";
 import open3dManifest from "../../../src/data/anatomy/z-anatomy/manifest-open3d.json";
+import femaleManifest from "../../../src/data/anatomy/z-anatomy/manifest-female.json";
 import nonCommercialManifest from "../../../src/data/anatomy/z-anatomy/manifest-non-commercial.json";
 import { INCLUDE_NON_COMMERCIAL } from "../../../src/data/anatomy/z-anatomy/index";
 
 const { structures } = buildZAnatomyDataset([
   ...(manifest as ManifestEntry[]),
   ...(open3dManifest as ManifestEntry[]),
+  ...(femaleManifest as ManifestEntry[]),
   ...(INCLUDE_NON_COMMERCIAL ? (nonCommercialManifest as ManifestEntry[]) : []),
 ]);
 const out = process.argv[2] ?? ".course-cache/structures.json";

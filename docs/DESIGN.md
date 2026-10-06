@@ -69,6 +69,11 @@ rows — lists, not boxes.
 Text aligns to the reading start (right in Hebrew). Home is a **contents
 page** (regions as a ruled list with counts), not a grid of cards.
 
+The settings menu (⚙) starts with the body: a `Segmented` "Male / Female"
+switch (2026-10-06), then the language selects. The switch changes the
+whole app (model, legend counts, search, quizzes), so it lives in settings,
+not in the viewer toolbar.
+
 ## Principles
 
 1. **The specimen is the hero.** UI recedes: light surfaces, no borders,

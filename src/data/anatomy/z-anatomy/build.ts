@@ -2,6 +2,7 @@ import type {
   AnatomicalStructure,
   AnatomyRegion,
   AnatomySystem,
+  BodySex,
   BodySide,
   MeshMap,
 } from "@/types/anatomy";
@@ -37,6 +38,8 @@ export interface ManifestEntry {
   groupSide?: BodySide;
   /** The model the mesh comes from when it isn't Z-Anatomy's own (MODEL_SOURCES). */
   source?: Exclude<ModelSourceId, "Z-Anatomy">;
+  /** Shown in this body only (the female organs; MALE_ONLY for Z-Anatomy's). */
+  sex?: BodySex;
 }
 
 export interface ModelSource {
@@ -77,6 +80,13 @@ export const MODEL_SOURCES = {
     credit: "University of Dundee",
     commercialUse: false,
   },
+  "Human Reference Atlas": {
+    license: "CC BY 4.0",
+    attribution:
+      "Human Reference Atlas, HuBMAP — 3D reference organs of the Visible Human Female (CC BY 4.0), fitted into the Z-Anatomy body.",
+    credit: "Human Reference Atlas",
+    commercialUse: true,
+  },
   "lissiecowley kidney": {
     license: "CC BY-NC 4.0",
     attribution:
@@ -87,6 +97,32 @@ export const MODEL_SOURCES = {
 } as const satisfies Record<string, ModelSource>;
 
 export type ModelSourceId = keyof typeof MODEL_SOURCES;
+
+/**
+ * Z-Anatomy's structures that exist in the male body only (the model is
+ * male), by base name. Hidden in the female body, which shows the Human
+ * Reference Atlas's female organs instead. The male urethra runs through the
+ * penis, and the bladder mesh is replaced by the female bladder's parts.
+ */
+const MALE_ONLY = new Set([
+  "Corpus cavernosum of penis",
+  "Corpus spongiosum of penis",
+  "Glans penis",
+  "Testis",
+  "Epididymis",
+  "Ductus deferens",
+  "Ejaculatory duct",
+  "Seminal gland",
+  "Prostate",
+  "Urethra",
+  "Urinary bladder",
+  "Testicular artery",
+  "Testicular vein",
+  "Deep artery of penis",
+  "Dorsal artery of penis",
+  "Deep dorsal vein of penis",
+  "Superficial dorsal veins of penis",
+]);
 
 /** Z-Anatomy English base names that have hand-curated content. */
 const CONCEPT_BY_NAME: Record<string, ConceptKey> = {
@@ -165,14 +201,18 @@ export function buildZAnatomyDataset(manifest: readonly ManifestEntry[]): {
   structures: AnatomicalStructure[];
   meshMap: MeshMap;
   partMeshMap: MeshMap;
+  meshSex: Record<string, BodySex>;
 } {
   const byId = new Map<string, AnatomicalStructure>();
   const meshMap: MeshMap = {};
   const partMeshMap: MeshMap = {};
+  const meshSex: Record<string, BodySex> = {};
   const wholeRegions = new Map<string, AnatomyRegion[]>();
 
   for (const entry of manifest) {
     const parsed = parseName(entry.name);
+    const sex = entry.sex ?? (MALE_ONLY.has(parsed.base) ? "male" : undefined);
+    if (sex) meshSex[entry.name] = sex;
     const wholeSide = entry.groupSide ?? parsed.side;
     const id = toId(entry.group ?? parsed.base, wholeSide);
     meshMap[entry.name] = id;
@@ -203,14 +243,28 @@ export function buildZAnatomyDataset(manifest: readonly ManifestEntry[]): {
     }
   }
 
+  // A structure is one body's when all its meshes are (the bladder isn't:
+  // the male mesh and the female parts make one bladder).
+  const sexes = new Map<string, Set<BodySex | "both">>();
+  for (const map of [meshMap, partMeshMap])
+    for (const [mesh, id] of Object.entries(map))
+      sexes.set(id, (sexes.get(id) ?? new Set()).add(meshSex[mesh] ?? "both"));
+  const sexOf = (id: string): BodySex | undefined => {
+    const set = [...(sexes.get(id) ?? [])];
+    return set.length === 1 && set[0] !== "both" ? set[0] : undefined;
+  };
+
   return {
-    structures: [...byId.values()].map((s) =>
-      wholeRegions.has(s.id)
-        ? { ...s, region: majorityRegion(wholeRegions.get(s.id) ?? []) }
-        : s,
-    ),
+    structures: [...byId.values()].map((s) => {
+      const sex = sexOf(s.id);
+      const region = wholeRegions.has(s.id)
+        ? majorityRegion(wholeRegions.get(s.id) ?? [])
+        : s.region;
+      return { ...s, region, ...(sex ? { sex } : {}) };
+    }),
     meshMap,
     partMeshMap,
+    meshSex,
   };
 }
 

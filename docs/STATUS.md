@@ -46,7 +46,8 @@ Expected today: **189 unit/component tests, 35 e2e checks, all passing; CI green
 | 2026-10-05 | Next: **deploy the first version to Vercel** (user does the Vercel side — see `docs/DEPLOYMENT.md`).                                                                                                                                                                                                                           |
 | 2026-10-05 | Next features chosen by the user: **muscle parts**, then **origins & insertions**.                                                                                                                                                                                                                                             |
 | 2026-10-05 | **Whole body next**: add all remaining body parts. More quizzes, Hebrew names and study tools wait until the user has her course's study sources.                                                                                                                                                                              |
-| 2026-10-05 | Wants to **switch between a male and a female model** — **deferred** ("document the options, future addition"). Options and research: `docs/DECISIONS.md` → "Male/female model switch".                                                                                                                                        |
+| 2026-10-06 | **Male/female switch: built as option 1** ("Male/female switch (Recommended)"): one body, a setting swaps the male reproductive organs for the Human Reference Atlas's female organs; skeleton stays male.                                                                                                                     |
+| 2026-10-05 | Wants to **switch between a male and a female model** — **deferred** ("document the options, future addition"); built 2026-10-06 (row above). Options and research: `docs/DECISIONS.md` → "Male/female model switch".                                                                                                          |
 | 2026-10-05 | Whole body merged (PR #4). Next: **select whole organs** (brain parts, lungs, heart… as wholes).                                                                                                                                                                                                                               |
 | 2026-10-05 | **Peeling: tap to peel only.** The automatic peel button removed too much at once ("everything disappears"); the user chose a peel mode where each tap removes one structure.                                                                                                                                                  |
 | 2026-10-05 | **Study source: https://medintzfat.com** (her course site, Bar-Ilan Tzfat; anatomy section `/anatomy/` — labs `lab1`…`lab9`, lectures `class*`, `lower-limb-part1`; public pages). Use it for Hebrew names, quizzes and study tools. Needs `medintzfat.com` in the cloud environment's allowed domains (blocked in session 2). |
@@ -101,9 +102,12 @@ All verified by `npm run e2e:smoke` against a production build.
   (cochlea, vestibule) and kidney (kidney, renal pelvis, intrarenal
   vessels), 12 meshes under **non-commercial** licences, behind
   `INCLUDE_NON_COMMERCIAL` (`THIRD_PARTY_ASSETS.md` → "Going commercial").
-  2,887 meshes → 2,961 structures (2,531 wholes, 430 parts of muscles and
-  organs), ≈3.5M triangles, 17.8 MB; the skeleton loads first and frames the
-  camera, the rest streams in ("Loading body systems n/7"). Credits: full on
+  An eighth file, `public/models/hra/female.glb`, holds the female organs
+  (female body only, below). Male body: 2,887 meshes → 2,961 structures
+  (2,531 wholes); female body: 2,913 meshes → 2,992 structures (2,527
+  wholes); ≈3.7M triangles, 18.9 MB in all; the skeleton loads first and
+  frames the camera, the rest streams in ("Loading body systems n/7", n/8
+  in the female body). Credits: full on
   the home page, source names in the viewer. Left out: coverings (fasciae, meninges, pleura, greater omentum), liver segments.
   Pipelines: `scripts/anatomy/z-anatomy/README.md`,
   `scripts/anatomy/open3dmodel/README.md`. Placeholder demo model kept for
@@ -121,6 +125,17 @@ All verified by `npm run e2e:smoke` against a production build.
   structures ("סיכום" at the top of the info panel) and 41 of her Hebrew
   names (`z-anatomy/summaryNotes.json`, from
   `scripts/course/summary/summary_notes.py`; the .docx is not in git).
+- **Male/female body:** settings → Body switches between the male model
+  and the same body with female organs from the **Human Reference Atlas**
+  (HuBMAP, CC BY 4.0; `public/models/hra/female.glb`, 51 meshes, 1.1 MB,
+  loaded only in the female body): uterus (fundus, body, lower segment,
+  cervix, internal/external os, cornua), vagina, ovaries, uterine tubes
+  (ampulla, isthmus, infundibulum, fimbriae), round/ovarian/suspensory/
+  cardinal/uterosacral ligaments, the female bladder (trigone, ureteric
+  orifices, neck) and breasts (nipple, areola, lobes, ducts, sinuses,
+  Cooper's ligaments, fat). The male organs, testicular/penile vessels and
+  male urethra are hidden in it. Fitted by ICP to our pelvis (median 4 mm),
+  breasts placed on the chest (`scripts/anatomy/hra/README.md`).
 - **Design:** light atlas-plate theme, Frank Ruhl Libre + IBM Plex Sans
   Hebrew, surgical-teal accent, colour legend, leader-line label on the
   selected structure, ruled lists (`docs/DESIGN.md`).
@@ -189,10 +204,10 @@ All verified by `npm run e2e:smoke` against a production build.
    source has).
    4e. **Fill model gaps** (`docs/MODEL_SOURCES.md`): **Open3DModel done**
    (206 meshes, limbs + lumbosacral plexus); **Z-Anatomy's NC inner ear and
-   kidney done** (user allowed NC). The other NC sources were checked and
+   kidney done** (user allowed NC); **female organs done** (Human Reference
+   Atlas, female body). The other NC sources were checked and
    none fills a gap (`docs/MODEL_SOURCES.md` → "Non-commercial sources").
-   Next, in order: Human Reference Atlas female organs (CC BY, needs
-   alignment); BodyParts3D (rectum, some nerves/arteries); then hand-made
+   Next, in order: BodyParts3D (rectum, some nerves/arteries); then hand-made
    models for the phrenic nerve, cervical plexus, laryngeal nerves and
    thoracic duct (no source has them). NC models go into the
    non-commercial file only. Open3DModel's
@@ -205,10 +220,10 @@ All verified by `npm run e2e:smoke` against a production build.
    structure she finds still named differently (`synonyms.json`).
 5. ~~Muscle heads as sub-structures~~ — done (52 parts); quizzing on parts
    is a possible follow-up.
-   5b. **Male/female switch** — deferred by the user; options, source (Human
-   Reference Atlas female set, CC BY 4.0) and how to fetch it are in
-   `docs/DECISIONS.md` → "Male/female model switch". Ask which option before
-   building.
+   5b. ~~Male/female switch~~ — done (option 1, settings → Body). Possible
+   follow-ups: female urethra, external genitalia (vulva, clitoris — no open
+   model found), uterine/ovarian vessels (the Atlas has uterine vasculature),
+   female pelvis bones (option 2).
 6. When the user has her study sources: more quiz types (origins/insertions,
    parts), custom study lists (§27), progress export/import, first-run tutorial,
    ~~origins/insertions mode~~ (done; verify kinds + Hebrew terms per
@@ -233,8 +248,12 @@ All verified by `npm run e2e:smoke` against a production build.
 - Organ wholes are one level deep (a gyrus belongs to its lobe; there is no
   "cerebral hemisphere" or "brain" whole); deep brain nuclei outside a lobe
   group stay on their own; a whole with a single part (insula) exists.
-- Whole body: the source is a **male** model (no female reproductive
-  organs); the kidneys and inner ear are **non-commercial** (CC BY-NC /
+- Whole body: the source is a **male** model. The female body adds the
+  Human Reference Atlas's female organs to it, but the skeleton, pelvis and
+  muscles stay male; no female urethra, vulva/clitoris, perineal muscles or
+  uterine/ovarian vessels; the peritoneal folds (broad ligament, pouches)
+  are left out like other coverings (her notes on them go to the uterus);
+  the kidneys and inner ear are **non-commercial** (CC BY-NC /
   CC BY-NC-SA): the app must stay free and ad-free while they're in
   (`THIRD_PARTY_ASSETS.md` → "Going commercial"); pleura, greater
   omentum, meninges and fasciae left out so they don't hide everything; the
@@ -405,3 +424,17 @@ All verified by `npm run e2e:smoke` against a production build.
   none adds anything — already in Z-Anatomy, not downloadable, one fused
   surface, or (cervical nerves) no model file published. Table in
   `docs/MODEL_SOURCES.md`.
+- **2026-10-06 · session 3 (cont.)** — Male/female switch (user chose option
+  1). `scripts/anatomy/hra/export_hra.py`: Human Reference Atlas female
+  organs, ICP-fitted (similarity) from its pelvis to ours, then shifted so
+  its bladder sits where ours is (27 mm back: a female pelvis is shallower);
+  breasts on the midclavicular line at the 4th intercostal space, back
+  surface laid on our chest wall; the overlapping uterine walls and the
+  peritoneal folds left out → `female.glb` + `manifest-female.json`. App:
+  `sex`/`meshSex`, `MALE_ONLY`, `datasetForSex` in the data provider,
+  hidden unmapped meshes, settings → Body (`Segmented`; `SettingsFields`
+  split from `SettingsMenu`). Her notes now reach the uterus, cervix, tubes,
+  ovaries, vagina, breast, nipple and ligaments (+21 entries, 132 left);
+  bladder notes stay on the bladder in both bodies; Hebrew רחם, צוואר הרחם,
+  חצוצרה, שחלה, נרתיק, שד (her singulars). e2e: switch to female, uterus
+  shown, no prostate.

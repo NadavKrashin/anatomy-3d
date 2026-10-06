@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useMemo, type ReactNode } from "react";
 import { activeDataset } from "@/data/anatomy";
+import { datasetForSex } from "@/lib/anatomy/bodySex";
 import {
   createMeshMapAdapter,
   type AnatomyModelAdapter,
@@ -11,6 +12,7 @@ import {
   createStructureSearch,
   type StructureSearch,
 } from "@/lib/anatomy/search";
+import { useSettingsStore } from "@/store/settingsStore";
 import type { AnatomyDataset } from "@/types/anatomy";
 
 interface AnatomyData {
@@ -23,13 +25,16 @@ interface AnatomyData {
 const AnatomyDataContext = createContext<AnatomyData | null>(null);
 
 export function AnatomyDataProvider({
-  dataset = activeDataset,
+  dataset: fullDataset = activeDataset,
   children,
 }: {
   dataset?: AnatomyDataset;
   children: ReactNode;
 }) {
+  // The chosen body: its structures, meshes and model files only.
+  const bodySex = useSettingsStore((s) => s.bodySex);
   const value = useMemo<AnatomyData>(() => {
+    const dataset = datasetForSex(fullDataset, bodySex);
     const registry = createRegistry(dataset.structures);
     return {
       dataset,
@@ -41,7 +46,7 @@ export function AnatomyDataProvider({
       ),
       search: createStructureSearch(dataset.structures),
     };
-  }, [dataset]);
+  }, [fullDataset, bodySex]);
 
   return (
     <AnatomyDataContext.Provider value={value}>

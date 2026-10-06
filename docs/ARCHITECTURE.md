@@ -96,15 +96,27 @@ ancestors are tried (multi-primitive meshes load as a group of meshes).
   and `summarizeAttachments` (rows for the info panel).
   `KIND_UNDER_REVIEW` in `data/anatomy/z-anatomy/attachments.ts` demotes
   muscles whose source labels contradict standard anatomy to `attachment`.
-- `AnatomyDataset` = `{ info, structures, meshMap, partMeshMap?, attachments? }`. The app runs on
+- `AnatomyDataset` = `{ info, structures, meshMap, partMeshMap?, attachments?, meshSex? }`. The app runs on
   `data/anatomy/index.ts → activeDataset`, provided via
   `components/providers/AnatomyDataProvider.tsx` (registry, adapter, search
-  are built once per dataset).
+  are built once per dataset **and body**).
+- **Male/female body** (2026-10-06): structures that exist in one body
+  carry `sex`; `meshSex` marks meshes (a structure can mix them — the
+  bladder is the male mesh or the female bladder's parts); model files can
+  carry `sex` (`female.glb`). `lib/anatomy/bodySex.ts → datasetForSex`
+  filters all three by `settingsStore.bodySex`, and the provider hands the
+  filtered dataset to everything, so registry, search, legend counts,
+  quiz scopes and the files loaded follow the switch. In the viewer,
+  meshes no structure claims (`SceneIndex.unmapped`, e.g. the male bladder
+  mesh in the female body) are drawn hidden. Which Z-Anatomy structures
+  are male-only: `MALE_ONLY` in `z-anatomy/build.ts`.
 - Datasets: `data/anatomy/z-anatomy/` (active — real model; structures built
   at runtime by `build.ts` from the export `manifest.json` plus
   `manifest-open3d.json` — the Open3DModel extras, a sixth model file
-  `extras.glb`; entries with `source: "Open3DModel"` get that source's
-  licence and attribution) and
+  `extras.glb` — `manifest-female.json` (the Human Reference Atlas female
+  organs, `female.glb`, `sex: "female"`) and `manifest-non-commercial.json`;
+  every entry's `source` picks its licence and attribution from
+  `MODEL_SOURCES`) and
   `data/anatomy/demo/` (placeholder, used by tests). Curated names/Hebrew/
   details live once per concept in `data/anatomy/content/concepts.ts` and are
   attached with `withConcept()`. The Z-Anatomy dataset then applies **her
@@ -126,7 +138,7 @@ ancestors are tried (multi-primitive meshes load as a group of meshes).
 | Store                      | Holds                                                                                                               | Persisted                                                    |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | `store/viewerStore.ts`     | selection, hover, hidden ids, hidden systems, isolated id, camera command, selection lock, peel mode + peeled stack | no                                                           |
-| `store/settingsStore.ts`   | UI locale, term-language preference                                                                                 | localStorage (`anatomy.settings`)                            |
+| `store/settingsStore.ts`   | UI locale, term-language preference, body (male/female)                                                             | localStorage (`anatomy.settings`)                            |
 | `store/sceneIndexStore.ts` | loaded model files (root + scene index each), merged structure id → meshes, `complete`                              | no (runtime objects)                                         |
 | `store/quizStore.ts`       | the active `QuizRun` (state of the pure quiz engine)                                                                | no                                                           |
 | `store/progressStore.ts`   | `ProgressData`: per-structure progress + session history                                                            | via `ProgressRepository` → localStorage (`anatomy.progress`) |

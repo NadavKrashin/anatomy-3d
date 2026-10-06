@@ -290,6 +290,9 @@ lucide-react · Vitest 5 · Playwright 1.56 · gltf-transform 4.5.
 
 ## 2026-10-05 — Male/female model switch: researched, deferred by the user
 
+(Built on 2026-10-06 as option 1 — see "Male/female switch: one body, female
+organs fitted in" below.)
+
 The user wants to switch easily between a male and a female model. Z-Anatomy
 (and BodyParts3D, which it is built on) is **male only**. No open, full
 female counterpart (skeleton + muscles + nerves + vessels + organs) exists.
@@ -525,3 +528,37 @@ Z-Anatomy's own inner ear (University of Dundee, CC BY-NC-SA 4.0) and kidney
   too).
 - **Credits:** four sources made the viewer's credit line too long, so the
   viewer names the sources and the home page carries the full credit lines.
+
+## 2026-10-06 — Male/female switch: one body, female organs fitted in
+
+The user chose option 1 of the 2026-10-05 entry.
+
+- **Source:** the Human Reference Atlas female organs (CC BY 4.0), from
+  `hubmapconsortium/ccf-3d-reference-object-library` (`VH_Female/v1.2`,
+  `v1.3`), whose organs and bony pelvis share one frame.
+- **Fit:** a similarity transform (no shear, so organ shapes stay true)
+  by trimmed ICP from the Atlas pelvis to Z-Anatomy's hip bones, sacrum and
+  coccyx: median 4 mm. A female pelvis is shallower, so the fit left the
+  bladder in the pubic symphysis and 3 cm from our ureters; the pelvic set
+  is therefore shifted so its bladder sits on ours (27 mm back). Breasts:
+  same scale, nipple at the 4th intercostal space on the midclavicular
+  line, each vertex moved front/back so the back surface lies on our chest
+  wall (pelvis-based placement put them inside the chest: torso
+  proportions differ).
+- **One bladder:** the female bladder's meshes become parts of the existing
+  "Urinary bladder", whose own mesh is male-only. Ids, notes and quiz
+  progress stay shared; the trigone etc. exist in the female body only.
+  Hence sex per **mesh** (`meshSex`), not only per structure.
+- **Filtering in one place:** `datasetForSex` produces the dataset of the
+  chosen body and the data provider uses it for everything, so no
+  component needs to know about sex. Alternative — tagging and checking in
+  each consumer (legend, search, quiz scopes, viewer) — was more code and
+  easy to miss somewhere.
+- **Left out:** uterine anterior/posterior walls (they duplicate the body
+  and fundus surfaces: z-fighting); broad ligament, mesosalpinx,
+  mesovarium and uterovesical pouch (peritoneal coverings, as in the main
+  export); the abdominal ostium (labelled at the uterine end).
+- **Male-only in Z-Anatomy** (`MALE_ONLY`): penis, testis, epididymis,
+  ductus deferens, ejaculatory duct, seminal gland, prostate, the male
+  urethra (it runs through the penis), the bladder mesh, testicular and
+  penile vessels. The ureters are kept (they end at the bladder).

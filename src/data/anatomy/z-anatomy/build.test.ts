@@ -17,9 +17,11 @@ import {
 import zManifest from "./manifest.json";
 import open3dManifest from "./manifest-open3d.json";
 import nonCommercialManifest from "./manifest-non-commercial.json";
+import femaleManifest from "./manifest-female.json";
+import { datasetForSex } from "@/lib/anatomy/bodySex";
 
 /** The commercially usable manifests. */
-const manifest = [...zManifest, ...open3dManifest];
+const manifest = [...zManifest, ...open3dManifest, ...femaleManifest];
 
 const entry = (
   name: string,
@@ -255,6 +257,51 @@ describe("the Z-Anatomy whole-body dataset", () => {
     );
     expect(commercial.info.attribution).not.toMatch(/NC/);
     expect(commercial.info.credits).not.toMatch(/lissiecowley|Dundee/);
+  });
+
+  it("shows the female organs in the female body and the male ones in the male", () => {
+    const female = datasetForSex(zAnatomyDataset, "female");
+    const male = datasetForSex(zAnatomyDataset, "male");
+    const ids = (d: typeof female) => new Set(d.structures.map((s) => s.id));
+    for (const id of [
+      "uterus",
+      "ovary-left",
+      "uterine-tube-right",
+      "vagina",
+      "breast-left",
+    ]) {
+      expect(ids(female).has(id), id).toBe(true);
+      expect(ids(male).has(id), id).toBe(false);
+    }
+    for (const id of [
+      "prostate",
+      "testis-left",
+      "penis",
+      "urethra",
+      "testicular-artery-left",
+    ]) {
+      expect(ids(male).has(id), id).toBe(true);
+      expect(ids(female).has(id), id).toBe(false);
+    }
+    // One bladder in both bodies: the male mesh, or the female bladder's parts.
+    expect(ids(female).has("urinary-bladder")).toBe(true);
+    expect(ids(male).has("urinary-bladder")).toBe(true);
+    expect(male.meshMap["Urinary bladder"]).toBe("urinary-bladder");
+    expect(female.meshMap["Urinary bladder"]).toBeUndefined();
+    expect(female.partMeshMap?.["Trigone of urinary bladder"]).toBe(
+      "trigone-of-urinary-bladder",
+    );
+    expect(male.partMeshMap?.["Trigone of urinary bladder"]).toBeUndefined();
+    expect(female.info.models.map((m) => m.id)).toContain("female");
+    expect(male.info.models.map((m) => m.id)).not.toContain("female");
+  });
+
+  it("places the female organs in the pelvis and the breasts on the chest", () => {
+    const region = (id: string) => registry.get(id)?.region;
+    expect(region("uterus")).toBe("pelvis");
+    expect(region("ovary-left")).toBe("pelvis");
+    expect(region("breast-right")).toBe("thorax");
+    expect(registry.get("uterus")?.sourceLicense).toBe("CC BY 4.0");
   });
 
   it("covers every region and the organ systems", () => {

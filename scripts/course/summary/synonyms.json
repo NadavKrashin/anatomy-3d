@@ -123,7 +123,21 @@
     "Lateral Cord (לטרלי ל־Axillary Artery)": [
       "lateral-cord-of-brachial-plexus"
     ],
-    "Medial Cord (מדיאלי ל־Axillary Artery)": ["medial-cord-of-brachial-plexus"]
+    "Medial Cord (מדיאלי ל־Axillary Artery)": [
+      "medial-cord-of-brachial-plexus"
+    ],
+    "Ovaries": ["ovary"],
+    "Cervix": ["cervix-of-uterus"],
+    "Transverse cervical ligament (Lateral cardinal ligament)": [
+      "cardinal-ligament"
+    ],
+    "Suspensory Ligaments of Cooper": ["suspensory-ligaments-of-breast"],
+    "Apex and fundus of urinary bladder": [
+      "urinary-bladder",
+      "fundus-of-urinary-bladder"
+    ],
+    "Trigone": ["urinary-bladder", "trigone-of-urinary-bladder"],
+    "Ureteric orifice": ["urinary-bladder", "ureteric-orifice"]
   },
   "hebrew": {
     "about": "Her organ-guide headings name some structures in the plural; the model has one per side. Singular forms (from her own text where she uses them), or null to show no Hebrew from the summary.",
@@ -135,7 +149,9 @@
       "lymph-node": null,
       "testis": "אשך",
       "palatine-tonsil": "שקד",
-      "kidney": "כליה"
+      "kidney": "כליה",
+      "uterine-tube": "חצוצרה",
+      "ovary": "שחלה"
     }
   }
 }

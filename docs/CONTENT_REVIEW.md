@@ -44,6 +44,8 @@ singular for one-sided structures (`scripts/course/summary/synonyms.json` →
 | ------------------- | --------------------- | --------------------- | --------------- |
 | Atrium              | עלייה שמאלית          | העלייה השמאלית        |                 |
 | Atrium              | עלייה ימנית           | העלייה הימנית         |                 |
+| Breast              | שד                    | השד                   |                 |
+| Cervix of uterus    | צוואר הרחם            | צוואר הרחם            |                 |
 | Colon               | כרכשת                 | הכרכשת                |                 |
 | Diaphragm           | סרעפת                 | הסרעפת                | סרעפת           |
 | Ductus deferens     | צינור הזרע            | צינור הזרע            |                 |
@@ -59,6 +61,7 @@ singular for one-sided structures (`scripts/course/summary/synonyms.json` →
 | Kidney              | כליה                  | הכליות                |                 |
 | Lacrimal gland      | בלוטת הדמעות          | בלוטת הדמעות          |                 |
 | Liver               | כבד                   | הכבד                  | כבד             |
+| Ovary               | שחלה                  | השחלות                |                 |
 | Palatine tonsil     | שקד                   | השקדים                |                 |
 | Pancreas            | לבלב                  | הלבלב                 | לבלב            |
 | Parotid gland       | בלוטת הפרוטיד         | בלוטת הפרוטיד         |                 |
@@ -80,6 +83,9 @@ singular for one-sided structures (`scripts/course/summary/synonyms.json` →
 | Ureter              | שופכן                 | השופכנים              | צינור הכליה     |
 | Urethra             | שופכה                 | השופכה                |                 |
 | Urinary bladder     | שלפוחית השתן          | שלפוחית השתן          |                 |
+| Uterine tube        | חצוצרה                | החצוצרות              |                 |
+| Uterus              | רחם                   | הרחם                  |                 |
+| Vagina              | נרתיק                 | הנרתיק                |                 |
 | Ventricle           | חדר שמאלי             | החדר השמאלי           |                 |
 | Ventricle           | חדר ימני              | החדר הימני            |                 |
 | Vermiform appendix  | תוספתן                | התוספתן               | תוספתן          |
@@ -221,8 +227,12 @@ costal cartilages), part of adductor pollicis (capitate).
 - **Regions** of organs and midline structures are assigned by height against
   skeletal landmarks (e.g. the liver and stomach → abdomen, the thyroid →
   neck). Adjust in the export if the course divides regions differently.
-- The model is male; no female organs. The kidneys and inner ear are in
-  (non-commercial licences, `THIRD_PARTY_ASSETS.md`).
+- The model is male; the female body (settings) adds the Human Reference
+  Atlas's female organs with their own English names (e.g. "Lower uterine
+  segment", "Cornua of uterus", "Fundus/Dome of urinary bladder",
+  "Areolar tubercles") — please check them; all `verified: false`. The
+  kidneys and inner ear are in (non-commercial licences,
+  `THIRD_PARTY_ASSETS.md`).
 - **Organ wholes** (`ORGAN_GROUPS` in the export) are named after Z-Anatomy's
   groups: Heart, Lung, Frontal/Parietal/Temporal/Occipital/Limbic lobe,
   Insula, Cerebellum, Brainstem, Diencephalon, Spinal cord, Eyeball, Colon,

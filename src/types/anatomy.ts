@@ -90,6 +90,9 @@ export type DetailSection = (typeof DETAIL_SECTIONS)[number];
  */
 export const DETAIL_TAG = "detail";
 
+/** The body shown: the male model, or the same body with female organs. */
+export type BodySex = "male" | "female";
+
 export interface AnatomicalStructure {
   /** Stable, model-independent id, e.g. "biceps-brachii-left". */
   id: string;
@@ -114,6 +117,8 @@ export interface AnatomicalStructure {
   /** Study notes from her own course summary, in its language (Hebrew). */
   studyNotes?: StudyNote[];
   tags: string[];
+  /** Set on a structure that exists in one body only (the uterus, the prostate). */
+  sex?: BodySex;
   modelSource?: string;
   sourceLicense?: string;
   sourceAttribution?: string;
@@ -164,6 +169,8 @@ export type MeshMap = Record<string, string>;
 export interface AnatomyModelFile {
   id: string;
   url: string;
+  /** Loaded only for this body (the female organs). */
+  sex?: BodySex;
 }
 
 export interface AnatomyDatasetInfo {
@@ -185,4 +192,9 @@ export interface AnatomyDataset {
   partMeshMap?: MeshMap;
   /** Origins/insertions as patches on bones (optional). */
   attachments?: AttachmentData;
+  /**
+   * Meshes shown in one body only (optional). A structure can have meshes of
+   * both: the male bladder mesh and the female bladder's parts.
+   */
+  meshSex?: Record<string, BodySex>;
 }

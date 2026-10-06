@@ -2,6 +2,7 @@ import type {
   AnatomyRegion,
   AnatomySystem,
   AttachmentKind,
+  BodySex,
   DetailSection,
   TermLanguage,
 } from "@/types/anatomy";
@@ -171,6 +172,8 @@ export const he = {
     saveFailed: "לא ניתן היה לשמור את ההתקדמות במכשיר הזה.",
   },
   settings: {
+    body: "גוף",
+    bodySex: { male: "זכר", female: "נקבה" } satisfies Record<BodySex, string>,
     interfaceLanguage: "שפת ממשק",
     primaryTerm: "שפת שם ראשית",
     secondaryTerm: "שפת שם משנית",

@@ -128,11 +128,9 @@
     "Middle rectal artery": ["anterior-division-of-internal-iliac-artery"],
     "Lateral sacral artery": ["posterior-division-of-internal-iliac-artery"],
     "Deep circumflex iliac artery": ["external-iliac-artery"],
-    "Trigone": ["urinary-bladder"],
     "Opening of the urethra": ["urinary-bladder"],
     "Ureteric orifice": ["urinary-bladder"],
     "Detrusor": ["urinary-bladder"],
-    "Apex and fundus of urinary bladder": ["urinary-bladder"],
     "Ampulla of ductus deferens": ["ductus-deferens"],
     "Prostatic plexus": ["prostate"],
     "Anus": ["external-anal-sphincter"],
@@ -578,6 +576,12 @@
     "Renal medulla - Pyramids & Columns": ["kidney"],
     "Renal papillae": ["kidney"],
     "Perirenal fat": ["kidney"],
-    "Renal fascia / Gerota’s fascia": ["kidney"]
+    "Renal fascia / Gerota’s fascia": ["kidney"],
+    "Vaginal fornix (Anterior/Lateral/Posterior)": ["vagina"],
+    "Broad ligament of the uterus": ["uterus"],
+    "Mesovarium": ["ovary"],
+    "Vesicouterine pouch": ["uterus", "urinary-bladder"],
+    "Rectouterine pouch (Douglas)": ["uterus"],
+    "בלוטת השד (Mammary Gland)": ["breast"]
   }
 }
