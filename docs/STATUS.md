@@ -216,7 +216,9 @@ All verified by `npm run e2e:smoke` against a production build.
    rectum showed Z-Anatomy's "Sigmoid colon" is the rectum). The other NC
    sources were checked and none fills a gap (`docs/MODEL_SOURCES.md` →
    "Non-commercial sources"). Next: hand-made models for the phrenic nerve,
-   cervical plexus, laryngeal nerves and thoracic duct (no source has them). NC models go into the
+   cervical plexus, laryngeal nerves and thoracic duct (no source has them)
+   — the full brief for that is `docs/HANDMADE_MODELS_PROMPT.md` (24
+   structures in 3 priorities, method, integration contract, checks). NC models go into the
    non-commercial file only. Open3DModel's
    retinacula, tendon sheaths and spaces (femoral/adductor canal) were left
    out as coverings — could come back as a toggleable layer. Phrenic nerve,
@@ -470,9 +472,14 @@ All verified by `npm run e2e:smoke` against a production build.
   round ligaments of the uterus (the Atlas); "Right testicular artery.r"
   escaped the male-only list (side written twice; `parseName` fixed) and
   showed in the female body; whole-spine ligaments and rotatores moved from
-  neck to back; her rugae note pointed at the removed mucosa. Clean: no
-  duplicates across or within sources (vertex proximity, same tissue), no
-  floating pieces, no duplicate display names in either body, no
-  other-body structures, course names all genuine matches (spelling
-  variants), switching body with a male-only structure selected closes the
-  panel without errors.
+  neck to back; her rugae note pointed at the removed mucosa. Clean (rechecked after fixing the extractor, which first
+  decoded quantized positions twice): no mutual duplicates (≥ 60 % of each
+  of two meshes within 1.5 mm of the other — only companions like
+  artery/vein pairs, S4/S5 rami and Z-Anatomy's layered eye and spinal-cord
+  diagrams), nothing floating, no duplicate display names in either body,
+  no other-body structures, course names all genuine matches; the whole
+  erector spinae moved from neck to back (`WHOLE_REGION`). Switching body
+  with a male-only structure selected closes the panel without errors.
+  `scripts/anatomy/decode-glb.ts` writes shipped GLBs uncompressed for
+  Blender. **Next (user):** hand-build the last missing structures with
+  another AI from `docs/HANDMADE_MODELS_PROMPT.md`.

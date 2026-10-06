@@ -600,10 +600,14 @@ on what ships (the meshopt GLBs) and the dataset as each body sees it:
   mesh map ↔ GLB nodes with geometry (now also in `anatomy:validate`);
   side vs position (glTF +x = the body's left; near-midline organs like
   the right ventricle legitimately cross); region vs height bands from the
-  mandible, manubrium and sacrum; duplicates (> 40 % of a mesh's samples
-  within 2 mm of one other mesh of the same tissue) and floating pieces
-  (nothing within 10 mm); duplicate display names and other-body structures
+  mandible, manubrium and sacrum; duplicates = **mutual** coverage (≥ 60 %
+  of each of two meshes' samples within 1.5 mm of the other — one-way
+  proximity only finds neighbours) and floating pieces (nothing within
+  10 mm); duplicate display names and other-body structures
   per body; course names sharing no word with the model name.
+- Pitfall: gltf-transform's `getElement` already decodes quantized
+  positions; dividing again collapses every mesh to a point (the first
+  audit pass did this and its geometric results were redone).
 - Fixes go to the source of each problem (export rules, `SWAPPED_SIDES`,
   `RELABEL`, the female export's mapping), never to the shipped files by
   hand.

@@ -301,9 +301,11 @@ export function buildZAnatomyDataset(manifest: readonly ManifestEntry[]): {
   return {
     structures: [...byId.values()].map((s) => {
       const sex = sexOf(s.id);
-      const region = wholeRegions.has(s.id)
-        ? majorityRegion(wholeRegions.get(s.id) ?? [])
-        : s.region;
+      const region =
+        WHOLE_REGION[s.bilateralGroupId ?? s.id] ??
+        (wholeRegions.has(s.id)
+          ? majorityRegion(wholeRegions.get(s.id) ?? [])
+          : s.region);
       return { ...s, region, ...(sex ? { sex } : {}) };
     }),
     meshMap,
@@ -311,6 +313,15 @@ export function buildZAnatomyDataset(manifest: readonly ManifestEntry[]): {
     meshSex,
   };
 }
+
+/**
+ * Wholes whose parts' majority region misleads: the erector spinae has more
+ * cervical parts, but runs from the sacrum to the skull and is taught as a
+ * back muscle (2026-10-06 audit).
+ */
+const WHOLE_REGION: Readonly<Record<string, AnatomyRegion>> = {
+  "erector-spinae": "back",
+};
 
 /** Most frequent region among a whole muscle's parts (first wins a tie). */
 function majorityRegion(regions: readonly AnatomyRegion[]): AnatomyRegion {

@@ -10,14 +10,6 @@ import { createIO } from "./io";
 
 type Vec = [number, number, number];
 
-/** Divisor of a normalized integer accessor (KHR_mesh_quantization). */
-const NORMALIZED_MAX: Record<number, number> = {
-  5120: 127,
-  5121: 255,
-  5122: 32767,
-  5123: 65535,
-};
-
 function transform(m: readonly number[], [x, y, z]: Vec): Vec {
   const at = (i: number) => m[i] ?? 0;
   return [0, 1, 2].map(
@@ -45,14 +37,11 @@ async function main() {
       for (const primitive of mesh.listPrimitives()) {
         const positions = primitive.getAttribute("POSITION");
         if (!positions) continue;
-        const normalized = positions.getNormalized();
-        const max = NORMALIZED_MAX[positions.getComponentType()] ?? 1;
         const element: number[] = [];
         for (let i = 0; i < positions.getCount(); i++) {
           positions.getElement(i, element);
-          const [x = 0, y = 0, z = 0] = normalized
-            ? element.map((e) => Math.max(e / max, -1))
-            : element;
+          // getElement already decodes quantized (normalized) positions.
+          const [x = 0, y = 0, z = 0] = element;
           points.push(transform(matrix, [x, y, z]));
         }
       }

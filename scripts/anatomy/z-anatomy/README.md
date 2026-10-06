@@ -97,3 +97,10 @@ into the `--non-commercial-only` file, which the app can drop with one switch
 (the source lists the intrarenal veins under "Thorax"). Meshes without faces (guide lines and points: eyeball axes, "-curve",
 "-path") are skipped; whole-spine ligaments and the rotatores go to the
 back region (`WHOLE_SPINE`; the source lists them under "Neck").
+
+## Shipped files in Blender
+
+The shipped GLBs are meshopt-compressed and quantized, which Blender can't
+import. `npx tsx scripts/anatomy/decode-glb.ts <in.glb> <out.glb>` writes an
+uncompressed copy with the same coordinates (for building new pieces
+against exactly what the app shows; see `docs/HANDMADE_MODELS_PROMPT.md`).
