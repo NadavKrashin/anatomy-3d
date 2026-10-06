@@ -181,21 +181,38 @@ not used yet.
 `z-anatomy/summaryNotes.ts` (`withSummaryNotes`, after `withCourseName`)
 applies:
 
-- **Notes for 458 structures.** They show as "סיכום" ("Summary") at the
+- **Notes for 511 structures.** They show as "סיכום" ("Summary") at the
   top of the info panel. An entry about several structures ("Superficial &
   Deep inguinal ring") goes to each of them and is labelled with its name.
   Matching uses the course-name rules. Ambiguous names like "Abductor
   digiti minimi" are resolved by the summary's region (the lower-limb
   table → the foot's). Hand-checked synonyms ("LCL", "Spring ligament",
   side-specific arteries) are in `scripts/course/summary/synonyms.json`.
-- **32 Hebrew names** from the organ guide (e.g. קנה הנשימה, שופכן, צינור
+- **40 Hebrew names** from the organ guide (e.g. קנה הנשימה, שופכן, צינור
   הזרע, שלפוחית השתן). The definite article is dropped and plurals are made
   singular for one-sided structures. Her Hebrew wins over the site's: she
   wrote it and learns from it. The site's form stays searchable.
-- **636 entries name no model structure.** They are mostly bony landmarks,
-  folds and spaces, female organs and the kidneys (not in the model), plus
-  some wholes the model only has as parts. The list is written to
-  `.course-cache/summary/unmatched.json` when the script runs.
+- **592 entries name no model structure.** The model has 2,734 pieces, but
+  it is a mesh atlas: whole bones, muscles, vessels, nerves and organs. The
+  entries break down roughly as:
+  - ~165 bony landmarks: a spot on a bone mesh, e.g. ASIS, iliac crest,
+    linea aspera;
+  - ~90 soft-tissue layers, folds and spaces, e.g. fasciae, rectus sheath,
+    peritoneal folds, recesses;
+  - ~85 parts of organs the model keeps whole, e.g. liver lobes, stomach
+    curvatures, duodenal parts; and organs it lacks: brain as a whole, ear,
+    nose, larynx, teeth;
+  - ~60 vessels and nerves the export doesn't include, e.g. the cystic
+    artery and pampiniform plexus, **and the phrenic nerve** (worth
+    checking in the Z-Anatomy export);
+  - ~60 female organs, plus the kidneys and their parts (left out for
+    licence reasons);
+  - ~50 headings rather than structures (e.g. "התעלה הקרפלית (Carpal
+    Tunnel)");
+  - the rest are single muscles or ducts absent from the model.
+
+  The list is written to `.course-cache/summary/unmatched.json` when the
+  script runs.
 
 Regenerate (needs the .docx):
 

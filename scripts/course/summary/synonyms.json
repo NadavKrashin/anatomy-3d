@@ -31,7 +31,95 @@
     "Right Coronary Artery": ["coronary-artery-right"],
     "Left gastric artery": ["gastric-artery-left"],
     "Right colic artery": ["colic-artery-right"],
-    "Left colic artery": ["colic-artery-left"]
+    "Left colic artery": ["colic-artery-left"],
+    "Right atrium": ["atrium-right"],
+    "Left atrium": ["atrium-left"],
+    "Right ventricle": ["ventricle-right"],
+    "Left ventricle": ["ventricle-left"],
+    "Right Main Bronchus": ["main-bronchus-right"],
+    "Pituitary gland": ["hypophysis"],
+    "Testes": ["testis"],
+    "Eye": ["eyeball"],
+    "Tonsils": ["palatine-tonsil"],
+    "Central artery of the retina": ["central-retinal-artery"],
+    "Left Subclavian": ["subclavian-artery-left"],
+    "Left Common Carotid": ["common-carotid-artery-left"],
+    "Ethmoidal cells": [
+      "anterior-cells-of-ethmoid-bone",
+      "middle-cells-of-ethmoid-bone",
+      "posterior-cells-of-ethmoid-bone"
+    ],
+    "Anterior & posterior chamber": ["anterior-chamber-of-eyeball"],
+    "Uvula": ["uvula-of-palate"],
+    "Iliofemoral ligament / Y ligament": [
+      "descending-part-of-iliofemoral-ligament",
+      "transverse-part-of-iliofemoral-ligament"
+    ],
+    "Orbicularis oculi": [
+      "orbital-part-of-orbicularis-oculi",
+      "palpebral-part-of-orbicularis-oculi"
+    ],
+    "Flexor hallucis brevis (lateral & medial head)": [
+      "lateral-head-of-flexor-hallucis-brevis",
+      "medial-head-of-flexor-hallucis-brevis"
+    ],
+    "Quadratus plantar": ["quadratus-plantae-muscle"],
+    "Multifidus": [
+      "multifidus-colli-muscle",
+      "multifidus-thoracis-muscle",
+      "multifidus-lumborum-muscle"
+    ],
+    "Posterior Cord (פוסטריורי ל־Axillary Artery)": [
+      "posterior-cord-of-brachial-plexus"
+    ],
+    "Trunks of the brachial plexus": [
+      "superior-trunk-of-brachial-plexus",
+      "middle-trunk-of-brachial-plexus",
+      "inferior-trunk-of-brachial-plexus"
+    ],
+    "Olfactory": ["olfactory-nerve-i"],
+    "Optic": ["optic-nerve-ii"],
+    "Oculomotor": ["oculomotor-nerve-iii"],
+    "Oculomotor (III)": ["oculomotor-nerve-iii"],
+    "Trochlear": ["trochlear-nerve-iv"],
+    "Abducent": ["abducens-nerve-vi"],
+    "Facial": ["facial-nerve-vii"],
+    "Vestibulocochlear": ["vestibulocochlear-nerve-viii"],
+    "Glossopharyngeal": ["glossopharyngeal-nerve-ix"],
+    "Ophthalmic": ["ophthalmic-nerve"],
+    "Maxillary": ["maxillary-nerve"],
+    "Concha (Superior/Mid./Inf.)": ["inferior-nasal-concha-bone"],
+    "Pulmonary Valve": [
+      "anterior-semilunar-leaflet-of-pulmonary-valve",
+      "semilunar-leaflet-of-pulmonary-valve"
+    ],
+    "Tricuspid valve": [
+      "inferior-leaflet-of-right-atrioventricular-valve",
+      "septal-leaflet-of-right-atrioventricular-valve"
+    ],
+    "Papillary muscles": [
+      "anterior-papillary-muscle-of-right-ventricle",
+      "inferior-papillary-muscle-of-left-ventricle",
+      "inferior-papillary-muscle-of-right-ventricle",
+      "septal-papillary-muscle-of-right-ventricle"
+    ],
+    "Lateral cutaneous n. of the thigh": ["lateral-femoral-cutaneous-nerve"],
+    "Lateral cutaneous nerve of thigh": ["lateral-femoral-cutaneous-nerve"],
+    "Superficial inguinal lymph nodes": [
+      "inferior-superficial-inguinal-nodes",
+      "superolateral-superficial-inguinal-nodes",
+      "superomedial-superficial-inguinal-nodes"
+    ],
+    "Cuneiform bones": [
+      "medial-cuneiform-bone",
+      "intermediate-cuneiform-bone",
+      "lateral-cuneiform-bone"
+    ],
+    "Flexor digiti minimi brevis": ["flexor-digiti-minimi-of-foot"],
+    "External iliac vessels": ["external-iliac-artery", "external-iliac-vein"],
+    "Anterior femoral cutaneous nerve of thigh": [
+      "anterior-cutaneous-branches-of-femoral-nerve"
+    ]
   },
   "hebrew": {
     "about": "Her organ-guide headings name some structures in the plural; the model has one per side. Singular forms (from her own text where she uses them), or null to show no Hebrew from the summary.",
@@ -40,7 +128,9 @@
       "seminal-gland": "שלפוחית הזרע",
       "suprarenal-gland": "בלוטת יותרת הכליה",
       "lung": null,
-      "lymph-node": null
+      "lymph-node": null,
+      "testis": "אשך",
+      "palatine-tonsil": "שקד"
     }
   }
 }

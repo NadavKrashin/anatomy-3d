@@ -11,6 +11,11 @@
   "abducens-nerve-vi": {
     "notes": [
       {
+        "text": "עצב VI, המפעיל את הרקטוס הלטרלי בעין.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Abducent"
+      },
+      {
         "text": "עצב VI; מפעיל את הרקטוס הלטרלי להרחקת המבט.",
         "section": "ראש וצוואר ואיברי החישה",
         "term": "Abducent nerve (VI)"
@@ -145,12 +150,40 @@
       }
     ]
   },
+  "anterior-cells-of-ethmoid-bone": {
+    "notes": [
+      {
+        "text": "תאי אוויר בעצם האתמואיד, המתנקזים לאזורי חלל האף.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Ethmoidal cells",
+        "shared": true
+      }
+    ]
+  },
+  "anterior-chamber-of-eyeball": {
+    "notes": [
+      {
+        "text": "מדורי נוזל מימי לפני הקשתית ומאחוריה; שניהם קדמיים לעדשה.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Anterior & posterior chamber"
+      }
+    ]
+  },
   "anterior-cruciate-ligament": {
     "notes": [
       {
         "text": "רצועה צולבת קדמית; מגבילה תזוזה קדמית של הטיביה ביחס לפמור.",
         "section": "גפה תחתונה",
         "term": "Anterior Cruciate Ligament (ACL)"
+      }
+    ]
+  },
+  "anterior-cutaneous-branches-of-femoral-nerve": {
+    "notes": [
+      {
+        "text": "ענפים תחושתיים של העצב הפמורלי לעור קדמת הירך.",
+        "section": "גפה תחתונה",
+        "term": "Anterior femoral cutaneous nerve of thigh"
       }
     ]
   },
@@ -169,6 +202,26 @@
         "text": "רצועות לאורך הצד הקדמי והאחורי של גופי החוליות.",
         "section": "גב ועמוד שדרה",
         "term": "Posterior & Anterior longitudinal ligament",
+        "shared": true
+      }
+    ]
+  },
+  "anterior-papillary-muscle-of-right-ventricle": {
+    "notes": [
+      {
+        "text": "שרירים בחדרי הלב המותחים מיתרי גיד ומגבילים צניחת עלי מסתם.",
+        "section": "השלמות בית החזה",
+        "term": "Papillary muscles",
+        "shared": true
+      }
+    ]
+  },
+  "anterior-semilunar-leaflet-of-pulmonary-valve": {
+    "notes": [
+      {
+        "text": "מסתם בין חדר ימין לגזע הריאה.",
+        "section": "בית החזה",
+        "term": "Pulmonary Valve",
         "shared": true
       }
     ]
@@ -254,6 +307,28 @@
         "shared": true
       }
     ]
+  },
+  "atrium-left": {
+    "notes": [
+      {
+        "text": "מקבלת דם מחומצן מוורידי הריאה ומעבירה אותו דרך המסתם המיטרלי לחדר שמאל. נמצאת אחורית יחסית וסמוכה לוושט. להבדיל מעורקי הריאה, ורידי הריאה מובילים דם מחומצן.",
+        "section": "בית החזה",
+        "term": "Left atrium"
+      }
+    ],
+    "he": "עלייה שמאלית",
+    "heHeading": "העלייה השמאלית"
+  },
+  "atrium-right": {
+    "notes": [
+      {
+        "text": "מקבלת את הוורידים הנבובים ואת הסינוס הכלילי ומעבירה דם דרך המסתם הטריקוספידלי לחדר ימין. מבנים לזיהוי כוללים את הפוסה אובליס ואת השרירים המסורקים. מדור בלב, לא איבר נפרד.",
+        "section": "בית החזה",
+        "term": "Right atrium"
+      }
+    ],
+    "he": "עלייה ימנית",
+    "heHeading": "העלייה הימנית"
   },
   "auditory-tube": {
     "notes": [
@@ -490,6 +565,11 @@
         "text": "עורק העובר בתוך עצב הראייה ומספק את הרשתית הפנימית.",
         "section": "פנים ואזור טמפורלי",
         "term": "Central retinal artery"
+      },
+      {
+        "text": "העורק המרכזי של הרשתית, המזין את שכבותיה הפנימיות.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Central artery of the retina"
       }
     ]
   },
@@ -591,6 +671,15 @@
         "text": "עורק צווארי המתפצל לקרוטיד פנימי וחיצוני.",
         "section": "צוואר",
         "term": "Common carotid artery"
+      }
+    ]
+  },
+  "common-carotid-artery-left": {
+    "notes": [
+      {
+        "text": "הקרוטיד המשותף השמאלי, היוצא בדרך כלל מקשת האאורטה.",
+        "section": "בית החזה",
+        "term": "Left Common Carotid"
       }
     ]
   },
@@ -825,6 +914,16 @@
         "text": "המעי היורד, בצד השמאלי של הבטן.",
         "section": "חלל הבטן ואיבריו",
         "term": "Descending colon"
+      }
+    ]
+  },
+  "descending-part-of-iliofemoral-ligament": {
+    "notes": [
+      {
+        "text": "רצועה קדמית חזקה במפרק הירך, המגבילה בעיקר פשיטת יתר.",
+        "section": "גפה תחתונה",
+        "term": "Iliofemoral ligament / Y ligament",
+        "shared": true
       }
     ]
   },
@@ -1121,9 +1220,25 @@
   "external-iliac-artery": {
     "notes": [
       {
+        "text": "כלי דם של הכסל החיצוני הממשיכים לעורק ולווריד הפמורליים.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "External iliac vessels",
+        "shared": true
+      },
+      {
         "text": "עורק הממשיך מתחת לרצועה המפשעתית כעורק הפמורלי.",
         "section": "אגן ופרינאום",
         "term": "External iliac artery"
+      }
+    ]
+  },
+  "external-iliac-vein": {
+    "notes": [
+      {
+        "text": "כלי דם של הכסל החיצוני הממשיכים לעורק ולווריד הפמורליים.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "External iliac vessels",
+        "shared": true
       }
     ]
   },
@@ -1145,6 +1260,17 @@
       }
     ]
   },
+  "eyeball": {
+    "notes": [
+      {
+        "text": "גלגל העין נמצא בארובה. הקרנית והעדשה ממקדות אור על הרשתית, שבה מתבצעת המרה לאות עצבי. מבחינים במעטפת חיצונית, שכבה וסקולרית ורשתית. עצב הראייה מעביר את המידע; השרירים החוץ־עיניים משנים את כיוון המבט.",
+        "section": "מערכת העצבים והחושים",
+        "term": "Eye"
+      }
+    ],
+    "he": "עין",
+    "heHeading": "העין"
+  },
   "facial-artery": {
     "notes": [
       {
@@ -1157,6 +1283,15 @@
         "section": "פנים ואזור טמפורלי",
         "term": "Facial artery & vein",
         "shared": true
+      }
+    ]
+  },
+  "facial-nerve-vii": {
+    "notes": [
+      {
+        "text": "עצב VII, לשרירי ההבעה, לטעם קדמי ולחלק מההפרשה הבלוטית.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Facial"
       }
     ]
   },
@@ -1286,6 +1421,15 @@
         "text": "מכופף ומטה אולנרית את שורש כף היד; מעוצבב בידי האולנרי.",
         "section": "גפה עליונה",
         "term": "Flexor Carpi Ulnaris"
+      }
+    ]
+  },
+  "flexor-digiti-minimi-of-foot": {
+    "notes": [
+      {
+        "text": "שריר קצר המכופף את מפרק בסיס הזרת בכף הרגל.",
+        "section": "גפה תחתונה",
+        "term": "Flexor digiti minimi brevis"
       }
     ]
   },
@@ -1459,6 +1603,15 @@
       }
     ]
   },
+  "glossopharyngeal-nerve-ix": {
+    "notes": [
+      {
+        "text": "עצב IX, לתפקודים בלוע, לטעם אחורי ולפעילות בלוטת הפרוטיד.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Glossopharyngeal"
+      }
+    ]
+  },
   "gluteus-maximus-muscle": {
     "notes": [
       {
@@ -1604,11 +1757,18 @@
   "hypophysis": {
     "notes": [
       {
+        "text": "בלוטה קטנה בגומת האוכף הטורקי בבסיס הגולגולת, המחוברת להיפותלמוס. האונה הקדמית מייצרת הורמונים; האחורית משחררת הורמונים המיוצרים בהיפותלמוס. תצלובת הראייה נמצאת בסמיכות מעליה. במילון היא מופיעה גם בשם Hypophysis.",
+        "section": "בלוטות ואיברים לימפתיים",
+        "term": "Pituitary gland"
+      },
+      {
         "text": "יותרת המוח, בלוטה הורמונלית בבסיס המוח הקשורה להיפותלמוס.",
         "section": "ראש וצוואר ואיברי החישה",
         "term": "Hypophysis"
       }
-    ]
+    ],
+    "he": "יותרת המוח",
+    "heHeading": "יותרת המוח"
   },
   "hypothalamus": {
     "notes": [
@@ -1768,6 +1928,16 @@
       }
     ]
   },
+  "inferior-leaflet-of-right-atrioventricular-valve": {
+    "notes": [
+      {
+        "text": "מסתם תלת־צניפי בין העלייה הימנית לחדר הימני.",
+        "section": "השלמות בית החזה",
+        "term": "Tricuspid valve",
+        "shared": true
+      }
+    ]
+  },
   "inferior-mesenteric-artery": {
     "notes": [
       {
@@ -1788,6 +1958,11 @@
   },
   "inferior-nasal-concha-bone": {
     "notes": [
+      {
+        "text": "קונכיות האף: בליטות גרמיות המכוסות ברירית ומגדילות את שטח המגע עם האוויר.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Concha (Superior/Mid./Inf.)"
+      },
       {
         "text": "הקונכייה התחתונה היא עצם נפרדת בדופן חלל האף.",
         "section": "גולגולת",
@@ -1813,6 +1988,26 @@
       }
     ]
   },
+  "inferior-papillary-muscle-of-left-ventricle": {
+    "notes": [
+      {
+        "text": "שרירים בחדרי הלב המותחים מיתרי גיד ומגבילים צניחת עלי מסתם.",
+        "section": "השלמות בית החזה",
+        "term": "Papillary muscles",
+        "shared": true
+      }
+    ]
+  },
+  "inferior-papillary-muscle-of-right-ventricle": {
+    "notes": [
+      {
+        "text": "שרירים בחדרי הלב המותחים מיתרי גיד ומגבילים צניחת עלי מסתם.",
+        "section": "השלמות בית החזה",
+        "term": "Papillary muscles",
+        "shared": true
+      }
+    ]
+  },
   "inferior-parathyroid-gland": {
     "notes": [
       {
@@ -1832,6 +2027,16 @@
       }
     ]
   },
+  "inferior-superficial-inguinal-nodes": {
+    "notes": [
+      {
+        "text": "קשרי לימפה שטחיים באזור המפשעה, המנקזים אזורים נרחבים של הגפה והדופן.",
+        "section": "גפה תחתונה",
+        "term": "Superficial inguinal lymph nodes",
+        "shared": true
+      }
+    ]
+  },
   "inferior-suprarenal-artery": {
     "notes": [
       {
@@ -1847,6 +2052,16 @@
         "text": "גזע תירוצרוויקלי וענפיו, המספקים אזורי תריס, צוואר ושכמה.",
         "section": "ראש וצוואר ואיברי החישה",
         "term": "Thyrocervical trunk - Transverse cervical artery, Suprascapular artery, Inferior thyroid artery",
+        "shared": true
+      }
+    ]
+  },
+  "inferior-trunk-of-brachial-plexus": {
+    "notes": [
+      {
+        "text": "גזעים עליון, אמצעי ותחתון של מקלעת הזרוע, הנוצרים מענפי C5–T1.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Trunks of the brachial plexus",
         "shared": true
       }
     ]
@@ -1902,6 +2117,16 @@
         "text": "הענף הקדמי של עצב חזי, העובר ברווח הבין־צלעי.",
         "section": "בית החזה",
         "term": "עצב אינטרקוסטלי (Intercostal Nerve)"
+      }
+    ]
+  },
+  "intermediate-cuneiform-bone": {
+    "notes": [
+      {
+        "text": "שלוש עצמות יתד בקדמת שורש כף הרגל.",
+        "section": "גפה תחתונה",
+        "term": "Cuneiform bones",
+        "shared": true
       }
     ]
   },
@@ -2087,6 +2312,40 @@
         "text": "שרירים המקרבים את קפלי הקול באמצעות סיבוב האריטנואידים.",
         "section": "ראש וצוואר ואיברי החישה",
         "term": "Lateral cricoarytenoids m."
+      }
+    ]
+  },
+  "lateral-cuneiform-bone": {
+    "notes": [
+      {
+        "text": "שלוש עצמות יתד בקדמת שורש כף הרגל.",
+        "section": "גפה תחתונה",
+        "term": "Cuneiform bones",
+        "shared": true
+      }
+    ]
+  },
+  "lateral-femoral-cutaneous-nerve": {
+    "notes": [
+      {
+        "text": "עצב תחושתי לעור בצד הקדמי־צדי של הירך.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Lateral cutaneous n. of the thigh"
+      },
+      {
+        "text": "עצב תחושתי לעור בצד החיצוני של הירך.",
+        "section": "גפה תחתונה",
+        "term": "Lateral cutaneous nerve of thigh"
+      }
+    ]
+  },
+  "lateral-head-of-flexor-hallucis-brevis": {
+    "notes": [
+      {
+        "text": "שריר קצר המכופף את מפרק בסיס הבוהן.",
+        "section": "גפה תחתונה",
+        "term": "Flexor hallucis brevis (lateral & medial head)",
+        "shared": true
       }
     ]
   },
@@ -2365,6 +2624,15 @@
       }
     ]
   },
+  "main-bronchus-right": {
+    "notes": [
+      {
+        "text": "הסימפון הראשי הימני, קצר ורחב יותר ובמהלך אנכי יחסית.",
+        "section": "בית החזה",
+        "term": "Right Main Bronchus"
+      }
+    ]
+  },
   "malleus": {
     "notes": [
       {
@@ -2425,6 +2693,15 @@
       }
     ]
   },
+  "maxillary-nerve": {
+    "notes": [
+      {
+        "text": "V2, הענף המקסילרי התחושתי של העצב המשולש.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Maxillary"
+      }
+    ]
+  },
   "maxillary-veins": {
     "notes": [
       {
@@ -2447,9 +2724,25 @@
   "medial-cuneiform-bone": {
     "notes": [
       {
+        "text": "שלוש עצמות יתד בקדמת שורש כף הרגל.",
+        "section": "גפה תחתונה",
+        "term": "Cuneiform bones",
+        "shared": true
+      },
+      {
         "text": "עצם היתד המדיאלית, בין הסירה למסד המסרק הראשון.",
         "section": "גפה תחתונה",
         "term": "Medial cuneiform"
+      }
+    ]
+  },
+  "medial-head-of-flexor-hallucis-brevis": {
+    "notes": [
+      {
+        "text": "שריר קצר המכופף את מפרק בסיס הבוהן.",
+        "section": "גפה תחתונה",
+        "term": "Flexor hallucis brevis (lateral & medial head)",
+        "shared": true
       }
     ]
   },
@@ -2572,12 +2865,62 @@
       }
     ]
   },
+  "middle-cells-of-ethmoid-bone": {
+    "notes": [
+      {
+        "text": "תאי אוויר בעצם האתמואיד, המתנקזים לאזורי חלל האף.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Ethmoidal cells",
+        "shared": true
+      }
+    ]
+  },
   "middle-colic-artery": {
     "notes": [
       {
         "text": "עורק מהמערכת המזנטרית העליונה אל המעי הרוחבי.",
         "section": "חלל הבטן ואיבריו",
         "term": "Middle colic artery"
+      }
+    ]
+  },
+  "middle-trunk-of-brachial-plexus": {
+    "notes": [
+      {
+        "text": "גזעים עליון, אמצעי ותחתון של מקלעת הזרוע, הנוצרים מענפי C5–T1.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Trunks of the brachial plexus",
+        "shared": true
+      }
+    ]
+  },
+  "multifidus-colli-muscle": {
+    "notes": [
+      {
+        "text": "שרירים עמוקים וקצרים המייצבים חוליות ומסייעים בפשיטה ובסיבוב.",
+        "section": "גב ועמוד שדרה",
+        "term": "Multifidus",
+        "shared": true
+      }
+    ]
+  },
+  "multifidus-lumborum-muscle": {
+    "notes": [
+      {
+        "text": "שרירים עמוקים וקצרים המייצבים חוליות ומסייעים בפשיטה ובסיבוב.",
+        "section": "גב ועמוד שדרה",
+        "term": "Multifidus",
+        "shared": true
+      }
+    ]
+  },
+  "multifidus-thoracis-muscle": {
+    "notes": [
+      {
+        "text": "שרירים עמוקים וקצרים המייצבים חוליות ומסייעים בפשיטה ובסיבוב.",
+        "section": "גב ועמוד שדרה",
+        "term": "Multifidus",
+        "shared": true
       }
     ]
   },
@@ -2727,6 +3070,20 @@
       }
     ]
   },
+  "oculomotor-nerve-iii": {
+    "notes": [
+      {
+        "text": "עצב III, לרוב שרירי העין, להרמת העפעף ולפעילות פאראסימפתטית בעין.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Oculomotor"
+      },
+      {
+        "text": "עצב III; מפעיל את רוב שרירי העין ואת מרים העפעף.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Oculomotor (III)"
+      }
+    ]
+  },
   "oesophagus": {
     "notes": [
       {
@@ -2743,6 +3100,15 @@
     "he": "ושט",
     "heHeading": "הוושט"
   },
+  "olfactory-nerve-i": {
+    "notes": [
+      {
+        "text": "עצב I, המעביר מידע על ריח מרירית האף.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Olfactory"
+      }
+    ]
+  },
   "omohyoid-muscle": {
     "notes": [
       {
@@ -2758,6 +3124,15 @@
         "text": "ענף של הקרוטיד הפנימי המספק את הארובה והעין.",
         "section": "ראש וצוואר ואיברי החישה",
         "term": "Ophthalmic artery"
+      }
+    ]
+  },
+  "ophthalmic-nerve": {
+    "notes": [
+      {
+        "text": "V1, הענף האופתלמי התחושתי של העצב המשולש.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Ophthalmic"
       }
     ]
   },
@@ -2791,6 +3166,11 @@
   "optic-nerve-ii": {
     "notes": [
       {
+        "text": "עצב II, המעביר מידע חזותי מהרשתית.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Optic"
+      },
+      {
         "text": "עצב II, מסלול המידע מהרשתית אל המוח.",
         "section": "ראש וצוואר ואיברי החישה",
         "term": "Optic nerve"
@@ -2803,6 +3183,16 @@
         "text": "שריר סביב הפה, הסוגר ומכווץ את השפתיים.",
         "section": "פנים ואזור טמפורלי",
         "term": "Orbicularis oris"
+      }
+    ]
+  },
+  "orbital-part-of-orbicularis-oculi": {
+    "notes": [
+      {
+        "text": "שריר טבעתי סביב העין, הסוגר את העפעפיים.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Orbicularis oculi",
+        "shared": true
       }
     ]
   },
@@ -2827,11 +3217,18 @@
   "palatine-tonsil": {
     "notes": [
       {
+        "text": "רקמה לימפתית במפגש בין דרכי האוויר והעיכול. כוללים שקדים פלטיניים, לשוני ולועי, לצד רקמה סמוך לפתחי חצוצרות השמע. משתתפים במפגש החיסוני עם חומרים הנכנסים דרך הפה והאף. השקד הפלטיני נמצא בין קשתות החך.",
+        "section": "הראש והצוואר",
+        "term": "Tonsils"
+      },
+      {
         "text": "שקד לימפתי בין קשתות החך באזור הלוע הפומי.",
         "section": "ראש וצוואר ואיברי החישה",
         "term": "Palatine tonsil"
       }
-    ]
+    ],
+    "he": "שקד",
+    "heHeading": "השקדים"
   },
   "palmar-interossei-muscles": {
     "notes": [
@@ -2848,6 +3245,16 @@
         "text": "שריר אמה עם גיד ארוך לאפונאורוזה הכפית; עשוי להיעדר.",
         "section": "גפה עליונה",
         "term": "Palmaris Longus"
+      }
+    ]
+  },
+  "palpebral-part-of-orbicularis-oculi": {
+    "notes": [
+      {
+        "text": "שריר טבעתי סביב העין, הסוגר את העפעפיים.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Orbicularis oculi",
+        "shared": true
       }
     ]
   },
@@ -3067,6 +3474,25 @@
       }
     ]
   },
+  "posterior-cells-of-ethmoid-bone": {
+    "notes": [
+      {
+        "text": "תאי אוויר בעצם האתמואיד, המתנקזים לאזורי חלל האף.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Ethmoidal cells",
+        "shared": true
+      }
+    ]
+  },
+  "posterior-cord-of-brachial-plexus": {
+    "notes": [
+      {
+        "text": "הצרור האחורי של המקלעת, מקור לרדיאלי ולאקסילרי.",
+        "section": "גפה עליונה",
+        "term": "Posterior Cord (פוסטריורי ל־Axillary Artery)"
+      }
+    ]
+  },
   "posterior-crico-arytenoid-muscle": {
     "notes": [
       {
@@ -3253,6 +3679,15 @@
         "text": "שריר בדופן הבטן האחורית, המסייע בכיפוף צדי ובייצוב צלע 12.",
         "section": "דופן הבטן האחורית והכליות",
         "term": "Quadratus lumborum"
+      }
+    ]
+  },
+  "quadratus-plantae-muscle": {
+    "notes": [
+      {
+        "text": "שריר סוליה הנאחז בגיד המכופף הארוך ומסייע בכיוון משיכתו.",
+        "section": "גפה תחתונה",
+        "term": "Quadratus plantar"
       }
     ]
   },
@@ -3447,6 +3882,16 @@
       }
     ]
   },
+  "semilunar-leaflet-of-pulmonary-valve": {
+    "notes": [
+      {
+        "text": "מסתם בין חדר ימין לגזע הריאה.",
+        "section": "בית החזה",
+        "term": "Pulmonary Valve",
+        "shared": true
+      }
+    ]
+  },
   "semimembranosus-muscle": {
     "notes": [
       {
@@ -3478,6 +3923,26 @@
         "text": "שריר המסטרינג מדיאלי; פושט ירך ומכופף ברך.",
         "section": "גפה תחתונה",
         "term": "Semitendinosus m."
+      }
+    ]
+  },
+  "septal-leaflet-of-right-atrioventricular-valve": {
+    "notes": [
+      {
+        "text": "מסתם תלת־צניפי בין העלייה הימנית לחדר הימני.",
+        "section": "השלמות בית החזה",
+        "term": "Tricuspid valve",
+        "shared": true
+      }
+    ]
+  },
+  "septal-papillary-muscle-of-right-ventricle": {
+    "notes": [
+      {
+        "text": "שרירים בחדרי הלב המותחים מיתרי גיד ומגבילים צניחת עלי מסתם.",
+        "section": "השלמות בית החזה",
+        "term": "Papillary muscles",
+        "shared": true
       }
     ]
   },
@@ -3719,6 +4184,15 @@
       }
     ]
   },
+  "subclavian-artery-left": {
+    "notes": [
+      {
+        "text": "העורק התת־בריחי השמאלי, היוצא בדרך כלל ישירות מקשת האאורטה.",
+        "section": "בית החזה",
+        "term": "Left Subclavian"
+      }
+    ]
+  },
   "subclavian-vein": {
     "notes": [
       {
@@ -3932,12 +4406,42 @@
       }
     ]
   },
+  "superior-trunk-of-brachial-plexus": {
+    "notes": [
+      {
+        "text": "גזעים עליון, אמצעי ותחתון של מקלעת הזרוע, הנוצרים מענפי C5–T1.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Trunks of the brachial plexus",
+        "shared": true
+      }
+    ]
+  },
   "superior-vena-cava": {
     "notes": [
       {
         "text": "וריד נבוב עליון, המחזיר דם מהגוף העליון לעלייה ימין.",
         "section": "בית החזה",
         "term": "Superior Vena Cava (SVC)"
+      }
+    ]
+  },
+  "superolateral-superficial-inguinal-nodes": {
+    "notes": [
+      {
+        "text": "קשרי לימפה שטחיים באזור המפשעה, המנקזים אזורים נרחבים של הגפה והדופן.",
+        "section": "גפה תחתונה",
+        "term": "Superficial inguinal lymph nodes",
+        "shared": true
+      }
+    ]
+  },
+  "superomedial-superficial-inguinal-nodes": {
+    "notes": [
+      {
+        "text": "קשרי לימפה שטחיים באזור המפשעה, המנקזים אזורים נרחבים של הגפה והדופן.",
+        "section": "גפה תחתונה",
+        "term": "Superficial inguinal lymph nodes",
+        "shared": true
       }
     ]
   },
@@ -4110,6 +4614,17 @@
       }
     ]
   },
+  "testis": {
+    "notes": [
+      {
+        "text": "איברי המין שבשק האשכים, המייצרים תאי זרע וטסטוסטרון. יצירת הזרע מתרחשת בצינוריות הזרע; מעטפת חיבור צפופה עוטפת את האשך. מיקומם מחוץ לחלל הבטן משתתף בשמירת טמפרטורה מתאימה ליצירת זרע.",
+        "section": "מערכת הרבייה הזכרית",
+        "term": "Testes"
+      }
+    ],
+    "he": "אשך",
+    "heHeading": "האשכים"
+  },
   "thymus": {
     "notes": [
       {
@@ -4280,6 +4795,16 @@
       }
     ]
   },
+  "transverse-part-of-iliofemoral-ligament": {
+    "notes": [
+      {
+        "text": "רצועה קדמית חזקה במפרק הירך, המגבילה בעיקר פשיטת יתר.",
+        "section": "גפה תחתונה",
+        "term": "Iliofemoral ligament / Y ligament",
+        "shared": true
+      }
+    ]
+  },
   "transversus-abdominis-muscle": {
     "notes": [
       {
@@ -4354,6 +4879,15 @@
         "text": "גלגלת סיבית בקדמת הארובה שבה משנה כיוון גיד האלכסוני העליון.",
         "section": "ראש וצוואר ואיברי החישה",
         "term": "Trochlea (pulley) of Superior Oblique m."
+      }
+    ]
+  },
+  "trochlear-nerve-iv": {
+    "notes": [
+      {
+        "text": "עצב IV, המפעיל את האלכסוני העליון של העין.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Trochlear"
       }
     ]
   },
@@ -4436,6 +4970,15 @@
     "he": "שלפוחית השתן",
     "heHeading": "שלפוחית השתן"
   },
+  "uvula-of-palate": {
+    "notes": [
+      {
+        "text": "הענבל, שלוחה אמצעית בקצה החך הרך.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Uvula"
+      }
+    ]
+  },
   "vagus-nerve-x": {
     "notes": [
       {
@@ -4449,6 +4992,28 @@
         "term": "Vagus Nerve"
       }
     ]
+  },
+  "ventricle-left": {
+    "notes": [
+      {
+        "text": "מזרים דם לאאורטה דרך המסתם האאורטלי. דופן שרירית עבה המותאמת ללחץ המחזור המערכתי. יוצר את חוד הלב. המסתם המיטרלי מפריד בינו לבין העלייה השמאלית.",
+        "section": "בית החזה",
+        "term": "Left ventricle"
+      }
+    ],
+    "he": "חדר שמאלי",
+    "heHeading": "החדר השמאלי"
+  },
+  "ventricle-right": {
+    "notes": [
+      {
+        "text": "מוציא דם אל גזע הריאה דרך המסתם הריאתי. השרירים הפפילריים ומיתרי הגיד תומכים במסתם הטריקוספידלי. יוצר חלק גדול מהמשטח הקדמי של הלב; דופנו דקה יחסית לדופן חדר שמאל.",
+        "section": "בית החזה",
+        "term": "Right ventricle"
+      }
+    ],
+    "he": "חדר ימני",
+    "heHeading": "החדר הימני"
   },
   "vermiform-appendix": {
     "notes": [
@@ -4472,6 +5037,15 @@
         "text": "עורק העולה בצוואר ונכנס לגולגולת לתרומה למחזור האחורי של המוח.",
         "section": "גב ועמוד שדרה",
         "term": "Vertebral artery"
+      }
+    ]
+  },
+  "vestibulocochlear-nerve-viii": {
+    "notes": [
+      {
+        "text": "עצב VIII, לשמיעה ולשיווי משקל.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Vestibulocochlear"
       }
     ]
   },

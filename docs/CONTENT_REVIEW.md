@@ -27,7 +27,7 @@ site writes them** (https://medintzfat.com/anatomy/). See
 - **Hebrew:** the course writes structure names in English. It uses Hebrew
   only occasionally, mostly as transliterations: העצב האולנרי, never עצב
   הגומד; רדיוס and אולנה, never עצם החישור or עצם הגומד. So only the
-  structures below show a Hebrew name: 71 as the site writes them, plus 32
+  structures below show a Hebrew name: 71 as the site writes them, plus 40
   from her own summary, which wins where both exist. The earlier
   curated Hebrew names (`concepts.ts`) are kept as search aliases. They are
   no longer shown for structures the course names in English only (e.g.
@@ -42,6 +42,8 @@ singular for one-sided structures (`scripts/course/summary/synonyms.json` →
 
 | Structure           | Hebrew shown          | Her heading           | The site's form |
 | ------------------- | --------------------- | --------------------- | --------------- |
+| Atrium              | עלייה שמאלית          | העלייה השמאלית        |                 |
+| Atrium              | עלייה ימנית           | העלייה הימנית         |                 |
 | Colon               | כרכשת                 | הכרכשת                |                 |
 | Diaphragm           | סרעפת                 | הסרעפת                | סרעפת           |
 | Ductus deferens     | צינור הזרע            | צינור הזרע            |                 |
@@ -49,11 +51,14 @@ singular for one-sided structures (`scripts/course/summary/synonyms.json` →
 | Epididymis          | יותרת האשך            | יותרת האשך            | יותרת האשך      |
 | Epiglottis          | מכסה הגרון            | מכסה הגרון            |                 |
 | Esophagus           | ושט                   | הוושט                 | ושט             |
+| Eyeball             | עין                   | העין                  |                 |
 | Gallbladder         | כיס המרה              | כיס המרה              | כיס המרה        |
 | Heart               | לב                    | הלב                   | לב              |
+| Hypophysis          | יותרת המוח            | יותרת המוח            |                 |
 | Jejunum             | מעי ריק               | המעי הריק             |                 |
 | Lacrimal gland      | בלוטת הדמעות          | בלוטת הדמעות          |                 |
 | Liver               | כבד                   | הכבד                  | כבד             |
+| Palatine tonsil     | שקד                   | השקדים                |                 |
 | Pancreas            | לבלב                  | הלבלב                 | לבלב            |
 | Parotid gland       | בלוטת הפרוטיד         | בלוטת הפרוטיד         |                 |
 | Penis               | פין                   | הפין                  |                 |
@@ -66,6 +71,7 @@ singular for one-sided structures (`scripts/course/summary/synonyms.json` →
 | Sublingual gland    | בלוטת הרוק התת־לשונית | בלוטת הרוק התת־לשונית |                 |
 | Submandibular gland | בלוטת הרוק התת־לסתית  | בלוטת הרוק התת־לסתית  |                 |
 | Suprarenal gland    | בלוטת יותרת הכליה     | בלוטות יותרת הכליה    |                 |
+| Testis              | אשך                   | האשכים                |                 |
 | Thymus              | תימוס                 | התימוס                |                 |
 | Thyroid gland       | בלוטת התריס           | בלוטת התריס           | בלוטת התריס     |
 | Tongue              | לשון                  | הלשון                 |                 |
@@ -73,6 +79,8 @@ singular for one-sided structures (`scripts/course/summary/synonyms.json` →
 | Ureter              | שופכן                 | השופכנים              | צינור הכליה     |
 | Urethra             | שופכה                 | השופכה                |                 |
 | Urinary bladder     | שלפוחית השתן          | שלפוחית השתן          |                 |
+| Ventricle           | חדר שמאלי             | החדר השמאלי           |                 |
+| Ventricle           | חדר ימני              | החדר הימני            |                 |
 | Vermiform appendix  | תוספתן                | התוספתן               | תוספתן          |
 
 ### Hebrew names shown from the course site (as it writes them — please check)
