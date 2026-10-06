@@ -34,16 +34,31 @@ removing duplicates, coverings and spaces.
 | **"Bony Pelvis and Pelvic Organs from MRI"** (audreybyrd, Sketchfab) | CC BY           | No                                                                                            | Uterus, cervix, uterine tubes, ovaries, **vagina, vulva**, bladder, rectum, from a real 25-year-old woman's MRI                                                                                                                                                                                                                                                                                                                                           | Medium; overlaps the Human Reference Atlas, adds vagina/vulva                         |
 | "Anatomy of the Larynx" (University of Dundee)                       | CC BY-SA 4.0    | No (derived from BodyParts3D)                                                                 | Larynx cartilages, membranes                                                                                                                                                                                                                                                                                                                                                                                                                              | Low value: BodyParts3D has the same                                                   |
 
-**Not usable** (the NC ones are allowed since 2026-10-06, contents not yet checked):
+**Not usable:**
 
-- "Ligaments of the Female Pelvis" (Dundee): tagged CC BY on Sketchfab but
-  its description says CC BY-NC-SA, so treat it as NC.
-- "Anatomy of the Inner Ear" (Dundee): CC BY-NC-SA.
-- Indiana University School of Medicine collection: CC BY-NC-SA.
-- Open Anatomy Project atlases (SPL head and neck, inner ear): 3D Slicer
-  licence, not CC.
-- Cervical nerves visualisation (PMC4145979): CC BY-NC-SA 3.0.
 - Sketchfab "Nerves" (metal_soup): an AR art piece, not labelled anatomy.
+
+## Non-commercial sources, checked 2026-10-06
+
+NC licences are allowed since 2026-10-06. Every NC candidate was checked
+(Sketchfab API listings, descriptions, preview images; the viewer's scene
+files are obfuscated and were not read). **None fills a gap**, so none was
+added:
+
+| Source                                                                                                              | Licence                                   | Contents                                                                                                          | Verdict                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| "Anatomy of the Inner Ear" (Dundee)                                                                                 | CC BY-NC-SA 4.0                           | Inner ear                                                                                                         | Already in, via Z-Anatomy                                                                   |
+| "Ligaments of the Female Pelvis" (Dundee, Lissie Cowley)                                                            | CC BY-NC-SA 4.0 (Sketchfab says CC BY)    | Female bony pelvis, lumbar spine, femora; iliolumbar, sacroiliac, sacrotuberous/-spinous, inguinal, hip ligaments | All these ligaments are in Z-Anatomy already; a female pelvis doesn't fit our male skeleton |
+| Indiana University School of Medicine, Ruth Lilly Medical Library (`iusmlib`)                                       | CC BY-NC-SA 4.0                           | 6 models: brain lobes, brain half, spine, skull, renal system                                                     | All present; the renal system is BodyParts3D-derived                                        |
+| Indiana University Advanced Visualization Lab (`AVL`)                                                               | CC BY or none                             | Scans (thorax/blood volume, skull, protein)                                                                       | Not separable structures                                                                    |
+| Cervical nerves model (PMC4145979)                                                                                  | CC BY-NC-SA 3.0 (the article)             | Cervical plexus, phrenic, vagus, recurrent laryngeal shown in figures                                             | **No model file published** (no supplement) — only pictures                                 |
+| Dundee "Larynx with Muscles and Ligaments", "Pharynx and Floor of Mouth", "Parapharyngeal Space" (Eve Laws)         | CC BY-NC-SA 4.0                           | Larynx muscles/cartilages; pharynx, floor of mouth; skull base, parotid, styloid muscles, carotid sheath          | Z-Anatomy has these; a CT-based other body would need fitting and duplicate them            |
+| Dundee "Lymphatics of head and neck" (School of Dentistry)                                                          | NC-SA on Sketchfab, CC BY-SA in its image | Head/neck lymph nodes and vessels, BodyParts3D-derived                                                            | Licence unclear; lymph nodes already present                                                |
+| Dundee "Head and Neck Anatomy for Dentistry"                                                                        | CC BY                                     | Photogrammetry of a wax écorché                                                                                   | One surface, no separate structures                                                         |
+| Dundee "3D Pelvic Floor Muscles", "Spinal Cord Anatomy", "Cranial Nerves and Foramina" and most of `anatomy_dundee` | —                                         | —                                                                                                                 | Not downloadable                                                                            |
+| Open Anatomy SPL head and neck atlas                                                                                | 3D Slicer licence part B                  | Skull, spine, neck muscles, vessels, glands — no nerves                                                           | Nothing missing from our model                                                              |
+
+The gaps below therefore stay open.
 
 ## Still without any open source
 

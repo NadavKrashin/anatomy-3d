@@ -189,12 +189,13 @@ All verified by `npm run e2e:smoke` against a production build.
    source has).
    4e. **Fill model gaps** (`docs/MODEL_SOURCES.md`): **Open3DModel done**
    (206 meshes, limbs + lumbosacral plexus); **Z-Anatomy's NC inner ear and
-   kidney done** (user allowed NC). Next, in order: check the contents of
-   the NC sources now allowed — Indiana University School of Medicine
-   collection, the cervical nerves model (PMC4145979, maybe the cervical
-   plexus), Dundee "Ligaments of the Female Pelvis"; Human Reference Atlas
-   female organs (CC BY, needs alignment); BodyParts3D (rectum, some
-   nerves/arteries). NC models go into the non-commercial file only. Open3DModel's
+   kidney done** (user allowed NC). The other NC sources were checked and
+   none fills a gap (`docs/MODEL_SOURCES.md` → "Non-commercial sources").
+   Next, in order: Human Reference Atlas female organs (CC BY, needs
+   alignment); BodyParts3D (rectum, some nerves/arteries); then hand-made
+   models for the phrenic nerve, cervical plexus, laryngeal nerves and
+   thoracic duct (no source has them). NC models go into the
+   non-commercial file only. Open3DModel's
    retinacula, tendon sheaths and spaces (femoral/adductor canal) were left
    out as coverings — could come back as a toggleable layer. Phrenic nerve,
    cervical plexus, laryngeal nerves, thoracic duct have no open source yet.
@@ -399,3 +400,8 @@ All verified by `npm run e2e:smoke` against a production build.
 - **2026-10-06 · session 3 (cont.)** — Open3DModel extras and the
   non-commercial inner ear/kidney merged to `main` (user: "Yes"), so they
   reach production.
+- **2026-10-06 · session 3 (cont.)** — Checked every NC source now allowed
+  (Dundee, Indiana University, the cervical nerves paper, Open Anatomy):
+  none adds anything — already in Z-Anatomy, not downloadable, one fused
+  surface, or (cervical nerves) no model file published. Table in
+  `docs/MODEL_SOURCES.md`.
