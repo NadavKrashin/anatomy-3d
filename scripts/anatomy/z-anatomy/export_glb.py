@@ -318,6 +318,10 @@ class Regions:
         self.bonus = {k: set(v) for k, v in bonus.items()}
         self.upper_limb = self.bonus["Left upper limb"] | self.bonus["Right upper limb"]
         self.upper_limb |= {f"{n}.{side}" for n in EXTRA_UPPER_LIMB for side in "lr"} | EXTRA_UNSIDED
+        # Z-Anatomy's "Thorax" collection also lists pelvic veins (iliac,
+        # gluteal, pudendal…): a vessel it places below the diaphragm's lowest
+        # point (crura, ~L2-L3) is placed by height instead.
+        self.below_diaphragm = z_range(objects["Diaphragm"])[0]
         self.levels = [
             (z_range(objects["Mandible"])[0], "head"),
             (z_range(objects["Manubrium of sternum"])[1], "neck"),
@@ -329,10 +333,16 @@ class Regions:
         name = obj.name
         if name in self.upper_limb:
             return "upper-limb"
+        center = world_center(obj)
         for columns, region in REGION_COLLECTIONS:
             if any(name in self.bonus[c] for c in columns):
-                return region
-        center = world_center(obj)
+                misfiled = (
+                    region == "thorax"
+                    and system == "cardiovascular"
+                    and center.z < self.below_diaphragm
+                )
+                if not misfiled:
+                    return region
         if abs(center.x) > 0.25:  # outside the trunk/head column
             return "other"
         for z, region in self.levels:

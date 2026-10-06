@@ -560,7 +560,9 @@
     "Pulmonary veins": ["superior-pulmonary-vein", "inferior-pulmonary-vein"],
     "Bronchioles": ["lung"],
     "Alveoli": ["lung"],
-    "Ribs": ["re:-rib$"],
+    "Ribs": [
+      "re:^(first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth|eleventh|twelfth)-rib$"
+    ],
     "Internal spermatic fascia": ["ductus-deferens"],
     "Femoral neck": ["femur"],
     "Fibular neck": ["fibula"],

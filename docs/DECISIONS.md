@@ -466,3 +466,14 @@ are absent from Z-Anatomy itself, so there is nothing to export. The
 export's covering filter was too broad. It now has a reviewed exception
 list (`NOT_COVERINGS`) instead of looser patterns, so real coverings stay
 excluded.
+
+## 2026-10-06 — Regions: a source collection is not trusted below the diaphragm
+
+Z-Anatomy's "Thorax" collection lists pelvic veins: the iliac, gluteal,
+internal pudendal and lateral sacral veins, the testicular veins and the
+deep dorsal vein of the penis. They showed under "thorax" in region scopes
+and quizzes. The export now places a cardiovascular structure from that
+collection by height when its centre is below the diaphragm's lowest point
+(the crura). That line sits below the azygos vein and the lower ribs, which
+correctly stay "thorax". Only 21 manifest regions changed; the model files
+are identical.

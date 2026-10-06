@@ -3061,7 +3061,7 @@
     "name": "Common iliac vein.l",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "abdomen",
     "pack": "vessels",
     "vertices": 130
   },
@@ -3069,7 +3069,7 @@
     "name": "Common iliac vein.r",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "abdomen",
     "pack": "vessels",
     "vertices": 71
   },
@@ -3791,7 +3791,7 @@
     "name": "Deep dorsal vein of penis",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "pelvis",
     "pack": "vessels",
     "vertices": 909
   },
@@ -5289,7 +5289,7 @@
     "name": "External iliac vein.l",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "pelvis",
     "pack": "vessels",
     "vertices": 130
   },
@@ -5297,7 +5297,7 @@
     "name": "External iliac vein.r",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "pelvis",
     "pack": "vessels",
     "vertices": 130
   },
@@ -6777,7 +6777,7 @@
     "name": "Iliolumbar vein.l",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "abdomen",
     "pack": "vessels",
     "vertices": 719
   },
@@ -6785,7 +6785,7 @@
     "name": "Iliolumbar vein.r",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "abdomen",
     "pack": "vessels",
     "vertices": 719
   },
@@ -6965,7 +6965,7 @@
     "name": "Inferior epigastric vein.l",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "abdomen",
     "pack": "vessels",
     "vertices": 602
   },
@@ -6973,7 +6973,7 @@
     "name": "Inferior epigastric vein.r",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "abdomen",
     "pack": "vessels",
     "vertices": 602
   },
@@ -7065,7 +7065,7 @@
     "name": "Inferior gluteal veins.l",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "pelvis",
     "pack": "vessels",
     "vertices": 932
   },
@@ -7073,7 +7073,7 @@
     "name": "Inferior gluteal veins.r",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "pelvis",
     "pack": "vessels",
     "vertices": 932
   },
@@ -8125,7 +8125,7 @@
     "name": "Internal iliac vein.l",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "pelvis",
     "pack": "vessels",
     "vertices": 130
   },
@@ -8133,7 +8133,7 @@
     "name": "Internal iliac vein.r",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "pelvis",
     "pack": "vessels",
     "vertices": 130
   },
@@ -8205,7 +8205,7 @@
     "name": "Internal pudendal vein.l",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "pelvis",
     "pack": "vessels",
     "vertices": 720
   },
@@ -8213,7 +8213,7 @@
     "name": "Internal pudendal vein.r",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "pelvis",
     "pack": "vessels",
     "vertices": 720
   },
@@ -9421,7 +9421,7 @@
     "name": "Lateral sacral veins.l",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "pelvis",
     "pack": "vessels",
     "vertices": 305
   },
@@ -9429,7 +9429,7 @@
     "name": "Lateral sacral veins.r",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "pelvis",
     "pack": "vessels",
     "vertices": 305
   },
@@ -9849,7 +9849,7 @@
     "name": "Left testicular vein",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "pelvis",
     "pack": "vessels",
     "vertices": 2016
   },
@@ -17001,7 +17001,7 @@
     "name": "Right testicular vein",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "pelvis",
     "pack": "vessels",
     "vertices": 2016
   },
@@ -19073,7 +19073,7 @@
     "name": "Superior gluteal veins.l",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "pelvis",
     "pack": "vessels",
     "vertices": 978
   },
@@ -19081,7 +19081,7 @@
     "name": "Superior gluteal veins.r",
     "system": "cardiovascular",
     "tissue": "vein",
-    "region": "thorax",
+    "region": "pelvis",
     "pack": "vessels",
     "vertices": 978
   },

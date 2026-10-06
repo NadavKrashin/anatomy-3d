@@ -181,7 +181,7 @@ not used yet.
 `z-anatomy/summaryNotes.ts` (`withSummaryNotes`, after `withCourseName`)
 applies:
 
-- **Notes for 717 structures.** They show as "סיכום" ("Summary") at the
+- **Notes for 708 structures.** They show as "סיכום" ("Summary") at the
   top of the info panel, notes about the structure itself first. Matching
   uses the course-name rules. Ambiguous names like "Abductor digiti minimi"
   are resolved by the summary's region (the lower-limb table → the foot's).

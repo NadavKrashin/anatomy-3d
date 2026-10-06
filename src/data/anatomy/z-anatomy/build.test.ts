@@ -237,6 +237,13 @@ describe("the Z-Anatomy whole-body dataset", () => {
     expect(region("thyroid-gland")).toBe("neck");
   });
 
+  it("keeps pelvic veins out of the thorax (the source's collection lists them there)", () => {
+    const region = (id: string) => registry.get(id)?.region;
+    expect(region("internal-iliac-vein-left")).toBe("pelvis");
+    expect(region("deep-dorsal-vein-of-penis")).toBe("pelvis");
+    expect(region("azygos-vein")).toBe("thorax");
+  });
+
   it("groups organ pieces into whole organs, one per side where paired", () => {
     expect(registry.partsOf("heart").map((p) => p.id)).toEqual(
       expect.arrayContaining(["ventricle-left", "atrium-right"]),

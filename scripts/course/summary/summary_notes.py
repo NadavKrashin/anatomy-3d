@@ -124,6 +124,9 @@ def split_names(name):
             out.append(" ".join(out[-1].split()[:-1] + [p]))
         elif len(words) == 1 and i + 1 < len(parts) and len(parts[i + 1].split()) > 1:
             out.append(" ".join([p] + parts[i + 1].split()[1:]))
+        elif len(words) == 1 and i > 0 and len(parts[i - 1].split()) > 1:
+            # "Rhomboid major/minor" → "Rhomboid minor"
+            out.append(" ".join(parts[i - 1].split()[:-1] + [p]))
         else:
             out.append(p)
     return list(dict.fromkeys([name.strip()] + out))

@@ -19,8 +19,9 @@ export function StructureNotes({
         {t.structure.studyNotes}
       </h3>
       <div className="flex flex-col gap-3 text-[15px] leading-relaxed">
-        {notes.map((note) => (
-          <div key={`${note.term}|${note.text}`}>
+        {notes.map((note, i) => (
+          // Two of her entries can share a name and text; position keeps keys unique.
+          <div key={`${i}|${note.term}`}>
             {/* An entry about more than this structure says which one it is. */}
             {note.shared && (
               <p className="text-graphite font-serif text-[14px]">

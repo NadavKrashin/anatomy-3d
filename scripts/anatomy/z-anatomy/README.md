@@ -42,7 +42,8 @@ them — tensor fasciae latae, meningeal arteries/branch, septum pellucidum),
 helper objects, the liver-segment duplicates and the
 **non-commercial inner ear and kidney models**; organ → system from an
 explicit list (`VISCERAL_SYSTEMS`); region from Z-Anatomy collections, else
-by height against skeletal landmarks; one material per tissue; muscle parts
+by height against skeletal landmarks (a vessel the source's "Thorax"
+collection lists below the diaphragm — its pelvic veins — goes by height); one material per tissue; muscle parts
 tagged with their whole muscle; missing side suffixes completed from
 position; left/right regions harmonised.
 

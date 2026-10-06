@@ -1324,106 +1324,6 @@
       }
     ]
   },
-  "costal-cartilage-of-eighth-rib": {
-    "notes": [
-      {
-        "text": "הצלעות, עצמות קשתיות המרכיבות עם החוליות והסטרנום את כלוב החזה.",
-        "section": "השלמות בית החזה",
-        "term": "Ribs",
-        "shared": true
-      }
-    ]
-  },
-  "costal-cartilage-of-fifth-rib": {
-    "notes": [
-      {
-        "text": "הצלעות, עצמות קשתיות המרכיבות עם החוליות והסטרנום את כלוב החזה.",
-        "section": "השלמות בית החזה",
-        "term": "Ribs",
-        "shared": true
-      }
-    ]
-  },
-  "costal-cartilage-of-first-rib": {
-    "notes": [
-      {
-        "text": "הצלעות, עצמות קשתיות המרכיבות עם החוליות והסטרנום את כלוב החזה.",
-        "section": "השלמות בית החזה",
-        "term": "Ribs",
-        "shared": true
-      }
-    ]
-  },
-  "costal-cartilage-of-fourth-rib": {
-    "notes": [
-      {
-        "text": "הצלעות, עצמות קשתיות המרכיבות עם החוליות והסטרנום את כלוב החזה.",
-        "section": "השלמות בית החזה",
-        "term": "Ribs",
-        "shared": true
-      }
-    ]
-  },
-  "costal-cartilage-of-ninth-rib": {
-    "notes": [
-      {
-        "text": "הצלעות, עצמות קשתיות המרכיבות עם החוליות והסטרנום את כלוב החזה.",
-        "section": "השלמות בית החזה",
-        "term": "Ribs",
-        "shared": true
-      }
-    ]
-  },
-  "costal-cartilage-of-second-rib": {
-    "notes": [
-      {
-        "text": "הצלעות, עצמות קשתיות המרכיבות עם החוליות והסטרנום את כלוב החזה.",
-        "section": "השלמות בית החזה",
-        "term": "Ribs",
-        "shared": true
-      }
-    ]
-  },
-  "costal-cartilage-of-seventh-rib": {
-    "notes": [
-      {
-        "text": "הצלעות, עצמות קשתיות המרכיבות עם החוליות והסטרנום את כלוב החזה.",
-        "section": "השלמות בית החזה",
-        "term": "Ribs",
-        "shared": true
-      }
-    ]
-  },
-  "costal-cartilage-of-sixth-rib": {
-    "notes": [
-      {
-        "text": "הצלעות, עצמות קשתיות המרכיבות עם החוליות והסטרנום את כלוב החזה.",
-        "section": "השלמות בית החזה",
-        "term": "Ribs",
-        "shared": true
-      }
-    ]
-  },
-  "costal-cartilage-of-tenth-rib": {
-    "notes": [
-      {
-        "text": "הצלעות, עצמות קשתיות המרכיבות עם החוליות והסטרנום את כלוב החזה.",
-        "section": "השלמות בית החזה",
-        "term": "Ribs",
-        "shared": true
-      }
-    ]
-  },
-  "costal-cartilage-of-third-rib": {
-    "notes": [
-      {
-        "text": "הצלעות, עצמות קשתיות המרכיבות עם החוליות והסטרנום את כלוב החזה.",
-        "section": "השלמות בית החזה",
-        "term": "Ribs",
-        "shared": true
-      }
-    ]
-  },
   "cricoid-cartilage": {
     "notes": [
       {
@@ -4355,16 +4255,6 @@
       }
     ]
   },
-  "intra-articular-ligament-of-head-of-rib": {
-    "notes": [
-      {
-        "text": "הצלעות, עצמות קשתיות המרכיבות עם החוליות והסטרנום את כלוב החזה.",
-        "section": "השלמות בית החזה",
-        "term": "Ribs",
-        "shared": true
-      }
-    ]
-  },
   "iris": {
     "notes": [
       {
@@ -7193,16 +7083,6 @@
       }
     ]
   },
-  "radiate-ligament-of-head-of-rib": {
-    "notes": [
-      {
-        "text": "הצלעות, עצמות קשתיות המרכיבות עם החוליות והסטרנום את כלוב החזה.",
-        "section": "השלמות בית החזה",
-        "term": "Ribs",
-        "shared": true
-      }
-    ]
-  },
   "radius": {
     "notes": [
       {
@@ -7303,7 +7183,18 @@
       {
         "text": "שרירים בין עמוד השדרה לשכמה, המקרבים ומייצבים אותה.",
         "section": "גב ועמוד שדרה",
-        "term": "Rhomboid major/minor"
+        "term": "Rhomboid major/minor",
+        "shared": true
+      }
+    ]
+  },
+  "rhomboid-minor-muscle": {
+    "notes": [
+      {
+        "text": "שרירים בין עמוד השדרה לשכמה, המקרבים ומייצבים אותה.",
+        "section": "גב ועמוד שדרה",
+        "term": "Rhomboid major/minor",
+        "shared": true
       }
     ]
   },
@@ -7413,7 +7304,18 @@
       {
         "text": "שרירי צוואר צדדיים המחוברים לצלעות הראשונה והשנייה ומסייעים גם בנשימה.",
         "section": "צוואר",
-        "term": "Scalenus Anterior/medius/Posterior"
+        "term": "Scalenus Anterior/medius/Posterior",
+        "shared": true
+      }
+    ]
+  },
+  "scalenus-medius-muscle": {
+    "notes": [
+      {
+        "text": "שרירי צוואר צדדיים המחוברים לצלעות הראשונה והשנייה ומסייעים גם בנשימה.",
+        "section": "צוואר",
+        "term": "Scalenus Anterior/medius/Posterior",
+        "shared": true
       }
     ]
   },
@@ -11099,7 +11001,18 @@
       {
         "text": "שרירים מהזיגומה לשפה ולזווית הפה, התורמים לחיוך.",
         "section": "פנים ואזור טמפורלי",
-        "term": "Zygomaticus major & minor"
+        "term": "Zygomaticus major & minor",
+        "shared": true
+      }
+    ]
+  },
+  "zygomaticus-minor-muscle": {
+    "notes": [
+      {
+        "text": "שרירים מהזיגומה לשפה ולזווית הפה, התורמים לחיוך.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Zygomaticus major & minor",
+        "shared": true
       }
     ]
   }
