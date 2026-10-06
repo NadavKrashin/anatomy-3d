@@ -394,3 +394,5 @@ All verified by `npm run e2e:smoke` against a production build.
   no longer counted as singular. Her notes on the kidney, renal pelvis,
   cochlea, vestibule and their parts (cortex, medulla, capsule, canals…);
   Hebrew "כליה" (her singular).
+  Going-commercial checklist also notes Z-Anatomy's unlicensed-looking
+  "Brainder"/"White matter" (University of Washington) credits.

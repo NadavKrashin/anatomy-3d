@@ -72,6 +72,9 @@ the switch removes all of them, their model file and their credits.
    use only (`data/course/medintzfat/`, course names — see
    `docs/COURSE_SOURCE.md`), and her summary was shared for this app.
    Commercial use needs permission from both.
+   Also: Z-Anatomy's `Resources/Models/License.txt` says it includes
+   "Brainder" and "White matter" from the University of Washington without
+   naming a licence (likely in the brain meshes); confirm their terms first.
 6. To fill the gap: a CC BY / CC BY-SA kidney or inner ear
    (`docs/MODEL_SOURCES.md`: BodyParts3D kidney, Human Reference Atlas kidney,
    the CC BY "Inner ear" on Sketchfab).
