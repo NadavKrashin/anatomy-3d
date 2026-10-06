@@ -143,11 +143,22 @@ const RELABEL: Readonly<Record<string, string>> = {
   "Sigmoid colon": "Rectum",
 };
 
+/**
+ * Z-Anatomy meshes with left and right swapped (the ".l" one lies on the
+ * body's right), found by the 2026-10-06 audit: side from the position.
+ */
+const SWAPPED_SIDES: ReadonlySet<string> = new Set([
+  "Lateral temporomandibular ligament",
+]);
+
 function relabelled(raw: ManifestEntry): {
   entry: ManifestEntry;
   parsed: ParsedName;
 } {
-  const parsed = parseName(raw.name);
+  const named = parseName(raw.name);
+  const parsed: ParsedName = SWAPPED_SIDES.has(named.base)
+    ? { ...named, side: named.side === "left" ? "right" : "left" }
+    : named;
   const base = RELABEL[parsed.base];
   if (base === undefined) return { entry: raw, parsed };
   const entry: ManifestEntry = { ...raw };
@@ -197,12 +208,13 @@ export function parseName(raw: string): ParsedName {
   if (suffix) {
     side = suffix[1] === "l" ? "left" : "right";
     name = name.slice(0, -2);
-  } else {
-    const prefix = /^(Left|Right) (.+)$/.exec(name);
-    if (prefix?.[1] && prefix[2]) {
-      side = prefix[1] === "Left" ? "left" : "right";
-      name = prefix[2].charAt(0).toUpperCase() + prefix[2].slice(1);
-    }
+  }
+  // "Left subclavian artery"; also "Right testicular artery.r" (both).
+  const prefix = /^(Left|Right) (.+)$/.exec(name);
+  const prefixSide = prefix?.[1] === "Left" ? "left" : "right";
+  if (prefix?.[2] && (!suffix || prefixSide === side)) {
+    side = prefixSide;
+    name = prefix[2].charAt(0).toUpperCase() + prefix[2].slice(1);
   }
   const inconstant = /^\(.*\)$/.test(name);
   return { base: inconstant ? name.slice(1, -1) : name, side, inconstant };

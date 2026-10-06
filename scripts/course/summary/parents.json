@@ -70,7 +70,7 @@
     "Cardiac orifice & zone": ["stomach"],
     "Greater curvature": ["stomach"],
     "Lesser curvature": ["stomach"],
-    "Gastric folds (Rugae)": ["stomach", "mucosa-of-stomach"],
+    "Gastric folds (Rugae)": ["stomach"],
     "Fibrous capsule of spleen": ["spleen"],
     "Hilum of spleen": ["spleen"],
     "Gastric/Renal/Colic impression": ["spleen"],

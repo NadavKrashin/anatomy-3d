@@ -439,7 +439,7 @@
     "tissue": "ligament",
     "region": "pelvis",
     "pack": "female",
-    "vertices": 514,
+    "vertices": 453,
     "source": "Human Reference Atlas",
     "sex": "female"
   },
@@ -449,7 +449,7 @@
     "tissue": "ligament",
     "region": "pelvis",
     "pack": "female",
-    "vertices": 453,
+    "vertices": 514,
     "source": "Human Reference Atlas",
     "sex": "female"
   },

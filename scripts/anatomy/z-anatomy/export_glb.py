@@ -301,6 +301,8 @@ def excluded(obj: bpy.types.Object) -> str | None:
     name = obj.name
     if obj.type != "MESH" or not is_real_structure(name):
         return "not a structure"
+    if not obj.data.polygons:
+        return "no surface"  # guide lines and points (eyeball axes, "-curve", "-path")
     if non_commercial_source(obj) and not NC_ONLY:
         return "non-commercial licence"
     if NC_ONLY and not non_commercial_source(obj):
@@ -315,6 +317,11 @@ def excluded(obj: bpy.types.Object) -> str | None:
 
 
 KIDNEY = re.compile(r"\bkidney\b", re.I)
+# Run the whole length of the spine; the source lists them under "Neck".
+WHOLE_SPINE = re.compile(
+    r"^(anterior|posterior) longitudinal ligament|^interspinous ligaments|^intertransverse ligaments|^ligamenta flava|^rotatores",
+    re.I,
+)
 
 
 def z_range(obj: bpy.types.Object) -> tuple[float, float]:
@@ -354,6 +361,8 @@ class Regions:
         name = obj.name
         if name in self.upper_limb:
             return "upper-limb"
+        if WHOLE_SPINE.search(name):
+            return "back"
         center = world_center(obj)
         # The kidney's own vessels are listed under "Thorax" (with the vena
         # cava); place them, like the kidney, by height.

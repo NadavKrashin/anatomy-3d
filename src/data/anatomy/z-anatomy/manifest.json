@@ -1217,7 +1217,7 @@
     "name": "Anterior longitudinal ligament",
     "system": "other",
     "tissue": "ligament",
-    "region": "neck",
+    "region": "back",
     "pack": "skeleton",
     "vertices": 2466
   },
@@ -2638,16 +2638,6 @@
     "region": "head",
     "pack": "nerves",
     "vertices": 1324
-  },
-  {
-    "name": "Ciliary body-curve.r",
-    "system": "nervous",
-    "tissue": "sense",
-    "region": "head",
-    "pack": "nerves",
-    "vertices": 48,
-    "group": "Eyeball",
-    "groupSide": "right"
   },
   {
     "name": "Cingulate gyrus (Posteroventral part*).l",
@@ -5018,16 +5008,6 @@
     "vertices": 1650
   },
   {
-    "name": "Equator of eyeball.r",
-    "system": "nervous",
-    "tissue": "sense",
-    "region": "head",
-    "pack": "nerves",
-    "vertices": 64,
-    "group": "Eyeball",
-    "groupSide": "right"
-  },
-  {
     "name": "Ethmoid bone",
     "system": "skeletal",
     "tissue": "bone",
@@ -5244,14 +5224,6 @@
     "region": "pelvis",
     "pack": "muscles",
     "vertices": 103
-  },
-  {
-    "name": "External axis of eyeball",
-    "system": "nervous",
-    "tissue": "sense",
-    "region": "head",
-    "pack": "nerves",
-    "vertices": 5
   },
   {
     "name": "External carotid artery.l",
@@ -8080,16 +8052,6 @@
     "vertices": 14411
   },
   {
-    "name": "Internal axis of eyeball.r",
-    "system": "nervous",
-    "tissue": "sense",
-    "region": "head",
-    "pack": "nerves",
-    "vertices": 3,
-    "group": "Eyeball",
-    "groupSide": "right"
-  },
-  {
     "name": "Internal carotid artery.l",
     "system": "cardiovascular",
     "tissue": "artery",
@@ -8425,7 +8387,7 @@
     "name": "Interspinous ligaments",
     "system": "other",
     "tissue": "ligament",
-    "region": "neck",
+    "region": "back",
     "pack": "skeleton",
     "vertices": 294
   },
@@ -8433,7 +8395,7 @@
     "name": "Intertransverse ligaments.l",
     "system": "other",
     "tissue": "ligament",
-    "region": "neck",
+    "region": "back",
     "pack": "skeleton",
     "vertices": 5722
   },
@@ -8441,7 +8403,7 @@
     "name": "Intertransverse ligaments.r",
     "system": "other",
     "tissue": "ligament",
-    "region": "neck",
+    "region": "back",
     "pack": "skeleton",
     "vertices": 5722
   },
@@ -10043,7 +10005,7 @@
     "name": "Ligamenta flava",
     "system": "other",
     "tissue": "ligament",
-    "region": "neck",
+    "region": "back",
     "pack": "skeleton",
     "vertices": 2366
   },
@@ -11326,14 +11288,6 @@
     "groupSide": "midline"
   },
   {
-    "name": "Medulla-path",
-    "system": "nervous",
-    "tissue": "nerve",
-    "region": "abdomen",
-    "pack": "nerves",
-    "vertices": 506
-  },
-  {
     "name": "Meningeal branch of maxillary nerve.l",
     "system": "nervous",
     "tissue": "nerve",
@@ -11412,16 +11366,6 @@
     "region": "head",
     "pack": "muscles",
     "vertices": 85
-  },
-  {
-    "name": "Meridians of eyeball.r",
-    "system": "nervous",
-    "tissue": "sense",
-    "region": "head",
-    "pack": "nerves",
-    "vertices": 134,
-    "group": "Eyeball",
-    "groupSide": "right"
   },
   {
     "name": "Meso-appendix",
@@ -11898,14 +11842,6 @@
     "region": "head",
     "pack": "organs",
     "vertices": 4860
-  },
-  {
-    "name": "Mucosa of stomach",
-    "system": "digestive",
-    "tissue": "digestive",
-    "region": "abdomen",
-    "pack": "organs",
-    "vertices": 0
   },
   {
     "name": "Multifidus colli muscle.l",
@@ -15173,7 +15109,7 @@
     "name": "Posterior longitudinal ligament",
     "system": "other",
     "tissue": "ligament",
-    "region": "neck",
+    "region": "back",
     "pack": "skeleton",
     "vertices": 3770
   },
@@ -17051,7 +16987,7 @@
     "name": "Rotatores.l",
     "system": "muscular",
     "tissue": "muscle",
-    "region": "neck",
+    "region": "back",
     "pack": "muscles",
     "vertices": 3254
   },
@@ -17059,7 +16995,7 @@
     "name": "Rotatores.r",
     "system": "muscular",
     "tissue": "muscle",
-    "region": "neck",
+    "region": "back",
     "pack": "muscles",
     "vertices": 3254
   },
@@ -22012,16 +21948,6 @@
     "region": "lower-limb",
     "pack": "skeleton",
     "vertices": 2368
-  },
-  {
-    "name": "Zonular fibers-curve.r",
-    "system": "nervous",
-    "tissue": "sense",
-    "region": "head",
-    "pack": "nerves",
-    "vertices": 48,
-    "group": "Eyeball",
-    "groupSide": "right"
   },
   {
     "name": "Zonular fibres.l",

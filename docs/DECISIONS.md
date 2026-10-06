@@ -588,3 +588,22 @@ global affine from 607 name-matched anchors is ~12 mm off. Each piece
 therefore gets a local similarity correction by ICP on the anchors within
 7 cm (0.6–3.3 mm median). Alternative — per-piece manual placement — was
 slower and less reproducible.
+
+## 2026-10-06 — Audit: what is checked and how to rerun it
+
+Before the hand-built pieces the user asked for an all-round check. It runs
+on what ships (the meshopt GLBs) and the dataset as each body sees it:
+
+- `npx tsx scripts/anatomy/audit-extract.ts out.json public/models/…/*.glb`
+  writes per mesh node its world box, centre and sampled vertices.
+- Checks (scratch scripts, logic described here so they can be redone):
+  mesh map ↔ GLB nodes with geometry (now also in `anatomy:validate`);
+  side vs position (glTF +x = the body's left; near-midline organs like
+  the right ventricle legitimately cross); region vs height bands from the
+  mandible, manubrium and sacrum; duplicates (> 40 % of a mesh's samples
+  within 2 mm of one other mesh of the same tissue) and floating pieces
+  (nothing within 10 mm); duplicate display names and other-body structures
+  per body; course names sharing no word with the model name.
+- Fixes go to the source of each problem (export rules, `SWAPPED_SIDES`,
+  `RELABEL`, the female export's mapping), never to the shipped files by
+  hand.

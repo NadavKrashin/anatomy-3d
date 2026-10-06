@@ -227,6 +227,9 @@ costal cartilages), part of adductor pollicis (capitate).
 - **Regions** of organs and midline structures are assigned by height against
   skeletal landmarks (e.g. the liver and stomach → abdomen, the thyroid →
   neck). Adjust in the export if the course divides regions differently.
+- **Swapped sides fixed (2026-10-06 audit):** Z-Anatomy's lateral
+  temporomandibular ligament and the Atlas's round ligaments of the uterus
+  had left and right swapped; please confirm on the model.
 - **Rectum:** Z-Anatomy labels the rectum "Sigmoid colon"; the app shows it
   as "Rectum" (`RELABEL` in `z-anatomy/build.ts`, reasons in
   `docs/DECISIONS.md`). The sigmoid loop is inside Z-Anatomy's "Descending

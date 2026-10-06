@@ -42,6 +42,14 @@ const entry = (
 });
 
 describe("parseName", () => {
+  it("reads a side written twice once", () => {
+    expect(parseName("Right testicular artery.r")).toEqual({
+      base: "Testicular artery",
+      side: "right",
+      inconstant: false,
+    });
+  });
+
   it("reads side suffixes", () => {
     expect(parseName("Humerus.l")).toEqual({
       base: "Humerus",
@@ -300,6 +308,13 @@ describe("the Z-Anatomy whole-body dataset", () => {
     expect(male.partMeshMap?.["Trigone of urinary bladder"]).toBeUndefined();
     expect(female.info.models.map((m) => m.id)).toContain("female");
     expect(male.info.models.map((m) => m.id)).not.toContain("female");
+  });
+
+  it("fixes Z-Anatomy's swapped sides", () => {
+    // The ".l" mesh lies on the body's right.
+    expect(meshMap["Lateral temporomandibular ligament.l"]).toBe(
+      "lateral-temporomandibular-ligament-right",
+    );
   });
 
   it("adds BodyParts3D's pieces and shows Z-Anatomy's rectum as the rectum", () => {

@@ -64,11 +64,14 @@ MESHES = {
         for s in "LR"
     },
     "v1.2/VH_F_Ligaments_Uterus_Ovaries.glb": {
+        # The Atlas swaps the round ligaments: its "left" one lies on the
+        # body's right (its ovaries are the right way round).
+        "VH_F_left_round_ligament_of_uterus": ("Round ligament of uterus.r", None, R, LIG, "pelvis"),
+        "VH_F_right_round_ligament_of_uterus": ("Round ligament of uterus.l", None, R, LIG, "pelvis"),
         **{
             f"VH_F_{side}_{n}": (f"{name}.{side[0]}", None, R, LIG, "pelvis")
             for side in ("left", "right")
             for n, name in (
-                ("round_ligament_of_uterus", "Round ligament of uterus"),
                 ("cardinal_ligament_of_uterus", "Cardinal ligament"),
                 ("uterosacral_ligament", "Uterosacral ligament"),
             )
@@ -308,6 +311,10 @@ def main() -> None:
         manifest.append(entry)
 
     keep = {o for o, _ in parts.values()}
+    for o in keep:  # flat, like the other packs (the Atlas nests cervix → os)
+        matrix = o.matrix_world.copy()
+        o.parent = None
+        o.matrix_world = matrix
     for o in list(bpy.data.objects):
         if o not in keep:
             bpy.data.objects.remove(o, do_unlink=True)

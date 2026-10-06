@@ -23,8 +23,12 @@ async function modelIssues(): Promise<DatasetIssue[]> {
     const path = resolve(process.cwd(), "public", model.url.replace(/^\//, ""));
     nodes.push(...(await io.read(path)).getRoot().listNodes());
   }
+  // Only nodes with geometry: a node without a mesh (a line or point the
+  // exporter emptied) can't be shown or picked.
   const nodeNames = new Set(
-    nodes.map((n) => stripDuplicateSuffix(n.getName())),
+    nodes
+      .filter((n) => n.getMesh())
+      .map((n) => stripDuplicateSuffix(n.getName())),
   );
   const mapped = (name: string) =>
     name in meshMap || stripDuplicateSuffix(name) in meshMap;
@@ -34,7 +38,7 @@ async function modelIssues(): Promise<DatasetIssue[]> {
       .filter((name) => !nodeNames.has(name))
       .map((name) => ({
         severity: "error" as const,
-        message: `mesh map entry "${name}" not found in the model`,
+        message: `mesh map entry "${name}" has no mesh in the model`,
       })),
     ...nodes
       .filter((n) => n.getMesh() && !mapped(n.getName()))

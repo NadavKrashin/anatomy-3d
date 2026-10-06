@@ -458,3 +458,21 @@ All verified by `npm run e2e:smoke` against a production build.
   pancreatic arteries…), 112 left.
 - **2026-10-06 · session 3 (cont.)** — BodyParts3D pieces merged to `main`
   (user: push to main when done, then audit).
+- **2026-10-06 · session 3 (cont.)** — **Full audit** (user request, before
+  the hand-built pieces), on the shipped GLBs and the final dataset of both
+  bodies (`scripts/anatomy/audit-extract.ts` + checks in DECISIONS →
+  "Audit"). Fixed: 8 structures without geometry (Z-Anatomy guide lines —
+  eyeball axes/equator/meridians, "-curve"/"-path" — and "Mucosa of
+  stomach"): the export skips faceless meshes and `anatomy:validate` now
+  only counts nodes with a mesh (it accepted empty nodes); the female GLB
+  kept the Atlas's nesting (cervix → os…), now flat; left/right swapped on
+  the lateral temporomandibular ligament (Z-Anatomy; `SWAPPED_SIDES`) and the
+  round ligaments of the uterus (the Atlas); "Right testicular artery.r"
+  escaped the male-only list (side written twice; `parseName` fixed) and
+  showed in the female body; whole-spine ligaments and rotatores moved from
+  neck to back; her rugae note pointed at the removed mucosa. Clean: no
+  duplicates across or within sources (vertex proximity, same tissue), no
+  floating pieces, no duplicate display names in either body, no
+  other-body structures, course names all genuine matches (spelling
+  variants), switching body with a male-only structure selected closes the
+  panel without errors.

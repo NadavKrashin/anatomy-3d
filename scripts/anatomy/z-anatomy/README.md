@@ -94,4 +94,6 @@ Edit `SOURCES`, `COVERINGS`, `VISCERAL_SYSTEMS` or the region landmarks in
 model carry non-commercial licences: they never go into the five packs, only
 into the `--non-commercial-only` file, which the app can drop with one switch
 (`build.test.ts` checks both). Kidney-named structures are placed by height
-(the source lists the intrarenal veins under "Thorax").
+(the source lists the intrarenal veins under "Thorax"). Meshes without faces (guide lines and points: eyeball axes, "-curve",
+"-path") are skipped; whole-spine ligaments and the rotatores go to the
+back region (`WHOLE_SPINE`; the source lists them under "Neck").
