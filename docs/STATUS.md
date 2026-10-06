@@ -438,3 +438,5 @@ All verified by `npm run e2e:smoke` against a production build.
   bladder notes stay on the bladder in both bodies; Hebrew רחם, צוואר הרחם,
   חצוצרה, שחלה, נרתיק, שד (her singulars). e2e: switch to female, uterus
   shown, no prostate.
+- **2026-10-06 · session 3 (cont.)** — Male/female switch merged to `main`
+  (user: "Yes").
