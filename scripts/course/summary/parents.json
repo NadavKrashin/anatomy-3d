@@ -567,6 +567,17 @@
     "Femoral neck": ["femur"],
     "Fibular neck": ["fibula"],
     "Vertebral body": ["re:^vertebra-"],
-    "Body of sphenoid": ["sphenoid-bone"]
+    "Body of sphenoid": ["sphenoid-bone"],
+    "Cochlea and organ of Corti": ["cochlea"],
+    "Vestibular apparatus": ["vestibule"],
+    "Semicircular canals (Anterior/Lateral/Posterior) & Ampullae": [
+      "vestibule"
+    ],
+    "Renal / Fibrous capsule": ["kidney"],
+    "Renal cortex": ["kidney"],
+    "Renal medulla - Pyramids & Columns": ["kidney"],
+    "Renal papillae": ["kidney"],
+    "Perirenal fat": ["kidney"],
+    "Renal fascia / Gerota’s fascia": ["kidney"]
   }
 }

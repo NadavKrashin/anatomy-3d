@@ -101,7 +101,7 @@ def sorted_key(s):
 
 def plural(s):
     w = s.split()[-1].lower() if s.split() else ""
-    return (w.endswith("s") and not w.endswith(("is", "us", "ss", "as", "ys"))) or w.endswith("ae")
+    return (w.endswith("s") and not w.endswith(("is", "us", "ss", "as", "ys"))) or w.endswith(("ae", "eys"))
 
 
 EPONYMS = {
@@ -158,7 +158,8 @@ def main():
         if not re.search(r"/|&|\+|,", st["name"])
     }
     with open(os.path.join(HERE, "synonyms.json"), encoding="utf-8") as f:
-        synonyms = json.load(f)["synonyms"]
+        synonym_file = json.load(f)
+    synonyms, different = synonym_file["synonyms"], synonym_file["differentStructure"]
 
     def wordings(base, en):
         """Course wordings for a model structure: {wording key: {form: pages}}."""
@@ -172,6 +173,8 @@ def main():
         uk = key(re.sub(r"\s*\(.*?\)\s*", " ", en))
         if uk != k and uk in by_key and len(unqualified[uk]) == 1 and uk not in model_keys:
             found[uk] = by_key[uk]
+        for other in different.get(base, []):  # same words, another structure
+            found.pop(key(other), None)
         for syn in synonyms.get(base, []):
             if key(syn) in by_key:
                 found[key(syn)] = by_key[key(syn)]

@@ -40,7 +40,8 @@ coverings (fasciae, sheaths, bursae, capsules, meninges, pleura, greater
 omentum; `NOT_COVERINGS` keeps real structures that only share a word with
 them — tensor fasciae latae, meningeal arteries/branch, septum pellucidum),
 helper objects, the liver-segment duplicates and the
-**non-commercial inner ear and kidney models**; organ → system from an
+**non-commercial inner ear and kidney models** (exported on their own,
+below); organ → system from an
 explicit list (`VISCERAL_SYSTEMS`); region from Z-Anatomy collections, else
 by height against skeletal landmarks (a vessel the source's "Thorax"
 collection lists below the diaphragm — its pelvic veins — goes by height); one material per tissue; muscle parts
@@ -55,6 +56,11 @@ for p in skeleton muscles nerves vessels organs; do
   npx tsx scripts/anatomy/z-anatomy/optimize-glb.ts out/body/$p.glb public/models/z-anatomy/$p.glb --simplify 0.5
 done
 cp out/manifest.json src/data/anatomy/z-anatomy/manifest.json
+# The non-commercial inner ear and kidney, in their own file
+# (THIRD_PARTY_ASSETS.md → "Non-commercial models"):
+python scripts/anatomy/z-anatomy/export_glb.py -- Z-Anatomy out/nc out/nc/manifest.json --non-commercial-only
+npx tsx scripts/anatomy/z-anatomy/optimize-glb.ts out/nc/non-commercial.glb public/models/non-commercial/non-commercial.glb --simplify 0.5
+cp out/nc/manifest.json src/data/anatomy/z-anatomy/manifest-non-commercial.json
 npm run anatomy:validate
 npm test
 ```
@@ -84,6 +90,8 @@ are known to be wrong are demoted in `src/data/anatomy/z-anatomy/attachments.ts`
 ## Changing the scope
 
 Edit `SOURCES`, `COVERINGS`, `VISCERAL_SYSTEMS` or the region landmarks in
-`export_glb.py`. Never include the inner ear ("Internal ear" collection) or
-the kidney model — they carry non-commercial licences (the export filters
-them; `build.test.ts` checks the manifest).
+`export_glb.py`. The inner ear ("Internal ear" collection) and the kidney
+model carry non-commercial licences: they never go into the five packs, only
+into the `--non-commercial-only` file, which the app can drop with one switch
+(`build.test.ts` checks both). Kidney-named structures are placed by height
+(the source lists the intrarenal veins under "Thorax").

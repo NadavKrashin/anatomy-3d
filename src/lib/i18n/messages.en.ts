@@ -6,6 +6,8 @@ export const en: Messages = {
   disclaimer:
     "For educational purposes. Anatomy content should be verified against your institution's required resources.",
   demoModelNotice: "Development demo model — not anatomically accurate.",
+  modelCredits: (names: string) =>
+    `3D models: ${names}. Licences on the home page.`,
   nav: {
     home: "Home",
     explore: "Explore",

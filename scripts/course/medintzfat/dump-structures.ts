@@ -1,5 +1,6 @@
 /**
- * Writes the model's structure ids (Z-Anatomy and the Open3DModel extras) and their raw model names (before the
+ * Writes the model's structure ids (Z-Anatomy, the Open3DModel extras and,
+ * when included, the non-commercial models) and their raw model names (before the
  * course names are applied) for extract.py and course_names.py.
  *
  *   npx tsx scripts/course/medintzfat/dump-structures.ts .course-cache/structures.json
@@ -12,10 +13,13 @@ import {
 } from "../../../src/data/anatomy/z-anatomy/build";
 import manifest from "../../../src/data/anatomy/z-anatomy/manifest.json";
 import open3dManifest from "../../../src/data/anatomy/z-anatomy/manifest-open3d.json";
+import nonCommercialManifest from "../../../src/data/anatomy/z-anatomy/manifest-non-commercial.json";
+import { INCLUDE_NON_COMMERCIAL } from "../../../src/data/anatomy/z-anatomy/index";
 
 const { structures } = buildZAnatomyDataset([
   ...(manifest as ManifestEntry[]),
   ...(open3dManifest as ManifestEntry[]),
+  ...(INCLUDE_NON_COMMERCIAL ? (nonCommercialManifest as ManifestEntry[]) : []),
 ]);
 const out = process.argv[2] ?? ".course-cache/structures.json";
 mkdirSync(dirname(out), { recursive: true });

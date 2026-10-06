@@ -4,14 +4,21 @@ import { validateDataset } from "@/lib/anatomy/validateDataset";
 import { DETAIL_TAG } from "@/types/anatomy";
 import {
   buildZAnatomyDataset,
+  MODEL_SOURCES,
   parseName,
   toId,
   type ManifestEntry,
 } from "./build";
-import { zAnatomyDataset } from "./index";
+import {
+  createZAnatomyDataset,
+  INCLUDE_NON_COMMERCIAL,
+  zAnatomyDataset,
+} from "./index";
 import zManifest from "./manifest.json";
 import open3dManifest from "./manifest-open3d.json";
+import nonCommercialManifest from "./manifest-non-commercial.json";
 
+/** The commercially usable manifests. */
 const manifest = [...zManifest, ...open3dManifest];
 
 const entry = (
@@ -173,7 +180,10 @@ describe("the Z-Anatomy whole-body dataset", () => {
   });
 
   it("maps every exported mesh", () => {
-    expect(Object.keys(meshMap)).toHaveLength(manifest.length);
+    expect(Object.keys(meshMap)).toHaveLength(
+      manifest.length +
+        (INCLUDE_NON_COMMERCIAL ? nonCommercialManifest.length : 0),
+    );
   });
 
   it("adds the Open3DModel pieces with their own attribution", () => {
@@ -204,6 +214,49 @@ describe("the Z-Anatomy whole-body dataset", () => {
     for (const e of open3dManifest) expect(e.pack).toBe("extras");
   });
 
+  it("keeps every non-commercial mesh in its own file, with its source", () => {
+    for (const e of nonCommercialManifest)
+      expect(e.pack, e.name).toBe("non-commercial");
+    for (const e of nonCommercialManifest as ManifestEntry[])
+      expect(e.source && MODEL_SOURCES[e.source].commercialUse, e.name).toBe(
+        false,
+      );
+    for (const e of manifest as ManifestEntry[])
+      expect(MODEL_SOURCES[e.source ?? "Z-Anatomy"].commercialUse).toBe(true);
+  });
+
+  it("adds the inner ear and kidney, credited, while non-commercial models are on", () => {
+    const withNc = createZAnatomyDataset({ nonCommercial: true });
+    const kidney = withNc.structures.find((s) => s.id === "kidney-left");
+    expect(kidney?.region).toBe("abdomen");
+    expect(kidney?.sourceLicense).toBe("CC BY-NC 4.0");
+    expect(
+      withNc.structures.find((s) => s.id === "cochlea-right")?.sourceLicense,
+    ).toBe("CC BY-NC-SA 4.0");
+    expect(withNc.info.attribution).toContain("lissiecowley");
+    expect(withNc.info.models.map((m) => m.id)).toContain("non-commercial");
+  });
+
+  it("leaves every non-commercial model out with one switch", () => {
+    const commercial = createZAnatomyDataset({ nonCommercial: false });
+    const ncSources = Object.entries(MODEL_SOURCES)
+      .filter(([, source]) => !source.commercialUse)
+      .map(([id]) => id);
+    expect(ncSources.length).toBeGreaterThan(0);
+    for (const s of commercial.structures)
+      expect(ncSources, s.id).not.toContain(s.modelSource);
+    expect(
+      Object.keys(commercial.meshMap).filter((mesh) =>
+        nonCommercialManifest.some((e) => e.name === mesh),
+      ),
+    ).toEqual([]);
+    expect(commercial.info.models.map((m) => m.url).join()).not.toMatch(
+      /non-commercial/,
+    );
+    expect(commercial.info.attribution).not.toMatch(/NC/);
+    expect(commercial.info.credits).not.toMatch(/lissiecowley|Dundee/);
+  });
+
   it("covers every region and the organ systems", () => {
     const regions = new Set(registry.structures.map((s) => s.region));
     for (const region of [
@@ -229,7 +282,7 @@ describe("the Z-Anatomy whole-body dataset", () => {
     );
   });
 
-  it("never contains the non-commercially licensed models", () => {
+  it("keeps the non-commercially licensed models out of the other files", () => {
     const names = manifest.map((entry) => entry.name);
     for (const banned of [
       /^Kidney\b/,

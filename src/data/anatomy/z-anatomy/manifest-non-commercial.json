@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Cochlea.l",
+    "system": "nervous",
+    "tissue": "sense",
+    "region": "head",
+    "pack": "non-commercial",
+    "vertices": 3110,
+    "source": "Dundee inner ear"
+  },
+  {
+    "name": "Cochlea.r",
+    "system": "nervous",
+    "tissue": "sense",
+    "region": "head",
+    "pack": "non-commercial",
+    "vertices": 3110,
+    "source": "Dundee inner ear"
+  },
+  {
+    "name": "Intrarenal arteries of left kidney",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "abdomen",
+    "pack": "non-commercial",
+    "vertices": 3451,
+    "source": "lissiecowley kidney"
+  },
+  {
+    "name": "Intrarenal arteries of right kidney",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "abdomen",
+    "pack": "non-commercial",
+    "vertices": 4347,
+    "source": "lissiecowley kidney"
+  },
+  {
+    "name": "Intrarenal veins of left kidney",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "abdomen",
+    "pack": "non-commercial",
+    "vertices": 4825,
+    "source": "lissiecowley kidney"
+  },
+  {
+    "name": "Intrarenal veins of right kidney",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "abdomen",
+    "pack": "non-commercial",
+    "vertices": 6035,
+    "source": "lissiecowley kidney"
+  },
+  {
+    "name": "Kidney.l",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "non-commercial",
+    "vertices": 1493,
+    "source": "lissiecowley kidney"
+  },
+  {
+    "name": "Kidney.r",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "non-commercial",
+    "vertices": 1163,
+    "source": "lissiecowley kidney"
+  },
+  {
+    "name": "Renal pelvis.l",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "non-commercial",
+    "vertices": 732,
+    "source": "lissiecowley kidney"
+  },
+  {
+    "name": "Renal pelvis.r",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "non-commercial",
+    "vertices": 638,
+    "source": "lissiecowley kidney"
+  },
+  {
+    "name": "Vestibule.l",
+    "system": "nervous",
+    "tissue": "sense",
+    "region": "head",
+    "pack": "non-commercial",
+    "vertices": 4316,
+    "source": "Dundee inner ear"
+  },
+  {
+    "name": "Vestibule.r",
+    "system": "nervous",
+    "tissue": "sense",
+    "region": "head",
+    "pack": "non-commercial",
+    "vertices": 4316,
+    "source": "Dundee inner ear"
+  }
+]

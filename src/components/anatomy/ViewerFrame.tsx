@@ -51,7 +51,11 @@ export function ViewerFrame({
       {children}
 
       <p className="text-faint pointer-events-none absolute start-5 bottom-5 z-0 max-w-[46ch] text-[12px] leading-snug max-lg:hidden">
-        {dataset.info.isDemo ? t.demoModelNotice : dataset.info.attribution}
+        {dataset.info.isDemo
+          ? t.demoModelNotice
+          : dataset.info.credits
+            ? t.modelCredits(dataset.info.credits)
+            : dataset.info.attribution}
       </p>
     </main>
   );

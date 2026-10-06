@@ -24,9 +24,11 @@ track progress with simple spaced review. See `docs/STATUS.md` for what's next.
 
 > 3D model: **Z-Anatomy** (CC BY-SA 4.0), based on **BodyParts3D** (DBCLS,
 > CC BY-SA 2.1 JP) — the whole body: bones, joints/ligaments, muscles, brain
-> and nerves, heart and vessels, organs and lymphoid organs (male model; the
-> non-commercially licensed inner ear and kidney are left out). See
-> `THIRD_PARTY_ASSETS.md`.
+> and nerves, heart and vessels, organs and lymphoid organs (male model), plus
+> extra limb pieces from **Open3DModel** (AnatomyTOOL, CC BY-SA). The inner
+> ear and kidney are licensed for **non-commercial use only** (CC BY-NC-SA /
+> CC BY-NC), so the app must stay non-commercial while they are in. See
+> `THIRD_PARTY_ASSETS.md` → "Going commercial".
 > For educational purposes. Anatomy content should be verified against your
 > institution's required resources.
 

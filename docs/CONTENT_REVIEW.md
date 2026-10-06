@@ -56,6 +56,7 @@ singular for one-sided structures (`scripts/course/summary/synonyms.json` →
 | Heart               | לב                    | הלב                   | לב              |
 | Hypophysis          | יותרת המוח            | יותרת המוח            |                 |
 | Jejunum             | מעי ריק               | המעי הריק             |                 |
+| Kidney              | כליה                  | הכליות                |                 |
 | Lacrimal gland      | בלוטת הדמעות          | בלוטת הדמעות          |                 |
 | Liver               | כבד                   | הכבד                  | כבד             |
 | Palatine tonsil     | שקד                   | השקדים                |                 |
@@ -220,7 +221,8 @@ costal cartilages), part of adductor pollicis (capitate).
 - **Regions** of organs and midline structures are assigned by height against
   skeletal landmarks (e.g. the liver and stomach → abdomen, the thyroid →
   neck). Adjust in the export if the course divides regions differently.
-- The model is male; no kidneys or inner ear (licences), no female organs.
+- The model is male; no female organs. The kidneys and inner ear are in
+  (non-commercial licences, `THIRD_PARTY_ASSETS.md`).
 - **Organ wholes** (`ORGAN_GROUPS` in the export) are named after Z-Anatomy's
   groups: Heart, Lung, Frontal/Parietal/Temporal/Occipital/Limbic lobe,
   Insula, Cerebellum, Brainstem, Diencephalon, Spinal cord, Eyeball, Colon,

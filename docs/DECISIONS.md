@@ -267,7 +267,8 @@ lucide-react · Vitest 5 · Playwright 1.56 · gltf-transform 4.5.
   isn't the cost; rendering is), so no BVH yet.
 - **Left out on purpose:** the non-commercial inner ear ("Internal ear"
   collection) and kidney model (kidneys, renal pelvis, intrarenal vessels) —
-  a test guards it; coverings that hide what's inside on first view (pleura,
+  a test guards it (since 2026-10-06 they ship in a separate file instead;
+  see "Non-commercial models in their own file"); coverings that hide what's inside on first view (pleura,
   greater omentum, meninges, plus the fasciae/sheaths/bursae/capsules
   already excluded); liver segments (they duplicate the liver mesh); helper
   objects.
@@ -502,3 +503,25 @@ alignment. Integration choices:
   would lack the brachial plexus cords.
 - Numbered lumbricals/interossei and aggregate veins are skipped: Z-Anatomy
   has them under other cuts.
+
+## 2026-10-06 — Non-commercial models in their own file, behind one switch
+
+The user allowed models licensed for non-commercial use (the app is a free
+study tool), and asked that going commercial later stay easy. First in:
+Z-Anatomy's own inner ear (University of Dundee, CC BY-NC-SA 4.0) and kidney
+(lissiecowley, CC BY-NC 4.0) — same body, no alignment.
+
+- **A separate model file and manifest**, not merged into the packs: NC
+  (and NC-SA) content can't be combined with CC BY-SA content into one
+  adapted work, and a separate file can be dropped without re-exporting
+  anything else.
+- **`MODEL_SOURCES` in `build.ts`** lists every model source with its
+  licence, credit and `commercialUse`; manifest entries name their `source`.
+  Structures carry their own source's licence.
+- **One switch, `INCLUDE_NON_COMMERCIAL`** (`z-anatomy/index.ts`): off, the
+  dataset has no NC structures, model file or credits. A test builds both
+  ways. The steps to go commercial are in `THIRD_PARTY_ASSETS.md` → "Going
+  commercial" (also: the course site's terms and her summary are personal-use
+  too).
+- **Credits:** four sources made the viewer's credit line too long, so the
+  viewer names the sources and the home page carries the full credit lines.

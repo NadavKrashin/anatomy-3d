@@ -35,21 +35,58 @@ export interface ManifestEntry {
    * side whose parts carry no side suffix ("Lung", right/left lobes).
    */
   groupSide?: BodySide;
-  /**
-   * Set on meshes added from Open3DModel, which is built on Z-Anatomy (same
-   * body and coordinates; scripts/anatomy/open3dmodel/).
-   */
-  source?: "Open3DModel";
+  /** The model the mesh comes from when it isn't Z-Anatomy's own (MODEL_SOURCES). */
+  source?: Exclude<ModelSourceId, "Z-Anatomy">;
 }
 
-export const Z_ANATOMY_SOURCE = "Z-Anatomy";
-export const Z_ANATOMY_LICENSE = "CC BY-SA 4.0";
-export const Z_ANATOMY_ATTRIBUTION =
-  "Z-Anatomy — the open source atlas of anatomy (CC BY-SA 4.0), based on BodyParts3D © The Database Center for Life Science (CC BY-SA 2.1 JP).";
-export const OPEN3DMODEL_SOURCE = "Open3DModel";
-export const OPEN3DMODEL_LICENSE = "CC BY-SA";
-export const OPEN3DMODEL_ATTRIBUTION =
-  "Open3DModel — AnatomyTOOL.org, CC BY-SA, built on Z-Anatomy.";
+export interface ModelSource {
+  license: string;
+  /** Credit line, shown in full on the home page. */
+  attribution: string;
+  /** Short name for the viewer's credit line. */
+  credit: string;
+  /**
+   * False for non-commercial licences (NC): those models must go before the
+   * app is used commercially (THIRD_PARTY_ASSETS.md → "Going commercial").
+   */
+  commercialUse: boolean;
+}
+
+/**
+ * Every 3D model the dataset is built from, with its licence. A manifest
+ * entry names its model in `source`; entries without one are Z-Anatomy's.
+ */
+export const MODEL_SOURCES = {
+  "Z-Anatomy": {
+    license: "CC BY-SA 4.0",
+    attribution:
+      "Z-Anatomy — the open source atlas of anatomy (CC BY-SA 4.0), based on BodyParts3D © The Database Center for Life Science (CC BY-SA 2.1 JP), including Cranial Nerves and Foramina © University of Dundee, CAHID (CC BY 4.0).",
+    credit: "Z-Anatomy, BodyParts3D",
+    commercialUse: true,
+  },
+  Open3DModel: {
+    license: "CC BY-SA",
+    attribution: "Open3DModel — AnatomyTOOL.org, CC BY-SA, built on Z-Anatomy.",
+    credit: "Open3DModel",
+    commercialUse: true,
+  },
+  "Dundee inner ear": {
+    license: "CC BY-NC-SA 4.0",
+    attribution:
+      "Anatomy of the Inner Ear © University of Dundee School of Medicine (CC BY-NC-SA 4.0), via Z-Anatomy; non-commercial use only.",
+    credit: "University of Dundee",
+    commercialUse: false,
+  },
+  "lissiecowley kidney": {
+    license: "CC BY-NC 4.0",
+    attribution:
+      "Kidney © lissiecowley (CC BY-NC 4.0), via Z-Anatomy; non-commercial use only.",
+    credit: "lissiecowley",
+    commercialUse: false,
+  },
+} as const satisfies Record<string, ModelSource>;
+
+export type ModelSourceId = keyof typeof MODEL_SOURCES;
 
 /** Z-Anatomy English base names that have hand-curated content. */
 const CONCEPT_BY_NAME: Record<string, ConceptKey> = {
@@ -210,17 +247,9 @@ function structureFor(
       ...(inconstant ? ["inconstant"] : []),
       ...(detail ? [DETAIL_TAG] : []),
     ],
-    ...(entry.source === "Open3DModel"
-      ? {
-          modelSource: OPEN3DMODEL_SOURCE,
-          sourceLicense: OPEN3DMODEL_LICENSE,
-          sourceAttribution: OPEN3DMODEL_ATTRIBUTION,
-        }
-      : {
-          modelSource: Z_ANATOMY_SOURCE,
-          sourceLicense: Z_ANATOMY_LICENSE,
-          sourceAttribution: Z_ANATOMY_ATTRIBUTION,
-        }),
+    modelSource: entry.source ?? "Z-Anatomy",
+    sourceLicense: MODEL_SOURCES[entry.source ?? "Z-Anatomy"].license,
+    sourceAttribution: MODEL_SOURCES[entry.source ?? "Z-Anatomy"].attribution,
   };
   const concept = CONCEPT_BY_NAME[base];
   return concept ? withConcept(structure, concept) : structure;

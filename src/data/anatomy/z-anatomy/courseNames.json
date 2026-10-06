@@ -406,6 +406,11 @@
     "he": "עצם הזנב",
     "heSource": "https://medintzfat.com/anatomy/lab6"
   },
+  "cochlea": {
+    "en": "Cochlea",
+    "source": "https://medintzfat.com/anatomy/ear",
+    "uses": 5
+  },
   "coeliac-nodes": {
     "en": "Celiac nodes",
     "source": "https://medintzfat.com/anatomy/quiz-abdomen",
@@ -2297,6 +2302,11 @@
     "uses": 11,
     "he": "עורק הכליה",
     "heSource": "https://medintzfat.com/anatomy/lab6"
+  },
+  "renal-pelvis": {
+    "en": "Renal pelvis",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 34
   },
   "renal-vein": {
     "en": "Renal vein",

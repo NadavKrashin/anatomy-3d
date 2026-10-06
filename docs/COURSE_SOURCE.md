@@ -199,9 +199,9 @@ applies:
   הזרע, שלפוחית השתן). The definite article is dropped and plurals are made
   singular for one-sided structures. Her Hebrew wins over the site's: she
   wrote it and learns from it. The site's form stays searchable.
-- **183 entries have no place in the model.** That is:
-  - female organs, and the kidneys and their parts (left out for licence
-    reasons);
+- **163 entries have no place in the model.** That is:
+  - female organs (the kidneys and inner ear were added 2026-10-06, with
+    their parts' notes on the whole);
   - soft-tissue layers and spaces (fasciae, peritoneal folds, recesses,
     meninges);
   - nerves and vessels that **Z-Anatomy itself does not model**: the

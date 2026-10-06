@@ -12,9 +12,12 @@ Every source below was checked at its primary source on 2026-10-06:
 - its contents, by listing the node or part names in the actual files;
 - whether it lines up with our body, by comparing bones present in both.
 
-**Licence rule:** the app is public, so only CC BY / CC BY-SA / CC0 sources
-can be used. Non-commercial (NC) licences are out, as with Z-Anatomy's
-inner ear and kidney.
+**Licence rule:** CC BY / CC BY-SA / CC0 sources can be used freely. Since
+2026-10-06 the user also allows **non-commercial (NC)** sources (the app is
+not commercial); they go into the separate non-commercial model file
+(`THIRD_PARTY_ASSETS.md` → "Non-commercial models"). Z-Anatomy's own NC inner
+ear and kidney are in. The NC sources under "Not usable" below are now candidates;
+their contents still need checking.
 
 **Status:** Open3DModel is integrated (206 meshes, 2026-10-06 — see
 `scripts/anatomy/open3dmodel/README.md`). The ~740 count below was before
@@ -31,7 +34,7 @@ removing duplicates, coverings and spaces.
 | **"Bony Pelvis and Pelvic Organs from MRI"** (audreybyrd, Sketchfab) | CC BY           | No                                                                                            | Uterus, cervix, uterine tubes, ovaries, **vagina, vulva**, bladder, rectum, from a real 25-year-old woman's MRI                                                                                                                                                                                                                                                                                                                                           | Medium; overlaps the Human Reference Atlas, adds vagina/vulva                         |
 | "Anatomy of the Larynx" (University of Dundee)                       | CC BY-SA 4.0    | No (derived from BodyParts3D)                                                                 | Larynx cartilages, membranes                                                                                                                                                                                                                                                                                                                                                                                                                              | Low value: BodyParts3D has the same                                                   |
 
-**Not usable:**
+**Not usable** (the NC ones are allowed since 2026-10-06, contents not yet checked):
 
 - "Ligaments of the Female Pelvis" (Dundee): tagged CC BY on Sketchfab but
   its description says CC BY-NC-SA, so treat it as NC.

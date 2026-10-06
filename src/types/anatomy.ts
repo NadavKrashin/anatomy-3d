@@ -170,7 +170,10 @@ export interface AnatomyDatasetInfo {
   id: string;
   models: AnatomyModelFile[];
   isDemo: boolean;
+  /** Full credit lines of the model's sources (home page). */
   attribution?: string;
+  /** Short names of the model's sources (viewer). */
+  credits?: string;
 }
 
 export interface AnatomyDataset {

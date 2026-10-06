@@ -1,5 +1,5 @@
 {
-  "about": "Course wordings the automatic matcher in course_names.py cannot find (different words or spelling). Keys are side-less structure ids. Every wording must appear on the course site. sideAliases: course names for one side only (e.g. 'Right coronary artery'); the app shows one name for both sides, so these are search aliases.",
+  "about": "Course wordings the automatic matcher in course_names.py cannot find (different words or spelling). Keys are side-less structure ids. Every wording must appear on the course site. sideAliases: course names for one side only (e.g. 'Right coronary artery'); the app shows one name for both sides, so these are search aliases. differentStructure: course wordings that match a model name but mean another structure (e.g. the course's 'Vestibule' is the vaginal vestibule, not the inner ear's); never used for that id.",
   "synonyms": {
     "bucinator": ["Buccinator"],
     "ligamenta-flava": ["Ligamentum flavum"],
@@ -18,6 +18,9 @@
     "proper-hepatic-artery": ["Hepatic artery proper"],
     "ductus-deferens": ["Vas deferens"],
     "suprarenal-gland": ["Adrenal gland"]
+  },
+  "differentStructure": {
+    "vestibule": ["Vestibule"]
   },
   "sideAliases": [
     {

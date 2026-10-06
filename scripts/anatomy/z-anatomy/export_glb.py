@@ -4,7 +4,7 @@ so the app can stream them in progressively.
 
 Run with Blender's Python module (pip install "bpy==4.5.*", Python 3.11):
 
-    python export_glb.py -- <z-anatomy-repo> <out-dir> <out-manifest.json>
+    python export_glb.py -- <z-anatomy-repo> <out-dir> <out-manifest.json> [--non-commercial-only]
 
 Writes <out-dir>/<pack>.glb for each pack (skeleton, muscles, nerves,
 vessels, organs) and one manifest of exported nodes for the dataset builder
@@ -19,9 +19,13 @@ What it keeps
     inside on first view (fasciae, sheaths, bursae, capsules, meninges,
     pleura, greater omentum) and helper objects.
 
-What it must never include (non-commercial licences, see THIRD_PARTY_ASSETS.md):
+What the packs never include (non-commercial licences, see THIRD_PARTY_ASSETS.md):
   - the inner ear model (everything under the "Internal ear" collection),
   - the kidney model (kidneys, renal pelvis, intrarenal vessels).
+With --non-commercial-only it exports exactly those instead, as one file
+<out-dir>/non-commercial.glb whose manifest entries name their source
+(build.ts → MODEL_SOURCES), so the app can leave them out with one switch
+(THIRD_PARTY_ASSETS.md → "Going commercial").
 
 Per node it records: system, tissue (for one shared material per tissue),
 region, pack and, for parts, the whole they belong to (group): the whole
@@ -39,7 +43,9 @@ from pathlib import Path
 import bpy
 from mathutils import Vector
 
-REPO, OUT_DIR, OUT_MANIFEST = (Path(p) for p in sys.argv[sys.argv.index("--") + 1 :])
+ARGS = sys.argv[sys.argv.index("--") + 1 :]
+NC_ONLY = "--non-commercial-only" in ARGS
+REPO, OUT_DIR, OUT_MANIFEST = (Path(p) for p in ARGS if not p.startswith("--"))
 FBX_DIR = REPO / "Resources/Models/FBX"
 LAYERS = REPO / "Resources/Layers"
 
@@ -55,7 +61,7 @@ SOURCES = [
     ("VisceralSystem100.fbx", "visceral", "organs"),
     ("LymphoidOrgans100.fbx", "lymphatic", "organs"),
 ]
-PACKS = ["skeleton", "muscles", "nerves", "vessels", "organs"]
+PACKS = ["non-commercial"] if NC_ONLY else ["skeleton", "muscles", "nerves", "vessels", "organs"]
 
 SUFFIXED = re.compile(r"\.[a-z0-9]+$")
 COVERINGS = re.compile(
@@ -75,10 +81,20 @@ LIVER_SEGMENT = re.compile(r"segment of liver", re.I)
 NON_COMMERCIAL_COLLECTIONS = {"Internal ear.g"}
 NON_COMMERCIAL = re.compile(r"^kidney\b|^renal pelvis|^intrarenal (arteries|veins)", re.I)
 
+
+def non_commercial_source(obj: bpy.types.Object) -> str | None:
+    """The model a non-commercially licensed mesh comes from (ids of
+    MODEL_SOURCES in src/data/anatomy/z-anatomy/build.ts), else None."""
+    if NON_COMMERCIAL_COLLECTIONS & set(ancestors(obj)):
+        return "Dundee inner ear"
+    if NON_COMMERCIAL.search(obj.name):
+        return "lissiecowley kidney"
+    return None
+
 # Organs → system. Explicit and reviewable; anything unmatched is an error.
 VISCERAL_SYSTEMS = [
     ("respiratory", r"lung|bronch|trachea|epiglottis|nasal cavity|nasopharynx"),
-    ("urinary", r"ureter|urinary bladder|urethra"),
+    ("urinary", r"kidney|renal pelvis|ureter|urinary bladder|urethra"),
     ("reproductive", r"penis|ductus deferens|ejaculatory|epididymis|testis|seminal gland|prostate|spermatic"),
     ("endocrine", r"thyroid|parathyroid|suprarenal|hypophysis|pineal"),
     (
@@ -285,8 +301,10 @@ def excluded(obj: bpy.types.Object) -> str | None:
     name = obj.name
     if obj.type != "MESH" or not is_real_structure(name):
         return "not a structure"
-    if NON_COMMERCIAL.search(name) or NON_COMMERCIAL_COLLECTIONS & set(ancestors(obj)):
+    if non_commercial_source(obj) and not NC_ONLY:
         return "non-commercial licence"
+    if NC_ONLY and not non_commercial_source(obj):
+        return "not non-commercial"
     if HELPERS.search(name):
         return "helper object"
     if COVERINGS.search(name) and not NOT_COVERINGS.search(name):
@@ -294,6 +312,9 @@ def excluded(obj: bpy.types.Object) -> str | None:
     if LIVER_SEGMENT.search(name):
         return "liver segment (duplicates the liver)"
     return None
+
+
+KIDNEY = re.compile(r"\bkidney\b", re.I)
 
 
 def z_range(obj: bpy.types.Object) -> tuple[float, float]:
@@ -334,7 +355,10 @@ class Regions:
         if name in self.upper_limb:
             return "upper-limb"
         center = world_center(obj)
-        for columns, region in REGION_COLLECTIONS:
+        # The kidney's own vessels are listed under "Thorax" (with the vena
+        # cava); place them, like the kidney, by height.
+        by_height_only = KIDNEY.search(name)
+        for columns, region in [] if by_height_only else REGION_COLLECTIONS:
             if any(name in self.bonus[c] for c in columns):
                 misfiled = (
                     region == "thorax"
@@ -392,6 +416,7 @@ def main() -> None:
     groups = muscle_groups()
     materials = make_materials()
     keep: list[tuple[bpy.types.Object, str, str, str]] = []
+    sources: dict[str, str] = {}
     skipped: dict[str, int] = {}
 
     for filename, source_system, pack in SOURCES:
@@ -403,10 +428,15 @@ def main() -> None:
                 skipped[reason] = skipped.get(reason, 0) + (reason != "not a structure")
                 continue
             system, tissue = classify(source_system, obj)
-            keep.append((obj, system, tissue, pack))
+            keep.append((obj, system, tissue, "non-commercial" if NC_ONLY else pack))
+            if NC_ONLY:
+                sources[obj.name] = non_commercial_source(obj)
 
     by_name = {obj.name: obj for obj, *_ in keep}
-    region_of = Regions(read_columns("Collections - BONUS.csv"), by_name)
+    # Landmarks (mandible, diaphragm…) from every imported object: an
+    # export of only some structures still needs them.
+    landmarks = {obj.name: obj for obj in bpy.data.objects}
+    region_of = Regions(read_columns("Collections - BONUS.csv"), landmarks)
     regions = {obj.name: region_of(obj, system) for obj, system, _, _ in keep}
     organs = {obj.name: organ_group(obj) for obj, *_ in keep}  # before unparenting
     renamed = (
@@ -420,6 +450,8 @@ def main() -> None:
             obj.name = renamed[old]
             regions[obj.name] = regions.pop(old)
             organs[obj.name] = organs.pop(old)
+            if old in sources:
+                sources[obj.name] = sources.pop(old)
     print("Renamed:", renamed)
     regions = harmonize_sides(regions)
 
@@ -447,6 +479,8 @@ def main() -> None:
             "pack": pack,
             "vertices": len(obj.data.vertices),
         }
+        if obj.name in sources:
+            entry["source"] = sources[obj.name]
         group = groups.get(base_name(obj.name).strip("()"))
         if group and system == "muscular":
             entry["group"] = group
