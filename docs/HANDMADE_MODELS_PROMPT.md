@@ -577,6 +577,57 @@ wall**, near the angles of the lower ribs (about ribs 7–12), each crossing
 (`Testis`), with a midline septum (`Septum of scrotum`). It hides the
 testes, so it must be peelable. Her terms: "Scrotum", "Septum of scrotum".
 
+### Priority 4 — last: replace the non-commercial kidney
+
+This one is **an import, not a hand-build**, and it comes after everything
+above is merged. Goal: drop the CC BY-NC kidney (Z-Anatomy's "Kidney" by
+lissiecowley, in `public/models/non-commercial/`) so that only the inner ear
+is left keeping the app non-commercial. User decision, 2026-10-07.
+
+**25. Kidney from the Human Reference Atlas (male, CC BY 4.0)**: urinary;
+region abdomen; both sides.
+
+- Source: `VH_Male/v1.2/VH_M_Kidney_L.glb`, `VH_M_Kidney_R.glb` and
+  `VH_M_Blood_Vasculature_Kidney.glb` in
+  `github.com/hubmapconsortium/ccf-3d-reference-object-library` (clone
+  `--filter=blob:none --no-checkout`, then `git checkout HEAD -- <file>`,
+  as in `scripts/anatomy/hra/README.md`). It is the **male** set because
+  the kidney is shared by both bodies (no `sex`).
+- List every mesh in the files first (`npm run anatomy:inspect`) and name
+  each part in the app's Latin-English style with `.l/.r` and a `group`
+  of `Kidney` (e.g. capsule, cortex, medulla, renal pyramids, papillae,
+  renal columns, minor/major calyces, renal pelvis, hilum, the intrarenal
+  arteries and veins). Leave out landmark/extraction-site meshes and
+  surfaces that duplicate another (the female uterus export did the same).
+- Placement: fit each kidney to the one it replaces, `Kidney.l/.r` in
+  `manifest-non-commercial.json` (Blender frame: similarity transform by
+  ICP to that mesh, or its bounding box if ICP fails). Then check: hilum
+  faces medially and forward; the renal pelvis meets Z-Anatomy's ureter
+  (`Ureter.l/.r`) and the renal artery and vein reach the hilum (gap ≤ 3
+  mm); upper pole at T12, lower pole at L3, right kidney a little lower
+  than the left; no overlap with the liver, spleen, psoas or quadratus
+  lumborum.
+- Pipeline: extend `scripts/anatomy/hra/export_hra.py` (or add a sibling
+  script) to write a **separate** file `public/models/hra/kidney.glb`, loaded
+  for both bodies, with its own manifest `manifest-hra-kidney.json`
+  (`source: "Human Reference Atlas"`, already in `MODEL_SOURCES`,
+  `commercialUse: true`; its attribution names only the Visible Human
+  Female, so add the Male). Don't add it to `female.glb` (that file loads only
+  in the female body).
+- Then remove the kidney from the non-commercial file: re-export it with
+  `export_glb.py --non-commercial-only` after taking the kidney meshes
+  out of its NC list (cochlea and vestibule stay), so `manifest-non-commercial.json` keeps 4 entries. Move her
+  notes and course names for kidney / renal pelvis to the new names
+  (rerun `dump-structures.ts`, `course_names.py`, `summary_notes.py`;
+  check the kidney entries in her summary still match).
+- Docs: `THIRD_PARTY_ASSETS.md` (new HRA kidney row; the NC row and
+  "Going commercial" now name only the inner ear), `docs/MODEL_SOURCES.md`,
+  `docs/DECISIONS.md`, `docs/STATUS.md`, `scripts/anatomy/hra/README.md`.
+  The credit "Kidney © lissiecowley" must disappear from the home page.
+- Verify as in section 8, plus: `build.test.ts` still passes with
+  `INCLUDE_NON_COMMERCIAL` both true and false, and with it false the
+  kidney is still there.
+
 **Not in scope** (left out on purpose as coverings or spaces; her notes go
 to their organs): fasciae (Camper's, Scarpa's, Colles', investing,
 prevertebral, thoracolumbar, crural), peritoneum and its pouches and

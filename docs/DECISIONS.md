@@ -687,3 +687,23 @@ pad up to 10 mm in front of what it covers, and the labia majora are kept
 inside the thighs' medial surfaces. The female ischiocavernosus and
 bulbospongiosus, built in priority 1 where these organs belonged, now lie
 over the new crura and bulbs.
+
+## 2026-10-07 — A drag is not a click: 6 px tap threshold
+
+R3F fires `onClick` at the end of a drag, so turning the body selected or
+peeled whatever was under the pointer on release. Clicks on meshes now count
+only if the pointer moved ≤ 6 px between press and release
+(`lib/anatomy/pointer.ts`). R3F's own rule for empty-space clicks
+(`onPointerMissed`) is 2 px; the larger tap allowance is for finger taps on
+the iPad, which wobble a few pixels.
+
+## 2026-10-07 — Reduced motion stops drag inertia too; e2e drags in one step
+
+The camera already jumped instead of animating for programmatic moves when
+the user prefers reduced motion; after a drag it still glided (camera-controls
+`smoothTime` 0.32 s, `draggingSmoothTime` 0.08 s). Both are now 0 under
+reduced motion: the camera stops when the pointer does. The e2e pages ask for
+reduced motion so the software renderer (SwiftShader, ≈ 5.5 s of GPU time per
+whole-body frame) has few frames to rasterize; with inertia and 10-step drags,
+main's drag check queued over a minute of frames before the next screenshot.
+The e2e drags now move in one step (still far beyond the 6 px tap threshold).

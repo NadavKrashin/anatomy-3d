@@ -2,7 +2,7 @@
 
 import { CameraControls } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MathUtils, PerspectiveCamera, type Object3D } from "three";
 import {
   framingSphere,
@@ -37,6 +37,9 @@ function obstructionRelativeTo(canvas: HTMLElement): ScreenRect | null {
 export function CameraController() {
   const controlsRef = useRef<CameraControls>(null);
   const getThree = useThree((s) => s.get);
+  // Reduced motion: no inertia after a drag either (programmatic moves are
+  // already instant below), so the camera stops when the pointer does.
+  const [reducedMotion] = useState(prefersReducedMotion);
 
   useEffect(() => {
     const visibleObjects = (): Object3D[] => {
@@ -122,8 +125,8 @@ export function CameraController() {
     <CameraControls
       ref={controlsRef}
       makeDefault
-      smoothTime={0.32}
-      draggingSmoothTime={0.08}
+      smoothTime={reducedMotion ? 0 : 0.32}
+      draggingSmoothTime={reducedMotion ? 0 : 0.08}
       minDistance={0.05}
       maxDistance={8}
       dollyToCursor

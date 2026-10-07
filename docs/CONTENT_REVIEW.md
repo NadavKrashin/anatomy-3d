@@ -42,6 +42,7 @@ singular for one-sided structures (`scripts/course/summary/synonyms.json` →
 
 | Structure           | Hebrew shown          | Her heading           | The site's form |
 | ------------------- | --------------------- | --------------------- | --------------- |
+| Anal canal          | תעלה אנאלית           | התעלה האנאלית         |                 |
 | Atrium              | עלייה שמאלית          | העלייה השמאלית        |                 |
 | Atrium              | עלייה ימנית           | העלייה הימנית         |                 |
 | Breast              | שד                    | השד                   |                 |

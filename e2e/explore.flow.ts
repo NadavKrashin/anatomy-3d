@@ -77,6 +77,27 @@ export async function exploreFlow(browser: Browser, errors: string[]) {
   assert(panel && box, "info panel and canvas are laid out");
   await desktop.keyboard.press("Escape");
   assert((await infoTitle(desktop)) === null, "Escape deselects");
+  // Turning the body by dragging must not select what is under the pointer
+  // on release (drag right, then back so the view is restored).
+  const centre = {
+    x: (panel.x + panel.width + box.x + box.width) / 2,
+    y: box.y + box.height / 2,
+  };
+  // One pointer step per drag: every camera change queues a whole-body
+  // frame, and on the software renderer (SwiftShader: CI, cloud containers)
+  // each takes ~5 s of GPU time, which the next screenshot has to wait for.
+  // Ten steps per drag queued over a minute and timed it out.
+  for (const dx of [140, -140]) {
+    await desktop.mouse.move(centre.x - dx / 2, centre.y);
+    await desktop.mouse.down();
+    await desktop.mouse.move(centre.x + dx / 2, centre.y);
+    await desktop.mouse.up();
+    await desktop.waitForTimeout(300);
+  }
+  assert(
+    (await infoTitle(desktop)) === null,
+    "dragging to turn the body selects nothing",
+  );
   await desktop.mouse.click(
     (panel.x + panel.width + box.x + box.width) / 2,
     box.y + box.height / 2,
@@ -89,7 +110,8 @@ export async function exploreFlow(browser: Browser, errors: string[]) {
     clicked,
     `clicking a mesh selects and names its structure (${clicked ?? "none"})`,
   );
-  await desktop.screenshot({ path: `${SHOTS}/selected.png` });
+  // (the drags' frames may still be rasterizing on a software renderer)
+  await desktop.screenshot({ path: `${SHOTS}/selected.png`, timeout: 150_000 });
 
   // Isolate and hide via keyboard shortcuts.
   await desktop.keyboard.press("KeyI");
