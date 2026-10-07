@@ -54,6 +54,7 @@ Expected today: **204 unit/component tests, 39 e2e checks, all passing; CI green
 | 2026-10-05 | **Docs must be kept updated continuously** as work happens (every commit), not at the end of a session. Enforced by the docs-gate hook.                                                                                                                                                                                        |
 | 2026-10-05 | **Deployed** by the user on Vercel: production URL **https://ors-anatomy.vercel.app** (production branch `main`).                                                                                                                                                                                                              |
 | 2026-10-05 | Course-site notes can't be copied or reworded (site terms); the user shared **her own summary** (Word, her own words) to use for **descriptions and names**. Her text is shown verbatim; her Hebrew names win over the site's.                                                                                                 |
+| 2026-10-07 | **Replace the non-commercial kidney** with the Human Reference Atlas male kidney (CC BY 4.0), as **priority 4** (last) of `docs/HANDMADE_MODELS_PROMPT.md`, for the priority-2 session to do after priority 3. The inner ear stays non-commercial for now. Drag fix: **merge to `main`**.                                      |
 | 2026-10-07 | Priority 1 reviewed from the screenshots: **merge to `main`**, then **start priority 2** (items 12+ of `docs/HANDMADE_MODELS_PROMPT.md`).                                                                                                                                                                                      |
 | 2026-10-07 | Hand-built structures: **priority 1 only** (items 1–11 of `docs/HANDMADE_MODELS_PROMPT.md`) first; **screenshots of each structure** to the user; **don't merge to `main` until the user says so**.                                                                                                                            |
 | 2026-10-06 | Plan for the model: after BodyParts3D, merge to `main`, then a **full audit** (placement, duplicates, bugs, mismatches) with fixes, then **hand-build the last missing pieces** with another AI, from a prompt written here (`docs/HANDMADE_MODELS_PROMPT.md`).                                                                |
@@ -231,7 +232,10 @@ All verified by `npm run e2e:smoke` against a production build.
    items 1–11 of `docs/HANDMADE_MODELS_PROMPT.md`. **Now: priority 2**
    (user, 2026-10-07; branch `claude/handmade-priority-2`). Then: her
    check of the courses (CONTENT_REVIEW → "Hand-built structures"); rerun
-   `summary_notes.py` with her .docx so her notes reach them; priority 3. NC models go into the
+   `summary_notes.py` with her .docx so her notes reach them; priority 3;
+   then **priority 4: replace the NC kidney with the Human Reference
+   Atlas male kidney** (CC BY; user, 2026-10-07), leaving only the inner
+   ear non-commercial. NC models go into the
    non-commercial file only. Open3DModel's
    retinacula, tendon sheaths and spaces (femoral/adductor canal) were left
    out as coverings — could come back as a toggleable layer. Phrenic nerve,
@@ -541,3 +545,9 @@ All verified by `npm run e2e:smoke` against a production build.
   random step — also on unchanged `main` (there at the quiz summary) — with
   only software rendering on 4 CPUs. If it recurs, rerun on another
   container before suspecting the code.
+- **2026-10-07 · session 3 (cont.)** — User: the NC kidney goes too.
+  Added as priority 4 (item 25) of `docs/HANDMADE_MODELS_PROMPT.md`, for
+  the priority-2 session to do last: import `VH_M_Kidney_L/R` and
+  `VH_M_Blood_Vasculature_Kidney` (HRA v1.2, CC BY 4.0) into their own file
+  for both bodies, fitted to the old kidney, and drop the kidney from the
+  non-commercial file. Drag fix merged to `main` (user's go).
