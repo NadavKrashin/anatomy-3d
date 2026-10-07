@@ -59,6 +59,8 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
 - `clearance-report.txt` — that report from the last full build.
 - `plot_perineum.py` — the perineum from below in both bodies, a review
   image (the app's camera can't look up between the thighs).
+- `contact_sheets.py` — the review shots (`e2e/handmade-shots.ts`) as one
+  sheet per region.
 - `audit_handmade.py` — the audit of `docs/DECISIONS.md` → "Audit" for these meshes (sides, regions by height, mutual duplicates, floating parts), on the shipped GLBs; usage in its docstring.
 - `build_handmade.py` — entry point: builds everything, runs the clearance
   check on every piece, prints length / worst penetration / smallest gap /

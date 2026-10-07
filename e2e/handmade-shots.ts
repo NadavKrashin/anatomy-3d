@@ -7,7 +7,8 @@
  *   npx tsx e2e/handmade-shots.ts phrenic    # only ids containing "phrenic"
  *   npx tsx e2e/handmade-shots.ts --missing  # only shots not taken yet
  *
- * Writes docs/screenshots/handmade/<id>-front.png and -side.png.
+ * Writes docs/screenshots/handmade/<id>-front.jpg and -side.jpg (JPEG keeps
+ * the 60 review shots small).
  */
 import { existsSync, mkdirSync } from "node:fs";
 import { chromium, type Page } from "playwright";
@@ -192,7 +193,7 @@ async function main() {
   for (const shot of SHOTS_LIST) {
     if (only && !shot.id.includes(only)) continue;
     const suffix = shot.body === "female" ? "-female" : "";
-    if (missing && existsSync(`${out}/${shot.id}${suffix}-side.png`)) continue;
+    if (missing && existsSync(`${out}/${shot.id}${suffix}-side.jpg`)) continue;
     const page = await openPage(browser, errors, {
       viewport: { width: 1280, height: 860 },
     });
@@ -214,9 +215,9 @@ async function main() {
       await page.waitForTimeout(1500);
     }
     const name = `${out}/${shot.id}${suffix}`;
-    await page.screenshot({ path: `${name}-front.png` });
+    await page.screenshot({ path: `${name}-front.jpg`, quality: 85 });
     await drag(page, shot.turn ?? (shot.tilt ? 0 : 260), shot.tilt ?? 0);
-    await page.screenshot({ path: `${name}-side.png` });
+    await page.screenshot({ path: `${name}-side.jpg`, quality: 85 });
     console.log(`✓ ${shot.id} (${body})`);
     await page.close();
   }
