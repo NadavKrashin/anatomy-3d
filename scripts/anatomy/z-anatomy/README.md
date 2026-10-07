@@ -56,6 +56,12 @@ for p in skeleton muscles nerves vessels organs; do
   npx tsx scripts/anatomy/z-anatomy/optimize-glb.ts out/body/$p.glb public/models/z-anatomy/$p.glb --simplify 0.5
 done
 cp out/manifest.json src/data/anatomy/z-anatomy/manifest.json
+# Branches the source carries inside other meshes become their own structures
+# (infra-orbital nerve, nerve to vastus medialis; DECISIONS.md → "Split
+# branches out of Z-Anatomy meshes"):
+npx tsx scripts/anatomy/z-anatomy/split-meshes.ts public/models/z-anatomy/nerves.glb \
+  public/models/z-anatomy/vessels.glb src/data/anatomy/z-anatomy/manifest.json
+npm run format
 # The non-commercial inner ear and kidney, in their own file
 # (THIRD_PARTY_ASSETS.md → "Non-commercial models"):
 python scripts/anatomy/z-anatomy/export_glb.py -- Z-Anatomy out/nc out/nc/manifest.json --non-commercial-only

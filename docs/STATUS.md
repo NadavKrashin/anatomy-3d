@@ -289,10 +289,12 @@ All verified by `npm run e2e:smoke` against a production build.
   crowded model: where it leaves no room they lie against neighbours or sink
   a few mm into soft organs (listed per structure in
   `scripts/anatomy/handmade/README.md`); the cisterna chyli and anal canal
-  are smaller than textbook size for the same reason. Still missing: the
-  infra-orbital nerve, lingual/posterior auricular arteries, cystic/hepatic
-  ducts, the cremaster, female external genitalia and urethra (priorities
-  2–3 of the brief). Her summary notes do not reach the hand-built
+  are smaller than textbook size for the same reason. Priority 2 in
+  progress on `claude/handmade-priority-2` (see the session log); the
+  infra-orbital nerve and the nerve to vastus medialis turned out to be
+  inside Z-Anatomy's maxillary and femoral nerve meshes and are now split
+  out of them (`split-meshes.ts`). Still missing: priority 3 (tensor
+  tympani, stapedius, subcostal muscles, scrotum). Her summary notes do not reach the hand-built
   structures yet (the .docx is needed to rerun `summary_notes.py`).
   Audit (`scripts/anatomy/handmade/audit_handmade.py`): sides, regions and
   duplicates clean; the supraclavicular nerves' middle part (≈ 11 %) runs
@@ -542,11 +544,10 @@ All verified by `npm run e2e:smoke` against a production build.
   horn's tip, a loop over it, along the horn, deep to hyoglossus, then the
   deep lingual artery lateral to genioglossus to near the tongue's tip;
   inside the model's single "Tongue" mesh, which encloses its muscles;
-  ≤ 1.5 mm into hyoglossus/genioglossus where they abut). Not built: the infra-orbital
-  nerve (item 16) — Z-Anatomy's "Maxillary nerve" mesh already runs on
-  through the orbit floor to the face and fans out there, so it includes
-  it; a second mesh would duplicate it (question for the user: alias the
-  course term to the maxillary nerve, or split that mesh). Builder:
+  ≤ 1.5 mm into hyoglossus/genioglossus where they abut). The infra-orbital
+  nerve (item 16) is not hand-built: Z-Anatomy's "Maxillary nerve" mesh
+  already runs on through the orbit floor to the face and fans out there;
+  split out instead (below). Builder:
   `--skip <regex>` leaves structures out but still exports (the priority-1
   GLB is rebuilt with the priority-2 ones skipped until they are ready).
   Male pelvis (item 15): bulbourethral glands (9 × 8 × 7 mm, posterolateral
@@ -557,10 +558,17 @@ All verified by `npm run e2e:smoke` against a production build.
   ring to the testis, each open ≥ 100° towards what the cord rests on
   (adductor longus, pectineus), else at the back, a loop left out where
   even a half loop would cut into it; a lateral strip joins the lower
-  ones). Also not built: the nerve to vastus medialis (item 18) — the
+  ones). Also not hand-built: the nerve to vastus medialis (item 18) — the
   model's "Femoral nerve" mesh continues as it to vastus medialis
-  (z ≈ 630–650 mm); same question as item 16. Checked the rest: none of
-  the other priority-2 structures lies along an existing mesh.
+  (z ≈ 630–650 mm). Checked the rest: none of the other priority-2
+  structures lies along an existing mesh. **Split** (user's choice):
+  `scripts/anatomy/z-anatomy/split-meshes.ts` cuts `Infra-orbital nerve.l/.r`
+  out of the maxillary nerve (in front of the infra-orbital artery's
+  posterior end, i.e. the inferior orbital fissure) and `Nerve to vastus
+medialis.l/.r` out of the femoral nerve (below the saphenous nerve's upper
+  end, its division) in the shipped nerves file + manifest; no-op when rerun,
+  every other mesh unchanged; each side's shared mirrored mesh copied first.
+  Test: both are their own structures, in the head / lower limb.
   Female urethra (item 14): `Urethra (female)` (joins the male-only
   Urethra as one structure by name), Ø 6 mm along the course the female
   sphincters were built round, from 3 mm inside the Atlas bladder neck to

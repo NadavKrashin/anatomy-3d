@@ -335,6 +335,24 @@ describe("the Z-Anatomy whole-body dataset", () => {
     );
   });
 
+  it("has the infra-orbital nerve and the nerve to vastus medialis as their own structures", () => {
+    // Split out of Z-Anatomy's maxillary and femoral nerve meshes
+    // (scripts/anatomy/z-anatomy/split-meshes.ts).
+    expect(meshMap["Infra-orbital nerve.l"]).toBe("infra-orbital-nerve-left");
+    expect(meshMap["Nerve to vastus medialis.r"]).toBe(
+      "nerve-to-vastus-medialis-right",
+    );
+    expect(meshMap["Maxillary nerve.l"]).toBe("maxillary-nerve-left");
+    expect(meshMap["Femoral nerve.r"]).toBe("femoral-nerve-right");
+    expect(registry.get("infra-orbital-nerve-right")?.region).toBe("head");
+    expect(registry.get("nerve-to-vastus-medialis-left")?.region).toBe(
+      "lower-limb",
+    );
+    expect(registry.get("infra-orbital-nerve-left")?.modelSource).toBe(
+      "Z-Anatomy",
+    );
+  });
+
   it("adds BodyParts3D's pieces and shows Z-Anatomy's rectum as the rectum", () => {
     for (const id of [
       "gastric-artery-right",

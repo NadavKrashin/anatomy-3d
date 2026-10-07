@@ -647,3 +647,27 @@ is built (`scripts/anatomy/handmade/`, README there).
   `SEX_VARIANT`).
 - **Not modelled yet:** female external genitalia and urethra (item 13–14),
   so the female muscles lie where those organs belong; priorities 2–3.
+
+## 2026-10-07 — Split branches out of Z-Anatomy meshes
+
+Two structures of the hand-built brief's priority 2 already exist, unnamed,
+inside larger Z-Anatomy meshes: "Maxillary nerve" runs on through the
+inferior orbital fissure along the orbit floor and fans out on the face (the
+infra-orbital nerve), and "Femoral nerve" continues below its division down
+the adductor canal into vastus medialis (the nerve to vastus medialis). A
+hand-built copy would duplicate them. The user chose to split them out
+(over adding her terms as synonyms of the parent nerves, which would select
+the whole parent):
+
+- `scripts/anatomy/z-anatomy/split-meshes.ts`, a step after
+  `optimize-glb.ts`, moves each triangle by its centroid into a new node:
+  in front of the infra-orbital artery's posterior end (it enters the orbit
+  through the same fissure) → `Infra-orbital nerve`; below the saphenous
+  nerve's upper end (the femoral nerve's division in the femoral triangle)
+  → `Nerve to vastus medialis`. The cut positions come from those landmark
+  meshes, not numbers. It updates the manifest and is a no-op when run
+  again; every other mesh is unchanged (bounding boxes identical).
+- Left and right share one mirrored mesh in the shipped file: each side's
+  node gets its own copy before the split.
+- The new structures are separate from their parents (selecting the
+  maxillary nerve no longer includes the infra-orbital part).

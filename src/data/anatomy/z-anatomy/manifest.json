@@ -5447,7 +5447,15 @@
     "tissue": "nerve",
     "region": "lower-limb",
     "pack": "nerves",
-    "vertices": 2052
+    "vertices": 873
+  },
+  {
+    "name": "Nerve to vastus medialis.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "nerves",
+    "vertices": 180
   },
   {
     "name": "Femoral nerve.r",
@@ -5455,7 +5463,15 @@
     "tissue": "nerve",
     "region": "lower-limb",
     "pack": "nerves",
-    "vertices": 2052
+    "vertices": 873
+  },
+  {
+    "name": "Nerve to vastus medialis.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "lower-limb",
+    "pack": "nerves",
+    "vertices": 180
   },
   {
     "name": "Femoral vein.l",
@@ -10681,7 +10697,15 @@
     "tissue": "nerve",
     "region": "head",
     "pack": "nerves",
-    "vertices": 4068
+    "vertices": 636
+  },
+  {
+    "name": "Infra-orbital nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "head",
+    "pack": "nerves",
+    "vertices": 1463
   },
   {
     "name": "Maxillary nerve.r",
@@ -10689,7 +10713,15 @@
     "tissue": "nerve",
     "region": "head",
     "pack": "nerves",
-    "vertices": 4068
+    "vertices": 636
+  },
+  {
+    "name": "Infra-orbital nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "head",
+    "pack": "nerves",
+    "vertices": 1463
   },
   {
     "name": "Maxillary veins.l",
