@@ -94,6 +94,13 @@ export const MODEL_SOURCES = {
     credit: "Human Reference Atlas",
     commercialUse: true,
   },
+  Handmade: {
+    license: "CC BY-SA 4.0",
+    attribution:
+      "Hand-built schematic structures (this project, CC BY-SA 4.0), placed in the Z-Anatomy body.",
+    credit: "Hand-built",
+    commercialUse: true,
+  },
   "lissiecowley kidney": {
     license: "CC BY-NC 4.0",
     attribution:
@@ -151,11 +158,20 @@ const SWAPPED_SIDES: ReadonlySet<string> = new Set([
   "Lateral temporomandibular ligament",
 ]);
 
+/**
+ * A mesh name ending in " (female)" or " (male)" is that body's version of a
+ * structure the other body has too (the hand-built ischiocavernosus over the
+ * crus of the penis or of the clitoris): one structure, one id, each mesh
+ * shown in its own body (`sex`).
+ */
+const SEX_VARIANT = / \((female|male)\)$/;
+
 function relabelled(raw: ManifestEntry): {
   entry: ManifestEntry;
   parsed: ParsedName;
 } {
-  const named = parseName(raw.name);
+  const parsedRaw = parseName(raw.name);
+  const named = { ...parsedRaw, base: parsedRaw.base.replace(SEX_VARIANT, "") };
   const parsed: ParsedName = SWAPPED_SIDES.has(named.base)
     ? { ...named, side: named.side === "left" ? "right" : "left" }
     : named;

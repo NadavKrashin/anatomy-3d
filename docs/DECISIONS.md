@@ -611,3 +611,39 @@ on what ships (the meshopt GLBs) and the dataset as each body sees it:
 - Fixes go to the source of each problem (export rules, `SWAPPED_SIDES`,
   `RELABEL`, the female export's mapping), never to the shipped files by
   hand.
+
+## 2026-10-07 — Hand-built structures: procedural, from measured landmarks
+
+No open model has the phrenic nerve, the laryngeal and cervical plexus
+nerves, the thoracic duct, several small arteries or the perineal muscles
+(`docs/MODEL_SOURCES.md`). The user chose to build them by hand from a
+written brief (`docs/HANDMADE_MODELS_PROMPT.md`); priority 1 (items 1–11)
+is built (`scripts/anatomy/handmade/`, README there).
+
+- **Procedural, not sculpted:** one bpy script regenerates everything from
+  the shipped meshes; nothing is edited by hand in a binary file, so a later
+  model change only needs a rerun. Shapes are schematic (tubes, bands,
+  sheets, rings), positions are not: every control point is a landmark
+  measured on a named mesh plus a stated offset.
+- **Relaxation with a check:** courses are pushed out of every mesh they
+  must not touch and the script asserts the result (no penetration, ≥ 0.5 mm
+  gap). Inside/outside uses the generalized winding number per mesh, because
+  this model's meshes nest (the vagus inside the aortic arch), are open
+  (vessel tubes) or double-walled (the diaphragm) — normals and ray parity
+  gave false results on each of these.
+- **Explicit allowances where the model leaves no room:** the lungs lie on
+  the heart with no pleura or pericardium, the arch lies on the trachea, the
+  stomach on the spleen, the sphincter ring is small. Rather than distort the
+  existing meshes or bend a course out of its anatomical place, a structure
+  may lie against named neighbours (`touch`) or sink into a named soft organ
+  up to a stated depth (`squeeze`), reported per structure. Everything else
+  is held to the strict check.
+- **Licence:** the project's own work, made against a CC BY-SA model:
+  CC BY-SA 4.0, `MODEL_SOURCES.Handmade`, credited like the other sources.
+- **Sexes:** structures shared by both bodies have no `sex`; the female
+  perineal muscles are female-only meshes of the same structures (parts of
+  the external urethral sphincter and bulbospongiosus; a `" (female)"` mesh
+  of the ischiocavernosus, which `build.ts` joins to the male one by name —
+  `SEX_VARIANT`).
+- **Not modelled yet:** female external genitalia and urethra (item 13–14),
+  so the female muscles lie where those organs belong; priorities 2–3.

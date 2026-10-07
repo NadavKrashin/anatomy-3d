@@ -246,3 +246,43 @@ def mirror(mesh):
     """x → −x (the body is exactly symmetric), flipping triangle winding."""
     V, F, S = mesh
     return V * np.array([-1.0, 1, 1]), F[:, ::-1].copy(), S.copy()
+
+
+def arc_band(sections, theta0: float, theta1: float, offset: float, thickness: float, m: int = 14):
+    """
+    A curved muscle sheet wrapped part-way round an elongated organ (the
+    bulb, a crus): for each section (centre, u, v, a, b) — an ellipse
+    c + a·cosθ·u + b·sinθ·v — the sheet spans θ0…θ1 (radians), from
+    `offset` to `offset + thickness` outside the ellipse. Closed solid.
+    """
+    th = np.linspace(theta0, theta1, m)
+    n = len(sections)
+
+    def grid(extra):
+        G = np.zeros((n, m, 3))
+        for i, (c, u, v, a, b_) in enumerate(sections):
+            G[i] = c + np.outer((a + extra) * np.cos(th), u) + np.outer((b_ + extra) * np.sin(th), v)
+        return G
+
+    inner, outer = grid(offset), grid(offset + thickness)
+    V = np.vstack([inner.reshape(-1, 3), outer.reshape(-1, 3)])
+    off = n * m
+    idx = lambda i, j, k: k * off + i * m + j  # noqa: E731
+    F = []
+    for i in range(n - 1):
+        for j in range(m - 1):
+            a, b_, c, d = idx(i, j, 1), idx(i + 1, j, 1), idx(i + 1, j + 1, 1), idx(i, j + 1, 1)
+            F += [(a, b_, c), (a, c, d)]  # outer
+            a, b_, c, d = idx(i, j, 0), idx(i + 1, j, 0), idx(i + 1, j + 1, 0), idx(i, j + 1, 0)
+            F += [(a, c, b_), (a, d, c)]  # inner (reversed)
+    for i in range(n - 1):  # the two long edges
+        for j in (0, m - 1):
+            a, b_, c, d = idx(i, j, 0), idx(i + 1, j, 0), idx(i + 1, j, 1), idx(i, j, 1)
+            F += [(a, b_, c), (a, c, d)] if j == 0 else [(a, c, b_), (a, d, c)]
+    for i in (0, n - 1):  # the two ends
+        for j in range(m - 1):
+            a, b_, c, d = idx(i, j, 0), idx(i, j + 1, 0), idx(i, j + 1, 1), idx(i, j, 1)
+            F += [(a, b_, c), (a, c, d)] if i == 0 else [(a, c, b_), (a, d, c)]
+    centres = np.array([sec[0] for sec in sections])
+    s = np.concatenate([np.repeat(arc_length(centres), m)] * 2)
+    return V, np.array(F, np.int32), s

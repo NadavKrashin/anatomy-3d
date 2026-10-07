@@ -2,7 +2,7 @@
 
 > Living document. **Update it with every commit that changes the code, not
 > just at the end of a session** — it must always match the code as it is.
-> Last updated: 2026-10-05 (session 3, study notes from her own summary).
+> Last updated: 2026-10-07 (session 4, hand-built structures, priority 1).
 
 ## Orientation (read in this order)
 
@@ -54,6 +54,7 @@ Expected today: **189 unit/component tests, 35 e2e checks, all passing; CI green
 | 2026-10-05 | **Docs must be kept updated continuously** as work happens (every commit), not at the end of a session. Enforced by the docs-gate hook.                                                                                                                                                                                        |
 | 2026-10-05 | **Deployed** by the user on Vercel: production URL **https://ors-anatomy.vercel.app** (production branch `main`).                                                                                                                                                                                                              |
 | 2026-10-05 | Course-site notes can't be copied or reworded (site terms); the user shared **her own summary** (Word, her own words) to use for **descriptions and names**. Her text is shown verbatim; her Hebrew names win over the site's.                                                                                                 |
+| 2026-10-07 | Hand-built structures: **priority 1 only** (items 1–11 of `docs/HANDMADE_MODELS_PROMPT.md`) first; **screenshots of each structure** to the user; **don't merge to `main` until the user says so**.                                                                                                                            |
 | 2026-10-06 | Plan for the model: after BodyParts3D, merge to `main`, then a **full audit** (placement, duplicates, bugs, mismatches) with fixes, then **hand-build the last missing pieces** with another AI, from a prompt written here (`docs/HANDMADE_MODELS_PROMPT.md`).                                                                |
 | 2026-10-06 | **Non-commercial (NC) models allowed** — the app will not be used commercially. Z-Anatomy's inner ear and kidney added first; NC models live in their own file behind one switch, with a "Going commercial" checklist (`THIRD_PARTY_ASSETS.md`) so going commercial stays easy.                                                |
 | 2026-10-06 | **Fill model gaps from open 3D models**, starting with **Open3DModel** (CC BY-SA, same body as Z-Anatomy) — "Ok start". Others (Human Reference Atlas, BodyParts3D) in `docs/MODEL_SOURCES.md` order.                                                                                                                          |
@@ -110,7 +111,14 @@ All verified by `npm run e2e:smoke` against a production build.
   pancreaticoduodenal and gastro-omental arteries, gastric veins, a bronchial
   artery, frontal/lacrimal/supra-orbital nerves, levator veli palatini,
   semispinalis capitis, dorsal scapular arteries. Z-Anatomy's "Sigmoid
-  colon" mesh is shown as the **Rectum** (it is; DECISIONS). Male body: 2,910 meshes → 2,984 structures
+  colon" mesh is shown as the **Rectum** (it is; DECISIONS). A tenth file,
+  `public/models/handmade/handmade.glb`, holds **hand-built** schematic
+  structures no open model has (`scripts/anatomy/handmade/`, priority 1 of
+  `docs/HANDMADE_MODELS_PROMPT.md`): phrenic, recurrent and superior
+  laryngeal nerves, ansa cervicalis, the cervical plexus's cutaneous
+  branches, superior thyroid/laryngeal, cystic and short gastric arteries,
+  thoracic duct and cisterna chyli, perineal body and muscles (male and
+  female versions), anal canal and internal anal sphincter. Male body: 2,910 meshes → 2,984 structures
   (2,555 wholes); female body: 2,936 meshes → 3,015 structures (2,551
   wholes); ≈3.7M triangles, 20 MB in all; the skeleton loads first and
   frames the camera, the rest streams in ("Loading body systems n/8", n/9
@@ -215,10 +223,13 @@ All verified by `npm run e2e:smoke` against a production build.
    Atlas, female body); **BodyParts3D pieces done** (23 small pieces; its
    rectum showed Z-Anatomy's "Sigmoid colon" is the rectum). The other NC
    sources were checked and none fills a gap (`docs/MODEL_SOURCES.md` →
-   "Non-commercial sources"). Next: hand-made models for the phrenic nerve,
-   cervical plexus, laryngeal nerves and thoracic duct (no source has them)
-   — the full brief for that is `docs/HANDMADE_MODELS_PROMPT.md` (24
-   structures in 3 priorities, method, integration contract, checks). NC models go into the
+   "Non-commercial sources"). **Hand-built structures, priority 1 done**
+   (2026-10-07, branch `claude/handmade-structures`, awaiting the user's
+   review of the screenshots and their go to merge): items 1–11 of
+   `docs/HANDMADE_MODELS_PROMPT.md`. Next: her check of the courses
+   (CONTENT_REVIEW → "Hand-built structures"); rerun `summary_notes.py`
+   with her .docx so her notes reach them; then priorities 2–3 (24
+   structures in all; method and contract in the brief). NC models go into the
    non-commercial file only. Open3DModel's
    retinacula, tendon sheaths and spaces (femoral/adductor canal) were left
    out as coverings — could come back as a toggleable layer. Phrenic nerve,
@@ -269,12 +280,18 @@ All verified by `npm run e2e:smoke` against a production build.
   liver is one mesh (segments omitted). Regions for organs and midline
   structures come from their height against skeletal landmarks (navigation
   aid).
-- Not in the model because **Z-Anatomy itself doesn't model them** (source
-  files checked 2026-10-06): the **phrenic nerve**, frontal/lacrimal/
-  supra- and infra-orbital, recurrent and superior laryngeal and cervical
-  plexus nerves; cystic, right/short gastric, lingual, superior thyroid
-  arteries; thoracic duct; cystic/hepatic ducts; perineal muscles; the
-  cremaster. Adding them would need another model source.
+- Not in any open model, so **built by hand** (2026-10-07, priority 1):
+  phrenic, recurrent/superior laryngeal and cervical plexus nerves, ansa,
+  superior thyroid/laryngeal, cystic, short gastric arteries, thoracic duct,
+  perineal muscles, anal canal. They are **schematic** and fitted into a
+  crowded model: where it leaves no room they lie against neighbours or sink
+  a few mm into soft organs (listed per structure in
+  `scripts/anatomy/handmade/README.md`); the cisterna chyli and anal canal
+  are smaller than textbook size for the same reason. Still missing: the
+  infra-orbital nerve, lingual/posterior auricular arteries, cystic/hepatic
+  ducts, the cremaster, female external genitalia and urethra (priorities
+  2–3 of the brief). Her summary notes do not reach the hand-built
+  structures yet (the .docx is needed to rerun `summary_notes.py`).
 - On phones, a long name's leader label can run off the screen edge (user:
   fine as is, 2026-10-05).
 - Long structures (nerves) are framed along their whole length.
@@ -491,4 +508,4 @@ All verified by `npm run e2e:smoke` against a production build.
   machinery (per-mesh BVH + generalized winding number, so open and nested
   meshes are handled; relaxation of spline control points; explicit,
   reported allowances where the model leaves no room), geometry (spline,
-  parallel-transport tubes). Built and clearance-clean so far: phrenic nerves, recurrent and superior laryngeal nerves, superior thyroid and superior laryngeal arteries, ansa cervicalis, the four cutaneous branches of the cervical plexus, thoracic duct and cisterna chyli, cystic artery, short gastric arteries. Left: perineal muscles, anal canal. Not yet in the app (no GLB/manifest wired in).
+  parallel-transport tubes). Built and clearance-clean so far: phrenic nerves, recurrent and superior laryngeal nerves, superior thyroid and superior laryngeal arteries, ansa cervicalis, the four cutaneous branches of the cervical plexus, thoracic duct and cisterna chyli, cystic artery, short gastric arteries, perineal body and muscles, anal canal and internal anal sphincter (all 11 items). Wiring into the app (GLB, manifest, `index.ts`, tests, e2e) is in progress: until that commit lands, the "tenth file" above and the e2e check are not on the branch yet.

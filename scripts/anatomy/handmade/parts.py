@@ -58,8 +58,12 @@ class Builder:
     def vessel(self, part: Part, label: str, ctrl, radius: float, allow: Allow = Allow(), *,
                start_taper: float = 0.0, end_taper: float = 0.006, tip: float = 0.45,
                segments: int = 10, do_relax: bool = True, pin=(True, True), clearance: float = 0.0009,
-               path=None, spacing: float = 0.006) -> Piece:
-        """A tube through control points: spline → relaxed out of neighbours → swept circle."""
+               path=None, spacing: float = 0.006, flatten=None, up=None) -> Piece:
+        """
+        A tube through control points: spline → relaxed out of neighbours →
+        swept circle (or a flat band: `flatten` = thickness / width, the width
+        along `up`; relaxed conservatively with the half-width as radius).
+        """
         P = catmull_rom(ctrl) if path is None else path
         r = taper(P, radius, start_taper, end_taper, tip)
         if do_relax:
@@ -73,7 +77,7 @@ class Builder:
             r = taper(P, radius, start_taper, end_taper, tip)
         if do_relax:
             r = self.fit_radius(P, r, part, allow)
-        V, F, s = tube(P, r, segments)
+        V, F, s = tube(P, r, segments, flatten=flatten, up=up)
         piece = Piece(label, V, F, s, allow, P, r)
         part.pieces.append(piece)
         return piece

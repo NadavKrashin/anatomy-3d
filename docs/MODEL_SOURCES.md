@@ -63,23 +63,23 @@ added:
 
 The gaps below therefore stay open.
 
-## Still without any open source
+## Still without any open source — built by hand
 
-These are absent from all of the above:
-
-- the **phrenic nerve**;
-- the cervical plexus branches (lesser occipital, great auricular,
-  transverse cervical, supraclavicular) and the ansa cervicalis;
-- the recurrent and superior laryngeal nerves;
-- the **thoracic duct**;
-- the cystic, short gastric, lingual and superior thyroid arteries;
-- the perineal muscles (bulbospongiosus, ischiocavernosus) and the
-  cremaster.
+None of the above has these; since 2026-10-07 they are **built by hand**
+(`scripts/anatomy/handmade/`, `docs/HANDMADE_MODELS_PROMPT.md`, schematic,
+CC BY-SA 4.0, this project). Priority 1, built: the **phrenic nerve**; the
+cervical plexus branches (lesser occipital, great auricular, transverse
+cervical, supraclavicular) and the ansa cervicalis; the recurrent and
+superior laryngeal nerves; the **thoracic duct** and cisterna chyli; the
+cystic, short gastric, superior thyroid and superior laryngeal arteries;
+the perineal muscles and body, anal canal and internal anal sphincter.
+Still to build (priorities 2–3 of the brief): the lingual and posterior
+auricular arteries, the cremaster, female external genitalia and urethra,
+and the others listed there.
 
 Open3DModel has head and neck soft tissue and the "spinal cord and
-surroundings" planned for 2026, so re-check it. The other option is
-modelling them by hand (a tube along an anatomical path) as our own
-CC BY-SA work.
+surroundings" planned for 2026, so re-check it: a real model would be
+better than a hand-built schematic one and should replace it.
 
 ## How to fetch (for the next session)
 
