@@ -637,7 +637,7 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
                   # (the hypoglossal crosses stylohyoid and stylopharyngeus where the root leaves it)
                   Allow(start=(xii, f"Occipital artery.{side}", rf"Stylohyoid (ligament|muscle)\.{side}",
                                rf"Stylopharyngeus muscle\.{side}"),
-                        touch=crossing, zone=0.008,
+                        touch=crossing, zone=0.014,
                         squeeze=(scm,), depth=1.5 * MM), end_taper=0.0)
     b.add(sup)
     L = sp.path[-1]
