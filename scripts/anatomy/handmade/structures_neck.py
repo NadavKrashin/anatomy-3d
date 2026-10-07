@@ -118,7 +118,9 @@ def phrenic(b: Builder, side: str) -> None:
     """
     sx = SIDES[side]
     name = f"Phrenic nerve.{side}"
-    part = Part(name, "nervous", "nerve", "thorax")
+    # The pericardiacophrenic vessels (structures_trunk.py) run along it, touching.
+    part = Part(name, "nervous", "nerve", "thorax",
+                family=(f"Pericardiacophrenic artery.{side}", f"Pericardiacophrenic vein.{side}"))
     sa = f"Scalenus anterior muscle.{side}"
     # Lies on scalenus anterior under the prevertebral fascia: may touch it.
     # The lateral pericardial / prepericardial nodes sit on its course.

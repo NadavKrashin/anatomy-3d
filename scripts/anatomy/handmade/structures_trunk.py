@@ -1,6 +1,7 @@
 """
 Hand-built structures of the thorax and abdomen: thoracic duct and cisterna
-chyli, cystic artery, short gastric arteries. Courses: Gray's Anatomy for
+chyli, cystic artery, short gastric arteries, pericardiacophrenic vessels,
+subcostal nerve, greater pancreatic artery. Courses: Gray's Anatomy for
 Students, Moore, Netter (the textbook-typical pattern). Landmarks are
 measured on the named meshes; offsets are stated with their reason.
 Frame: metres, +x = the body's left, −y = anterior, +z = up.
@@ -10,7 +11,7 @@ import numpy as np
 from landmarks import Allow
 from parts import MM, Builder, Part, unit
 from shapes import catmull_rom, spindle
-from structures_neck import NODES, front_of
+from structures_neck import LUNG, NODES, PHRENIC_R, SIDES, front_of, sided
 
 DUCT_R = 2.0 * MM  # Ø 4 mm
 
@@ -234,6 +235,207 @@ def short_gastric(b: Builder) -> None:
     b.add(part)
 
 
+def part_named(b: Builder, name: str) -> Part:
+    """A part built earlier in this run (its course is a landmark)."""
+    for p in b.parts:
+        if p.name == name:
+            return p
+    raise AssertionError(f"{name} must be built first (include it in --only)")
+
+
+def beside(path: np.ndarray, start: int, toward, offset: float, every: float = 0.010) -> list[np.ndarray]:
+    """Control points along path[start:], `offset` from its axis on the side
+    facing `toward` (made perpendicular to the path at each point), one
+    every `every` metres."""
+    s = np.r_[0, np.cumsum(np.linalg.norm(np.diff(path, axis=0), axis=1))]
+    pts = []
+    for target in np.arange(s[start], s[-1] + 1e-9, every):
+        i = int(np.clip(np.searchsorted(s, target), 1, len(path) - 2))
+        t = unit(path[i + 1] - path[i - 1])
+        d = np.asarray(toward, float)
+        d = unit(d - (d @ t) * t)
+        pts.append(path[i] + d * offset)
+    return pts
+
+
+def pericardiacophrenic(b: Builder, side: str) -> None:
+    """
+    Pericardiacophrenic artery: from the internal thoracic artery near its
+    origin (at the thoracic inlet), medially to the phrenic nerve, then with
+    the nerve between the mediastinal pleura and the fibrous pericardium to
+    the diaphragm. Pericardiacophrenic vein: the same course, draining into
+    the internal thoracic vein. Both run just beside the nerve (1–2 mm):
+    the artery behind it, the vein in front of it; Ø 1.2 mm.
+    """
+    sx = SIDES[side]
+    nerve = part_named(b, f"Phrenic nerve.{side}")
+    trunk = next(p.path for p in nerve.pieces if p.label == "trunk")
+    R = 0.6 * MM
+    gap = PHRENIC_R + 1.0 * MM + R  # axis to axis: 1 mm between nerve and vessel
+    # Where the vessels join the nerve: 15 mm below the root of the neck
+    # (where the nerve passes medial to the internal thoracic origin).
+    ita = f"Internal thoracic artery.{side}"
+    itv = f"Internal thoracic veins.{side}"
+    origin = b.body.extreme(ita, (0, 0, 1))
+    z_join = origin[2] - 0.022
+    j = int(np.argmin(np.abs(trunk[:, 2] - z_join) + 10 * (trunk[:, 2] > z_join + 0.01)))
+    # The nerve's thoracic course from there to 4 mm short of its end on the diaphragm.
+    s = np.r_[0, np.cumsum(np.linalg.norm(np.diff(trunk, axis=0), axis=1))]
+    stop = int(np.searchsorted(s, s[-1] - 0.004))
+    course = trunk[: stop + 1]
+    family = (f"Phrenic nerve.{side}", f"Pericardiacophrenic artery.{side}", f"Pericardiacophrenic vein.{side}")
+    for kind, mesh, toward, name in (("artery", ita, (0, 1, 0), f"Pericardiacophrenic artery.{side}"),
+                                     ("vein", itv, (0, -1, 0), f"Pericardiacophrenic vein.{side}")):
+        # Origin: the internal thoracic vessel's medial side, 15 mm below the artery's origin.
+        V = b.body.V(mesh)
+        z0 = origin[2] - 0.015
+        S = V[np.abs(V[:, 2] - z0) < 2 * MM]
+        o = S[np.argmin(sx * S[:, 0])] if len(S) else b.body.nearest(mesh, origin - np.array([0, 0, 0.015]))[0]
+        along = beside(course, j, toward, gap)
+        first = along[0]
+        mid = (o + first) / 2 + np.array([0, 0, 2 * MM])
+        part = Part(name, "cardiovascular", kind, "thorax", family=family)
+        b.vessel(part, kind, [o, mid] + along + [course[-1] + unit(np.asarray(toward, float)) * gap * 0.6], R,
+                 # As the nerve: on the pericardium, which the model lacks; the
+                 # model's lungs lie on the heart, so they may sink into the lung
+                 # surface (≤ 5 mm); they lie against the nerve and each other.
+                 Allow(start=(mesh, r"(Right|Left) brachiocephalic vein", rf".*subclavian (artery|vein).*"),
+                       end=("Diaphragm",), zone=0.010, end_zone=0.006,
+                       touch=(NODES, f"Phrenic nerve.{side}", rf"Scalenus anterior muscle\.{side}", "Diaphragm"),
+                       squeeze=(LUNG,), depth=5.0 * MM),
+                 start_taper=0.0, end_taper=0.006)
+        b.add(part)
+
+
+def between_layers(b: Builder, inner: str, outer: str, origin, direction) -> np.ndarray | None:
+    """Where a ray from `origin` along `direction` leaves the `inner` sheet
+    (its second crossing) and meets the `outer` one: the midpoint of the
+    gap between two muscle layers (or the inner layer's outer surface where
+    they lie against each other)."""
+    d = unit(direction)
+    first = b.body.ray(inner, origin, d, 0.4)
+    if first is None:
+        return None
+    exit_ = b.body.ray(inner, first + d * 1e-4, d, 0.05)
+    exit_ = first if exit_ is None else exit_
+    meet = b.body.ray(outer, exit_ - d * 2e-3, d, 0.05)
+    if meet is None or (meet - exit_) @ d < 0:
+        return exit_
+    return (exit_ + meet) / 2
+
+
+def subcostal_nerve(b: Builder, side: str) -> None:
+    """
+    Subcostal nerve (anterior ramus of T12): from the T12–L1 intervertebral
+    foramen laterally along the lower border of the 12th rib, below the
+    subcostal vessels, in front of quadratus lumborum and behind the kidney;
+    then it pierces the aponeurosis of transversus abdominis and runs
+    forward and down between transversus abdominis and the internal oblique
+    to the lateral border of rectus abdominis, about halfway between the
+    umbilicus and the pubis (the T12 dermatome). Ø 2 mm.
+    """
+    sx = SIDES[side]
+    R = 1.0 * MM
+    rib, ql = f"Twelfth rib.{side}", f"Quadratus lumborum muscle.{side}"
+    ta, io = f"Transversus abdominis muscle.{side}", f"Internal abdominal oblique muscle.{side}"
+    ra = f"Rectus abdominis muscle.{side}"
+    # Foramen: beside the T12–L1 disc, behind the vertebral body (its back
+    # third), 3 mm lateral to the disc.
+    D = b.body.V("Intervertebral disc T12-L1")
+    zd = D[:, 2].mean()
+    foramen = np.array([sx * (sx * D[:, 0]).max() + sx * 3 * MM, D[:, 1].max() - 4 * MM, zd])
+    pts = [foramen]
+    # Under the rib's lower border, below the subcostal vein and artery
+    # (vein, artery, nerve from above: radius + 1 mm below the lower of the
+    # rib and the two vessels there), in front of quadratus lumborum.
+    Rb = b.body.V(rib)
+    xs = sx * Rb[:, 0]
+    vessels = np.vstack([b.body.V(f"Subcostal artery.{side}"), b.body.V(sided("Left subcostal vein", side))])
+    for f in (0.3, 0.55):
+        xc = xs.min() + (xs.max() - xs.min()) * f
+        S = Rb[np.abs(xs - xc) < 3 * MM]
+        low = S[np.argmin(S[:, 2])]
+        Vv = vessels[np.abs(sx * vessels[:, 0] - xc) < 3 * MM]
+        floor = min(low[2], Vv[:, 2].min()) if len(Vv) else low[2]
+        p = np.array([low[0], low[1], floor - R - 1.0 * MM])
+        front = b.body.ray(ql, (p[0], -0.2, p[2]), (0, 1, 0), 0.4)
+        if front is not None:
+            p[1] = min(p[1], front[1] - R - 1.0 * MM)
+        pts.append(p)
+    # Round the wall between transversus abdominis and the internal oblique,
+    # descending from there to the rectus' lateral border.
+    L4 = b.body.V("Intervertebral disc L3-L4")[:, 2].mean()  # umbilicus level
+    sym = b.body.V("Pubic symphysis")[:, 2].max()
+    z_end = (L4 + sym) / 2
+    Ra = b.body.V(ra)
+    band = Ra[np.abs(Ra[:, 2] - z_end) < 3 * MM]
+    lat_border = band[np.argmax(sx * band[:, 0])]
+    z0, y0 = pts[-1][2], b.body.V(f"Kidney.{side}")[:, 1].mean()
+    angles = np.radians([35, 20, 5, -10, -25, -40])  # 0 = straight lateral, + = backward, − = forward
+    for k, a in enumerate(angles):
+        z = z0 + (z_end - z0) * (k + 1) / (len(angles) + 1)
+        q = between_layers(b, ta, io, (0.0, y0, z), (sx * np.cos(a), np.sin(a), 0))
+        if q is not None:
+            pts.append(q)
+    end = lat_border + np.array([sx * 2.0, -1.0, 0]) * MM
+    pts.append(end)
+    part = Part(f"Subcostal nerve.{side}", "nervous", "nerve", "abdomen")
+    b.vessel(part, "nerve", pts, R,
+             # It lies on quadratus lumborum, behind the kidney, under the
+             # subcostal vessels; then in the thin plane between the two
+             # muscle layers, which lie against each other in the model: may
+             # sink into either up to 1.5 mm.
+             Allow(start=(r"Vertebra (T12|L1)", r"Intervertebral disc T12-L1", r"Psoas major.*", r"Psoas minor.*",
+                          rf"Intertransverse.*", r"Right crus.*|Left crus.*", "Diaphragm"),
+                   end=(ra, r"Rectus sheath.*"),
+                   touch=(ql, rib, f"Kidney.{side}", NODES, "Diaphragm", rf"Subcostal artery\.{side}",
+                          rf"(Left|Right) subcostal vein", ta, io, r".*renal fascia.*", r"Psoas.*",
+                          rf"(Iliohypogastric|Ilio-inguinal) nerve\.{side}",
+                          # where the internal oblique thins out at the back, the layers meet
+                          rf"External abdominal oblique muscle\.{side}"),
+                   # (≤ 2 mm where it pierces transversus' aponeurosis lateral to quadratus lumborum)
+                   squeeze=(ta, io), depth=2.0 * MM, zone=0.012, end_zone=0.008),
+             start_taper=0.0, end_taper=0.010)
+    b.add(part)
+
+
+def greater_pancreatic(b: Builder) -> None:
+    """
+    Greater pancreatic artery (arteria pancreatica magna): the largest
+    pancreatic branch of the splenic artery, from its middle part on the
+    pancreas' upper border, down the back of the gland into it at the
+    junction of body and tail (taken at 78 % of the gland's length from the
+    head), where it divides in the parenchyma. Ø 1.5 mm.
+    """
+    sa, gland = "Splenic artery", "Pancreas"
+    R = 0.75 * MM
+    P, A = b.body.V(gland), b.body.V(sa)
+    xc = P[:, 0].min() + 0.78 * (P[:, 0].max() - P[:, 0].min())
+    S = A[np.abs(A[:, 0] - xc) < 3 * MM]
+    c = S.mean(0)
+    low = S[np.argmin(S[:, 2])]
+    o = c + (low - c) * 0.5
+    # Down the back of the gland: its posterior surface 6 mm below its top
+    # there (ray from behind), radius + 0.8 mm off it.
+    top = P[np.abs(P[:, 0] - xc) < 3 * MM][:, 2].max()
+    back = b.body.ray(gland, (xc, 0.15, top - 6 * MM), (0, -1, 0), 0.3)
+    assert back is not None, "no back of the pancreas"
+    entry = back + np.array([0, R + 0.8 * MM, 0])
+    p1 = (o + entry) / 2 + np.array([0, 1.5 * MM, 0])
+    part = Part("Greater pancreatic artery", "cardiovascular", "artery", "abdomen")
+    near = (NODES, "Splenic vein", r"Superior pancreatic nodes", r"Dorsal pancreatic artery")
+    b.vessel(part, "artery", [o, p1, entry], R,
+             # The model's stomach rests on the splenic artery here: the origin may
+             # touch it and press into its wall (≤ 1 mm).
+             Allow(start=(sa, "Stomach"), end=(gland,), touch=near + (gland,), zone=0.006, end_zone=0.004,
+                   squeeze=("Stomach",), depth=1.0 * MM),
+             start_taper=0.0, end_taper=0.0)
+    # Into the parenchyma and down behind the duct, where it divides (inside the gland).
+    inside = [entry, entry + np.array([0, -1.5, -3]) * MM, entry + np.array([0, -2, -7]) * MM]  # down, behind the duct
+    b.vessel(part, "in the gland", inside, R, Allow(anywhere=(gland,), touch=near), end_taper=0.006, do_relax=False)
+    b.add(part)
+
+
 def build(b: Builder, only) -> None:
     def want(name: str) -> bool:
         return only is None or bool(only.search(name))
@@ -244,3 +446,10 @@ def build(b: Builder, only) -> None:
         cystic_artery(b)
     if want("Short gastric"):
         short_gastric(b)
+    for side in ("l", "r"):
+        if want("Pericardiacophrenic"):
+            pericardiacophrenic(b, side)
+        if want("Subcostal nerve"):
+            subcostal_nerve(b, side)
+    if want("Greater pancreatic"):
+        greater_pancreatic(b)
