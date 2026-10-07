@@ -334,8 +334,10 @@ def laryngeal_entry(b: Builder, side: str) -> list[np.ndarray]:
 
 def recurrent_laryngeal(b: Builder, side: str) -> None:
     """
-    Right: leaves the vagus at the right subclavian artery, hooks below and
-    behind the artery, ascends in the right tracheo-oesophageal groove.
+    Right: leaves the vagus at the right subclavian artery, hooks round the
+    artery's first part — in front, below, behind — lateral to the
+    brachiocephalic bifurcation, ascends in the right tracheo-oesophageal
+    groove.
     Left: leaves the vagus at the aortic arch, hooks below the arch beside
     the ligamentum arteriosum (its node marks it; the ligament itself is not
     modelled) and behind it, ascends in the left groove. Both end behind the
@@ -343,9 +345,9 @@ def recurrent_laryngeal(b: Builder, side: str) -> None:
 
     Model quirks (Z-Anatomy): the left vagus runs *through* the aortic arch
     mesh (z 1372–1396 mm), so the left nerve starts where the vagus leaves
-    the arch's underside; the right vagus lies medial to the subclavian
-    artery's first part, so the right nerve leaves it laterally, in front of
-    the artery. The arch, trachea and oesophagus overlap at z 1375–1395 mm,
+    the arch's underside; the right vagus lies just behind the subclavian
+    artery's first part (not in front of it), so the right nerve leaves it
+    above the artery and comes round the artery's front from there. The arch, trachea and oesophagus overlap at z 1375–1395 mm,
     leaving no free groove there (the arch's wall lies on the trachea's left
     side): the left nerve may sink into the oesophagus, tracheal or left
     main bronchus wall, at most 3 mm, reported. The
@@ -361,23 +363,46 @@ def recurrent_laryngeal(b: Builder, side: str) -> None:
     end_allow = (rf"Posterior crico-arytenoid muscle\.{side}", rf"Inferior pharyngeal constrictor\.{side}",
                  "Cricoid cartilage", r"Crico-arytenoid joint.*", "Anterior longitudinal ligament",
                  rf"Longus colli muscle\.{side}", r"Intervertebral disc C.*")
-    allow = Allow(start=(vagus,), end=end_allow, zone=0.010, end_zone=0.010, touch=(NODES,),
+    # (On the right it starts against the vagus and passes back behind it:
+    # may lie against it.)
+    allow = Allow(start=(vagus,), end=end_allow, zone=0.010, end_zone=0.010,
+                  touch=(NODES,) if side == "l" else (NODES, vagus),
                   squeeze=("Oesophagus", "Trachea", "Left main bronchus", "Thyroid gland") if side == "l"
-                  else ("Oesophagus", "Thyroid gland"), depth=(3.0 if side == "l" else 2.5) * MM)
+                  # (right: the lung apex and its apical vessels, which reach the
+                  # apex's surface in the model, lie directly under and behind
+                  # the subclavian artery; the hook runs over them)
+                  else ("Oesophagus", "Thyroid gland", LUNG, r"Apical (vein|segmental artery) of right lung"),
+                  depth=(3.0 if side == "l" else 5.0) * MM)
     if side == "r":
-        z0 = 1.421
+        # The model's right vagus lies just behind the subclavian artery's
+        # first part and reaches above it: the nerve leaves it above the
+        # artery (z 1.424), goes laterally and forward round the artery's
+        # front 6 mm lateral to the brachiocephalic bifurcation (the right
+        # common carotid's lowest point), runs flat under it from its front to
+        # its back edge (radius + 1.5 mm below its lowest point within ±4 mm —
+        # the underside slopes down medially), up behind it, and back medially
+        # behind the vagus to the tracheo-oesophageal groove. The model's lung
+        # apex rises round the artery (no cervical pleura): the hook lies in
+        # the apex's surface, at most 5 mm deep (as the phrenic nerve's course
+        # over the heart); further laterally the apex fills the space entirely.
+        z0 = 1.424
         c, t, rv = nerve_axis(b, vagus, z0, side)
         p0, p1 = branch_start(c, t, rv, (sx, -1, 0))
         sca = "Right subclavian artery"
-        # Below the artery: its lowest point under x = vagus x − 8 mm, 3 mm lower.
-        x_h = c[0] - sx * 8 * MM
-        A = b.body.V(sca)
-        A = A[np.abs(A[:, 0] - x_h) < 3 * MM]
-        front, back, bottom = A[:, 1].min(), A[:, 1].max(), A[:, 2].min()
-        hook = [np.array([x_h, front - 2 * MM, bottom - 1.0 * MM]),
-                np.array([x_h, (front + back) / 2, bottom - RLN_R - 2.0 * MM]),
-                np.array([x_h + sx * 1 * MM, back + RLN_R + 1.5 * MM, bottom + 2 * MM]),
-                np.array([c[0] + sx * 5 * MM, back + 5 * MM, z0 + 2 * MM])]
+        bif = b.body.extreme("Right common carotid artery", (0, 0, -1))
+        x_h = bif[0] + sx * 6 * MM
+        A0 = b.body.V(sca)
+        A = A0[np.abs(A0[:, 0] - x_h) < 2 * MM]
+        front, back, top = A[:, 1].min(), A[:, 1].max(), A[:, 2].max()
+        bottom = A0[np.abs(A0[:, 0] - x_h) < 4 * MM][:, 2].min()
+        z_b = bottom - RLN_R - 1.5 * MM
+        mid_z = (top + A[:, 2].min()) / 2
+        flat = [np.array([x_h, y, z_b]) for y in np.arange(front - 2 * MM, back + 2 * MM + 1e-9, 2.5 * MM)]
+        hook = ([np.array([x_h - sx * 1 * MM, front - RLN_R - 1.5 * MM, mid_z + 1 * MM]),
+                 np.array([x_h, front - RLN_R - 1.5 * MM, z_b + 1.5 * MM])] + flat +
+                [np.array([x_h, back + RLN_R + 1.5 * MM, z_b + 1.5 * MM]),
+                 np.array([x_h + sx * 1 * MM, back + RLN_R + 1.5 * MM, mid_z]),
+                 np.array([c[0] - sx * 3 * MM, c[1] + rv + RLN_R + 2.0 * MM, top + 4 * MM])])
     else:
         # Where the vagus leaves the arch's underside (first slab below it).
         z0 = 1.366
@@ -391,7 +416,9 @@ def recurrent_laryngeal(b: Builder, side: str) -> None:
                 np.array([node[0] - sx * 8 * MM, node[1] + 16 * MM, under]),
                 np.array([c[0] - sx * 6 * MM, 14 * MM, 1.385])]
     ctrl = [p0, p1] + hook + laryngeal_entry(b, side)
-    b.vessel(part, "nerve", ctrl, RLN_R, allow, end_taper=0.005)
+    # The right hook is tight (≈ 10 mm round an artery 6–10 mm thick): relaxed
+    # with control points every 3 mm so it keeps its shape.
+    b.vessel(part, "nerve", ctrl, RLN_R, allow, end_taper=0.005, spacing=0.006 if side == "l" else 0.003)
     b.add(part)
 
 

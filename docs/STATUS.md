@@ -545,3 +545,25 @@ All verified by `npm run e2e:smoke` against a production build.
   course term to the maxillary nerve, or split that mesh). Builder:
   `--skip <regex>` leaves structures out but still exports (the priority-1
   GLB is rebuilt with the priority-2 ones skipped until they are ready).
+- **2026-10-07 · review fixes to priority 1** (a second session measured
+  the shipped paths against the brief): (1) the **right recurrent laryngeal
+  nerve** passed round the subclavian artery's medial end beside the
+  brachiocephalic bifurcation, with artery tissue above and below it; it
+  now leaves the vagus above the artery and hooks round its first part 6 mm
+  lateral to the bifurcation — in front, flat under the whole artery,
+  behind — then medially behind the vagus to the groove (may sink ≤ 5 mm
+  into the lung apex and its apical vessels, which rise round the artery
+  with no cervical pleura; relaxed with 3 mm control points to keep the
+  tight hook). Check (the reviewer's): the artery lies directly above all of
+  its lowest 15 % of points and below none, its underside 2.3 mm above the
+  lowest point; the left nerve passes the same check under the arch. (2) The
+  **anal canal** started on the sphincter's axis 3 mm short of the rectum;
+  it now starts inside the rectum's lower end (8 mm in front of that axis;
+  1 mm into the wall and 2.5 mm up, so its start cap stays inside) and
+  bends back into it (may press ≤ 1.5 mm into the external
+  sphincter's front rim); the internal sphincter ends 14.5 mm below the
+  ring's centre as before. Rebuilt with `--skip` for the unfinished
+  priority-2 structures: only these three rows of the clearance report
+  changed. Audit: unchanged (only the supraclavicular finding). Review shots
+  retaken for both. `summaryNotes.json` untouched (the other session
+  regenerates it).

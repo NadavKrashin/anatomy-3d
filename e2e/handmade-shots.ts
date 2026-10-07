@@ -49,6 +49,7 @@ const CHEST: System[] = [
 ];
 const BELLY: System[] = ["Muscular", "Skeletal", "Respiratory", "Other"];
 const PERINEUM: System[] = ["Digestive", "Urinary", "Other"];
+const ANAL: System[] = ["Muscular", "Urinary", "Reproductive", "Other"];
 
 const SHOTS_LIST: Shot[] = [
   { id: "phrenic-nerve-left", hide: CHEST },
@@ -112,12 +113,9 @@ const SHOTS_LIST: Shot[] = [
     tilt: -150,
     isolate: true,
   },
-  { id: "anal-canal", hide: ["Urinary", "Reproductive", "Other"], turn: 260 },
-  {
-    id: "internal-anal-sphincter",
-    hide: ["Urinary", "Reproductive", "Other"],
-    turn: 260,
-  },
+  // Muscles hidden: the gluteal muscles would hide the rectum it continues.
+  { id: "anal-canal", hide: ANAL, turn: 260 },
+  { id: "internal-anal-sphincter", hide: ANAL, turn: 260 },
   // Female body
   {
     id: "perineal-body",

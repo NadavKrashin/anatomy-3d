@@ -5,7 +5,7 @@
     "tissue": "digestive",
     "region": "pelvis",
     "pack": "handmade",
-    "vertices": 322,
+    "vertices": 382,
     "source": "Handmade"
   },
   {
@@ -184,7 +184,7 @@
     "tissue": "muscle",
     "region": "pelvis",
     "pack": "handmade",
-    "vertices": 576,
+    "vertices": 720,
     "source": "Handmade"
   },
   {
@@ -327,7 +327,7 @@
     "tissue": "nerve",
     "region": "neck",
     "pack": "handmade",
-    "vertices": 542,
+    "vertices": 572,
     "source": "Handmade"
   },
   {

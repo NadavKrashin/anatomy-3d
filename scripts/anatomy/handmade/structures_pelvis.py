@@ -294,11 +294,13 @@ def anal_canal(b: Builder) -> None:
     Anal canal: from the anorectal junction (the lower end of Z-Anatomy's
     "Sigmoid colon", shown as the Rectum) down and back to the anus, inside
     the external anal sphincter. The model's sphincter is a ring tilted 45°
-    whose axis points down and back; the canal follows that axis through
-    the ring's centre (starting 8 mm above it, where it meets the rectum's
-    lower end, and 30 mm long). The ring is small (inner radius ≈ 6 mm), so
+    whose axis points down and back; the canal starts from the rectum's lower
+    end (which lies 8 mm in front of that axis, just above the ring), bends
+    back into the axis and follows it through the ring's centre (≈ 35 mm
+    long). The ring is small (inner radius ≈ 6 mm), so
     the canal is ≈ 11 mm wide. Internal anal sphincter: a 2.5 mm cuff, the
-    thickened circular muscle, round the canal's upper three quarters, inside
+    thickened circular muscle, round the canal down to 14.5 mm below the ring's
+    centre (≈ 1 cm above the anus), inside
     the external sphincter (pressing up to 2 mm into it, reported).
     """
     E = np.vstack([b.body.V("External anal sphincter.l"), b.body.V("External anal sphincter.r")])
@@ -315,16 +317,28 @@ def anal_canal(b: Builder) -> None:
     # sphincter's cuff lies against the external one, sinking at most 2 mm.
     r_canal = min(7.5 * MM, inner - 1.0 * MM)
     print(f"anal canal: sphincter ring inner radius {inner * 1000:.1f} mm → canal Ø {2 * r_canal * 1000:.1f} mm")
-    top, bottom = C - 8 * MM * d, C + 22 * MM * d
-    path = catmull_rom([top, C, bottom], step=0.002)
+    # Anorectal junction: the canal starts from the rectum's lower end — its
+    # wall's nearest point to the canal's axis 8 mm above the ring (on the
+    # midline), 1 mm into the wall and 2.5 mm up so the two overlap and its
+    # start cap stays inside the rectum — and bends back into the
+    # ring's axis 3 mm above its centre (the anorectal flexure); 22 mm below
+    # the centre it ends at the anus.
+    loc, normal, _ = b.body.nearest("Sigmoid colon", C - 8 * MM * d)
+    junction = np.array([0.0, loc[1], loc[2] + 2.5 * MM]) - unit(normal) * 1.0 * MM  # its start cap inside the rectum
+    bottom = C + 22 * MM * d
+    path = catmull_rom([junction, C - 3 * MM * d, C, bottom], step=0.002)
     floor = FLOOR + (EAS, NODES, r"Gluteus maximus muscle\..", r"Anococcygeal .*")
     canal = Part("Anal canal", "digestive", "digestive", "pelvis", family=("Internal anal sphincter",))
     from shapes import tube, taper  # noqa: PLC0415
 
     b.solid(canal, "canal", tube(path, taper(path, r_canal, end=0.006, tip=0.7), 20),
-            Allow(start=("Sigmoid colon",), touch=floor, zone=0.010))
+            # (where it bends out of the rectum it crosses the external
+            # sphincter's front rim: may press into it, at most 1.5 mm)
+            Allow(start=("Sigmoid colon",), touch=floor, zone=0.010, squeeze=(EAS,), depth=1.5 * MM))
     b.add(canal)
-    upper = path[: int(len(path) * 0.75)]
+    # The internal sphincter: from the junction to 14.5 mm below the ring's
+    # centre (it ends about 1 cm above the anus).
+    upper = path[(path - C) @ d <= 14.5 * MM]
     ias = Part("Internal anal sphincter", "muscular", "muscle", "pelvis", family=("Anal canal",))
     b.solid(ias, "cuff", sleeve(upper, r_canal + 0.1 * MM, r_canal + ias_t, segments=24),
             Allow(start=("Sigmoid colon",), touch=floor, zone=0.010, squeeze=(EAS, r"Pubo-analis muscle\.."),

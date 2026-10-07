@@ -2,7 +2,7 @@ structure                                         length  inside    gap  worst /
 Phrenic nerve.l                                     464mm   0.00mm  0.63mm  Aortic arch (trunk at (31, -3, 1384)) / Muscular branches of ansa cervicalis.l, Inferior root of ansa cervicalis.l, Superior root of ansa cervicalis.l, Scalenus anterior muscle.l  [sinks 4.1 mm into Superior lobe of left lung]
 Phrenic nerve.r                                     369mm   0.00mm  0.63mm  Superior phrenic arteries (trunk at (-33, -19, 1259)) / Muscular branches of ansa cervicalis.r, Scalenus medius muscle.r, Scalenus anterior muscle.r, Right common carotid artery  [sinks 3.9 mm into Superior lobe of right lung]
 Left recurrent laryngeal nerve                      155mm   0.00mm  0.69mm  Aortic arch (nerve at (9, 15, 1374)) / Aortic arch, Thoracic duct, Superior lobe of left lung, Cricoid cartilage  [sinks 2.4 mm into Trachea]
-Right recurrent laryngeal nerve                     103mm   0.00mm  0.89mm  Inferior parathyroid gland.r (nerve at (-12, 0, 1461)) / Inferior parathyroid gland.r, Brachiocephalic trunk, Trachea, Right common carotid artery  [sinks 1.4 mm into Thyroid gland]
+Right recurrent laryngeal nerve                     111mm   0.00mm  0.95mm  Trachea (nerve at (-11, -3, 1451)) / Trachea, Right subclavian artery, Inferior parathyroid gland.r, Inferior pharyngeal constrictor.r  [sinks 4.1 mm into Superior lobe of right lung]
 Superior laryngeal nerve.l                           34mm   0.00mm  0.66mm  Internal jugular vein.l (trunk at (26, -2, 1520)) / Internal jugular vein.l, Longus capitis muscle.l, Hyoid bone, Longus colli muscle.l
 Internal branch of superior laryngeal nerve.l        24mm   0.00mm  0.68mm  Longus capitis muscle.l (branch at (22, -1, 1503)) / Longus capitis muscle.l, Internal jugular vein.l, Inferior pharyngeal constrictor.l, Quadrangular membrane.l
 External branch of superior laryngeal nerve.l        63mm   0.00mm  0.77mm  Longus capitis muscle.l (branch at (22, -1, 1502)) / Inferior pharyngeal constrictor.l, Longus capitis muscle.l, Internal jugular vein.l, Vagus nerve (X).l  [sinks 1.3 mm into Thyroid gland]
@@ -49,7 +49,7 @@ Ischiocavernosus muscle.l                            55mm   0.00mm  1.63mm  Grac
 Ischiocavernosus muscle (female).l                   53mm   0.00mm  1.73mm  Gracilis muscle.l (band at (15, -5, 806)) / Gracilis muscle.l, Hip bone.l, Semimembranosus muscle.l
 Ischiocavernosus muscle.r                            57mm   0.00mm  1.71mm  Gracilis muscle.r (band at (-15, -6, 802)) / Corpus cavernosum of penis, Gracilis muscle.r, Corpus spongiosum of penis, Semimembranosus muscle.r
 Ischiocavernosus muscle (female).r                   52mm   0.00mm  1.79mm  Gracilis muscle.r (band at (-15, -5, 806)) / Gracilis muscle.r, Hip bone.r, Semimembranosus muscle.r
-Anal canal                                            0mm   0.00mm 1000.00mm   / External anal sphincter.r, External anal sphincter.l, Pararectal nodes, Pubo-analis muscle.l
-Internal anal sphincter                               0mm   0.00mm 1000.00mm   / Pararectal nodes  [sinks 1.7 mm into External anal sphincter.r]
+Anal canal                                            0mm   0.00mm  2.96mm  Sigmoid colon (canal at (2, 52, 808)) / Pararectal nodes, Pubo-analis muscle.l, Pubo-analis muscle.r, Sigmoid colon  [sinks 0.2 mm into External anal sphincter.r]
+Internal anal sphincter                               0mm   0.00mm  0.53mm  Sigmoid colon (cuff at (2, 50, 806)) / Pararectal nodes, Sigmoid colon, Vagina, Nerve to levator ani and coccygeus.l  [sinks 1.9 mm into External anal sphincter.r]
 
-52 meshes, 54560 triangles
+52 meshes, 55028 triangles

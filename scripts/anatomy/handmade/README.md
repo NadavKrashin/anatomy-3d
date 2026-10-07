@@ -122,6 +122,9 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
   — only where the model leaves no room:
   - phrenic nerve into the lungs (≤ 5 mm): the model's lungs lie directly on
     the heart, with no pleura or pericardium between;
+  - right recurrent laryngeal nerve into the right lung apex and its apical
+    vessels (≤ 5 mm): the apex rises round the subclavian artery (no
+    cervical pleura), so the hook under the artery lies in its surface;
   - left recurrent laryngeal nerve into the trachea / oesophagus / left main
     bronchus wall (≤ 3 mm) and both into the thyroid lobe's back (≤ 2.5 mm):
     the arch lies on the trachea's left side;
@@ -133,7 +136,8 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
   - cervical plexus branches through the platysma (≤ 1.5 mm); ansa into the
     SCM (≤ 1.5 mm, the IJV passes through it here);
   - male external urethral sphincter into the prostate apex / bulb / crura
-    (≤ 2 mm); internal anal sphincter into the external one (≤ 2 mm);
+    (≤ 2 mm); internal anal sphincter into the external one (≤ 2 mm), the
+    anal canal into its front rim where it bends out of the rectum (≤ 1.5 mm);
     male bulbospongiosus into the crura where they abut the bulb (≤ 1 mm).
 
 ## Model quirks met (Z-Anatomy and the fitted female organs)
@@ -141,9 +145,20 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
 - The left vagus runs **through** the aortic arch (z 1372–1396 mm): the left
   recurrent nerve starts where it leaves the arch's underside and hooks
   under the arch beside the ligamentum arteriosum node.
-- The right vagus lies medial to the subclavian artery's first part: the
-  right recurrent nerve leaves it laterally and hooks under and behind the
-  artery.
+- The right vagus lies just **behind** the subclavian artery's first part
+  and reaches above it (textbook: it crosses in front): the right recurrent
+  nerve leaves it above the artery and hooks round it — in front, under,
+  behind — 6 mm lateral to the brachiocephalic bifurcation, flat under the
+  whole artery (radius + 1.5 mm below its lowest point within ± 4 mm: the
+  underside slopes down medially), then medially behind the vagus to the
+  groove. Further laterally the lung apex fills the space under the artery.
+  Fixed 2026-10-07 after review: it used to pass round the artery's medial
+  end beside the bifurcation, with artery above and below it. Check: the
+  artery lies directly above all of its lowest 15 % of points and below none
+  (as for the left nerve under the arch); its underside is 2.3 mm above the
+  lowest point.
+- Its tight hook (≈ 10 mm) is relaxed with control points every 3 mm (6 mm
+  elsewhere), so the relaxation keeps its shape.
 - The common carotid encloses the front of scalenus anterior at z 1470–1490:
   the phrenic nerve's first 2 cm run just lateral to the muscle.
 - The superior thyroid vein starts far laterally: the artery takes the
@@ -153,7 +168,12 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
   spine, so the cisterna chyli is 20 × 5 × 4 mm (textbook 8 × 6 mm across).
 - The external anal sphincter is a small ring (inner radius ≈ 6 mm) tilted
   45°: the anal canal follows its axis and is ≈ 11 mm wide (textbook
-  15–20 mm).
+  15–20 mm). The rectum's ("Sigmoid colon") lower end lies 8 mm in front of
+  that axis, just above the ring: the canal starts inside the rectum's lower
+  end (1 mm into its wall and 2.5 mm up, so its start cap stays inside) and
+  bends back into the axis (the anorectal flexure). Fixed
+  2026-10-07 after review: it used to start on the axis, 3 mm short of the
+  rectum, leaving a visible gap.
 - The Atlas vagina sits far back in our male pelvis: the female urethra's
   course (used for the female sphincter; the urethra itself is item 14) is
   nearly vertical in front of it.
