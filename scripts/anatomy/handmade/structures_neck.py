@@ -590,7 +590,7 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
     # The ansa lies on (in) the carotid sheath and its twigs run between the
     # infrahyoid muscles: it may lie against all of them (never inside).
     sheath = (NODES, ica, cca, ijv, rf"(Sterno(hyoid|thyroid)|Omohyoid|Thyrohyoid) muscle\.{side}",
-              rf"Posterior belly of digastric muscle\.{side}")
+              rf"Posterior belly of digastric muscle\.{side}", rf"Stylohyoid (ligament|muscle)\.{side}")
     soft = Allow(touch=sheath, squeeze=(scm,), depth=1.5 * MM)
 
     # Superior root: from XII where it turns forward (its slab at the
@@ -603,8 +603,17 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
     for z in (1.512, 1.495):
         x = b.body.centre_at(ica, 2, z, 0.003)[0]
         sup_pts.append(b.free(front_of(b, ica, x, z, R + 1.5 * MM), R, allow=Allow(touch=(ica, NODES)), search=0.004))
-    x = b.body.centre_at(cca, 2, 1.478, 0.003)[0]
-    sup_pts.append(b.free(front_of(b, cca, x, 1.478, R + 1.5 * MM), R, allow=Allow(touch=(cca, NODES)), search=0.004))
+    # In front of the carotid bifurcation (the model's ICA, ECA, CCA and IJV
+    # overlap there), then of the common carotid.
+    eca = f"External carotid artery.{side}"
+    for z in (1.487, 1.478):
+        x = b.body.centre_at(cca, 2, z, 0.004)[0]
+        # The most anterior of the vessels there (ray from the front).
+        hits = [b.body.ray(m, (x, -0.15, z), (0, 1, 0), 0.3) for m in (cca, ica, eca, ijv)]
+        front = min((h for h in hits if h is not None), key=lambda h: h[1])
+        sup_pts.append(b.free(front - np.array([0, R + 2.0 * MM, 0]), R,
+                              allow=Allow(touch=(cca, ica, ijv, eca, NODES)),
+                              search=0.005))
     # Loop apex at the cricoid level, in front of the IJV and CCA.
     z_loop = b.body.V("Cricoid cartilage")[:, 2].min() + 3 * MM
     xi = b.body.centre_at(ijv, 2, z_loop, 0.003)[0]
@@ -651,7 +660,9 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
         c = b.body.centre_at(muscle, 2, z, 0.002)
         back = b.body.ray(muscle, (c[0], 0.15, z), (0, -1, 0), 0.3)
         b.vessel(mus, muscle, [L, (L + back) / 2 + np.array([0, 1.0, 0]) * MM, back + np.array([0, R, 0])], 0.4 * MM,
-                 Allow(start=family, end=(muscle,), zone=0.004, end_zone=0.003, touch=sheath,
+                 # (the sternohyoid twig passes the sternothyroid's lateral edge on the way)
+                 Allow(start=family, end=(muscle, rf"Sternothyroid muscle\.{side}"), zone=0.004, end_zone=0.008,
+                       touch=sheath,
                        squeeze=(scm,), depth=1.5 * MM), end_taper=0.004)
     # Inferior belly of omohyoid: along the superior belly's course down and out.
     # Inferior belly: the branch follows the muscle down to its intermediate
@@ -663,7 +674,9 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
     back = b.body.ray(f"Omohyoid muscle.{side}", (tgt[0] - sx * 2 * MM, 0.15, tgt[2]), (0, -1, 0), 0.3)
     tgt = back if back is not None else tgt
     b.vessel(mus, "inferior belly of omohyoid", [L, (L + tgt) / 2 + np.array([0, 1.5, 0]) * MM, tgt + np.array([0, 1.0, 0]) * MM],
-             0.4 * MM, Allow(start=family, end=(f"Omohyoid muscle.{side}",), zone=0.004, end_zone=0.003,
+             # (the inferior belly lies on scalenus anterior where the twig reaches it)
+             0.4 * MM, Allow(start=family, end=(f"Omohyoid muscle.{side}", rf"Scalenus anterior muscle\.{side}"),
+                             zone=0.004, end_zone=0.005,
                              touch=sheath + (rf"Scalenus anterior muscle\.{side}",), squeeze=(scm,), depth=1.5 * MM),
              end_taper=0.004)
     b.add(mus)
@@ -712,9 +725,15 @@ def cervical_cutaneous(b: Builder, side: str) -> None:
     pb = posterior_border(erb_z)
     # Emerging point: 2.5 mm behind the border (from under it), then round it.
     erb = pb + np.array([sx * 1.0, 2.5, 0]) * MM
+    # Under the platysma (may lie against it; it lies on the SCM in places).
     allow = Allow(start=(scm, r"Superficial lateral cervical nodes.*", rf"Levator scapulae\.{side}",
                          rf"Splenius .*\.{side}", rf"Scalenus (medius|posterior) muscle\.{side}"),
-                  touch=(scm, NODES, ejv), zone=0.006, end_zone=0.006)
+                  touch=(scm, NODES, ejv, r"Platysma.*"), zone=0.006, end_zone=0.006,
+                  # where the platysma lies directly on the SCM the nerves pierce it
+                  squeeze=(r"Platysma.*",), depth=1.5 * MM)
+    # The four emerge together at the nerve point: they may touch each other.
+    family = tuple(f"{n}.{side}" for n in ("Lesser occipital nerve", "Great auricular nerve",
+                                            "Transverse cervical nerve", "Supraclavicular nerves"))
     gap = 0.75 * MM + 1.0 * MM  # 1 mm outside the SCM, under the platysma
 
     def surf(p, mesh=scm, g=gap):
@@ -727,7 +746,7 @@ def cervical_cutaneous(b: Builder, side: str) -> None:
     scalp = mastoid + np.array([sx * -2, 12, 22]) * MM
     scalp = on_surface(b, f"Occipital bone" if "Occipital bone" in b.body.meshes else f"Temporal bone.{side}",
                        scalp, 2.0 * MM, toward=(sx * 0.6, 0.5, 0.3))
-    part = Part(f"Lesser occipital nerve.{side}", "nervous", "nerve", "neck")
+    part = Part(f"Lesser occipital nerve.{side}", "nervous", "nerve", "neck", family=family)
     b.vessel(part, "nerve", lo_pts + [scalp], 0.75 * MM,
              Allow(start=allow.start, end=(r"Occipital bone", rf"Temporal bone\.{side}", r"Parietal bone.*",
                                            rf"Splenius capitis muscle\.{side}", r".*occipital.*", r"Mastoid.*"),
@@ -735,26 +754,48 @@ def cervical_cutaneous(b: Builder, side: str) -> None:
                    zone=0.006, end_zone=0.010), end_taper=0.008)
     b.add(part)
 
-    # Great auricular: across the SCM towards the ear lobe, behind the EJV.
-    lobe = mastoid + np.array([-sx * 4, -14, 4]) * MM
+    # Great auricular: obliquely up across the SCM's lateral surface, behind
+    # the EJV, towards the angle of the mandible and the ear lobe. The model
+    # has no auricle: the lobe is taken 22 mm below the tympanic membrane, at
+    # the parotid's lateral surface. Splits at the level of the mandible's
+    # angle: anterior branch over the parotid, posterior over the mastoid.
+    M = b.body.V("Mandible")
+    M = M[sx * M[:, 0] > 0.02]
+    gonion = M[np.argmax(0.3 * sx * M[:, 0] + M[:, 1] - M[:, 2])]
+    tm = b.body.V(f"Tympanic membrane.{side}").mean(0)
+    parotid = f"Parotid gland.{side}"
+    Pg = b.body.V(parotid)
+    lobe = np.array([Pg[np.argmax(sx * Pg[:, 0]), 0], tm[1], tm[2] - 22 * MM])
+
+    def lateral_on(mesh, y, z, g):
+        hit = b.body.ray(mesh, (sx * 0.15, y, z), (-sx, 0, 0), 0.3)
+        if hit is None:
+            return on_surface(b, mesh, (sx * 0.06, y, z), g)
+        return hit + np.array([sx * g, 0, 0])
+
+    split_z = gonion[2]
+    split_y = (gonion[1] + lobe[1]) / 2 + 7 * MM  # behind the EJV
     pts = [erb]
-    for f in (0.3, 0.6, 0.85):
-        q = erb + (lobe - erb) * f
-        pts.append(surf(q + np.array([sx * 6, 0, 0]) * MM))
-    part = Part(f"Great auricular nerve.{side}", "nervous", "nerve", "neck")
+    for f in (0.3, 0.6):
+        y = erb[1] + (split_y - erb[1]) * f
+        z = erb[2] + (split_z - erb[2]) * f
+        pts.append(lateral_on(scm, y, z, gap))
+    pts.append(lateral_on(scm, split_y, split_z, gap))
+    family = tuple(f"{n}.{side}" for n in ("Lesser occipital nerve", "Great auricular nerve",
+                                            "Transverse cervical nerve", "Supraclavicular nerves"))
+    part = Part(f"Great auricular nerve.{side}", "nervous", "nerve", "neck", family=family)
     trunk = b.vessel(part, "trunk", pts, 0.75 * MM, allow, end_taper=0.0)
     split = trunk.path[-1]
-    parotid = f"Parotid gland.{side}"
-    ant_end = on_surface(b, parotid, split + np.array([sx * 2, -12, 10]) * MM, 1.4 * MM)
-    post_end = surf(split + np.array([sx * 2, 9, 12]) * MM, f"Temporal bone.{side}", 1.6 * MM)
+    ant_end = lateral_on(parotid, (lobe[1] + gonion[1]) / 2 - 6 * MM, lobe[2] - 2 * MM, 1.4 * MM)
+    post_end = lateral_on(scm, lobe[1] + 10 * MM, lobe[2] + 2 * MM, gap)
     end_ok = (parotid, rf"Temporal bone\.{side}", scm, r"Mastoid.*", r"(Accessory )?[Pp]arotid.*", NODES,
-              r"Auricular.*", r".*auricular.*")
+              r".*auricular.*", r"Platysma.*")
     b.vessel(part, "anterior branch", [split, (split + ant_end) / 2 + np.array([sx * 1.5, 0, 0]) * MM, ant_end],
-             0.5 * MM, Allow(start=(scm,), end=end_ok, touch=(parotid, scm, NODES), zone=0.004, end_zone=0.006),
-             end_taper=0.006)
+             0.5 * MM, Allow(start=(scm,), end=end_ok, touch=(parotid, scm, NODES, r"Platysma.*", ejv),
+                             zone=0.004, end_zone=0.006), end_taper=0.006)
     b.vessel(part, "posterior branch", [split, (split + post_end) / 2 + np.array([sx * 1.5, 0, 0]) * MM, post_end],
-             0.5 * MM, Allow(start=(scm,), end=end_ok, touch=(scm, NODES), zone=0.004, end_zone=0.006),
-             end_taper=0.006)
+             0.5 * MM, Allow(start=(scm,), end=end_ok, touch=(scm, NODES, r"Platysma.*", ejv), zone=0.004,
+                             end_zone=0.006), end_taper=0.006)
     b.add(part)
 
     # Transverse cervical: horizontally forward across the SCM, deep to the
@@ -763,15 +804,17 @@ def cervical_cutaneous(b: Builder, side: str) -> None:
     for f in (0.25, 0.55, 0.85):
         q = erb + np.array([-sx * 22 * f, -40 * f, -3 * f]) * MM
         fwd.append(surf(q + np.array([sx * 8, -4, 0]) * MM, g=0.75 * MM + 0.8 * MM))
-    part = Part(f"Transverse cervical nerve.{side}", "nervous", "nerve", "neck")
-    tr = b.vessel(part, "trunk", [erb] + fwd, 0.75 * MM, Allow(start=allow.start, touch=allow.touch, zone=0.006),
+    part = Part(f"Transverse cervical nerve.{side}", "nervous", "nerve", "neck", family=family)
+    tr = b.vessel(part, "trunk", [erb] + fwd, 0.75 * MM,
+                  Allow(start=allow.start, touch=allow.touch, zone=0.006, squeeze=allow.squeeze, depth=allow.depth),
                   end_taper=0.0)
     E = tr.path[-1]
     front_end = (r"Sternohyoid muscle.*", r"Omohyoid muscle.*", r"Platysma.*", scm, NODES, r"Anterior jugular vein.*")
     for label, dz in (("upper branch", 10), ("lower branch", -10)):
         q = E + np.array([-sx * 8, -6, dz]) * MM
         b.vessel(part, label, [E, (E + q) / 2, q], 0.5 * MM,
-                 Allow(start=(scm,), end=front_end, touch=(scm, NODES, r"Platysma.*"), zone=0.004, end_zone=0.006),
+                 Allow(start=(scm,), end=front_end, touch=(scm, NODES, r"Platysma.*"), zone=0.004, end_zone=0.006,
+                       squeeze=allow.squeeze, depth=allow.depth),
                  end_taper=0.006)
     b.add(part)
 
@@ -780,13 +823,13 @@ def cervical_cutaneous(b: Builder, side: str) -> None:
     clav = f"Clavicle.{side}"
     C = b.body.V(clav)
     xs = np.sort(sx * C[:, 0])
-    part = Part(f"Supraclavicular nerves.{side}", "nervous", "nerve", "neck")
-    stem_end = erb + np.array([sx * 3, -2, -14]) * MM
+    part = Part(f"Supraclavicular nerves.{side}", "nervous", "nerve", "neck", family=family)
+    stem_end = b.free(erb + np.array([sx * 4, 1, -14]) * MM, 0.6 * MM, allow=Allow(touch=(scm, NODES)), search=0.005)
     st = b.vessel(part, "stem", [erb, erb + np.array([sx * 1.5, 0, -7]) * MM, stem_end], 0.6 * MM,
                   Allow(start=allow.start, touch=allow.touch + (r"Omohyoid.*", r"Scalenus.*"), zone=0.006),
                   end_taper=0.0)
     S0 = st.path[-1]
-    for label, frac in (("medial", 0.08), ("intermediate", 0.45), ("lateral", 0.85)):
+    for label, frac in (("medial", 0.24), ("intermediate", 0.5), ("lateral", 0.85)):
         xc = sx * xs[int(frac * (len(xs) - 1))]
         top = C[np.abs(C[:, 0] - xc) < 3 * MM]
         over = top[np.argmax(top[:, 2])] + np.array([0, -2, 2.5]) * MM
@@ -798,10 +841,17 @@ def cervical_cutaneous(b: Builder, side: str) -> None:
         hits = [b.body.ray(m, below + np.array([0, -0.10, 0]), (0, 1, 0), 0.25) for m in meshes]
         hits = [h for h in hits if h is not None] + ([target] if target is not None else [])
         end = (min(hits, key=lambda h: h[1]) - np.array([0, 1.4, 0]) * MM) if hits else below
-        b.vessel(part, label, [S0, (S0 + over) / 2, over, end], 0.5 * MM,
+        # In front of the clavicle at its mid-height, 2 mm off it.
+        cz = top[:, 2].mean()
+        fr = b.body.ray(clav, (xc, -0.15, cz), (0, 1, 0), 0.3)
+        front_pt = (fr - np.array([0, 2.0, 0]) * MM) if fr is not None else (over + end) / 2
+        # First outward and forward, superficial to the deep vessels (EJV, IJV).
+        out1 = (S0 + over) / 2 + np.array([sx * 6, -6, 0]) * MM
+        b.vessel(part, label, [S0, out1, over, front_pt, end], 0.5 * MM,
                  Allow(start=(scm, r"Scalenus.*", r"Omohyoid.*"), end=(r".*[Pp]ectoralis.*", r".*[Dd]eltoid.*", clav,
                                                                        r"Platysma.*"),
-                       touch=(clav, NODES, r"Platysma.*", r"Trapezius.*", r".*[Pp]ectoralis.*", r".*[Dd]eltoid.*"),
+                       touch=(clav, NODES, r"Platysma.*", r"Trapezius.*", r".*[Pp]ectoralis.*", r".*[Dd]eltoid.*", ejv,
+                              scm), squeeze=(r"Platysma.*",), depth=1.5 * MM,
                        zone=0.004, end_zone=0.006), end_taper=0.008)
     b.add(part)
 

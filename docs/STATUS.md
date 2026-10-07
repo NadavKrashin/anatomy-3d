@@ -491,7 +491,4 @@ All verified by `npm run e2e:smoke` against a production build.
   machinery (per-mesh BVH + generalized winding number, so open and nested
   meshes are handled; relaxation of spline control points; explicit,
   reported allowances where the model leaves no room), geometry (spline,
-  parallel-transport tubes). Built and clearance-clean so far: phrenic
-  nerves, recurrent laryngeal nerves, superior laryngeal nerves and
-  branches, superior thyroid and superior laryngeal arteries. Not yet in the
-  app (no GLB/manifest wired in).
+  parallel-transport tubes). Built and clearance-clean so far: phrenic nerves, recurrent and superior laryngeal nerves, superior thyroid and superior laryngeal arteries, ansa cervicalis, the four cutaneous branches of the cervical plexus, thoracic duct and cisterna chyli, cystic artery, short gastric arteries. Left: perineal muscles, anal canal. Not yet in the app (no GLB/manifest wired in).

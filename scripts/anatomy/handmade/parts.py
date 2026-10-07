@@ -71,10 +71,39 @@ class Builder:
             P = relax(self.body, P, r, part.sex, allow, clearance=clearance, pin=pin,
                       own=part.family + (part.name,), spacing=spacing / 2, iterations=60)
             r = taper(P, radius, start_taper, end_taper, tip)
+        if do_relax:
+            r = self.fit_radius(P, r, part, allow)
         V, F, s = tube(P, r, segments)
         piece = Piece(label, V, F, s, allow, P, r)
         part.pieces.append(piece)
         return piece
+
+    def fit_radius(self, P: np.ndarray, r: np.ndarray, part: Part, allow: Allow) -> np.ndarray:
+        """
+        Where neighbours leave less room than the nominal radius (this model is
+        crowded: the neck's vessels overlap), the tube narrows locally — to
+        0.6 mm short of a mesh it must not touch, 0.15 mm short of one it may
+        touch — never below half its radius, smoothly along the course.
+        """
+        from landmarks import _zones  # noqa: PLC0415
+        from shapes import arc_length, smooth  # noqa: PLC0415
+
+        zones = allow.zones(arc_length(P))
+        sets = obstacle_sets(self.body, P, part.sex, allow, part.family + (part.name,))
+        limit = np.full(len(P), np.inf)
+        for z in (0, 1, 2, 3):
+            sel = np.flatnonzero(zones == z)
+            if len(sel):
+                for i, hits in zip(sel, sets[z][0].hits(P[sel], 0.005)):
+                    for m, _, _, sd in hits:
+                        limit[i] = min(limit[i], sd - (0.00015 if allow.touches(m) else 0.0006))
+        if np.isinf(limit).all():
+            return r
+        lim = np.minimum.reduce([np.roll(limit, k) for k in (-1, 0, 1)])
+        lim[0], lim[-1] = limit[0], limit[-1]
+        out = np.minimum(r, smooth(np.minimum(lim, r), 2, fixed=0))
+        out = np.minimum(out, limit)
+        return np.maximum(out, 0.5 * r)
 
     def free(self, p, radius: float, sex=None, allow: Allow = Allow(), search: float = 0.004,
              own=(), clearance: float = 0.0010) -> np.ndarray:
