@@ -533,3 +533,11 @@ All verified by `npm run e2e:smoke` against a production build.
   (`lib/anatomy/pointer.ts`, unit-tested; R3F already ignores clicks on empty
   space after 2 px, a little more lets a wobbly finger tap on the iPad still
   select). e2e: dragging across the body selects nothing.
+- **2026-10-07 · session 3 (cont.)** — The drag fix: the bug reproduced on
+  the old build (each drag selected the pectoralis major under the pointer);
+  on the fix the new e2e check passes and a real click still selects; verify
+  green (206 tests), CI green. The full `e2e:smoke` could not finish in
+  today's fresh cloud container: a `page.screenshot` times out (60 s) at a
+  random step — also on unchanged `main` (there at the quiz summary) — with
+  only software rendering on 4 CPUs. If it recurs, rerun on another
+  container before suspecting the code.
