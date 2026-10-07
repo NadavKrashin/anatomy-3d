@@ -537,8 +537,11 @@ All verified by `npm run e2e:smoke` against a production build.
   the perineal body (y 30–40 mm, z 806 mm), so the female vestibule built
   for item 13 will be longer than textbook. Head module
   (`structures_head.py`, WIP): posterior auricular arteries and suboccipital
-  nerves clearance-clean; the right lingual artery still touches
-  hyoglossus in the tongue (in progress). Not built: the infra-orbital
+  nerves clearance-clean; lingual arteries too (from the ECA at the hyoid
+  horn's tip, a loop over it, along the horn, deep to hyoglossus, then the
+  deep lingual artery lateral to genioglossus to near the tongue's tip;
+  inside the model's single "Tongue" mesh, which encloses its muscles;
+  ≤ 1.5 mm into hyoglossus/genioglossus where they abut). Not built: the infra-orbital
   nerve (item 16) — Z-Anatomy's "Maxillary nerve" mesh already runs on
   through the orbit floor to the face and fans out there, so it includes
   it; a second mesh would duplicate it (question for the user: alias the

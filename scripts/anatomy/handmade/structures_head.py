@@ -41,44 +41,35 @@ def lingual_artery(b: Builder, side: str) -> None:
     o1 = wall + unit((-sx, -1, 0.6)) * 2.5 * MM
     # Loop: up over the horn's tip, 6 mm above it, 2 mm in front.
     apex = tip + np.array([sx * 2.0, -2.0, 6.0]) * MM
-    # Along the greater horn to hyoglossus' posterior border: radius + 1 mm
-    # above the horn's upper surface and 2 mm medial to its crest (deep to
-    # stylohyoid and the digastric, which reach the horn here), at three
-    # points between them — the nearest spot with room.
+    # Over the middle of the greater horn, on the middle constrictor: radius +
+    # 2.5 mm above the horn's top, above its centre (deep to stylohyoid and
+    # the digastric, which reach the horn here).
     H = b.body.V(hg)
     Hy = b.body.V("Hyoid bone")
     Hy = Hy[sx * Hy[:, 0] > 4 * MM]
     y_hg = H[:, 1].max()
-    over_horn = []
-    for f in (0.3, 0.6, 0.9):
-        y = tip[1] + (y_hg - tip[1]) * f
-        S = Hy[np.abs(Hy[:, 1] - y) < 2 * MM]
-        if len(S):
-            top_ = S[np.argmax(S[:, 2])]
-            q = np.array([top_[0] - sx * 2 * MM, y, top_[2] + R + 1.0 * MM])
-            over_horn.append(b.free(q, R, allow=Allow(touch=(r"Hyoid bone", rf"Stylohyoid (muscle|ligament)\.{side}",
-                                                             r"Posterior belly of digastric.*", hg,
-                                                             rf"Middle pharyngeal constrictor\.{side}", NODES)),
-                                    search=0.003))
-    # Deep to hyoglossus: points on its medial surface (ray from the
-    # midline outwards), radius + 0.8 mm medial to it, along its lower part
-    # (6 mm above its lowest point at that y, clear of the hyoid and mylohyoid) from its posterior border to its
-    # anterior border.
-    ys = np.linspace(H[:, 1].max() - 3 * MM, H[:, 1].min() + 6 * MM, 4)
+    y_mid = (tip[1] + y_hg) / 2
+    S = Hy[np.abs(Hy[:, 1] - y_mid) < 2 * MM]
+    room = Allow(touch=(r"Hyoid bone", rf"Stylohyoid (muscle|ligament)\.{side}", r"Posterior belly of digastric.*", hg,
+                        rf"Middle pharyngeal constrictor\.{side}", rf"Genioglossus muscle\.{side}", "Tongue", NODES))
+    # (each the nearest spot with room)
+    over_horn = [b.free(np.array([S[:, 0].mean(), y_mid, S[:, 2].max() + R + 2.5 * MM]), R, allow=room, search=0.003)
+                 ] if len(S) else []
+    # Deep to hyoglossus, straight from its posterior to its anterior border:
+    # radius + 0.8 mm medial to its medial surface (ray from the midline
+    # outwards), 6 mm above its lowest point there (clear of the hyoid and
+    # mylohyoid).
     deep = []
-    for y in ys:
-        S = H[np.abs(H[:, 1] - y) < 2 * MM]
-        z = S[:, 2].min() + 6 * MM
+    for y in (H[:, 1].max() - 3 * MM, H[:, 1].min() + 6 * MM):
+        Sh = H[np.abs(H[:, 1] - y) < 2 * MM]
+        z = Sh[:, 2].min() + 6 * MM
         hit = b.body.ray(hg, (0.0, y, z), (sx, 0, 0), 0.05)
-        if hit is None:
-            continue
-        # the nearest spot with room between hyoglossus and genioglossus
-        deep.append(b.free(hit - np.array([sx * (R + 0.8 * MM), 0, 0]), R,
-                           allow=Allow(touch=(hg, rf"Genioglossus muscle\.{side}", "Tongue", rf"Middle pharyngeal constrictor\.{side}")),
-                           search=0.003))
+        if hit is not None:
+            deep.append(b.free(hit - np.array([sx * (R + 0.8 * MM), 0, 0]), R, allow=room, search=0.003))
     # Deep lingual artery: forward to near the tongue's tip, lateral to
     # genioglossus (its lateral surface by a ray from the side, + radius +
-    # 0.6 mm), 7 mm above the tongue's under-surface at that y.
+    # 0.6 mm), 10 mm above the tongue's under-surface at that y (above the
+    # sublingual gland, which lies under the tongue).
     T = b.body.V("Tongue")
     gg = f"Genioglossus muscle.{side}"
     y_front = T[:, 1].min()
@@ -86,7 +77,7 @@ def lingual_artery(b: Builder, side: str) -> None:
     deep_lingual = []
     for f in (0.35, 0.65, 0.85):
         y = y_start + (y_front + 12 * MM - y_start) * f
-        z = T[np.abs(T[:, 1] - y) < 2 * MM][:, 2].min() + 7 * MM
+        z = T[np.abs(T[:, 1] - y) < 2 * MM][:, 2].min() + 10 * MM
         hit = b.body.ray(gg, (sx * 0.05, y, z), (-sx, 0, 0), 0.05)
         x = (hit[0] + sx * (0.8 * MM + 0.6 * MM)) if hit is not None else sx * 9 * MM
         deep_lingual.append(np.array([x, y, z]))
@@ -114,7 +105,10 @@ def lingual_artery(b: Builder, side: str) -> None:
     # Within the tongue (the model's tongue is one mesh round its muscles).
     D = trunk.path[-1]
     b.vessel(part, "deep lingual artery", [D] + deep_lingual, 0.8 * MM,
-             Allow(anywhere=("Tongue",), touch=tongue + (NODES,)), end_taper=0.012)
+             # (hyoglossus lies directly on genioglossus up to its anterior
+             # border: ≤ 1.5 mm into either, as the trunk)
+             Allow(anywhere=("Tongue",), touch=tongue + (NODES,),
+                   squeeze=(hg, gg), depth=1.5 * MM), end_taper=0.012)
     b.add(part)
 
 
