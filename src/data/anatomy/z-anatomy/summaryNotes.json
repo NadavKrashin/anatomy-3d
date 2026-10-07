@@ -190,12 +190,37 @@
       }
     ]
   },
+  "anal-canal": {
+    "notes": [
+      {
+        "text": "המקטע הסופי המוביל אל פי הטבעת. הסוגר הפנימי עשוי שריר חלק והחיצוני שריר שלד. הקו המשונן מסמן שינוי חשוב במאפייני הרירית, התחושה, אספקת הדם והניקוז; אין להתייחס לכל התעלה כמקטע אחיד.",
+        "section": "מערכת העיכול",
+        "term": "Anal canal"
+      },
+      {
+        "text": "הקטע הסופי של המעי המוביל לפי הטבעת.",
+        "section": "אגן ופרינאום",
+        "term": "Anal canal"
+      }
+    ],
+    "he": "תעלה אנאלית",
+    "heHeading": "התעלה האנאלית"
+  },
   "anconeus-muscle": {
     "notes": [
       {
         "text": "שריר קטן סמוך למרפק האחורי, המסייע בפשיטה ובייצוב.",
         "section": "השלמות גפה עליונה",
         "term": "Anconeus"
+      }
+    ]
+  },
+  "ansa-cervicalis": {
+    "notes": [
+      {
+        "text": "לולאה עצבית צווארית המפעילה את רוב השרירים התת־היואידיים.",
+        "section": "צוואר",
+        "term": "Ansa cervicalis (Superior Root & Inferior root)"
       }
     ]
   },
@@ -963,6 +988,20 @@
       }
     ]
   },
+  "bulbospongiosus-muscle": {
+    "notes": [
+      {
+        "text": "שריר סביב הפקעת; תפקידו משתנה בין אנטומיה זכרית לנקבית.",
+        "section": "אגן ופרינאום",
+        "term": "Bulbospongiosus m."
+      },
+      {
+        "text": "שריר המכסה את פקעות הפרוזדור ומשתתף בתפקוד הפרינאום.",
+        "section": "אגן ופרינאום",
+        "term": "Bulbospongiosus"
+      }
+    ]
+  },
   "calcaneal-tendon": {
     "notes": [
       {
@@ -1483,6 +1522,15 @@
         "section": "גפה תחתונה",
         "term": "Cuboid - Groove for fibularis longus",
         "shared": true
+      }
+    ]
+  },
+  "cystic-artery": {
+    "notes": [
+      {
+        "text": "העורק המספק את כיס המרה, לרוב ממערכת הכבד הימנית.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Cystic artery"
       }
     ]
   },
@@ -2144,7 +2192,8 @@
       {
         "text": "סוגר פנימי משריר חלק וסוגר חיצוני משריר שלד סביב התעלה האנאלית.",
         "section": "אגן ופרינאום",
-        "term": "External & Internal anal sphincter"
+        "term": "External & Internal anal sphincter",
+        "shared": true
       },
       {
         "text": "הפתח החיצוני של התעלה האנאלית.",
@@ -3111,6 +3160,15 @@
       }
     ]
   },
+  "great-auricular-nerve": {
+    "notes": [
+      {
+        "text": "עצב תחושתי לעור באזור הפרוטיד, זווית הלסת וחלק מהאפרכסת.",
+        "section": "צוואר",
+        "term": "Great auricular nerve"
+      }
+    ]
+  },
   "great-cardiac-vein": {
     "notes": [
       {
@@ -4005,6 +4063,16 @@
       }
     ]
   },
+  "internal-anal-sphincter": {
+    "notes": [
+      {
+        "text": "סוגר פנימי משריר חלק וסוגר חיצוני משריר שלד סביב התעלה האנאלית.",
+        "section": "אגן ופרינאום",
+        "term": "External & Internal anal sphincter",
+        "shared": true
+      }
+    ]
+  },
   "internal-carotid-artery": {
     "notes": [
       {
@@ -4491,6 +4559,20 @@
       }
     ]
   },
+  "ischiocavernosus-muscle": {
+    "notes": [
+      {
+        "text": "שריר המכסה את שוק האיבר הזקפתי ומסייע בשימור הזקפה.",
+        "section": "אגן ופרינאום",
+        "term": "Ischiocavernosus m."
+      },
+      {
+        "text": "שריר המכסה את שוק הדגדגן ומסייע במילוי הזקפתי.",
+        "section": "אגן ופרינאום",
+        "term": "Ischiocavernosus"
+      }
+    ]
+  },
   "isthmus-of-uterine-tube": {
     "notes": [
       {
@@ -4772,6 +4854,15 @@
         "text": "העדשה, מבנה שקוף המשנה את כוח המיקוד באקומודציה.",
         "section": "ראש וצוואר ואיברי החישה",
         "term": "Lens"
+      }
+    ]
+  },
+  "lesser-occipital-nerve": {
+    "notes": [
+      {
+        "text": "עצב עורפי קטן מהמקלעת הצווארית, לעור מאחורי האוזן.",
+        "section": "צוואר",
+        "term": "Lesser occipital nerve"
       }
     ]
   },
@@ -6869,6 +6960,20 @@
     "he": "לוע",
     "heHeading": "הלוע"
   },
+  "phrenic-nerve": {
+    "notes": [
+      {
+        "text": "עצב פרני, בעיקר C3–C5; מספק מוטורית את הסרעפת.",
+        "section": "צוואר",
+        "term": "Phrenic nerve"
+      },
+      {
+        "text": "עצב הסרעפת העובר בחזה קדמית לשורש הריאה.",
+        "section": "בית החזה",
+        "term": "Phrenic Nerve"
+      }
+    ]
+  },
   "piriformis-muscle": {
     "notes": [
       {
@@ -7561,6 +7666,15 @@
       }
     ]
   },
+  "recurrent-laryngeal-nerve": {
+    "notes": [
+      {
+        "text": "ענף של הוואגוס לרוב השרירים הפנימיים של בית הקול ולתחושה מתחת לקפלי הקול.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Recurrent laryngeal nerve"
+      }
+    ]
+  },
   "renal-artery": {
     "notes": [
       {
@@ -7982,6 +8096,15 @@
       }
     ]
   },
+  "short-gastric-arteries": {
+    "notes": [
+      {
+        "text": "עורקים קצרים ממערכת הטחול אל קרקעית הקיבה.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Short gastric artery"
+      }
+    ]
+  },
   "sigmoid-arteries": {
     "notes": [
       {
@@ -8237,6 +8360,15 @@
         "text": "רצועה מהספנואיד ללינגולה של המנדיבולה.",
         "section": "פנים ואזור טמפורלי",
         "term": "Sphenomandibular ligament"
+      }
+    ]
+  },
+  "sphincter-urethrae": {
+    "notes": [
+      {
+        "text": "שרירי שליטה בשופכה; כוללים את הסוגר החיצוני ומרכיבים נוספים באנטומיה נקבית.",
+        "section": "אגן ופרינאום",
+        "term": "Compressor urethra m. & Sphincter urethrae"
       }
     ]
   },
@@ -8613,6 +8745,15 @@
       }
     ]
   },
+  "superficial-transverse-perineal-muscle": {
+    "notes": [
+      {
+        "text": "שרירים רוחביים בפרינאום המסייעים בתמיכת האזור והגוף הפרינאלי.",
+        "section": "אגן ופרינאום",
+        "term": "Superficial (& deep) transverse perineal m."
+      }
+    ]
+  },
   "superior-anorectal-artery": {
     "notes": [
       {
@@ -8672,6 +8813,24 @@
         "text": "עצב לגלוטאוס מדיוס, גלוטאוס מינימוס ומותח הפאסיה.",
         "section": "גפה תחתונה",
         "term": "Superior gluteal nerve"
+      }
+    ]
+  },
+  "superior-laryngeal-artery": {
+    "notes": [
+      {
+        "text": "ענף עורקי לבית הקול, העובר דרך הממברנה התירוהיואידית.",
+        "section": "צוואר",
+        "term": "Superior laryngeal artery"
+      }
+    ]
+  },
+  "superior-laryngeal-nerve": {
+    "notes": [
+      {
+        "text": "ענף פנימי לתחושה מעל קפלי הקול; ענף חיצוני לקריקותירואיד.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Superior laryngeal nerve (External & Internal Br.)"
       }
     ]
   },
@@ -8789,6 +8948,15 @@
       }
     ]
   },
+  "superior-thyroid-artery": {
+    "notes": [
+      {
+        "text": "ענף קרוטידי חיצוני אל בלוטת התריס העליונה והסביבה.",
+        "section": "צוואר",
+        "term": "Superior thyroid artery"
+      }
+    ]
+  },
   "superior-trunk-of-brachial-plexus": {
     "notes": [
       {
@@ -8855,6 +9023,15 @@
         "text": "ענף של V1 למצח ולקרקפת הקדמית.",
         "section": "פנים ואזור טמפורלי",
         "term": "Supra-orbital nerve"
+      }
+    ]
+  },
+  "supraclavicular-nerves": {
+    "notes": [
+      {
+        "text": "עצבים תחושתיים לעור מעל עצם הבריח, הכתף ובית החזה העליון.",
+        "section": "צוואר",
+        "term": "Supraclavicular nerves"
       }
     ]
   },
@@ -9308,6 +9485,15 @@
       }
     ]
   },
+  "thoracic-duct": {
+    "notes": [
+      {
+        "text": "צינור הלימפה הראשי, המנקז את רוב הגוף אל האזור הוורידי השמאלי בצוואר.",
+        "section": "בית החזה",
+        "term": "Thoracic Duct"
+      }
+    ]
+  },
   "thymus": {
     "notes": [
       {
@@ -9590,6 +9776,15 @@
         "section": "ראש וצוואר ואיברי החישה",
         "term": "Thyrocervical trunk - Transverse cervical artery, Suprascapular artery, Inferior thyroid artery",
         "shared": true
+      }
+    ]
+  },
+  "transverse-cervical-nerve": {
+    "notes": [
+      {
+        "text": "עצב צווארי רוחבי מהמקלעת הצווארית, לעור קדמת הצוואר.",
+        "section": "צוואר",
+        "term": "Transverse cervical nerve"
       }
     ]
   },
