@@ -2,7 +2,7 @@
 
 > Living document. **Update it with every commit that changes the code, not
 > just at the end of a session** — it must always match the code as it is.
-> Last updated: 2026-10-07 (session 4, hand-built structures, priority 1).
+> Last updated: 2026-10-07 (session 4, hand-built structures: priority 1 merged, priority 2 started).
 
 ## Orientation (read in this order)
 
@@ -54,6 +54,7 @@ Expected today: **204 unit/component tests, 39 e2e checks, all passing; CI green
 | 2026-10-05 | **Docs must be kept updated continuously** as work happens (every commit), not at the end of a session. Enforced by the docs-gate hook.                                                                                                                                                                                        |
 | 2026-10-05 | **Deployed** by the user on Vercel: production URL **https://ors-anatomy.vercel.app** (production branch `main`).                                                                                                                                                                                                              |
 | 2026-10-05 | Course-site notes can't be copied or reworded (site terms); the user shared **her own summary** (Word, her own words) to use for **descriptions and names**. Her text is shown verbatim; her Hebrew names win over the site's.                                                                                                 |
+| 2026-10-07 | Priority 1 reviewed from the screenshots: **merge to `main`**, then **start priority 2** (items 12+ of `docs/HANDMADE_MODELS_PROMPT.md`).                                                                                                                                                                                      |
 | 2026-10-07 | Hand-built structures: **priority 1 only** (items 1–11 of `docs/HANDMADE_MODELS_PROMPT.md`) first; **screenshots of each structure** to the user; **don't merge to `main` until the user says so**.                                                                                                                            |
 | 2026-10-06 | Plan for the model: after BodyParts3D, merge to `main`, then a **full audit** (placement, duplicates, bugs, mismatches) with fixes, then **hand-build the last missing pieces** with another AI, from a prompt written here (`docs/HANDMADE_MODELS_PROMPT.md`).                                                                |
 | 2026-10-06 | **Non-commercial (NC) models allowed** — the app will not be used commercially. Z-Anatomy's inner ear and kidney added first; NC models live in their own file behind one switch, with a "Going commercial" checklist (`THIRD_PARTY_ASSETS.md`) so going commercial stays easy.                                                |
@@ -224,13 +225,12 @@ All verified by `npm run e2e:smoke` against a production build.
    Atlas, female body); **BodyParts3D pieces done** (23 small pieces; its
    rectum showed Z-Anatomy's "Sigmoid colon" is the rectum). The other NC
    sources were checked and none fills a gap (`docs/MODEL_SOURCES.md` →
-   "Non-commercial sources"). **Hand-built structures, priority 1 done**
-   (2026-10-07, branch `claude/handmade-structures`, awaiting the user's
-   review of the screenshots and their go to merge): items 1–11 of
-   `docs/HANDMADE_MODELS_PROMPT.md`. Next: her check of the courses
-   (CONTENT_REVIEW → "Hand-built structures"); rerun `summary_notes.py`
-   with her .docx so her notes reach them; then priorities 2–3 (24
-   structures in all; method and contract in the brief). NC models go into the
+   "Non-commercial sources"). **Hand-built structures, priority 1 done
+   and merged to `main`** (2026-10-07, user's go after the screenshots):
+   items 1–11 of `docs/HANDMADE_MODELS_PROMPT.md`. **Now: priority 2**
+   (user, 2026-10-07; branch `claude/handmade-priority-2`). Then: her
+   check of the courses (CONTENT_REVIEW → "Hand-built structures"); rerun
+   `summary_notes.py` with her .docx so her notes reach them; priority 3. NC models go into the
    non-commercial file only. Open3DModel's
    retinacula, tendon sheaths and spaces (femoral/adductor canal) were left
    out as coverings — could come back as a toggleable layer. Phrenic nerve,
