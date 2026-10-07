@@ -30,7 +30,7 @@ npx next start -p 3100         # in the background (after verify, which builds)
 npm run e2e:smoke              # real-browser explore + quiz flows, writes docs/screenshots/
 ```
 
-Expected today: **189 unit/component tests, 35 e2e checks, all passing; CI green.**
+Expected today: **204 unit/component tests, 39 e2e checks, all passing; CI green.**
 
 ## User decisions & preferences (do not re-ask)
 
@@ -118,11 +118,12 @@ All verified by `npm run e2e:smoke` against a production build.
   laryngeal nerves, ansa cervicalis, the cervical plexus's cutaneous
   branches, superior thyroid/laryngeal, cystic and short gastric arteries,
   thoracic duct and cisterna chyli, perineal body and muscles (male and
-  female versions), anal canal and internal anal sphincter. Male body: 2,910 meshes → 2,984 structures
-  (2,555 wholes); female body: 2,936 meshes → 3,015 structures (2,551
-  wholes); ≈3.7M triangles, 20 MB in all; the skeleton loads first and
-  frames the camera, the rest streams in ("Loading body systems n/8", n/9
-  in the female body). Credits: full on
+  female versions), anal canal and internal anal sphincter. Male body: 2,947 mapped meshes → 3,021 structures
+  (2,587 wholes); female body: 2,975 mapped meshes → 3,056 structures
+  (2,582 wholes) (counted with `datasetForSex`, 2026-10-07); ≈3.7M
+  triangles, 20 MB in all (the hand-built file: 52 meshes, 0.22 MB); the
+  skeleton loads first and frames the camera, the rest streams in
+  ("Loading body systems n/9", n/10 in the female body). Credits: full on
   the home page, source names in the viewer. Left out: coverings (fasciae, meninges, pleura, greater omentum), liver segments.
   Pipelines: `scripts/anatomy/z-anatomy/README.md`,
   `scripts/anatomy/open3dmodel/README.md`. Placeholder demo model kept for
@@ -508,4 +509,4 @@ All verified by `npm run e2e:smoke` against a production build.
   machinery (per-mesh BVH + generalized winding number, so open and nested
   meshes are handled; relaxation of spline control points; explicit,
   reported allowances where the model leaves no room), geometry (spline,
-  parallel-transport tubes). Built and clearance-clean so far: phrenic nerves, recurrent and superior laryngeal nerves, superior thyroid and superior laryngeal arteries, ansa cervicalis, the four cutaneous branches of the cervical plexus, thoracic duct and cisterna chyli, cystic artery, short gastric arteries, perineal body and muscles, anal canal and internal anal sphincter (all 11 items). The first full build (all together) found only ansa ↔ phrenic contacts on scalenus anterior (now allowed as touch, both ways, for both roots and the omohyoid twig; the loop keeps clear; the superior root may touch stylohyoid and stylopharyngeus in its first 14 mm, where it leaves the hypoglossal). Wiring into the app (GLB, manifest, `index.ts`, tests, e2e) is in progress: until that commit lands, the "tenth file" above and the e2e check are not on the branch yet.
+  parallel-transport tubes). Built and clearance-clean so far: phrenic nerves, recurrent and superior laryngeal nerves, superior thyroid and superior laryngeal arteries, ansa cervicalis, the four cutaneous branches of the cervical plexus, thoracic duct and cisterna chyli, cystic artery, short gastric arteries, perineal body and muscles, anal canal and internal anal sphincter (all 11 items). The first full build (all together) found only ansa ↔ phrenic contacts on scalenus anterior (now allowed as touch, both ways, for both roots and the omohyoid twig; the loop keeps clear; the superior root may touch stylohyoid and stylopharyngeus in its first 14 mm, where it leaves the hypoglossal). Wired into the app: `public/models/handmade/handmade.glb` (0.22 MB) + `manifest-handmade.json`, source `Handmade` (CC BY-SA 4.0), sex variants (`SEX_VARIANT` in `build.ts`); tests for ids, sources, regions and bodies; e2e: the phrenic nerve searchable and selectable in both bodies; course names re-run (all hand-built structures now carry her course's names; `extract.py` re-run first, the site reachable: 344/863 checklist rows now matched). `npm run verify` and e2e green. Screenshots of every structure: `e2e/handmade-shots.ts` → `docs/screenshots/handmade/`.

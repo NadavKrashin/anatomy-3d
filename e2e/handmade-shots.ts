@@ -33,7 +33,14 @@ interface Shot {
 }
 
 const DEEP_NECK: System[] = ["Muscular", "Other"];
-const CHEST: System[] = ["Muscular", "Skeletal", "Respiratory", "Endocrine", "Lymphatic", "Other"];
+const CHEST: System[] = [
+  "Muscular",
+  "Skeletal",
+  "Respiratory",
+  "Endocrine",
+  "Lymphatic",
+  "Other",
+];
 const BELLY: System[] = ["Muscular", "Skeletal", "Respiratory", "Other"];
 const PERINEUM: System[] = ["Digestive", "Urinary", "Other"];
 
@@ -41,7 +48,11 @@ const SHOTS_LIST: Shot[] = [
   { id: "phrenic-nerve-left", hide: CHEST },
   { id: "phrenic-nerve-right", hide: CHEST, turn: -260 },
   { id: "recurrent-laryngeal-nerve-left", hide: [...CHEST, "Digestive"] },
-  { id: "recurrent-laryngeal-nerve-right", hide: [...CHEST, "Digestive"], turn: -260 },
+  {
+    id: "recurrent-laryngeal-nerve-right",
+    hide: [...CHEST, "Digestive"],
+    turn: -260,
+  },
   { id: "superior-laryngeal-nerve-left", hide: DEEP_NECK },
   { id: "superior-laryngeal-nerve-right", hide: DEEP_NECK, turn: -260 },
   { id: "ansa-cervicalis-left", hide: DEEP_NECK },
@@ -57,24 +68,49 @@ const SHOTS_LIST: Shot[] = [
   { id: "cystic-artery", hide: BELLY },
   { id: "short-gastric-arteries", hide: BELLY, turn: 260 },
   { id: "perineal-body", hide: PERINEUM, tilt: 260 },
-  { id: "superficial-transverse-perineal-muscle-left", hide: PERINEUM, tilt: 260 },
+  {
+    id: "superficial-transverse-perineal-muscle-left",
+    hide: PERINEUM,
+    tilt: 260,
+  },
   { id: "deep-transverse-perineal-muscle-left", hide: PERINEUM, tilt: 260 },
-  { id: "external-urethral-sphincter", hide: ["Digestive", "Other"], tilt: 260 },
+  {
+    id: "external-urethral-sphincter",
+    hide: ["Digestive", "Other"],
+    tilt: 260,
+  },
   { id: "bulbospongiosus-muscle", hide: PERINEUM, tilt: 260 },
   { id: "ischiocavernosus-muscle-left", hide: PERINEUM, tilt: 260 },
   { id: "anal-canal", hide: ["Urinary", "Reproductive", "Other"], turn: 260 },
-  { id: "internal-anal-sphincter", hide: ["Urinary", "Reproductive", "Other"], turn: 260 },
+  {
+    id: "internal-anal-sphincter",
+    hide: ["Urinary", "Reproductive", "Other"],
+    turn: 260,
+  },
   // Female body
   { id: "perineal-body", hide: PERINEUM, tilt: 260, body: "female" },
-  { id: "external-urethral-sphincter", hide: ["Digestive", "Other"], tilt: 260, body: "female" },
+  {
+    id: "external-urethral-sphincter",
+    hide: ["Digestive", "Other"],
+    tilt: 260,
+    body: "female",
+  },
   { id: "bulbospongiosus-muscle", hide: PERINEUM, tilt: 260, body: "female" },
-  { id: "ischiocavernosus-muscle-left", hide: PERINEUM, tilt: 260, body: "female" },
+  {
+    id: "ischiocavernosus-muscle-left",
+    hide: PERINEUM,
+    tilt: 260,
+    body: "female",
+  },
 ];
 
 async function setSystems(page: Page, hide: System[]) {
   for (const name of hide) {
     const sw = page.getByRole("switch", { name: new RegExp(`^${name}`) });
-    if ((await sw.count()) && (await sw.first().getAttribute("aria-checked")) === "true")
+    if (
+      (await sw.count()) &&
+      (await sw.first().getAttribute("aria-checked")) === "true"
+    )
       await sw.first().click();
   }
 }
@@ -99,7 +135,9 @@ async function main() {
   const only = process.argv[2];
   for (const shot of SHOTS_LIST) {
     if (only && !shot.id.includes(only)) continue;
-    const page = await openPage(browser, errors, { viewport: { width: 1280, height: 860 } });
+    const page = await openPage(browser, errors, {
+      viewport: { width: 1280, height: 860 },
+    });
     const body = shot.body ?? "male";
     await page.addInitScript((sex) => {
       localStorage.setItem(

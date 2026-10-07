@@ -183,7 +183,7 @@
             },
             {
               "name": "Lateral Root of Median Nerve",
-              "structureId": null
+              "structureId": "lateral-root-of-median-nerve"
             },
             {
               "name": "Musculocutaneous Nerve",
@@ -195,7 +195,7 @@
             },
             {
               "name": "Medial Root of Median Nerve",
-              "structureId": null
+              "structureId": "medial-root-of-median-nerve"
             },
             {
               "name": "Ulnar Nerve",
@@ -260,7 +260,7 @@
             },
             {
               "name": "Superior Thoracic Artery",
-              "structureId": null
+              "structureId": "superior-thoracic-artery"
             },
             {
               "name": "Thoracoacromial Trunk",
@@ -555,7 +555,7 @@
             },
             {
               "name": "Anterior Interosseous Artery",
-              "structureId": null
+              "structureId": "anterior-interosseous-artery"
             },
             {
               "name": "Posterior Interosseous Artery",
@@ -563,7 +563,7 @@
             },
             {
               "name": "Radial Recurrent Artery",
-              "structureId": null
+              "structureId": "radial-recurrent-artery"
             },
             {
               "name": "Ulnar Recurrent Artery",
@@ -710,7 +710,7 @@
             },
             {
               "name": "Recurrent branch of the Median nerve",
-              "structureId": null
+              "structureId": "recurrent-branch-of-median-nerve"
             },
             {
               "name": "Hypothenar",
@@ -802,7 +802,7 @@
             },
             {
               "name": "Palmaris Brevis",
-              "structureId": null
+              "structureId": "palmaris-brevis"
             },
             {
               "name": "Guyon’s Canal",
@@ -1017,7 +1017,7 @@
             },
             {
               "name": "Nipple",
-              "structureId": null
+              "structureId": "nipple"
             }
           ]
         },
@@ -1076,11 +1076,11 @@
           "names": [
             {
               "name": "Areola",
-              "structureId": null
+              "structureId": "areola"
             },
             {
               "name": "Nipple",
-              "structureId": null
+              "structureId": "nipple"
             },
             {
               "name": "Suspensory Ligaments of Cooper",
@@ -1088,7 +1088,7 @@
             },
             {
               "name": "Lactiferous Ducts",
-              "structureId": null
+              "structureId": "lactiferous-ducts"
             },
             {
               "name": "Lactiferous Sinus",
@@ -1313,7 +1313,7 @@
           "names": [
             {
               "name": "Phrenic Nerve",
-              "structureId": null
+              "structureId": "phrenic-nerve"
             },
             {
               "name": "Pericardiacophrenic Vessels",
@@ -1376,7 +1376,7 @@
           "names": [
             {
               "name": "Bronchial Arteries & Veins",
-              "structureId": null
+              "structureId": "bronchial-artery"
             }
           ]
         },
@@ -1545,7 +1545,7 @@
           "names": [
             {
               "name": "Phrenic Nerve",
-              "structureId": null
+              "structureId": "phrenic-nerve"
             },
             {
               "name": "Vagus Nerve",
@@ -1553,7 +1553,7 @@
             },
             {
               "name": "Recurrent Laryngeal Nerve",
-              "structureId": null
+              "structureId": "recurrent-laryngeal-nerve"
             }
           ]
         },
@@ -1612,7 +1612,7 @@
             },
             {
               "name": "Phrenic Nerve",
-              "structureId": null
+              "structureId": "phrenic-nerve"
             },
             {
               "name": "Pericardiacophrenic Vessels",
@@ -1886,7 +1886,7 @@
             },
             {
               "name": "Small Cardiac Vein",
-              "structureId": null
+              "structureId": "small-cardiac-vein"
             },
             {
               "name": "Anterior Interventricular Sulcus",
@@ -1902,7 +1902,7 @@
             },
             {
               "name": "Anterior Cardiac Veins",
-              "structureId": null
+              "structureId": "anterior-cardiac-veins"
             }
           ]
         },
@@ -2065,7 +2065,7 @@
             },
             {
               "name": "Bronchial Arteries",
-              "structureId": null
+              "structureId": "bronchial-artery"
             },
             {
               "name": "Esophageal Branches",
@@ -2117,7 +2117,7 @@
             },
             {
               "name": "Thoracic Duct",
-              "structureId": null
+              "structureId": "thoracic-duct"
             },
             {
               "name": "Subcostal Muscles",
@@ -2453,7 +2453,7 @@
             },
             {
               "name": "Phrenic Nerve",
-              "structureId": null
+              "structureId": "phrenic-nerve"
             },
             {
               "name": "Central Tendon",
@@ -2477,7 +2477,7 @@
             },
             {
               "name": "Thoracic Duct",
-              "structureId": null
+              "structureId": "thoracic-duct"
             },
             {
               "name": "Crura",
@@ -2782,11 +2782,11 @@
             },
             {
               "name": "Sigmoid Colon",
-              "structureId": "sigmoid-colon"
+              "structureId": null
             },
             {
               "name": "Rectum",
-              "structureId": null
+              "structureId": "rectum"
             },
             {
               "name": "Ascending colon",
@@ -2802,7 +2802,7 @@
             },
             {
               "name": "Sigmoid colon",
-              "structureId": "sigmoid-colon"
+              "structureId": null
             },
             {
               "name": "Right Colic Flexure",
@@ -3040,7 +3040,7 @@
             },
             {
               "name": "Short Gastric Arteries",
-              "structureId": null
+              "structureId": "short-gastric-arteries"
             },
             {
               "name": "Great Pancreatic Artery",
@@ -3048,7 +3048,7 @@
             },
             {
               "name": "Dorsal Pancreatic Artery",
-              "structureId": null
+              "structureId": "dorsal-pancreatic-artery"
             },
             {
               "name": "Common Hepatic Artery",
@@ -3088,7 +3088,7 @@
             },
             {
               "name": "Cystic Artery",
-              "structureId": null
+              "structureId": "cystic-artery"
             },
             {
               "name": "Celiac Trunk",
@@ -3353,11 +3353,11 @@
             },
             {
               "name": "Sigmoid Colon",
-              "structureId": "sigmoid-colon"
+              "structureId": null
             },
             {
               "name": "Rectum",
-              "structureId": null
+              "structureId": "rectum"
             },
             {
               "name": "IMA",
@@ -3466,7 +3466,7 @@
             },
             {
               "name": "Kidneys",
-              "structureId": null
+              "structureId": "kidney"
             },
             {
               "name": "Suprarenal",
@@ -3634,7 +3634,7 @@
             },
             {
               "name": "Renal Pelvis",
-              "structureId": null
+              "structureId": "renal-pelvis"
             },
             {
               "name": "Ureter",
@@ -3678,7 +3678,7 @@
             },
             {
               "name": "Psoas Minor",
-              "structureId": null
+              "structureId": "psoas-minor"
             },
             {
               "name": "Iliacus",
@@ -3710,7 +3710,7 @@
             },
             {
               "name": "Lumbar Plexus",
-              "structureId": null
+              "structureId": "lumbar-plexus"
             },
             {
               "name": "Subcostal Nerve",
@@ -3742,7 +3742,7 @@
             },
             {
               "name": "Lumbosacral Trunk",
-              "structureId": null
+              "structureId": "lumbosacral-trunk"
             },
             {
               "name": "Sympathetic Chain",
@@ -3863,11 +3863,11 @@
             },
             {
               "name": "Anal Canal",
-              "structureId": null
+              "structureId": "anal-canal"
             },
             {
               "name": "Vagina",
-              "structureId": null
+              "structureId": "vagina"
             },
             {
               "name": "Piriformis",
@@ -3999,7 +3999,7 @@
             },
             {
               "name": "Round Ligament of the Uterus",
-              "structureId": null
+              "structureId": "round-ligament-of-uterus"
             },
             {
               "name": "Ligament of the Ovary",
@@ -4007,7 +4007,7 @@
             },
             {
               "name": "Suspensory Ligament of the Ovary",
-              "structureId": null
+              "structureId": "suspensory-ligament-of-ovary"
             },
             {
               "name": "Transverse Cervical",
@@ -4023,7 +4023,7 @@
             },
             {
               "name": "Uterosacral Ligament",
-              "structureId": null
+              "structureId": "uterosacral-ligament"
             },
             {
               "name": "Fundus",
@@ -4051,7 +4051,7 @@
             },
             {
               "name": "Uterine Tube / Fallopian Tube",
-              "structureId": null
+              "structureId": "uterine-tube"
             },
             {
               "name": "Isthmus",
@@ -4111,7 +4111,7 @@
             },
             {
               "name": "Lumbosacral trunk",
-              "structureId": null
+              "structureId": "lumbosacral-trunk"
             },
             {
               "name": "Umbilical Artery",
@@ -4163,11 +4163,11 @@
             },
             {
               "name": "Lumbosacral Trunk",
-              "structureId": null
+              "structureId": "lumbosacral-trunk"
             },
             {
               "name": "Sacral Plexus",
-              "structureId": null
+              "structureId": "sacral-plexus"
             },
             {
               "name": "Sciatic Nerve",
@@ -4212,7 +4212,7 @@
             },
             {
               "name": "Anal Canal",
-              "structureId": null
+              "structureId": "anal-canal"
             },
             {
               "name": "Ischioanal Fossae",
@@ -4284,7 +4284,7 @@
             },
             {
               "name": "Internal Anal Sphincter",
-              "structureId": null
+              "structureId": "internal-anal-sphincter"
             },
             {
               "name": "External Anal Sphincter",
@@ -4340,11 +4340,11 @@
             },
             {
               "name": "Bulbospongiosus",
-              "structureId": null
+              "structureId": "bulbospongiosus-muscle"
             },
             {
               "name": "Ischiocavernosus",
-              "structureId": null
+              "structureId": "ischiocavernosus-muscle"
             },
             {
               "name": "Corpora Cavernosa",
@@ -4396,7 +4396,7 @@
             },
             {
               "name": "Vestibule",
-              "structureId": null
+              "structureId": "vestibule"
             },
             {
               "name": "External Urethral Opening",
@@ -4428,7 +4428,7 @@
             },
             {
               "name": "Perineal Body",
-              "structureId": null
+              "structureId": "perineal-body"
             },
             {
               "name": "Greater Vestibular Gland",
@@ -4524,7 +4524,7 @@
             },
             {
               "name": "Tensor Fasciae Latae",
-              "structureId": null
+              "structureId": "tensor-fasciae-latae"
             },
             {
               "name": "AIIS - Anterior Inferior Iliac Spine",
@@ -4944,7 +4944,7 @@
             },
             {
               "name": "Pes Anserinus",
-              "structureId": null
+              "structureId": "pes-anserinus"
             },
             {
               "name": "Quadriceps Tendon",
@@ -4964,7 +4964,7 @@
             },
             {
               "name": "Articularis Genus",
-              "structureId": null
+              "structureId": "articularis-genus"
             },
             {
               "name": "Femoral Triangle",
@@ -5068,7 +5068,7 @@
             },
             {
               "name": "Lumbar Plexus",
-              "structureId": null
+              "structureId": "lumbar-plexus"
             },
             {
               "name": "Obturator Internus",
@@ -5594,7 +5594,7 @@
             },
             {
               "name": "Inferior Gluteal Nerve",
-              "structureId": null
+              "structureId": "inferior-gluteal-nerve"
             },
             {
               "name": "Inferior Gluteal Vessels",
@@ -5646,7 +5646,7 @@
             },
             {
               "name": "Tensor Fasciae Latae",
-              "structureId": null
+              "structureId": "tensor-fasciae-latae"
             },
             {
               "name": "External Rotators",
@@ -5702,7 +5702,7 @@
             },
             {
               "name": "Pes Anserinus",
-              "structureId": null
+              "structureId": "pes-anserinus"
             },
             {
               "name": "Semimembranosus",
@@ -6362,7 +6362,7 @@
             },
             {
               "name": "Semispinalis capitis",
-              "structureId": null
+              "structureId": "semispinalis-capitis-muscle"
             }
           ]
         },
@@ -6375,7 +6375,7 @@
             },
             {
               "name": "Semispinalis Capitis",
-              "structureId": null
+              "structureId": "semispinalis-capitis-muscle"
             },
             {
               "name": "Obliquus Capitis Inferior",
@@ -6644,11 +6644,11 @@
             },
             {
               "name": "Transverse Cervical Nerve",
-              "structureId": null
+              "structureId": "transverse-cervical-nerve"
             },
             {
               "name": "Supraclavicular Nerves",
-              "structureId": null
+              "structureId": "supraclavicular-nerves"
             },
             {
               "name": "Greater Auricular Nerve",
@@ -6656,15 +6656,15 @@
             },
             {
               "name": "Lesser Occipital Nerve",
-              "structureId": null
+              "structureId": "lesser-occipital-nerve"
             },
             {
               "name": "Phrenic Nerve",
-              "structureId": null
+              "structureId": "phrenic-nerve"
             },
             {
               "name": "Ansa Cervicalis",
-              "structureId": null
+              "structureId": "ansa-cervicalis"
             },
             {
               "name": "Spinal Accessory Nerve",
@@ -6756,11 +6756,11 @@
             },
             {
               "name": "Superior Thyroid Artery",
-              "structureId": null
+              "structureId": "superior-thyroid-artery"
             },
             {
               "name": "Superior Laryngeal Artery",
-              "structureId": null
+              "structureId": "superior-laryngeal-artery"
             },
             {
               "name": "Lingual Artery",
@@ -6872,7 +6872,7 @@
             },
             {
               "name": "Dorsal Scapular Artery",
-              "structureId": null
+              "structureId": "dorsal-scapular-artery"
             },
             {
               "name": "Longus Colli",
@@ -7189,7 +7189,7 @@
             },
             {
               "name": "Frontal Nerve",
-              "structureId": null
+              "structureId": "frontal-nerve"
             },
             {
               "name": "Supraorbital Nerve",
@@ -7293,7 +7293,7 @@
             },
             {
               "name": "Middle Meningeal Artery",
-              "structureId": null
+              "structureId": "middle-meningeal-artery"
             },
             {
               "name": "Foramen Spinosum",
@@ -7534,7 +7534,7 @@
             },
             {
               "name": "Recurrent Laryngeal Nerves",
-              "structureId": null
+              "structureId": "recurrent-laryngeal-nerve"
             },
             {
               "name": "Accessory Nerve",
@@ -7575,7 +7575,7 @@
             },
             {
               "name": "Frontal Nerve",
-              "structureId": null
+              "structureId": "frontal-nerve"
             },
             {
               "name": "Nasociliary Nerve",
@@ -7583,7 +7583,7 @@
             },
             {
               "name": "Lacrimal Nerve",
-              "structureId": null
+              "structureId": "lacrimal-nerve"
             },
             {
               "name": "Supraorbital Nerve",
@@ -7752,7 +7752,7 @@
             },
             {
               "name": "Recurrent Laryngeal Nerve",
-              "structureId": null
+              "structureId": "recurrent-laryngeal-nerve"
             },
             {
               "name": "Trachea",
@@ -7776,7 +7776,7 @@
             },
             {
               "name": "Superior Laryngeal Nerve",
-              "structureId": null
+              "structureId": "superior-laryngeal-nerve"
             },
             {
               "name": "Thyrohyoid Membrane",
@@ -7981,7 +7981,7 @@
             },
             {
               "name": "Levator Veli Palatini",
-              "structureId": null
+              "structureId": "levator-veli-palatini-muscle"
             },
             {
               "name": "Palatine Tonsils",
@@ -8349,7 +8349,7 @@
               {
                 "name": "Round ligament of the uterus",
                 "pastExams": 3,
-                "structureId": null
+                "structureId": "round-ligament-of-uterus"
               }
             ]
           },
@@ -8749,12 +8749,12 @@
               {
                 "name": "Sigmoid colon",
                 "pastExams": 0,
-                "structureId": "sigmoid-colon"
+                "structureId": null
               },
               {
                 "name": "Rectum",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "rectum"
               }
             ]
           },
@@ -8859,7 +8859,7 @@
               {
                 "name": "Cystic artery",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "cystic-artery"
               },
               {
                 "name": "Right/Left hepatic artery",
@@ -8879,7 +8879,7 @@
               {
                 "name": "Superior pancreaticoduodenal artery (Anterior & Posterior)",
                 "pastExams": 1,
-                "structureId": null
+                "structureId": "anterior-superior-pancreaticoduodenal-artery"
               }
             ]
           },
@@ -8894,12 +8894,12 @@
               {
                 "name": "Short gastric artery",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "short-gastric-arteries"
               },
               {
                 "name": "Dorsal pancreatic artery",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "dorsal-pancreatic-artery"
               },
               {
                 "name": "Greater pancreatic artery",
@@ -9029,7 +9029,7 @@
               {
                 "name": "Gastric vein",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "gastric-vein"
               },
               {
                 "name": "Splenic vein",
@@ -9254,7 +9254,7 @@
               {
                 "name": "Renal pelvis",
                 "pastExams": 1,
-                "structureId": null
+                "structureId": "renal-pelvis"
               },
               {
                 "name": "Calyces - Minor & major",
@@ -9294,7 +9294,7 @@
               {
                 "name": "Psoas minor",
                 "pastExams": 1,
-                "structureId": null
+                "structureId": "psoas-minor"
               },
               {
                 "name": "Iliacus",
@@ -9394,7 +9394,7 @@
               {
                 "name": "Lumbosacral trunk",
                 "pastExams": 1,
-                "structureId": null
+                "structureId": "lumbosacral-trunk"
               },
               {
                 "name": "Sympathetic trunk",
@@ -9450,7 +9450,7 @@
               {
                 "name": "Sacral plexus - Ventral rami S1-S4 + Lumbosacral trunk",
                 "pastExams": 1,
-                "structureId": null
+                "structureId": "lumbosacral-trunk"
               },
               {
                 "name": "Pudendal nerve",
@@ -9575,7 +9575,7 @@
               {
                 "name": "Ureteric orifice",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "ureteric-orifice"
               },
               {
                 "name": "Detrusor",
@@ -9595,7 +9595,7 @@
               {
                 "name": "Rectum",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "rectum"
               },
               {
                 "name": "Ampulla of rectum",
@@ -9610,7 +9610,7 @@
               {
                 "name": "Anal canal",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "anal-canal"
               },
               {
                 "name": "Transverse rectal folds",
@@ -9625,7 +9625,7 @@
               {
                 "name": "External & Internal anal sphincter",
                 "pastExams": 1,
-                "structureId": null
+                "structureId": "internal-anal-sphincter"
               }
             ]
           },
@@ -9680,7 +9680,7 @@
               {
                 "name": "Uterus",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "uterus"
               },
               {
                 "name": "Body",
@@ -9695,7 +9695,7 @@
               {
                 "name": "Cervix of uterus",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "cervix-of-uterus"
               },
               {
                 "name": "Myometrium",
@@ -9705,7 +9705,7 @@
               {
                 "name": "Vagina",
                 "pastExams": 2,
-                "structureId": null
+                "structureId": "vagina"
               },
               {
                 "name": "Vaginal fornix (Anterior/Lateral/Posterior)",
@@ -9720,7 +9720,7 @@
               {
                 "name": "Uterine (fallopian) tube",
                 "pastExams": 1,
-                "structureId": null
+                "structureId": "uterine-tube"
               },
               {
                 "name": "Isthmus",
@@ -9745,7 +9745,7 @@
               {
                 "name": "Ovary",
                 "pastExams": 1,
-                "structureId": null
+                "structureId": "ovary"
               }
             ]
           },
@@ -9770,22 +9770,22 @@
               {
                 "name": "Round ligament of uterus",
                 "pastExams": 1,
-                "structureId": null
+                "structureId": "round-ligament-of-uterus"
               },
               {
                 "name": "Ligament of the ovary / ovarian ligament",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "ovarian-ligament"
               },
               {
                 "name": "Suspensory ligament of the ovary",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "suspensory-ligament-of-ovary"
               },
               {
                 "name": "Uterosacral ligament",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "uterosacral-ligament"
               },
               {
                 "name": "Transverse cervical ligament (Lateral cardinal ligament)",
@@ -9850,17 +9850,17 @@
               {
                 "name": "Superficial (& deep) transverse perineal m.",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "deep-transverse-perineal-muscle"
               },
               {
                 "name": "Bulbospongiosus m.",
                 "pastExams": 1,
-                "structureId": null
+                "structureId": "bulbospongiosus-muscle"
               },
               {
                 "name": "Ischiocavernosus m.",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "ischiocavernosus-muscle"
               }
             ]
           },
@@ -10015,7 +10015,7 @@
               {
                 "name": "Ischiocavernosus",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "ischiocavernosus-muscle"
               },
               {
                 "name": "Crus of clitoris",
@@ -10025,7 +10025,7 @@
               {
                 "name": "Vestibule",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "vestibule"
               },
               {
                 "name": "Bulb of the vestibule",
@@ -10035,7 +10035,7 @@
               {
                 "name": "Bulbospongiosus",
                 "pastExams": 2,
-                "structureId": null
+                "structureId": "bulbospongiosus-muscle"
               },
               {
                 "name": "Glans clitoris",
@@ -10055,7 +10055,7 @@
               {
                 "name": "Compressor urethra m. & Sphincter urethrae",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "sphincter-urethrae"
               }
             ]
           },
@@ -10495,7 +10495,7 @@
               {
                 "name": "Articularis genus",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "articularis-genus"
               }
             ]
           },
@@ -10700,7 +10700,7 @@
               {
                 "name": "Inferior gluteal nerve",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "inferior-gluteal-nerve"
               },
               {
                 "name": "Sciatic nerve (ונקודת ההתפצלות שלו Tibial & Common fibular n.)",
@@ -11325,7 +11325,7 @@
               {
                 "name": "Semispinalis capitis",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "semispinalis-capitis-muscle"
               },
               {
                 "name": "Erector spinae - Spinalis, ‏Longissimus, ‏Iliocostalis",
@@ -11656,12 +11656,12 @@
               {
                 "name": "Superior thyroid artery",
                 "pastExams": 2,
-                "structureId": null
+                "structureId": "superior-thyroid-artery"
               },
               {
                 "name": "Superior laryngeal artery",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "superior-laryngeal-artery"
               },
               {
                 "name": "Lingual artery",
@@ -11721,12 +11721,12 @@
               {
                 "name": "Supraclavicular nerves",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "supraclavicular-nerves"
               },
               {
                 "name": "Ansa cervicalis (Superior Root & Inferior root)",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "superior-root-of-ansa-cervicalis"
               }
             ]
           },
@@ -11937,7 +11937,7 @@
               {
                 "name": "Supra-orbital nerve",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "supra-orbital-nerve"
               }
             ]
           },
@@ -12022,7 +12022,7 @@
               {
                 "name": "Middle meningeal artery",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "middle-meningeal-artery"
               },
               {
                 "name": "Central retinal artery",
@@ -12553,12 +12553,12 @@
               {
                 "name": "Recurrent laryngeal nerve",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "recurrent-laryngeal-nerve"
               },
               {
                 "name": "Superior laryngeal nerve (External & Internal Br.)",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "superior-laryngeal-nerve"
               }
             ]
           },
@@ -12668,7 +12668,7 @@
               {
                 "name": "Levator veli palatini (מכוסה במוקוזה)",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "levator-veli-palatini-muscle"
               },
               {
                 "name": "",
@@ -12763,7 +12763,7 @@
               {
                 "name": "Dorsal scapular artery",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "dorsal-scapular-artery"
               }
             ]
           },
@@ -12843,12 +12843,12 @@
               {
                 "name": "Vestibule",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "vestibule"
               },
               {
                 "name": "Cochlea",
                 "pastExams": 0,
-                "structureId": null
+                "structureId": "cochlea"
               }
             ]
           }

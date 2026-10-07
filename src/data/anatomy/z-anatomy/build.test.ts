@@ -19,6 +19,7 @@ import open3dManifest from "./manifest-open3d.json";
 import nonCommercialManifest from "./manifest-non-commercial.json";
 import femaleManifest from "./manifest-female.json";
 import bp3dManifest from "./manifest-bp3d.json";
+import handmadeManifest from "./manifest-handmade.json";
 import { datasetForSex } from "@/lib/anatomy/bodySex";
 
 /** The commercially usable manifests. */
@@ -26,6 +27,7 @@ const manifest = [
   ...zManifest,
   ...open3dManifest,
   ...bp3dManifest,
+  ...handmadeManifest,
   ...femaleManifest,
 ];
 
@@ -151,6 +153,18 @@ describe("buildZAnatomyDataset", () => {
       expect.arrayContaining(["inconstant", DETAIL_TAG]),
     );
     expect(tags["ulnar-nerve-left"]).not.toContain(DETAIL_TAG);
+  });
+
+  it('joins a mesh\'s "(female)" version to the same structure', () => {
+    const built = buildZAnatomyDataset([
+      entry("Ischiocavernosus muscle.l", { sex: "male" }),
+      entry("Ischiocavernosus muscle (female).l", { sex: "female" }),
+    ]);
+    expect(built.structures.map((s) => s.id)).toEqual([
+      "ischiocavernosus-muscle-left",
+    ]);
+    expect(built.structures[0]?.sex).toBeUndefined();
+    expect(built.meshSex["Ischiocavernosus muscle (female).l"]).toBe("female");
   });
 
   it("puts ligaments in the 'other' system", () => {
@@ -334,6 +348,76 @@ describe("the Z-Anatomy whole-body dataset", () => {
     expect(rectum?.region).toBe("pelvis");
     expect(meshMap["Sigmoid colon"]).toBe("rectum");
     expect(registry.has("sigmoid-colon")).toBe(false);
+  });
+
+  it("adds the hand-built structures, in the right body and region", () => {
+    const female = datasetForSex(zAnatomyDataset, "female");
+    const male = datasetForSex(zAnatomyDataset, "male");
+    const has = (d: typeof female, id: string) =>
+      d.structures.some((s) => s.id === id);
+    const both: Record<string, string> = {
+      "phrenic-nerve-left": "thorax",
+      "phrenic-nerve-right": "thorax",
+      "recurrent-laryngeal-nerve-left": "neck",
+      "recurrent-laryngeal-nerve-right": "neck",
+      "superior-laryngeal-nerve-left": "neck",
+      "internal-branch-of-superior-laryngeal-nerve-right": "neck",
+      "external-branch-of-superior-laryngeal-nerve-left": "neck",
+      "ansa-cervicalis-left": "neck",
+      "superior-root-of-ansa-cervicalis-right": "neck",
+      "lesser-occipital-nerve-left": "neck",
+      "great-auricular-nerve-right": "neck",
+      "transverse-cervical-nerve-left": "neck",
+      "supraclavicular-nerves-right": "neck",
+      "superior-thyroid-artery-left": "neck",
+      "superior-laryngeal-artery-right": "neck",
+      "thoracic-duct": "thorax",
+      "cisterna-chyli": "abdomen",
+      "cystic-artery": "abdomen",
+      "short-gastric-arteries": "abdomen",
+      "perineal-body": "pelvis",
+      "superficial-transverse-perineal-muscle-left": "pelvis",
+      "deep-transverse-perineal-muscle-right": "pelvis",
+      "external-urethral-sphincter": "pelvis",
+      "bulbospongiosus-muscle": "pelvis",
+      "ischiocavernosus-muscle-left": "pelvis",
+      "anal-canal": "pelvis",
+      "internal-anal-sphincter": "pelvis",
+    };
+    for (const [id, region] of Object.entries(both)) {
+      const s = registry.get(id);
+      expect(s?.modelSource, id).toBe("Handmade");
+      expect(s?.sourceLicense, id).toBe("CC BY-SA 4.0");
+      expect(s?.region, id).toBe(region);
+      expect(has(male, id), id).toBe(true);
+      expect(has(female, id), id).toBe(true);
+    }
+    // Female-only parts of wholes both bodies share.
+    for (const id of [
+      "sphincter-urethrae",
+      "compressor-urethrae",
+      "urethrovaginal-sphincter",
+      "bulbospongiosus-muscle-left",
+    ]) {
+      expect(has(female, id), id).toBe(true);
+      expect(has(male, id), id).toBe(false);
+    }
+    expect(registry.get("sphincter-urethrae")?.parentId).toBe(
+      "external-urethral-sphincter",
+    );
+    // One ischiocavernosus per side: each body shows its own mesh.
+    expect(male.meshMap["Ischiocavernosus muscle.l"]).toBe(
+      "ischiocavernosus-muscle-left",
+    );
+    expect(female.meshMap["Ischiocavernosus muscle (female).l"]).toBe(
+      "ischiocavernosus-muscle-left",
+    );
+    expect(female.meshMap["Ischiocavernosus muscle.l"]).toBeUndefined();
+    expect(male.meshMap["External urethral sphincter"]).toBe(
+      "external-urethral-sphincter",
+    );
+    expect(female.meshMap["External urethral sphincter"]).toBeUndefined();
+    for (const e of handmadeManifest) expect(e.pack, e.name).toBe("handmade");
   });
 
   it("places the female organs in the pelvis and the breasts on the chest", () => {

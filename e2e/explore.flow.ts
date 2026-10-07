@@ -13,6 +13,23 @@ async function infoTitle(page: Page) {
     : null;
 }
 
+/** The hand-built phrenic nerve, found by search and selected, in this body. */
+async function findPhrenic(page: Page, body: string) {
+  await page.locator("#structure-search").fill("phrenic nerve");
+  await page.waitForSelector('[role="option"]');
+  await page
+    .getByRole("option", { name: /^Phrenic nerve/i })
+    .first()
+    .click();
+  await page.waitForTimeout(1200);
+  assert(
+    /^Phrenic nerve/i.test((await infoTitle(page)) ?? ""),
+    `the hand-built phrenic nerve is searchable and selectable (${body} body)`,
+  );
+  await page.screenshot({ path: `${SHOTS}/handmade-phrenic-${body}.png` });
+  await page.locator("#structure-search").fill("");
+}
+
 export async function exploreFlow(browser: Browser, errors: string[]) {
   const desktop = await openPage(browser, errors);
 
@@ -226,6 +243,9 @@ export async function exploreFlow(browser: Browser, errors: string[]) {
   );
   await desktop.screenshot({ path: `${SHOTS}/organ-heart.png` });
 
+  // Hand-built structures: the phrenic nerve is searchable and selectable.
+  await findPhrenic(desktop, "male");
+
   // Female body: the female organs replace the male ones.
   await desktop.getByRole("button", { name: "Settings" }).first().click();
   await desktop.getByText("Female", { exact: true }).click();
@@ -244,6 +264,7 @@ export async function exploreFlow(browser: Browser, errors: string[]) {
     "the female body shows the uterus",
   );
   await desktop.screenshot({ path: `${SHOTS}/female-uterus.png` });
+  await findPhrenic(desktop, "female");
   await desktop.locator("#structure-search").fill("prostate");
   await desktop.waitForTimeout(600);
   assert(

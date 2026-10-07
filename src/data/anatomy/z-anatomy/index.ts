@@ -13,6 +13,7 @@ import open3dManifest from "./manifest-open3d.json";
 import nonCommercialManifest from "./manifest-non-commercial.json";
 import femaleManifest from "./manifest-female.json";
 import bp3dManifest from "./manifest-bp3d.json";
+import handmadeManifest from "./manifest-handmade.json";
 
 /**
  * Whether the app includes models licensed for non-commercial use only
@@ -27,7 +28,9 @@ export const INCLUDE_NON_COMMERCIAL = true;
  * Real anatomy from the Z-Anatomy atlas (whole body, five model files;
  * scripts/anatomy/z-anatomy/README.md), plus what Open3DModel adds on the
  * same body (scripts/anatomy/open3dmodel/README.md), small pieces from
- * BodyParts3D (scripts/anatomy/bodyparts3d/README.md), the female organs of
+ * BodyParts3D (scripts/anatomy/bodyparts3d/README.md), the structures no
+ * open model has, built by hand (scripts/anatomy/handmade/README.md; some in
+ * one body only), the female organs of
  * the Human Reference Atlas fitted into it (scripts/anatomy/hra/README.md;
  * shown in the female body only, `datasetForSex`) and, unless left out, the
  * non-commercial inner ear and kidney.
@@ -41,6 +44,7 @@ export function createZAnatomyDataset({
     ...(manifest as ManifestEntry[]),
     ...(open3dManifest as ManifestEntry[]),
     ...(bp3dManifest as ManifestEntry[]),
+    ...(handmadeManifest as ManifestEntry[]),
     ...(femaleManifest as ManifestEntry[]),
     ...(nonCommercial ? (nonCommercialManifest as ManifestEntry[]) : []),
   ];
@@ -66,6 +70,7 @@ export function createZAnatomyDataset({
         ),
         { id: "extras", url: "/models/open3dmodel/extras.glb" },
         { id: "bodyparts3d", url: "/models/bodyparts3d/extras.glb" },
+        { id: "handmade", url: "/models/handmade/handmade.glb" },
         { id: "female", url: "/models/hra/female.glb", sex: "female" },
         ...(nonCommercial
           ? [

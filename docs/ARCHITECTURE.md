@@ -114,7 +114,10 @@ ancestors are tried (multi-primitive meshes load as a group of meshes).
   at runtime by `build.ts` from the export `manifest.json` plus
   `manifest-open3d.json` — the Open3DModel extras, a sixth model file
   `extras.glb` — `manifest-bp3d.json` (BodyParts3D pieces,
-  `bodyparts3d/extras.glb`), `manifest-female.json` (the Human Reference Atlas female
+  `bodyparts3d/extras.glb`), `manifest-handmade.json` (hand-built schematic
+  structures, `handmade/handmade.glb`; some in one body only, a mesh named
+  `"… (female)"` joins the same structure — `SEX_VARIANT`),
+  `manifest-female.json` (the Human Reference Atlas female
   organs, `female.glb`, `sex: "female"`) and `manifest-non-commercial.json`;
   every entry's `source` picks its licence and attribution from
   `MODEL_SOURCES`) and

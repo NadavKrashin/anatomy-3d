@@ -72,6 +72,11 @@
     "he": "מקרב האגודל",
     "heSource": "https://medintzfat.com/anatomy/lab1"
   },
+  "anal-canal": {
+    "en": "Anal canal",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 14
+  },
   "anconeus-muscle": {
     "en": "Anconeus",
     "source": "https://medintzfat.com/anatomy/class8",
@@ -86,6 +91,11 @@
     "en": "Annular ligament",
     "source": "https://medintzfat.com/anatomy/lab1",
     "uses": 12
+  },
+  "ansa-cervicalis": {
+    "en": "Ansa cervicalis",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 24
   },
   "anterior-belly-of-digastric-muscle": {
     "en": "Anterior belly of digastric",
@@ -345,6 +355,11 @@
     "source": "https://medintzfat.com/anatomy/quiz-head-neck",
     "uses": 50
   },
+  "bulbospongiosus-muscle": {
+    "en": "Bulbospongiosus",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 16
+  },
   "calcaneal-tendon": {
     "en": "Calcaneal tendon",
     "source": "https://medintzfat.com/anatomy/labs-semester-b",
@@ -415,6 +430,11 @@
   "circumflex-scapular-artery": {
     "en": "Circumflex scapular artery",
     "source": "https://medintzfat.com/anatomy/class7",
+    "uses": 2
+  },
+  "cisterna-chyli": {
+    "en": "Cisterna chyli",
+    "source": "https://medintzfat.com/anatomy/abdominal-innervation",
     "uses": 2
   },
   "clavicle": {
@@ -499,6 +519,11 @@
     "source": "https://medintzfat.com/anatomy/lab9",
     "uses": 6
   },
+  "compressor-urethrae": {
+    "en": "Compressor urethrae",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 6
+  },
   "conoid-ligament": {
     "en": "Conoid ligament",
     "source": "https://medintzfat.com/anatomy/class5",
@@ -579,6 +604,11 @@
     "source": "https://medintzfat.com/anatomy/lower-limb-part5",
     "uses": 23
   },
+  "cystic-artery": {
+    "en": "Cystic artery",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 6
+  },
   "deep-artery-of-penis": {
     "en": "Deep artery of the penis",
     "source": "https://medintzfat.com/anatomy/labs-semester-b",
@@ -614,6 +644,11 @@
     "en": "Deep palmar arch",
     "source": "https://medintzfat.com/anatomy/class9",
     "uses": 2
+  },
+  "deep-transverse-perineal-muscle": {
+    "en": "Deep transverse perineal muscle",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 5
   },
   "deltoid-muscle": {
     "en": "Deltoid",
@@ -788,6 +823,11 @@
     "source": "https://medintzfat.com/anatomy/lab6",
     "uses": 2
   },
+  "external-branch-of-superior-laryngeal-nerve": {
+    "en": "External branch of superior laryngeal nerve",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 2
+  },
   "external-carotid-artery": {
     "en": "External carotid artery",
     "source": "https://medintzfat.com/anatomy/lab9",
@@ -819,6 +859,11 @@
     "en": "External jugular vein",
     "source": "https://medintzfat.com/anatomy/quiz-head-neck",
     "uses": 12
+  },
+  "external-urethral-sphincter": {
+    "en": "External urethral sphincter",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 11
   },
   "facial-artery": {
     "en": "Facial artery",
@@ -1050,6 +1095,11 @@
     "en": "Gracilis",
     "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
     "uses": 35
+  },
+  "great-auricular-nerve": {
+    "en": "Great auricular nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 5
   },
   "great-cardiac-vein": {
     "en": "Great cardiac vein",
@@ -1338,6 +1388,16 @@
     "source": "https://medintzfat.com/anatomy/quiz-abdomen",
     "uses": 11
   },
+  "internal-anal-sphincter": {
+    "en": "Internal anal sphincter",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 3
+  },
+  "internal-branch-of-superior-laryngeal-nerve": {
+    "en": "Internal branch of superior laryngeal nerve",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 2
+  },
   "internal-carotid-artery": {
     "en": "Internal carotid artery",
     "source": "https://medintzfat.com/anatomy/quiz-head-neck",
@@ -1396,6 +1456,11 @@
     "en": "Iris",
     "source": "https://medintzfat.com/anatomy/quiz-head-neck",
     "uses": 21
+  },
+  "ischiocavernosus-muscle": {
+    "en": "Ischiocavernosus",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 16
   },
   "ischiofemoral-ligament": {
     "en": "Ischiofemoral ligament",
@@ -1528,6 +1593,11 @@
     "en": "Lens",
     "source": "https://medintzfat.com/anatomy/quiz-head-neck",
     "uses": 17
+  },
+  "lesser-occipital-nerve": {
+    "en": "Lesser occipital nerve",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 3
   },
   "lesser-omentum": {
     "en": "Lesser omentum",
@@ -2083,6 +2153,11 @@
     "source": "https://medintzfat.com/anatomy/class6",
     "uses": 1
   },
+  "perineal-body": {
+    "en": "Perineal body",
+    "source": "https://medintzfat.com/anatomy/lab6",
+    "uses": 2
+  },
   "pes-anserinus": {
     "en": "Pes anserinus",
     "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
@@ -2094,6 +2169,11 @@
     "uses": 35,
     "he": "לוע",
     "heSource": "https://medintzfat.com/anatomy/labs-semester-b"
+  },
+  "phrenic-nerve": {
+    "en": "Phrenic nerve",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 33
   },
   "piriformis-muscle": {
     "en": "Piriformis",
@@ -2396,6 +2476,11 @@
     "source": "https://medintzfat.com/anatomy/lab1",
     "uses": 3
   },
+  "recurrent-laryngeal-nerve": {
+    "en": "Recurrent laryngeal nerve",
+    "source": "https://medintzfat.com/anatomy/throat",
+    "uses": 21
+  },
   "renal-artery": {
     "en": "Renal artery",
     "source": "https://medintzfat.com/anatomy/quiz-abdomen",
@@ -2550,6 +2635,11 @@
     "source": "https://medintzfat.com/anatomy/quiz-head-neck",
     "uses": 9
   },
+  "short-gastric-arteries": {
+    "en": "Short gastric arteries",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 17
+  },
   "short-head-of-biceps-femoris": {
     "en": "Short head of biceps femoris",
     "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
@@ -2613,6 +2703,11 @@
     "en": "Sphenomandibular ligament",
     "source": "https://medintzfat.com/anatomy/quiz-head-neck",
     "uses": 11
+  },
+  "sphincter-urethrae": {
+    "en": "Sphincter urethrae",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 1
   },
   "spinal-cord": {
     "en": "Spinal cord",
@@ -2790,6 +2885,16 @@
     "source": "https://medintzfat.com/anatomy/lab9",
     "uses": 2
   },
+  "superior-laryngeal-artery": {
+    "en": "Superior laryngeal artery",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 9
+  },
+  "superior-laryngeal-nerve": {
+    "en": "Superior laryngeal nerve",
+    "source": "https://medintzfat.com/anatomy/throat",
+    "uses": 6
+  },
   "superior-lateral-brachial-cutaneous-nerve": {
     "en": "Superior lateral brachial cutaneous nerve",
     "source": "https://medintzfat.com/anatomy/class6",
@@ -2845,6 +2950,11 @@
     "source": "https://medintzfat.com/anatomy/lab1",
     "uses": 3
   },
+  "superior-thyroid-artery": {
+    "en": "Superior thyroid artery",
+    "source": "https://medintzfat.com/anatomy/neck",
+    "uses": 12
+  },
   "superior-thyroid-vein": {
     "en": "Superior thyroid vein",
     "source": "https://medintzfat.com/anatomy/neck",
@@ -2869,6 +2979,11 @@
     "en": "Supraorbital nerve",
     "source": "https://medintzfat.com/anatomy/lab9",
     "uses": 9
+  },
+  "supraclavicular-nerves": {
+    "en": "Supraclavicular nerves",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 5
   },
   "suprarenal-gland": {
     "en": "Suprarenal gland",
@@ -2989,6 +3104,11 @@
     "source": "https://medintzfat.com/anatomy/lab2",
     "uses": 2
   },
+  "thoracic-duct": {
+    "en": "Thoracic duct",
+    "source": "https://medintzfat.com/anatomy/quiz-thorax-mediastinum-01",
+    "uses": 19
+  },
   "thoraco-acromial-artery": {
     "en": "Thoracoacromial artery",
     "source": "https://medintzfat.com/anatomy/quiz-upper-limb-01",
@@ -3070,6 +3190,11 @@
   },
   "transverse-cervical-artery": {
     "en": "Transverse cervical artery",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 1
+  },
+  "transverse-cervical-nerve": {
+    "en": "Transverse cervical nerve",
     "source": "https://medintzfat.com/anatomy/lab9",
     "uses": 1
   },
@@ -3199,6 +3324,11 @@
     "en": "Urethra",
     "source": "https://medintzfat.com/anatomy/quiz-abdomen",
     "uses": 47
+  },
+  "urethrovaginal-sphincter": {
+    "en": "Urethrovaginal sphincter",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 6
   },
   "urinary-bladder": {
     "en": "Urinary bladder",
