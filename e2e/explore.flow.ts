@@ -77,6 +77,23 @@ export async function exploreFlow(browser: Browser, errors: string[]) {
   assert(panel && box, "info panel and canvas are laid out");
   await desktop.keyboard.press("Escape");
   assert((await infoTitle(desktop)) === null, "Escape deselects");
+  // Turning the body by dragging must not select what is under the pointer
+  // on release (drag right, then back so the view is restored).
+  const centre = {
+    x: (panel.x + panel.width + box.x + box.width) / 2,
+    y: box.y + box.height / 2,
+  };
+  for (const dx of [140, -140]) {
+    await desktop.mouse.move(centre.x - dx / 2, centre.y);
+    await desktop.mouse.down();
+    await desktop.mouse.move(centre.x + dx / 2, centre.y, { steps: 10 });
+    await desktop.mouse.up();
+    await desktop.waitForTimeout(300);
+  }
+  assert(
+    (await infoTitle(desktop)) === null,
+    "dragging to turn the body selects nothing",
+  );
   await desktop.mouse.click(
     (panel.x + panel.width + box.x + box.width) / 2,
     box.y + box.height / 2,

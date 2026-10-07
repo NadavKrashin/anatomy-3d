@@ -9,6 +9,7 @@ import {
   type MeshVisualState,
 } from "@/lib/anatomy/three/materialStates";
 import { buildSceneIndex } from "@/lib/anatomy/three/sceneIndex";
+import { isTap } from "@/lib/anatomy/pointer";
 import { getStructureVisibility } from "@/lib/anatomy/visibility";
 import { useSceneIndexStore } from "@/store/sceneIndexStore";
 import { useViewerStore } from "@/store/viewerStore";
@@ -125,10 +126,14 @@ export function AnatomyModel({ id, url }: { id: string; url: string }) {
       onPointerLeave={() => setHovered(null)}
       onClick={(event: ThreeEvent<MouseEvent>) => {
         event.stopPropagation();
+        // A drag that turned the body ends with a click: don't select (or,
+        // in peel mode, peel) whatever is under the pointer on release.
+        if (!isTap(event.delta)) return;
         useViewerStore.getState().pick(pickStructureId(event));
       }}
       onDoubleClick={(event: ThreeEvent<MouseEvent>) => {
         event.stopPropagation();
+        if (!isTap(event.delta)) return;
         const id = pickStructureId(event);
         if (!id) return;
         const { pick, focus, selectionLocked, peelMode } =

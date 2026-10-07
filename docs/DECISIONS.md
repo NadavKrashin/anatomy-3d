@@ -647,3 +647,12 @@ is built (`scripts/anatomy/handmade/`, README there).
   `SEX_VARIANT`).
 - **Not modelled yet:** female external genitalia and urethra (item 13–14),
   so the female muscles lie where those organs belong; priorities 2–3.
+
+## 2026-10-07 — A drag is not a click: 6 px tap threshold
+
+R3F fires `onClick` at the end of a drag, so turning the body selected or
+peeled whatever was under the pointer on release. Clicks on meshes now count
+only if the pointer moved ≤ 6 px between press and release
+(`lib/anatomy/pointer.ts`). R3F's own rule for empty-space clicks
+(`onPointerMissed`) is 2 px; the larger tap allowance is for finger taps on
+the iPad, which wobble a few pixels.

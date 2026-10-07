@@ -301,11 +301,6 @@ All verified by `npm run e2e:smoke` against a production build.
   duplicates clean; the supraclavicular nerves' middle part (≈ 11 %) runs
   10–23 mm from the nearest mesh, in the roof of the posterior triangle,
   where the model has no skin or investing fascia to lie under.
-- Dragging to turn the body selects the structure under the pointer when the
-  drag ends over the model (R3F fires `onClick` after a drag;
-  `AnatomyModel.tsx` doesn't check `event.delta`); in peel mode it peels
-  it. Found 2026-10-07 while scripting the hand-built screenshots; not
-  fixed yet (outside that branch's scope).
 - On phones, a long name's leader label can run off the screen edge (user:
   fine as is, 2026-10-05).
 - Long structures (nerves) are framed along their whole length.
@@ -531,3 +526,10 @@ All verified by `npm run e2e:smoke` against a production build.
   instead of hooking under it**, and the anal canal starts 3 mm below the
   rectum — both passed to the priority-2 session. Her notes regenerated
   with her .docx so they reach the hand-built structures (+21 entries).
+- **2026-10-07 · session 3 (cont.)** — Fixed: a drag that turned the body
+  selected (or, in peel mode, peeled) the structure under the pointer on
+  release — R3F fires `onClick` after a drag. `AnatomyModel.tsx` now ignores
+  clicks and double-clicks whose press-to-release distance exceeds 6 px
+  (`lib/anatomy/pointer.ts`, unit-tested; R3F already ignores clicks on empty
+  space after 2 px, a little more lets a wobbly finger tap on the iPad still
+  select). e2e: dragging across the body selects nothing.
