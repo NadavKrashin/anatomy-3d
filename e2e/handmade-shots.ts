@@ -4,10 +4,12 @@
  * systems that would hide it switched off; female ones in the female body.
  *
  *   npx tsx e2e/handmade-shots.ts            # against BASE_URL (default :3100)
+ *   npx tsx e2e/handmade-shots.ts phrenic    # only ids containing "phrenic"
+ *   npx tsx e2e/handmade-shots.ts --missing  # only shots not taken yet
  *
  * Writes docs/screenshots/handmade/<id>-front.png and -side.png.
  */
-import { mkdirSync } from "node:fs";
+import { existsSync, mkdirSync } from "node:fs";
 import { chromium, type Page } from "playwright";
 import { BASE_URL, openPage, SHOTS, waitForModel } from "./helpers";
 
@@ -32,7 +34,7 @@ interface Shot {
   tilt?: number;
 }
 
-const DEEP_NECK: System[] = ["Muscular", "Other"];
+const DEEP_NECK: System[] = ["Muscular", "Lymphatic", "Other"];
 const CHEST: System[] = [
   "Muscular",
   "Skeletal",
@@ -57,10 +59,10 @@ const SHOTS_LIST: Shot[] = [
   { id: "superior-laryngeal-nerve-right", hide: DEEP_NECK, turn: -260 },
   { id: "ansa-cervicalis-left", hide: DEEP_NECK },
   { id: "ansa-cervicalis-right", hide: DEEP_NECK, turn: -260 },
-  { id: "lesser-occipital-nerve-left", hide: [] },
-  { id: "great-auricular-nerve-left", hide: [] },
-  { id: "transverse-cervical-nerve-left", hide: [] },
-  { id: "supraclavicular-nerves-left", hide: [] },
+  { id: "lesser-occipital-nerve-left", hide: ["Lymphatic"] },
+  { id: "great-auricular-nerve-left", hide: ["Lymphatic"] },
+  { id: "transverse-cervical-nerve-left", hide: ["Lymphatic"] },
+  { id: "supraclavicular-nerves-left", hide: ["Lymphatic"] },
   { id: "superior-thyroid-artery-left", hide: DEEP_NECK },
   { id: "superior-laryngeal-artery-left", hide: DEEP_NECK },
   { id: "thoracic-duct", hide: [...CHEST, "Digestive"], turn: 520 },
@@ -132,9 +134,13 @@ async function main() {
   mkdirSync(out, { recursive: true });
   const browser = await chromium.launch();
   const errors: string[] = [];
-  const only = process.argv[2];
+  const arg = process.argv[2];
+  const missing = arg === "--missing";
+  const only = missing ? undefined : arg;
   for (const shot of SHOTS_LIST) {
     if (only && !shot.id.includes(only)) continue;
+    const suffix = shot.body === "female" ? "-female" : "";
+    if (missing && existsSync(`${out}/${shot.id}${suffix}-side.png`)) continue;
     const page = await openPage(browser, errors, {
       viewport: { width: 1280, height: 860 },
     });
@@ -148,9 +154,10 @@ async function main() {
     await page.goto(`${BASE_URL}/explore?structure=${shot.id}`);
     await waitForModel(page);
     await setSystems(page, shot.hide);
-    await page.keyboard.press("f");
-    await page.waitForTimeout(1500);
-    const name = `${out}/${shot.id}${body === "female" ? "-female" : ""}`;
+    // The panel's Focus button (the "f" key is lost when no switch was clicked).
+    await page.getByRole("button", { name: "Focus", exact: true }).click();
+    await page.waitForTimeout(2500);
+    const name = `${out}/${shot.id}${suffix}`;
     await page.screenshot({ path: `${name}-front.png` });
     await drag(page, shot.turn ?? 260, shot.tilt ?? 0);
     await page.screenshot({ path: `${name}-side.png` });

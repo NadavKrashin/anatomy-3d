@@ -56,6 +56,7 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
 
 ## Files
 
+- `clearance-report.txt` — that report from the last full build.
 - `build_handmade.py` — entry point: builds everything, runs the clearance
   check on every piece, prints length / worst penetration / smallest gap /
   nearest neighbours per structure, exports the GLB and manifest.
