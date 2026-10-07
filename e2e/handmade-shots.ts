@@ -36,6 +36,8 @@ interface Shot {
   tilt?: number;
   /** Isolate it (the rest ghosted): the thighs hide the perineum from below. */
   isolate?: boolean;
+  /** Wheel steps to zoom in after focusing (millimetre-sized structures). */
+  zoom?: number;
 }
 
 const DEEP_NECK: System[] = ["Muscular", "Lymphatic", "Other"];
@@ -145,8 +147,14 @@ const SHOTS_LIST: Shot[] = [
   { id: "cremaster-muscle-left", hide: ["Lymphatic", "Other"], turn: 260 },
   // Priority 3: the middle ear's muscles are millimetres long inside the
   // temporal bone — isolated (everything else ghosted).
-  { id: "tensor-tympani-muscle-left", hide: [], turn: 260, isolate: true },
-  { id: "stapedius-muscle-left", hide: [], turn: 260, isolate: true },
+  {
+    id: "tensor-tympani-muscle-left",
+    hide: [],
+    turn: 260,
+    isolate: true,
+    zoom: 4,
+  },
+  { id: "stapedius-muscle-left", hide: [], turn: 260, isolate: true, zoom: 4 },
   {
     // On the inside of the back wall: the chest's contents hidden.
     id: "subcostal-muscles-left",
@@ -247,6 +255,15 @@ async function drag(page: Page, dx: number, dy: number) {
   await page.waitForTimeout(800);
 }
 
+/** Wheel in over the label's leader dot (the structure stays in view). */
+async function zoom(page: Page, steps = 0) {
+  for (let i = 0; i < steps; i++) {
+    await page.mouse.move(446, 430);
+    await page.mouse.wheel(0, -200);
+    await page.waitForTimeout(600);
+  }
+}
+
 async function main() {
   const out = `${SHOTS}/handmade`;
   mkdirSync(out, { recursive: true });
@@ -280,8 +297,15 @@ async function main() {
       await page.waitForTimeout(1500);
     }
     const name = `${out}/${shot.id}${suffix}`;
+    await zoom(page, shot.zoom);
     await page.screenshot({ path: `${name}-front.jpg`, quality: 85 });
+    if (shot.zoom) {
+      // Turning that close orbits it out of view: frame it again first.
+      await page.getByRole("button", { name: "Focus", exact: true }).click();
+      await page.waitForTimeout(2500);
+    }
     await drag(page, shot.turn ?? (shot.tilt ? 0 : 260), shot.tilt ?? 0);
+    await zoom(page, shot.zoom);
     await page.screenshot({ path: `${name}-side.jpg`, quality: 85 });
     console.log(`✓ ${shot.id} (${body})`);
     await page.close();

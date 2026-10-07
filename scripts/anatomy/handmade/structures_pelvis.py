@@ -227,7 +227,8 @@ def cremaster(b: Builder, side: str) -> None:
         v = unit(np.cross(t, u)) * (1 if np.cross(t, u)[1] < 0 else -1)  # anterior
         return u, v
 
-    part = Part(f"Cremaster muscle.{side}", "muscular", "muscle", "pelvis", sex="male")
+    # (It runs with the cord through the scrotum's neck: they may meet.)
+    part = Part(f"Cremaster muscle.{side}", "muscular", "muscle", "pelvis", sex="male", family=("Scrotum",))
     cord = (dd, f"Testis.{side}", rf"Epididymis\.{side}") + tuple(vessels)
     allow = Allow(touch=cord + (NODES, f"Inguinal ligament.{side}", r".*[Ss]crot.*", r"(Internal|External) abdominal oblique.*",
                                 r".*inguinal.*", r"Penis.*|Corpus .* of penis|Glans of penis", r".*[Dd]orsal .* of penis.*",
@@ -851,8 +852,9 @@ def scrotum(b: Builder) -> None:
     """
     Scrotum: a thin pouch of skin and dartos (2 mm) round both testes and
     epididymides and the lower spermatic cords, hanging behind the penis
-    between the thighs, open at the top here (where its skin continues onto
-    the perineum and the pubic region; the cords pass through). Built from
+    between the thighs, closed over its root by a low dome (where its skin
+    continues onto the perineum and the pubic region, which the model
+    lacks; the cords pass through it). Built from
     horizontal rings, every 1.5 mm: each the convex outline of what it holds
     at that height (testes, epididymides, the cords' contents and the
     cremaster), 1.2 mm out — round both testes, straight across the midline
@@ -899,9 +901,16 @@ def scrotum(b: Builder) -> None:
     # The floor: a quarter-ellipse 8 mm deep under the lowest ring.
     for t in np.linspace(0.2, 1.0, 5)[::-1][1:]:
         rows.insert(0, ring(levels[0] - 8 * MM * np.sqrt(1 - t * t), R[0] * t, yc[0]))
-    grid = np.array(rows)[::-1]  # top first: s (arc length) grows from the rim
+    body_rows = np.array(rows)[::-1]  # top first (for the septum)
+    # The root: closed by a low dome 5 mm high over the top ring — the skin
+    # turning onto the perineum and the pubic region, which the model
+    # lacks; the cords pass through it (as through the scrotal neck).
+    for t in np.linspace(0.2, 1.0, 5)[::-1][1:]:
+        rows.append(ring(levels[-1] + 5 * MM * np.sqrt(1 - t * t), R[-1] * t, yc[-1]))
+    grid = np.array(rows)[::-1]  # top first: s grows down from the root
     apex = np.array([0, yc[0], levels[0] - 8 * MM])
-    shell = pouch_shell(grid, apex, 2.0 * MM)
+    top = np.array([0, yc[-1], levels[-1] + 5 * MM])
+    shell = pouch_shell(grid, apex, 2.0 * MM, top)
     part = Part("Scrotum", "reproductive", "reproductive", "pelvis", sex="male",
                 family=("Cremaster muscle.l", "Cremaster muscle.r", "Septum of scrotum"))
     # Its neck: the cords pass through it, and at its root it lies against
@@ -911,13 +920,13 @@ def scrotum(b: Builder) -> None:
     allow = Allow(anywhere=(r".*external pudendal.*",), start=tuple(re.escape(n) for n in cord) + (r".*pudendal.*", r"Gracilis muscle\..", r"Adductor longus\.."),
                   touch=(r"Testis\..", r"Epididymis\..", r".*pudendal.*", r"Gracilis muscle\..", r"Adductor longus\..",
                          r"Great saphenous vein\..", r"Glans penis", r"Corpus (cavernosum|spongiosum) of penis"),
-                  zone=0.012)
+                  zone=0.014)
     b.solid(part, "pouch", shell, allow)
     b.add(part)
     # The septum: the pouch's inner section at x = 0 (the rings' front and
     # back points there), 0.3 mm inside it, ±0.75 mm.
     j_front, j_back = int(np.argmin(np.abs(phi - 1.5 * np.pi))), int(np.argmin(np.abs(phi - 0.5 * np.pi)))
-    prof = [(row[0, 2], row[j_front, 1] + 0.3 * MM, row[j_back, 1] - 0.3 * MM) for row in grid[:-1]]
+    prof = [(row[0, 2], row[j_front, 1] + 0.3 * MM, row[j_back, 1] - 0.3 * MM) for row in body_rows[:-1]]
     septum = Part("Septum of scrotum", "reproductive", "reproductive", "pelvis", sex="male",
                   family=("Scrotum", "Cremaster muscle.l", "Cremaster muscle.r"))
     b.solid(septum, "septum", midline_plate(prof, 0.75 * MM),
@@ -944,12 +953,13 @@ def star_radius(hull: np.ndarray, phi: np.ndarray) -> np.ndarray:
     return out
 
 
-def pouch_shell(grid: np.ndarray, apex: np.ndarray, thickness: float):
+def pouch_shell(grid: np.ndarray, apex: np.ndarray, thickness: float, top: np.ndarray | None = None):
     """A thick-walled pouch from rings (n, m, 3), top ring first, closed at
-    the bottom by `apex`: the inner surface on the rings, the outer one
-    `thickness` out along the surface normals, joined at the open rim."""
+    the bottom by `apex` (and at the top by `top`, else open there): the
+    inner surface on the rings, the outer one `thickness` out along the
+    surface normals (joined at the rim when open)."""
     n, m, _ = grid.shape
-    inner = np.vstack([grid.reshape(-1, 3), apex[None]])
+    inner = np.vstack([grid.reshape(-1, 3), apex[None]] + ([top[None]] if top is not None else []))
     tip = n * m
     F = []
     for i in range(n - 1):
@@ -958,31 +968,37 @@ def pouch_shell(grid: np.ndarray, apex: np.ndarray, thickness: float):
             F += [(a, b_, c), (a, c, d)]
     last = (n - 1) * m
     F += [(last + j, tip, last + (j + 1) % m) for j in range(m)]
+    if top is not None:
+        F += [(tip + 1, j, (j + 1) % m) for j in range(m)]
     F = np.array(F)
-    # Vertex normals (area-weighted), oriented away from the pouch's axis.
+    # Vertex normals (area-weighted), oriented away from each ring's centre
+    # (down at the bottom, up at the top).
     Vt = inner[F]
     fn = np.cross(Vt[:, 1] - Vt[:, 0], Vt[:, 2] - Vt[:, 0])
     N = np.zeros_like(inner)
     for k in range(3):
         np.add.at(N, F[:, k], fn)
     N /= np.linalg.norm(N, axis=1, keepdims=True)
-    centre = np.vstack([np.repeat(grid.mean(1), m, axis=0), apex[None]])[:, :2]
+    centre = np.vstack([np.repeat(grid.mean(1), m, axis=0), apex[None]] + ([top[None]] if top is not None else []))[:, :2]
     flip = (N[:, :2] * (inner[:, :2] - centre)).sum(1) < 0
     flip[tip] = N[tip, 2] > 0
+    if top is not None:
+        flip[tip + 1] = N[tip + 1, 2] < 0
     N[flip] *= -1
     outer = inner + N * thickness
     V = np.vstack([inner, outer])
     off = len(inner)
     faces = [F[:, ::-1], F + off]  # inner faces point into the pouch
-    rim = []
-    for j in range(m):
-        a, b_ = j, (j + 1) % m
-        rim += [(a, b_, off + b_), (a, off + b_, off + a)]
-    faces.append(np.array(rim))
+    if top is None:
+        rim = []
+        for j in range(m):
+            a, b_ = j, (j + 1) % m
+            rim += [(a, b_, off + b_), (a, off + b_, off + a)]
+        faces.append(np.array(rim))
     Fall = np.vstack(faces).astype(np.int32)
-    # s: distance down from the rim (for the allowances near its neck).
-    top = grid[0, :, 2].mean()
-    s = np.concatenate([top - inner[:, 2]] * 2)
+    # s: distance down from the top (for the allowances near its neck).
+    z0 = top[2] if top is not None else grid[0, :, 2].mean()
+    s = np.concatenate([z0 - inner[:, 2]] * 2)
     return V, Fall, s
 
 

@@ -725,7 +725,11 @@ medialis.l/.r` out of the femoral nerve (below the saphenous nerve's upper
   (`Body.facing`), and the final check always uses it; the superior root
   now descends medial to the IJV; the left phrenic's lung allowance is
   5.5 mm; the anal canal may sink ≤ 1.5 mm into the pararectal nodes. All
-  93 meshes rebuilt clearance-clean (120,504 triangles, 0.46 MB); both
+  93 meshes rebuilt clearance-clean (122,040 triangles, 0.46 MB); both
   recurrent nerves still pass the reviewer's hook test; audit: only skin
   layers float (the scrotum's floor ≤ 11 mm below the testes). `npm run
-verify` green (209).
+verify` green (209), `e2e:smoke` green (40); review shots for every new
+  structure and for the ones the fix moved (ansa, left phrenic and
+  pericardiacophrenic, anal canal); the scrotum, first an open pouch, is
+  now a closed sack (it looked like a bucket); the ear muscles' shots zoom
+  in (`zoom` in `e2e/handmade-shots.ts`).

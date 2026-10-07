@@ -738,7 +738,8 @@ the anal canal may sink ≤ 1.5 mm into the pararectal nodes.
 - **Subcostal muscles** as four separate oblique slips side by side (as in
   Netter's internal view of the posterior wall), not overlapping slips that
   read as one column.
-- **Scrotum** open at its root (the skin continues onto the perineum and
-  pubis, which the model doesn't have): a 2 mm pouch whose sections are the
-  convex outline of what it holds, so it is straight across the midline in
-  front and behind, as the skin is.
+- **Scrotum** as a closed 2 mm sack whose sections are the convex outline
+  of what it holds (straight across the midline in front and behind, as the
+  skin is), closed over its root by a low dome the cords pass through: an
+  open rim (the skin continues onto the perineum and pubis, which the model
+  lacks) read as a bucket in the review shots.
