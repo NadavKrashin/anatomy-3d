@@ -4,11 +4,16 @@ laryngeal nerves, cervical plexus branches, thoracic duct, …), placed in
 the Z-Anatomy body from landmarks measured on its meshes.
 
     ./bpyenv/bin/python scripts/anatomy/handmade/build_handmade.py -- \
-        out/decoded out/handmade.glb out/manifest-handmade.json [--only <regex>] [--preview out/preview.npz]
+        out/decoded out/handmade.glb out/manifest-handmade.json [--only <regex>] [--skip <regex>] [--preview out/preview.npz]
+
+--only builds the matching structures and stops (no export; for iterating);
+--skip leaves the matching ones out and still exports (e.g. structures not
+ready to ship yet).
 
 <out/decoded> holds the shipped GLBs decoded for Blender (README.md). Every
 structure's course, landmark and offset is documented where it is built:
-structures_neck.py, structures_trunk.py, structures_pelvis.py. Brief:
+structures_neck.py, structures_trunk.py, structures_pelvis.py,
+structures_head.py. Brief:
 docs/HANDMADE_MODELS_PROMPT.md. The script asserts each structure's
 clearance (nothing inside a mesh it should not touch, ≥ 0.5 mm from it)
 and prints its length, nearest neighbours and worst penetration.
@@ -29,6 +34,7 @@ from parts import Builder  # noqa: E402
 import structures_neck  # noqa: E402
 import structures_trunk  # noqa: E402
 import structures_pelvis  # noqa: E402
+import structures_head  # noqa: E402
 
 TISSUE_COLORS = {  # sRGB, roughness — the same as TISSUE_COLORS in z-anatomy/export_glb.py
     "muscle": ("#b4564c", 0.55),
@@ -98,12 +104,20 @@ def main() -> None:
     args = sys.argv[sys.argv.index("--") + 1 :]
     decoded, out_glb, out_manifest = (Path(a) for a in args[:3])
     only = re.compile(args[args.index("--only") + 1]) if "--only" in args else None
+    skip = re.compile(args[args.index("--skip") + 1]) if "--skip" in args else None
+    if skip is not None:
+        # want(name) in each module: `only` matches it — a pattern matching
+        # everything except what `skip` matches.
+        only_or_all = only.pattern if only is not None else ".*"
+        only_filter = re.compile(rf"^(?!.*(?:{skip.pattern}))(?=.*(?:{only_or_all}))")
+    else:
+        only_filter = only
     preview = Path(args[args.index("--preview") + 1]) if "--preview" in args else None
 
     body = Body(load_body(decoded))
     b = Builder(body)
-    for module in (structures_neck, structures_trunk, structures_pelvis):
-        module.build(b, only)
+    for module in (structures_neck, structures_trunk, structures_pelvis, structures_head):
+        module.build(b, only_filter)
 
     print(f"\n{'structure':48} {'length':>7} {'inside':>7} {'gap':>6}  worst / nearest")
     failures = []
