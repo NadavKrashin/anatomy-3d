@@ -29,7 +29,10 @@ HAMSTRINGS = (r"Semimembranosus muscle\..", r"Semitendinosus muscle\..", r"Long 
 # The perineal muscles meet in the perineal body and blend at their edges:
 # they may touch one another.
 PERINEAL = ("Perineal body", "External urethral sphincter", "Sphincter urethrae", "Compressor urethrae",
-            "Urethrovaginal sphincter", "Bulbospongiosus muscle", "Urethra (female)") + tuple(
+            "Urethrovaginal sphincter", "Bulbospongiosus muscle", "Urethra (female)", "Glans of clitoris",
+            "Body of clitoris", "Crus of clitoris.l", "Crus of clitoris.r", "Bulb of vestibule.l",
+            "Bulb of vestibule.r", "Greater vestibular gland.l", "Greater vestibular gland.r", "Vaginal vestibule",
+            "Labium minus.l", "Labium minus.r", "Labium majus.l", "Labium majus.r", "Mons pubis") + tuple(
     f"{n}.{s}" for n in ("Superficial transverse perineal muscle", "Deep transverse perineal muscle",
                          "Bulbospongiosus muscle", "Ischiocavernosus muscle", "Ischiocavernosus muscle (female)")
     for s in "lr")
@@ -269,6 +272,303 @@ def cremaster(b: Builder, side: str) -> None:
     b.add(part)
 
 
+# The female external genitalia's courses, for the muscles built over them
+# (perineum(): ischiocavernosus over the crura, bulbospongiosus over the bulbs).
+FEMALE: dict[str, np.ndarray] = {}
+CLITORIS = ("Glans of clitoris", "Body of clitoris", "Crus of clitoris.l", "Crus of clitoris.r",
+            "Suspensory ligament of clitoris")
+
+
+def clitoris(b: Builder) -> None:
+    """
+    Clitoris (item 13; user: placed by the bones, 2026-10-07). Crura (Ø 7 mm)
+    along the ischiopubic rami, deep to the ischiocavernosus, from in front
+    of the ischial tuberosity forward to the angle just below the front of
+    the pubic symphysis, where they join; the body (Ø 7 mm, 20 mm) runs from
+    the angle down and back to the glans (Ø ≈ 6 mm) at the front of the
+    vestibule. Suspensory ligament: from the front of the symphysis down to
+    the body at the angle. Parts of one whole, "Clitoris", female only.
+    """
+    S = b.body.V("Pubic symphysis")
+    low = S[S[:, 2] < S[:, 2].min() + 4 * MM]
+    # The angle: 7 mm below the symphysis' lower border, at its front.
+    J = np.array([0.0, low[:, 1].min() + 2 * MM, S[:, 2].min() - 7 * MM])
+    G = J + np.array([0, 10, -17]) * MM  # the body: down and back, ≈ 20 mm
+    family = CLITORIS + tuple(f"Ischiocavernosus muscle (female).{s}" for s in "lr") + PERINEAL
+    near = (NODES, HIP, r"Pubic symphysis", r"Gracilis muscle\..", r"Adductor (longus|brevis|magnus)\..",
+            r".*[Dd]orsal (artery|vein|nerve) of (penis|clitoris).*", r".*pudendal.*") + FLOOR
+    allow = Allow(touch=near)
+    body = Part("Body of clitoris", "reproductive", "reproductive", "pelvis", sex="female", group="Clitoris",
+                group_side="midline", family=family)
+    bp = b.vessel(body, "body", [J + np.array([0, -1, 1]) * MM, (J + G) / 2, G], 3.5 * MM, allow,
+                  start_taper=0.0, end_taper=0.0)
+    b.add(body)
+    E = bp.path[-1]
+    FEMALE["body"] = bp.path
+    glans = Part("Glans of clitoris", "reproductive", "reproductive", "pelvis", sex="female", group="Clitoris",
+                 group_side="midline", family=family)
+    t = unit(E - bp.path[-4])
+    b.solid(glans, "glans", ellipsoid(E + t * 2.5 * MM, np.eye(3), (3.0 * MM, 3.5 * MM, 3.0 * MM)),
+            Allow(touch=near + ("Body of clitoris",)))
+    b.add(glans)
+    FEMALE["glans"] = E + t * 2.5 * MM
+    FEMALE["angle"] = J
+    for side in ("l", "r"):
+        sx = SIDES[side]
+        # Along the ramus' lower medial edge, 3.5 mm in from it and 3.5 mm below.
+        pts = [J + np.array([sx * 3, 1, -1]) * MM]
+        for y in (low[:, 1].min() + 14 * MM, -0.015, 0.0, 0.012, 0.022):
+            pts.append(ramus_edge(b, side, y) + np.array([-sx * 3.5, 0, -3.5]) * MM)
+        crus = Part(f"Crus of clitoris.{side}", "reproductive", "reproductive", "pelvis", sex="female",
+                    group="Clitoris", group_side="midline", family=family)
+        cp = b.vessel(crus, "crus", pts, 3.5 * MM,
+                      Allow(start=("Body of clitoris",), touch=near, zone=0.008),
+                      start_taper=0.0, end_taper=0.018, tip=0.25)
+        b.add(crus)
+        FEMALE[f"crus.{side}"] = cp.path
+    # Suspensory ligament: a flat band from the symphysis' front, 6 mm above
+    # its lower border, down to the body at the angle.
+    top = b.body.ray("Pubic symphysis", (0.0, -0.2, S[:, 2].min() + 6 * MM), (0, 1, 0), 0.3)
+    lig = Part("Suspensory ligament of clitoris", "reproductive", "ligament", "pelvis", sex="female", family=family)
+    a0, a1 = top - np.array([0, 1.2, 0]) * MM, J - np.array([0, 3.5, -1.5]) * MM
+    b.vessel(lig, "ligament", [a0, (a0 + a1) / 2 - np.array([0, 1.0, 0]) * MM, a1], 1.2 * MM,
+             # it lies on the inferior pubic ligament and the interpubic disc
+             Allow(start=("Pubic symphysis", "Inferior pubic ligament", "Interpubic disc"), end=("Body of clitoris",),
+                   touch=near + ("Inferior pubic ligament", "Interpubic disc"), zone=0.008, end_zone=0.005),
+             start_taper=0.0, end_taper=0.0, flatten=0.5, up=(1, 0, 0), do_relax=False)
+    b.add(lig)
+
+
+VESTIBULE = ("Bulb of vestibule.l", "Bulb of vestibule.r", "Greater vestibular gland.l", "Greater vestibular gland.r")
+
+
+def vestibular_bulbs(b: Builder) -> None:
+    """
+    Bulbs of the vestibule (item 13): elongated erectile masses (≈ 10 mm
+    tall, 6 mm thick), one each side of the vaginal orifice, deep to the
+    bulbospongiosus, from beside the orifice's back forward past the
+    urethral orifice, their front ends tapering towards the glans (the
+    vestibule is long in this model: see clitoris()). Greater vestibular
+    (Bartholin's) glands: Ø ≈ 10 mm, at the bulbs' posterior ends (5 and 7
+    o'clock on the vaginal orifice), each duct opening into the vestibule
+    beside the orifice.
+    """
+    vag = b.body.V("Vagina")
+    intro = vag[vag[:, 2] < vag[:, 2].min() + 3 * MM]  # the vaginal orifice
+    half = max(abs(intro[:, 0]).max(), 3 * MM)
+    z0 = intro[:, 2].min()
+    uo = female_urethra_course(b)[-1]  # the external urethral orifice
+    glans = FEMALE.get("glans", np.array([0.0, -0.035, 0.808]))
+    family = VESTIBULE + CLITORIS + PERINEAL
+    near = (NODES, "Vagina", HIP, r"Gracilis muscle\..", r"Adductor (longus|brevis|magnus)\..",
+            r".*pudendal.*", r".*perineal (artery|vein|nerve).*", EAS) + FLOOR
+    for side in ("l", "r"):
+        sx = SIDES[side]
+        back = np.array([sx * (half + 6.5 * MM), intro[:, 1].max() - 2 * MM, z0 + 1 * MM])
+        pts = [back, np.array([sx * (half + 6.0 * MM), intro[:, 1].min(), z0 + 1.5 * MM]),
+               np.array([sx * 7.5 * MM, uo[1] - 6 * MM, z0 + 2 * MM]),
+               np.array([sx * 5.5 * MM, (uo[1] + glans[1]) / 2, (z0 + glans[2]) / 2 + 2 * MM]),
+               glans + np.array([sx * 4.0, 9.0, 1.0]) * MM]
+        bulb = Part(f"Bulb of vestibule.{side}", "reproductive", "reproductive", "pelvis", sex="female",
+                    family=family)
+        bp = b.vessel(bulb, "bulb", pts, 5.0 * MM, Allow(touch=near), start_taper=0.008, end_taper=0.035, tip=0.3,
+                      flatten=0.6, up=(0, 0, 1))
+        b.add(bulb)
+        FEMALE[f"bulb.{side}"] = bp.path
+        # Gland: behind the bulb's back end, the nearest spot with room (the
+        # external anal sphincter lies close behind the orifice here).
+        g = b.free(bp.path[0] + np.array([sx * 1.5, 5.0, -1.0]) * MM, 4.0 * MM, sex="female",
+                   allow=Allow(touch=near + (f"Bulb of vestibule.{side}",) + PERINEAL), search=0.006, clearance=0.0002)
+        gland = Part(f"Greater vestibular gland.{side}", "reproductive", "reproductive", "pelvis", sex="female",
+                     family=family)
+        b.solid(gland, "gland", ellipsoid(g, np.eye(3), (4.5 * MM, 5.0 * MM, 4.0 * MM)),
+                Allow(touch=near + PERINEAL + (f"Bulb of vestibule.{side}",), squeeze=(EAS, "Perineal body"),
+                      depth=1.5 * MM))
+        # Duct (≈ 15 mm): forward and medially to the vestibule beside the orifice.
+        opening = np.array([sx * (half + 2.5 * MM), (intro[:, 1].min() + intro[:, 1].max()) / 2, z0 - 1.0 * MM])
+        b.vessel(gland, "duct", [g + np.array([-sx * 2, -3, -1]) * MM, (g + opening) / 2 + np.array([0, 0, -1]) * MM,
+                                 opening], 0.5 * MM,
+                 Allow(start=(f"Greater vestibular gland.{side}", f"Bulb of vestibule.{side}"), touch=near + PERINEAL,
+                       end=("Vagina",), zone=0.005, end_zone=0.004), end_taper=0.003)
+        b.add(gland)
+
+
+VULVA = ("Vaginal vestibule", "Labium minus.l", "Labium minus.r", "Labium majus.l", "Labium majus.r", "Mons pubis")
+
+
+def heightfield_shell(grid: np.ndarray, out, thickness: float):
+    """A closed thin shell from an (n, m, 3) grid of surface points: the
+    inner surface on the grid, the outer one `thickness` along `out`."""
+    n, m, _ = grid.shape
+    out = np.asarray(out, float)
+    inner, outer = grid.reshape(-1, 3), (grid + out * thickness).reshape(-1, 3)
+    V = np.vstack([inner, outer])
+    off = n * m
+    idx = lambda i, j, k: k * off + i * m + j  # noqa: E731
+    F = []
+    for i in range(n - 1):
+        for j in range(m - 1):
+            a, b_, c, d = idx(i, j, 1), idx(i + 1, j, 1), idx(i + 1, j + 1, 1), idx(i, j + 1, 1)
+            F += [(a, b_, c), (a, c, d)]
+            a, b_, c, d = idx(i, j, 0), idx(i + 1, j, 0), idx(i + 1, j + 1, 0), idx(i, j + 1, 0)
+            F += [(a, c, b_), (a, d, c)]
+    edges = ([(i, 0) for i in range(n)], [(i, m - 1) for i in range(n)], [(0, j) for j in range(m)],
+             [(n - 1, j) for j in range(m)])
+    for e in edges:
+        for (i0, j0), (i1, j1) in zip(e[:-1], e[1:]):
+            a, b_, c, d = idx(i0, j0, 0), idx(i1, j1, 0), idx(i1, j1, 1), idx(i0, j0, 1)
+            F += [(a, b_, c), (a, c, d)]
+    s = np.concatenate([np.repeat(np.linspace(0, 1, n), m)] * 2) * 0.05
+    return V, np.array(F, np.int32), s
+
+
+def fold_sections(path, half_w, half_h, lateral):
+    """Ellipse sections (centre, u, v, a, b) along a fold's centreline: u
+    across (towards `lateral`), v up, both perpendicular to the course."""
+    out = []
+    for i, c in enumerate(path):
+        t = unit(path[min(i + 1, len(path) - 1)] - path[max(i - 1, 0)])
+        u = np.asarray(lateral, float)
+        u = unit(u - (u @ t) * t)
+        v = unit(np.cross(t, u))
+        v = v if v[2] > 0 else -v
+        out.append((c, u, v, half_w[i], half_h[i]))
+    return out
+
+
+def vulva(b: Builder) -> None:
+    """
+    The vulva's skin layer (item 13): thin shells (2–2.5 mm), the outermost
+    layer, peelable. Vaginal vestibule: the roof of the cleft between the
+    labia minora, from the glans to the fourchette, open round the urethral
+    and vaginal orifices. Labia minora: thin folds along the vestibule's
+    sides, from the glans back to the fourchette. Labia majora: larger folds
+    lateral to them, from the mons back to the posterior commissure in front
+    of the anus; the model has no skin or fat, so they may lie against the
+    thighs' medial surfaces. Mons pubis: a dome over the front of the pubic
+    bones. Placed by the bones (see clitoris()), so the vestibule is long.
+    """
+    vag = b.body.V("Vagina")
+    intro = vag[vag[:, 2] < vag[:, 2].min() + 3 * MM]
+    z0 = intro[:, 2].min()
+    uo = female_urethra_course(b)[-1]
+    glans = FEMALE.get("glans", np.array([0.0, -0.035, 0.808]))
+    # the vestibule: from the glans to the fourchette, 3 mm short of the
+    # rectum (which lies right behind the vaginal orifice in this model)
+    R = b.body.V("Sigmoid colon")
+    rect_front = R[R[:, 2] < z0 + 8 * MM][:, 1].min()
+    y_front, y_back = glans[1] + 2 * MM, min(intro[:, 1].max() + 5 * MM, rect_front - 3 * MM)
+    family = VULVA + VESTIBULE + CLITORIS + PERINEAL
+    near = (NODES, "Vagina", HIP, r"Gracilis muscle\..", r"Adductor (longus|brevis|magnus)\..", r".*pudendal.*",
+            r".*perineal (artery|vein|nerve).*", r".*labial.*", r"Round ligament of uterus\..", EAS, "Pubic symphysis",
+            r"Pyramidalis.*", r"Rectus abdominis.*", r".*inguinal.*", r"Linea alba",
+            r"(Internal|External) abdominal oblique muscle\..", r"Transversus abdominis muscle\..",
+            "Inferior pubic ligament", "Interpubic disc") + FLOOR
+    allow = Allow(touch=near + family, squeeze=(r"Gracilis muscle\..", r"Adductor (longus|brevis)\.."), depth=2.0 * MM)
+    ys = np.arange(y_front, y_back + 1e-9, 2 * MM)
+
+    def z_floor(y):  # the vestibule's roof: 3 mm below the orifices' level, rising to the glans
+        f = np.clip((y - y_front) / max(uo[1] - y_front, 1e-6), 0, 1)
+        return glans[2] - 1 * MM + (z0 - 3 * MM - (glans[2] - 1 * MM)) * f
+
+    # Vestibule: the upper half of a flat ellipse (6 mm across, 3 mm high)
+    # round the midline; round the orifices only its sides.
+    vest = Part("Vaginal vestibule", "reproductive", "reproductive", "pelvis", sex="female", family=family)
+
+    def roof(y_lo, y_hi, th0, th1, label):
+        sel = [y for y in ys if y_lo <= y <= y_hi]
+        if len(sel) < 2:
+            return
+        path = np.array([[0.0, y, z_floor(y)] for y in sel])
+        secs = fold_sections(path, np.full(len(path), 6 * MM), np.full(len(path), 3 * MM), (1, 0, 0))
+        b.solid(vest, label, arc_band(secs, th0, th1, 0.0, 2.0 * MM), allow)
+
+    open_lo, open_hi = uo[1] - 4 * MM, intro[:, 1].max() + 1 * MM
+    roof(y_front, open_lo, 0.0, np.pi, "front")
+    roof(open_lo, open_hi, 0.0, np.radians(55), "left side")
+    roof(open_lo, open_hi, np.radians(125), np.pi, "right side")
+    roof(open_hi, y_back, 0.0, np.pi, "back")
+    b.add(vest)
+
+    # Labia minora: along the vestibule's sides (7 mm out), hanging 5 mm below it.
+    for side in ("l", "r"):
+        sx = SIDES[side]
+        path = np.array([[sx * (3 + 4 * min(1, (y - y_front) / 0.015)) * MM, y, z_floor(y) - 3 * MM] for y in ys])
+        path = catmull_rom(path[:: max(1, len(path) // 8)], step=0.002)
+        n = len(path)
+        hw = np.full(n, 1.5 * MM)
+        hh = 5.0 * MM * np.clip(np.minimum(np.arange(n), n - 1 - np.arange(n)) / 6, 0.3, 1)
+        part = Part(f"Labium minus.{side}", "reproductive", "reproductive", "pelvis", sex="female", family=family)
+        b.solid(part, "fold", arc_band(fold_sections(path, hw, hh, (sx, 0, 0)), np.radians(-210), np.radians(30),
+                                       0.0, 1.5 * MM), allow)
+        b.add(part)
+
+    # Labia majora: from the mons' lower edge down and back, 13 mm out at
+    # the vestibule (lying against the thighs where they come closer), to
+    # the posterior commissure 8 mm behind the vaginal orifice.
+    S = b.body.V("Pubic symphysis")
+    sym_front = S[np.argmin(S[:, 1])]
+    thighs = (r"Gracilis muscle\.{s}", r"Adductor (longus|brevis|magnus)\.{s}")
+
+    def inside_thigh(side, p, want):
+        """x of p moved in so its fold (5 mm half-width + 2.5 mm shell) clears the thigh's medial surface by 0.3 mm."""
+        sx = SIDES[side]
+        walls = [b.body.ray(m, (0.0, p[1], p[2]), (sx, 0, 0), 0.08) for m in b.body.meshes
+                 if any(matches(t.replace("{s}", side), m) for t in thighs)]
+        walls = [abs(w[0]) for w in walls if w is not None]
+        x = min([want] + [w - 7.8 * MM for w in walls])
+        return np.array([sx * max(x, 5 * MM), p[1], p[2]])
+
+    for side in ("l", "r"):
+        sx = SIDES[side]
+        ctrl = [np.array([sx * 6 * MM, sym_front[1] - 4 * MM, S[:, 2].min() - 2 * MM]),
+                inside_thigh(side, np.array([0, y_front, z_floor(y_front) - 6 * MM]), 11 * MM),
+                inside_thigh(side, np.array([0, (y_front + uo[1]) / 2, z0 - 9 * MM]), 13 * MM),
+                inside_thigh(side, np.array([0, intro[:, 1].mean(), z0 - 9 * MM]), 13 * MM),
+                np.array([sx * 5 * MM, y_back + 3 * MM, z0 - 7 * MM])]
+        path = catmull_rom(ctrl, step=0.002)
+        n = len(path)
+        taper_ = np.clip(np.minimum(np.arange(n), n - 1 - np.arange(n)) / 10, 0.35, 1)
+        part = Part(f"Labium majus.{side}", "reproductive", "reproductive", "pelvis", sex="female", family=family)
+        b.solid(part, "fold", arc_band(fold_sections(path, 5 * MM * taper_, 8 * MM * taper_, (sx, 0, 0)),
+                                       np.radians(-215), np.radians(35), 0.0, 2.5 * MM), allow)
+        b.add(part)
+
+    # Mons pubis: a pad over the front of the pubic bones and the muscles in
+    # front of them, 26 mm to each side and from the symphysis' lower border
+    # up 30 mm (less at the sides): a shell (2.5 mm) in front of the frontmost
+    # of them with up to 7 mm of fat between (3 mm at its edges).
+    mons = Part("Mons pubis", "reproductive", "reproductive", "pelvis", sex="female", family=family)
+    front_of = [m for m in b.body.meshes if any(matches(q, m) for q in (
+        "Pubic symphysis", HIP, r"Pectineus muscle\..", r"Adductor (longus|brevis)\..", r"Rectus abdominis.*",
+        r"Pyramidalis.*", r"Gracilis muscle\..", r"Inguinal ligament\..", r".*pudendal.*", r"Round ligament of uterus\..",
+        r"(Internal|External) abdominal oblique muscle\..", r"Transversus abdominis muscle\..", r"Linea alba",
+        r".*[Rr]ectus sheath.*"))
+                and b.body.visible(m, "female")]
+    # Each column (x) lies in front of the frontmost thing in it (rays every
+    # 2 mm up the column), smoothed across x; the outline is rounded (the
+    # columns shorten towards the sides) and the fat thins to the edges.
+    xs = np.arange(-26 * MM, 26 * MM + 1e-9, 2 * MM)
+    z_lo = S[:, 2].min()
+    front = []
+    for x in xs:
+        hits = [b.body.ray(m, (x, -0.25, z), (0, 1, 0), 0.4) for m in front_of
+                for z in np.arange(z_lo, z_lo + 30 * MM + 1e-9, 2 * MM)]
+        front.append(min((h[1] for h in hits if h is not None), default=sym_front[1]))
+    front = np.array(front)
+    for _ in range(4):
+        front[1:-1] = np.minimum(front[1:-1], 0.25 * front[:-2] + 0.5 * front[1:-1] + 0.25 * front[2:])
+    grid = np.zeros((len(xs), 13, 3))
+    for i, x in enumerate(xs):
+        k = 1 - (x / (27 * MM)) ** 2
+        height = 30 * MM * (0.55 + 0.45 * k)
+        for j, f in enumerate(np.linspace(0, 1, 13)):
+            fat = (3 + 4 * k * np.sin(np.pi * f)) * MM
+            grid[i, j] = (x, front[i] - fat, z_lo + height * f)
+    b.solid(mons, "pad", heightfield_shell(grid, np.array([0, -1.0, 0]), 2.5 * MM), allow)
+    b.add(mons)
+
+
 def perineum(b: Builder, want) -> None:
     eas_v = np.vstack([b.body.V("External anal sphincter.l"), b.body.V("External anal sphincter.r")])
     eas_front = eas_v[np.argmin(eas_v[:, 1])]
@@ -419,10 +719,22 @@ def perineum(b: Builder, want) -> None:
             pts = [pb_c + np.array([sx * 4, -3, 2]) * MM, orifice_side,
                    orifice_side + np.array([-sx * 1.5, -16, 3]) * MM,
                    np.array([sx * 4 * MM, sym_low[1] + 22 * MM, sym_low[2] - 18 * MM])]
+            if f"bulb.{side}" in FEMALE:
+                # Over the bulb's outer surface (its half-thickness 3 mm + the
+                # band's 1.25 mm + 0.3 mm, laterally and a little down), from
+                # the perineal body forward to the side of the clitoris' body.
+                bulb_path = FEMALE[f"bulb.{side}"]
+                out = unit(np.array([sx, 0, -0.3]))
+                idx = np.linspace(0, int(len(bulb_path) * 0.8), 5).astype(int)
+                body = FEMALE["body"]
+                pts = ([pb_c + np.array([sx * 4, -3, 2]) * MM] + [bulb_path[i] + out * 4.6 * MM for i in idx] +
+                       [body[int(len(body) * 0.6)] + np.array([sx * 5.5, 0, 0]) * MM])
             part = Part(f"Bulbospongiosus muscle.{side}", "muscular", "muscle", "pelvis", sex="female",
                         group="Bulbospongiosus muscle", group_side="midline", family=PERINEAL)
             b.vessel(part, "band", pts, 2.5 * MM,
-                     Allow(start=("Perineal body",), touch=("Vagina", "Perineal body", NODES) + FLOOR, zone=0.005),
+                     Allow(start=("Perineal body",), end=("Body of clitoris",),
+                           touch=("Vagina", "Perineal body", NODES, r"Gracilis muscle\..", r".*pudendal.*") + FLOOR,
+                           zone=0.005, end_zone=0.005),
                      start_taper=0.004, end_taper=0.006, tip=0.5, flatten=0.5, up=(0, 0, 1))
             b.add(part)
 
@@ -454,10 +766,20 @@ def perineum(b: Builder, want) -> None:
             # Female: a band along the same course on the ramus, where the
             # clitoris' crus lies (≈ 30 × 7 mm; built later, item 13).
             axis = [tub] + [sec[0] + np.array([0, 0, -sec[4] * 0.4]) for sec in secs]
+            if f"crus.{side}" in FEMALE:
+                # Over the crus' lower medial surface (its radius 3.5 mm + the
+                # band's half-thickness 1.65 mm + 0.3 mm), from the tuberosity
+                # forward to 15 mm short of the angle.
+                crus_path = FEMALE[f"crus.{side}"]
+                sc = np.r_[0, np.cumsum(np.linalg.norm(np.diff(crus_path, axis=0), axis=1))]
+                keep = crus_path[(sc > 15 * MM)][::-1]  # back to front
+                down_in = unit(np.array([-sx * 0.6, 0, -1]))
+                axis = [tub] + [q + down_in * 5.45 * MM for q in keep[:: max(1, len(keep) // 5)]]
             part = Part(f"Ischiocavernosus muscle (female).{side}", "muscular", "muscle", "pelvis", sex="female",
                         family=PERINEAL)
             b.vessel(part, "band", axis, 3.0 * MM,
-                     Allow(touch=(HIP, NODES, "Perineal body") + FLOOR,
+                     Allow(touch=(HIP, NODES, "Perineal body", r"Gracilis muscle\..", r"Adductor (longus|brevis|magnus)\..",
+                                  r".*pudendal.*") + FLOOR,
                            start=(HIP,) + HAMSTRINGS + (r"Adductor magnus\..",), zone=0.008),
                      start_taper=0.004, end_taper=0.006, tip=0.5, flatten=0.55, up=(sx, 0, -1))
             b.add(part)
@@ -524,6 +846,12 @@ def build(b: Builder, only) -> None:
     def want(name: str) -> bool:
         return only is None or bool(only.search(name))
 
+    if any(want(n) for n in CLITORIS):
+        clitoris(b)
+    if any(want(n) for n in VESTIBULE):
+        vestibular_bulbs(b)
+    if any(want(n) for n in VULVA):
+        vulva(b)
     perineum(b, want)
     if want("Anal canal") or want("Internal anal sphincter"):
         anal_canal(b)

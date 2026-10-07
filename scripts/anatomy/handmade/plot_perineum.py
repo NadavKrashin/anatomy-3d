@@ -32,8 +32,12 @@ COMMON = ["Perineal body", "Superficial transverse perineal muscle.l", "Superfic
           "Deep transverse perineal muscle.l", "Deep transverse perineal muscle.r", "Anal canal", "Internal anal sphincter"]
 MALE_OURS = ["External urethral sphincter", "Bulbospongiosus muscle", "Ischiocavernosus muscle.l", "Ischiocavernosus muscle.r"]
 FEMALE_OURS = ["Sphincter urethrae", "Compressor urethrae", "Urethrovaginal sphincter", "Bulbospongiosus muscle.l",
-               "Bulbospongiosus muscle.r", "Ischiocavernosus muscle (female).l", "Ischiocavernosus muscle (female).r"]
-PALETTE = [matplotlib.colormaps["tab20"](i) for i in (0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 1, 3, 5, 7)]
+               "Bulbospongiosus muscle.r", "Ischiocavernosus muscle (female).l", "Ischiocavernosus muscle (female).r",
+               "Urethra (female)", "Crus of clitoris.l", "Crus of clitoris.r", "Body of clitoris", "Glans of clitoris",
+               "Bulb of vestibule.l", "Bulb of vestibule.r", "Greater vestibular gland.l", "Greater vestibular gland.r",
+               "Labium minus.l", "Labium minus.r", "Vaginal vestibule"]
+MALE_OURS_EXTRA = ["Bulbourethral gland.l", "Bulbourethral gland.r"]
+PALETTE = [matplotlib.colormaps["tab20"](i) for i in (0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19)]
 L = np.array([0.3, -0.5, -0.8]); L /= np.linalg.norm(L)
 
 def tris(V, F, color, zmax):
@@ -54,7 +58,8 @@ def panel(ax, sex, ours_list, extra):
         T, C = tris(V, F, col, 0.84)
         polys.append(T); cols.append(C)
     handles = []
-    for i, name in enumerate(COMMON + ours_list):
+    names = [n for n in COMMON + ours_list if f"v_{n}" in prev.files]
+    for i, name in enumerate(names):
         V, F = ours(name)
         col = PALETTE[i % len(PALETTE)]
         T, C = tris(V, F, col, 9)
@@ -64,12 +69,12 @@ def panel(ax, sex, ours_list, extra):
     order = np.argsort(-T[:, :, 2].mean(1))  # far (high) first; we look up from below
     P = T[order][:, :, [0, 1]] * 1000 * np.array([1, -1])  # x right = body's left, anterior up
     ax.add_collection(PolyCollection(P, facecolors=C[order], edgecolors="none"))
-    ax.set_xlim(-75, 75); ax.set_ylim(-90, 30); ax.set_aspect("equal")
+    ax.set_xlim(-75, 75); ax.set_ylim(-90, 65); ax.set_aspect("equal")
     ax.set_title(f"{sex} perineum from below (anterior up, body's left on the right), mm", fontsize=10)
     ax.legend(handles=handles, fontsize=7, loc="lower left", bbox_to_anchor=(1.01, 0), frameon=False)
 
-fig, axes = plt.subplots(2, 1, figsize=(10, 11))
-panel(axes[0], "Male", MALE_OURS, MALE)
+fig, axes = plt.subplots(2, 1, figsize=(10, 13))
+panel(axes[0], "Male", MALE_OURS + MALE_OURS_EXTRA, MALE)
 panel(axes[1], "Female", FEMALE_OURS, FEMALE)
 fig.tight_layout()
 fig.savefig(sys.argv[2], dpi=110)

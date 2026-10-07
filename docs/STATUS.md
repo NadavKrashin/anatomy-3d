@@ -580,6 +580,16 @@ medialis.l/.r` out of the femoral nerve (below the saphenous nerve's upper
   ≈ 70 mm vestibule, by the vagina a clitoris far from the symphysis —
   user: build to the bones (decisions table). Items 16 and 18 — user:
   split them out of the parent meshes.
+  **Item 13 built** (to the bones): clitoris (group "Clitoris": crura along
+  the ischiopubic rami, body from the angle 7 mm below the symphysis down
+  and back to the glans; suspensory ligament from the symphysis' front);
+  bulbs of the vestibule beside the vaginal orifice, tapering forward to
+  the glans; greater vestibular glands at the bulbs' back ends with ducts to
+  the vestibule; vaginal vestibule (roof, open round the orifices), labia
+  minora and majora (fitted inside the thighs' medial surfaces), mons pubis
+  (a pad in front of the pubis and the muscles there) — thin shells, the
+  outer layer. The female ischiocavernosus and bulbospongiosus are refitted
+  over the new crura and bulbs. `plot_perineum.py` shows them all.
 - **2026-10-07 · review fixes to priority 1** (a second session measured
   the shipped paths against the brief): (1) the **right recurrent laryngeal
   nerve** passed round the subclavian artery's medial end beside the
