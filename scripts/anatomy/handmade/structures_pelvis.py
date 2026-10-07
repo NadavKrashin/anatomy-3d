@@ -1,7 +1,7 @@
 """
 Hand-built perineum: perineal body, perineal muscles (both bodies, male and
 female versions where they differ), anal canal and internal anal sphincter;
-male bulbourethral glands and cremaster.
+male bulbourethral glands and cremaster; female urethra.
 Courses: Gray's Anatomy for Students, Moore, Netter (textbook-typical).
 Landmarks are measured on the named meshes; offsets are stated with their
 reason. Frame: metres, +x = the body's left, −y = anterior, +z = up.
@@ -29,7 +29,7 @@ HAMSTRINGS = (r"Semimembranosus muscle\..", r"Semitendinosus muscle\..", r"Long 
 # The perineal muscles meet in the perineal body and blend at their edges:
 # they may touch one another.
 PERINEAL = ("Perineal body", "External urethral sphincter", "Sphincter urethrae", "Compressor urethrae",
-            "Urethrovaginal sphincter", "Bulbospongiosus muscle") + tuple(
+            "Urethrovaginal sphincter", "Bulbospongiosus muscle", "Urethra (female)") + tuple(
     f"{n}.{s}" for n in ("Superficial transverse perineal muscle", "Deep transverse perineal muscle",
                          "Bulbospongiosus muscle", "Ischiocavernosus muscle", "Ischiocavernosus muscle (female)")
     for s in "lr")
@@ -102,6 +102,30 @@ def membranous_urethra(b: Builder) -> tuple[np.ndarray, np.ndarray]:
     _, _, Vt = np.linalg.svd(local - local.mean(0))
     ax = unit(Vt[0] if Vt[0][2] > 0 else -Vt[0])
     return local.mean(0), ax
+
+
+def female_urethra(b: Builder) -> None:
+    """
+    Female urethra (item 14): `Urethra (female)` — joined to the model's
+    (male-only) Urethra as one structure by build.ts. From the neck of the
+    Atlas bladder down in front of the vagina, behind the pubic symphysis, to
+    the external urethral orifice in front of the vaginal opening; Ø 6 mm.
+    Its course is female_urethra_course(), round which the female sphincter
+    parts were built; it starts 3 mm up inside the bladder neck. The Atlas
+    vagina lies far back in our male pelvis, so the course is nearly vertical
+    (≈ 35 mm, textbook 38–40 mm, down and forward).
+    """
+    uc = female_urethra_course(b)
+    t0 = unit(uc[0] - uc[3])
+    path = catmull_rom([uc[0] + t0 * 3 * MM] + [uc[i] for i in range(0, len(uc), max(1, len(uc) // 6))] + [uc[-1]],
+                       step=0.002)
+    part = Part("Urethra (female)", "urinary", "urinary", "pelvis", sex="female", family=PERINEAL)
+    from shapes import tube, taper  # noqa: PLC0415
+
+    b.solid(part, "urethra", tube(path, taper(path, 3.0 * MM, end=0.003, tip=0.8), 16),
+            Allow(start=(r".*urinary bladder.*", "Urinary bladder"),
+                  touch=("Vagina", NODES) + FLOOR + PERINEAL, zone=0.006))
+    b.add(part)
 
 
 def bulbourethral_glands(b: Builder) -> None:
@@ -508,3 +532,5 @@ def build(b: Builder, only) -> None:
     for side in ("l", "r"):
         if want("Cremaster"):
             cremaster(b, side)
+    if want("Urethra (female)") or want("Female urethra"):
+        female_urethra(b)

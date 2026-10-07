@@ -560,6 +560,15 @@ All verified by `npm run e2e:smoke` against a production build.
   model's "Femoral nerve" mesh continues as it to vastus medialis
   (z ≈ 630–650 mm); same question as item 16. Checked the rest: none of
   the other priority-2 structures lies along an existing mesh.
+  Female urethra (item 14): `Urethra (female)` (joins the male-only
+  Urethra as one structure by name), Ø 6 mm along the course the female
+  sphincters were built round, from 3 mm inside the Atlas bladder neck to
+  in front of the vaginal opening (≈ 35 mm, nearly vertical: the Atlas
+  vagina sits far back). Item 13 (female external genitalia) waits for
+  the user: the Atlas vagina's lower end lies ≈ 60 mm behind the symphysis
+  and ≈ 20 mm in front of the anus (the organs were shifted 27 mm back so
+  the bladder sits on our ureters), so placing them by the bones gives a
+  ≈ 70 mm vestibule, by the vagina a clitoris far from the symphysis.
 - **2026-10-07 · review fixes to priority 1** (a second session measured
   the shipped paths against the brief): (1) the **right recurrent laryngeal
   nerve** passed round the subclavian artery's medial end beside the
