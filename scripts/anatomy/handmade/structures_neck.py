@@ -129,7 +129,7 @@ def phrenic(b: Builder, side: str) -> None:
     # nerve lies against the back of the carotid sheath (common carotid).
     # The ansa's inferior root and its twig to the omohyoid's inferior belly
     # cross in front of it on the muscle (the model's neck is compressed).
-    ansa = rf"(Inferior root|Muscular branches) of ansa cervicalis\.{side}"
+    ansa = rf"(Superior root|Inferior root|Muscular branches) of ansa cervicalis\.{side}"
     trunk_allow = Allow(touch=(sa, NODES, rf"Scalenus medius muscle\.{side}", sided("Left common carotid artery", side),
                                ansa), start=(sa, r"Longus (capitis|colli) muscle\..", rf"Vagus nerve \(X\)\.{side}"), end=("Diaphragm",), zone=0.004,
                         squeeze=(LUNG,), depth=5.0 * MM)
@@ -597,8 +597,8 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
               rf"(Sterno(hyoid|thyroid)|Omohyoid|Thyrohyoid) muscle\.{side}",
               rf"Posterior belly of digastric muscle\.{side}", rf"Stylohyoid (ligament|muscle)\.{side}",
               )
-    # The inferior root and the omohyoid twig cross in front of the phrenic
-    # nerve on scalenus anterior (compressed neck): they may touch it.
+    # The roots and the omohyoid twig cross in front of the phrenic nerve on
+    # scalenus anterior (compressed neck): they may touch it; the loop not.
     crossing = sheath + (f"Phrenic nerve.{side}",)
     soft = Allow(touch=sheath, squeeze=(scm,), depth=1.5 * MM)
 
@@ -635,7 +635,7 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
     sup = Part(names["sup"], "nervous", "nerve", "neck", group=group, family=family)
     sp = b.vessel(sup, "root", sup_pts + [loop_pt], R,
                   Allow(start=(xii, f"Occipital artery.{side}", rf"Stylohyoid (ligament|muscle)\.{side}"),
-                        touch=sheath, zone=0.008,
+                        touch=crossing, zone=0.008,
                         squeeze=(scm,), depth=1.5 * MM), end_taper=0.0)
     b.add(sup)
     L = sp.path[-1]
