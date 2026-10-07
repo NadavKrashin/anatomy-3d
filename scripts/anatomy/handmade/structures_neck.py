@@ -127,7 +127,11 @@ def phrenic(b: Builder, side: str) -> None:
     # into the lung surface, at most 5 mm (reported).
     # Scalenus medius lies against the junction's back at the top, and the
     # nerve lies against the back of the carotid sheath (common carotid).
-    trunk_allow = Allow(touch=(sa, NODES, rf"Scalenus medius muscle\.{side}", sided("Left common carotid artery", side)), start=(sa, r"Longus (capitis|colli) muscle\..", rf"Vagus nerve \(X\)\.{side}"), end=("Diaphragm",), zone=0.004,
+    # The ansa's inferior root and its twig to the omohyoid's inferior belly
+    # cross in front of it on the muscle (the model's neck is compressed).
+    ansa = rf"(Inferior root|Muscular branches) of ansa cervicalis\.{side}"
+    trunk_allow = Allow(touch=(sa, NODES, rf"Scalenus medius muscle\.{side}", sided("Left common carotid artery", side),
+                               ansa), start=(sa, r"Longus (capitis|colli) muscle\..", rf"Vagus nerve \(X\)\.{side}"), end=("Diaphragm",), zone=0.004,
                         squeeze=(LUNG,), depth=5.0 * MM)
 
     # On the muscle: centre 1 mm + radius in front of its surface.
@@ -589,8 +593,12 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
     R = 0.5 * MM
     # The ansa lies on (in) the carotid sheath and its twigs run between the
     # infrahyoid muscles: it may lie against all of them (never inside).
-    sheath = (NODES, ica, cca, ijv, rf"(Sterno(hyoid|thyroid)|Omohyoid|Thyrohyoid) muscle\.{side}",
-              rf"Posterior belly of digastric muscle\.{side}", rf"Stylohyoid (ligament|muscle)\.{side}")
+    sheath = (NODES, ica, cca, ijv, f"External carotid artery.{side}",
+              rf"(Sterno(hyoid|thyroid)|Omohyoid|Thyrohyoid) muscle\.{side}",
+              rf"Posterior belly of digastric muscle\.{side}", rf"Stylohyoid (ligament|muscle)\.{side}",
+              # the inferior root and the omohyoid twig cross in front of the
+              # phrenic nerve on scalenus anterior (compressed neck)
+              f"Phrenic nerve.{side}")
     soft = Allow(touch=sheath, squeeze=(scm,), depth=1.5 * MM)
 
     # Superior root: from XII where it turns forward (its slab at the
