@@ -483,3 +483,15 @@ All verified by `npm run e2e:smoke` against a production build.
   `scripts/anatomy/decode-glb.ts` writes shipped GLBs uncompressed for
   Blender. **Next (user):** hand-build the last missing structures with
   another AI from `docs/HANDMADE_MODELS_PROMPT.md`.
+- **2026-10-06/07 · session 4 (in progress)** — Hand-built structures,
+  priority 1 of `docs/HANDMADE_MODELS_PROMPT.md` (user: priority 1 only,
+  screenshots of each, no merge to `main` until they say so). Branch
+  `claude/handmade-structures`. Work so far: `scripts/anatomy/handmade/`
+  (bpy): body cache of the decoded GLBs, landmark queries, clearance
+  machinery (per-mesh BVH + generalized winding number, so open and nested
+  meshes are handled; relaxation of spline control points; explicit,
+  reported allowances where the model leaves no room), geometry (spline,
+  parallel-transport tubes). Built and clearance-clean so far: phrenic
+  nerves, recurrent laryngeal nerves, superior laryngeal nerves and
+  branches, superior thyroid and superior laryngeal arteries. Not yet in the
+  app (no GLB/manifest wired in).
