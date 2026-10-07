@@ -634,7 +634,9 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
     loop_pt = b.free(loop_pt, R * 1.1 + 1.5 * MM, allow=Allow(touch=(ijv, cca, NODES)), search=0.006)
     sup = Part(names["sup"], "nervous", "nerve", "neck", group=group, family=family)
     sp = b.vessel(sup, "root", sup_pts + [loop_pt], R,
-                  Allow(start=(xii, f"Occipital artery.{side}", rf"Stylohyoid (ligament|muscle)\.{side}"),
+                  # (the hypoglossal crosses stylohyoid and stylopharyngeus where the root leaves it)
+                  Allow(start=(xii, f"Occipital artery.{side}", rf"Stylohyoid (ligament|muscle)\.{side}",
+                               rf"Stylopharyngeus muscle\.{side}"),
                         touch=crossing, zone=0.008,
                         squeeze=(scm,), depth=1.5 * MM), end_taper=0.0)
     b.add(sup)
