@@ -57,6 +57,8 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
 ## Files
 
 - `clearance-report.txt` — that report from the last full build.
+- `plot_perineum.py` — the perineum from below in both bodies, a review
+  image (the app's camera can't look up between the thighs).
 - `audit_handmade.py` — the audit of `docs/DECISIONS.md` → "Audit" for these meshes (sides, regions by height, mutual duplicates, floating parts), on the shipped GLBs; usage in its docstring.
 - `build_handmade.py` — entry point: builds everything, runs the clearance
   check on every piece, prints length / worst penetration / smallest gap /
@@ -64,7 +66,9 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
 - `body_cache.py` — the decoded GLBs as numpy arrays (Blender frame: metres,
   Z up, +X = the body's left, −Y = anterior).
 - `landmarks.py` — queries on named meshes (extreme vertices, ray casts,
-  nearest points, slabs) and the clearance machinery (below).
+  nearest points, slabs, cross-sections cut from the triangles — the
+  meshes are too coarse for vertex slabs) and the clearance machinery
+  (below).
 - `shapes.py` — centripetal Catmull-Rom paths resampled every 2 mm,
   parallel-transport tubes (10–12 segments, capped, tapered), flat bands,
   sleeves (sphincter cuffs), ellipsoids, spindles, curved sheets (`arc_band`).
@@ -127,7 +131,8 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
   - cervical plexus branches through the platysma (≤ 1.5 mm); ansa into the
     SCM (≤ 1.5 mm, the IJV passes through it here);
   - male external urethral sphincter into the prostate apex / bulb / crura
-    (≤ 2 mm); internal anal sphincter into the external one (≤ 2 mm).
+    (≤ 2 mm); internal anal sphincter into the external one (≤ 2 mm);
+    male bulbospongiosus into the crura where they abut the bulb (≤ 1 mm).
 
 ## Model quirks met (Z-Anatomy and the fitted female organs)
 

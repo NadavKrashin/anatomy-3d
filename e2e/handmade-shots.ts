@@ -16,6 +16,7 @@ import { BASE_URL, openPage, SHOTS, waitForModel } from "./helpers";
 type System =
   | "Skeletal"
   | "Muscular"
+  | "Nervous"
   | "Respiratory"
   | "Digestive"
   | "Lymphatic"
@@ -29,9 +30,11 @@ interface Shot {
   id: string;
   hide: System[];
   body?: "male" | "female";
-  /** Horizontal drag (px) for the second view; vertical drag for a view from below. */
+  /** Horizontal drag (px) for the second view; or a vertical one (negative = up = a view from below). */
   turn?: number;
   tilt?: number;
+  /** Isolate it (the rest ghosted): the thighs hide the perineum from below. */
+  isolate?: boolean;
 }
 
 const DEEP_NECK: System[] = ["Muscular", "Lymphatic", "Other"];
@@ -65,24 +68,49 @@ const SHOTS_LIST: Shot[] = [
   { id: "supraclavicular-nerves-left", hide: ["Lymphatic"] },
   { id: "superior-thyroid-artery-left", hide: DEEP_NECK },
   { id: "superior-laryngeal-artery-left", hide: DEEP_NECK },
-  { id: "thoracic-duct", hide: [...CHEST, "Digestive"], turn: 520 },
+  {
+    // Its own system (Lymphatic) stays on; the spinal cord would hide it from behind.
+    id: "thoracic-duct",
+    hide: [
+      "Muscular",
+      "Skeletal",
+      "Respiratory",
+      "Endocrine",
+      "Other",
+      "Digestive",
+      "Nervous",
+    ],
+    turn: 520,
+  },
   { id: "cisterna-chyli", hide: [...BELLY, "Digestive", "Urinary"], turn: 520 },
   { id: "cystic-artery", hide: BELLY },
-  { id: "short-gastric-arteries", hide: BELLY, turn: 260 },
-  { id: "perineal-body", hide: PERINEUM, tilt: 260 },
+  { id: "short-gastric-arteries", hide: BELLY, turn: -260 },
+  { id: "perineal-body", hide: PERINEUM, tilt: -150, isolate: true },
   {
     id: "superficial-transverse-perineal-muscle-left",
     hide: PERINEUM,
-    tilt: 260,
+    tilt: -150,
+    isolate: true,
   },
-  { id: "deep-transverse-perineal-muscle-left", hide: PERINEUM, tilt: 260 },
+  {
+    id: "deep-transverse-perineal-muscle-left",
+    hide: PERINEUM,
+    tilt: -150,
+    isolate: true,
+  },
   {
     id: "external-urethral-sphincter",
     hide: ["Digestive", "Other"],
-    tilt: 260,
+    tilt: -150,
+    isolate: true,
   },
-  { id: "bulbospongiosus-muscle", hide: PERINEUM, tilt: 260 },
-  { id: "ischiocavernosus-muscle-left", hide: PERINEUM, tilt: 260 },
+  { id: "bulbospongiosus-muscle", hide: PERINEUM, tilt: -150, isolate: true },
+  {
+    id: "ischiocavernosus-muscle-left",
+    hide: PERINEUM,
+    tilt: -150,
+    isolate: true,
+  },
   { id: "anal-canal", hide: ["Urinary", "Reproductive", "Other"], turn: 260 },
   {
     id: "internal-anal-sphincter",
@@ -90,18 +118,32 @@ const SHOTS_LIST: Shot[] = [
     turn: 260,
   },
   // Female body
-  { id: "perineal-body", hide: PERINEUM, tilt: 260, body: "female" },
+  {
+    id: "perineal-body",
+    hide: PERINEUM,
+    tilt: -150,
+    isolate: true,
+    body: "female",
+  },
   {
     id: "external-urethral-sphincter",
     hide: ["Digestive", "Other"],
-    tilt: 260,
+    tilt: -150,
+    isolate: true,
     body: "female",
   },
-  { id: "bulbospongiosus-muscle", hide: PERINEUM, tilt: 260, body: "female" },
+  {
+    id: "bulbospongiosus-muscle",
+    hide: PERINEUM,
+    tilt: -150,
+    isolate: true,
+    body: "female",
+  },
   {
     id: "ischiocavernosus-muscle-left",
     hide: PERINEUM,
-    tilt: 260,
+    tilt: -150,
+    isolate: true,
     body: "female",
   },
 ];
@@ -117,14 +159,24 @@ async function setSystems(page: Page, hide: System[]) {
   }
 }
 
+/**
+ * Turn the camera by dragging. The drag ends over an overlay (panel, legend,
+ * search bar, toolbar), never over the body: a drag released over a mesh
+ * counts as a click there and selects it (R3F fires onClick after a drag).
+ * Viewport 1280 × 860.
+ */
 async function drag(page: Page, dx: number, dy: number) {
-  const box = await page.locator("canvas").first().boundingBox();
-  if (!box) return;
-  const x = box.x + box.width / 2;
-  const y = box.y + box.height / 2;
-  await page.mouse.move(x, y);
+  const [endX, endY] =
+    dy < 0
+      ? [560, 34]
+      : dy > 0
+        ? [640, 819]
+        : dx > 0
+          ? [1050, 140]
+          : [110, 300];
+  await page.mouse.move(endX - dx, endY - dy);
   await page.mouse.down();
-  await page.mouse.move(x + dx, y + dy, { steps: 12 });
+  await page.mouse.move(endX, endY, { steps: 12 });
   await page.mouse.up();
   await page.waitForTimeout(800);
 }
@@ -157,9 +209,13 @@ async function main() {
     // The panel's Focus button (the "f" key is lost when no switch was clicked).
     await page.getByRole("button", { name: "Focus", exact: true }).click();
     await page.waitForTimeout(2500);
+    if (shot.isolate) {
+      await page.getByRole("button", { name: "Isolate", exact: true }).click();
+      await page.waitForTimeout(1500);
+    }
     const name = `${out}/${shot.id}${suffix}`;
     await page.screenshot({ path: `${name}-front.png` });
-    await drag(page, shot.turn ?? 260, shot.tilt ?? 0);
+    await drag(page, shot.turn ?? (shot.tilt ? 0 : 260), shot.tilt ?? 0);
     await page.screenshot({ path: `${name}-side.png` });
     console.log(`✓ ${shot.id} (${body})`);
     await page.close();

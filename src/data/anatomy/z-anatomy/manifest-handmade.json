@@ -34,7 +34,7 @@
     "tissue": "muscle",
     "region": "pelvis",
     "pack": "handmade",
-    "vertices": 196,
+    "vertices": 504,
     "source": "Handmade",
     "sex": "male"
   },
@@ -213,7 +213,7 @@
     "tissue": "muscle",
     "region": "pelvis",
     "pack": "handmade",
-    "vertices": 152,
+    "vertices": 282,
     "source": "Handmade",
     "sex": "female"
   },
@@ -223,7 +223,7 @@
     "tissue": "muscle",
     "region": "pelvis",
     "pack": "handmade",
-    "vertices": 182,
+    "vertices": 272,
     "source": "Handmade",
     "sex": "female"
   },
@@ -233,7 +233,7 @@
     "tissue": "muscle",
     "region": "pelvis",
     "pack": "handmade",
-    "vertices": 162,
+    "vertices": 292,
     "source": "Handmade",
     "sex": "male"
   },
@@ -243,7 +243,7 @@
     "tissue": "muscle",
     "region": "pelvis",
     "pack": "handmade",
-    "vertices": 252,
+    "vertices": 302,
     "source": "Handmade",
     "sex": "male"
   },

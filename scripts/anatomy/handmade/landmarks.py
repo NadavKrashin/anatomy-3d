@@ -107,8 +107,6 @@ class Body:
     _orient: dict[str, float] = field(default_factory=dict)
     _tris: dict[str, np.ndarray] = field(default_factory=dict)
     _depth: dict[str, float] = field(default_factory=dict)
-    _tris: dict[str, np.ndarray] = field(default_factory=dict)
-    _depth: dict[str, float] = field(default_factory=dict)
 
     def __post_init__(self):
         male = male_only_bases()
@@ -127,8 +125,6 @@ class Body:
         self.sex[name] = sex
         self._bvh.pop(name, None)
         self._orient.pop(name, None)
-        self._tris.pop(name, None)
-        self._depth.pop(name, None)
         self._tris.pop(name, None)
         self._depth.pop(name, None)
         self._boxes()
@@ -184,6 +180,19 @@ class Body:
     def slab(self, name: str, axis: int, value: float, tol: float = 0.0015) -> np.ndarray:
         V = self.V(name)
         return V[np.abs(V[:, axis] - value) < tol]
+
+    def section(self, name: str, axis: int, value: float) -> np.ndarray:
+        """Where the mesh's triangle edges cross the plane {axis = value}: a
+        cross-section at any height, however coarse the mesh (a slab of
+        vertices can be empty there)."""
+        V, F, _ = self.meshes[name]
+        V = V.astype(float)
+        E = np.vstack([F[:, [0, 1]], F[:, [1, 2]], F[:, [2, 0]]])
+        a, b = V[E[:, 0]], V[E[:, 1]]
+        da, db = a[:, axis] - value, b[:, axis] - value
+        cut = (da * db < 0)
+        t = da[cut] / (da[cut] - db[cut])
+        return a[cut] + t[:, None] * (b[cut] - a[cut])
 
     def centre_at(self, name: str, axis: int, value: float, tol: float = 0.0015) -> np.ndarray:
         S = self.slab(name, axis, value, tol)

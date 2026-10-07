@@ -35,12 +35,12 @@ PERINEAL = ("Perineal body", "External urethral sphincter", "Sphincter urethrae"
 
 
 def ellipse_sections(b: Builder, mesh: str, ys, side_x=None, smooth: int = 2):
-    """(centre, u, v, a, b) per y of a mesh's slab (x–z ellipse), smoothed along y.
-    `side_x`: keep only x on that side of it (+ left / − right)."""
-    V = b.body.V(mesh)
+    """(centre, u, v, a, b) per y of a mesh's cross-section (x–z ellipse
+    round its box), smoothed along y. `side_x`: keep only x on that side of
+    it (+ left / − right)."""
     rows = []
     for y in ys:
-        S = V[np.abs(V[:, 1] - y) < 1.5 * MM]
+        S = b.body.section(mesh, 1, y)
         if side_x is not None:
             S = S[np.sign(side_x) * S[:, 0] > abs(side_x)]
         if len(S) < 6:
@@ -211,11 +211,25 @@ def perineum(b: Builder, want) -> None:
         y_back = CS[:, 1].max()
         secs = ellipse_sections(b, "Corpus spongiosum of penis", np.arange(y_back - 2 * MM, y_back - 32 * MM, -2 * MM))
         secs = [(c, u0, v0, a * 1.15, bb * 1.15) for c, u0, v0, a, bb in secs]  # bbox ellipse → enclosing
+        # Behind the bulb the two halves converge on the perineal body, where
+        # they arise: sections narrowing from the bulb's back end to a 4 mm
+        # ellipse at the perineal body's front (the model leaves a gap).
+        c0, u0, v0, a0, b0 = secs[0]
+        pb_front = np.array([0.0, pb_c[1] - 5 * MM, pb_c[2]])
+        n_back = max(0, int((pb_front[1] - c0[1]) / (2 * MM)))
+        back = []
+        for k in range(n_back, 0, -1):
+            f = k / (n_back + 1)  # 1 at the perineal body, 0 at the bulb
+            back.append((c0 + f * (pb_front - c0), u0, v0, a0 + f * (4 * MM - a0), b0 + f * (4 * MM - b0)))
+        secs = back + secs
         part = Part("Bulbospongiosus muscle", "muscular", "muscle", "pelvis", sex="male", family=PERINEAL)
         # θ: 0 = left side, π = right side, 3π/2 = underside (the raphe).
+        # Its sides meet the crura where they abut the bulb (its anterior
+        # fibres wrap the corpora cavernosa): may press into them ≤ 1 mm.
         b.solid(part, "sheet", arc_band(secs, np.radians(165), np.radians(375), 0.8 * MM, 2.0 * MM),
                 Allow(touch=(r"Corpus spongiosum of penis", r"Corpus cavernosum of penis", "Urethra", "Perineal body",
-                             NODES, EAS) + FLOOR))
+                             NODES, EAS) + FLOOR,
+                      squeeze=(r"Corpus cavernosum of penis",), depth=1.0 * MM))
         b.add(part)
 
         # Female: one on each side of the vaginal orifice (over the bulbs of

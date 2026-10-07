@@ -42,14 +42,14 @@ External urethral sphincter                           0mm   0.00mm 1000.00mm   /
 Sphincter urethrae                                    0mm   0.00mm 1000.00mm   / Vagina, Pubo-analis muscle.r, Pubo-analis muscle.l, Pubococcygeus muscle.r
 Compressor urethrae                                  58mm   0.00mm  2.16mm  Pudendal nerve.r (arch at (-15, 16, 812)) / Pubo-analis muscle.r, Pubo-analis muscle.l, Pudendal nerve.r, Pudendal nerve.l
 Urethrovaginal sphincter                             49mm   0.00mm 1000.00mm   / Vagina, Pubo-analis muscle.r, Pubo-analis muscle.l, Pubococcygeus muscle.r
-Bulbospongiosus muscle                                0mm   0.00mm 1000.00mm   / Corpus cavernosum of penis, Corpus spongiosum of penis
+Bulbospongiosus muscle                                0mm   0.00mm  1.82mm  Gracilis muscle.r (sheet at (-14, -7, 800)) / Corpus spongiosum of penis, Gracilis muscle.r, Gracilis muscle.l  [sinks 0.6 mm into Corpus cavernosum of penis]
 Bulbospongiosus muscle.l                             64mm   0.00mm  4.45mm  Pudendal nerve.l (band at (10, 3, 813)) / Pubo-analis muscle.l, Vagina, Pubococcygeus muscle.l, Pudendal nerve.l
 Bulbospongiosus muscle.r                             64mm   0.00mm  4.45mm  Pudendal nerve.r (band at (-10, 3, 813)) / Pubo-analis muscle.r, Pubococcygeus muscle.r, Pudendal nerve.r
-Ischiocavernosus muscle.l                            29mm   0.00mm  3.44mm  Semimembranosus muscle.l (band at (31, 32, 796)) / Corpus cavernosum of penis, Semimembranosus muscle.l, Hip bone.l, Adductor magnus.l
-Ischiocavernosus muscle (female).l                   27mm   0.00mm  1.60mm  Semimembranosus muscle.l (band at (31, 29, 802)) / Hip bone.l, Semimembranosus muscle.l, Adductor magnus.l
-Ischiocavernosus muscle.r                            46mm   0.00mm  1.94mm  Adductor magnus.r (band at (-31, 27, 792)) / Corpus cavernosum of penis, Adductor magnus.r, Corpus spongiosum of penis, Hip bone.r
-Ischiocavernosus muscle (female).r                   33mm   0.00mm  3.30mm  Semimembranosus muscle.r (band at (-30, 28, 801)) / Hip bone.r, Semimembranosus muscle.r
+Ischiocavernosus muscle.l                            55mm   0.00mm  1.63mm  Gracilis muscle.l (band at (15, -6, 802)) / Corpus cavernosum of penis, Gracilis muscle.l, Corpus spongiosum of penis, Hip bone.l
+Ischiocavernosus muscle (female).l                   53mm   0.00mm  1.73mm  Gracilis muscle.l (band at (15, -5, 806)) / Gracilis muscle.l, Hip bone.l, Semimembranosus muscle.l
+Ischiocavernosus muscle.r                            57mm   0.00mm  1.71mm  Gracilis muscle.r (band at (-15, -6, 802)) / Corpus cavernosum of penis, Gracilis muscle.r, Corpus spongiosum of penis, Semimembranosus muscle.r
+Ischiocavernosus muscle (female).r                   52mm   0.00mm  1.79mm  Gracilis muscle.r (band at (-15, -5, 806)) / Gracilis muscle.r, Hip bone.r, Semimembranosus muscle.r
 Anal canal                                            0mm   0.00mm 1000.00mm   / External anal sphincter.r, External anal sphincter.l, Pararectal nodes, Pubo-analis muscle.l
 Internal anal sphincter                               0mm   0.00mm 1000.00mm   / Pararectal nodes  [sinks 1.7 mm into External anal sphincter.r]
 
-52 meshes, 53144 triangles
+52 meshes, 54560 triangles
