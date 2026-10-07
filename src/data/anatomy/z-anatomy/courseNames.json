@@ -305,6 +305,11 @@
     "he": "צינור המרה",
     "heSource": "https://medintzfat.com/anatomy/lab5"
   },
+  "body-of-clitoris": {
+    "en": "Body of clitoris",
+    "source": "https://medintzfat.com/anatomy/lab6",
+    "uses": 1
+  },
   "body-of-sternum": {
     "en": "Body of sternum",
     "source": "https://medintzfat.com/anatomy/lab2",
@@ -355,10 +360,20 @@
     "source": "https://medintzfat.com/anatomy/quiz-head-neck",
     "uses": 50
   },
+  "bulb-of-vestibule": {
+    "en": "Bulb of vestibule",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 14
+  },
   "bulbospongiosus-muscle": {
     "en": "Bulbospongiosus",
     "source": "https://medintzfat.com/anatomy/labs-semester-b",
     "uses": 16
+  },
+  "bulbourethral-gland": {
+    "en": "Bulbourethral gland",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 9
   },
   "calcaneal-tendon": {
     "en": "Calcaneal tendon",
@@ -443,6 +458,11 @@
     "uses": 26,
     "he": "עצם הבריח",
     "heSource": "https://medintzfat.com/anatomy/class5"
+  },
+  "clitoris": {
+    "en": "Clitoris",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 3
   },
   "coccygeus-muscle": {
     "en": "Coccygeus",
@@ -584,6 +604,11 @@
     "source": "https://medintzfat.com/anatomy/class5",
     "uses": 1
   },
+  "cremaster-muscle": {
+    "en": "Cremaster muscle",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 13
+  },
   "cricoid-cartilage": {
     "en": "Cricoid cartilage",
     "source": "https://medintzfat.com/anatomy/quiz-head-neck",
@@ -593,6 +618,11 @@
     "en": "Cricothyroid",
     "source": "https://medintzfat.com/anatomy/throat",
     "uses": 9
+  },
+  "crus-of-clitoris": {
+    "en": "Crus of clitoris",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 10
   },
   "cubital-nodes": {
     "en": "Cubital nodes",
@@ -1061,6 +1091,11 @@
     "source": "https://medintzfat.com/anatomy/abdominal-innervation",
     "uses": 14
   },
+  "glans-of-clitoris": {
+    "en": "Glans clitoris",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 9
+  },
   "glans-penis": {
     "en": "Glans penis",
     "source": "https://medintzfat.com/anatomy/quiz-abdomen",
@@ -1110,6 +1145,16 @@
     "en": "Great saphenous vein",
     "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
     "uses": 37
+  },
+  "greater-pancreatic-artery": {
+    "en": "Greater pancreatic artery",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 1
+  },
+  "greater-vestibular-gland": {
+    "en": "Greater vestibular gland",
+    "source": "https://medintzfat.com/anatomy/lab6",
+    "uses": 2
   },
   "hamate-bone": {
     "en": "Hamate",
@@ -1340,6 +1385,11 @@
     "en": "Infraorbital artery",
     "source": "https://medintzfat.com/anatomy/nasal-cavity",
     "uses": 1
+  },
+  "infra-orbital-nerve": {
+    "en": "Infraorbital nerve",
+    "source": "https://medintzfat.com/anatomy/lab9",
+    "uses": 5
   },
   "infrapatellar-branch-of-saphenous-nerve": {
     "en": "Infrapatellar branch of saphenous nerve",
@@ -1653,6 +1703,11 @@
     "he": "הקו הלבן",
     "heSource": "https://medintzfat.com/anatomy/lab3"
   },
+  "lingual-artery": {
+    "en": "Lingual artery",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 21
+  },
   "lingual-nerve": {
     "en": "Lingual nerve",
     "source": "https://medintzfat.com/anatomy/oral-cavity",
@@ -1881,6 +1936,11 @@
     "source": "https://medintzfat.com/anatomy/nasal-cavity",
     "uses": 1
   },
+  "mons-pubis": {
+    "en": "Mons pubis",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 8
+  },
   "musculocutaneous-nerve": {
     "en": "Musculocutaneous nerve",
     "source": "https://medintzfat.com/anatomy/lab1",
@@ -1930,6 +1990,11 @@
     "en": "Nerve to piriformis",
     "source": "https://medintzfat.com/anatomy/pelvis-male",
     "uses": 1
+  },
+  "nerve-to-vastus-medialis": {
+    "en": "Nerve to vastus medialis",
+    "source": "https://medintzfat.com/anatomy/lab7",
+    "uses": 6
   },
   "nipple": {
     "en": "Nipple",
@@ -2216,6 +2281,11 @@
     "en": "Popliteus",
     "source": "https://medintzfat.com/anatomy/lower-limb-part4",
     "uses": 9
+  },
+  "posterior-auricular-artery": {
+    "en": "Posterior auricular artery",
+    "source": "https://medintzfat.com/anatomy/neck",
+    "uses": 7
   },
   "posterior-belly-of-digastric-muscle": {
     "en": "Posterior belly of digastric",
@@ -2800,6 +2870,11 @@
     "source": "https://medintzfat.com/anatomy/back-and-spine",
     "uses": 1
   },
+  "subcostal-nerve": {
+    "en": "Subcostal nerve",
+    "source": "https://medintzfat.com/anatomy/abdominal-innervation",
+    "uses": 5
+  },
   "sublingual-gland": {
     "en": "Sublingual gland",
     "source": "https://medintzfat.com/anatomy/oral-cavity",
@@ -2814,6 +2889,11 @@
     "en": "Submandibular gland",
     "source": "https://medintzfat.com/anatomy/oral-cavity",
     "uses": 14
+  },
+  "suboccipital-nerve": {
+    "en": "Suboccipital nerve",
+    "source": "https://medintzfat.com/anatomy/back-and-spine",
+    "uses": 6
   },
   "subscapular-artery": {
     "en": "Subscapular artery",
@@ -3015,6 +3095,11 @@
     "en": "Sural nerve",
     "source": "https://medintzfat.com/anatomy/quiz-lower-limb",
     "uses": 38
+  },
+  "suspensory-ligament-of-clitoris": {
+    "en": "Suspensory ligament of clitoris",
+    "source": "https://medintzfat.com/anatomy/lab6",
+    "uses": 2
   },
   "suspensory-ligament-of-ovary": {
     "en": "Suspensory ligament of ovary",

@@ -29,6 +29,38 @@
     "group": "Ansa cervicalis"
   },
   {
+    "name": "Body of clitoris",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 252,
+    "source": "Handmade",
+    "group": "Clitoris",
+    "groupSide": "midline",
+    "sex": "female"
+  },
+  {
+    "name": "Bulb of vestibule.l",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 332,
+    "source": "Handmade",
+    "sex": "female"
+  },
+  {
+    "name": "Bulb of vestibule.r",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 332,
+    "source": "Handmade",
+    "sex": "female"
+  },
+  {
     "name": "Bulbospongiosus muscle",
     "system": "muscular",
     "tissue": "muscle",
@@ -44,7 +76,7 @@
     "tissue": "muscle",
     "region": "pelvis",
     "pack": "handmade",
-    "vertices": 332,
+    "vertices": 472,
     "source": "Handmade",
     "group": "Bulbospongiosus muscle",
     "groupSide": "midline",
@@ -56,11 +88,31 @@
     "tissue": "muscle",
     "region": "pelvis",
     "pack": "handmade",
-    "vertices": 332,
+    "vertices": 472,
     "source": "Handmade",
     "group": "Bulbospongiosus muscle",
     "groupSide": "midline",
     "sex": "female"
+  },
+  {
+    "name": "Bulbourethral gland.l",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 324,
+    "source": "Handmade",
+    "sex": "male"
+  },
+  {
+    "name": "Bulbourethral gland.r",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 324,
+    "source": "Handmade",
+    "sex": "male"
   },
   {
     "name": "Cisterna chyli",
@@ -80,6 +132,50 @@
     "vertices": 302,
     "source": "Handmade",
     "group": "External urethral sphincter",
+    "groupSide": "midline",
+    "sex": "female"
+  },
+  {
+    "name": "Cremaster muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 1176,
+    "source": "Handmade",
+    "sex": "male"
+  },
+  {
+    "name": "Cremaster muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 1092,
+    "source": "Handmade",
+    "sex": "male"
+  },
+  {
+    "name": "Crus of clitoris.l",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 472,
+    "source": "Handmade",
+    "group": "Clitoris",
+    "groupSide": "midline",
+    "sex": "female"
+  },
+  {
+    "name": "Crus of clitoris.r",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 472,
+    "source": "Handmade",
+    "group": "Clitoris",
     "groupSide": "midline",
     "sex": "female"
   },
@@ -116,7 +212,7 @@
     "tissue": "nerve",
     "region": "neck",
     "pack": "handmade",
-    "vertices": 342,
+    "vertices": 352,
     "source": "Handmade",
     "group": "Superior laryngeal nerve"
   },
@@ -126,7 +222,7 @@
     "tissue": "nerve",
     "region": "neck",
     "pack": "handmade",
-    "vertices": 282,
+    "vertices": 292,
     "source": "Handmade",
     "group": "Superior laryngeal nerve"
   },
@@ -139,6 +235,18 @@
     "vertices": 240,
     "source": "Handmade",
     "sex": "male"
+  },
+  {
+    "name": "Glans of clitoris",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 222,
+    "source": "Handmade",
+    "group": "Clitoris",
+    "groupSide": "midline",
+    "sex": "female"
   },
   {
     "name": "Great auricular nerve.l",
@@ -157,6 +265,35 @@
     "pack": "handmade",
     "vertices": 606,
     "source": "Handmade"
+  },
+  {
+    "name": "Greater pancreatic artery",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "abdomen",
+    "pack": "handmade",
+    "vertices": 134,
+    "source": "Handmade"
+  },
+  {
+    "name": "Greater vestibular gland.l",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 264,
+    "source": "Handmade",
+    "sex": "female"
+  },
+  {
+    "name": "Greater vestibular gland.r",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 264,
+    "source": "Handmade",
+    "sex": "female"
   },
   {
     "name": "Inferior root of ansa cervicalis.l",
@@ -213,7 +350,7 @@
     "tissue": "muscle",
     "region": "pelvis",
     "pack": "handmade",
-    "vertices": 282,
+    "vertices": 472,
     "source": "Handmade",
     "sex": "female"
   },
@@ -223,7 +360,7 @@
     "tissue": "muscle",
     "region": "pelvis",
     "pack": "handmade",
-    "vertices": 272,
+    "vertices": 472,
     "source": "Handmade",
     "sex": "female"
   },
@@ -246,6 +383,46 @@
     "vertices": 302,
     "source": "Handmade",
     "sex": "male"
+  },
+  {
+    "name": "Labium majus.l",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 1708,
+    "source": "Handmade",
+    "sex": "female"
+  },
+  {
+    "name": "Labium majus.r",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 1708,
+    "source": "Handmade",
+    "sex": "female"
+  },
+  {
+    "name": "Labium minus.l",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 924,
+    "source": "Handmade",
+    "sex": "female"
+  },
+  {
+    "name": "Labium minus.r",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 924,
+    "source": "Handmade",
+    "sex": "female"
   },
   {
     "name": "Left recurrent laryngeal nerve",
@@ -275,6 +452,34 @@
     "source": "Handmade"
   },
   {
+    "name": "Lingual artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "head",
+    "pack": "handmade",
+    "vertices": 584,
+    "source": "Handmade"
+  },
+  {
+    "name": "Lingual artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "head",
+    "pack": "handmade",
+    "vertices": 564,
+    "source": "Handmade"
+  },
+  {
+    "name": "Mons pubis",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 702,
+    "source": "Handmade",
+    "sex": "female"
+  },
+  {
     "name": "Muscular branches of ansa cervicalis.l",
     "system": "nervous",
     "tissue": "nerve",
@@ -293,6 +498,42 @@
     "vertices": 458,
     "source": "Handmade",
     "group": "Ansa cervicalis"
+  },
+  {
+    "name": "Pericardiacophrenic artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "thorax",
+    "pack": "handmade",
+    "vertices": 1122,
+    "source": "Handmade"
+  },
+  {
+    "name": "Pericardiacophrenic artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "thorax",
+    "pack": "handmade",
+    "vertices": 802,
+    "source": "Handmade"
+  },
+  {
+    "name": "Pericardiacophrenic vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "thorax",
+    "pack": "handmade",
+    "vertices": 1122,
+    "source": "Handmade"
+  },
+  {
+    "name": "Pericardiacophrenic vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "thorax",
+    "pack": "handmade",
+    "vertices": 832,
+    "source": "Handmade"
   },
   {
     "name": "Perineal body",
@@ -319,6 +560,24 @@
     "region": "thorax",
     "pack": "handmade",
     "vertices": 1946,
+    "source": "Handmade"
+  },
+  {
+    "name": "Posterior auricular artery.l",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "head",
+    "pack": "handmade",
+    "vertices": 422,
+    "source": "Handmade"
+  },
+  {
+    "name": "Posterior auricular artery.r",
+    "system": "cardiovascular",
+    "tissue": "artery",
+    "region": "head",
+    "pack": "handmade",
+    "vertices": 412,
     "source": "Handmade"
   },
   {
@@ -350,6 +609,42 @@
     "group": "External urethral sphincter",
     "groupSide": "midline",
     "sex": "female"
+  },
+  {
+    "name": "Subcostal nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "handmade",
+    "vertices": 1612,
+    "source": "Handmade"
+  },
+  {
+    "name": "Subcostal nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "abdomen",
+    "pack": "handmade",
+    "vertices": 1652,
+    "source": "Handmade"
+  },
+  {
+    "name": "Suboccipital nerve.l",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "back",
+    "pack": "handmade",
+    "vertices": 372,
+    "source": "Handmade"
+  },
+  {
+    "name": "Suboccipital nerve.r",
+    "system": "nervous",
+    "tissue": "nerve",
+    "region": "back",
+    "pack": "handmade",
+    "vertices": 362,
+    "source": "Handmade"
   },
   {
     "name": "Superficial transverse perineal muscle.l",
@@ -464,12 +759,22 @@
     "source": "Handmade"
   },
   {
+    "name": "Suspensory ligament of clitoris",
+    "system": "reproductive",
+    "tissue": "ligament",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 72,
+    "source": "Handmade",
+    "sex": "female"
+  },
+  {
     "name": "Thoracic duct",
     "system": "lymphatic",
     "tissue": "lymphatic",
     "region": "thorax",
     "pack": "handmade",
-    "vertices": 2392,
+    "vertices": 2412,
     "source": "Handmade"
   },
   {
@@ -491,6 +796,16 @@
     "source": "Handmade"
   },
   {
+    "name": "Urethra (female)",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 290,
+    "source": "Handmade",
+    "sex": "female"
+  },
+  {
     "name": "Urethrovaginal sphincter",
     "system": "muscular",
     "tissue": "muscle",
@@ -500,6 +815,16 @@
     "source": "Handmade",
     "group": "External urethral sphincter",
     "groupSide": "midline",
+    "sex": "female"
+  },
+  {
+    "name": "Vaginal vestibule",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 1120,
+    "source": "Handmade",
     "sex": "female"
   }
 ]

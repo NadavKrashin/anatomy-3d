@@ -81,7 +81,10 @@ def lingual_artery(b: Builder, side: str) -> None:
         hit = b.body.ray(gg, (sx * 0.05, y, z), (-sx, 0, 0), 0.05)
         x = (hit[0] + sx * (0.8 * MM + 0.6 * MM)) if hit is not None else sx * 9 * MM
         deep_lingual.append(np.array([x, y, z]))
-    part = Part(f"Lingual artery.{side}", "cardiovascular", "artery", "head")
+    # The hypoglossal nerve crosses its loop, where the ansa's superior root
+    # leaves the nerve: may touch it.
+    part = Part(f"Lingual artery.{side}", "cardiovascular", "artery", "head",
+                family=(f"Superior root of ansa cervicalis.{side}",))
     tongue = (r"Tongue", rf"Genioglossus muscle\.{side}", rf"Inferior longitudinal.*", rf"Hyoglossus muscle\.{side}",
               r"Sublingual gland.*", rf"Lingual (nerve|vein)\.{side}", rf"Hypoglossal nerve \(XII\)\.{side}")
     trunk = b.vessel(part, "artery", [o0, o1, apex] + over_horn + deep, R,

@@ -115,15 +115,21 @@ All verified by `npm run e2e:smoke` against a production build.
   semispinalis capitis, dorsal scapular arteries. Z-Anatomy's "Sigmoid
   colon" mesh is shown as the **Rectum** (it is; DECISIONS). A tenth file,
   `public/models/handmade/handmade.glb`, holds **hand-built** schematic
-  structures no open model has (`scripts/anatomy/handmade/`, priority 1 of
-  `docs/HANDMADE_MODELS_PROMPT.md`): phrenic, recurrent and superior
-  laryngeal nerves, ansa cervicalis, the cervical plexus's cutaneous
-  branches, superior thyroid/laryngeal, cystic and short gastric arteries,
-  thoracic duct and cisterna chyli, perineal body and muscles (male and
-  female versions), anal canal and internal anal sphincter. Male body: 2,947 mapped meshes → 3,021 structures
-  (2,587 wholes); female body: 2,975 mapped meshes → 3,056 structures
-  (2,582 wholes) (counted with `datasetForSex`, 2026-10-07); ≈3.7M
-  triangles, 20 MB in all (the hand-built file: 52 meshes, 0.23 MB); the
+  structures no open model has (`scripts/anatomy/handmade/`, priorities 1
+  and 2 of `docs/HANDMADE_MODELS_PROMPT.md`): phrenic, recurrent and
+  superior laryngeal nerves, ansa cervicalis, the cervical plexus's
+  cutaneous branches, superior thyroid/laryngeal, cystic and short gastric
+  arteries, thoracic duct and cisterna chyli, perineal body and muscles
+  (male and female versions), anal canal and internal anal sphincter;
+  pericardiacophrenic vessels, subcostal and suboccipital nerves, lingual,
+  posterior auricular and greater pancreatic arteries, male bulbourethral
+  glands and cremaster, the female urethra and external genitalia. The
+  infra-orbital nerve and the nerve to vastus medialis are cut out of
+  Z-Anatomy's maxillary and femoral nerves (`split-meshes.ts`). Male body:
+  2,968 mapped meshes → 3,042 structures (2,608 wholes); female body: 3,008
+  mapped meshes → 3,090 structures (2,612 wholes) (counted with
+  `datasetForSex`, 2026-10-07); ≈3.7M triangles, 20 MB in all (the
+  hand-built file: 85 meshes, 0.40 MB); the
   skeleton loads first and frames the camera, the rest streams in
   ("Loading body systems n/9", n/10 in the female body). Credits: full on
   the home page, source names in the viewer. Left out: coverings (fasciae, meninges, pleura, greater omentum), liver segments.
@@ -228,10 +234,13 @@ All verified by `npm run e2e:smoke` against a production build.
    sources were checked and none fills a gap (`docs/MODEL_SOURCES.md` →
    "Non-commercial sources"). **Hand-built structures, priority 1 done
    and merged to `main`** (2026-10-07, user's go after the screenshots):
-   items 1–11 of `docs/HANDMADE_MODELS_PROMPT.md`. **Now: priority 2**
-   (user, 2026-10-07; branch `claude/handmade-priority-2`). Then: her
-   check of the courses (CONTENT_REVIEW → "Hand-built structures"); rerun
-   `summary_notes.py` with her .docx so her notes reach them; priority 3. NC models go into the
+   items 1–11 of `docs/HANDMADE_MODELS_PROMPT.md`; review fixes (right
+   recurrent laryngeal hook, anal canal junction) on the priority-2 branch.
+   **Priority 2 done** (items 12–21, branch `claude/handmade-priority-2`,
+   awaiting the user's review of the screenshots and their go to merge).
+   Then: her check of the courses (CONTENT_REVIEW → "Hand-built
+   structures"); the other session reruns `summary_notes.py` with her .docx
+   (synonyms/parents added for her priority-2 terms); priority 3. NC models go into the
    non-commercial file only. Open3DModel's
    retinacula, tendon sheaths and spaces (femoral/adductor canal) were left
    out as coverings — could come back as a toggleable layer. Phrenic nerve,
@@ -299,7 +308,9 @@ All verified by `npm run e2e:smoke` against a production build.
   Audit (`scripts/anatomy/handmade/audit_handmade.py`): sides, regions and
   duplicates clean; the supraclavicular nerves' middle part (≈ 11 %) runs
   10–23 mm from the nearest mesh, in the roof of the posterior triangle,
-  where the model has no skin or investing fascia to lie under.
+  where the model has no skin or investing fascia to lie under; likewise the
+  mons pubis (up to 16 mm in front of the pubis' muscles — a fat pad with
+  no fat modelled) and the labia majora's lowest edges.
 - Dragging to turn the body selects the structure under the pointer when the
   drag ends over the model (R3F fires `onClick` after a drag;
   `AnatomyModel.tsx` doesn't check `event.delta`); in peel mode it peels
@@ -612,3 +623,22 @@ medialis.l/.r` out of the femoral nerve (below the saphenous nerve's upper
   changed. Audit: unchanged (only the supraclavicular finding). Review shots
   retaken for both. `summaryNotes.json` untouched (the other session
   regenerates it).
+- **2026-10-07 · priority 2 integrated** — Full build of priorities 1 + 2
+  together: 85 meshes, 102,112 triangles, clearance-clean (one conflict
+  found and allowed: the right lingual artery and the ansa's superior root
+  meet where the hypoglossal crosses the artery's loop). `handmade.glb`
+  0.40 MB. Priority-1 rows of the clearance report changed only in their
+  neighbour lists (priority-2 parts beside them), except the thoracic duct
+  (464 → 470 mm, still clean): the split re-encoded the nerves file with
+  the same geometry (≤ 0.1 µm) but a new vertex order, which the
+  relaxation is sensitive to. Tests: priority-2 ids, regions, bodies (male
+  only, female only, the shared urethra); the old "urethra is male-only"
+  assertion dropped. Course names rerun: 669/1,779 structures (+17); not
+  matched by name: pericardiacophrenic artery/vein, labia, vaginal
+  vestibule (her course words them as combined terms). For her summary
+  notes (regenerated by the other session), `scripts/course/summary/`
+  gets synonyms "Pericardiacophrenic Vessels", "Labia majora & minora",
+  "Greater vestibular gland(s) (Bartholin)", "Bulb of the vestibule",
+  "Bulbourethral gland(s)", "Cremaster m. & fascia" and the parent entry
+  "Vulva and labia". Audit: sides, regions, duplicates clean; floating
+  findings only for the skin-layer shells (above).

@@ -144,7 +144,16 @@
     "Superior pancreaticoduodenal artery (Anterior & Posterior)": [
       "anterior-superior-pancreaticoduodenal-artery",
       "posterior-superior-pancreaticoduodenal-artery"
-    ]
+    ],
+    "Pericardiacophrenic Vessels": [
+      "pericardiacophrenic-artery",
+      "pericardiacophrenic-vein"
+    ],
+    "Labia majora & minora": ["labium-majus", "labium-minus"],
+    "Greater vestibular gland(s) (Bartholin)": ["greater-vestibular-gland"],
+    "Bulb of the vestibule": ["bulb-of-vestibule"],
+    "Bulbourethral gland(s)": ["bulbourethral-gland"],
+    "Cremaster m. & fascia": ["cremaster-muscle"]
   },
   "hebrew": {
     "about": "Her organ-guide headings name some structures in the plural; the model has one per side. Singular forms (from her own text where she uses them), or null to show no Hebrew from the summary.",

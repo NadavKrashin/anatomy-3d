@@ -586,6 +586,13 @@
     "Sigmoid colon": ["descending-colon"],
     "Ampulla of rectum": ["rectum"],
     "Anorectal flexure": ["rectum"],
-    "Transverse rectal folds": ["rectum"]
+    "Transverse rectal folds": ["rectum"],
+    "Vulva and labia": [
+      "mons-pubis",
+      "labium-majus",
+      "labium-minus",
+      "vaginal-vestibule",
+      "clitoris"
+    ]
   }
 }

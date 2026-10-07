@@ -73,9 +73,14 @@ cervical, supraclavicular) and the ansa cervicalis; the recurrent and
 superior laryngeal nerves; the **thoracic duct** and cisterna chyli; the
 cystic, short gastric, superior thyroid and superior laryngeal arteries;
 the perineal muscles and body, anal canal and internal anal sphincter.
-Still to build (priorities 2–3 of the brief): the lingual and posterior
-auricular arteries, the cremaster, female external genitalia and urethra,
-and the others listed there.
+Priority 2, built: the pericardiacophrenic vessels; the subcostal and
+suboccipital nerves; the lingual, posterior auricular and greater
+pancreatic arteries; the bulbourethral glands and cremaster; the female
+urethra and external genitalia. Not built but cut out of Z-Anatomy meshes
+that already contain them: the infra-orbital nerve (from the maxillary
+nerve) and the nerve to vastus medialis (from the femoral nerve). Still to
+build (priority 3): tensor tympani and stapedius, subcostal muscles,
+scrotum.
 
 Open3DModel has head and neck soft tissue and the "spinal cord and
 surroundings" planned for 2026, so re-check it: a real model would be

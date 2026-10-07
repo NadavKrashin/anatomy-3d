@@ -116,7 +116,53 @@ const SHOTS_LIST: Shot[] = [
   // Muscles hidden: the gluteal muscles would hide the rectum it continues.
   { id: "anal-canal", hide: ANAL, turn: 260 },
   { id: "internal-anal-sphincter", hide: ANAL, turn: 260 },
+  // Priority 2
+  { id: "pericardiacophrenic-artery-left", hide: CHEST },
+  {
+    id: "subcostal-nerve-left",
+    hide: ["Skeletal", "Digestive", "Urinary", "Other"],
+    turn: 520,
+  },
+  { id: "greater-pancreatic-artery", hide: [...BELLY, "Digestive"], turn: 520 },
+  { id: "lingual-artery-left", hide: DEEP_NECK, turn: 260 },
+  {
+    id: "posterior-auricular-artery-left",
+    hide: ["Lymphatic", "Other"],
+    turn: 260,
+  },
+  { id: "suboccipital-nerve-left", hide: ["Lymphatic", "Other"], turn: 520 },
+  {
+    id: "infra-orbital-nerve-left",
+    hide: ["Muscular", "Lymphatic", "Other"],
+    turn: 260,
+  },
+  {
+    id: "nerve-to-vastus-medialis-left",
+    hide: ["Lymphatic", "Other"],
+    turn: 260,
+  },
+  { id: "bulbourethral-gland-left", hide: PERINEUM, tilt: -150, isolate: true },
+  { id: "cremaster-muscle-left", hide: ["Lymphatic", "Other"], turn: 260 },
   // Female body
+  {
+    id: "urethra",
+    hide: ["Muscular", "Digestive", "Other"],
+    turn: 260,
+    body: "female",
+  },
+  ...[
+    "clitoris",
+    "bulb-of-vestibule-left",
+    "greater-vestibular-gland-left",
+    "labium-majus-left",
+    "mons-pubis",
+  ].map((id) => ({
+    id,
+    hide: PERINEUM,
+    tilt: -150,
+    isolate: true,
+    body: "female" as const,
+  })),
   {
     id: "perineal-body",
     hide: PERINEUM,

@@ -671,3 +671,19 @@ the whole parent):
   node gets its own copy before the split.
 - The new structures are separate from their parents (selecting the
   maxillary nerve no longer includes the infra-orbital part).
+
+## 2026-10-07 — Female external genitalia: placed by the bones, as shells
+
+The fitted Atlas vagina sits ≈ 20 mm too far back in our (male) pelvis —
+the female organs were shifted 27 mm back so the bladder meets our
+ureters — so its orifice lies ≈ 60 mm behind the symphysis. The user
+chose to build the external genitalia **to the bones** (clitoris under the
+symphysis, crura on the ischiopubic rami, bulbs and glands at the existing
+orifice), accepting a ≈ 70 mm vestibule, over re-fitting the female organs
+(which would move the bladder off the ureters) or skipping the item.
+The vestibule, labia and mons are thin shells (2–2.5 mm), the outermost
+layer, as the brief asks; with no skin or fat in the model the mons is a
+pad up to 10 mm in front of what it covers, and the labia majora are kept
+inside the thighs' medial surfaces. The female ischiocavernosus and
+bulbospongiosus, built in priority 1 where these organs belonged, now lie
+over the new crura and bulbs.

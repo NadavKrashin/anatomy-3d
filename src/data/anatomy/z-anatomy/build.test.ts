@@ -305,7 +305,6 @@ describe("the Z-Anatomy whole-body dataset", () => {
       "prostate",
       "testis-left",
       "penis",
-      "urethra",
       "testicular-artery-left",
     ]) {
       expect(ids(male).has(id), id).toBe(true);
@@ -440,6 +439,56 @@ describe("the Z-Anatomy whole-body dataset", () => {
     );
     expect(female.meshMap["Bulbospongiosus muscle"]).toBeUndefined();
     for (const e of handmadeManifest) expect(e.pack, e.name).toBe("handmade");
+  });
+
+  it("adds the priority-2 hand-built structures, in the right body and region", () => {
+    const female = datasetForSex(zAnatomyDataset, "female");
+    const male = datasetForSex(zAnatomyDataset, "male");
+    const has = (d: typeof female, id: string) =>
+      d.structures.some((s) => s.id === id);
+    const both: Record<string, string> = {
+      "pericardiacophrenic-artery-left": "thorax",
+      "pericardiacophrenic-vein-right": "thorax",
+      "subcostal-nerve-left": "abdomen",
+      "greater-pancreatic-artery": "abdomen",
+      "lingual-artery-right": "head",
+      "posterior-auricular-artery-left": "head",
+      "suboccipital-nerve-right": "back",
+    };
+    for (const [id, region] of Object.entries(both)) {
+      const s = registry.get(id);
+      expect(s?.modelSource, id).toBe("Handmade");
+      expect(s?.region, id).toBe(region);
+      expect(has(male, id), id).toBe(true);
+      expect(has(female, id), id).toBe(true);
+    }
+    for (const id of ["bulbourethral-gland-left", "cremaster-muscle-right"]) {
+      expect(registry.get(id)?.region, id).toBe("pelvis");
+      expect(has(male, id), id).toBe(true);
+      expect(has(female, id), id).toBe(false);
+    }
+    for (const id of [
+      "clitoris",
+      "crus-of-clitoris-left",
+      "glans-of-clitoris",
+      "bulb-of-vestibule-right",
+      "greater-vestibular-gland-left",
+      "vaginal-vestibule",
+      "labium-minus-right",
+      "labium-majus-left",
+      "mons-pubis",
+      "suspensory-ligament-of-clitoris",
+    ]) {
+      expect(registry.get(id)?.region, id).toBe("pelvis");
+      expect(has(female, id), id).toBe(true);
+      expect(has(male, id), id).toBe(false);
+    }
+    expect(registry.get("crus-of-clitoris-right")?.parentId).toBe("clitoris");
+    // One urethra: each body shows its own mesh.
+    expect(female.meshMap["Urethra (female)"]).toBe("urethra");
+    expect(male.meshMap["Urethra (female)"]).toBeUndefined();
+    expect(male.meshMap["Urethra"]).toBe("urethra");
+    expect(female.meshMap["Urethra"]).toBeUndefined();
   });
 
   it("places the female organs in the pelvis and the breasts on the chest", () => {

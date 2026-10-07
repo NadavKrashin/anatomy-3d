@@ -8,7 +8,8 @@ follow is `docs/HANDMADE_MODELS_PROMPT.md`; the decision is in
 `src/data/anatomy/z-anatomy/manifest-handmade.json` (source `Handmade`, the
 project's own work, CC BY-SA 4.0).
 
-Built so far: **priority 1** of the brief (items 1–11). Each one is
+Built: **priorities 1 and 2** of the brief (items 1–21; 16 and 18 are cut
+out of existing Z-Anatomy meshes instead, below). Each one is
 _schematic in shape, never in position_: the course follows textbook anatomy
 (Gray's Anatomy for Students, Moore, Netter) between real landmarks of our
 model, and is checked against every neighbouring mesh.
@@ -26,6 +27,16 @@ model, and is checked against every neighbouring mesh.
 | 9    | `Short gastric arteries` (4 vessels, one structure)                                                                                                                                                                                                                                                                                                                     |
 | 10   | `Perineal body`, `Superficial/Deep transverse perineal muscle.l/.r`, `External urethral sphincter` (male ring; female parts `Sphincter urethrae`, `Compressor urethrae`, `Urethrovaginal sphincter`), `Bulbospongiosus muscle` (male, one muscle with a raphe; female `.l/.r` parts), `Ischiocavernosus muscle.l/.r` (male) and `Ischiocavernosus muscle (female).l/.r` |
 | 11   | `Anal canal`, `Internal anal sphincter`                                                                                                                                                                                                                                                                                                                                 |
+| 12   | `Pericardiacophrenic artery.l/.r`, `Pericardiacophrenic vein.l/.r` (along the phrenic nerve)                                                                                                                                                                                                                                                                            |
+| 13   | Female: `Glans/Body of clitoris`, `Crus of clitoris.l/.r` (group `Clitoris`), `Suspensory ligament of clitoris`, `Bulb of vestibule.l/.r`, `Greater vestibular gland.l/.r` (with ducts), `Vaginal vestibule`, `Labium minus.l/.r`, `Labium majus.l/.r`, `Mons pubis`                                                                                                    |
+| 14   | Female: `Urethra (female)` (one structure with the male `Urethra`)                                                                                                                                                                                                                                                                                                      |
+| 15   | Male: `Bulbourethral gland.l/.r` (with ducts), `Cremaster muscle.l/.r`                                                                                                                                                                                                                                                                                                  |
+| 16   | `Infra-orbital nerve.l/.r` — cut out of Z-Anatomy's `Maxillary nerve` (`scripts/anatomy/z-anatomy/split-meshes.ts`)                                                                                                                                                                                                                                                     |
+| 17   | `Subcostal nerve.l/.r`                                                                                                                                                                                                                                                                                                                                                  |
+| 18   | `Nerve to vastus medialis.l/.r` — cut out of Z-Anatomy's `Femoral nerve` (`split-meshes.ts`)                                                                                                                                                                                                                                                                            |
+| 19   | `Lingual artery.l/.r` (with the deep lingual artery), `Posterior auricular artery.l/.r`                                                                                                                                                                                                                                                                                 |
+| 20   | `Greater pancreatic artery`                                                                                                                                                                                                                                                                                                                                             |
+| 21   | `Suboccipital nerve.l/.r` (with twigs to the suboccipital muscles and semispinalis capitis)                                                                                                                                                                                                                                                                             |
 
 ## Rerun
 
@@ -78,9 +89,9 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
   roots, branches) each with its own allowances; `Builder.vessel` (spline →
   relax → fit radius → tube), `Builder.free` (nearest roomy spot for a
   point pinned at both ends of tubes).
-- `structures_neck.py` (items 1–6), `structures_trunk.py` (7–9),
-  `structures_pelvis.py` (10–11): every landmark and offset with its reason,
-  in the code next to it.
+- `structures_neck.py` (items 1–6), `structures_trunk.py` (7–9, 12, 17,
+  20), `structures_pelvis.py` (10–11, 13–15), `structures_head.py` (19,
+  21): every landmark and offset with its reason, in the code next to it.
 
 ## Method
 

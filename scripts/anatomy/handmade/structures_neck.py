@@ -618,7 +618,9 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
     group = "Ansa cervicalis"
     names = {"sup": f"Superior root of ansa cervicalis.{side}", "inf": f"Inferior root of ansa cervicalis.{side}",
              "loop": f"Ansa cervicalis.{side}", "mus": f"Muscular branches of ansa cervicalis.{side}"}
-    family = tuple(names.values())
+    # The superior root leaves the hypoglossal where it crosses the lingual
+    # artery's loop over the hyoid's greater horn: they may touch.
+    family = tuple(names.values()) + (f"Lingual artery.{side}",)
     R = 0.5 * MM
     # The ansa lies on (in) the carotid sheath and its twigs run between the
     # infrahyoid muscles: it may lie against all of them (never inside).
