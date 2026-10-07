@@ -641,4 +641,10 @@ medialis.l/.r` out of the femoral nerve (below the saphenous nerve's upper
   "Greater vestibular gland(s) (Bartholin)", "Bulb of the vestibule",
   "Bulbourethral gland(s)", "Cremaster m. & fascia" and the parent entry
   "Vulva and labia". Audit: sides, regions, duplicates clean; floating
-  findings only for the skin-layer shells (above).
+  findings only for the skin-layer shells (above). Review shots for every
+  priority-2 structure (front + turned; perineal ones isolated from
+  front-below; female ones in the female body) taken on a fresh build and
+  reviewed, contact sheets `priority-2*.jpg`, perineum plot redone;
+  `e2e:smoke` green (39), CI green. Noted on review: the female urethra
+  shows her existing urethra note, whose sub-entries are the male
+  segments (her note on the shared structure; untouched).
