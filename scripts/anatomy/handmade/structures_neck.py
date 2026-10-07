@@ -596,9 +596,10 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
     sheath = (NODES, ica, cca, ijv, f"External carotid artery.{side}",
               rf"(Sterno(hyoid|thyroid)|Omohyoid|Thyrohyoid) muscle\.{side}",
               rf"Posterior belly of digastric muscle\.{side}", rf"Stylohyoid (ligament|muscle)\.{side}",
-              # the inferior root and the omohyoid twig cross in front of the
-              # phrenic nerve on scalenus anterior (compressed neck)
-              f"Phrenic nerve.{side}")
+              )
+    # The inferior root and the omohyoid twig cross in front of the phrenic
+    # nerve on scalenus anterior (compressed neck): they may touch it.
+    crossing = sheath + (f"Phrenic nerve.{side}",)
     soft = Allow(touch=sheath, squeeze=(scm,), depth=1.5 * MM)
 
     # Superior root: from XII where it turns forward (its slab at the
@@ -630,10 +631,11 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
     # Start in front of the carotid, between it and the vein, then the
     # nearest free spot (the SCM counts as solid here).
     loop_pt = front_of(b, cca, x_loop, z_loop, R + 1.5 * MM)
-    loop_pt = b.free(loop_pt, R * 1.1, allow=Allow(touch=(ijv, cca, NODES)), search=0.006)
+    loop_pt = b.free(loop_pt, R * 1.1 + 1.5 * MM, allow=Allow(touch=(ijv, cca, NODES)), search=0.006)
     sup = Part(names["sup"], "nervous", "nerve", "neck", group=group, family=family)
     sp = b.vessel(sup, "root", sup_pts + [loop_pt], R,
-                  Allow(start=(xii, f"Occipital artery.{side}"), touch=sheath, zone=0.005,
+                  Allow(start=(xii, f"Occipital artery.{side}", rf"Stylohyoid (ligament|muscle)\.{side}"),
+                        touch=sheath, zone=0.008,
                         squeeze=(scm,), depth=1.5 * MM), end_taper=0.0)
     b.add(sup)
     L = sp.path[-1]
@@ -651,7 +653,7 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
     inf = Part(names["inf"], "nervous", "nerve", "neck", group=group, family=family)
     b.vessel(inf, "root", inf_pts + [L], R,
              Allow(start=(r"Longus capitis muscle\..", rf"Scalenus medius muscle\.{side}", f"Vertebra C3"),
-                   touch=sheath, zone=0.004, squeeze=(scm,), depth=1.5 * MM), start_taper=0.002, end_taper=0.0)
+                   touch=crossing, zone=0.004, squeeze=(scm,), depth=1.5 * MM), start_taper=0.002, end_taper=0.0)
     b.add(inf)
 
     # The loop itself: a short U at the apex joining the roots.
@@ -685,7 +687,7 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
              # (the inferior belly lies on scalenus anterior where the twig reaches it)
              0.4 * MM, Allow(start=family, end=(f"Omohyoid muscle.{side}", rf"Scalenus anterior muscle\.{side}"),
                              zone=0.004, end_zone=0.005,
-                             touch=sheath + (rf"Scalenus anterior muscle\.{side}",), squeeze=(scm,), depth=1.5 * MM),
+                             touch=crossing + (rf"Scalenus anterior muscle\.{side}",), squeeze=(scm,), depth=1.5 * MM),
              end_taper=0.004)
     b.add(mus)
 

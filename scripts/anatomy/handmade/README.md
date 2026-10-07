@@ -107,7 +107,8 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
 - `touch`: may lie against, never inside — a nerve on a muscle under its
   fascia, the ansa on the carotid sheath, a duct on the vertebral bodies,
   the perineal muscles meeting in the perineal body, the ansa's inferior
-  root and omohyoid twig crossing in front of the phrenic nerve, companions running
+  root and omohyoid twig crossing in front of the phrenic nerve (the loop
+  itself keeps clear of it), companions running
   together (superior thyroid artery and external laryngeal nerve).
 - `squeeze` + `depth`: may sink into a soft organ, at most `depth`, reported
   — only where the model leaves no room:
