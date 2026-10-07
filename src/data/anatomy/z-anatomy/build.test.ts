@@ -417,6 +417,10 @@ describe("the Z-Anatomy whole-body dataset", () => {
       "external-urethral-sphincter",
     );
     expect(female.meshMap["External urethral sphincter"]).toBeUndefined();
+    expect(male.meshMap["Bulbospongiosus muscle"]).toBe(
+      "bulbospongiosus-muscle",
+    );
+    expect(female.meshMap["Bulbospongiosus muscle"]).toBeUndefined();
     for (const e of handmadeManifest) expect(e.pack, e.name).toBe("handmade");
   });
 

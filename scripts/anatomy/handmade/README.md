@@ -57,6 +57,7 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
 ## Files
 
 - `clearance-report.txt` — that report from the last full build.
+- `audit_handmade.py` — the audit of `docs/DECISIONS.md` → "Audit" for these meshes (sides, regions by height, mutual duplicates, floating parts), on the shipped GLBs; usage in its docstring.
 - `build_handmade.py` — entry point: builds everything, runs the clearance
   check on every piece, prints length / worst penetration / smallest gap /
   nearest neighbours per structure, exports the GLB and manifest.
@@ -149,6 +150,9 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
 - The Atlas vagina sits far back in our male pelvis: the female urethra's
   course (used for the female sphincter; the urethra itself is item 14) is
   nearly vertical in front of it.
+- No skin or investing fascia: the supraclavicular nerves, which run in
+  the roof of the posterior triangle, lie up to 23 mm from any mesh there
+  (the audit's only finding).
 - Female external genitalia are not built yet (item 13): the female
   bulbospongiosus and ischiocavernosus lie where the vestibular bulbs and
   the clitoris' crura belong.
