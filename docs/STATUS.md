@@ -548,6 +548,18 @@ All verified by `npm run e2e:smoke` against a production build.
   course term to the maxillary nerve, or split that mesh). Builder:
   `--skip <regex>` leaves structures out but still exports (the priority-1
   GLB is rebuilt with the priority-2 ones skipped until they are ready).
+  Male pelvis (item 15): bulbourethral glands (9 × 8 × 7 mm, posterolateral
+  to the membranous urethra, in the sphincter; ducts forward into the bulb
+  to the urethra; ≤ 2 mm into the sphincter, prostate apex, bulb or
+  crura); cremaster (C-shaped loops every ~7 mm round the cord — ductus
+  deferens, testicular artery and vein — from 10 mm below the superficial
+  ring to the testis, each open ≥ 100° towards what the cord rests on
+  (adductor longus, pectineus), else at the back, a loop left out where
+  even a half loop would cut into it; a lateral strip joins the lower
+  ones). Also not built: the nerve to vastus medialis (item 18) — the
+  model's "Femoral nerve" mesh continues as it to vastus medialis
+  (z ≈ 630–650 mm); same question as item 16. Checked the rest: none of
+  the other priority-2 structures lies along an existing mesh.
 - **2026-10-07 · review fixes to priority 1** (a second session measured
   the shipped paths against the brief): (1) the **right recurrent laryngeal
   nerve** passed round the subclavian artery's medial end beside the

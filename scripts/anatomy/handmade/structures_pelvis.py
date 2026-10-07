@@ -1,6 +1,7 @@
 """
 Hand-built perineum: perineal body, perineal muscles (both bodies, male and
-female versions where they differ), anal canal and internal anal sphincter.
+female versions where they differ), anal canal and internal anal sphincter;
+male bulbourethral glands and cremaster.
 Courses: Gray's Anatomy for Students, Moore, Netter (textbook-typical).
 Landmarks are measured on the named meshes; offsets are stated with their
 reason. Frame: metres, +x = the body's left, −y = anterior, +z = up.
@@ -14,7 +15,7 @@ the Atlas bladder neck to in front of the vaginal orifice, item 14).
 """
 import numpy as np
 
-from landmarks import Allow
+from landmarks import Allow, check, matches
 from parts import MM, Builder, Part, unit
 from shapes import arc_band, catmull_rom, ellipsoid, sleeve
 from structures_neck import NODES, SIDES
@@ -86,6 +87,164 @@ def female_urethra_course(b: Builder) -> np.ndarray:
     return catmull_rom([neck, mid, orifice_front])
 
 
+def membranous_urethra(b: Builder) -> tuple[np.ndarray, np.ndarray]:
+    """Centre and axis (pointing up) of the male membranous urethra: the
+    model's urethra bends forward into the bulb right below the prostate's
+    apex, so the membranous part is short — 3 mm below the apex, its axis the
+    principal direction of the urethra's vertices within 5 mm."""
+    U = b.body.V("Urethra")
+    P = b.body.V("Prostate")
+    apex = P[np.argmin(P[:, 2])]
+    near_apex = U[np.linalg.norm(U - apex, axis=1) < 12 * MM]
+    c0 = near_apex[np.argmin(near_apex[:, 2])] if len(near_apex) else apex
+    ring_c = np.array([0.0, c0[1], apex[2] - 3 * MM])
+    local = U[np.linalg.norm(U - ring_c, axis=1) < 5 * MM]
+    _, _, Vt = np.linalg.svd(local - local.mean(0))
+    ax = unit(Vt[0] if Vt[0][2] > 0 else -Vt[0])
+    return local.mean(0), ax
+
+
+def bulbourethral_glands(b: Builder) -> None:
+    """
+    Bulbourethral (Cowper's) glands, male: pea-sized (Ø 8–10 mm), one each
+    side, posterolateral to the membranous urethra in the deep perineal
+    pouch, embedded in the external urethral sphincter. Each duct (≈ 2 cm)
+    runs forward and down through the perineal membrane into the bulb and
+    opens into the spongy urethra.
+    """
+    ring_c, ax = membranous_urethra(b)
+    U = b.body.V("Urethra")
+    # Where the ducts open: the urethra 10–20 mm from the membranous part, in
+    # front of it (in the bulb).
+    d = np.linalg.norm(U - ring_c, axis=1)
+    bulb_u = U[(d > 10 * MM) & (d < 20 * MM) & (U[:, 1] < ring_c[1])]
+    opening = bulb_u.mean(0) if len(bulb_u) else ring_c + np.array([0, -12, -6]) * MM
+    radii = (4.5 * MM, 4.0 * MM, 3.5 * MM)
+    crowd = ("External urethral sphincter", r"Deep transverse perineal muscle\..", "Prostate",
+             r"Corpus (spongiosum|cavernosum) of penis", "Urethra", r"Bulbourethral gland\..", NODES) + FLOOR
+    for side in ("l", "r"):
+        sx = SIDES[side]
+        # Posterolateral: 6.5 mm lateral and 3 mm behind the membranous
+        # urethra's axis — the nearest spot with room for the gland.
+        c = ring_c + np.array([sx * 6.5, 3.0, 0]) * MM
+        c = b.free(c, 3.5 * MM, sex="male", allow=Allow(touch=crowd), search=0.004, clearance=0.0002)
+        part = Part(f"Bulbourethral gland.{side}", "reproductive", "reproductive", "pelvis", sex="male",
+                    family=("External urethral sphincter", f"Bulbourethral gland.{'r' if side == 'l' else 'l'}"))
+        # Embedded in the sphincter; the model's prostate apex, bulb and crura
+        # crowd the deep pouch (as for the sphincter): may press into them ≤ 2 mm.
+        allow = Allow(touch=crowd, squeeze=("External urethral sphincter", "Prostate",
+                                            r"Corpus (spongiosum|cavernosum) of penis",
+                                            r"Deep transverse perineal muscle\.."), depth=2.0 * MM)
+        b.solid(part, "gland", ellipsoid(c, np.eye(3), radii), allow)
+        # Duct: from the gland's front, forward and down into the bulb to the urethra.
+        start = c + np.array([-sx * 1.5, -3.0, -1.5]) * MM
+        mid = (start + opening) / 2 + np.array([sx * 2.0, 0, -1.0]) * MM
+        b.vessel(part, "duct", [start, mid, opening + np.array([sx * 0.8, 0, 0]) * MM], 0.4 * MM,
+                 Allow(anywhere=(r"Corpus spongiosum of penis",), start=(f"Bulbourethral gland.{side}",) + crowd,
+                       end=("Urethra",), touch=crowd, zone=0.005, end_zone=0.004,
+                       squeeze=("External urethral sphincter", r"Deep transverse perineal muscle\..",
+                                r"Corpus cavernosum of penis"), depth=2.0 * MM),
+                 end_taper=0.003)
+        b.add(part)
+
+
+def cremaster(b: Builder, side: str) -> None:
+    """
+    Cremaster muscle, male: loops of muscle round the spermatic cord, from
+    the superficial inguinal ring (the inguinal ligament's medial end) down to
+    the testis, continuous laterally with the internal oblique. Built as open
+    loops (C-shapes every 7 mm, open towards what the cord lies against, else
+    at the back) round the cord — the
+    ductus deferens with the testicular artery and vein — joined by a lateral
+    strip, so the cord stays visible.
+    """
+    sx = SIDES[side]
+    dd = f"Ductus deferens.{side}"
+    vessels = [n for n in (("Left testicular artery", "Left testicular vein") if side == "l"
+                           else ("Right testicular artery.r", "Right testicular vein")) if n in b.body.meshes]
+    D = b.body.V(dd)
+    ring = b.body.V(f"Inguinal ligament.{side}")
+    ring = ring[np.argmin(sx * ring[:, 0])]  # medial end: the superficial ring
+    T = b.body.V(f"Testis.{side}")
+    # from 10 mm below the superficial ring (just below it the cord still lies
+    # among the pubis, pectineus and the superficial external pudendal vessels)
+    z_top, z_bot = ring[2] - 10 * MM, T[:, 2].max() + 3 * MM
+    sections, members = [], [D] + [b.body.V(v) for v in vessels]
+    for z in np.arange(z_top, z_bot, -2 * MM):
+        slab = D[(np.abs(D[:, 2] - z) < 1.5 * MM) & (D[:, 1] < -0.03)]  # the cord part (in front of the pubis)
+        if not len(slab):
+            continue
+        c0 = slab.mean(0)
+        pts = [M[(np.abs(M[:, 2] - z) < 1.5 * MM) & (np.linalg.norm(M[:, :2] - c0[:2], axis=1) < 12 * MM)]
+               for M in members]
+        pts = np.vstack([q for q in pts if len(q)])
+        c = (pts.min(0) + pts.max(0)) / 2
+        c[2] = z
+        r = np.linalg.norm(pts[:, :2] - c[:2], axis=1).max() + 1.0 * MM
+        sections.append((c, r))
+    C = np.array([c for c, _ in sections])
+    C_s = np.array(C)
+    for _ in range(3):  # a smooth cord axis
+        C_s[1:-1] = 0.25 * C_s[:-2] + 0.5 * C_s[1:-1] + 0.25 * C_s[2:]
+    radius = np.array([r for _, r in sections])
+    radius = np.maximum.reduce([np.roll(radius, k) for k in (-2, -1, 0, 1, 2)])
+    radius = np.clip(radius, 3.0 * MM, 6.0 * MM)
+
+    def frame(i):
+        t = unit(C_s[min(i + 1, len(C_s) - 1)] - C_s[max(i - 1, 0)])
+        u = unit(np.array([sx, 0, 0]) - (np.array([sx, 0, 0]) @ t) * t)  # lateral
+        v = unit(np.cross(t, u)) * (1 if np.cross(t, u)[1] < 0 else -1)  # anterior
+        return u, v
+
+    part = Part(f"Cremaster muscle.{side}", "muscular", "muscle", "pelvis", sex="male")
+    cord = (dd, f"Testis.{side}", rf"Epididymis\.{side}") + tuple(vessels)
+    allow = Allow(touch=cord + (NODES, f"Inguinal ligament.{side}", r".*[Ss]crot.*", r"(Internal|External) abdominal oblique.*",
+                                r".*inguinal.*", r"Penis.*|Corpus .* of penis|Glans of penis", r".*[Dd]orsal .* of penis.*",
+                                r"Spermatic.*", r".*pudendal.*",
+                                # the cord descends on adductor longus and pectineus
+                                rf"Adductor longus\.{side}", rf"Pectineus muscle\.{side}", rf"Gracilis muscle\.{side}"),
+                  squeeze=(r"Corpus cavernosum of penis", r"Penis.*"), depth=1.5 * MM)
+    # Each loop is open (≥ 100°) towards whatever the cord lies against there —
+    # adductor longus, pectineus, the pubis, the superficial external pudendal
+    # vessels — or else at the back (θ = 270°).
+    against = [n for n in b.body.meshes if any(matches(q, n) for q in (
+        rf"Adductor longus\.{side}", rf"Pectineus muscle\.{side}", rf"Gracilis muscle\.{side}", rf"Hip bone\.{side}",
+        rf"Superficial external pudendal (artery|vein)\.{side}", r"Pubic symphysis"))]
+    for k, i in enumerate(range(1, len(C_s) - 1, 4)):  # one loop every 4 sections (≈ 7–8 mm)
+        u, v = frame(i)
+        secs = []
+        for j in (i - 1, i, i + 1):
+            j = min(max(j, 0), len(C_s) - 1)
+            secs.append((C_s[j], u, v, radius[j], radius[j]))
+        open_at = np.radians(270)
+        near = [(b.body.nearest(m, C_s[i])[0], m) for m in against]
+        near = [(q, m) for q, m in near if np.linalg.norm(q - C_s[i]) < radius[i] + 2.5 * MM]
+        if near:
+            q = min(near, key=lambda qm: np.linalg.norm(qm[0] - C_s[i]))[0] - C_s[i]
+            open_at = np.arctan2(q @ v, q @ u)
+        # Where the cord rests on a muscle the loop thins out there: widen the
+        # opening until the loop is clear (each candidate checked); where even
+        # a half loop would cut into it, that loop is left out.
+        for hg_ in np.radians([50, 70, 90, 110]):
+            mesh = arc_band(secs, open_at + hg_, open_at + 2 * np.pi - hg_, 0.4 * MM, 0.9 * MM)
+            rep = check(b.body, part.name, mesh[0], mesh[2], "male", allow, own=(part.name,))
+            if rep.worst_inside == 0 and rep.min_gap >= 0.0005 and rep.embedded <= allow.depth:
+                b.solid(part, f"loop {k + 1}", mesh, allow)
+                break
+    # Lateral strip joining the loops (continuous with the internal oblique),
+    # from the first level where the cord's lateral side is clear of what it
+    # rests on (pectineus, adductor longus) down.
+    strip = []
+    for i in range(len(C_s)):
+        u, v = frame(i)
+        lat = C_s[i] + u * (radius[i] + 0.85 * MM)
+        if not strip and any(b.body.nearest(m, lat)[2] < 1.4 * MM or b.body.inside(m, lat) for m in against):
+            continue
+        strip.append((C_s[i], u, v, radius[i], radius[i]))
+    b.solid(part, "lateral strip", arc_band(strip, np.radians(-12), np.radians(12), 0.4 * MM, 0.9 * MM), allow)
+    b.add(part)
+
+
 def perineum(b: Builder, want) -> None:
     eas_v = np.vstack([b.body.V("External anal sphincter.l"), b.body.V("External anal sphincter.r")])
     eas_front = eas_v[np.argmin(eas_v[:, 1])]
@@ -141,16 +300,7 @@ def perineum(b: Builder, want) -> None:
         # the urethra's axis (principal direction of its vertices within 5 mm)
         # 3 mm below the apex, 5 mm long; it may press into the prostate's
         # apex, the bulb and the joined crura, which crowd it in the model.
-        U = b.body.V("Urethra")
-        P = b.body.V("Prostate")
-        apex = P[np.argmin(P[:, 2])]
-        near_apex = U[np.linalg.norm(U - apex, axis=1) < 12 * MM]
-        c0 = near_apex[np.argmin(near_apex[:, 2])] if len(near_apex) else apex
-        ring_c = np.array([0.0, c0[1], apex[2] - 3 * MM])
-        local = U[np.linalg.norm(U - ring_c, axis=1) < 5 * MM]
-        _, _, Vt = np.linalg.svd(local - local.mean(0))
-        ax = unit(Vt[0] if Vt[0][2] > 0 else -Vt[0])
-        ring_c = local.mean(0)
+        ring_c, ax = membranous_urethra(b)
         path = catmull_rom([ring_c - ax * 2.5 * MM, ring_c, ring_c + ax * 2.5 * MM], step=0.001)
         part = Part("External urethral sphincter", "muscular", "muscle", "pelvis", sex="male", family=PERINEAL)
         b.solid(part, "ring", sleeve(path, 2.3 * MM, 3.8 * MM, segments=20),
@@ -353,3 +503,8 @@ def build(b: Builder, only) -> None:
     perineum(b, want)
     if want("Anal canal") or want("Internal anal sphincter"):
         anal_canal(b)
+    if want("Bulbourethral gland"):
+        bulbourethral_glands(b)
+    for side in ("l", "r"):
+        if want("Cremaster"):
+            cremaster(b, side)
