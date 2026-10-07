@@ -491,6 +491,31 @@ describe("the Z-Anatomy whole-body dataset", () => {
     expect(female.meshMap["Urethra"]).toBeUndefined();
   });
 
+  it("adds the priority-3 hand-built structures, in the right body and region", () => {
+    const female = datasetForSex(zAnatomyDataset, "female");
+    const male = datasetForSex(zAnatomyDataset, "male");
+    const has = (d: typeof female, id: string) =>
+      d.structures.some((s) => s.id === id);
+    const both: Record<string, string> = {
+      "tensor-tympani-muscle-left": "head",
+      "stapedius-muscle-right": "head",
+      "subcostal-muscles-left": "thorax",
+    };
+    for (const [id, region] of Object.entries(both)) {
+      const s = registry.get(id);
+      expect(s?.modelSource, id).toBe("Handmade");
+      expect(s?.system, id).toBe("muscular");
+      expect(s?.region, id).toBe(region);
+      expect(has(male, id), id).toBe(true);
+      expect(has(female, id), id).toBe(true);
+    }
+    for (const id of ["scrotum", "septum-of-scrotum"]) {
+      expect(registry.get(id)?.region, id).toBe("pelvis");
+      expect(has(male, id), id).toBe(true);
+      expect(has(female, id), id).toBe(false);
+    }
+  });
+
   it("places the female organs in the pelvis and the breasts on the chest", () => {
     const region = (id: string) => registry.get(id)?.region;
     expect(region("uterus")).toBe("pelvis");

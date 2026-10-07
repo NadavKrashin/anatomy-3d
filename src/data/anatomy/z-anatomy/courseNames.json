@@ -2669,6 +2669,11 @@
     "source": "https://medintzfat.com/anatomy/eye",
     "uses": 10
   },
+  "scrotum": {
+    "en": "Scrotum",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 3
+  },
   "semimembranosus-muscle": {
     "en": "Semimembranosus",
     "source": "https://medintzfat.com/anatomy/lower-limb-part4",
@@ -2689,6 +2694,11 @@
     "en": "Semitendinosus",
     "source": "https://medintzfat.com/anatomy/lab7",
     "uses": 25
+  },
+  "septum-of-scrotum": {
+    "en": "Septum of scrotum",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 1
   },
   "serratus-anterior-muscle": {
     "en": "Serratus anterior",
@@ -2808,6 +2818,11 @@
     "source": "https://medintzfat.com/anatomy/back-and-spine",
     "uses": 10
   },
+  "stapedius-muscle": {
+    "en": "Stapedius",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 9
+  },
   "stapes": {
     "en": "Stapes",
     "source": "https://medintzfat.com/anatomy/quiz-head-neck",
@@ -2868,6 +2883,11 @@
   "subcostal-artery": {
     "en": "Subcostal artery",
     "source": "https://medintzfat.com/anatomy/back-and-spine",
+    "uses": 1
+  },
+  "subcostal-muscles": {
+    "en": "Subcostal muscles",
+    "source": "https://medintzfat.com/anatomy/lab2",
     "uses": 1
   },
   "subcostal-nerve": {
@@ -3142,6 +3162,11 @@
     "en": "Tensor fasciae latae",
     "source": "https://medintzfat.com/anatomy/lab7",
     "uses": 14
+  },
+  "tensor-tympani-muscle": {
+    "en": "Tensor tympani",
+    "source": "https://medintzfat.com/anatomy/quiz-head-neck",
+    "uses": 19
   },
   "tentorium-cerebelli": {
     "en": "Tentorium cerebelli",

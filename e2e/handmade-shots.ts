@@ -143,6 +143,27 @@ const SHOTS_LIST: Shot[] = [
   },
   { id: "bulbourethral-gland-left", hide: PERINEUM, tilt: -150, isolate: true },
   { id: "cremaster-muscle-left", hide: ["Lymphatic", "Other"], turn: 260 },
+  // Priority 3: the middle ear's muscles are millimetres long inside the
+  // temporal bone — isolated (everything else ghosted).
+  { id: "tensor-tympani-muscle-left", hide: [], turn: 260, isolate: true },
+  { id: "stapedius-muscle-left", hide: [], turn: 260, isolate: true },
+  {
+    // On the inside of the back wall: the chest's contents hidden.
+    id: "subcostal-muscles-left",
+    hide: [
+      "Respiratory",
+      "Cardiovascular",
+      "Digestive",
+      "Nervous",
+      "Lymphatic",
+      "Endocrine",
+      "Urinary",
+      "Other",
+    ],
+    turn: 260,
+  },
+  { id: "scrotum", hide: ["Lymphatic", "Other"], turn: 260 },
+  { id: "septum-of-scrotum", hide: [], turn: 260, isolate: true },
   // Female body
   {
     id: "urethra",

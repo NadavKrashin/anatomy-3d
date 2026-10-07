@@ -707,3 +707,38 @@ reduced motion so the software renderer (SwiftShader, ≈ 5.5 s of GPU time per
 whole-body frame) has few frames to rasterize; with inertia and 10-step drags,
 main's drag check queued over a minute of frames before the next screenshot.
 The e2e drags now move in one step (still far beyond the 6 px tap threshold).
+
+## 2026-10-07 — Clearance check: inside is the winding number's call, not the normals'
+
+The hand-built structures' check (and the relaxation that uses it) asked
+the winding number only where the nearest face's raw normal said "inside".
+About 1,200 of the body's 2,957 meshes have inverted triangles (mirrored
+sides) and ≈ 490 have no reliable orientation at all (open tubes far from
+the origin — the trachea, the heart's chambers, the IJV — or inconsistently
+wound faces), so points inside them went unseen: the left phrenic nerve
+ran through scalenus medius, the ansa's superior roots through the SCM and
+the internal jugular vein. Found while building the subcostal muscles (the
+left and right slips, mirror images, failed differently). Now a mesh's
+normals are used only when its signed volume has the same sign about the
+world origin and about its own centroid (`Body.facing`); otherwise every
+nearby point gets the winding number, and the final check always does.
+Every structure was rebuilt and rechecked; the ansa's superior root was
+re-routed medial to the IJV (where the textbook has it), the left phrenic
+nerve's lung allowance went from 5 to 5.5 mm (over the aortic arch), and
+the anal canal may sink ≤ 1.5 mm into the pararectal nodes.
+
+## 2026-10-07 — Priority 3: the model decides three shapes
+
+- **Tensor tympani** hooks forward round the cochlea: the model's auditory
+  tube stops 10 mm short of the tympanic cavity and the jaw-joint disc and
+  temporal lobe fill the bone in front of the cochlea; a clearance-grid
+  search found only that corridor. The alternative routes (between the
+  cochlea and the vestibule, or a 1 mm squeeze under the brain) are less
+  true than a longer muscle.
+- **Subcostal muscles** as four separate oblique slips side by side (as in
+  Netter's internal view of the posterior wall), not overlapping slips that
+  read as one column.
+- **Scrotum** open at its root (the skin continues onto the perineum and
+  pubis, which the model doesn't have): a 2 mm pouch whose sections are the
+  convex outline of what it holds, so it is straight across the midline in
+  front and behind, as the skin is.

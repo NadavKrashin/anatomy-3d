@@ -1,16 +1,18 @@
 """
 Hand-built structures of the thorax and abdomen: thoracic duct and cisterna
 chyli, cystic artery, short gastric arteries, pericardiacophrenic vessels,
-subcostal nerve, greater pancreatic artery. Courses: Gray's Anatomy for
+subcostal nerve, greater pancreatic artery, subcostal muscles. Courses: Gray's Anatomy for
 Students, Moore, Netter (the textbook-typical pattern). Landmarks are
 measured on the named meshes; offsets are stated with their reason.
 Frame: metres, +x = the body's left, −y = anterior, +z = up.
 """
+import re
+
 import numpy as np
 
 from landmarks import Allow
 from parts import MM, Builder, Part, unit
-from shapes import catmull_rom, spindle
+from shapes import band, catmull_rom, smooth, spindle
 from structures_neck import LUNG, NODES, PHRENIC_R, SIDES, front_of, sided
 
 DUCT_R = 2.0 * MM  # Ø 4 mm
@@ -436,6 +438,117 @@ def greater_pancreatic(b: Builder) -> None:
     b.add(part)
 
 
+RIBS = ("First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth", "Eleventh", "Twelfth")
+
+
+def inner_wall(b: Builder, walls, q, inward, reach: float = 0.015) -> tuple[np.ndarray, np.ndarray] | None:
+    """The thoracic wall's inner surface near q: the first of the `walls`
+    meshes met by a ray from 3 cm inside q (along `inward`) back towards it,
+    within `reach` of q; the point and the surface's normal facing the
+    cavity."""
+    o = q + inward * 0.03
+    best = None
+    for w in walls:
+        loc, nrm = b.body.ray(w, o, -inward, 0.03 + reach, normal=True)
+        if loc is not None and (best is None or np.linalg.norm(loc - o) < np.linalg.norm(best[0] - o)):
+            best = (loc, nrm)
+    if best is None:
+        return None
+    loc, nrm = np.asarray(best[0], float), np.asarray(best[1], float)
+    return loc, (nrm if nrm @ inward > 0 else -nrm)
+
+
+def rib_at(R: np.ndarray, x: float, sx: int) -> np.ndarray:
+    """A rib's most posterior vertex within 2 mm of |x| = x."""
+    S = R[np.abs(sx * R[:, 0] - x) < 2 * MM]
+    return S[np.argmax(S[:, 1])]
+
+
+def subcostal_muscles(b: Builder, side: str) -> None:
+    """
+    Subcostal muscles: thin slips in the innermost layer of the posterior
+    thoracic wall, best developed low down: each from the inner surface of a
+    rib at its angle to the upper border of the second rib below, crossing
+    one rib and two intercostal spaces, its fibres running down and medially
+    (the direction of the internal intercostals, with which they blend).
+    Here four slips — ribs 7→9, 8→10, 9→11, 10→12 — 1.5 mm thick, up to
+    12 mm wide, on the wall's inner surface (ribs, innermost intercostals,
+    the intercostal vessels and nerves), under the parietal pleura (not
+    modelled: the lungs lie on the wall). Side by side, as in Netter's
+    internal view of the posterior wall: the slips from ribs 7 and 9 at the
+    angles, those from ribs 8 and 10 one slip-width (13 mm) lateral to
+    them; where one slip ends on a rib and the next begins, the later one
+    lies 0.8 mm further in.
+    """
+    sx = SIDES[side]
+    T_, W_ = 1.5 * MM, 12 * MM
+    part = Part(f"Subcostal muscles.{side}", "muscular", "muscle", "thorax")
+    # The wall's inner layers: the innermost and internal intercostals and
+    # membrane, and the intercostal vessels and nerves, which run between
+    # them and, near the angles, on the inner surface (the subcostals lie
+    # inside them).
+    veins = f"{sided('Left subcostal vein', side)}|{sided('Left superior intercostal vein', side)}"
+    layers = tuple(n for n in b.body.names if re.fullmatch(
+        rf"(Innermost|Internal) intercostal (muscles|membrane)\.{side}|Posterior intercostal arteries\.{side}"
+        rf"|Intercostal nerves\.{side}|Subcostal artery\.{side}|{veins}", n))
+    lung = (LUNG, r".* of (left|right) lung")  # (the lungs' own vessels reach their surface)
+    for i, k in enumerate(range(6, 10)):  # ribs 7…10 (0-based 6…9) → two below
+        ribs = [f"{RIBS[j]} rib.{side}" for j in (k, k + 1, k + 2)]
+        R0, R2 = b.body.V(ribs[0]), b.body.V(ribs[2])
+        # The angle: the rib's most posterior point (its outer surface);
+        # every second slip starts 13 mm lateral to it (the rib's most
+        # posterior vertex there).
+        a0 = R0[np.argmax(R0[:, 1])]
+        shift = 13 * MM * (i % 2)
+        if shift:
+            a0 = rib_at(R0, sx * a0[0] + shift, sx)
+        # The lower end, down and medially: on the second rib below, 12 mm
+        # medial to the upper end (or at that rib's own angle, shifted as
+        # the upper end, if more medial) — its most posterior vertex there —
+        # at its upper border (its highest vertex within 5 mm,
+        # horizontally), 2 mm lower.
+        x2 = min(sx * a0[0] - 12 * MM, sx * R2[np.argmax(R2[:, 1]), 0] + shift)
+        a2 = rib_at(R2, x2, sx)
+        near2 = R2[np.linalg.norm(R2[:, :2] - a2[:2], axis=1) < 5 * MM]
+        a2 = np.array([a2[0], a2[1], near2[:, 2].max() - 2 * MM])
+        offset = T_ / 2 + (0.6 + 0.8 * (i // 2)) * MM
+        pts, nrms = [], []
+        for t in np.linspace(0, 1, 14):
+            q = a0 + (a2 - a0) * t
+            # (into the chest: forwards and a little medially — beside the
+            # spine a medial ray would meet the rib's neck)
+            inward = unit((-sx * 0.35, -1, 0))
+            hit = inner_wall(b, ribs + list(layers), q, inward)
+            if hit is not None:
+                loc, n = hit
+                pts.append(loc + n * offset)
+                nrms.append(n)
+        P, N = smooth(np.array(pts), 2), smooth(np.array(nrms), 2)
+        N /= np.linalg.norm(N, axis=1, keepdims=True)
+        s = np.r_[0, np.cumsum(np.linalg.norm(np.diff(P, axis=0), axis=1))]
+        w = W_ * (0.55 + 0.45 * np.sin(np.pi * s / s[-1]))
+        # Across its whole width, not only its middle: where the wall bulges
+        # in under an edge (a rib's inner surface), the slip moves in with it.
+        T = np.gradient(P, axis=0)
+        Wd = np.cross(N, T / np.linalg.norm(T, axis=1, keepdims=True))
+        for j in range(len(P)):
+            lift = 0.0
+            for u in (-0.5, -0.25, 0.25, 0.5):
+                q = P[j] + Wd[j] * u * w[j]
+                hit = inner_wall(b, ribs + list(layers), q, N[j], reach=0.006)
+                if hit is not None:
+                    lift = max(lift, offset - (q - hit[0]) @ N[j])
+            P[j] = P[j] + N[j] * lift
+        # The lungs lie on the wall: the slips sink into them by their
+        # thickness; the lowest also into the diaphragm's back, which the
+        # model lays on the 11th and 12th ribs.
+        allow = Allow(touch=tuple(re.escape(n) for n in ribs + list(layers))
+                      + (rf"External intercostal muscles\.{side}", r"Diaphragm", r"Subcostal nerve.*"),
+                      squeeze=lung + (r"Diaphragm",), depth=(4.0 if k == 9 else 3.5) * MM)
+        b.solid(part, f"slip {RIBS[k].lower()} to {RIBS[k + 2].lower()} rib", band(P, w, T_, N), allow)
+    b.add(part)
+
+
 def build(b: Builder, only) -> None:
     def want(name: str) -> bool:
         return only is None or bool(only.search(name))
@@ -451,5 +564,7 @@ def build(b: Builder, only) -> None:
             pericardiacophrenic(b, side)
         if want("Subcostal nerve"):
             subcostal_nerve(b, side)
+        if want("Subcostal muscles"):
+            subcostal_muscles(b, side)
     if want("Greater pancreatic"):
         greater_pancreatic(b)

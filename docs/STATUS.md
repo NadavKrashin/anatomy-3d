@@ -240,12 +240,13 @@ All verified by `npm run e2e:smoke` against a production build.
    items 1–11 of `docs/HANDMADE_MODELS_PROMPT.md`; review fixes (right
    recurrent laryngeal hook, anal canal junction) on the priority-2 branch.
    **Priority 2 done and merged to `main`** (items 12–21; user's go,
-   2026-10-07). **Now: priority 3** (branch `claude/handmade-priority-3`),
-   then priority 4.
+   2026-10-07). **Priority 3 built** (items 22–24, branch
+   `claude/handmade-priority-3`; waiting for the user's review of the
+   screenshots before merging), then priority 4.
    Then: her check of the courses (CONTENT_REVIEW → "Hand-built
    structures"); the other session reruns `summary_notes.py` with her .docx
-   (synonyms/parents added for her priority-2 terms); priority 3;
-   then **priority 4: replace the NC kidney with the Human Reference
+   (synonyms/parents added for her priority-2 terms; her priority-3 terms
+   match by name); then **priority 4: replace the NC kidney with the Human Reference
    Atlas male kidney** (CC BY; user, 2026-10-07), leaving only the inner
    ear non-commercial. NC models go into the
    non-commercial file only. Open3DModel's
@@ -305,12 +306,19 @@ All verified by `npm run e2e:smoke` against a production build.
   crowded model: where it leaves no room they lie against neighbours or sink
   a few mm into soft organs (listed per structure in
   `scripts/anatomy/handmade/README.md`); the cisterna chyli and anal canal
-  are smaller than textbook size for the same reason. Priority 2 in
-  progress on `claude/handmade-priority-2` (see the session log); the
-  infra-orbital nerve and the nerve to vastus medialis turned out to be
-  inside Z-Anatomy's maxillary and femoral nerve meshes and are now split
-  out of them (`split-meshes.ts`). Still missing: priority 3 (tensor
-  tympani, stapedius, subcostal muscles, scrotum). Her summary notes reach the priority-1
+  are smaller than textbook size for the same reason. Priority 2 (merged)
+  added items 12–21; the infra-orbital nerve and the nerve to vastus
+  medialis turned out to be inside Z-Anatomy's maxillary and femoral nerve
+  meshes and are now split out of them (`split-meshes.ts`). Priority 3
+  (tensor tympani, stapedius, subcostal muscles, scrotum and its septum)
+  is built on `claude/handmade-priority-3`; the tensor tympani hooks
+  forward round the cochlea (≈ 40 mm belly, textbook ≈ 20 mm) because the
+  model's auditory tube stops 10 mm short of the middle ear
+  (`docs/DECISIONS.md`). Until priority 3 the clearance check missed
+  points inside meshes with inverted or unreliable normals (≈ 1,700 of
+  2,957): the left phrenic nerve and the ansa's superior roots shipped
+  passing through neighbours; fixed and every structure rebuilt
+  (`docs/DECISIONS.md` → "Clearance check"). Her summary notes reach the priority-1
   structures (rerun 2026-10-07 with her .docx: +21 entries — phrenic,
   laryngeal and cervical plexus nerves, ansa, thoracic duct, superior
   thyroid/laryngeal, cystic and short gastric arteries, perineal muscles,
@@ -322,6 +330,10 @@ All verified by `npm run e2e:smoke` against a production build.
   where the model has no skin or investing fascia to lie under; likewise the
   mons pubis (up to 16 mm in front of the pubis' muscles — a fat pad with
   no fat modelled) and the labia majora's lowest edges.
+- `shapes.smooth(..., fixed=0)` smooths nothing (`Q[-0:]` resets the whole
+  array): the relaxation's displacement smoothing and `fit_radius`'s
+  radius smoothing are no-ops. Left as is so the reviewed courses don't
+  move; fix it together with a full rebuild and review.
 - On phones, a long name's leader label can run off the screen edge (user:
   fine as is, 2026-10-05).
 - Long structures (nerves) are framed along their whole length.
@@ -700,3 +712,20 @@ medialis.l/.r` out of the femoral nerve (below the saphenous nerve's upper
   few 16 ms frames). Main's earlier note of a timeout "at the quiz summary
   on unchanged main" was not reproduced here. `npm run verify` green (208),
   `e2e:smoke` green (40).
+- **2026-10-07 · priority 3 (branch `claude/handmade-priority-3`)** — Built
+  items 22–24: tensor tympani and stapedius (both sides), subcostal muscles
+  (four slips a side), scrotum and its septum (male). Her terms ("Tensor
+  tympani m.", "Pyramidal eminence & Stapedius m.", "Subcostal Muscles",
+  "Scrotum", "Septum of scrotum") match by name — no synonyms/parents
+  added; course names 674/1,784. Found and fixed a clearance-check bug:
+  inside/outside was gated by raw face normals, which are inverted or
+  meaningless for ≈ 1,700 meshes; the left phrenic nerve and the ansa's
+  superior roots had shipped running through scalenus medius / the SCM and
+  the IJV. Now the winding number decides where normals can't
+  (`Body.facing`), and the final check always uses it; the superior root
+  now descends medial to the IJV; the left phrenic's lung allowance is
+  5.5 mm; the anal canal may sink ≤ 1.5 mm into the pararectal nodes. All
+  93 meshes rebuilt clearance-clean (120,504 triangles, 0.46 MB); both
+  recurrent nerves still pass the reviewer's hook test; audit: only skin
+  layers float (the scrotum's floor ≤ 11 mm below the testes). `npm run
+verify` green (209).

@@ -14,7 +14,7 @@
     "tissue": "nerve",
     "region": "neck",
     "pack": "handmade",
-    "vertices": 42,
+    "vertices": 52,
     "source": "Handmade",
     "group": "Ansa cervicalis"
   },
@@ -141,7 +141,7 @@
     "tissue": "muscle",
     "region": "pelvis",
     "pack": "handmade",
-    "vertices": 1176,
+    "vertices": 1092,
     "source": "Handmade",
     "sex": "male"
   },
@@ -212,7 +212,7 @@
     "tissue": "nerve",
     "region": "neck",
     "pack": "handmade",
-    "vertices": 352,
+    "vertices": 282,
     "source": "Handmade",
     "group": "Superior laryngeal nerve"
   },
@@ -301,7 +301,7 @@
     "tissue": "nerve",
     "region": "neck",
     "pack": "handmade",
-    "vertices": 362,
+    "vertices": 262,
     "source": "Handmade",
     "group": "Ansa cervicalis"
   },
@@ -330,7 +330,7 @@
     "tissue": "nerve",
     "region": "neck",
     "pack": "handmade",
-    "vertices": 142,
+    "vertices": 92,
     "source": "Handmade",
     "group": "Superior laryngeal nerve"
   },
@@ -350,7 +350,7 @@
     "tissue": "muscle",
     "region": "pelvis",
     "pack": "handmade",
-    "vertices": 472,
+    "vertices": 462,
     "source": "Handmade",
     "sex": "female"
   },
@@ -360,7 +360,7 @@
     "tissue": "muscle",
     "region": "pelvis",
     "pack": "handmade",
-    "vertices": 472,
+    "vertices": 462,
     "source": "Handmade",
     "sex": "female"
   },
@@ -457,7 +457,7 @@
     "tissue": "artery",
     "region": "head",
     "pack": "handmade",
-    "vertices": 584,
+    "vertices": 534,
     "source": "Handmade"
   },
   {
@@ -485,7 +485,7 @@
     "tissue": "nerve",
     "region": "neck",
     "pack": "handmade",
-    "vertices": 458,
+    "vertices": 468,
     "source": "Handmade",
     "group": "Ansa cervicalis"
   },
@@ -495,7 +495,7 @@
     "tissue": "nerve",
     "region": "neck",
     "pack": "handmade",
-    "vertices": 458,
+    "vertices": 468,
     "source": "Handmade",
     "group": "Ansa cervicalis"
   },
@@ -505,7 +505,7 @@
     "tissue": "artery",
     "region": "thorax",
     "pack": "handmade",
-    "vertices": 1122,
+    "vertices": 1132,
     "source": "Handmade"
   },
   {
@@ -523,7 +523,7 @@
     "tissue": "vein",
     "region": "thorax",
     "pack": "handmade",
-    "vertices": 1122,
+    "vertices": 1102,
     "source": "Handmade"
   },
   {
@@ -532,7 +532,7 @@
     "tissue": "vein",
     "region": "thorax",
     "pack": "handmade",
-    "vertices": 832,
+    "vertices": 852,
     "source": "Handmade"
   },
   {
@@ -550,7 +550,7 @@
     "tissue": "nerve",
     "region": "thorax",
     "pack": "handmade",
-    "vertices": 2446,
+    "vertices": 2286,
     "source": "Handmade"
   },
   {
@@ -568,7 +568,7 @@
     "tissue": "artery",
     "region": "head",
     "pack": "handmade",
-    "vertices": 422,
+    "vertices": 412,
     "source": "Handmade"
   },
   {
@@ -588,6 +588,26 @@
     "pack": "handmade",
     "vertices": 572,
     "source": "Handmade"
+  },
+  {
+    "name": "Scrotum",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 5762,
+    "source": "Handmade",
+    "sex": "male"
+  },
+  {
+    "name": "Septum of scrotum",
+    "system": "reproductive",
+    "tissue": "reproductive",
+    "region": "pelvis",
+    "pack": "handmade",
+    "vertices": 116,
+    "source": "Handmade",
+    "sex": "male"
   },
   {
     "name": "Short gastric arteries",
@@ -611,12 +631,48 @@
     "sex": "female"
   },
   {
+    "name": "Stapedius muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "head",
+    "pack": "handmade",
+    "vertices": 284,
+    "source": "Handmade"
+  },
+  {
+    "name": "Stapedius muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "head",
+    "pack": "handmade",
+    "vertices": 284,
+    "source": "Handmade"
+  },
+  {
+    "name": "Subcostal muscles.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "thorax",
+    "pack": "handmade",
+    "vertices": 680,
+    "source": "Handmade"
+  },
+  {
+    "name": "Subcostal muscles.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "thorax",
+    "pack": "handmade",
+    "vertices": 680,
+    "source": "Handmade"
+  },
+  {
     "name": "Subcostal nerve.l",
     "system": "nervous",
     "tissue": "nerve",
     "region": "abdomen",
     "pack": "handmade",
-    "vertices": 1612,
+    "vertices": 1722,
     "source": "Handmade"
   },
   {
@@ -670,7 +726,7 @@
     "tissue": "artery",
     "region": "neck",
     "pack": "handmade",
-    "vertices": 122,
+    "vertices": 102,
     "source": "Handmade"
   },
   {
@@ -688,7 +744,7 @@
     "tissue": "nerve",
     "region": "neck",
     "pack": "handmade",
-    "vertices": 192,
+    "vertices": 102,
     "source": "Handmade",
     "group": "Superior laryngeal nerve"
   },
@@ -718,7 +774,7 @@
     "tissue": "nerve",
     "region": "neck",
     "pack": "handmade",
-    "vertices": 582,
+    "vertices": 552,
     "source": "Handmade",
     "group": "Ansa cervicalis"
   },
@@ -728,7 +784,7 @@
     "tissue": "artery",
     "region": "neck",
     "pack": "handmade",
-    "vertices": 276,
+    "vertices": 196,
     "source": "Handmade"
   },
   {
@@ -746,7 +802,7 @@
     "tissue": "nerve",
     "region": "neck",
     "pack": "handmade",
-    "vertices": 2018,
+    "vertices": 2058,
     "source": "Handmade"
   },
   {
@@ -755,7 +811,7 @@
     "tissue": "nerve",
     "region": "neck",
     "pack": "handmade",
-    "vertices": 2048,
+    "vertices": 2058,
     "source": "Handmade"
   },
   {
@@ -769,12 +825,30 @@
     "sex": "female"
   },
   {
+    "name": "Tensor tympani muscle.l",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "head",
+    "pack": "handmade",
+    "vertices": 1004,
+    "source": "Handmade"
+  },
+  {
+    "name": "Tensor tympani muscle.r",
+    "system": "muscular",
+    "tissue": "muscle",
+    "region": "head",
+    "pack": "handmade",
+    "vertices": 1004,
+    "source": "Handmade"
+  },
+  {
     "name": "Thoracic duct",
     "system": "lymphatic",
     "tissue": "lymphatic",
     "region": "thorax",
     "pack": "handmade",
-    "vertices": 2412,
+    "vertices": 2372,
     "source": "Handmade"
   },
   {
@@ -792,7 +866,7 @@
     "tissue": "nerve",
     "region": "neck",
     "pack": "handmade",
-    "vertices": 436,
+    "vertices": 456,
     "source": "Handmade"
   },
   {

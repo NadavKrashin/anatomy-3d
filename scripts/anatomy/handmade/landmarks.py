@@ -59,12 +59,14 @@ class Obstacles:
     lo: np.ndarray
     hi: np.ndarray
 
-    def hits(self, P, reach: float):
+    def hits(self, P, reach: float, exact: bool = False):
         """
         For each point of P: [(mesh, nearest surface point, unit direction out
         of the mesh, signed distance)] for every mesh closer than `reach` or
         containing the point. Inside/outside comes from the winding number,
         not from normals: many meshes here are open or double-walled.
+        `exact`: the winding number for every point near enough to be inside
+        (the final check), not only where the nearest face suggests it.
         """
         P = np.atleast_2d(np.asarray(P, float))
         out = [[] for _ in range(len(P))]
@@ -75,7 +77,12 @@ class Obstacles:
             tree = self.body.bvh(n)
             near = [tree.find_nearest(Vector(P[i])) for i in idx]
             locs = np.array([h[0] if h[0] is not None else (np.inf, np.inf, np.inf) for h in near])
-            normals = np.array([h[1] if h[1] is not None else (0, 0, 0) for h in near])
+            # Outward normals: about 1,200 of the body's meshes have inverted
+            # triangles (mirrored sides), and for ~490 — open tubes, meshes
+            # wound inconsistently — no one sign holds (facing() is 0): there
+            # every nearby point is settled by the winding number.
+            sign = 0.0 if exact else self.body.facing(n)
+            normals = np.array([h[1] if h[1] is not None else (0, 0, 0) for h in near]) * sign
             dist = np.linalg.norm(locs - P[idx], axis=1)
             in_box = ((self.lo[k] <= P[idx]) & (self.hi[k] >= P[idx])).all(1)
             keep = (dist < reach) | in_box
@@ -86,7 +93,7 @@ class Obstacles:
             # wrongly; the winding number settles it).
             # A point further from the surface than the mesh's greatest
             # possible depth cannot be inside it (thin sheets: intercostals).
-            raw_in = ((P[idx] - locs) * normals).sum(1) < 0
+            raw_in = ((P[idx] - locs) * normals).sum(1) < 0 if sign else np.ones(len(idx), bool)
             ask = in_box & raw_in & (dist < self.body.max_depth(n) * 1.2 + 1e-4)
             inside = np.zeros(len(idx), bool)
             if ask.any():
@@ -107,6 +114,7 @@ class Body:
     _orient: dict[str, float] = field(default_factory=dict)
     _tris: dict[str, np.ndarray] = field(default_factory=dict)
     _depth: dict[str, float] = field(default_factory=dict)
+    _facing: dict[str, float] = field(default_factory=dict)
 
     def __post_init__(self):
         male = male_only_bases()
@@ -127,6 +135,7 @@ class Body:
         self._orient.pop(name, None)
         self._tris.pop(name, None)
         self._depth.pop(name, None)
+        self._facing.pop(name, None)
         self._boxes()
 
     # ---- queries on one named mesh -------------------------------------
@@ -147,6 +156,19 @@ class Body:
             vol = np.einsum("ij,ij->i", A, np.cross(B_, C)).sum()
             self._orient[name] = 1.0 if vol >= 0 else -1.0
         return self._orient[name]
+
+    def facing(self, name: str) -> float:
+        """+1 / −1 as orientation() when the signed volume about the world
+        origin and about the mesh's own centroid agree; 0 when they don't
+        (an open tube far from the origin, inconsistently wound triangles):
+        then the faces' normals say nothing about inside and outside."""
+        if name not in self._facing:
+            V, F, _ = self.meshes[name]
+            c = V.astype(float).mean(0)
+            A, B_, C = (V[F[:, k]].astype(float) - c for k in range(3))
+            local = 1.0 if np.einsum("ij,ij->i", A, np.cross(B_, C)).sum() >= 0 else -1.0
+            self._facing[name] = local if local == self.orientation(name) else 0.0
+        return self._facing[name]
 
     def max_depth(self, name: str) -> float:
         """Upper bound of how deep a point can be inside the mesh: 3·|volume| / area
@@ -316,16 +338,18 @@ def _push(hits, need_of) -> tuple[np.ndarray, float]:
 
 
 def relax(body: Body, path: np.ndarray, radius, sex, allow: Allow, clearance: float = 0.0008,
-          iterations: int = 140, pin=(True, True), own=(), spacing: float = 0.006) -> np.ndarray:
+          iterations: int = 140, pin=(True, True), own=(), spacing: float = 0.006, step: float | None = None) -> np.ndarray:
     """
     Push a course out of every mesh it must not touch until each point is at
     least radius + clearance from them (touch meshes: radius + 0.2 mm; soft
     `squeeze` organs: as far as the hard ones allow), keeping it smooth: the
     control points of a centripetal Catmull-Rom spline, one every `spacing`,
-    move by the (weighted) pushes their dense 2 mm samples need. Returns the
-    dense course.
+    move by the (weighted) pushes their dense samples (every `step`, default
+    2 mm) need. Returns the dense course.
     """
-    from shapes import arc_length, catmull_rom, resample, smooth  # noqa: PLC0415
+    from shapes import STEP, arc_length, catmull_rom, resample, smooth  # noqa: PLC0415
+
+    step = step or STEP
 
     total = arc_length(path)[-1]
     C = resample(path, max(min(spacing, total / 3), 0.0015))
@@ -333,7 +357,7 @@ def relax(body: Body, path: np.ndarray, radius, sex, allow: Allow, clearance: fl
     sets = obstacle_sets(body, path, sex, allow, own)
     hard_need = lambda r_: (lambda m: r_ + (0.0002 if allow.touches(m) else clearance))  # noqa: E731
     for it in range(iterations):
-        P, u = catmull_rom(C, with_u=True)
+        P, u = catmull_rom(C, step, with_u=True)
         s_ = arc_length(P)
         r = radius_at(s_ * total / max(s_[-1], 1e-9))
         zones = allow.zones(s_)
@@ -372,7 +396,7 @@ def relax(body: Body, path: np.ndarray, radius, sex, allow: Allow, clearance: fl
         if pin[1]:
             D[-1] = 0
         C = C + D
-    return catmull_rom(C)
+    return catmull_rom(C, step)
 
 
 @dataclass
@@ -403,11 +427,11 @@ def check(body: Body, name: str, V, s, sex, allow: Allow, own=()) -> Report:
         if not len(sel):
             continue
         hard, soft = sets[z]
-        for i, hits in zip(sel, soft.hits(V[sel], 0.0)):
+        for i, hits in zip(sel, soft.hits(V[sel], 0.0, exact=True)):
             for mesh, _, _, sd in hits:
                 if -sd > embedded:
                     embedded, embedded_mesh, where_emb = -sd, mesh, tuple(np.round(V[i] * 1000).astype(int))
-        for i, hits in zip(sel, hard.hits(V[sel], 0.005)):
+        for i, hits in zip(sel, hard.hits(V[sel], 0.005, exact=True)):
             p = V[i]
             for mesh, _, _, sd in hits:
                 near[mesh] = min(near.get(mesh, 1.0), abs(sd))

@@ -126,7 +126,8 @@ def phrenic(b: Builder, side: str) -> None:
     # The lateral pericardial / prepericardial nodes sit on its course.
     # The model's lungs lie directly on the heart (no pleura or pericardium):
     # where they leave no room the nerve keeps clear of the heart and sinks
-    # into the lung surface, at most 5 mm (reported).
+    # into the lung surface, at most 5.5 mm (reported; the deepest is over
+    # the aortic arch on the left, where the lung lies on the arch).
     # Scalenus medius lies against the junction's back at the top, and the
     # nerve lies against the back of the carotid sheath (common carotid).
     # The ansa's inferior root and its twig to the omohyoid's inferior belly
@@ -134,7 +135,7 @@ def phrenic(b: Builder, side: str) -> None:
     ansa = rf"(Superior root|Inferior root|Muscular branches) of ansa cervicalis\.{side}"
     trunk_allow = Allow(touch=(sa, NODES, rf"Scalenus medius muscle\.{side}", sided("Left common carotid artery", side),
                                ansa), start=(sa, r"Longus (capitis|colli) muscle\..", rf"Vagus nerve \(X\)\.{side}"), end=("Diaphragm",), zone=0.004,
-                        squeeze=(LUNG,), depth=5.0 * MM)
+                        squeeze=(LUNG,), depth=5.5 * MM)
 
     # On the muscle: centre 1 mm + radius in front of its surface.
     on_sa = PHRENIC_R + 1.0 * MM
@@ -624,7 +625,7 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
     R = 0.5 * MM
     # The ansa lies on (in) the carotid sheath and its twigs run between the
     # infrahyoid muscles: it may lie against all of them (never inside).
-    sheath = (NODES, ica, cca, ijv, f"External carotid artery.{side}",
+    sheath = (NODES, ica, cca, ijv, f"External carotid artery.{side}", rf"Vagus nerve \(X\)\.{side}",
               rf"(Sterno(hyoid|thyroid)|Omohyoid|Thyrohyoid) muscle\.{side}",
               rf"Posterior belly of digastric muscle\.{side}", rf"Stylohyoid (ligament|muscle)\.{side}",
               )
@@ -640,18 +641,24 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
     c, t, rx = nerve_axis(b, xii, z_turn, side)
     p0, p1 = branch_start(c, np.array([0, 0, -1.0]), rx, (0, -1, -1))
     sup_pts = [p0, p1]
-    for z in (1.512, 1.495):
-        x = b.body.centre_at(ica, 2, z, 0.003)[0]
-        sup_pts.append(b.free(front_of(b, ica, x, z, R + 1.5 * MM), R, allow=Allow(touch=(ica, NODES)), search=0.004))
-    # In front of the carotid bifurcation (the model's ICA, ECA, CCA and IJV
-    # overlap there), then of the common carotid.
+    # Down in front of the internal carotid, the carotid bifurcation and the
+    # common carotid — medial to the IJV: the model's IJV lies in front of
+    # the carotids here, pressed against the SCM, so the root keeps radius +
+    # 1.5 mm medial to the vein's medial edge (no further lateral than the
+    # artery's centre), radius + 2 mm in front of the carotids there.
     eca = f"External carotid artery.{side}"
-    for z in (1.487, 1.478):
-        x = b.body.centre_at(cca, 2, z, 0.004)[0]
-        # The most anterior of the vessels there (ray from the front).
-        hits = [b.body.ray(m, (x, -0.15, z), (0, 1, 0), 0.3) for m in (cca, ica, eca, ijv)]
-        front = min((h for h in hits if h is not None), key=lambda h: h[1])
-        sup_pts.append(b.free(front - np.array([0, R + 2.0 * MM, 0]), R,
+    # (Above that, at z 1.512, the vein lies behind the internal carotid: the
+    # root is radius + 1.5 mm in front of the artery's centre.)
+    x = b.body.centre_at(ica, 2, 1.512, 0.003)[0]
+    sup_pts.append(b.free(front_of(b, ica, x, 1.512, R + 1.5 * MM), R, allow=Allow(touch=(ica, NODES)), search=0.004))
+    for z, artery in ((1.495, ica), (1.487, cca), (1.478, cca)):
+        xc = b.body.centre_at(artery, 2, z, 0.004)[0]
+        vein = b.body.section(ijv, 2, z)
+        x = sx * min(sx * xc, (sx * vein[:, 0]).min() - R - 1.5 * MM) if len(vein) else xc
+        hits = [b.body.ray(m, (x, -0.15, z), (0, 1, 0), 0.3) for m in (cca, ica, eca)]
+        hits = [h for h in hits if h is not None and abs(h[2] - z) < 1e-6]
+        y = min(h[1] for h in hits) if hits else b.body.centre_at(artery, 2, z, 0.004)[1]
+        sup_pts.append(b.free(np.array([x, y - R - 2.0 * MM, z]), R,
                               allow=Allow(touch=(cca, ica, ijv, eca, NODES)),
                               search=0.005))
     # Loop apex at the cricoid level, in front of the IJV and CCA.
@@ -682,7 +689,7 @@ def ansa_cervicalis(b: Builder, side: str) -> None:
     inf_pts = [behind]
     for z, yfrac in ((1.492, 0.2), (1.478, 0.55)):
         cz = b.body.centre_at(ijv, 2, z, 0.003)
-        inf_pts.append(lateral_of(b, ijv, side, cz[1] - yfrac * 6 * MM, z, R + 1.5 * MM))
+        inf_pts.append(lateral_of(b, ijv, side, cz[1] - yfrac * 6 * MM, z, R + 2.0 * MM))
     inf = Part(names["inf"], "nervous", "nerve", "neck", group=group, family=family)
     b.vessel(inf, "root", inf_pts + [L], R,
              Allow(start=(r"Longus capitis muscle\..", rf"Scalenus medius muscle\.{side}", f"Vertebra C3"),

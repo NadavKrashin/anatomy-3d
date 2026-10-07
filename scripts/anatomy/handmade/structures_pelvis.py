@@ -1,7 +1,8 @@
 """
 Hand-built perineum: perineal body, perineal muscles (both bodies, male and
 female versions where they differ), anal canal and internal anal sphincter;
-male bulbourethral glands and cremaster; female urethra.
+male bulbourethral glands, cremaster, scrotum and its septum; female
+urethra.
 Courses: Gray's Anatomy for Students, Moore, Netter (textbook-typical).
 Landmarks are measured on the named meshes; offsets are stated with their
 reason. Frame: metres, +x = the body's left, −y = anterior, +z = up.
@@ -13,7 +14,10 @@ female muscles use the landmarks where those organs belong (the vaginal
 orifice from the Atlas vagina's lower end; the female urethra's course from
 the Atlas bladder neck to in front of the vaginal orifice, item 14).
 """
+import re
+
 import numpy as np
+from scipy.spatial import ConvexHull
 
 from landmarks import Allow, check, matches
 from parts import MM, Builder, Part, unit
@@ -830,16 +834,182 @@ def anal_canal(b: Builder) -> None:
     b.solid(canal, "canal", tube(path, taper(path, r_canal, end=0.006, tip=0.7), 20),
             # (where it bends out of the rectum it crosses the external
             # sphincter's front rim: may press into it, at most 1.5 mm)
-            Allow(start=("Sigmoid colon",), touch=floor, zone=0.010, squeeze=(EAS,), depth=1.5 * MM))
+            # (the pararectal nodes lie on the rectum's end: ≤ 1.5 mm into them, as the EAS)
+            Allow(start=("Sigmoid colon",), touch=floor, zone=0.010, squeeze=(EAS, r"Pararectal nodes"), depth=1.5 * MM))
     b.add(canal)
     # The internal sphincter: from the junction to 14.5 mm below the ring's
     # centre (it ends about 1 cm above the anus).
     upper = path[(path - C) @ d <= 14.5 * MM]
     ias = Part("Internal anal sphincter", "muscular", "muscle", "pelvis", family=("Anal canal",))
     b.solid(ias, "cuff", sleeve(upper, r_canal + 0.1 * MM, r_canal + ias_t, segments=24),
-            Allow(start=("Sigmoid colon",), touch=floor, zone=0.010, squeeze=(EAS, r"Pubo-analis muscle\.."),
+            Allow(start=("Sigmoid colon",), touch=floor, zone=0.010, squeeze=(EAS, r"Pubo-analis muscle\..", r"Pararectal nodes"),
                   depth=2.0 * MM))
     b.add(ias)
+
+
+def scrotum(b: Builder) -> None:
+    """
+    Scrotum: a thin pouch of skin and dartos (2 mm) round both testes and
+    epididymides and the lower spermatic cords, hanging behind the penis
+    between the thighs, open at the top here (where its skin continues onto
+    the perineum and the pubic region; the cords pass through). Built from
+    horizontal rings, every 1.5 mm: each the convex outline of what it holds
+    at that height (testes, epididymides, the cords' contents and the
+    cremaster), 1.2 mm out — round both testes, straight across the midline
+    in front and behind, as the skin is — smoothed from ring to ring; the
+    rounded floor is a quarter-ellipse 8 mm deep below the lowest ring. Its
+    top: 4 mm above the epididymides' heads.
+    Septum of scrotum: the dartos' midline partition between the two
+    compartments, 1.5 mm thick, filling the pouch's midsagittal section.
+    """
+    sides = ("l", "r")
+    contents = [f"Testis.{s}" for s in sides] + [f"Epididymis.{s}" for s in sides] + [f"Cremaster muscle.{s}" for s in sides]
+    cord = [n for n in b.body.names if b.body.visible(n, "male") and any(matches(q, n) for q in (
+        r"Ductus deferens\..", r"(Left|Right) testicular (artery|vein).*", r"Genital branch of genitofemoral nerve\..",
+        r"Pampiniform plexus.*"))]
+    E = np.vstack([b.body.V(f"Epididymis.{s}") for s in sides])
+    z_top = E[:, 2].max() + 4 * MM
+    Q = np.vstack([b.body.V(n) for n in contents + cord if n in b.body.meshes])
+    Q = Q[Q[:, 2] < z_top + 2 * MM]
+    z_low = Q[:, 2].min()
+    levels = np.arange(z_low + 1.0 * MM, z_top + 1e-6, 1.5 * MM)
+    nphi = 96
+    phi = np.linspace(0, 2 * np.pi, nphi, endpoint=False)
+    circle = np.column_stack([np.cos(np.linspace(0, 2 * np.pi, 12, endpoint=False)),
+                              np.sin(np.linspace(0, 2 * np.pi, 12, endpoint=False))]) * 1.2 * MM
+    # Each ring round its own centre (x = 0, the middle of the outline's
+    # front and back), smoothed with its neighbours (the centres too).
+    R, yc = np.zeros((len(levels), nphi)), np.zeros(len(levels))
+    hulls = []
+    for i, z in enumerate(levels):
+        pts = Q[np.abs(Q[:, 2] - z) < 1.5 * MM][:, :2]
+        pts = (pts[:, None, :] + circle[None]).reshape(-1, 2)
+        hulls.append(pts[ConvexHull(pts).vertices])
+        yc[i] = (hulls[-1][:, 1].min() + hulls[-1][:, 1].max()) / 2
+    yc = np.convolve(np.pad(yc, 2, mode="edge"), np.ones(5) / 5, mode="valid")
+    for i, h in enumerate(hulls):
+        R[i] = star_radius(h - np.array([0, yc[i]]), phi)
+    need = R.copy()
+    for _ in range(6):  # smooth from ring to ring, never inside the outlines
+        S_ = R.copy()
+        S_[1:-1] = 0.25 * R[:-2] + 0.5 * R[1:-1] + 0.25 * R[2:]
+        R = np.maximum(S_, need)
+    ring = lambda z, r, y0: np.column_stack([r * np.cos(phi), y0 + r * np.sin(phi), np.full(nphi, z)])  # noqa: E731
+    rows = [ring(z, R[i], yc[i]) for i, z in enumerate(levels)]
+    # The floor: a quarter-ellipse 8 mm deep under the lowest ring.
+    for t in np.linspace(0.2, 1.0, 5)[::-1][1:]:
+        rows.insert(0, ring(levels[0] - 8 * MM * np.sqrt(1 - t * t), R[0] * t, yc[0]))
+    grid = np.array(rows)[::-1]  # top first: s (arc length) grows from the rim
+    apex = np.array([0, yc[0], levels[0] - 8 * MM])
+    shell = pouch_shell(grid, apex, 2.0 * MM)
+    part = Part("Scrotum", "reproductive", "reproductive", "pelvis", sex="male",
+                family=("Cremaster muscle.l", "Cremaster muscle.r", "Septum of scrotum"))
+    # Its neck: the cords pass through it, and at its root it lies against
+    # the medial thigh (adductor longus, gracilis), as the cords do. The
+    # superficial external pudendal vessels, which the model runs down over
+    # the testes' front, are its anterior scrotal branches: in its wall.
+    allow = Allow(anywhere=(r".*external pudendal.*",), start=tuple(re.escape(n) for n in cord) + (r".*pudendal.*", r"Gracilis muscle\..", r"Adductor longus\.."),
+                  touch=(r"Testis\..", r"Epididymis\..", r".*pudendal.*", r"Gracilis muscle\..", r"Adductor longus\..",
+                         r"Great saphenous vein\..", r"Glans penis", r"Corpus (cavernosum|spongiosum) of penis"),
+                  zone=0.012)
+    b.solid(part, "pouch", shell, allow)
+    b.add(part)
+    # The septum: the pouch's inner section at x = 0 (the rings' front and
+    # back points there), 0.3 mm inside it, ±0.75 mm.
+    j_front, j_back = int(np.argmin(np.abs(phi - 1.5 * np.pi))), int(np.argmin(np.abs(phi - 0.5 * np.pi)))
+    prof = [(row[0, 2], row[j_front, 1] + 0.3 * MM, row[j_back, 1] - 0.3 * MM) for row in grid[:-1]]
+    septum = Part("Septum of scrotum", "reproductive", "reproductive", "pelvis", sex="male",
+                  family=("Scrotum", "Cremaster muscle.l", "Cremaster muscle.r"))
+    b.solid(septum, "septum", midline_plate(prof, 0.75 * MM),
+            Allow(start=tuple(re.escape(n) for n in cord), touch=(r"Testis\..", r"Epididymis\.."), zone=0.012))
+    b.add(septum)
+
+
+def star_radius(hull: np.ndarray, phi: np.ndarray) -> np.ndarray:
+    """Distance from the origin to a convex polygon (containing it) along
+    each direction phi."""
+    out = np.zeros(len(phi))
+    A, B_ = hull, np.roll(hull, -1, axis=0)
+    for j, f in enumerate(phi):
+        d = np.array([np.cos(f), np.sin(f)])
+        # ray t·d meets edge A + u(B − A): t·d − u·(B − A) = A
+        E_ = B_ - A
+        den = d[0] * (-E_[:, 1]) - d[1] * (-E_[:, 0])
+        ok = np.abs(den) > 1e-12
+        t = np.where(ok, (A[:, 0] * (-E_[:, 1]) - A[:, 1] * (-E_[:, 0])) / np.where(ok, den, 1), np.inf)
+        u = np.where(ok, (d[0] * A[:, 1] - d[1] * A[:, 0]) / np.where(ok, den, 1), -1)
+        good = ok & (t > 0) & (u >= -1e-9) & (u <= 1 + 1e-9)
+        assert good.any(), "the outline must contain its centre"
+        out[j] = t[good].min()
+    return out
+
+
+def pouch_shell(grid: np.ndarray, apex: np.ndarray, thickness: float):
+    """A thick-walled pouch from rings (n, m, 3), top ring first, closed at
+    the bottom by `apex`: the inner surface on the rings, the outer one
+    `thickness` out along the surface normals, joined at the open rim."""
+    n, m, _ = grid.shape
+    inner = np.vstack([grid.reshape(-1, 3), apex[None]])
+    tip = n * m
+    F = []
+    for i in range(n - 1):
+        for j in range(m):
+            a, b_, c, d = i * m + j, (i + 1) * m + j, (i + 1) * m + (j + 1) % m, i * m + (j + 1) % m
+            F += [(a, b_, c), (a, c, d)]
+    last = (n - 1) * m
+    F += [(last + j, tip, last + (j + 1) % m) for j in range(m)]
+    F = np.array(F)
+    # Vertex normals (area-weighted), oriented away from the pouch's axis.
+    Vt = inner[F]
+    fn = np.cross(Vt[:, 1] - Vt[:, 0], Vt[:, 2] - Vt[:, 0])
+    N = np.zeros_like(inner)
+    for k in range(3):
+        np.add.at(N, F[:, k], fn)
+    N /= np.linalg.norm(N, axis=1, keepdims=True)
+    centre = np.vstack([np.repeat(grid.mean(1), m, axis=0), apex[None]])[:, :2]
+    flip = (N[:, :2] * (inner[:, :2] - centre)).sum(1) < 0
+    flip[tip] = N[tip, 2] > 0
+    N[flip] *= -1
+    outer = inner + N * thickness
+    V = np.vstack([inner, outer])
+    off = len(inner)
+    faces = [F[:, ::-1], F + off]  # inner faces point into the pouch
+    rim = []
+    for j in range(m):
+        a, b_ = j, (j + 1) % m
+        rim += [(a, b_, off + b_), (a, off + b_, off + a)]
+    faces.append(np.array(rim))
+    Fall = np.vstack(faces).astype(np.int32)
+    # s: distance down from the rim (for the allowances near its neck).
+    top = grid[0, :, 2].mean()
+    s = np.concatenate([top - inner[:, 2]] * 2)
+    return V, Fall, s
+
+
+def midline_plate(profile, half: float):
+    """A plate in the midsagittal plane (x = ±half) from (z, y_front, y_back)
+    rows, top row first; closed at the bottom by the last row."""
+    rows = [(z, yf, yb) for z, yf, yb in profile if yb - yf > 1.0 * MM]
+    n = len(rows)
+    V = []
+    for x in (-half, half):
+        for z, yf, yb in rows:
+            V += [(x, yf, z), (x, yb, z)]
+    V = np.array(V)
+    idx = lambda side, i, k: side * 2 * n + 2 * i + k  # noqa: E731
+    F = []
+    for i in range(n - 1):
+        for side in (0, 1):
+            a, b_, c, d = idx(side, i, 0), idx(side, i + 1, 0), idx(side, i + 1, 1), idx(side, i, 1)
+            F += [(a, b_, c), (a, c, d)] if side else [(a, c, b_), (a, d, c)]
+        for k in (0, 1):  # front and back edges
+            a, b_, c, d = idx(0, i, k), idx(0, i + 1, k), idx(1, i + 1, k), idx(1, i, k)
+            F += [(a, b_, c), (a, c, d)] if k else [(a, c, b_), (a, d, c)]
+    for i in (0, n - 1):  # top and bottom edges
+        a, b_, c, d = idx(0, i, 0), idx(0, i, 1), idx(1, i, 1), idx(1, i, 0)
+        F += [(a, b_, c), (a, c, d)] if i else [(a, c, b_), (a, d, c)]
+    s = np.r_[[rows[0][0] - z for z, _, _ in rows for _ in (0, 1)] * 2]
+    return V, np.array(F, np.int32), s
 
 
 def build(b: Builder, only) -> None:
@@ -860,5 +1030,7 @@ def build(b: Builder, only) -> None:
     for side in ("l", "r"):
         if want("Cremaster"):
             cremaster(b, side)
+    if want("Scrotum") or want("Septum of scrotum"):
+        scrotum(b)
     if want("Urethra (female)") or want("Female urethra"):
         female_urethra(b)

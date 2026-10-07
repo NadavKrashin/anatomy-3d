@@ -22,6 +22,8 @@ GROUPS = {
                  "cremaster-muscle-left"],
   "priority-2-female": ["urethra-female", "clitoris-female", "bulb-of-vestibule-left-female",
                         "greater-vestibular-gland-left-female", "labium-majus-left-female", "mons-pubis-female"],
+  "priority-3": ["tensor-tympani-muscle-left", "stapedius-muscle-left", "subcostal-muscles-left", "scrotum",
+                 "septum-of-scrotum"],
   "pelvis": ["perineal-body", "superficial-transverse-perineal-muscle-left", "deep-transverse-perineal-muscle-left",
              "external-urethral-sphincter", "bulbospongiosus-muscle", "ischiocavernosus-muscle-left", "anal-canal",
              "internal-anal-sphincter", "perineal-body-female", "external-urethral-sphincter-female",

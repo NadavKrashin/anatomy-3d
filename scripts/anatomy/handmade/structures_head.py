@@ -1,15 +1,22 @@
 """
 Hand-built structures of the head and the back of the neck: lingual and
-posterior auricular arteries, suboccipital nerve. Courses: Gray's Anatomy
+posterior auricular arteries, suboccipital nerve, the middle ear's muscles
+(tensor tympani, stapedius). Courses: Gray's Anatomy
 for Students, Moore, Netter (textbook-typical). Landmarks are measured on
 the named meshes; offsets are stated with their reason. Frame: metres, +x =
 the body's left, −y = anterior, +z = up. `sx` = +1 on the left, −1 on the
 right.
 
-Not built: the infra-orbital nerve (brief item 16) — Z-Anatomy's
-"Maxillary nerve" mesh already runs on through the orbit floor to the face
-and fans out there, i.e. it includes the infra-orbital nerve; a second mesh
-would duplicate it (README → "Model quirks").
+Not built here: the infra-orbital nerve (brief item 16) — Z-Anatomy's
+"Maxillary nerve" mesh already runs on through the orbit floor to the face,
+so scripts/anatomy/z-anatomy/split-meshes.ts cuts that part out of it as its
+own mesh (README → "Model quirks").
+
+The middle ear: the model's temporal bone is one closed mesh with no
+tympanic cavity or canals — the ossicles, cochlea and vestibule lie inside
+it — so the middle ear's muscles may lie anywhere inside it too (they run
+in bony canals); everything else in there (ossicles, inner ear, facial and
+chorda tympani nerves, eardrum) they must clear.
 """
 import numpy as np
 
@@ -212,6 +219,144 @@ def suboccipital_nerve(b: Builder, side: str) -> None:
     b.add(part)
 
 
+EAR_FINE = 0.0005  # m: sample step for the middle ear's millimetre-scale muscles
+
+
+def tensor_tympani(b: Builder, side: str) -> None:
+    """
+    Tensor tympani: from the cartilage of the auditory tube and the adjacent
+    sphenoid, in its semicanal directly above the bony auditory tube, back
+    and laterally to the cochleariform process on the medial wall of the
+    tympanic cavity — above the promontory (the cochlea's basal turn), in
+    front of the oval window (the stapes' footplate), below the facial
+    nerve's tympanic segment. There its tendon turns laterally across the
+    cavity to the medial surface of the malleus' handle near its root. Belly
+    about 2 cm long, Ø 2 mm; tendon Ø 0.6 mm.
+    """
+    sx = SIDES[side]
+    tube_, mall, stapes = f"Auditory tube.{side}", f"Malleus.{side}", f"Stapes.{side}"
+    R = 1.0 * MM
+    T = b.body.V(tube_)
+    xs = sx * T[:, 0]
+    # Above the tube: at two points along it (10 and 3 mm short of its
+    # lateral end), the belly's centre is radius +
+    # 0.6 mm above the tube's top, over its middle (the semicanal lies on it,
+    # separated by a thin bony septum).
+    over = []
+    for x in (xs.max() - 10 * MM, xs.max() - 3 * MM):
+        S = T[np.abs(xs - x) < 1.2 * MM]
+        over.append(np.array([sx * x, (S[:, 1].min() + S[:, 1].max()) / 2, S[:, 2].max() + R + 0.6 * MM]))
+    # The model's tube ends 10 mm medial to the tympanic cavity, short of
+    # the cochlea (Z-Anatomy quirk); over its end lies the facial nerve, and
+    # the temporomandibular disc and the temporal lobe reach into the bone in
+    # front of the cochlea. The only room for a muscle (a clearance-grid
+    # search, README → "Model quirks") is a corridor from the tube's end
+    # down and forward round the front of the cochlea, then back along the
+    # cavity's anterior wall to the process. Measured on the cochlea's
+    # section 1.5 mm below the stapes' top: from 0.5 mm past the tube's end
+    # (2.5 mm in front of it, at its mid-height), 3 mm in front of the
+    # cochlea's front-most point, then 2.5 mm lateral to the cochlea, 1 mm
+    # in front of its front (1.5 mm higher) and 4.5 mm in front of the
+    # stapes (at the process's height).
+    St = b.body.V(stapes)
+    coch = f"Cochlea.{side}"
+    end_ = T[xs > xs.max() - 1.5 * MM]
+    C = b.body.section(coch, 2, St[:, 2].max() - 1.5 * MM)
+    z_c = C[:, 2].mean()
+    front = C[np.argmin(C[:, 1])]
+    lat = np.abs(C[:, 0]).max()
+    # The cochleariform process: at the stapes' front edge − 2 mm (anterior)
+    # and the stapes' top + 0.5 mm (above the promontory, below the facial
+    # canal), 1.1 mm lateral to the cochlea's section there.
+    y_p = St[:, 1].min() - 2 * MM
+    z_p = St[:, 2].max() + 0.5 * MM
+    x_p = sx * (np.abs(b.body.section(coch, 2, z_p)[:, 0]).max() + 0.3 * MM + 0.8 * MM)
+    route = [
+        np.array([sx * (xs.max() + 0.5 * MM), end_[:, 1].min() - 2.5 * MM, (end_[:, 2].min() + end_[:, 2].max()) / 2]),
+        np.array([front[0], front[1] - 3.0 * MM, z_c]),
+        np.array([sx * (lat + 2.5 * MM), front[1] - 1.0 * MM, z_c + 1.5 * MM]),
+        np.array([sx * (lat + 2.5 * MM), St[:, 1].min() - 4.5 * MM, z_p]),
+    ]
+    inner = (coch, f"Vestibule.{side}")
+    ear = (rf"Temporal bone\.{side}",)
+    room = Allow(anywhere=ear, touch=inner)
+    process = b.free(np.array([x_p, y_p, z_p]), 0.3 * MM, allow=room, search=0.0015)
+    # (each the nearest spot with room for the belly, or the roomiest)
+    route = [b.free(q, R, allow=room, search=0.002) for q in route]
+    part = Part(f"Tensor tympani muscle.{side}", "muscular", "muscle", "head")
+    belly = b.vessel(part, "belly", over + route + [process], R,
+                     Allow(anywhere=ear,
+                           # (from the tube's cartilage and the sphenoid's spine, over
+                           # its first 7 mm; lies on the tube and the otic capsule)
+                           start=(tube_, r"Sphenoid bone", rf"Internal carotid artery\.{side}"),
+                           touch=(tube_,) + inner, zone=0.007, end_zone=0.002),
+                     start_taper=0.006, end_taper=0.006, tip=0.3, step=EAR_FINE,
+                     # (relaxing a path sampled this finely makes it zig-zag; the
+                     # control points above are each placed with room)
+                     do_relax=False, fit=True)
+    # Tendon: from the process laterally to the handle's medial surface 1 mm
+    # below its root (the malleus' handle is its part below the lateral
+    # process; its root is taken 3 mm above the umbo, its lowest point).
+    M = b.body.V(mall)
+    umbo = M[np.argmin(M[:, 2])]
+    z_t = umbo[2] + 2.5 * MM
+    Sm = M[np.abs(M[:, 2] - z_t) < 0.5 * MM]
+    y_t = Sm[:, 1].mean()
+    ins = b.body.ray(mall, (sx * 0.035, y_t, z_t), (sx, 0, 0), 0.03)
+    P0 = belly.path[-1]
+    b.vessel(part, "tendon", [P0, (P0 + ins) / 2, ins], 0.3 * MM,
+             Allow(anywhere=ear, start=inner, end=(mall,), touch=inner + (mall,), zone=0.0015, end_zone=0.0015),
+             start_taper=0.0, end_taper=0.0, step=EAR_FINE, spacing=0.0015)
+    b.add(part)
+
+
+def stapedius(b: Builder, side: str) -> None:
+    """
+    Stapedius: in a canal in the posterior wall of the tympanic cavity,
+    beside (medial and in front of) the facial nerve's descending (mastoid)
+    segment, which supplies it; its tendon leaves the apex of the pyramidal
+    eminence and runs forward to the back of the neck of the stapes. The
+    body's smallest muscle: belly about 6 mm, Ø 1.6 mm; tendon Ø 0.5 mm.
+    """
+    sx = SIDES[side]
+    vii, stapes = f"Facial nerve (VII).{side}", f"Stapes.{side}"
+    R = 0.8 * MM
+    St = b.body.V(stapes)
+    # The stapes' head: its lateral end (the incus' long process meets it).
+    head = St[np.abs(St[:, 0]) > np.abs(St[:, 0]).max() - 1.0 * MM]
+    z_h = head[:, 2].mean()
+    # The neck's back: the stapes' surface hit from behind, 1 mm medial to
+    # the head's lateral end, at the head's height.
+    x_n = sx * (np.abs(St[:, 0]).max() - 1.0 * MM)
+    neck = b.body.ray(stapes, (x_n, St[:, 1].max() + 0.01, z_h), (0, -1, 0), 0.02)
+    # The facial nerve's descending segment: its vertices behind the
+    # stapes (y > the stapes' back + 3 mm), lateral of the stapes' footplate.
+    Fn = b.body.V(vii)
+    Fn = Fn[(Fn[:, 1] > St[:, 1].max() + 3 * MM) & (sx * Fn[:, 0] > np.abs(St[:, 0]).min())
+            & (Fn[:, 2] < z_h) & (Fn[:, 2] > z_h - 15 * MM)]
+
+    def beside(z: float) -> np.ndarray:
+        # Medial-front of the nerve at height z: radius + 0.4 mm medial to
+        # its medial edge, level with its front edge + radius.
+        S = Fn[np.abs(Fn[:, 2] - z) < 0.75 * MM]
+        return np.array([sx * (np.abs(S[:, 0]).min() - R - 0.4 * MM), S[:, 1].min() + R, z])
+
+    # Belly from 9 mm to 3 mm below the stapes' head; the pyramid's apex
+    # 1.5 mm below and 2.5 mm behind the neck.
+    low, high = beside(z_h - 9 * MM), beside(z_h - 3 * MM)
+    apex = neck + np.array([0, 2.5, -1.5]) * MM
+    part = Part(f"Stapedius muscle.{side}", "muscular", "muscle", "head")
+    ear = (rf"Temporal bone\.{side}",)
+    belly = b.vessel(part, "belly", [low, (low + high) / 2, high, apex], R,
+                     Allow(anywhere=ear, touch=(vii, f"Vestibule.{side}"), zone=0.002),
+                     start_taper=0.003, end_taper=0.002, tip=0.35, step=EAR_FINE, spacing=0.002)
+    P0 = belly.path[-1]
+    b.vessel(part, "tendon", [P0, (P0 + neck) / 2, neck], 0.25 * MM,
+             Allow(anywhere=ear, end=(stapes,), touch=(vii, stapes, f"Incus.{side}"), zone=0.001, end_zone=0.0012),
+             start_taper=0.0, end_taper=0.0, step=EAR_FINE, spacing=0.001)
+    b.add(part)
+
+
 def build(b: Builder, only) -> None:
     def want(name: str) -> bool:
         return only is None or bool(only.search(name))
@@ -223,3 +368,7 @@ def build(b: Builder, only) -> None:
             posterior_auricular_artery(b, side)
         if want("Suboccipital nerve"):
             suboccipital_nerve(b, side)
+        if want("Tensor tympani muscle"):
+            tensor_tympani(b, side)
+        if want("Stapedius muscle"):
+            stapedius(b, side)

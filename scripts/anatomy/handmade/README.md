@@ -37,6 +37,9 @@ model, and is checked against every neighbouring mesh.
 | 19   | `Lingual artery.l/.r` (with the deep lingual artery), `Posterior auricular artery.l/.r`                                                                                                                                                                                                                                                                                 |
 | 20   | `Greater pancreatic artery`                                                                                                                                                                                                                                                                                                                                             |
 | 21   | `Suboccipital nerve.l/.r` (with twigs to the suboccipital muscles and semispinalis capitis)                                                                                                                                                                                                                                                                             |
+| 22   | `Tensor tympani muscle.l/.r` (belly and tendon to the malleus), `Stapedius muscle.l/.r` (belly beside the facial nerve, tendon to the stapes' neck)                                                                                                                                                                                                                     |
+| 23   | `Subcostal muscles.l/.r` (four slips: ribs 7→9, 8→10, 9→11, 10→12)                                                                                                                                                                                                                                                                                                      |
+| 24   | Male: `Scrotum` (2 mm pouch, open at its root), `Septum of scrotum`                                                                                                                                                                                                                                                                                                     |
 
 ## Rerun
 
@@ -50,7 +53,7 @@ for f in public/models/z-anatomy/*.glb public/models/open3dmodel/extras.glb \
          public/models/non-commercial/non-commercial.glb; do
   npx tsx scripts/anatomy/decode-glb.ts "$f" "out/decoded/$(basename $(dirname $f))-$(basename $f)"
 done
-# 3. Build (≈ 15 min; asserts clearance, prints a report)
+# 3. Build (≈ 25 min; asserts clearance, prints a report)
 ~/bpyenv/bin/python scripts/anatomy/handmade/build_handmade.py -- \
   out/decoded out/handmade.glb out/manifest-handmade.json
 # 4. Compress and install
@@ -112,7 +115,19 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
    number (Jacobson et al. 2013) — robust to the open vessel tubes and
    double-walled sheets here, where ray parity and normals fail. It runs only
    where the nearest face suggests "inside" and closer than the mesh's
-   greatest possible depth (3·volume/area).
+   greatest possible depth (3·volume/area). The face's normal is taken
+   outward by the mesh's orientation (`Body.facing`: the sign of its
+   signed volume, about the world origin and about its own centroid);
+   where the two disagree (≈ 490 meshes: open tubes far from the origin,
+   inconsistently wound triangles) the winding number decides for every
+   nearby point. The final check (6) uses the winding number for every
+   point near enough to be inside, whatever the normals say.
+   Until 2026-10-07 (priority 3) the raw normal was used: about 1,200 body
+   meshes (mirrored sides, mostly left) have inverted triangles, so points
+   inside them were never confirmed — the check and the relaxation missed
+   them (the left phrenic nerve ran through scalenus medius, the ansa's
+   superior root through the SCM and the internal jugular vein). Every
+   structure was rebuilt and rechecked with the fix.
 5. **Fit**: where neighbours leave less room than the nominal diameter the
    tube narrows locally (never below half).
 6. **Check** (asserted): no vertex inside a mesh it may not enter; at least
@@ -131,8 +146,8 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
   together (superior thyroid artery and external laryngeal nerve).
 - `squeeze` + `depth`: may sink into a soft organ, at most `depth`, reported
   — only where the model leaves no room:
-  - phrenic nerve into the lungs (≤ 5 mm): the model's lungs lie directly on
-    the heart, with no pleura or pericardium between;
+  - phrenic nerve into the lungs (≤ 5.5 mm): the model's lungs lie directly
+    on the heart and the aortic arch, with no pleura or pericardium between;
   - right recurrent laryngeal nerve into the right lung apex and its apical
     vessels (≤ 5 mm): the apex rises round the subclavian artery (no
     cervical pleura), so the hook under the artery lies in its surface;
@@ -149,7 +164,15 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
   - male external urethral sphincter into the prostate apex / bulb / crura
     (≤ 2 mm); internal anal sphincter into the external one (≤ 2 mm), the
     anal canal into its front rim where it bends out of the rectum (≤ 1.5 mm);
-    male bulbospongiosus into the crura where they abut the bulb (≤ 1 mm).
+    male bulbospongiosus into the crura where they abut the bulb (≤ 1 mm);
+    the anal canal and internal sphincter into the pararectal nodes on the
+    rectum's end (≤ 1.5 / 2 mm);
+  - subcostal muscles into the lungs and the diaphragm's back (≤ 3.5 mm;
+    ≤ 4 mm for the lowest slip), which lie on the thoracic wall.
+- `anywhere`: the middle ear's muscles inside the temporal bone (one closed
+  mesh, no cavity); the superficial external pudendal vessels in the
+  scrotum's wall (they run down over the testes' front: its anterior
+  scrotal branches).
 
 ## Model quirks met (Z-Anatomy and the fitted female organs)
 
@@ -170,6 +193,11 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
   lowest point.
 - Its tight hook (≈ 10 mm) is relaxed with control points every 3 mm (6 mm
   elsewhere), so the relaxation keeps its shape.
+- The internal jugular vein lies in front of the carotids from the
+  bifurcation up (textbook: lateral), pressed against the SCM: the ansa's
+  superior root descends medial to it, in front of the carotids. Fixed
+  2026-10-07 (priority 3): it used to pass in front of the vein, through
+  it and the SCM — hidden by the inside-test bug (Method 4).
 - The common carotid encloses the front of scalenus anterior at z 1470–1490:
   the phrenic nerve's first 2 cm run just lateral to the muscle.
 - The superior thyroid vein starts far laterally: the artery takes the
@@ -188,6 +216,24 @@ decoded body in `out/decoded/body-cache.npz` (rebuilt when a GLB is newer).
 - The Atlas vagina sits far back in our male pelvis: the female urethra's
   course (used for the female sphincter; the urethra itself is item 14) is
   nearly vertical in front of it.
+- The middle ear: the temporal bone is one closed mesh (no tympanic
+  cavity or canals), so the ear's muscles may lie anywhere inside it. The
+  auditory tube ends 10 mm medial to the cavity, short of the cochlea; the
+  facial nerve lies on its end, and the temporomandibular disc and the
+  temporal lobe reach into the bone in front of the cochlea, leaving ~1 mm.
+  A clearance-grid search (0.25 mm) found one corridor with room for the
+  tensor tympani: from the tube's end forward round the cochlea, then back
+  along the cavity's anterior wall to the cochleariform process — so the
+  muscle hooks forward (≈ 40 mm belly, textbook ≈ 20 mm). These muscles are
+  sampled every 0.5 mm and not relaxed (relaxing so fine a path makes it
+  zig-zag); their control points are each placed with room and the tube
+  narrows where needed.
+- The lower ribs' inner surface bulges under a slip's edges: the subcostal
+  slips are offset from the wall across their whole width. The model's
+  lungs and the diaphragm's back lie on the wall, so the slips sink into
+  them by about their thickness (≤ 3.5 mm; ≤ 4 mm for the lowest slip).
+- The testes hang close to the thighs: the scrotum's root lies against
+  adductor longus and gracilis (allowed within 12 mm of its rim).
 - No skin or investing fascia: the supraclavicular nerves, which run in
   the roof of the posterior triangle, lie up to 23 mm from any mesh there
   (the audit's only finding).
