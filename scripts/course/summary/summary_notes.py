@@ -19,7 +19,8 @@ its notes (text + where in the summary) and, from the organ guide, her
 Hebrew name (without the definite article; singular for one-sided
 structures — synonyms.json → hebrew). Entries the rules can't place but that are about a part of a structure (a
 landmark on a bone, a lobe of the liver) go to that structure via
-parents.json, labelled with the entry's name. Entries naming several structures ("Superficial & Deep inguinal
+parents.json, labelled with the entry's name; parents.json → bodies marks
+entries about one body only (her "Prostatic urethra" on the shared urethra). Entries naming several structures ("Superficial & Deep inguinal
 ring") go to each of them. See docs/COURSE_SOURCE.md → "Her summary".
 """
 
@@ -175,7 +176,9 @@ def main(path):
                 index[key(name)].add(base)
 
     with open(os.path.join(HERE, "parents.json"), encoding="utf-8") as f:
-        parents = resolve_parents(json.load(f)["parents"], structures)
+        parent_file = json.load(f)
+    parents = resolve_parents(parent_file["parents"], structures)
+    bodies = parent_file["bodies"]["terms"]  # entries about one body only
 
     out, unmatched = defaultdict(lambda: {"notes": []}), []
     for e in entries:
@@ -201,6 +204,8 @@ def main(path):
             continue
         for b in bases:
             note = {"text": e["text"], "section": e["section"], "term": e["en"]}
+            if e["en"] in bodies:
+                note["sex"] = bodies[e["en"]]
             if len(bases) > 1 or part_of:
                 # The entry is about more than this structure, or a part of it:
                 # the panel labels the note with the entry's name.

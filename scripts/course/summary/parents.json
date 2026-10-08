@@ -571,7 +571,6 @@
     "Semicircular canals (Anterior/Lateral/Posterior) & Ampullae": [
       "vestibule"
     ],
-    "Renal / Fibrous capsule": ["kidney"],
     "Renal cortex": ["kidney"],
     "Renal medulla - Pyramids & Columns": ["kidney"],
     "Renal papillae": ["kidney"],
@@ -593,6 +592,109 @@
       "labium-minus",
       "vaginal-vestibule",
       "clitoris"
-    ]
+    ],
+    "Anal columns": ["anal-canal"],
+    "Myometrium": ["uterus"],
+    "Endometrium": ["uterus"],
+    "Mesosalpinx": ["uterine-tube"],
+    "Dartos fascia": ["scrotum"],
+    "Scrotal ligament": ["scrotum", "testis"],
+    "External spermatic fascia": ["ductus-deferens", "cremaster-muscle"],
+    "Oval window": ["stapes"],
+    "Capsule of hip joint": [
+      "descending-part-of-iliofemoral-ligament",
+      "transverse-part-of-iliofemoral-ligament",
+      "pubofemoral-ligament",
+      "ischiofemoral-ligament"
+    ],
+    "Greater omentum": ["stomach", "transverse-colon"],
+    "Hepatorenal recess (Morison’s pouch)": ["liver", "kidney-right"],
+    "Paracolic recesses": ["ascending-colon", "descending-colon"],
+    "Rectovesical space / pouch": ["rectum", "urinary-bladder"],
+    "Retropubic/Prevesical space": ["urinary-bladder"],
+    "Ischiorectal / Ischioanal fossa": [
+      "anal-canal",
+      "external-anal-sphincter"
+    ],
+    "Pudendal (Alcock’s) canal": [
+      "pudendal-nerve",
+      "internal-pudendal-artery",
+      "internal-pudendal-vein"
+    ],
+    "Lateral/Medial/Median umbilical fold": [
+      "inferior-epigastric-artery",
+      "urinary-bladder"
+    ],
+    "Camper’s fascia": ["external-abdominal-oblique-muscle"],
+    "Scarpa’s fascia": ["external-abdominal-oblique-muscle"],
+    "Colles’ fascia": [
+      "bulbospongiosus-muscle",
+      "ischiocavernosus-muscle",
+      "superficial-transverse-perineal-muscle"
+    ],
+    "Popliteal fossa": ["popliteal-artery", "popliteal-vein", "tibial-nerve"],
+    "Lateral intermuscular septum": [
+      "vastus-lateralis-muscle",
+      "biceps-femoris-muscle"
+    ],
+    "Superior + inferior extensor retinaculum": [
+      "tibialis-anterior-muscle",
+      "extensor-hallucis-longus",
+      "extensor-digitorum-longus"
+    ],
+    "Superior + inferior fibular retinaculum": [
+      "fibularis-longus-muscle",
+      "fibularis-brevis-muscle"
+    ],
+    "Flexor retinaculum": [
+      "tibialis-posterior-muscle",
+      "flexor-digitorum-longus",
+      "flexor-hallucis-longus",
+      "posterior-tibial-artery",
+      "tibial-nerve"
+    ],
+    "Extensor expansion": ["extensor-digitorum-longus"],
+    "Plantar aponeurosis": ["flexor-digitorum-brevis"],
+    "Medial + Lateral retinaculum": ["patella"],
+    "Suprapatellar bursa": ["patella"],
+    "Thoracolumbar fascia": ["erector-spinae", "latissimus-dorsi-muscle"],
+    "Triangle of auscultation": [
+      "trapezius-muscle",
+      "latissimus-dorsi-muscle",
+      "rhomboid-major-muscle"
+    ],
+    "Lumbar triangle": [
+      "latissimus-dorsi-muscle",
+      "external-abdominal-oblique-muscle"
+    ],
+    "Pre-vertebral fascia": ["longus-colli-muscle", "longus-capitis-muscle"],
+    "Investing fascia": ["trapezius-muscle", "sternocleidomastoid-muscle"],
+    "Galea aponeurotica": ["frontalis-muscle", "occipitalis-muscle"],
+    "Arachnoid mater": ["spinal-cord"],
+    "Cerebrospinal fluid": [
+      "lateral-ventricle",
+      "third-ventricle",
+      "fourth-ventricle"
+    ],
+    "Extensor Retinaculum": ["extensor-digitorum"],
+    "Fibrous Digital Sheath": [
+      "flexor-digitorum-superficialis",
+      "flexor-digitorum-profundus"
+    ],
+    "הזרוע (Arm) - לאחר הסרת העור": ["humerus"],
+    "Medial (obliterated) umbilical ligament": ["urinary-bladder"],
+    "Dorsal ramus of spinal nerve": ["erector-spinae"],
+    "Internal venous plexus": ["spinal-cord"],
+    "Crural fascia": ["tibialis-anterior-muscle"]
+  },
+  "bodies": {
+    "about": "Her entries about one body only, on a structure both bodies have (the urethra, the bladder, the rectum): the note shows in that body only (datasetForSex).",
+    "terms": {
+      "Prostatic urethra": "male",
+      "Membranous / Intermediate urethra": "male",
+      "Penile / Spongy urethra": "male",
+      "Rectovesical space / pouch": "male",
+      "Vesicouterine pouch": "female"
+    }
   }
 }

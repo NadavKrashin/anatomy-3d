@@ -73,4 +73,32 @@ describe("datasetForSex", () => {
     };
     expect(datasetForSex(plain, "female")).toBe(plain);
   });
+
+  it("leaves out study notes about the other body", () => {
+    const note = (term: string, sex?: "male" | "female") => ({
+      text: term,
+      language: "he" as const,
+      term,
+      section: "x",
+      ...(sex ? { sex } : {}),
+    });
+    const urethra: AnatomicalStructure = {
+      ...structure("urethra"),
+      studyNotes: [
+        note("Urethra"),
+        note("Prostatic urethra", "male"),
+        note("Vesicouterine pouch", "female"),
+      ],
+    };
+    const plain: AnatomyDataset = {
+      ...dataset,
+      structures: [urethra],
+      meshMap: {},
+      meshSex: undefined,
+    };
+    const terms = (sex: "male" | "female") =>
+      datasetForSex(plain, sex).structures[0]?.studyNotes?.map((n) => n.term);
+    expect(terms("male")).toEqual(["Urethra", "Prostatic urethra"]);
+    expect(terms("female")).toEqual(["Urethra", "Vesicouterine pouch"]);
+  });
 });

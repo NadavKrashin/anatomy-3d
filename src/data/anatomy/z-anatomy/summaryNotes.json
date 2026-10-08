@@ -44,6 +44,12 @@
         "section": "גפה עליונה",
         "term": "2. מדור Hypothenar (גבעת הזרת) - שלושה שרירים",
         "shared": true
+      },
+      {
+        "text": "תנר מניע את האגודל; היפותנר מניע את הזרת. אלה קבוצות שרירים שונות.",
+        "section": "גפה עליונה",
+        "term": "שרירי Thenar vs Hypothenar",
+        "shared": true
       }
     ]
   },
@@ -67,6 +73,12 @@
         "text": "גבעת האגודל כוללת שרירים המאפשרים הרחקה, כיפוף ואופוזיציה.",
         "section": "גפה עליונה",
         "term": "1. מדור Thenar (גבעת האגודל) - שלושה שרירים",
+        "shared": true
+      },
+      {
+        "text": "תנר מניע את האגודל; היפותנר מניע את הזרת. אלה קבוצות שרירים שונות.",
+        "section": "גפה עליונה",
+        "term": "שרירי Thenar vs Hypothenar",
         "shared": true
       }
     ]
@@ -201,6 +213,18 @@
         "text": "הקטע הסופי של המעי המוביל לפי הטבעת.",
         "section": "אגן ופרינאום",
         "term": "Anal canal"
+      },
+      {
+        "text": "קפלים אורכיים ברירית החלק העליון של התעלה האנאלית.",
+        "section": "אגן ופרינאום",
+        "term": "Anal columns",
+        "shared": true
+      },
+      {
+        "text": "חלל שומני לצד התעלה האנאלית, המאפשר לה להתרחב.",
+        "section": "אגן ופרינאום",
+        "term": "Ischiorectal / Ischioanal fossa",
+        "shared": true
       }
     ],
     "he": "תעלה אנאלית",
@@ -220,7 +244,8 @@
       {
         "text": "לולאה עצבית צווארית המפעילה את רוב השרירים התת־היואידיים.",
         "section": "צוואר",
-        "term": "Ansa cervicalis (Superior Root & Inferior root)"
+        "term": "Ansa cervicalis (Superior Root & Inferior root)",
+        "shared": true
       }
     ]
   },
@@ -436,6 +461,16 @@
       }
     ]
   },
+  "anterior-tibiotalar-ligament": {
+    "notes": [
+      {
+        "text": "קבוצת רצועות מדיאלית חזקה בקרסול, מן הטיביה לעצמות כף הרגל.",
+        "section": "השלמות גפה תחתונה",
+        "term": "Deltoid ligament of ankle",
+        "shared": true
+      }
+    ]
+  },
   "aortic-arch": {
     "notes": [
       {
@@ -539,6 +574,12 @@
         "text": "כפיפת המעי הגס ליד הכבד, בין העולה לרוחבי.",
         "section": "חלל הבטן ואיבריו",
         "term": "Right colic (hepatic) flexure",
+        "shared": true
+      },
+      {
+        "text": "מרווחים צפקיים לצד המעי העולה והיורד.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Paracolic recesses",
         "shared": true
       }
     ]
@@ -799,6 +840,12 @@
         "text": "שריר המסטרינג צדדי בעל שני ראשים; מכופף ברך ומסובב שוק החוצה.",
         "section": "גפה תחתונה",
         "term": "Biceps femoris m. (Long & Short head)"
+      },
+      {
+        "text": "מחיצה פאסיאלית בין מדורי שרירים בצד הירך.",
+        "section": "גפה תחתונה",
+        "term": "Lateral intermuscular septum",
+        "shared": true
       }
     ]
   },
@@ -988,6 +1035,15 @@
       }
     ]
   },
+  "bulb-of-vestibule": {
+    "notes": [
+      {
+        "text": "רקמה זקפתית זוגית לצד פתח הנרתיק.",
+        "section": "אגן ופרינאום",
+        "term": "Bulb of the vestibule"
+      }
+    ]
+  },
   "bulbospongiosus-muscle": {
     "notes": [
       {
@@ -999,8 +1055,30 @@
         "text": "שריר המכסה את פקעות הפרוזדור ומשתתף בתפקוד הפרינאום.",
         "section": "אגן ופרינאום",
         "term": "Bulbospongiosus"
+      },
+      {
+        "text": "שכבה ממברנוטית של הפאסיה השטחית בפרינאום.",
+        "section": "אגן ופרינאום",
+        "term": "Colles’ fascia",
+        "shared": true
       }
     ]
+  },
+  "bulbourethral-gland": {
+    "notes": [
+      {
+        "text": "בלוטות קטנות באזור הפרינאום העמוק. צינורותיהן נפתחים אל השופכה הספוגית והפרשתן תורמת לסיכוך. יש להבדיל בינן לבין שלפוחיות הזרע והערמונית, שנמצאות גבוה יותר באגן.",
+        "section": "מערכת הרבייה הזכרית",
+        "term": "Bulbourethral glands"
+      },
+      {
+        "text": "בלוטה קטנה בפרינאום העמוק, המפרישה אל השופכה הספוגית.",
+        "section": "אגן ופרינאום",
+        "term": "Bulbourethral gland"
+      }
+    ],
+    "he": "בלוטות בולבואורתרליות",
+    "heHeading": "הבלוטות הבולבואורתרליות"
   },
   "calcaneal-tendon": {
     "notes": [
@@ -1166,6 +1244,28 @@
         "term": "עצמות הבריח (Clavicles)"
       }
     ]
+  },
+  "clitoris": {
+    "notes": [
+      {
+        "text": "איבר זקפתי בעל עצבוב תחושתי עשיר. כולל חלק חיצוני נראה וחלקים פנימיים, ובהם גוף ושוקיים. תפקידו בעיקר בתחושה מינית. אין לזהות את האיבר כולו רק עם העטרה הנראית מבחוץ.",
+        "section": "מערכת הרבייה הנקבית",
+        "term": "Clitoris"
+      },
+      {
+        "text": "איבר זקפתי ותחושתי, שחלק ניכר ממנו פנימי.",
+        "section": "אגן ופרינאום",
+        "term": "Clitoris"
+      },
+      {
+        "text": "מכלול איברי המין החיצוניים, ובו השפתיים הגדולות והקטנות, הדגדגן והפרוזדור. בפרוזדור נפתחים השופכה והנרתיק. השפתיים תוחמות ומגינות על האזור; פתח השתן ופתח הנרתיק נפרדים.",
+        "section": "מערכת הרבייה הנקבית",
+        "term": "Vulva and labia",
+        "shared": true
+      }
+    ],
+    "he": "דגדגן",
+    "heHeading": "הדגדגן"
   },
   "coccygeus-muscle": {
     "notes": [
@@ -1361,6 +1461,16 @@
       }
     ]
   },
+  "compressor-urethrae": {
+    "notes": [
+      {
+        "text": "שרירי שליטה בשופכה; כוללים את הסוגר החיצוני ומרכיבים נוספים באנטומיה נקבית.",
+        "section": "אגן ופרינאום",
+        "term": "Compressor urethra m. & Sphincter urethrae",
+        "shared": true
+      }
+    ]
+  },
   "coracobrachialis-muscle": {
     "notes": [
       {
@@ -1475,6 +1585,26 @@
       }
     ]
   },
+  "cremaster-muscle": {
+    "notes": [
+      {
+        "text": "שכבת שריר ופאסיה במעטפות חבל הזרע, הקשורה לאלכסוני הפנימי.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Cremaster m. & fascia"
+      },
+      {
+        "text": "שריר המרים את האשך; עצבובו דרך הענף הגניטלי של הגניטופמורלי.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Cremaster"
+      },
+      {
+        "text": "מעטפת חבל הזרע שמקורה באפונאורוזת האלכסוני החיצוני.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "External spermatic fascia",
+        "shared": true
+      }
+    ]
+  },
   "cricoid-cartilage": {
     "notes": [
       {
@@ -1507,6 +1637,15 @@
         "text": "שריר המותח את מיתרי הקול באמצעות תנועה בין התריס לקריקואיד.",
         "section": "ראש וצוואר ואיברי החישה",
         "term": "Cricothyroid m."
+      }
+    ]
+  },
+  "crus-of-clitoris": {
+    "notes": [
+      {
+        "text": "שלוחה זקפתית של הדגדגן המעוגנת לענף האיסכיופובי.",
+        "section": "אגן ופרינאום",
+        "term": "Crus of clitoris"
       }
     ]
   },
@@ -1581,6 +1720,16 @@
       }
     ]
   },
+  "deep-transverse-perineal-muscle": {
+    "notes": [
+      {
+        "text": "שרירים רוחביים בפרינאום המסייעים בתמיכת האזור והגוף הפרינאלי.",
+        "section": "אגן ופרינאום",
+        "term": "Superficial (& deep) transverse perineal m.",
+        "shared": true
+      }
+    ]
+  },
   "deltoid-muscle": {
     "notes": [
       {
@@ -1626,11 +1775,23 @@
         "section": "חלל הבטן ואיבריו",
         "term": "Sigmoid colon",
         "shared": true
+      },
+      {
+        "text": "מרווחים צפקיים לצד המעי העולה והיורד.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Paracolic recesses",
+        "shared": true
       }
     ]
   },
   "descending-part-of-iliofemoral-ligament": {
     "notes": [
+      {
+        "text": "מעטפת סיבית של מפרק הירך.",
+        "section": "גפה תחתונה",
+        "term": "Capsule of hip joint",
+        "shared": true
+      },
       {
         "text": "רצועה קדמית חזקה במפרק הירך, המגבילה בעיקר פשיטת יתר.",
         "section": "גפה תחתונה",
@@ -1866,6 +2027,12 @@
         "shared": true
       },
       {
+        "text": "מעטפת חבל הזרע שמקורה באפונאורוזת האלכסוני החיצוני.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "External spermatic fascia",
+        "shared": true
+      },
+      {
         "text": "הרחבה של צינור הזרע סמוך לקצהו באגן.",
         "section": "אגן ופרינאום",
         "term": "Ampulla of ductus deferens",
@@ -2018,6 +2185,18 @@
         "text": "קבוצת זוקפי הגב, הפושטת את עמוד השדרה ומסייעת בכיפוף צדי.",
         "section": "גב ועמוד שדרה",
         "term": "Erector spinae - Spinalis, Longissimus, Iliocostalis"
+      },
+      {
+        "text": "ענף אחורי מעורב של עצב שדרתי, לשרירי הגב העמוקים ולעור הגב.",
+        "section": "גב ועמוד שדרה",
+        "term": "Dorsal ramus of spinal nerve",
+        "shared": true
+      },
+      {
+        "text": "מעטפת פאסיאלית בגב התחתון, הקשורה לזוקפי הגב ולשרירי הבטן.",
+        "section": "גב ועמוד שדרה",
+        "term": "Thoracolumbar fascia",
+        "shared": true
       }
     ]
   },
@@ -2090,6 +2269,12 @@
         "text": "פושט את אצבעות היד באמצעות הרחבות גידיות דורסליות.",
         "section": "גפה עליונה",
         "term": "Extensor Digitorum"
+      },
+      {
+        "text": "רצועה פאסיאלית בגב שורש כף היד, המייצבת את גידי הפושטים.",
+        "section": "גפה עליונה",
+        "term": "Extensor Retinaculum",
+        "shared": true
       }
     ]
   },
@@ -2108,6 +2293,18 @@
         "text": "פושט את ארבע אצבעות הרגל הצדדיות ומסייע בכיפוף גבי.",
         "section": "גפה תחתונה",
         "term": "Extensor digitorum longus"
+      },
+      {
+        "text": "רצועות פאסיאליות המחזיקות גידי פושטים סמוך לקרסול הקדמי.",
+        "section": "גפה תחתונה",
+        "term": "Superior + inferior extensor retinaculum",
+        "shared": true
+      },
+      {
+        "text": "הרחבה גידית בגב האצבע, המשלבת אחזי שרירים לפשיטה ולייצוב.",
+        "section": "גפה תחתונה",
+        "term": "Extensor expansion",
+        "shared": true
       }
     ]
   },
@@ -2126,6 +2323,12 @@
         "text": "פושט את הבוהן ומסייע בכיפוף גבי של הקרסול.",
         "section": "גפה תחתונה",
         "term": "Extensor hallucis longus"
+      },
+      {
+        "text": "רצועות פאסיאליות המחזיקות גידי פושטים סמוך לקרסול הקדמי.",
+        "section": "גפה תחתונה",
+        "term": "Superior + inferior extensor retinaculum",
+        "shared": true
       }
     ]
   },
@@ -2180,9 +2383,27 @@
         "term": "External abdominal oblique"
       },
       {
+        "text": "פאסיה תת־עורית שומנית בדופן הבטן הקדמית.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Camper’s fascia",
+        "shared": true
+      },
+      {
+        "text": "שכבה ממברנוטית של הפאסיה השטחית, עמוקה לשכבת השומן.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Scarpa’s fascia",
+        "shared": true
+      },
+      {
         "text": "שולי הפתח המפשעתי השטחי וסיבים רוחביים המחזקים אותם.",
         "section": "דופן הבטן והמפשעה",
         "term": "Lateral & Medial crus + Intercrural fibers",
+        "shared": true
+      },
+      {
+        "text": "משולש בגב התחתון; יש להבחין בין המשולש המותני העליון לתחתון.",
+        "section": "גב ועמוד שדרה",
+        "term": "Lumbar triangle",
         "shared": true
       }
     ]
@@ -2199,6 +2420,22 @@
         "text": "הפתח החיצוני של התעלה האנאלית.",
         "section": "אגן ופרינאום",
         "term": "Anus",
+        "shared": true
+      },
+      {
+        "text": "חלל שומני לצד התעלה האנאלית, המאפשר לה להתרחב.",
+        "section": "אגן ופרינאום",
+        "term": "Ischiorectal / Ischioanal fossa",
+        "shared": true
+      }
+    ]
+  },
+  "external-branch-of-superior-laryngeal-nerve": {
+    "notes": [
+      {
+        "text": "ענף פנימי לתחושה מעל קפלי הקול; ענף חיצוני לקריקותירואיד.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Superior laryngeal nerve (External & Internal Br.)",
         "shared": true
       }
     ]
@@ -2279,6 +2516,16 @@
         "text": "חלק שרירי סמוך לרצועת הקול, המבצע כוונון עדין של המתח.",
         "section": "ראש וצוואר ואיברי החישה",
         "term": "Vocalis m.",
+        "shared": true
+      }
+    ]
+  },
+  "external-urethral-sphincter": {
+    "notes": [
+      {
+        "text": "שרירי שליטה בשופכה; כוללים את הסוגר החיצוני ומרכיבים נוספים באנטומיה נקבית.",
+        "section": "אגן ופרינאום",
+        "term": "Compressor urethra m. & Sphincter urethrae",
         "shared": true
       }
     ]
@@ -2519,6 +2766,15 @@
       }
     ]
   },
+  "fibrous-capsule-of-kidney": {
+    "notes": [
+      {
+        "text": "קפסולת רקמת החיבור הצמודה לפני הכליה.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Renal / Fibrous capsule"
+      }
+    ]
+  },
   "fibula": {
     "notes": [
       {
@@ -2576,6 +2832,12 @@
         "text": "מטה את כף הרגל החוצה; גידו נאחז בבסיס המסרק החמישי.",
         "section": "גפה תחתונה",
         "term": "Fibularis brevis"
+      },
+      {
+        "text": "רצועות פאסיאליות המייצבות את הגידים הפיבולריים מאחורי הפטישון הלטרלי.",
+        "section": "גפה תחתונה",
+        "term": "Superior + inferior fibular retinaculum",
+        "shared": true
       }
     ]
   },
@@ -2585,6 +2847,12 @@
         "text": "מטה את כף הרגל החוצה ותומך בקשתות דרך גיד החוצה את הסוליה.",
         "section": "גפה תחתונה",
         "term": "Fibularis longus"
+      },
+      {
+        "text": "רצועות פאסיאליות המייצבות את הגידים הפיבולריים מאחורי הפטישון הלטרלי.",
+        "section": "גפה תחתונה",
+        "term": "Superior + inferior fibular retinaculum",
+        "shared": true
       },
       {
         "text": "גיד העובר מאחורי הפטישון הלטרלי וחוצה את הסוליה אל הצד המדיאלי.",
@@ -2711,6 +2979,12 @@
         "section": "גפה עליונה",
         "term": "2. מדור Hypothenar (גבעת הזרת) - שלושה שרירים",
         "shared": true
+      },
+      {
+        "text": "תנר מניע את האגודל; היפותנר מניע את הזרת. אלה קבוצות שרירים שונות.",
+        "section": "גפה עליונה",
+        "term": "שרירי Thenar vs Hypothenar",
+        "shared": true
       }
     ]
   },
@@ -2720,6 +2994,12 @@
         "text": "שריר שטחי בסוליה המאפשר כיפוף של האצבעות הצדדיות.",
         "section": "גפה תחתונה",
         "term": "Flexor digitorum brevis"
+      },
+      {
+        "text": "לוח רקמת חיבור בסוליה, המסייע בתמיכת קשתות כף הרגל.",
+        "section": "גפה תחתונה",
+        "term": "Plantar aponeurosis",
+        "shared": true
       }
     ]
   },
@@ -2729,6 +3009,12 @@
         "text": "מכופף את ארבע האצבעות הצדדיות של כף הרגל.",
         "section": "גפה תחתונה",
         "term": "Flexor digitorum longus"
+      },
+      {
+        "text": "רצועה פאסיאלית מדיאלית היוצרת גג לתעלה הטרסלית.",
+        "section": "גפה תחתונה",
+        "term": "Flexor retinaculum",
+        "shared": true
       }
     ]
   },
@@ -2749,6 +3035,12 @@
         "text": "תכולת התעלה הקרפלית: ארבעה גידי FDS, ארבעה FDP, גיד FPL והעצב המדיאני.",
         "section": "גפה עליונה",
         "term": "תוכן - 9 גידים + עצב אחד",
+        "shared": true
+      },
+      {
+        "text": "מעטפת סיבית בגבול הכפי של האצבע, המחזיקה את גידי המכופפים סמוך לעצם.",
+        "section": "גפה עליונה",
+        "term": "Fibrous Digital Sheath",
         "shared": true
       }
     ]
@@ -2771,6 +3063,12 @@
         "section": "גפה עליונה",
         "term": "תוכן - 9 גידים + עצב אחד",
         "shared": true
+      },
+      {
+        "text": "מעטפת סיבית בגבול הכפי של האצבע, המחזיקה את גידי המכופפים סמוך לעצם.",
+        "section": "גפה עליונה",
+        "term": "Fibrous Digital Sheath",
+        "shared": true
       }
     ]
   },
@@ -2780,6 +3078,12 @@
         "text": "מכופף את הבוהן, במיוחד במפרק הבין־גלילי, ומסייע בדחיפה בהליכה.",
         "section": "גפה תחתונה",
         "term": "Flexor hallucis longus"
+      },
+      {
+        "text": "רצועה פאסיאלית מדיאלית היוצרת גג לתעלה הטרסלית.",
+        "section": "גפה תחתונה",
+        "term": "Flexor retinaculum",
+        "shared": true
       }
     ]
   },
@@ -2794,6 +3098,12 @@
         "text": "גבעת האגודל כוללת שרירים המאפשרים הרחקה, כיפוף ואופוזיציה.",
         "section": "גפה עליונה",
         "term": "1. מדור Thenar (גבעת האגודל) - שלושה שרירים",
+        "shared": true
+      },
+      {
+        "text": "תנר מניע את האגודל; היפותנר מניע את הזרת. אלה קבוצות שרירים שונות.",
+        "section": "גפה עליונה",
+        "term": "שרירי Thenar vs Hypothenar",
         "shared": true
       }
     ]
@@ -2845,6 +3155,16 @@
         "text": "הצלעות, עצמות קשתיות המרכיבות עם החוליות והסטרנום את כלוב החזה.",
         "section": "השלמות בית החזה",
         "term": "Ribs",
+        "shared": true
+      }
+    ]
+  },
+  "fourth-ventricle": {
+    "notes": [
+      {
+        "text": "נוזל מוח ושדרה; מקיף את מערכת העצבים המרכזית ונמצא גם בחדרי המוח.",
+        "section": "השלמות מוח ומעטפות",
+        "term": "Cerebrospinal fluid",
         "shared": true
       }
     ]
@@ -2941,6 +3261,12 @@
         "text": "בטנים קדמית ואחורית המחוברות באפונאורוזת הקרקפת; מניעות קרקפת וגבות.",
         "section": "פנים ואזור טמפורלי",
         "term": "Occipitofrontalis - Frontalis & Occipitalis",
+        "shared": true
+      },
+      {
+        "text": "אפונאורוזה בקרקפת המחברת בין בטני השריר האוקסיפיטופרונטלי.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Galea aponeurotica",
         "shared": true
       }
     ]
@@ -3085,6 +3411,15 @@
       }
     ]
   },
+  "glans-of-clitoris": {
+    "notes": [
+      {
+        "text": "הקצה החיצוני התחושתי של הדגדגן.",
+        "section": "אגן ופרינאום",
+        "term": "Glans clitoris"
+      }
+    ]
+  },
   "glans-penis": {
     "notes": [
       {
@@ -3192,6 +3527,31 @@
         "shared": true
       }
     ]
+  },
+  "greater-pancreatic-artery": {
+    "notes": [
+      {
+        "text": "ענף בולט של עורק הטחול המספק את גוף הלבלב.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Greater pancreatic artery"
+      }
+    ]
+  },
+  "greater-vestibular-gland": {
+    "notes": [
+      {
+        "text": "בלוטות קטנות באזור האחורי־צדי של פתח הנרתיק. מפרישות ריר לפרוזדור הפות באמצעות צינורות קצרים. חשוב להבדיל בין הבלוטות לבין פקעות הפרוזדור, שהן רקמה זקפתית ואינן בלוטות מפרישות.",
+        "section": "מערכת הרבייה הנקבית",
+        "term": "Greater vestibular glands"
+      },
+      {
+        "text": "בלוטה המפרישה ריר לפרוזדור הפות, סמוך לפתח הנרתיק.",
+        "section": "אגן ופרינאום",
+        "term": "Greater vestibular gland (Bartholin)"
+      }
+    ],
+    "he": "בלוטות ברתולין",
+    "heHeading": "בלוטות ברתולין"
   },
   "hamate-bone": {
     "notes": [
@@ -3462,6 +3822,12 @@
         "term": "Humerus"
       },
       {
+        "text": "הזרוע היא האזור בין הכתף למרפק; מחולקת למדורים קדמי ואחורי.",
+        "section": "גפה עליונה",
+        "term": "הזרוע (Arm) - לאחר הסרת העור",
+        "shared": true
+      },
+      {
         "text": "חריץ אחורי בהומרוס שבו עוברים העצב הרדיאלי וכלי דם עמוקים.",
         "section": "גפה עליונה",
         "term": "Spiral/Radial Groove",
@@ -3656,6 +4022,12 @@
         "text": "עורק העולה מהכסל החיצוני לדופן הבטן הקדמית.",
         "section": "אגן ופרינאום",
         "term": "Inferior epigastric artery"
+      },
+      {
+        "text": "קפלים טבוריים: אמצעי מעל שריד האורכוס, מדיאליים מעל עורקים טבוריים סגורים וצדדיים מעל כלי דם אפיגסטריים.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Lateral/Medial/Median umbilical fold",
+        "shared": true
       },
       {
         "text": "כלי דם של דופן הבטן; העורק התחתון עולה ממערכת הכסל החיצונית.",
@@ -3885,6 +4257,16 @@
       }
     ]
   },
+  "inferior-root-of-ansa-cervicalis": {
+    "notes": [
+      {
+        "text": "לולאה עצבית צווארית המפעילה את רוב השרירים התת־היואידיים.",
+        "section": "צוואר",
+        "term": "Ansa cervicalis (Superior Root & Inferior root)",
+        "shared": true
+      }
+    ]
+  },
   "inferior-superficial-inguinal-nodes": {
     "notes": [
       {
@@ -3936,6 +4318,15 @@
         "text": "וריד גדול המחזיר דם מחלקו התחתון של הגוף לעלייה ימין.",
         "section": "חלל הבטן ואיבריו",
         "term": "Inferior vena cava"
+      }
+    ]
+  },
+  "infra-orbital-nerve": {
+    "notes": [
+      {
+        "text": "ענף של V2 לעפעף תחתון, צד האף ושפה עליונה.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Infra-orbital nerve"
       }
     ]
   },
@@ -4073,6 +4464,16 @@
       }
     ]
   },
+  "internal-branch-of-superior-laryngeal-nerve": {
+    "notes": [
+      {
+        "text": "ענף פנימי לתחושה מעל קפלי הקול; ענף חיצוני לקריקותירואיד.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Superior laryngeal nerve (External & Internal Br.)",
+        "shared": true
+      }
+    ]
+  },
   "internal-carotid-artery": {
     "notes": [
       {
@@ -4127,6 +4528,22 @@
         "text": "מקור עורקי מרכזי לפרינאום ולאיברי המין החיצוניים.",
         "section": "אגן ופרינאום",
         "term": "Internal pudendal artery"
+      },
+      {
+        "text": "תעלה בפאסיית האובטורטור הפנימי המכילה צרור פודנדלי.",
+        "section": "אגן ופרינאום",
+        "term": "Pudendal (Alcock’s) canal",
+        "shared": true
+      }
+    ]
+  },
+  "internal-pudendal-vein": {
+    "notes": [
+      {
+        "text": "תעלה בפאסיית האובטורטור הפנימי המכילה צרור פודנדלי.",
+        "section": "אגן ופרינאום",
+        "term": "Pudendal (Alcock’s) canal",
+        "shared": true
       }
     ]
   },
@@ -4570,6 +4987,22 @@
         "text": "שריר המכסה את שוק הדגדגן ומסייע במילוי הזקפתי.",
         "section": "אגן ופרינאום",
         "term": "Ischiocavernosus"
+      },
+      {
+        "text": "שכבה ממברנוטית של הפאסיה השטחית בפרינאום.",
+        "section": "אגן ופרינאום",
+        "term": "Colles’ fascia",
+        "shared": true
+      }
+    ]
+  },
+  "ischiofemoral-ligament": {
+    "notes": [
+      {
+        "text": "מעטפת סיבית של מפרק הירך.",
+        "section": "גפה תחתונה",
+        "term": "Capsule of hip joint",
+        "shared": true
       }
     ]
   },
@@ -4633,34 +5066,52 @@
         "section": "דופן הבטן האחורית והכליות",
         "term": "Renal fascia / Gerota’s fascia",
         "shared": true
-      },
-      {
-        "text": "קפסולת רקמת החיבור הצמודה לפני הכליה.",
-        "section": "דופן הבטן האחורית והכליות",
-        "term": "Renal / Fibrous capsule",
-        "shared": true
-      },
-      {
-        "text": "קליפת הכליה, הכוללת בין היתר גופיפי כליה וצינוריות.",
-        "section": "דופן הבטן האחורית והכליות",
-        "term": "Renal cortex",
-        "shared": true
-      },
-      {
-        "text": "המדולה מסודרת בפירמידות; העמודים שביניהן הם שלוחות של הקורטקס.",
-        "section": "דופן הבטן האחורית והכליות",
-        "term": "Renal medulla - Pyramids & Columns",
-        "shared": true
-      },
-      {
-        "text": "קצות פירמידות הכליה, הפולטים שתן אל הגביעים הקטנים.",
-        "section": "דופן הבטן האחורית והכליות",
-        "term": "Renal papillae",
-        "shared": true
       }
     ],
     "he": "כליה",
     "heHeading": "הכליות"
+  },
+  "kidney-right": {
+    "notes": [
+      {
+        "text": "חלל פוטנציאלי בין הכבד לכליה הימנית.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Hepatorenal recess (Morison’s pouch)",
+        "shared": true
+      }
+    ]
+  },
+  "labium-majus": {
+    "notes": [
+      {
+        "text": "מכלול איברי המין החיצוניים, ובו השפתיים הגדולות והקטנות, הדגדגן והפרוזדור. בפרוזדור נפתחים השופכה והנרתיק. השפתיים תוחמות ומגינות על האזור; פתח השתן ופתח הנרתיק נפרדים.",
+        "section": "מערכת הרבייה הנקבית",
+        "term": "Vulva and labia",
+        "shared": true
+      },
+      {
+        "text": "קפלי עור חיצוניים ופנימיים המקיפים את פרוזדור הפות.",
+        "section": "אגן ופרינאום",
+        "term": "Labia majora & minora",
+        "shared": true
+      }
+    ]
+  },
+  "labium-minus": {
+    "notes": [
+      {
+        "text": "מכלול איברי המין החיצוניים, ובו השפתיים הגדולות והקטנות, הדגדגן והפרוזדור. בפרוזדור נפתחים השופכה והנרתיק. השפתיים תוחמות ומגינות על האזור; פתח השתן ופתח הנרתיק נפרדים.",
+        "section": "מערכת הרבייה הנקבית",
+        "term": "Vulva and labia",
+        "shared": true
+      },
+      {
+        "text": "קפלי עור חיצוניים ופנימיים המקיפים את פרוזדור הפות.",
+        "section": "אגן ופרינאום",
+        "term": "Labia majora & minora",
+        "shared": true
+      }
+    ]
   },
   "lacrimal-bone": {
     "notes": [
@@ -4839,12 +5290,40 @@
       }
     ]
   },
+  "lateral-ventricle": {
+    "notes": [
+      {
+        "text": "נוזל מוח ושדרה; מקיף את מערכת העצבים המרכזית ונמצא גם בחדרי המוח.",
+        "section": "השלמות מוח ומעטפות",
+        "term": "Cerebrospinal fluid",
+        "shared": true
+      }
+    ]
+  },
   "latissimus-dorsi-muscle": {
     "notes": [
       {
         "text": "שריר גב רחב; פושט, מקרב ומסובב פנימה את הזרוע.",
         "section": "גב ועמוד שדרה",
         "term": "Latissimus dorsi"
+      },
+      {
+        "text": "מעטפת פאסיאלית בגב התחתון, הקשורה לזוקפי הגב ולשרירי הבטן.",
+        "section": "גב ועמוד שדרה",
+        "term": "Thoracolumbar fascia",
+        "shared": true
+      },
+      {
+        "text": "אזור גבול בין טרפז, רחב גבי ושכמה, שבו דופן השריר דקה יחסית.",
+        "section": "גב ועמוד שדרה",
+        "term": "Triangle of auscultation",
+        "shared": true
+      },
+      {
+        "text": "משולש בגב התחתון; יש להבחין בין המשולש המותני העליון לתחתון.",
+        "section": "גב ועמוד שדרה",
+        "term": "Lumbar triangle",
+        "shared": true
       }
     ]
   },
@@ -4980,6 +5459,21 @@
       }
     ]
   },
+  "lingual-artery": {
+    "notes": [
+      {
+        "text": "עורק המספק את הלשון ורצפת הפה.",
+        "section": "צוואר",
+        "term": "Lingual artery"
+      },
+      {
+        "text": "כלי הדם הראשיים של הלשון והאזורים הסמוכים.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Lingual artery & vein",
+        "shared": true
+      }
+    ]
+  },
   "lingual-nerve": {
     "notes": [
       {
@@ -4994,7 +5488,8 @@
       {
         "text": "כלי הדם הראשיים של הלשון והאזורים הסמוכים.",
         "section": "ראש וצוואר ואיברי החישה",
-        "term": "Lingual artery & vein"
+        "term": "Lingual artery & vein",
+        "shared": true
       }
     ]
   },
@@ -5069,6 +5564,12 @@
         "section": "חלל הבטן ואיבריו",
         "term": "Coronary ligament + Right & Left triangular ligament",
         "shared": true
+      },
+      {
+        "text": "חלל פוטנציאלי בין הכבד לכליה הימנית.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Hepatorenal recess (Morison’s pouch)",
+        "shared": true
       }
     ],
     "he": "כבד",
@@ -5092,12 +5593,28 @@
       }
     ]
   },
+  "longus-capitis-muscle": {
+    "notes": [
+      {
+        "text": "שכבת פאסיה עמוקה סביב עמוד השדרה הצווארי והשרירים הסמוכים.",
+        "section": "צוואר",
+        "term": "Pre-vertebral fascia",
+        "shared": true
+      }
+    ]
+  },
   "longus-colli-muscle": {
     "notes": [
       {
         "text": "שריר עמוק קדמי בצוואר, המכופף ומייצב חוליות צוואריות.",
         "section": "ראש וצוואר ואיברי החישה",
         "term": "Longus colli"
+      },
+      {
+        "text": "שכבת פאסיה עמוקה סביב עמוד השדרה הצווארי והשרירים הסמוכים.",
+        "section": "צוואר",
+        "term": "Pre-vertebral fascia",
+        "shared": true
       }
     ]
   },
@@ -5333,6 +5850,16 @@
         "text": "הסימפון הראשי הימני, קצר ורחב יותר ובמהלך אנכי יחסית.",
         "section": "בית החזה",
         "term": "Right Main Bronchus"
+      }
+    ]
+  },
+  "major-calyces": {
+    "notes": [
+      {
+        "text": "גביעי הכליה: קטנים מקבלים פפילות ומתאחדים לגביעים גדולים.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Calyces - Minor & major",
+        "shared": true
       }
     ]
   },
@@ -5883,6 +6410,31 @@
       }
     ]
   },
+  "minor-calyces": {
+    "notes": [
+      {
+        "text": "גביעי הכליה: קטנים מקבלים פפילות ומתאחדים לגביעים גדולים.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Calyces - Minor & major",
+        "shared": true
+      }
+    ]
+  },
+  "mons-pubis": {
+    "notes": [
+      {
+        "text": "כרית שומן מעל סימפיזת החיק.",
+        "section": "אגן ופרינאום",
+        "term": "Mons pubis"
+      },
+      {
+        "text": "מכלול איברי המין החיצוניים, ובו השפתיים הגדולות והקטנות, הדגדגן והפרוזדור. בפרוזדור נפתחים השופכה והנרתיק. השפתיים תוחמות ומגינות על האזור; פתח השתן ופתח הנרתיק נפרדים.",
+        "section": "מערכת הרבייה הנקבית",
+        "term": "Vulva and labia",
+        "shared": true
+      }
+    ]
+  },
   "mucosa-of-nasal-cavity": {
     "notes": [
       {
@@ -6019,6 +6571,15 @@
         "text": "ענף מוטורי למיילוהיואיד ולבטן הקדמית של הדיגסטריק.",
         "section": "פנים ואזור טמפורלי",
         "term": "Mylohyoid nerve"
+      }
+    ]
+  },
+  "nerve-to-vastus-medialis": {
+    "notes": [
+      {
+        "text": "ענף מוטורי של הפמורלי לשריר הווסטוס מדיאליס.",
+        "section": "גפה תחתונה",
+        "term": "Nerve to vastus medialis"
       }
     ]
   },
@@ -6425,6 +6986,12 @@
         "section": "פנים ואזור טמפורלי",
         "term": "Occipitofrontalis - Frontalis & Occipitalis",
         "shared": true
+      },
+      {
+        "text": "אפונאורוזה בקרקפת המחברת בין בטני השריר האוקסיפיטופרונטלי.",
+        "section": "פנים ואזור טמפורלי",
+        "term": "Galea aponeurotica",
+        "shared": true
       }
     ]
   },
@@ -6552,6 +7119,12 @@
         "section": "גפה עליונה",
         "term": "2. מדור Hypothenar (גבעת הזרת) - שלושה שרירים",
         "shared": true
+      },
+      {
+        "text": "תנר מניע את האגודל; היפותנר מניע את הזרת. אלה קבוצות שרירים שונות.",
+        "section": "גפה עליונה",
+        "term": "שרירי Thenar vs Hypothenar",
+        "shared": true
       }
     ]
   },
@@ -6566,6 +7139,12 @@
         "text": "גבעת האגודל כוללת שרירים המאפשרים הרחקה, כיפוף ואופוזיציה.",
         "section": "גפה עליונה",
         "term": "1. מדור Thenar (גבעת האגודל) - שלושה שרירים",
+        "shared": true
+      },
+      {
+        "text": "תנר מניע את האגודל; היפותנר מניע את הזרת. אלה קבוצות שרירים שונות.",
+        "section": "גפה עליונה",
+        "term": "שרירי Thenar vs Hypothenar",
         "shared": true
       }
     ]
@@ -6874,6 +7453,18 @@
         "section": "גפה תחתונה",
         "term": "Patellar ligament",
         "shared": true
+      },
+      {
+        "text": "התעבויות משני צדי הפטלה המסייעות בייצוב מסלולה.",
+        "section": "גפה תחתונה",
+        "term": "Medial + Lateral retinaculum",
+        "shared": true
+      },
+      {
+        "text": "כיס סינוביאלי מעל הפטלה, המתקשר בדרך כלל עם חלל הברך.",
+        "section": "גפה תחתונה",
+        "term": "Suprapatellar bursa",
+        "shared": true
       }
     ]
   },
@@ -6945,6 +7536,26 @@
         "text": "ענפים של עורק הירך העמוק העוברים למדור האחורי.",
         "section": "גפה תחתונה",
         "term": "Perforating branches of deep artery of thigh",
+        "shared": true
+      }
+    ]
+  },
+  "pericardiacophrenic-artery": {
+    "notes": [
+      {
+        "text": "כלי דם המלווים את העצב הפרני ומספקים פריקרד וסרעפת.",
+        "section": "בית החזה",
+        "term": "Pericardiacophrenic Vessels",
+        "shared": true
+      }
+    ]
+  },
+  "pericardiacophrenic-vein": {
+    "notes": [
+      {
+        "text": "כלי דם המלווים את העצב הפרני ומספקים פריקרד וסרעפת.",
+        "section": "בית החזה",
+        "term": "Pericardiacophrenic Vessels",
         "shared": true
       }
     ]
@@ -7037,6 +7648,12 @@
   "popliteal-artery": {
     "notes": [
       {
+        "text": "הגומה מאחורי הברך, שבה עוברים עצבים וכלי דם מרכזיים.",
+        "section": "גפה תחתונה",
+        "term": "Popliteal fossa",
+        "shared": true
+      },
+      {
         "text": "כלי דם עמוקים בגומה שמאחורי הברך.",
         "section": "גפה תחתונה",
         "term": "Popliteal artery & vein",
@@ -7046,6 +7663,12 @@
   },
   "popliteal-vein": {
     "notes": [
+      {
+        "text": "הגומה מאחורי הברך, שבה עוברים עצבים וכלי דם מרכזיים.",
+        "section": "גפה תחתונה",
+        "term": "Popliteal fossa",
+        "shared": true
+      },
       {
         "text": "כלי דם עמוקים בגומה שמאחורי הברך.",
         "section": "גפה תחתונה",
@@ -7060,6 +7683,15 @@
         "text": "שריר מאחורי הברך המסייע להתחיל את כיפופה ממצב נעול.",
         "section": "גפה תחתונה",
         "term": "Popliteus"
+      }
+    ]
+  },
+  "posterior-auricular-artery": {
+    "notes": [
+      {
+        "text": "עורק לאזור האחורי של האפרכסת והקרקפת הסמוכה.",
+        "section": "צוואר",
+        "term": "Posterior auricular artery"
       }
     ]
   },
@@ -7248,6 +7880,22 @@
         "text": "עורק במדור השוק האחורי, המסתיים בענפים הפלנטריים.",
         "section": "גפה תחתונה",
         "term": "Posterior tibial artery"
+      },
+      {
+        "text": "רצועה פאסיאלית מדיאלית היוצרת גג לתעלה הטרסלית.",
+        "section": "גפה תחתונה",
+        "term": "Flexor retinaculum",
+        "shared": true
+      }
+    ]
+  },
+  "posterior-tibiotalar-ligament": {
+    "notes": [
+      {
+        "text": "קבוצת רצועות מדיאלית חזקה בקרסול, מן הטיביה לעצמות כף הרגל.",
+        "section": "השלמות גפה תחתונה",
+        "term": "Deltoid ligament of ankle",
+        "shared": true
       }
     ]
   },
@@ -7443,12 +8091,28 @@
       }
     ]
   },
+  "pubofemoral-ligament": {
+    "notes": [
+      {
+        "text": "מעטפת סיבית של מפרק הירך.",
+        "section": "גפה תחתונה",
+        "term": "Capsule of hip joint",
+        "shared": true
+      }
+    ]
+  },
   "pudendal-nerve": {
     "notes": [
       {
         "text": "עצב S2–S4 המספק תחושה ומוטוריקה לחלק ניכר מהפרינאום.",
         "section": "אגן ופרינאום",
         "term": "Pudendal nerve"
+      },
+      {
+        "text": "תעלה בפאסיית האובטורטור הפנימי המכילה צרור פודנדלי.",
+        "section": "אגן ופרינאום",
+        "term": "Pudendal (Alcock’s) canal",
+        "shared": true
       }
     ]
   },
@@ -7610,6 +8274,13 @@
         "section": "אגן ופרינאום",
         "term": "Transverse rectal folds",
         "shared": true
+      },
+      {
+        "text": "שקע צפקי בין השלפוחית לרקטום באנטומיה זכרית.",
+        "section": "אגן ופרינאום",
+        "term": "Rectovesical space / pouch",
+        "sex": "male",
+        "shared": true
       }
     ],
     "he": "חלחולת",
@@ -7685,12 +8356,50 @@
       }
     ]
   },
+  "renal-columns": {
+    "notes": [
+      {
+        "text": "המדולה מסודרת בפירמידות; העמודים שביניהן הם שלוחות של הקורטקס.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Renal medulla - Pyramids & Columns",
+        "shared": true
+      }
+    ]
+  },
+  "renal-cortex": {
+    "notes": [
+      {
+        "text": "קליפת הכליה, הכוללת בין היתר גופיפי כליה וצינוריות.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Renal cortex"
+      }
+    ]
+  },
+  "renal-papillae": {
+    "notes": [
+      {
+        "text": "קצות פירמידות הכליה, הפולטים שתן אל הגביעים הקטנים.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Renal papillae"
+      }
+    ]
+  },
   "renal-pelvis": {
     "notes": [
       {
         "text": "משפך איסוף השתן המתמשך אל השופכן.",
         "section": "דופן הבטן האחורית והכליות",
         "term": "Renal pelvis"
+      }
+    ]
+  },
+  "renal-pyramids": {
+    "notes": [
+      {
+        "text": "המדולה מסודרת בפירמידות; העמודים שביניהן הם שלוחות של הקורטקס.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Renal medulla - Pyramids & Columns",
+        "shared": true
       }
     ]
   },
@@ -7719,6 +8428,12 @@
         "text": "שרירים בין עמוד השדרה לשכמה, המקרבים ומייצבים אותה.",
         "section": "גב ועמוד שדרה",
         "term": "Rhomboid major/minor",
+        "shared": true
+      },
+      {
+        "text": "אזור גבול בין טרפז, רחב גבי ושכמה, שבו דופן השריר דקה יחסית.",
+        "section": "גב ועמוד שדרה",
+        "term": "Triangle of auscultation",
         "shared": true
       }
     ]
@@ -7944,6 +8659,29 @@
       }
     ]
   },
+  "scrotum": {
+    "notes": [
+      {
+        "text": "שק עור ורקמות העוטף את האשכים. שריר הדארטוס משנה את קימוט העור, והקרמסטר מרים את האשך. שכבותיו קשורות להתפתחות האשך ולמעברו דרך דופן הבטן. הוא מעטפת האשכים, ולא האשך עצמו.",
+        "section": "מערכת הרבייה הזכרית",
+        "term": "Scrotum"
+      },
+      {
+        "text": "חיבור סיבי של האשך לשק האשכים, הקשור לשריד הגוברנקולום.",
+        "section": "אגן ופרינאום",
+        "term": "Scrotal ligament",
+        "shared": true
+      },
+      {
+        "text": "שכבה תת־עורית עם שריר חלק בשק האשכים.",
+        "section": "אגן ופרינאום",
+        "term": "Dartos fascia",
+        "shared": true
+      }
+    ],
+    "he": "שק האשכים",
+    "heHeading": "שק האשכים"
+  },
   "second-metacarpal-bone": {
     "notes": [
       {
@@ -8056,6 +8794,15 @@
         "section": "השלמות בית החזה",
         "term": "Papillary muscles",
         "shared": true
+      }
+    ]
+  },
+  "septum-of-scrotum": {
+    "notes": [
+      {
+        "text": "מחיצה המפרידה בין שני מדורי שק האשכים.",
+        "section": "אגן ופרינאום",
+        "term": "Septum of scrotum"
       }
     ]
   },
@@ -8368,7 +9115,8 @@
       {
         "text": "שרירי שליטה בשופכה; כוללים את הסוגר החיצוני ומרכיבים נוספים באנטומיה נקבית.",
         "section": "אגן ופרינאום",
-        "term": "Compressor urethra m. & Sphincter urethrae"
+        "term": "Compressor urethra m. & Sphincter urethrae",
+        "shared": true
       }
     ]
   },
@@ -8378,6 +9126,12 @@
         "text": "בתעלה החולייתית, בהמשך לגזע המוח. מעביר מידע בין המוח לגוף ומשתתף ברפלקסים. חומר אפור מרכזי מוקף חומר לבן. השורש האחורי מעביר מידע תחושתי והקדמי מידע מוטורי; עצב שדרתי לאחר איחודם הוא מעורב.",
         "section": "מערכת העצבים והחושים",
         "term": "Spinal cord"
+      },
+      {
+        "text": "מקלעת ורידית בתוך תעלת השדרה, מחוץ לדורה.",
+        "section": "גב ועמוד שדרה",
+        "term": "Internal venous plexus",
+        "shared": true
       },
       {
         "text": "קרום קשיח חיצוני העוטף את מערכת העצבים המרכזית.",
@@ -8407,6 +9161,12 @@
         "text": "חוט סיבי המסייע בעיגון הקצה התחתון של מערכת מעטפות חוט השדרה.",
         "section": "גב ועמוד שדרה",
         "term": "Filum terminalis",
+        "shared": true
+      },
+      {
+        "text": "הקרום האמצעי של מעטפות מערכת העצבים; החלל שמתחתיו מכיל נוזל מוח ושדרה.",
+        "section": "השלמות מוח ומעטפות",
+        "term": "Arachnoid mater",
         "shared": true
       }
     ],
@@ -8480,12 +9240,27 @@
       }
     ]
   },
+  "stapedius-muscle": {
+    "notes": [
+      {
+        "text": "בליטה גרמית באוזן התיכונה שממנה יוצא שריר הסטפדיוס אל הארכוף.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Pyramidal eminence & Stapedius m."
+      }
+    ]
+  },
   "stapes": {
     "notes": [
       {
         "text": "הארכוף, עצם שמע שבסיסה נע בחלון הסגלגל.",
         "section": "ראש וצוואר ואיברי החישה",
         "term": "Stapes"
+      },
+      {
+        "text": "פתח בין האוזן התיכונה למבוך, שבו מעביר הארכוף תנודות לנוזל.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Oval window",
+        "shared": true
       }
     ]
   },
@@ -8495,6 +9270,12 @@
         "text": "שריר צדדי בצוואר; מסובב את הראש לצד הנגדי ומטה אותו לאותו צד.",
         "section": "צוואר",
         "term": "Sternocleidomastoid"
+      },
+      {
+        "text": "שכבת פאסיה צווארית העוטפת בין היתר את הטרפז והסטרנוקליידומסטואיד.",
+        "section": "צוואר",
+        "term": "Investing fascia",
+        "shared": true
       }
     ]
   },
@@ -8562,6 +9343,12 @@
         "text": "קפלי רירית ותת־רירית המאפשרים לקיבה להתרחב.",
         "section": "חלל הבטן ואיבריו",
         "term": "Gastric folds (Rugae)",
+        "shared": true
+      },
+      {
+        "text": "קפל צפק גדול ושומני היורד מהעקמומיות הגדולה של הקיבה.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Greater omentum",
         "shared": true
       },
       {
@@ -8644,6 +9431,24 @@
       }
     ]
   },
+  "subcostal-muscles": {
+    "notes": [
+      {
+        "text": "שרירים בדופן החזה הפנימית, החוצים לעיתים יותר מרווח בין־צלעי אחד.",
+        "section": "בית החזה",
+        "term": "Subcostal Muscles"
+      }
+    ]
+  },
+  "subcostal-nerve": {
+    "notes": [
+      {
+        "text": "הענף הקדמי של עצב T12, מתחת לצלע האחרונה.",
+        "section": "דופן הבטן האחורית והכליות",
+        "term": "Subcostal nerve"
+      }
+    ]
+  },
   "sublingual-gland": {
     "notes": [
       {
@@ -8675,6 +9480,15 @@
     ],
     "he": "בלוטת הרוק התת־לסתית",
     "heHeading": "בלוטת הרוק התת־לסתית"
+  },
+  "suboccipital-nerve": {
+    "notes": [
+      {
+        "text": "הענף האחורי של C1, בעיקר לשרירים התת־עורפיים.",
+        "section": "גב ועמוד שדרה",
+        "term": "Suboccipital nerve"
+      }
+    ]
   },
   "subscapularis-muscle": {
     "notes": [
@@ -8750,7 +9564,14 @@
       {
         "text": "שרירים רוחביים בפרינאום המסייעים בתמיכת האזור והגוף הפרינאלי.",
         "section": "אגן ופרינאום",
-        "term": "Superficial (& deep) transverse perineal m."
+        "term": "Superficial (& deep) transverse perineal m.",
+        "shared": true
+      },
+      {
+        "text": "שכבה ממברנוטית של הפאסיה השטחית בפרינאום.",
+        "section": "אגן ופרינאום",
+        "term": "Colles’ fascia",
+        "shared": true
       }
     ]
   },
@@ -8830,7 +9651,8 @@
       {
         "text": "ענף פנימי לתחושה מעל קפלי הקול; ענף חיצוני לקריקותירואיד.",
         "section": "ראש וצוואר ואיברי החישה",
-        "term": "Superior laryngeal nerve (External & Internal Br.)"
+        "term": "Superior laryngeal nerve (External & Internal Br.)",
+        "shared": true
       }
     ]
   },
@@ -8945,6 +9767,16 @@
         "text": "שריר עין ישר עליון; מרים את המבט ומוסיף רכיבי קירוב וסיבוב.",
         "section": "ראש וצוואר ואיברי החישה",
         "term": "Superior rectus"
+      }
+    ]
+  },
+  "superior-root-of-ansa-cervicalis": {
+    "notes": [
+      {
+        "text": "לולאה עצבית צווארית המפעילה את רוב השרירים התת־היואידיים.",
+        "section": "צוואר",
+        "term": "Ansa cervicalis (Superior Root & Inferior root)",
+        "shared": true
       }
     ]
   },
@@ -9103,6 +9935,15 @@
         "text": "עצב תחושתי לאזור האחורי־צדי של השוק ולשוליים הצדדיים של כף הרגל.",
         "section": "גפה תחתונה",
         "term": "Sural nerve"
+      }
+    ]
+  },
+  "suspensory-ligament-of-clitoris": {
+    "notes": [
+      {
+        "text": "רצועה המחברת את הדגדגן לאזור עצמות החיק.",
+        "section": "אגן ופרינאום",
+        "term": "Suspensory ligament of clitoris"
       }
     ]
   },
@@ -9336,6 +10177,15 @@
       }
     ]
   },
+  "tensor-tympani-muscle": {
+    "notes": [
+      {
+        "text": "שריר המחובר לפטיש ומשנה את מתח מערכת עור התוף.",
+        "section": "ראש וצוואר ואיברי החישה",
+        "term": "Tensor tympani m."
+      }
+    ]
+  },
   "tenth-rib": {
     "notes": [
       {
@@ -9424,6 +10274,12 @@
         "shared": true
       },
       {
+        "text": "חיבור סיבי של האשך לשק האשכים, הקשור לשריד הגוברנקולום.",
+        "section": "אגן ופרינאום",
+        "term": "Scrotal ligament",
+        "shared": true
+      },
+      {
         "text": "טוניקה וגינליס היא מעטפת סרוזית; אלבוגינאה היא קפסולה סיבית של האשך.",
         "section": "אגן ופרינאום",
         "term": "Tunica vaginalis & albuginea of testis",
@@ -9459,6 +10315,16 @@
         "text": "הצלעות, עצמות קשתיות המרכיבות עם החוליות והסטרנום את כלוב החזה.",
         "section": "השלמות בית החזה",
         "term": "Ribs",
+        "shared": true
+      }
+    ]
+  },
+  "third-ventricle": {
+    "notes": [
+      {
+        "text": "נוזל מוח ושדרה; מקיף את מערכת העצבים המרכזית ונמצא גם בחדרי המוח.",
+        "section": "השלמות מוח ומעטפות",
+        "term": "Cerebrospinal fluid",
         "shared": true
       }
     ]
@@ -9686,6 +10552,18 @@
         "text": "עצב למדור השוק האחורי ולכף הרגל הפלנטרית.",
         "section": "גפה תחתונה",
         "term": "Tibial nerve"
+      },
+      {
+        "text": "הגומה מאחורי הברך, שבה עוברים עצבים וכלי דם מרכזיים.",
+        "section": "גפה תחתונה",
+        "term": "Popliteal fossa",
+        "shared": true
+      },
+      {
+        "text": "רצועה פאסיאלית מדיאלית היוצרת גג לתעלה הטרסלית.",
+        "section": "גפה תחתונה",
+        "term": "Flexor retinaculum",
+        "shared": true
       }
     ]
   },
@@ -9695,6 +10573,18 @@
         "text": "מכופף גבי של הקרסול והופך את כף הרגל פנימה.",
         "section": "גפה תחתונה",
         "term": "Tibialis anterior"
+      },
+      {
+        "text": "הפאסיה העמוקה של השוק.",
+        "section": "גפה תחתונה",
+        "term": "Crural fascia",
+        "shared": true
+      },
+      {
+        "text": "רצועות פאסיאליות המחזיקות גידי פושטים סמוך לקרסול הקדמי.",
+        "section": "גפה תחתונה",
+        "term": "Superior + inferior extensor retinaculum",
+        "shared": true
       }
     ]
   },
@@ -9709,6 +10599,32 @@
         "text": "גיד העובר מאחורי הפטישון המדיאלי ונאחז בעיקר בעצם הסירה ובסביבתה.",
         "section": "גפה תחתונה",
         "term": "Tibialis posterior tendon"
+      },
+      {
+        "text": "רצועה פאסיאלית מדיאלית היוצרת גג לתעלה הטרסלית.",
+        "section": "גפה תחתונה",
+        "term": "Flexor retinaculum",
+        "shared": true
+      }
+    ]
+  },
+  "tibiocalcaneal-ligament": {
+    "notes": [
+      {
+        "text": "קבוצת רצועות מדיאלית חזקה בקרסול, מן הטיביה לעצמות כף הרגל.",
+        "section": "השלמות גפה תחתונה",
+        "term": "Deltoid ligament of ankle",
+        "shared": true
+      }
+    ]
+  },
+  "tibionavicular-ligament": {
+    "notes": [
+      {
+        "text": "קבוצת רצועות מדיאלית חזקה בקרסול, מן הטיביה לעצמות כף הרגל.",
+        "section": "השלמות גפה תחתונה",
+        "term": "Deltoid ligament of ankle",
+        "shared": true
       }
     ]
   },
@@ -9806,6 +10722,12 @@
         "section": "חלל הבטן ואיבריו",
         "term": "Left colic (splenic) flexure",
         "shared": true
+      },
+      {
+        "text": "קפל צפק גדול ושומני היורד מהעקמומיות הגדולה של הקיבה.",
+        "section": "חלל הבטן ואיבריו",
+        "term": "Greater omentum",
+        "shared": true
       }
     ]
   },
@@ -9821,6 +10743,12 @@
   },
   "transverse-part-of-iliofemoral-ligament": {
     "notes": [
+      {
+        "text": "מעטפת סיבית של מפרק הירך.",
+        "section": "גפה תחתונה",
+        "term": "Capsule of hip joint",
+        "shared": true
+      },
       {
         "text": "רצועה קדמית חזקה במפרק הירך, המגבילה בעיקר פשיטת יתר.",
         "section": "גפה תחתונה",
@@ -9879,6 +10807,18 @@
         "text": "שריר גב וצוואר שטחי; מרים, מקרב ומסובב את השכמה בהתאם לסיביו.",
         "section": "גב ועמוד שדרה",
         "term": "Trapezius"
+      },
+      {
+        "text": "אזור גבול בין טרפז, רחב גבי ושכמה, שבו דופן השריר דקה יחסית.",
+        "section": "גב ועמוד שדרה",
+        "term": "Triangle of auscultation",
+        "shared": true
+      },
+      {
+        "text": "שכבת פאסיה צווארית העוטפת בין היתר את הטרפז והסטרנוקליידומסטואיד.",
+        "section": "צוואר",
+        "term": "Investing fascia",
+        "shared": true
       }
     ]
   },
@@ -10142,18 +11082,21 @@
         "text": "קטע השופכה העובר בתוך הערמונית.",
         "section": "אגן ופרינאום",
         "term": "Prostatic urethra",
+        "sex": "male",
         "shared": true
       },
       {
         "text": "קטע קצר של השופכה העובר באזור הסוגר החיצוני.",
         "section": "אגן ופרינאום",
         "term": "Membranous / Intermediate urethra",
+        "sex": "male",
         "shared": true
       },
       {
         "text": "קטע השופכה שבתוך הגוף הספוגי של הפין.",
         "section": "אגן ופרינאום",
         "term": "Penile / Spongy urethra",
+        "sex": "male",
         "shared": true
       }
     ],
@@ -10171,6 +11114,12 @@
         "text": "מאגר שתן שרירי באגן; פירוט במדריך האיברים.",
         "section": "אגן ופרינאום",
         "term": "Urinary bladder"
+      },
+      {
+        "text": "קפלים טבוריים: אמצעי מעל שריד האורכוס, מדיאליים מעל עורקים טבוריים סגורים וצדדיים מעל כלי דם אפיגסטריים.",
+        "section": "דופן הבטן והמפשעה",
+        "term": "Lateral/Medial/Median umbilical fold",
+        "shared": true
       },
       {
         "text": "אזור משולש בשלפוחית בין פתחי השופכנים לפתח השופכה.",
@@ -10203,9 +11152,29 @@
         "shared": true
       },
       {
+        "text": "שריד סיבי של החלק הדיסטלי של העורק הטבורי.",
+        "section": "אגן ופרינאום",
+        "term": "Medial (obliterated) umbilical ligament",
+        "shared": true
+      },
+      {
+        "text": "מרווח מחוץ לצפק בין עצמות החיק לשלפוחית השתן.",
+        "section": "אגן ופרינאום",
+        "term": "Retropubic/Prevesical space",
+        "shared": true
+      },
+      {
+        "text": "שקע צפקי בין השלפוחית לרקטום באנטומיה זכרית.",
+        "section": "אגן ופרינאום",
+        "term": "Rectovesical space / pouch",
+        "sex": "male",
+        "shared": true
+      },
+      {
         "text": "שקע צפקי בין שלפוחית השתן לרחם.",
         "section": "אגן ופרינאום",
         "term": "Vesicouterine pouch",
+        "sex": "female",
         "shared": true
       }
     ],
@@ -10223,6 +11192,12 @@
         "text": "צינור המוביל מאזור השחלה לכיוון הרחם.",
         "section": "אגן ופרינאום",
         "term": "Uterine (fallopian) tube"
+      },
+      {
+        "text": "חלק הרצועה הרחבה הנלווה לחצוצרה.",
+        "section": "אגן ופרינאום",
+        "term": "Mesosalpinx",
+        "shared": true
       }
     ],
     "he": "חצוצרה",
@@ -10250,6 +11225,12 @@
         "term": "Uterus"
       },
       {
+        "text": "השכבה השרירית העבה של דופן הרחם.",
+        "section": "אגן ופרינאום",
+        "term": "Myometrium",
+        "shared": true
+      },
+      {
         "text": "קפל צפק כפול משני צדי הרחם.",
         "section": "אגן ופרינאום",
         "term": "Broad ligament of the uterus",
@@ -10259,12 +11240,19 @@
         "text": "שקע צפקי בין שלפוחית השתן לרחם.",
         "section": "אגן ופרינאום",
         "term": "Vesicouterine pouch",
+        "sex": "female",
         "shared": true
       },
       {
         "text": "שקע צפקי בין הרחם לרקטום, המכונה כיס דאגלס.",
         "section": "אגן ופרינאום",
         "term": "Rectouterine pouch (Douglas)",
+        "shared": true
+      },
+      {
+        "text": "רירית הרחם, העוברת שינויים מחזוריים ומשמשת אתר השרשה.",
+        "section": "השלמות איברי הבטן והאגן",
+        "term": "Endometrium",
         "shared": true
       }
     ],
@@ -10302,6 +11290,21 @@
     "he": "נרתיק",
     "heHeading": "הנרתיק"
   },
+  "vaginal-vestibule": {
+    "notes": [
+      {
+        "text": "המרווח בין השפתיים הקטנות ובו פתחי השופכה והנרתיק.",
+        "section": "אגן ופרינאום",
+        "term": "Vaginal vestibule"
+      },
+      {
+        "text": "מכלול איברי המין החיצוניים, ובו השפתיים הגדולות והקטנות, הדגדגן והפרוזדור. בפרוזדור נפתחים השופכה והנרתיק. השפתיים תוחמות ומגינות על האזור; פתח השתן ופתח הנרתיק נפרדים.",
+        "section": "מערכת הרבייה הנקבית",
+        "term": "Vulva and labia",
+        "shared": true
+      }
+    ]
+  },
   "vagus-nerve-x": {
     "notes": [
       {
@@ -10324,6 +11327,16 @@
         "text": "רשת עצבים סביב הוושט, הכוללת סיבים ואגאליים וסימפתטיים.",
         "section": "בית החזה",
         "term": "Esophageal Plexus",
+        "shared": true
+      }
+    ]
+  },
+  "vastus-lateralis-muscle": {
+    "notes": [
+      {
+        "text": "מחיצה פאסיאלית בין מדורי שרירים בצד הירך.",
+        "section": "גפה תחתונה",
+        "term": "Lateral intermuscular septum",
         "shared": true
       }
     ]

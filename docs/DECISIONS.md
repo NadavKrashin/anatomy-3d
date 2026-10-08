@@ -772,3 +772,18 @@ the app non-commercial. Choices the files forced:
 - **Lost:** the old kidney's "Intrarenal arteries/veins" (no Atlas
   counterpart). Her notes stay matched (`kidney`, `renal-pelvis`,
   `renal-vein` ids unchanged).
+
+## 2026-10-08 — Her notes: one body's notes stay in that body; coverings go to neighbours
+
+Her summary describes the urethra with male segments and the pelvic pouches
+of each body; the urethra, bladder and rectum are one structure shared by
+both bodies. Rather than splitting those structures, a note can name a body
+(`scripts/course/summary/parents.json` → `bodies`, `StudyNote.sex`) and
+`datasetForSex` drops notes about the other body, as it drops its meshes.
+Her entries about things the model doesn't have (fasciae, spaces, pouches,
+retinacula, bursae, layers of an organ) go to the structures around or under
+them, labelled with her entry's name, as before (`parents.json`); only
+general definitions (skin, tendon, ligament, cartilage, bone marrow…) and
+the peritoneum stay without a structure. A combined entry ("Ansa cervicalis
+(Superior Root & Inferior root)") goes to the whole and each part, because
+the panel shows a structure's own notes only, not its whole's.

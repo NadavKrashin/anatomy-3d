@@ -181,21 +181,24 @@ not used yet.
 `z-anatomy/summaryNotes.ts` (`withSummaryNotes`, after `withCourseName`)
 applies:
 
-- **Notes for 708 structures.** They show as "סיכום" ("Summary") at the
+- **Notes for 827 structures.** They show as "סיכום" ("Summary") at the
   top of the info panel, notes about the structure itself first. Matching
   uses the course-name rules. Ambiguous names like "Abductor digiti minimi"
   are resolved by the summary's region (the lower-limb table → the foot's).
   Hand-checked synonyms ("LCL", "Spring ligament", side-specific arteries,
   cranial nerves by short name) are in `scripts/course/summary/synonyms.json`.
 - **Notes on a part go to the whole** (`scripts/course/summary/parents.json`,
-  407 entries, hand-assigned). Examples: a bony landmark goes to its bone
+  467 entries, hand-assigned). Examples: a bony landmark goes to its bone
   ("Iliac crest" → hip bone), an organ part to its organ ("Caudate lobe of
   liver" → liver), a region to what runs through it ("Carpal tunnel" →
   median nerve and the long flexors), a heading to its structures
   ("Rotator cuff" → its four muscles). An entry about several structures,
-  or about a part, is labelled with its name above the note. Unknown ids
+  or about a part, is labelled with its name above the note. Entries about
+  one body only, on a structure both bodies have ("Prostatic urethra" on
+  the urethra, the rectovesical and vesicouterine pouches on the bladder),
+  are listed under `bodies` there and show only in that body. Unknown ids
   make the script fail, so a model change can't silently drop notes.
-- **40 Hebrew names** from the organ guide (e.g. קנה הנשימה, שופכן, צינור
+- **53 Hebrew names** from the organ guide (e.g. קנה הנשימה, שופכן, צינור
   הזרע, שלפוחית השתן). The definite article is dropped and plurals are made
   singular for one-sided structures. Her Hebrew wins over the site's: she
   wrote it and learns from it. The site's form stays searchable.

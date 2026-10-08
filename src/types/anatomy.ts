@@ -129,7 +129,9 @@ export interface AnatomicalStructure {
  * comes from; `shared` marks an entry about more than this structure —
  * several structures ("Superficial & Deep inguinal ring") or a part of it
  * (a landmark on a bone: "Iliac crest") — which the panel labels with
- * `term`. `section` is where it sits in the summary.
+ * `term`. `section` is where it sits in the summary. `sex`: an entry about
+ * one body only, on a structure both bodies have (her "Prostatic urethra" on
+ * the urethra); the other body leaves it out (`datasetForSex`).
  */
 export interface StudyNote {
   text: string;
@@ -137,6 +139,7 @@ export interface StudyNote {
   term: string;
   section: string;
   shared?: boolean;
+  sex?: BodySex;
 }
 
 /**

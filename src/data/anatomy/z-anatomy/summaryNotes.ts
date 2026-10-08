@@ -1,4 +1,8 @@
-import type { AnatomicalStructure, StructureNames } from "@/types/anatomy";
+import type {
+  AnatomicalStructure,
+  BodySex,
+  StructureNames,
+} from "@/types/anatomy";
 import summaryNotesJson from "./summaryNotes.json";
 
 /**
@@ -7,7 +11,14 @@ import summaryNotesJson from "./summaryNotes.json";
  * side-less id, or a sided id for a note on one side only.
  */
 export interface SummaryEntry {
-  notes: { text: string; section: string; term: string; shared?: boolean }[];
+  notes: {
+    text: string;
+    section: string;
+    term: string;
+    shared?: boolean;
+    /** An entry about one body only ("Prostatic urethra" on the urethra). */
+    sex?: string;
+  }[];
   /** Her Hebrew name from the summary's organ guide. */
   he?: string;
   /** The heading as she wrote it (with the article / plural). */
@@ -16,6 +27,9 @@ export interface SummaryEntry {
 
 export const SUMMARY_NOTES: Readonly<Record<string, SummaryEntry>> =
   summaryNotesJson;
+
+const isBodySex = (sex: string | undefined): sex is BodySex =>
+  sex === "male" || sex === "female";
 
 export const SUMMARY_SOURCE = "her course summary";
 
@@ -35,7 +49,11 @@ export function withSummaryNotes(
   if (!shared && !ownSide) return structure;
 
   const notes = [...(shared?.notes ?? []), ...(ownSide?.notes ?? [])].map(
-    (note) => ({ ...note, language: "he" as const }),
+    ({ sex, ...note }) => ({
+      ...note,
+      language: "he" as const,
+      ...(isBodySex(sex) ? { sex } : {}),
+    }),
   );
   const names: StructureNames = { ...structure.names };
   const aliases = { ...structure.aliases };

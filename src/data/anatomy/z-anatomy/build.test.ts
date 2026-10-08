@@ -524,6 +524,14 @@ describe("the Z-Anatomy whole-body dataset", () => {
     expect(male.meshMap["Urethra (female)"]).toBeUndefined();
     expect(male.meshMap["Urethra"]).toBe("urethra");
     expect(female.meshMap["Urethra"]).toBeUndefined();
+    // Her notes on the male urethra's segments stay in the male body.
+    const urethraNotes = (d: typeof female) =>
+      d.structures
+        .find((s) => s.id === "urethra")
+        ?.studyNotes?.map((n) => n.term);
+    expect(urethraNotes(male)).toContain("Prostatic urethra");
+    expect(urethraNotes(female)).toContain("Urethra");
+    expect(urethraNotes(female)).not.toContain("Prostatic urethra");
   });
 
   it("adds the priority-3 hand-built structures, in the right body and region", () => {
