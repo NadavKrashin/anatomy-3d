@@ -751,12 +751,15 @@ verify` green (209), `e2e:smoke` green (40); review shots for every new
   overlapped them by 3–8 %); right renal pelvis drawn onto the ureter (the
   model's ureter runs up inside psoas); all item-25 checks pass (hilum
   medial/forward, T12–L3, right 22 mm lower, pelvis/artery/vein ≤ 3 mm, no
-  overlap). The Atlas's triangles faced inwards in patches (the app showed
-  the cortex's inside): winding recomputed. Non-commercial file re-exported
+  overlap). A selected kidney shows its pyramids and calyces through its
+  surface: the app's x-ray selection (no depth test), as for any organ with
+  parts. Non-commercial file re-exported
   (4 meshes, inner ear only; `export_glb.py` never exports the old kidney).
   Hand-built structures rebuilt against the new kidney (clean; the subcostal
   nerve's landmark is now the capsule). Course names 680/1,788. Her notes
   keep matching (`kidney`, `renal-pelvis`, `renal-vein`); `summary_notes.py`
   needs her .docx (not here) to reach the new parts. Lost: the old
   "intrarenal arteries/veins". `npm run verify` green (210), with
-  `INCLUDE_NON_COMMERCIAL` true and false.
+  `INCLUDE_NON_COMMERCIAL` true and false; `e2e:smoke` green (40); review
+  shots of the kidney, capsule, cortex and right renal pelvis
+  (`docs/screenshots/handmade/`).

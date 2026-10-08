@@ -202,9 +202,6 @@ def main() -> None:
         bm = bmesh.new()
         bm.from_mesh(o.data)
         bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-6)
-        # The Atlas's triangles face inwards in patches (the cortex's front):
-        # the app draws front faces only, so it showed the inside there.
-        bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
         bm.to_mesh(o.data)
         bm.free()
         n = len(o.data.vertices)
