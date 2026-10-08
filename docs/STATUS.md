@@ -815,4 +815,8 @@ verify` green (209), `e2e:smoke` green (40); review shots for every new
   zoomed into the 15px search box and stayed zoomed, pushing the top strip's
   buttons off screen), no double-tap zoom; phones had **no page links at all**
   (MainNav hidden below `lg`/`md`) → new `NavMenu` (☰) next to settings; the
-  viewer shows the icon instead of the longer wordmark on phones.
+  viewer shows the icon instead of the longer wordmark on phones, and its
+  ☰/⚙ sit on a white capsule (bare icons were lost over the model).
+  `verify` green (211), `e2e:smoke` green (42, incl. phone menu + 16px
+  search); the first e2e run timed out once on the quiz-summary screenshot
+  (60 s, software WebGL), the rerun passed. CI green.
