@@ -797,4 +797,6 @@ verify` green (209), `e2e:smoke` green (40); review shots for every new
   oval window → stapes, greater omentum → stomach and transverse colon,
   pouches and fossae → the organs around them, retinacula → the tendons
   they hold, deltoid ligament → its four parts, thenar/hypothenar → their
-  six muscles). `npm run verify` green (211).
+  six muscles). `npm run verify` green (211), `e2e:smoke` green (40);
+  checked in the app: the female urethra shows only her general note, the
+  male one also the three segments; calyces and the ansa's roots show hers.
