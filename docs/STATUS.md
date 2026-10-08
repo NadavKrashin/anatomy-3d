@@ -857,4 +857,7 @@ verify` green (209), `e2e:smoke` green (40); review shots for every new
   outside their row (now inside: `relative`); the question-type track
   becomes a rounded block instead of a stretched pill when it wraps on a
   phone. Tests: clues, generator, engine, scopes, panel; e2e: summary mode
-  on her distinctions.
+  on her distinctions. `npm run verify` green (227), `e2e:smoke` green
+  (44); screenshots reviewed (setup on desktop and phone, a describe and a
+  find question, the answer shown in the model):
+  `docs/screenshots/quiz-setup-from-summary.png`, `quiz-from-summary.png`.

@@ -177,7 +177,7 @@ async function runQuizFlow(page: Page) {
   // (Click the row: a forced click on its visually hidden radio misses.)
   await page.locator("label", { hasText: DISTINCTIONS_HEADING }).click();
   await page.screenshot({
-    path: `${SHOTS}/quiz-setup-summary.png`,
+    path: `${SHOTS}/quiz-setup-from-summary.png`,
     fullPage: true,
   });
   await page.getByRole("button", { name: he.quiz.start }).click();
@@ -190,7 +190,7 @@ async function runQuizFlow(page: Page) {
     SUMMARY_DISTINCTIONS.some((d) => d.text === clue),
     `summary mode asks with one of her distinctions ("${clue}")`,
   );
-  await page.screenshot({ path: `${SHOTS}/quiz-summary.png` });
+  await page.screenshot({ path: `${SHOTS}/quiz-from-summary.png` });
   if (await describe.isVisible()) {
     await page.keyboard.press("Digit1");
     assert(
