@@ -787,3 +787,29 @@ general definitions (skin, tendon, ligament, cartilage, bone marrow…) and
 the peritoneum stay without a structure. A combined entry ("Ansa cervicalis
 (Superior Root & Inferior root)") goes to the whole and each part, because
 the panel shows a structure's own notes only, not its whole's.
+
+## 2026-10-08 — Phone zoom: 16px fields and a zoom cap, not a smaller layout
+
+On her phone the page "zoomed in and the nav buttons disappeared". The layout
+fits a 390px screen (measured: no element wider than the viewport); the
+cause is iOS Safari zooming into any focused form field under 16px — the
+search box was 15px, the settings selects 14px — and staying zoomed, which
+pushes the top strip's ends off screen. Fixes: an unlayered
+`@media (pointer: coarse)` rule sets inputs/selects to 16px (it beats the
+Tailwind size utilities), the viewport sets `maximum-scale=1`, and
+`touch-action: manipulation` stops double-tap zoom. Pinch on the 3D view is
+the camera's own (the canvas is `touch-none`), so the page never needs to
+zoom; text sizes already meet the design's minimums. Separately, phones had
+no page links at all (MainNav was hidden below `lg`/`md`), hence `NavMenu`.
+
+## 2026-10-08 — Hebrew serif: Noto Serif Hebrew behind Frank Ruhl's Latin
+
+The user found the Hebrew titles too much like "David". Compared on the
+app's own titles: Frank Ruhl, Noto Serif Hebrew, Bona Nova, Suez One,
+Miriam Libre, Rubik, Heebo, Assistant, Secular One, Bellefair. Noto Serif
+Hebrew keeps a serif (structure names stay atlas labels, distinct from the
+Plex UI sans) with modern, even strokes. English/Latin names keep Frank
+Ruhl, which the user didn't object to. Frank Ruhl is loaded with the Latin
+subset only and `adjustFontFallback: false` — its generated metric fallback
+(local Times New Roman, no unicode-range) would otherwise draw Hebrew before
+the stack reaches Noto.

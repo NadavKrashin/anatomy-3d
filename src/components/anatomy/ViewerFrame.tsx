@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import type { ReactNode } from "react";
 import { Logo } from "@/components/layout/Logo";
 import { MainNav } from "@/components/layout/MainNav";
+import { NavMenu } from "@/components/layout/NavMenu";
 import { SettingsMenu } from "@/components/layout/SettingsMenu";
 import { useAnatomyData } from "@/components/providers/AnatomyDataProvider";
 import { useMessages } from "@/hooks/useMessages";
@@ -35,15 +36,17 @@ export function ViewerFrame({
     <main className="relative h-dvh w-full overflow-hidden bg-[radial-gradient(ellipse_70%_60%_at_50%_45%,#f6f8f9_0%,var(--color-plate)_70%,var(--color-plate-deep)_100%)]">
       <AnatomyCanvas showSelectionLabel={showSelectionLabel} />
 
-      <header className="pointer-events-none absolute inset-x-0 top-0 z-30 flex items-center gap-4 px-4 py-3 md:gap-8 md:px-6">
+      <header className="pointer-events-none absolute inset-x-0 top-0 z-30 flex items-center gap-3 px-4 py-3 md:gap-8 md:px-6">
         <div className="pointer-events-auto shrink-0">
-          <Logo />
+          <Logo compact />
         </div>
         <div className="pointer-events-auto mx-auto max-w-md min-w-0 flex-1">
           {center}
         </div>
         <MainNav className="pointer-events-auto max-lg:hidden" />
-        <div className="pointer-events-auto shrink-0">
+        {/* On a capsule: bare icons get lost over the model. */}
+        <div className="bg-sheet pointer-events-auto flex shrink-0 items-center gap-0.5 rounded-full p-0.5 shadow-[var(--shadow-float)]">
+          <NavMenu className="lg:hidden" />
           <SettingsMenu />
         </div>
       </header>

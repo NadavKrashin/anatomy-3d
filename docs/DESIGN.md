@@ -38,9 +38,11 @@ palette and the teal selection; always paired with a text label.
 
 Type:
 
-- **Frank Ruhl Libre** (serif, Hebrew + Latin) — structure names, page
-  titles, the wordmark. It is a book face; it makes names read like atlas
-  labels.
+- **Frank Ruhl Libre** (serif, Latin) + **Noto Serif Hebrew** (serif,
+  Hebrew) — structure names, page titles, the wordmark: one `font-serif`
+  stack, Frank Ruhl loaded with the Latin subset only so Hebrew falls through
+  to Noto. Frank Ruhl's Hebrew read like "David" (user, 2026-10-08); Noto
+  Serif Hebrew is a contemporary serif that keeps the atlas-label feel.
 - **IBM Plex Sans Hebrew** (sans, Hebrew + Latin) — UI, body text, data.
   Clinical, technical, clearly different from the serif.
 - Scale: 13 / 15 / 17 / 21 / 28 / 40 px. Sentence case everywhere. No
@@ -55,7 +57,7 @@ rows — lists, not boxes.
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│ אנטומיה      ( search ................ )   Explore Quiz Progress ⚙ │  ← plain header strip on the plate
+│ האנטומיה של אור ( search ............ ) Explore Quiz Progress ⚙ │  ← plain header strip on the plate
 │                                                               │
 │  Legend          [ 3D specimen on the plate ]       ┌────────┐│
 │  ● Bones          ·───────── Biceps brachii          │ Name   ││  ← leader label in the 3D view
@@ -68,6 +70,21 @@ rows — lists, not boxes.
 
 Text aligns to the reading start (right in Hebrew). Home is a **contents
 page** (regions as a ruled list with counts), not a grid of cards.
+
+Phones (below `lg` in the viewer, `md` on pages) have no room for the text
+links: a menu button (☰, `NavMenu`) next to ⚙ opens them as a ruled list.
+In the viewer the wordmark becomes the app icon on phones (`Logo compact`).
+Form fields are 16px on touch screens (iOS zooms into smaller ones).
+
+## App icon
+
+The app's own leader label: a pin with a leader line and "אור" set on the
+line, cream (`sheet`) on the teal plate (`scrub`). Full-bleed square, mark
+inside the maskable safe zone, so iOS/Android round or crop it. Rendered by
+`scripts/brand/render-icons.ts` (needs network for the font) to
+`src/app/icon.png`, `src/app/apple-icon.png`, `public/icons/icon-{192,512}.png`;
+`src/app/favicon.ico` is made from `icon.png` with ImageMagick
+(`convert src/app/icon.png -define icon:auto-resize=48,32,16 src/app/favicon.ico`).
 
 The settings menu (⚙) starts with the body: a `Segmented` "Male / Female"
 switch (2026-10-06), then the language selects. The switch changes the
@@ -95,7 +112,7 @@ not in the viewer toolbar.
 | Near-black background + one bright accent | `#0b0d10` + cyan                          | Pale clinical plate; teal chosen from the tissue palette's gap          |
 | ALL-CAPS tracked eyebrows                 | panel section titles, legend title        | Sentence-case serif/sans headings                                       |
 | "A · B" meta strings, "Name — fragment"   | "Muscular · Upper limb", "Humerus — left" | "Muscular system, upper limb"; "Humerus (left)"                         |
-| Glowing-dot ALL-CAPS wordmark             | "● ANATOMY"                               | Serif wordmark "אנטומיה" / "Anatomy"                                    |
+| Glowing-dot ALL-CAPS wordmark             | "● ANATOMY"                               | Serif wordmark "האנטומיה של אור"                                        |
 | Identical rounded boxes for everything    | every button, panel, card                 | Borderless controls, pills only for primary/segmented, lists with rules |
 | Icon + title + blurb feature grid         | home page                                 | Removed — the contents list _is_ the page                               |
 | "→" on CTAs                               | home CTA                                  | Removed                                                                 |

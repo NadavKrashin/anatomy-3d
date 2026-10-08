@@ -8,7 +8,7 @@ import type {
 } from "@/types/anatomy";
 
 export const he = {
-  appName: "אנטומיה",
+  appName: "האנטומיה של אור",
   tagline: "ללמוד את הגוף דרך חקירה שלו.",
   disclaimer:
     "לצורכי לימוד בלבד. יש לאמת את התוכן האנטומי מול המקורות הנדרשים במוסד הלימודים שלך.",
@@ -16,6 +16,7 @@ export const he = {
   modelCredits: (names: string) =>
     `מודלים תלת־ממדיים: ${names}. פרטי הרישיונות בעמוד הבית.`,
   nav: {
+    menu: "תפריט",
     home: "בית",
     explore: "חקירה",
     quiz: "בוחן",

@@ -243,6 +243,9 @@ AnatomyModel.apply()
   with a page-specific centre) and `ViewerPanel.tsx` (side card / bottom
   sheet, marked as a viewer obstruction). Regular pages use
   `components/layout/PageShell.tsx`.
+- App name, icons and home-screen install: `app/layout.tsx` metadata
+  (`appleWebApp`), `app/manifest.ts`, `app/icon.png` / `apple-icon.png` /
+  `favicon.ico` (Next file conventions) and `public/icons/`.
 - `CameraController` also applies a camera command issued just before it
   mounted (quiz start and deep links react to the same index update).
 
@@ -252,7 +255,8 @@ Visual rules: `docs/DESIGN.md` (and the `anatomy-ui-style` skill). Tokens are
 Tailwind theme variables in `src/app/globals.css`. Shared primitives live in
 `components/ui` (`Button`/`ButtonLink`, `IconButton`, `Segmented`, `Kbd`);
 page shells in `components/layout` (`PageShell`, `PageHeader`, `Logo`,
-`MainNav`, `SettingsMenu`) and `components/anatomy` (`ViewerFrame`,
+`MainNav`, `NavMenu` — the phone menu —, `SettingsMenu`; popovers close via
+`hooks/useDismiss`) and `components/anatomy` (`ViewerFrame`,
 `ViewerPanel`). Feature components compose these; they don't define new
 colours or button styles.
 

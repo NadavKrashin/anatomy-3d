@@ -22,7 +22,8 @@
   --color-caution: #8a5a00;
 
   --font-sans: var(--font-plex), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-frank), ui-serif, Georgia, serif;
+  --font-serif:
+    var(--font-frank), var(--font-serif-hebrew), ui-serif, Georgia, serif;
 
   --shadow-float:
     0 1px 2px rgb(24 34 45 / 0.06), 0 12px 32px -12px rgb(24 34 45 / 0.18);
@@ -34,6 +35,8 @@
   html {
     color-scheme: light;
     -webkit-tap-highlight-color: transparent;
+    /* No double-tap zoom on phones; pinch is handled by the 3D view. */
+    touch-action: manipulation;
   }
 
   body {
@@ -59,6 +62,19 @@
       transition-duration: 0.01ms !important;
       animation-duration: 0.01ms !important;
     }
+  }
+}
+
+/*
+ * iOS zooms the page into any form field under 16px and stays zoomed, which
+ * pushed the top strip's buttons off screen. Unlayered, so it wins over the
+ * text-size utilities on touch screens.
+ */
+@media (pointer: coarse) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
   }
 }
 

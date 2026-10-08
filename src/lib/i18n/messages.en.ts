@@ -1,7 +1,7 @@
 import type { Messages } from "./messages.he";
 
 export const en: Messages = {
-  appName: "Anatomy",
+  appName: "Or's Anatomy",
   tagline: "Learn the body by exploring it.",
   disclaimer:
     "For educational purposes. Anatomy content should be verified against your institution's required resources.",
@@ -9,6 +9,7 @@ export const en: Messages = {
   modelCredits: (names: string) =>
     `3D models: ${names}. Licences on the home page.`,
   nav: {
+    menu: "Menu",
     home: "Home",
     explore: "Explore",
     quiz: "Quiz",

@@ -325,5 +325,20 @@ export async function exploreFlow(browser: Browser, errors: string[]) {
   await phone.waitForTimeout(900);
   await phone.screenshot({ path: `${SHOTS}/phone-clavicle.png` });
 
+  // Phones get the page links behind a menu button; iOS would zoom into a
+  // search box under 16px and push the top strip off screen.
+  const searchFont = await phone
+    .locator("#structure-search")
+    .evaluate((el) => getComputedStyle(el).fontSize);
+  assert(searchFont === "16px", `phone search font is ${searchFont}`);
+  await phone.getByRole("button", { name: "תפריט" }).tap();
+  await phone.screenshot({ path: `${SHOTS}/phone-menu.png` });
+  await phone.getByRole("link", { name: "בוחן" }).tap();
+  await phone.waitForURL("**/quiz");
+  assert(
+    (await phone.getByRole("link", { name: "התקדמות" }).count()) === 0,
+    "phone menu closes after navigating",
+  );
+
   await Promise.all([desktop.close(), ipad.close(), phone.close()]);
 }

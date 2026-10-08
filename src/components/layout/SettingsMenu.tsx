@@ -1,8 +1,9 @@
 "use client";
 
 import { Settings2 } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { IconButton } from "@/components/ui/IconButton";
+import { useDismiss } from "@/hooks/useDismiss";
 import { useMessages } from "@/hooks/useMessages";
 import { SettingsFields } from "./SettingsFields";
 
@@ -10,25 +11,11 @@ export function SettingsMenu() {
   const t = useMessages();
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!open) return;
-    const close = (event: PointerEvent | KeyboardEvent) => {
-      if (
-        event instanceof KeyboardEvent
-          ? event.key === "Escape"
-          : !rootRef.current?.contains(event.target as Node)
-      ) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener("pointerdown", close);
-    document.addEventListener("keydown", close);
-    return () => {
-      document.removeEventListener("pointerdown", close);
-      document.removeEventListener("keydown", close);
-    };
-  }, [open]);
+  useDismiss(
+    open,
+    rootRef,
+    useCallback(() => setOpen(false), []),
+  );
 
   return (
     <div ref={rootRef} className="relative">

@@ -2,7 +2,7 @@
 
 > Living document. **Update it with every commit that changes the code, not
 > just at the end of a session** — it must always match the code as it is.
-> Last updated: 2026-10-07 (session 4, hand-built structures: priority 1 merged, priority 2 started).
+> Last updated: 2026-10-08 (rename to Or's Anatomy, app icon, Hebrew title font, phone zoom/nav fix).
 
 ## Orientation (read in this order)
 
@@ -30,7 +30,7 @@ npx next start -p 3100         # in the background (after verify, which builds)
 npm run e2e:smoke              # real-browser explore + quiz flows, writes docs/screenshots/
 ```
 
-Expected today: **211 unit/component tests, 40 e2e checks, all passing; CI green.**
+Expected today: **211 unit/component tests, 42 e2e checks, all passing; CI green.**
 
 ## User decisions & preferences (do not re-ask)
 
@@ -56,6 +56,7 @@ Expected today: **211 unit/component tests, 40 e2e checks, all passing; CI green
 | 2026-10-05 | Course-site notes can't be copied or reworded (site terms); the user shared **her own summary** (Word, her own words) to use for **descriptions and names**. Her text is shown verbatim; her Hebrew names win over the site's.                                                                                                                                                                                                 |
 | 2026-10-07 | Priority 2 reviewed: **merge to `main`**, then **priority 3**, then **priority 4** (the kidney).                                                                                                                                                                                                                                                                                                                               |
 | 2026-10-08 | Priority 3 reviewed (and the clearance-check fix that moved the ansa and left phrenic nerve): **merge to `main`**, then **priority 4** (the kidney).                                                                                                                                                                                                                                                                           |
+| 2026-10-08 | **App renamed "Or's Anatomy"** (Hebrew "האנטומיה של אור") — supersedes "no name in the UI" (2026-10-04) for the app name. Wants **a logo for the phone home screen**, a **Hebrew title font less like "David"** (Frank Ruhl's Hebrew), and the **phone fixed**: the page zoomed in and the nav buttons disappeared. She uses the app on her **phone** too, not only iPad/laptop.                                               |
 | 2026-10-08 | Priority 4 reviewed (the Atlas kidney): **merge to `main`**. The scrotum's boxy shape is fine as it is — **don't reshape it** (asked after seeing it on her phone).                                                                                                                                                                                                                                                            |
 | 2026-10-07 | **Replace the non-commercial kidney** with the Human Reference Atlas male kidney (CC BY 4.0), as **priority 4** (last) of `docs/HANDMADE_MODELS_PROMPT.md`, for the priority-2 session to do after priority 3. The inner ear stays non-commercial for now. Drag fix: **merge to `main`**.                                                                                                                                      |
 | 2026-10-07 | Priority 2: **female external genitalia built to the bones** (clitoris under the symphysis, crura on the rami, bulbs and glands at the existing vaginal opening; a ≈ 70 mm vestibule accepted rather than re-fitting the Atlas organs); **infra-orbital nerve and nerve to vastus medialis split out** of Z-Anatomy's maxillary and femoral nerve meshes into their own structures (scripted step on the shipped nerves file). |
@@ -803,3 +804,15 @@ verify` green (209), `e2e:smoke` green (40); review shots for every new
   male one also the three segments; calyces and the ansa's roots show hers.
 - **2026-10-08 · review fixes merged to `main`** (user's go):
   `claude/review-priorities-2-4` fast-forwarded.
+- **2026-10-08 · Or's Anatomy** (branch `claude/rename-logo-mobile`) — app
+  renamed ("האנטומיה של אור" / "Or's Anatomy": wordmark, page title, iOS
+  home-screen title, `src/app/manifest.ts`). App icon: the app's own leader
+  label (pin + line + "אור") in cream on the teal plate, rendered by
+  `scripts/brand/render-icons.ts` to `src/app/icon.png`, `apple-icon.png`,
+  `favicon.ico` and `public/icons/` (192/512, also maskable). Hebrew serif
+  now **Noto Serif Hebrew** (Frank Ruhl Libre kept for Latin). Phone fixes:
+  form fields are 16px on touch screens and the viewport caps zoom at 1 (iOS
+  zoomed into the 15px search box and stayed zoomed, pushing the top strip's
+  buttons off screen), no double-tap zoom; phones had **no page links at all**
+  (MainNav hidden below `lg`/`md`) → new `NavMenu` (☰) next to settings; the
+  viewer shows the icon instead of the longer wordmark on phones.
