@@ -245,7 +245,8 @@ All verified by `npm run e2e:smoke` against a production build.
    quiz scopes and explore lists from `lab-structures.json`; first review the
    suggested `structureId`s (299/863 matched) and map the rest by hand.
    4d. **Her summary** — done: notes + Hebrew names + quizzes from her
-   descriptions, her distinctions and her sections (2026-10-08). Unused: her
+   descriptions, her distinctions and her sections (2026-10-08; merged to
+   `main`, user's go). Unused: her
    ten open self-review questions (pathways — no auto-gradable answer in her
    text); 163 entries have
    no place in the model (female organs, layers, spaces, nerves/vessels no
@@ -861,3 +862,5 @@ verify` green (209), `e2e:smoke` green (40); review shots for every new
   (44); screenshots reviewed (setup on desktop and phone, a describe and a
   find question, the answer shown in the model):
   `docs/screenshots/quiz-setup-from-summary.png`, `quiz-from-summary.png`.
+- **2026-10-08 · summary quizzes merged to `main`** (user's go):
+  `claude/summary-quizzes` fast-forwarded.
