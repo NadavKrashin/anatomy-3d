@@ -255,7 +255,8 @@ All verified by `npm run e2e:smoke` against a production build.
    25: the Human Reference Atlas kidney replaces the NC kidney; user's go,
    2026-10-08). All four priorities of the brief are done.
    Reviewed after the merge (2026-10-08, below); her notes rerun with her
-   .docx and now reach the new structures. Then: her check of the courses
+   .docx and now reach the new structures; the review's fixes merged to
+   `main` (user's go, 2026-10-08). Then: her check of the courses
    (CONTENT_REVIEW → "Hand-built structures"). NC models go into the
    non-commercial file only. Open3DModel's
    retinacula, tendon sheaths and spaces (femoral/adductor canal) were left
@@ -800,3 +801,5 @@ verify` green (209), `e2e:smoke` green (40); review shots for every new
   six muscles). `npm run verify` green (211), `e2e:smoke` green (40);
   checked in the app: the female urethra shows only her general note, the
   male one also the three segments; calyces and the ansa's roots show hers.
+- **2026-10-08 · review fixes merged to `main`** (user's go):
+  `claude/review-priorities-2-4` fast-forwarded.
