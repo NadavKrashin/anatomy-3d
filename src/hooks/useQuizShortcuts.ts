@@ -7,8 +7,8 @@ import { isTypingTarget } from "./isTypingTarget";
 const DIGITS = ["Digit1", "Digit2", "Digit3", "Digit4", "Digit5", "Digit6"];
 
 /**
- * Quiz keys (physical codes, so a Hebrew layout works): 1–4 answer identify
- * questions, Enter moves on after an answer, R resets the camera, P toggles
+ * Quiz keys (physical codes, so a Hebrew layout works): 1–6 answer
+ * multiple-choice questions, Enter moves on after an answer, R resets the camera, P toggles
  * peel mode, ⇧P restores the last peeled structure, Q exits.
  */
 export function useQuizShortcuts({
@@ -34,7 +34,8 @@ export function useQuizShortcuts({
       if (
         digit >= 0 &&
         run?.phase === "answering" &&
-        question?.type === "identify"
+        question &&
+        question.type !== "find"
       ) {
         const optionId = question.optionIds[digit];
         if (optionId) dispatch({ type: "answer", structureId: optionId, now });

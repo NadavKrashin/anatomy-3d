@@ -19,7 +19,8 @@ export function Segmented<T extends string | number>({
   return (
     <fieldset>
       <legend className="text-graphite mb-2.5 text-[14px]">{legend}</legend>
-      <div className="bg-wash inline-flex flex-wrap gap-1 rounded-full p-1">
+      {/* 22px = half a row: a pill on one row, a rounded block if it wraps. */}
+      <div className="bg-wash inline-flex flex-wrap gap-1 rounded-[22px] p-1">
         {options.map((option) => {
           const selected = option.value === value;
           return (

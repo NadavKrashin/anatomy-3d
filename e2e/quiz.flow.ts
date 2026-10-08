@@ -4,6 +4,10 @@
  * questions, see results, refresh, and find the progress retained.
  */
 import type { Browser, Page } from "playwright";
+import {
+  DISTINCTIONS_HEADING,
+  SUMMARY_DISTINCTIONS,
+} from "../src/data/anatomy/z-anatomy/summaryDistinctions";
 import { he } from "../src/lib/i18n/messages.he";
 import { assert, BASE_URL, openPage, SHOTS, waitForModel } from "./helpers";
 
@@ -164,6 +168,43 @@ async function runQuizFlow(page: Page) {
     (await page.getByRole("status").count()) > 0,
     "identify answers via keyboard and gets feedback",
   );
+
+  // From her summary: her distinctions, answered from her own words.
+  await page.goto(`${BASE_URL}/quiz`);
+  await page
+    .getByRole("radio", { name: new RegExp(he.quiz.modes.summary.title) })
+    .check({ force: true });
+  // (Click the row: a forced click on its visually hidden radio misses.)
+  await page.locator("label", { hasText: DISTINCTIONS_HEADING }).click();
+  await page.screenshot({
+    path: `${SHOTS}/quiz-setup-summary.png`,
+    fullPage: true,
+  });
+  await page.getByRole("button", { name: he.quiz.start }).click();
+  await waitForModel(page);
+  const describe = page.getByRole("heading", { name: he.quiz.describePrompt });
+  const findClue = page.getByText(he.quiz.findCluePrompt);
+  await describe.or(findClue).first().waitFor();
+  const clue = (await page.locator("blockquote").innerText()).trim();
+  assert(
+    SUMMARY_DISTINCTIONS.some((d) => d.text === clue),
+    `summary mode asks with one of her distinctions ("${clue}")`,
+  );
+  await page.screenshot({ path: `${SHOTS}/quiz-summary.png` });
+  if (await describe.isVisible()) {
+    await page.keyboard.press("Digit1");
+    assert(
+      (await page.getByRole("status").count()) > 0,
+      "a description is answered by choosing a name",
+    );
+  } else {
+    // (Only the distinctions' structures are shown; where the asked one is
+    // depends on the random pick, so this just checks the question.)
+    assert(
+      await findClue.isVisible(),
+      "a description can be answered by clicking in the model",
+    );
+  }
 
   await page.close();
 }

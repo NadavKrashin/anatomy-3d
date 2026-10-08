@@ -5,16 +5,19 @@ import { Check, X } from "lucide-react";
 import { StructureLabel } from "@/components/anatomy/StructureLabel";
 import { Kbd } from "@/components/ui/Kbd";
 import type { QuizFeedback } from "@/lib/quiz/quizEngine";
-import type { IdentifyQuestion } from "@/types/quiz";
+import type { ChoiceQuestion } from "@/types/quiz";
 
 interface IdentifyOptionsProps {
-  question: IdentifyQuestion;
+  question: ChoiceQuestion;
   answered: boolean;
   feedback: QuizFeedback | null;
   onChoose: (structureId: string) => void;
 }
 
-/** Multiple-choice answers; after answering, marks the right one and the wrong pick. */
+/**
+ * Multiple-choice answers; after answering, marks the right one and the wrong
+ * pick. Answers to her clues name no side: the clue doesn't say which.
+ */
 export function IdentifyOptions({
   question,
   answered,
@@ -45,6 +48,7 @@ export function IdentifyOptions({
               <Kbd>{index + 1}</Kbd>
               <StructureLabel
                 structureId={id}
+                withSide={question.type === "identify"}
                 className="font-title flex-1 text-[17px]"
               />
               {isAnswer && (

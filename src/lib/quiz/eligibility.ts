@@ -12,14 +12,14 @@ import type { StudyScope } from "@/types/study";
  * Built-in scopes (whole body, region, system) skip structures tagged
  * `detail` (small branches, inconstant structures) so quizzes focus on core
  * material; custom scopes (review mistakes, due, user lists) keep everything
- * the student chose.
+ * the student chose, and summary scopes everything her summary lists.
  */
 export function eligibleStructures(
   scope: StudyScope,
   registry: AnatomyRegistry,
   selectableIds: ReadonlySet<string>,
 ): AnatomicalStructure[] {
-  const includeDetail = scope.kind === "custom";
+  const includeDetail = scope.kind === "custom" || scope.kind === "summary";
   return scope.structureIds
     .filter((id) => selectableIds.has(id))
     .map((id) => registry.get(id))

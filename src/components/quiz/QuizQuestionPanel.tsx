@@ -2,7 +2,6 @@
 
 import { Eye } from "lucide-react";
 import { LayerControls } from "@/components/anatomy/LayerControls";
-import { StructureLabel } from "@/components/anatomy/StructureLabel";
 import { ViewerPanel } from "@/components/anatomy/ViewerPanel";
 import { buttonClass } from "@/components/ui/Button";
 import { useMessages } from "@/hooks/useMessages";
@@ -10,6 +9,7 @@ import { canReveal, currentQuestion } from "@/lib/quiz/quizEngine";
 import { useQuizStore } from "@/store/quizStore";
 import { IdentifyOptions } from "./IdentifyOptions";
 import { QuizFeedback } from "./QuizFeedback";
+import { QuizPrompt } from "./QuizPrompt";
 
 /** The current question: prompt, answer options or click instruction, feedback and controls. */
 export function QuizQuestionPanel() {
@@ -28,20 +28,9 @@ export function QuizQuestionPanel() {
         className="flex min-h-0 flex-col gap-5 overflow-y-auto p-5"
         aria-live="polite"
       >
-        {question.type === "find" ? (
-          <div className="flex flex-col gap-1">
-            <p className="text-graphite text-[14px]">{t.quiz.findPrompt}</p>
-            <h2 className="font-title text-[26px] leading-tight font-medium">
-              <StructureLabel structureId={question.structureId} />
-            </h2>
-          </div>
-        ) : (
-          <h2 className="font-title text-[24px] leading-tight font-medium">
-            {t.quiz.identifyPrompt}
-          </h2>
-        )}
+        <QuizPrompt question={question} />
 
-        {question.type === "identify" && (
+        {question.type !== "find" && (
           <IdentifyOptions
             question={question}
             answered={answered}
@@ -52,7 +41,12 @@ export function QuizQuestionPanel() {
           />
         )}
 
-        {run.feedback && <QuizFeedback feedback={run.feedback} />}
+        {run.feedback && (
+          <QuizFeedback
+            feedback={run.feedback}
+            withSide={question.type !== "describe"}
+          />
+        )}
 
         {question.type === "find" && !answered && (
           // Deep muscles hide under superficial ones: peel to reach them.

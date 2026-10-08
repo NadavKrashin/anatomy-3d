@@ -1,6 +1,12 @@
 import { useEffect } from "react";
 import { useAnatomyData } from "@/components/providers/AnatomyDataProvider";
 import type { AnatomyRegistry } from "@/lib/anatomy/registry";
+import { SUMMARY_DISTINCTIONS } from "@/data/anatomy/z-anatomy/summaryDistinctions";
+import {
+  distinctionClues,
+  summaryClues,
+  type QuizClue,
+} from "@/lib/quiz/clues";
 import { eligibleStructures } from "@/lib/quiz/eligibility";
 import { generateQuiz } from "@/lib/quiz/questionGenerator";
 import {
@@ -14,18 +20,40 @@ import { useProgressStore } from "@/store/progressStore";
 import { useQuizStore } from "@/store/quizStore";
 import { useSceneIndexStore } from "@/store/sceneIndexStore";
 import { useViewerStore } from "@/store/viewerStore";
+import { DISTINCTIONS_SCOPE_ID } from "@/lib/study/scopes";
 import { DETAIL_TAG } from "@/types/anatomy";
 import type { QuizConfig } from "@/types/quizConfig";
 
 /** Pause after a correct answer before moving on (§18 "short delay"). */
 export const AUTO_ADVANCE_MS = 1100;
 
-/** Identify questions and revealed answers focus the camera on a structure. */
+/**
+ * Identify questions, answered clue questions (which then show where the
+ * structure is) and revealed answers focus the camera on a structure.
+ */
 function cameraWasMoved(run: QuizRun): boolean {
+  const type = currentQuestion(run)?.type;
   return (
-    currentQuestion(run)?.type === "identify" ||
+    type === "identify" ||
+    type === "describe" ||
     run.feedback?.kind === "revealed"
   );
+}
+
+/**
+ * Her descriptions to quiz from: her distinctions only in their own scope,
+ * else her notes and her distinctions.
+ */
+function cluesFor(
+  config: QuizConfig,
+  registry: AnatomyRegistry,
+): Map<string, QuizClue[]> {
+  const distinctions = distinctionClues(SUMMARY_DISTINCTIONS, registry.all);
+  if (config.scope.id === DISTINCTIONS_SCOPE_ID) return distinctions;
+  const clues = summaryClues(registry.all);
+  for (const [id, list] of distinctions)
+    clues.set(id, [...(clues.get(id) ?? []), ...list]);
+  return clues;
 }
 
 /** Viewer state each quiz moment needs: what's highlighted, what's clickable, where the camera is. */
@@ -65,6 +93,12 @@ function syncViewer(
       viewer.setSelectionLocked(true);
       viewer.select(question.structureId);
       viewer.focus(question.structureId);
+    } else if (question.type === "describe") {
+      // Answered from her clue alone: nothing highlighted, and clicks
+      // mustn't name structures (the label would give the answer away).
+      viewer.setSelectionLocked(true);
+      viewer.select(null);
+      if (previous && cameraWasMoved(previous)) viewer.resetCamera();
     } else {
       viewer.setSelectionLocked(false);
       viewer.select(null);
@@ -77,8 +111,8 @@ function syncViewer(
   if (run.phase === "answered") {
     viewer.setPeelMode(false);
     viewer.setSelectionLocked(true);
-    if (run.feedback?.kind === "revealed") {
-      // The answer may have been peeled away; show it in context (x-ray).
+    if (run.feedback?.kind === "revealed" || question.type === "describe") {
+      // Show where the answer is (it may have been peeled away; x-ray).
       viewer.restoreAllLayers();
       viewer.select(question.structureId);
       viewer.focus(question.structureId);
@@ -109,6 +143,8 @@ export function useQuizRun(config: QuizConfig) {
         mode: config.mode,
         count: config.count,
         rng: createRng(now),
+        clues:
+          config.mode === "summary" ? cluesFor(config, registry) : undefined,
       });
       const viewer = useViewerStore.getState();
       viewer.showOnly(

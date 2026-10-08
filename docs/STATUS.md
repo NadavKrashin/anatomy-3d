@@ -36,6 +36,7 @@ Expected today: **211 unit/component tests, 42 e2e checks, all passing; CI green
 
 | Date       | Decision                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2026-10-08 | **More quizzes from her summary** (user): quiz from her own descriptions (find or choose the name), her distinctions, and her summary's sections as scopes.                                                                                                                                                                                                                                                                    |
 | 2026-10-04 | App is for the user's girlfriend, a medical student in **Israel**; the course hasn't started yet.                                                                                                                                                                                                                                                                                                                              |
 | 2026-10-04 | **UI in Hebrew (RTL)** by default, English available. Term display defaults to **English primary, Hebrew secondary** (Latin also shown) — changeable in settings once her course's terminology is known.                                                                                                                                                                                                                       |
 | 2026-10-04 | Devices: **iPad and laptop**. No personalisation/name in the UI.                                                                                                                                                                                                                                                                                                                                                               |
@@ -201,9 +202,15 @@ All verified by `npm run e2e:smoke` against a production build.
   peel mode in find questions to clear what covers the target — a tap then
   peels instead of answering; peels reset per question and when the answer
   is revealed),
-  identify (multiple choice, plausible core distractors), mixed; scopes by
-  region / system / due / review mistakes; built-in scopes skip `detail`
-  structures (small branches).
+  identify (multiple choice, plausible core distractors), mixed, and **from
+  her summary** (her own description of a structure, names masked: find it
+  in the model — either side counts — or choose its name from four, no
+  side shown; 480 structures/pairs have a usable description, plus her 13
+  distinctions with their pair as the options); scopes by region / system /
+  due / review mistakes and **her summary's sections** (her headings, in
+  her order; supplements joined to their section; her distinctions first;
+  listed right after the whole body in summary mode); built-in scopes skip
+  `detail` structures (small branches), her sections keep them.
 - **Progress:** per-structure stats, spaced review schedule, `/progress`;
   localStorage (validated, corrupt data backed up).
 - **Tooling:** `verify`, `e2e:smoke`, `e2e/perf-probe.ts`, `anatomy:inspect`,
@@ -237,8 +244,10 @@ All verified by `npm run e2e:smoke` against a production build.
    4b. **Lab study lists in the app** — "Lab 7" / "past-exam structures"
    quiz scopes and explore lists from `lab-structures.json`; first review the
    suggested `structureId`s (299/863 matched) and map the rest by hand.
-   4d. **Her summary** — done: notes + Hebrew names. Unused so far: its
-   "distinctions" and self-review questions (quiz material); 163 entries have
+   4d. **Her summary** — done: notes + Hebrew names + quizzes from her
+   descriptions, her distinctions and her sections (2026-10-08). Unused: her
+   ten open self-review questions (pathways — no auto-gradable answer in her
+   text); 163 entries have
    no place in the model (female organs, layers, spaces, nerves/vessels no
    source has).
    4e. **Fill model gaps** (`docs/MODEL_SOURCES.md`): **Open3DModel done**
@@ -830,3 +839,22 @@ verify` green (209), `e2e:smoke` green (40); review shots for every new
   "אור". DECISIONS.md → "Title font". `verify` green (211), `e2e:smoke` green (42); screenshots reviewed.
 - **2026-10-08 · merged to `main`** (user's go): `claude/rename-logo-mobile`
   fast-forwarded.
+- **2026-10-08 · quizzes from her summary** (user: "add more quizzes based
+  on her docx"; branch `claude/summary-quizzes`). New quiz type "מהסיכום"
+  (from the summary): her note about a structure is the question — find it
+  in the model (either side counts; feedback names the side clicked) or
+  choose its name from four (no sides shown, one-shot, then the camera
+  shows where it is). Her names for the structure are masked in the clue
+  (Hebrew prefixes included; 32 clues needed it); notes shorter than 20
+  characters, shared and part-of notes aren't used (`lib/quiz/clues.ts`).
+  Her 13 distinctions (6 of her 12 pairs, both halves, and the rotator cuff)
+  are clues whose wrong options are the other half
+  (`z-anatomy/summaryDistinctions.ts`, in CONTENT_REVIEW for her check).
+  Scopes: her distinctions, then her sections in her order
+  (`summarySections.json`, written by `summary_notes.py`; "השלמות X" joins
+  "X"; sections under 5 structures dropped) — they work with every quiz
+  type. Fixed on the way: the scope rows' hidden radios were positioned
+  outside their row (now inside: `relative`); the question-type track
+  becomes a rounded block instead of a stretched pill when it wraps on a
+  phone. Tests: clues, generator, engine, scopes, panel; e2e: summary mode
+  on her distinctions.

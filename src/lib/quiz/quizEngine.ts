@@ -114,11 +114,12 @@ function answer(run: QuizRun, structureId: string, now: number): QuizRun {
       question,
       now,
       { correct: true, attempts, revealed: false },
-      { kind: "correct", structureId: question.structureId },
+      // The side clicked (a clue accepts either side of a pair).
+      { kind: "correct", structureId },
     );
   }
-  // Identify questions are one-shot; find questions allow retries (§18).
-  if (question.type === "identify") {
+  // Multiple-choice questions are one-shot; find questions allow retries (§18).
+  if (question.type !== "find") {
     return finishQuestion(
       run,
       question,

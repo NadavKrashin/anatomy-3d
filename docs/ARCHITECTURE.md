@@ -224,7 +224,7 @@ AnatomyModel.apply()
  scene index ready ─► eligibleStructures ─► generateQuiz ─► startQuiz ─► quizStore
                                  │
  click in 3D ─► viewerStore.pick ─► selectedStructureId ─► dispatch(answer)
- option button / keys 1–4 ─────────────────────────────► dispatch(answer)
+ option button / keys 1–6 ─────────────────────────────► dispatch(answer)
                                  ▼
              quizReducer (pure) ─► new QuizRun ─► syncViewer: highlight, lock,
                                                   camera; auto-advance on correct
@@ -234,8 +234,14 @@ AnatomyModel.apply()
 ```
 
 - `lib/quiz/` — `eligibility`, `questionGenerator`, `quizEngine`, `summary`,
-  `random`. `lib/study/scopes.ts` — built-in scopes (whole body, regions,
-  systems); `hooks/useStudyScopes.ts` adds the dynamic "due for review" scope.
+  `random`, `clues` (her summary notes and distinctions as question clues,
+  names masked). Question types: `find` (by name, or by her clue — either
+  side accepted), `identify` (highlighted → name), `describe` (her clue →
+  name, nothing highlighted). `lib/study/scopes.ts` — built-in scopes (whole
+  body, regions, systems) and `summaryScopes` (her distinctions and her
+  sections); `hooks/useStudyScopes.ts` adds the dynamic "due for review"
+  scope and her summary's scopes; `useQuizRun` builds the clues for
+  summary mode.
 - `lib/progress/` — `reviewScheduler`, `progressUpdates` (`applyAttempt`,
   `recordSession`), `progressStats` (overview, weakest, recent, due),
   `progressRepository` (interface) + `localProgressRepository`.

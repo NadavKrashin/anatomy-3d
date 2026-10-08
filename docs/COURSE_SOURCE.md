@@ -173,8 +173,10 @@ It has two parts:
   English structure name, using the same names as the site's lab checklist.
   The tables include "השלמות" (supplement) sections beyond the checklist.
 
-The document ends with distinctions and self-review questions, which are
-not used yet.
+The document ends with distinctions and self-review questions. The
+distinctions are quiz clues (`z-anatomy/summaryDistinctions.ts`); the open
+self-review questions are not used (no answer in her text to grade
+against).
 
 `scripts/course/summary/summary_notes.py` writes
 `src/data/anatomy/z-anatomy/summaryNotes.json`, which
@@ -225,3 +227,13 @@ npx tsx scripts/course/medintzfat/dump-structures.ts
 python3 scripts/course/summary/summary_notes.py .course-cache/summary/summary.docx
 npm run format
 ```
+
+### Quizzes from her summary
+
+Quiz type "מהסיכום" asks with her own words: a note about a structure
+(not a shared or part-of note, at least 20 characters once her names for it
+are masked with "…") is the question, answered by clicking the structure or
+choosing its name (`lib/quiz/clues.ts`). Her distinctions are clues whose
+wrong options are the other half of the pair. Her sections
+(`z-anatomy/summarySections.json`, written by `summary_notes.py`) are quiz
+scopes, her distinctions first.

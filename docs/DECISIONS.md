@@ -818,3 +818,21 @@ Hebrew, Noto Serif Hebrew, Frank Ruhl): **Miriam Libre**. It replaces Frank
 Ruhl for English/Latin names too, so the utility was renamed from
 `font-serif` to `font-title` (it is no longer a serif). The app icon's "אור"
 is set in it as well.
+
+## 2026-10-08 — Quizzes from her summary: her words are the question
+
+The user asked for more quizzes from her summary. Her summary describes
+structures in her own words, so those descriptions became questions rather
+than writing new ones (no invented content): a new quiz type asks with her
+note and is answered in the model (find) or from four names (describe).
+Her names for the structure are masked in the clue; short, shared and
+part-of notes aren't used, since they say too little or describe more than
+the structure. Paired structures accept either side and show names without
+a side, because her note doesn't say which side. Her distinctions are the
+most exam-like part of her summary; they became clues whose only wrong
+options are the other half of the pair. Her ten self-review questions are
+open pathways ("trace the air from nose to alveoli") with no answer in her
+text to grade, so they are left out rather than given answers she didn't
+write. Her sections became quiz scopes because she organised her studying
+by them; supplements join their section and tiny sections are dropped to
+keep the list usable.

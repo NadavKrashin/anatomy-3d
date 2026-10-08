@@ -294,3 +294,32 @@ only (no Hebrew added), all `verified: false`.
 | Stapedius (left, right)                                                                                                                                     | belly beside (medial to) the facial nerve's descending segment in the posterior wall; tendon forward from the pyramidal eminence to the neck of the stapes                                                                                                     |
 | Subcostal muscles (left, right)                                                                                                                             | four slips on the inner posterior wall near the rib angles: ribs 7→9, 8→10, 9→11, 10→12, running down and medially                                                                                                                                             |
 | Scrotum; septum of scrotum (male)                                                                                                                           | 2 mm sack round both testes and epididymides, closed over its root by a low dome the cords pass through; midline septum between the two compartments                                                                                                           |
+
+## Quiz clues from her distinctions — please check
+
+Her "important distinctions" (end of her summary) became one quiz clue per
+half of each pair (`src/data/anatomy/z-anatomy/summaryDistinctions.ts`). The
+wording is hers, split into two sentences; please check each still says
+what she meant. Pairs that don't say which is which, or that the model
+lacks, were left out (thyroid / parathyroid, artery / vein, muscle / tendon /
+ligament, tongue sensation / movement, pericardium / pleura).
+
+| Clue                                   | Answer                | Told apart from               |
+| -------------------------------------- | --------------------- | ----------------------------- |
+| מחבר כליה לשלפוחית.                    | Ureter                | Urethra                       |
+| מחברת שלפוחית לחוץ.                    | Urethra               | Ureter                        |
+| מייצר מרה.                             | Liver                 | Gallbladder                   |
+| אוגר ומרכז את המרה.                    | Gallbladder           | Liver                         |
+| איבר לימפתי המסנן דם.                  | Spleen                | Pancreas                      |
+| בלוטת עיכול והורמונים.                 | Pancreas              | Spleen                        |
+| כאן מתרחשת יצירת זרע.                  | Testis                | Epididymis                    |
+| כאן מתרחשות הבשלה ואגירה של הזרע.      | Epididymis            | Testis                        |
+| עובר בפרוטיד ומפעיל שרירי הבעה.        | Facial nerve (VII)    | Glossopharyngeal nerve        |
+| המסלול להפרשת בלוטת הפרוטיד קשור אליו. | Glossopharyngeal (IX) | Facial nerve                  |
+| שייכות למדולה של הכליה.                | Renal pyramids        | Renal columns                 |
+| רקמה קורטיקלית שבין הפירמידות.         | Renal columns         | Renal pyramids                |
+| אינו חלק מהשרוול המסובב.               | Teres major           | The four rotator cuff muscles |
+
+Her other notes are used as clues with her names for the structure masked
+("…"); a clue that still gives the answer away, or that fits a wrong option
+as well, can be reported and the note left out.

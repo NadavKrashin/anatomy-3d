@@ -14,6 +14,7 @@ The summary has two kinds of entries, both in Hebrew in her own words:
 Each entry's English name is matched to model structures the same way as
 the course names (course_names.py: normalised spelling/abbreviations, the
 course names and their aliases count too). Writes
+src/data/anatomy/z-anatomy/summarySections.json (her sections, in order) and
 src/data/anatomy/z-anatomy/summaryNotes.json: per side-less structure id,
 its notes (text + where in the summary) and, from the organ guide, her
 Hebrew name (without the definite article; singular for one-sided
@@ -40,6 +41,8 @@ sys.path.insert(0, os.path.join(ROOT, "scripts", "course", "medintzfat"))
 from course_names import key, sorted_key  # noqa: E402
 
 OUT = os.path.join(ROOT, "src", "data", "anatomy", "z-anatomy", "summaryNotes.json")
+# Her summary's sections in document order (quiz scopes, lib/study/scopes.ts).
+SECTIONS_OUT = os.path.join(ROOT, "src", "data", "anatomy", "z-anatomy", "summarySections.json")
 REPORT = os.path.join(ROOT, ".course-cache", "summary", "unmatched.json")
 HEAD_NOUNS = {"artery", "arteries", "vein", "veins", "nerve", "nerves", "muscle", "muscles", "ligament",
               "ligaments", "fascia", "duct", "gland", "glands", "bone", "bones", "process", "m.", "n.", "a.", "v."}
@@ -221,6 +224,9 @@ def main(path):
         entry["notes"].sort(key=lambda n: n.get("shared", False))
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(dict(sorted(out.items())), f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    with open(SECTIONS_OUT, "w", encoding="utf-8") as f:
+        json.dump(list(dict.fromkeys(e["section"] for e in entries if e["section"])), f, ensure_ascii=False, indent=2)
         f.write("\n")
     os.makedirs(os.path.dirname(REPORT), exist_ok=True)
     with open(REPORT, "w", encoding="utf-8") as f:

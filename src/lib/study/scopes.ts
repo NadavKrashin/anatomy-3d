@@ -42,6 +42,56 @@ export function builtInScopes(registry: AnatomyRegistry): StudyScope[] {
   ];
 }
 
+export const DISTINCTIONS_SCOPE_ID = "summary:distinctions";
+/** A section of her summary with fewer structures isn't worth a quiz. */
+export const MIN_SUMMARY_SCOPE_SIZE = 5;
+/** Her "supplement" sections join the section they supplement. */
+const SUPPLEMENT = /^השלמות /;
+
+/**
+ * Quiz scopes from her summary: her distinctions first (`distinctionIds`,
+ * labelled with her heading), then each of her sections (`sections`, in her
+ * order) with the structures her notes there are about. "השלמות גפה עליונה"
+ * (supplement) joins "גפה עליונה"; a supplement with no section of its own
+ * stays a scope.
+ */
+export function summaryScopes(
+  registry: AnatomyRegistry,
+  sections: readonly string[],
+  distinctions: { heading: string; structureIds: readonly string[] },
+): StudyScope[] {
+  const scopeOf = (section: string) => {
+    const base = section.replace(SUPPLEMENT, "");
+    return base !== section && sections.includes(base) ? base : section;
+  };
+  const members = new Map<string, string[]>();
+  for (const s of registry.all) {
+    const own = new Set((s.studyNotes ?? []).map((n) => scopeOf(n.section)));
+    for (const section of own)
+      members.set(section, [...(members.get(section) ?? []), s.id]);
+  }
+  const sectionScopes = [...new Set(sections.map(scopeOf))]
+    .map((section): StudyScope => ({
+      id: `summary:${section}`,
+      kind: "summary",
+      section,
+      structureIds: members.get(section) ?? [],
+    }))
+    .filter((scope) => scope.structureIds.length >= MIN_SUMMARY_SCOPE_SIZE);
+  const distinctionScope: StudyScope[] =
+    distinctions.structureIds.length > 0
+      ? [
+          {
+            id: DISTINCTIONS_SCOPE_ID,
+            kind: "summary",
+            section: distinctions.heading,
+            structureIds: [...distinctions.structureIds],
+          },
+        ]
+      : [];
+  return [...distinctionScope, ...sectionScopes];
+}
+
 export function findScope(
   scopes: readonly StudyScope[],
   id: string,

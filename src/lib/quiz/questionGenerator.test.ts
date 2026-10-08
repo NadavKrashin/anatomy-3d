@@ -213,3 +213,74 @@ describe("pickDistractors — parts of a whole", () => {
     }
   });
 });
+
+describe("generateQuiz — summary mode", () => {
+  const z = createRegistry(zAnatomyDataset.structures);
+  const clue = (answerIds: string[], distractorIds?: string[]) => ({
+    text: "תיאור ארוך מספיק של המבנה.",
+    answerIds,
+    ...(distractorIds ? { distractorIds } : {}),
+  });
+  const clues = new Map([
+    ["ureter-left", [clue(["ureter-left", "ureter-right"], ["urethra"])]],
+    ["ureter-right", [clue(["ureter-left", "ureter-right"], ["urethra"])]],
+    ["liver", [clue(["liver"])]],
+  ]);
+  const structures = ["ureter-left", "ureter-right", "liver", "heart"].map(
+    (id) => z.get(id)!,
+  );
+  const quiz = (seed: number) =>
+    generateQuiz({
+      structures,
+      distractorPool: z.all,
+      mode: "summary",
+      count: 10,
+      rng: createRng(seed),
+      clues,
+    });
+
+  it("asks only structures with a clue, one question per pair", () => {
+    for (let seed = 0; seed < 10; seed++) {
+      const asked = quiz(seed).map((q) =>
+        q.structureId.replace(/-(left|right)$/, ""),
+      );
+      expect(asked.sort()).toEqual(["liver", "ureter"]);
+    }
+  });
+
+  it("finds by clue (either side counts) or chooses a name from the clue", () => {
+    const questions = Array.from({ length: 10 }, (_, seed) =>
+      quiz(seed),
+    ).flat();
+    const ureter = questions.filter((q) => q.structureId.startsWith("ureter"));
+    const finds = ureter.filter((q) => q.type === "find");
+    const describes = ureter.filter((q) => q.type === "describe");
+    expect(finds.length).toBeGreaterThan(0);
+    expect(describes.length).toBeGreaterThan(0);
+    for (const q of finds) {
+      expect(q.clue).toBe("תיאור ארוך מספיק של המבנה.");
+      expect(q.acceptedStructureIds).toEqual(["ureter-left", "ureter-right"]);
+    }
+    // A distinction's options are fixed: the ureter or the urethra.
+    for (const q of describes)
+      expect(q.optionIds.sort()).toEqual([q.structureId, "urethra"].sort());
+    const liver = questions.filter(
+      (q) => q.type === "describe" && q.structureId === "liver",
+    );
+    for (const q of liver)
+      expect(q.type === "describe" && q.optionIds).toHaveLength(
+        IDENTIFY_OPTION_COUNT,
+      );
+  });
+
+  it("asks nothing without clues", () => {
+    expect(
+      generateQuiz({
+        structures,
+        mode: "summary",
+        count: 5,
+        rng: createRng(1),
+      }),
+    ).toEqual([]);
+  });
+});

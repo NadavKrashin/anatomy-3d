@@ -5,8 +5,17 @@ import { StructureLabel } from "@/components/anatomy/StructureLabel";
 import { useMessages } from "@/hooks/useMessages";
 import type { QuizFeedback as Feedback } from "@/lib/quiz/quizEngine";
 
-/** Result of the last answer — always icon + text, never colour alone. */
-export function QuizFeedback({ feedback }: { feedback: Feedback }) {
+/**
+ * Result of the last answer — always icon + text, never colour alone. Names
+ * leave out the side when the question didn't ask for one (her clues).
+ */
+export function QuizFeedback({
+  feedback,
+  withSide = true,
+}: {
+  feedback: Feedback;
+  withSide?: boolean;
+}) {
   const t = useMessages();
 
   switch (feedback.kind) {
@@ -43,7 +52,10 @@ export function QuizFeedback({ feedback }: { feedback: Feedback }) {
             {feedback.final ? (
               <>
                 <span className="text-graphite">{t.quiz.correctAnswer}</span>
-                <StructureLabel structureId={feedback.correctId} />
+                <StructureLabel
+                  structureId={feedback.correctId}
+                  withSide={withSide}
+                />
               </>
             ) : (
               <>

@@ -8,12 +8,14 @@ import { TermText } from "./TermText";
 
 function Label({
   structure,
+  withSide,
   className,
 }: {
   structure: AnatomicalStructure;
+  withSide: boolean;
   className?: string;
 }) {
-  const { primary, secondary } = useStructureNames(structure);
+  const { primary, secondary } = useStructureNames(structure, withSide);
   return (
     <span className={clsx("inline-flex min-w-0 flex-col", className)}>
       <TermText name={primary} className="text-ink" showVerification={false} />
@@ -28,17 +30,22 @@ function Label({
   );
 }
 
-/** A structure's primary name with its secondary-language name underneath. */
+/**
+ * A structure's primary name with its secondary-language name underneath;
+ * "Humerus (left)" unless `withSide` is false.
+ */
 export function StructureLabel({
   structureId,
+  withSide = true,
   className,
 }: {
   structureId: string;
+  withSide?: boolean;
   className?: string;
 }) {
   const { registry } = useAnatomyData();
   const structure = registry.get(structureId);
   return structure ? (
-    <Label structure={structure} className={className} />
+    <Label structure={structure} withSide={withSide} className={className} />
   ) : null;
 }

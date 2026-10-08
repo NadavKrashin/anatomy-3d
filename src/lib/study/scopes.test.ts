@@ -1,7 +1,13 @@
 import { describe, expect, it } from "vitest";
 import { demoDataset } from "@/data/anatomy/demo";
 import { createRegistry } from "@/lib/anatomy/registry";
-import { builtInScopes, findScope, WHOLE_BODY_SCOPE_ID } from "./scopes";
+import {
+  builtInScopes,
+  DISTINCTIONS_SCOPE_ID,
+  findScope,
+  summaryScopes,
+  WHOLE_BODY_SCOPE_ID,
+} from "./scopes";
 
 const scopes = builtInScopes(createRegistry(demoDataset.structures));
 
@@ -26,5 +32,44 @@ describe("builtInScopes", () => {
       "lung-left",
       "lung-right",
     ]);
+  });
+});
+
+describe("summaryScopes", () => {
+  const note = (section: string) => ({
+    text: "x",
+    language: "he" as const,
+    term: "x",
+    section,
+  });
+  const many = (prefix: string, section: string, n: number) =>
+    Array.from({ length: n }, (_, i) => ({
+      ...demoDataset.structures[0]!,
+      id: `${prefix}-${i}`,
+      studyNotes: [note(section)],
+    }));
+  const registry = createRegistry([
+    ...many("arm", "גפה עליונה", 4),
+    ...many("hand", "השלמות גפה עליונה", 2),
+    ...many("joint", "השלמות מפרקים", 5),
+    ...many("skin", "השלמות עור ורקמות", 1),
+  ]);
+  const scopes = summaryScopes(
+    registry,
+    ["גפה עליונה", "השלמות גפה עליונה", "השלמות מפרקים", "השלמות עור ורקמות"],
+    { heading: "הבחנות חשובות ללימוד", structureIds: ["arm-0"] },
+  );
+
+  it("puts her distinctions first, then her sections in her order", () => {
+    expect(scopes.map((s) => s.id)).toEqual([
+      DISTINCTIONS_SCOPE_ID,
+      "summary:גפה עליונה",
+      "summary:השלמות מפרקים",
+    ]);
+  });
+
+  it("joins a supplement to its section and drops sections too small to quiz", () => {
+    expect(scopes[1]?.structureIds).toHaveLength(6);
+    expect(scopes.some((s) => s.id.includes("עור"))).toBe(false);
   });
 });

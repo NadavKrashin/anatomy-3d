@@ -9,6 +9,8 @@ interface ScopeListProps {
   scopes: StudyScope[];
   selectedId: string | undefined;
   onSelect: (id: string) => void;
+  /** Her summary's sections right after the whole body (summary mode). */
+  summaryFirst?: boolean;
 }
 
 function ScopeOption({
@@ -23,7 +25,7 @@ function ScopeOption({
   const t = useMessages();
   const label = useScopeLabel();
   return (
-    <label className="group has-[:focus-visible]:bg-wash flex cursor-pointer items-center gap-3 py-3">
+    <label className="group has-[:focus-visible]:bg-wash relative flex cursor-pointer items-center gap-3 py-3">
       <input
         type="radio"
         name="scope"
@@ -56,14 +58,26 @@ function ScopeOption({
   );
 }
 
-/** Quiz scopes as ruled radio rows, grouped: general, by region, by system. */
-export function ScopeList({ scopes, selectedId, onSelect }: ScopeListProps) {
+/**
+ * Quiz scopes as ruled radio rows, grouped: general, by region, by system,
+ * her summary (second when quizzing from her summary).
+ */
+export function ScopeList({
+  scopes,
+  selectedId,
+  onSelect,
+  summaryFirst = false,
+}: ScopeListProps) {
   const t = useMessages();
-  const groups = [
-    {
-      title: null,
-      items: scopes.filter((s) => s.kind === "all" || s.kind === "custom"),
-    },
+  const general = {
+    title: null,
+    items: scopes.filter((s) => s.kind === "all" || s.kind === "custom"),
+  };
+  const summary = {
+    title: t.quiz.fromSummary,
+    items: scopes.filter((s) => s.kind === "summary"),
+  };
+  const byMetadata = [
     {
       title: t.quiz.byRegion,
       items: scopes.filter((s) => s.kind === "region"),
@@ -72,6 +86,10 @@ export function ScopeList({ scopes, selectedId, onSelect }: ScopeListProps) {
       title: t.quiz.bySystem,
       items: scopes.filter((s) => s.kind === "system"),
     },
+  ];
+  const groups = [
+    general,
+    ...(summaryFirst ? [summary, ...byMetadata] : [...byMetadata, summary]),
   ].filter((group) => group.items.length > 0);
 
   return (

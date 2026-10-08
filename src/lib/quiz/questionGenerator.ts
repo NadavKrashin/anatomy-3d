@@ -1,5 +1,6 @@
 import type { AnatomicalStructure } from "@/types/anatomy";
-import type { QuestionType, QuizMode, QuizQuestion } from "@/types/quiz";
+import type { QuizMode, QuizQuestion } from "@/types/quiz";
+import type { QuizClue } from "./clues";
 import { shuffle, type Rng } from "./random";
 
 export const IDENTIFY_OPTION_COUNT = 4;
@@ -16,6 +17,11 @@ export interface GenerateQuizOptions {
   mode: QuizMode;
   count: number;
   rng: Rng;
+  /**
+   * Her descriptions per structure id ("summary" mode asks only structures
+   * that have one; see `summaryClues` / `distinctionClues`).
+   */
+  clues?: ReadonlyMap<string, readonly QuizClue[]>;
 }
 
 /**
@@ -76,22 +82,72 @@ export function pickDistractors(
   return chosen;
 }
 
-function questionTypeFor(mode: QuizMode, rng: Rng): QuestionType {
+function questionTypeFor(
+  mode: Exclude<QuizMode, "summary">,
+  rng: Rng,
+): "find" | "identify" {
   if (mode === "mixed") return rng() < 0.5 ? "find" : "identify";
   return mode;
+}
+
+/**
+ * "Summary" mode: her description of the structure; half the time she finds
+ * it in the model (either side counts), half the time she picks its name.
+ * One question per structure pair, so a quiz doesn't ask the same clue for
+ * the left and the right side.
+ */
+function summaryQuiz(
+  { structures, distractorPool = structures, count, rng }: GenerateQuizOptions,
+  clues: ReadonlyMap<string, readonly QuizClue[]>,
+): QuizQuestion[] {
+  const seen = new Set<string>();
+  const targets = shuffle(structures, rng).filter((s) => {
+    const group = s.bilateralGroupId ?? s.id;
+    if (!clues.get(s.id)?.length || seen.has(group)) return false;
+    seen.add(group);
+    return true;
+  });
+  return targets.slice(0, Math.max(0, count)).map((target, index) => {
+    const id = `q${index + 1}-${target.id}`;
+    const options = clues.get(target.id) ?? [];
+    const clue = options[Math.floor(rng() * options.length)] ?? options[0];
+    if (!clue) throw new Error(`no clue for ${target.id}`);
+    if (rng() < 0.5) {
+      const distractorIds =
+        clue.distractorIds ??
+        pickDistractors(
+          target,
+          distractorPool,
+          IDENTIFY_OPTION_COUNT - 1,
+          rng,
+        ).map((s) => s.id);
+      if (distractorIds.length > 0)
+        return {
+          id,
+          type: "describe",
+          structureId: target.id,
+          optionIds: shuffle([target.id, ...distractorIds], rng),
+          clue: clue.text,
+        };
+    }
+    return {
+      id,
+      type: "find",
+      structureId: target.id,
+      acceptedStructureIds: clue.answerIds,
+      clue: clue.text,
+    };
+  });
 }
 
 /**
  * Builds a quiz: up to `count` distinct structures in random order. Identify
  * questions that can't get at least one plausible distractor fall back to find.
  */
-export function generateQuiz({
-  structures,
-  distractorPool = structures,
-  mode,
-  count,
-  rng,
-}: GenerateQuizOptions): QuizQuestion[] {
+export function generateQuiz(options: GenerateQuizOptions): QuizQuestion[] {
+  const { structures, distractorPool = structures, mode, count, rng } = options;
+  if (mode === "summary")
+    return summaryQuiz(options, options.clues ?? new Map());
   const targets = shuffle(structures, rng).slice(0, Math.max(0, count));
 
   return targets.map((target, index): QuizQuestion => {

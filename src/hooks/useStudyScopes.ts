@@ -1,14 +1,23 @@
 import { useMemo, useState } from "react";
 import { useAnatomyData } from "@/components/providers/AnatomyDataProvider";
 import { dueForReview } from "@/lib/progress/progressStats";
-import { builtInScopes } from "@/lib/study/scopes";
+import {
+  DISTINCTIONS_HEADING,
+  SUMMARY_DISTINCTIONS,
+} from "@/data/anatomy/z-anatomy/summaryDistinctions";
+import summarySections from "@/data/anatomy/z-anatomy/summarySections.json";
+import { distinctionStructureIds } from "@/lib/quiz/clues";
+import { builtInScopes, summaryScopes } from "@/lib/study/scopes";
 import { useProgressStore } from "@/store/progressStore";
 import type { StudyScope } from "@/types/study";
 import { useMessages } from "./useMessages";
 
 export const DUE_SCOPE_ID = "due";
 
-/** Built-in scopes plus a "due for review" scope when anything is due. */
+/**
+ * Built-in scopes, a "due for review" scope when anything is due, and the
+ * sections of her summary.
+ */
 export function useStudyScopes(): StudyScope[] {
   const t = useMessages();
   const { registry } = useAnatomyData();
@@ -33,7 +42,11 @@ export function useStudyScopes(): StudyScope[] {
             },
           ]
         : [];
-    return [...dueScope, ...builtInScopes(registry)];
+    const fromSummary = summaryScopes(registry, summarySections, {
+      heading: DISTINCTIONS_HEADING,
+      structureIds: distinctionStructureIds(SUMMARY_DISTINCTIONS, registry.all),
+    });
+    return [...dueScope, ...builtInScopes(registry), ...fromSummary];
   }, [progress, registry, now, t]);
 }
 
@@ -50,6 +63,9 @@ export function useScopeLabel() {
         return t.systems[scope.system];
       case "custom":
         return scope.name;
+      case "summary":
+        // Her own heading, as she wrote it (Hebrew).
+        return scope.section;
     }
   };
 }

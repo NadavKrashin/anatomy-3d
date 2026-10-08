@@ -157,3 +157,51 @@ describe("summarizeSession", () => {
     });
   });
 });
+
+describe("quiz engine — questions from her summary", () => {
+  it("a clue find accepts either side and names the side clicked", () => {
+    const run = answer(
+      start([
+        {
+          id: "q1",
+          type: "find",
+          structureId: "ureter-left",
+          acceptedStructureIds: ["ureter-left", "ureter-right"],
+          clue: "מחבר כליה לשלפוחית.",
+        },
+      ]),
+      "ureter-right",
+    );
+    expect(run.feedback).toEqual({
+      kind: "correct",
+      structureId: "ureter-right",
+    });
+    expect(run.session.attempts[0]).toMatchObject({
+      correct: true,
+      structureId: "ureter-left",
+    });
+  });
+
+  it("a describe question is one-shot, like identify", () => {
+    const run = answer(
+      start([
+        {
+          id: "q1",
+          type: "describe",
+          structureId: "liver",
+          optionIds: ["liver", "gallbladder"],
+          clue: "מייצר מרה.",
+        },
+      ]),
+      "gallbladder",
+    );
+    expect(run.phase).toBe("answered");
+    expect(run.feedback).toMatchObject({
+      kind: "incorrect",
+      final: true,
+      correctId: "liver",
+    });
+    expect(canReveal(run)).toBe(false);
+    expect(run.session.attempts[0]?.questionType).toBe("describe");
+  });
+});

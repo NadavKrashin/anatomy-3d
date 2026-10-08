@@ -41,14 +41,15 @@ export function getSideLabel(
   return SIDE_LABELS[language][side];
 }
 
-/** Name in the requested language, falling back to English. Includes the side. */
+/** Name in the requested language, falling back to English; with the side unless `withSide` is false. */
 export function resolveName(
   structure: AnatomicalStructure,
   language: TermLanguage,
+  withSide = true,
 ): ResolvedName {
   const term = structure.names[language] ?? structure.names.en;
   const usedLanguage = structure.names[language] ? language : "en";
-  const side = getSideLabel(structure.side, usedLanguage);
+  const side = withSide ? getSideLabel(structure.side, usedLanguage) : null;
   return {
     // Anatomy listings put the side in parentheses: "Humerus (left)".
     text: side ? `${term.text} (${side})` : term.text,
@@ -61,10 +62,11 @@ export function resolveName(
 export function resolveDisplayNames(
   structure: AnatomicalStructure,
   preference: TermPreference,
+  withSide = true,
 ): { primary: ResolvedName; secondary: ResolvedName | null } {
-  const primary = resolveName(structure, preference.primary);
+  const primary = resolveName(structure, preference.primary, withSide);
   if (preference.secondary === null) return { primary, secondary: null };
-  const secondary = resolveName(structure, preference.secondary);
+  const secondary = resolveName(structure, preference.secondary, withSide);
   // Don't repeat the same name twice when the secondary language fell back.
   return {
     primary,

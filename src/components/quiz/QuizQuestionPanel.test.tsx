@@ -93,4 +93,48 @@ describe("<QuizQuestionPanel>", () => {
       screen.getByRole("button", { name: /See results/ }),
     ).toBeInTheDocument();
   });
+
+  it("asks to find the structure her summary describes", () => {
+    renderWithProviders(<QuizQuestionPanel />);
+    begin([
+      {
+        id: "q1",
+        type: "find",
+        structureId: "radial-nerve-left",
+        acceptedStructureIds: ["radial-nerve-left", "radial-nerve-right"],
+        clue: "עצב הזרוע האחורי.",
+      },
+    ]);
+    expect(
+      screen.getByText("Find the structure described here:"),
+    ).toBeInTheDocument();
+    expect(screen.getByText("עצב הזרוע האחורי.")).toHaveAttribute("lang", "he");
+    expect(screen.queryByText(/Radial nerve/)).toBeNull();
+  });
+
+  it("answers a description with names that don't give a side", async () => {
+    const user = userEvent.setup();
+    renderWithProviders(<QuizQuestionPanel />);
+    begin([
+      {
+        id: "q1",
+        type: "describe",
+        structureId: "ulnar-nerve-left",
+        optionIds: ["median-nerve-left", "ulnar-nerve-left"],
+        clue: "עובר מאחורי האפיקונדיל המדיאלי.",
+      },
+    ]);
+    expect(
+      screen.getByRole("heading", {
+        name: "Which structure is described here?",
+      }),
+    ).toBeInTheDocument();
+    expect(screen.queryByText(/\(left\)/)).toBeNull();
+
+    await user.click(screen.getByRole("button", { name: /Median nerve/ }));
+    expect(screen.getByRole("status")).toHaveTextContent(
+      /Incorrect.*Correct answer.*Ulnar nerve/,
+    );
+    expect(screen.getByRole("status")).not.toHaveTextContent("(left)");
+  });
 });

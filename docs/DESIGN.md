@@ -71,6 +71,10 @@ rows — lists, not boxes.
 Text aligns to the reading start (right in Hebrew). Home is a **contents
 page** (regions as a ruled list with counts), not a grid of cards.
 
+A quiz question from her summary quotes her words as a plain text block
+with a teal rule at its start edge (`QuizPrompt`), not a card or quotation
+marks.
+
 Phones (below `lg` in the viewer, `md` on pages) have no room for the text
 links: a menu button (☰, `NavMenu`) next to ⚙ opens them as a ruled list.
 In the viewer the wordmark becomes the app icon on phones (`Logo compact`).

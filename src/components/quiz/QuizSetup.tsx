@@ -74,7 +74,12 @@ export function QuizSetup({
         </div>
       </div>
 
-      <ScopeList scopes={scopes} selectedId={scope?.id} onSelect={setScopeId} />
+      <ScopeList
+        scopes={scopes}
+        selectedId={scope?.id}
+        onSelect={setScopeId}
+        summaryFirst={mode === "summary"}
+      />
     </form>
   );
 }
