@@ -56,6 +56,7 @@ Expected today: **204 unit/component tests, 39 e2e checks, all passing; CI green
 | 2026-10-05 | Course-site notes can't be copied or reworded (site terms); the user shared **her own summary** (Word, her own words) to use for **descriptions and names**. Her text is shown verbatim; her Hebrew names win over the site's.                                                                                                                                                                                                 |
 | 2026-10-07 | Priority 2 reviewed: **merge to `main`**, then **priority 3**, then **priority 4** (the kidney).                                                                                                                                                                                                                                                                                                                               |
 | 2026-10-08 | Priority 3 reviewed (and the clearance-check fix that moved the ansa and left phrenic nerve): **merge to `main`**, then **priority 4** (the kidney).                                                                                                                                                                                                                                                                           |
+| 2026-10-08 | Priority 4 reviewed (the Atlas kidney): **merge to `main`**. The scrotum's boxy shape is fine as it is — **don't reshape it** (asked after seeing it on her phone).                                                                                                                                                                                                                                                            |
 | 2026-10-07 | **Replace the non-commercial kidney** with the Human Reference Atlas male kidney (CC BY 4.0), as **priority 4** (last) of `docs/HANDMADE_MODELS_PROMPT.md`, for the priority-2 session to do after priority 3. The inner ear stays non-commercial for now. Drag fix: **merge to `main`**.                                                                                                                                      |
 | 2026-10-07 | Priority 2: **female external genitalia built to the bones** (clitoris under the symphysis, crura on the rami, bulbs and glands at the existing vaginal opening; a ≈ 70 mm vestibule accepted rather than re-fitting the Atlas organs); **infra-orbital nerve and nerve to vastus medialis split out** of Z-Anatomy's maxillary and femoral nerve meshes into their own structures (scripted step on the shipped nerves file). |
 | 2026-10-07 | Priority 1 reviewed from the screenshots: **merge to `main`**, then **start priority 2** (items 12+ of `docs/HANDMADE_MODELS_PROMPT.md`).                                                                                                                                                                                                                                                                                      |
@@ -247,10 +248,9 @@ All verified by `npm run e2e:smoke` against a production build.
    recurrent laryngeal hook, anal canal junction) on the priority-2 branch.
    **Priority 2 done and merged to `main`** (items 12–21; user's go,
    2026-10-07). **Priority 3 done and merged to `main`** (items 22–24;
-   user's go, 2026-10-08). **Priority 4 done** (item 25: the Human
-   Reference Atlas kidney replaces the NC kidney; branch
-   `claude/handmade-priority-4`, waiting for the user's review before
-   merging).
+   user's go, 2026-10-08). **Priority 4 done and merged to `main`** (item
+   25: the Human Reference Atlas kidney replaces the NC kidney; user's go,
+   2026-10-08). All four priorities of the brief are done.
    Then: her check of the courses (CONTENT_REVIEW → "Hand-built
    structures"); the other session reruns `summary_notes.py` with her .docx
    (synonyms/parents added for her priority-2 terms; her priority-3 terms
