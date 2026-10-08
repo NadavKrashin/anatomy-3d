@@ -242,8 +242,14 @@ costal cartilages), part of adductor pollicis (capitate).
   Atlas's female organs with their own English names (e.g. "Lower uterine
   segment", "Cornua of uterus", "Fundus/Dome of urinary bladder",
   "Areolar tubercles") — please check them; all `verified: false`. The
-  kidneys and inner ear are in (non-commercial licences,
-  `THIRD_PARTY_ASSETS.md`).
+  inner ear is in (non-commercial licence, `THIRD_PARTY_ASSETS.md`).
+- **Kidneys** (2026-10-08) are the Human Reference Atlas's (male, both
+  bodies), parts of the whole "Kidney": "Fibrous capsule of kidney", "Renal
+  cortex", "Renal columns", "Renal pyramids", "Renal papillae", "Hilum of
+  kidney", "Minor calyces", "Major calyces", "Renal pelvis" (English names
+  chosen here, `verified: false`). The old kidney's "Intrarenal arteries /
+  veins" have no Atlas counterpart and are gone; the renal vein's hilar end
+  is part of the renal vein.
 - **Organ wholes** (`ORGAN_GROUPS` in the export) are named after Z-Anatomy's
   groups: Heart, Lung, Frontal/Parietal/Temporal/Occipital/Limbic lobe,
   Insula, Cerebellum, Brainstem, Diencephalon, Spinal cord, Eyeball, Colon,

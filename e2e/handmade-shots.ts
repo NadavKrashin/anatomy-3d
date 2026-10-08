@@ -172,6 +172,21 @@ const SHOTS_LIST: Shot[] = [
   },
   { id: "scrotum", hide: ["Lymphatic", "Other"], turn: 260 },
   { id: "septum-of-scrotum", hide: [], turn: 260, isolate: true },
+  // Priority 4: the Human Reference Atlas kidney (from the front, the
+  // organs in front of it hidden; turned, from behind).
+  {
+    id: "kidney-left",
+    hide: ["Digestive", "Respiratory", "Lymphatic", "Endocrine", "Other"],
+    turn: 520,
+  },
+  { id: "fibrous-capsule-of-kidney-left", hide: [], turn: 260, isolate: true },
+  { id: "renal-cortex-left", hide: [], turn: 260, isolate: true },
+  {
+    id: "renal-pelvis-right",
+    hide: ["Digestive", "Lymphatic", "Other"],
+    turn: 260,
+    isolate: true,
+  },
   // Female body
   {
     id: "urethra",

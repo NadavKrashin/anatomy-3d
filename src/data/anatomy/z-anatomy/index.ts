@@ -14,10 +14,11 @@ import nonCommercialManifest from "./manifest-non-commercial.json";
 import femaleManifest from "./manifest-female.json";
 import bp3dManifest from "./manifest-bp3d.json";
 import handmadeManifest from "./manifest-handmade.json";
+import kidneyManifest from "./manifest-hra-kidney.json";
 
 /**
  * Whether the app includes models licensed for non-commercial use only
- * (Z-Anatomy's inner ear and kidney: MODEL_SOURCES, commercialUse false).
+ * (Z-Anatomy's inner ear: MODEL_SOURCES, commercialUse false).
  * The app is a free study tool, so they are in (user decision 2026-10-06).
  * Before any commercial use, set this to false and follow
  * THIRD_PARTY_ASSETS.md → "Going commercial".
@@ -30,10 +31,10 @@ export const INCLUDE_NON_COMMERCIAL = true;
  * same body (scripts/anatomy/open3dmodel/README.md), small pieces from
  * BodyParts3D (scripts/anatomy/bodyparts3d/README.md), the structures no
  * open model has, built by hand (scripts/anatomy/handmade/README.md; some in
- * one body only), the female organs of
- * the Human Reference Atlas fitted into it (scripts/anatomy/hra/README.md;
- * shown in the female body only, `datasetForSex`) and, unless left out, the
- * non-commercial inner ear and kidney.
+ * one body only), the Human Reference Atlas's kidneys (both bodies) and
+ * female organs (the female body only, `datasetForSex`) fitted into it
+ * (scripts/anatomy/hra/README.md) and, unless left out, the non-commercial
+ * inner ear.
  */
 export function createZAnatomyDataset({
   nonCommercial,
@@ -45,6 +46,7 @@ export function createZAnatomyDataset({
     ...(open3dManifest as ManifestEntry[]),
     ...(bp3dManifest as ManifestEntry[]),
     ...(handmadeManifest as ManifestEntry[]),
+    ...(kidneyManifest as ManifestEntry[]),
     ...(femaleManifest as ManifestEntry[]),
     ...(nonCommercial ? (nonCommercialManifest as ManifestEntry[]) : []),
   ];
@@ -71,6 +73,7 @@ export function createZAnatomyDataset({
         { id: "extras", url: "/models/open3dmodel/extras.glb" },
         { id: "bodyparts3d", url: "/models/bodyparts3d/extras.glb" },
         { id: "handmade", url: "/models/handmade/handmade.glb" },
+        { id: "kidney", url: "/models/hra/kidney.glb" },
         { id: "female", url: "/models/hra/female.glb", sex: "female" },
         ...(nonCommercial
           ? [

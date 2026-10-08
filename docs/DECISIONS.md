@@ -743,3 +743,32 @@ the anal canal may sink ≤ 1.5 mm into the pararectal nodes.
   skin is), closed over its root by a low dome the cords pass through: an
   open rim (the skin continues onto the perineum and pubis, which the model
   lacks) read as a bucket in the review shots.
+
+## 2026-10-08 — Atlas kidney: fitted, then moved out of its neighbours
+
+The Human Reference Atlas male kidney (CC BY 4.0) replaces Z-Anatomy's
+non-commercial one (user decision 2026-10-07), so only the inner ear keeps
+the app non-commercial. Choices the files forced:
+
+- **Which meshes.** The kidney files have capsule, cortex, renal columns,
+  pyramids, papillae and hilum; the calyces and renal pelvis are in the
+  Atlas's _ureter_ files. Kept all of those; the Atlas's ureters and renal
+  arteries are left out (Z-Anatomy's reach its bladder and, through the
+  artery's anterior and posterior branches, the kidney; the Atlas file also
+  swaps the arteries' sides). The 9–10 pyramids and papillae per side are
+  one mesh each ("Renal pyramids", "Renal papillae"), not ten structures.
+- **Placement.** ICP to the old kidney, then a rigid move (rotation allowed)
+  out of the liver, spleen, psoas and quadratus lumborum, which the old
+  kidney overlapped by 3–8 %; a pure translation had to slide the right
+  kidney 17 mm, a turn needs at most 13 mm at any point (and 1 % smaller).
+  Both kidneys keep T12–L3, the right 22 mm lower.
+- **Joins.** Z-Anatomy's renal vein stops 15–20 mm short of the kidney (the
+  old intrarenal veins bridged it): the Atlas renal vein's hilar end is kept
+  as part of the same structure (`Renal vein.l/.r` → `renal-vein-left/right`,
+  like "Left renal vein"), its medial end blended onto Z-Anatomy's. The right
+  ureter runs up inside psoas in the model, so after the turn the right
+  renal pelvis was 13 mm from it: its lower end is drawn onto the ureter's
+  nearest point, the move fading out 40 % of the way up the pelvis.
+- **Lost:** the old kidney's "Intrarenal arteries/veins" (no Atlas
+  counterpart). Her notes stay matched (`kidney`, `renal-pelvis`,
+  `renal-vein` ids unchanged).

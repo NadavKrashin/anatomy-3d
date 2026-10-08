@@ -49,7 +49,7 @@ python3.11 -m venv ~/bpyenv && ~/bpyenv/bin/pip install "bpy==4.5.*"
 # 2. Decode the shipped GLBs (meshopt) so Blender can read them
 mkdir -p out/decoded
 for f in public/models/z-anatomy/*.glb public/models/open3dmodel/extras.glb \
-         public/models/bodyparts3d/extras.glb public/models/hra/female.glb \
+         public/models/bodyparts3d/extras.glb public/models/hra/female.glb public/models/hra/kidney.glb \
          public/models/non-commercial/non-commercial.glb; do
   npx tsx scripts/anatomy/decode-glb.ts "$f" "out/decoded/$(basename $(dirname $f))-$(basename $f)"
 done

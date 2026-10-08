@@ -13,7 +13,7 @@ import numpy as np
 
 GLBS = (
     "z-anatomy-skeleton", "z-anatomy-muscles", "z-anatomy-nerves", "z-anatomy-vessels",
-    "z-anatomy-organs", "open3dmodel-extras", "bodyparts3d-extras", "hra-female",
+    "z-anatomy-organs", "open3dmodel-extras", "bodyparts3d-extras", "hra-female", "hra-kidney",
     "non-commercial-non-commercial",
 )
 
@@ -40,12 +40,14 @@ def _import_with_bpy(paths: list[Path]) -> dict[str, tuple[np.ndarray, np.ndarra
     return meshes
 
 
-def load_body(decoded_dir: Path) -> dict[str, tuple[np.ndarray, np.ndarray, str]]:
-    """Mesh name → (world vertices (n, 3) in metres, triangles (m, 3), source file stem)."""
-    paths = [decoded_dir / f"{g}.glb" for g in GLBS]
+def load_body(decoded_dir: Path, exclude: tuple[str, ...] = ()) -> dict[str, tuple[np.ndarray, np.ndarray, str]]:
+    """Mesh name → (world vertices (n, 3) in metres, triangles (m, 3), source file stem).
+    `exclude`: GLBs left out (the Atlas kidney's export, which builds one of
+    them), cached separately."""
+    paths = [decoded_dir / f"{g}.glb" for g in GLBS if g not in exclude]
     missing = [p for p in paths if not p.exists()]
     assert not missing, f"decode the shipped GLBs first (README.md): missing {missing}"
-    cache = decoded_dir / "body-cache.npz"
+    cache = decoded_dir / ("body-cache.npz" if not exclude else f"body-cache-without-{'-'.join(exclude)}.npz")
     if cache.exists() and cache.stat().st_mtime > max(p.stat().st_mtime for p in paths):
         data = np.load(cache, allow_pickle=False)
         names = data["names"].tolist()

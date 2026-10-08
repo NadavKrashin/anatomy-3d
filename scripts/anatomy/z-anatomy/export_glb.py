@@ -19,13 +19,15 @@ What it keeps
     inside on first view (fasciae, sheaths, bursae, capsules, meninges,
     pleura, greater omentum) and helper objects.
 
-What the packs never include (non-commercial licences, see THIRD_PARTY_ASSETS.md):
-  - the inner ear model (everything under the "Internal ear" collection),
-  - the kidney model (kidneys, renal pelvis, intrarenal vessels).
-With --non-commercial-only it exports exactly those instead, as one file
+What the packs never include (non-commercial licence, see THIRD_PARTY_ASSETS.md):
+  - the inner ear model (everything under the "Internal ear" collection).
+With --non-commercial-only it exports exactly that instead, as one file
 <out-dir>/non-commercial.glb whose manifest entries name their source
 (build.ts → MODEL_SOURCES), so the app can leave them out with one switch
 (THIRD_PARTY_ASSETS.md → "Going commercial").
+Never exported at all: the kidney model (lissiecowley, CC BY-NC: kidneys,
+renal pelvis, intrarenal vessels), replaced by the Human Reference Atlas
+kidney (scripts/anatomy/hra/export_hra_kidney.py, 2026-10-08).
 
 Per node it records: system, tissue (for one shared material per tissue),
 region, pack and, for parts, the whole they belong to (group): the whole
@@ -79,7 +81,8 @@ HELPERS = re.compile(r"^take a picture$|^cross section|-profile$|\?", re.I)
 LIVER_SEGMENT = re.compile(r"segment of liver", re.I)
 
 NON_COMMERCIAL_COLLECTIONS = {"Internal ear.g"}
-NON_COMMERCIAL = re.compile(r"^kidney\b|^renal pelvis|^intrarenal (arteries|veins)", re.I)
+# The non-commercial kidney model, replaced by the Human Reference Atlas's.
+REPLACED_KIDNEY = re.compile(r"^kidney\b|^renal pelvis|^intrarenal (arteries|veins)", re.I)
 
 
 def non_commercial_source(obj: bpy.types.Object) -> str | None:
@@ -87,8 +90,6 @@ def non_commercial_source(obj: bpy.types.Object) -> str | None:
     MODEL_SOURCES in src/data/anatomy/z-anatomy/build.ts), else None."""
     if NON_COMMERCIAL_COLLECTIONS & set(ancestors(obj)):
         return "Dundee inner ear"
-    if NON_COMMERCIAL.search(obj.name):
-        return "lissiecowley kidney"
     return None
 
 # Organs → system. Explicit and reviewable; anything unmatched is an error.
@@ -303,6 +304,8 @@ def excluded(obj: bpy.types.Object) -> str | None:
         return "not a structure"
     if not obj.data.polygons:
         return "no surface"  # guide lines and points (eyeball axes, "-curve", "-path")
+    if REPLACED_KIDNEY.search(name):
+        return "non-commercial kidney (replaced by the Human Reference Atlas's)"
     if non_commercial_source(obj) and not NC_ONLY:
         return "non-commercial licence"
     if NC_ONLY and not non_commercial_source(obj):

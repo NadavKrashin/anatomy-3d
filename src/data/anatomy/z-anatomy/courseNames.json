@@ -1786,6 +1786,11 @@
     "source": "https://medintzfat.com/anatomy/respiratory-system",
     "uses": 1
   },
+  "major-calyces": {
+    "en": "Major calyces",
+    "source": "https://medintzfat.com/anatomy/lab6",
+    "uses": 7
+  },
   "malleus": {
     "en": "Malleus",
     "source": "https://medintzfat.com/anatomy/ear",
@@ -1935,6 +1940,11 @@
     "en": "Middle pharyngeal constrictor",
     "source": "https://medintzfat.com/anatomy/nasal-cavity",
     "uses": 1
+  },
+  "minor-calyces": {
+    "en": "Minor calyces",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 9
   },
   "mons-pubis": {
     "en": "Mons pubis",
@@ -2558,10 +2568,30 @@
     "he": "עורק הכליה",
     "heSource": "https://medintzfat.com/anatomy/lab6"
   },
+  "renal-columns": {
+    "en": "Renal columns",
+    "source": "https://medintzfat.com/anatomy/abdominal-imaging",
+    "uses": 5
+  },
+  "renal-cortex": {
+    "en": "Renal cortex",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 4
+  },
+  "renal-papillae": {
+    "en": "Renal papillae",
+    "source": "https://medintzfat.com/anatomy/labs-semester-b",
+    "uses": 2
+  },
   "renal-pelvis": {
     "en": "Renal pelvis",
     "source": "https://medintzfat.com/anatomy/quiz-abdomen",
     "uses": 34
+  },
+  "renal-pyramids": {
+    "en": "Renal pyramids",
+    "source": "https://medintzfat.com/anatomy/quiz-abdomen",
+    "uses": 10
   },
   "renal-vein": {
     "en": "Renal vein",

@@ -90,7 +90,7 @@ export const MODEL_SOURCES = {
   "Human Reference Atlas": {
     license: "CC BY 4.0",
     attribution:
-      "Human Reference Atlas, HuBMAP — 3D reference organs of the Visible Human Female (CC BY 4.0), fitted into the Z-Anatomy body.",
+      "Human Reference Atlas, HuBMAP — 3D reference organs of the Visible Human Female and Male (CC BY 4.0), fitted into the Z-Anatomy body.",
     credit: "Human Reference Atlas",
     commercialUse: true,
   },
@@ -100,13 +100,6 @@ export const MODEL_SOURCES = {
       "Hand-built schematic structures (this project, CC BY-SA 4.0), placed in the Z-Anatomy body.",
     credit: "Hand-built",
     commercialUse: true,
-  },
-  "lissiecowley kidney": {
-    license: "CC BY-NC 4.0",
-    attribution:
-      "Kidney © lissiecowley (CC BY-NC 4.0), via Z-Anatomy; non-commercial use only.",
-    credit: "lissiecowley",
-    commercialUse: false,
   },
 } as const satisfies Record<string, ModelSource>;
 

@@ -16,13 +16,16 @@ Every source below was checked at its primary source on 2026-10-06:
 2026-10-06 the user also allows **non-commercial (NC)** sources (the app is
 not commercial); they go into the separate non-commercial model file
 (`THIRD_PARTY_ASSETS.md` → "Non-commercial models"). Z-Anatomy's own NC inner
-ear and kidney are in. The NC sources under "Not usable" below are now candidates;
+ear is in; its NC kidney was replaced by the Human Reference Atlas kidney
+(2026-10-08). The NC sources under "Not usable" below are now candidates;
 their contents still need checking.
 
 **Status:** BodyParts3D's missing pieces are integrated (23, 2026-10-06 —
 `scripts/anatomy/bodyparts3d/README.md`; its rectum showed Z-Anatomy's
 "Sigmoid colon" is the rectum). The Human Reference Atlas female organs are integrated (female
-body, 2026-10-06 — `scripts/anatomy/hra/README.md`). Open3DModel is integrated (206 meshes, 2026-10-06 — see
+body, 2026-10-06 — `scripts/anatomy/hra/README.md`), and its male kidneys,
+calyces and renal pelvis replace the non-commercial kidney in both bodies
+(2026-10-08, same README). Open3DModel is integrated (206 meshes, 2026-10-06 — see
 `scripts/anatomy/open3dmodel/README.md`). The ~740 count below was before
 removing duplicates, coverings and spaces.
 

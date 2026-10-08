@@ -106,9 +106,13 @@ All verified by `npm run e2e:smoke` against a production build.
   arteries/veins/nerves and hand/foot ligaments (right-only upper-limb pieces
   mirrored to the left), and a seventh,
   `public/models/non-commercial/non-commercial.glb`: Z-Anatomy's inner ear
-  (cochlea, vestibule) and kidney (kidney, renal pelvis, intrarenal
-  vessels), 12 meshes under **non-commercial** licences, behind
+  (cochlea, vestibule), 4 meshes under a **non-commercial** licence, behind
   `INCLUDE_NON_COMMERCIAL` (`THIRD_PARTY_ASSETS.md` → "Going commercial").
+  The kidneys are the **Human Reference Atlas**'s (male, CC BY 4.0, both
+  bodies; `public/models/hra/kidney.glb`, 20 meshes: capsule, cortex,
+  columns, pyramids, papillae, hilum, minor/major calyces, renal pelvis per
+  side, and the renal veins' hilar ends — `scripts/anatomy/hra/README.md`),
+  since 2026-10-08; Z-Anatomy's NC kidney is gone.
   An eighth file, `public/models/hra/female.glb`, holds the female organs
   (female body only, below); a ninth, `public/models/bodyparts3d/extras.glb`,
   23 small pieces from **BodyParts3D** (CC BY-SA 2.1 JP): small/anterior
@@ -231,8 +235,9 @@ All verified by `npm run e2e:smoke` against a production build.
    no place in the model (female organs, layers, spaces, nerves/vessels no
    source has).
    4e. **Fill model gaps** (`docs/MODEL_SOURCES.md`): **Open3DModel done**
-   (206 meshes, limbs + lumbosacral plexus); **Z-Anatomy's NC inner ear and
-   kidney done** (user allowed NC); **female organs done** (Human Reference
+   (206 meshes, limbs + lumbosacral plexus); **Z-Anatomy's NC inner ear
+   done** (user allowed NC; its NC kidney was replaced by the Atlas's,
+   2026-10-08); **female organs done** (Human Reference
    Atlas, female body); **BodyParts3D pieces done** (23 small pieces; its
    rectum showed Z-Anatomy's "Sigmoid colon" is the rectum). The other NC
    sources were checked and none fills a gap (`docs/MODEL_SOURCES.md` →
@@ -242,14 +247,15 @@ All verified by `npm run e2e:smoke` against a production build.
    recurrent laryngeal hook, anal canal junction) on the priority-2 branch.
    **Priority 2 done and merged to `main`** (items 12–21; user's go,
    2026-10-07). **Priority 3 done and merged to `main`** (items 22–24;
-   user's go, 2026-10-08). **Now: priority 4** (branch
-   `claude/handmade-priority-4`).
+   user's go, 2026-10-08). **Priority 4 done** (item 25: the Human
+   Reference Atlas kidney replaces the NC kidney; branch
+   `claude/handmade-priority-4`, waiting for the user's review before
+   merging).
    Then: her check of the courses (CONTENT_REVIEW → "Hand-built
    structures"); the other session reruns `summary_notes.py` with her .docx
    (synonyms/parents added for her priority-2 terms; her priority-3 terms
-   match by name); then **priority 4: replace the NC kidney with the Human Reference
-   Atlas male kidney** (CC BY; user, 2026-10-07), leaving only the inner
-   ear non-commercial. NC models go into the
+   match by name; her kidney notes keep matching — rerun to reach the new
+   kidney parts, e.g. cortex, pyramids, calyces). NC models go into the
    non-commercial file only. Open3DModel's
    retinacula, tendon sheaths and spaces (femoral/adductor canal) were left
    out as coverings — could come back as a toggleable layer. Phrenic nerve,
@@ -293,8 +299,8 @@ All verified by `npm run e2e:smoke` against a production build.
   muscles stay male; no female urethra, vulva/clitoris, perineal muscles or
   uterine/ovarian vessels; the peritoneal folds (broad ligament, pouches)
   are left out like other coverings (her notes on them go to the uterus);
-  the kidneys and inner ear are **non-commercial** (CC BY-NC /
-  CC BY-NC-SA): the app must stay free and ad-free while they're in
+  the inner ear is **non-commercial** (CC BY-NC-SA): the app must stay
+  free and ad-free while it's in
   (`THIRD_PARTY_ASSETS.md` → "Going commercial"); pleura, greater
   omentum, meninges and fasciae left out so they don't hide everything; the
   liver is one mesh (segments omitted). Regions for organs and midline
@@ -734,3 +740,23 @@ verify` green (209), `e2e:smoke` green (40); review shots for every new
   pericardiacophrenic, anal canal); the scrotum, first an open pouch, is
   now a closed sack (it looked like a bucket); the ear muscles' shots zoom
   in (`zoom` in `e2e/handmade-shots.ts`).
+- **2026-10-08 · priority 4 (branch `claude/handmade-priority-4`)** — The
+  non-commercial kidney is replaced by the Human Reference Atlas male
+  kidney (CC BY 4.0, both bodies): `scripts/anatomy/hra/export_hra_kidney.py`
+  → `public/models/hra/kidney.glb` (20 meshes, 0.52 MB). Per side: fibrous
+  capsule, cortex, columns, pyramids, papillae, hilum, minor/major calyces
+  (from the Atlas's ureter files), renal pelvis (group "Kidney"), plus the
+  renal vein's hilar end joined to Z-Anatomy's renal vein. Fitted by ICP to
+  the old kidney, then turned out of liver/spleen/psoas/QL (the old one
+  overlapped them by 3–8 %); right renal pelvis drawn onto the ureter (the
+  model's ureter runs up inside psoas); all item-25 checks pass (hilum
+  medial/forward, T12–L3, right 22 mm lower, pelvis/artery/vein ≤ 3 mm, no
+  overlap). The Atlas's triangles faced inwards in patches (the app showed
+  the cortex's inside): winding recomputed. Non-commercial file re-exported
+  (4 meshes, inner ear only; `export_glb.py` never exports the old kidney).
+  Hand-built structures rebuilt against the new kidney (clean; the subcostal
+  nerve's landmark is now the capsule). Course names 680/1,788. Her notes
+  keep matching (`kidney`, `renal-pelvis`, `renal-vein`); `summary_notes.py`
+  needs her .docx (not here) to reach the new parts. Lost: the old
+  "intrarenal arteries/veins". `npm run verify` green (210), with
+  `INCLUDE_NON_COMMERCIAL` true and false.

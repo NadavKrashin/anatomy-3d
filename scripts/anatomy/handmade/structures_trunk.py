@@ -372,7 +372,7 @@ def subcostal_nerve(b: Builder, side: str) -> None:
     Ra = b.body.V(ra)
     band = Ra[np.abs(Ra[:, 2] - z_end) < 3 * MM]
     lat_border = band[np.argmax(sx * band[:, 0])]
-    z0, y0 = pts[-1][2], b.body.V(f"Kidney.{side}")[:, 1].mean()
+    z0, y0 = pts[-1][2], b.body.V(f"Fibrous capsule of kidney.{side}")[:, 1].mean()
     angles = np.radians([35, 20, 5, -10, -25, -40])  # 0 = straight lateral, + = backward, − = forward
     for k, a in enumerate(angles):
         z = z0 + (z_end - z0) * (k + 1) / (len(angles) + 1)
@@ -390,7 +390,7 @@ def subcostal_nerve(b: Builder, side: str) -> None:
              Allow(start=(r"Vertebra (T12|L1)", r"Intervertebral disc T12-L1", r"Psoas major.*", r"Psoas minor.*",
                           rf"Intertransverse.*", r"Right crus.*|Left crus.*", "Diaphragm"),
                    end=(ra, r"Rectus sheath.*"),
-                   touch=(ql, rib, f"Kidney.{side}", NODES, "Diaphragm", rf"Subcostal artery\.{side}",
+                   touch=(ql, rib, rf"(Fibrous capsule of kidney|Renal cortex)\.{side}", NODES, "Diaphragm", rf"Subcostal artery\.{side}",
                           rf"(Left|Right) subcostal vein", ta, io, r".*renal fascia.*", r"Psoas.*",
                           rf"(Iliohypogastric|Ilio-inguinal) nerve\.{side}",
                           # where the internal oblique thins out at the back, the layers meet

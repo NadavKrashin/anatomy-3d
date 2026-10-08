@@ -65,3 +65,65 @@ tissue, lobes, lactiferous ducts and sinuses, suspensory ligaments).
 Left out: the uterine anterior/posterior walls (same surfaces as body and
 fundus), broad ligament, mesosalpinx, mesovarium and uterovesical pouch
 (peritoneal coverings), the abdominal ostium (labelled at the uterine end).
+
+# Kidneys (Human Reference Atlas, male, both bodies)
+
+They replace Z-Anatomy's non-commercial kidney (lissiecowley, CC BY-NC
+4.0), so that only the inner ear keeps the app non-commercial (user
+decision 2026-10-07; `docs/HANDMADE_MODELS_PROMPT.md` item 25). The male set,
+because the kidney is shared by both bodies (no `sex`).
+
+Output: `public/models/hra/kidney.glb` (loaded in both bodies) and
+`src/data/anatomy/z-anatomy/manifest-hra-kidney.json` (`pack: "hra-kidney"`,
+`source: "Human Reference Atlas"`).
+
+## Regenerate
+
+```sh
+git clone --filter=blob:none --no-checkout https://github.com/hubmapconsortium/ccf-3d-reference-object-library.git ccf3d
+cd ccf3d
+for f in VH_M_Kidney_L VH_M_Kidney_R VH_M_Ureter_L VH_M_Ureter_R VH_M_Blood_Vasculature_Kidney; do
+  git checkout HEAD -- "VH_Male/v1.2/$f.glb"
+done
+cd -
+# needs out/decoded (scripts/anatomy/handmade/README.md → Rerun, steps 1–2) for the checks
+~/bpyenv/bin/python scripts/anatomy/hra/export_hra_kidney.py -- ccf3d/VH_Male out/kidney.glb out/manifest-hra-kidney.json
+npx tsx scripts/anatomy/z-anatomy/optimize-glb.ts out/kidney.glb public/models/hra/kidney.glb --simplify 0.5
+cp out/manifest-hra-kidney.json src/data/anatomy/z-anatomy/manifest-hra-kidney.json
+npm run format
+```
+
+The placement is read from `kidney-fit.json`. `--fit <decoded dir>`
+recomputes it from a decoded copy of the old non-commercial file (from git
+history, before 2026-10-08), whose kidney it was fitted to; ≈ 20 min.
+
+## Placement and checks
+
+- Per side, trimmed ICP (similarity: rotation, uniform scale, translation)
+  from the Atlas's kidney capsule to the kidney it replaces (last run:
+  scale 0.81 left / 0.86 right, median distance 2.4 / 2.9 mm).
+- Then a translation out of the liver, spleen, psoas major and quadratus
+  lumborum until no capsule vertex is inside them (the old kidney sat 5–8 %
+  inside psoas and 3 % inside the spleen or liver).
+- Checked on every run (asserted): hilum facing medially and forward; upper
+  pole at T12, lower pole at L3, right kidney lower; the renal pelvis meets
+  Z-Anatomy's ureter, its renal artery (through its anterior and posterior
+  branches) and its renal vein (through the hilar segment below) reach the
+  kidney, each within 3 mm; no capsule vertex inside the four neighbours.
+
+## What it keeps
+
+Per side, parts of the whole "Kidney": fibrous capsule, renal cortex, renal
+columns, renal pyramids, renal papillae (the Atlas's 9–10 pyramids and
+papillae joined into one mesh each), hilum, minor calyces, major calyces
+(from the Atlas's ureter file), renal pelvis.
+
+The hilar end of the renal vein, as `Renal vein.l/.r` — the same structure
+(id) as Z-Anatomy's "Left/Right renal vein", which stops 15–20 mm short of
+the kidney (the old kidney's intrarenal veins bridged that): the Atlas vein
+lateral to where Z-Anatomy's ends, its medial end blended onto that end.
+
+Left out: the Atlas's ureters (Z-Anatomy's reaches its bladder), renal
+arteries (Z-Anatomy's and its branches reach the kidney; the Atlas file
+also swaps their sides) and the rest of its renal veins. The old kidney's
+"intrarenal arteries/veins" have no Atlas counterpart.

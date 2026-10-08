@@ -457,7 +457,7 @@
     "tissue": "artery",
     "region": "head",
     "pack": "handmade",
-    "vertices": 534,
+    "vertices": 564,
     "source": "Handmade"
   },
   {
@@ -466,7 +466,7 @@
     "tissue": "artery",
     "region": "head",
     "pack": "handmade",
-    "vertices": 564,
+    "vertices": 604,
     "source": "Handmade"
   },
   {
@@ -681,7 +681,7 @@
     "tissue": "nerve",
     "region": "abdomen",
     "pack": "handmade",
-    "vertices": 1652,
+    "vertices": 1632,
     "source": "Handmade"
   },
   {

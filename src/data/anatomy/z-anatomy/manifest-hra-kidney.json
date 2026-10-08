@@ -1,0 +1,200 @@
+[
+  {
+    "name": "Fibrous capsule of kidney.l",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 5626,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Fibrous capsule of kidney.r",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 4752,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Hilum of kidney.l",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 2311,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Hilum of kidney.r",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 3080,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Major calyces.l",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 2805,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Major calyces.r",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 3300,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Minor calyces.l",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 4533,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Minor calyces.r",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 4566,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Renal columns.l",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 6041,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Renal columns.r",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 6041,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Renal cortex.l",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 5986,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Renal cortex.r",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 6000,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Renal papillae.l",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 690,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Renal papillae.r",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 1019,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Renal pelvis.l",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 1905,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Renal pelvis.r",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 1520,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Renal pyramids.l",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 6042,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Renal pyramids.r",
+    "system": "urinary",
+    "tissue": "urinary",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 6054,
+    "source": "Human Reference Atlas",
+    "group": "Kidney"
+  },
+  {
+    "name": "Renal vein.l",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 259,
+    "source": "Human Reference Atlas"
+  },
+  {
+    "name": "Renal vein.r",
+    "system": "cardiovascular",
+    "tissue": "vein",
+    "region": "abdomen",
+    "pack": "hra-kidney",
+    "vertices": 300,
+    "source": "Human Reference Atlas"
+  }
+]

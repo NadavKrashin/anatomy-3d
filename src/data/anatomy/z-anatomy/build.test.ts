@@ -20,6 +20,7 @@ import nonCommercialManifest from "./manifest-non-commercial.json";
 import femaleManifest from "./manifest-female.json";
 import bp3dManifest from "./manifest-bp3d.json";
 import handmadeManifest from "./manifest-handmade.json";
+import kidneyManifest from "./manifest-hra-kidney.json";
 import { datasetForSex } from "@/lib/anatomy/bodySex";
 
 /** The commercially usable manifests. */
@@ -28,6 +29,7 @@ const manifest = [
   ...open3dManifest,
   ...bp3dManifest,
   ...handmadeManifest,
+  ...kidneyManifest,
   ...femaleManifest,
 ];
 
@@ -255,16 +257,49 @@ describe("the Z-Anatomy whole-body dataset", () => {
       expect(MODEL_SOURCES[e.source ?? "Z-Anatomy"].commercialUse).toBe(true);
   });
 
-  it("adds the inner ear and kidney, credited, while non-commercial models are on", () => {
+  it("adds the inner ear, credited, while non-commercial models are on", () => {
     const withNc = createZAnatomyDataset({ nonCommercial: true });
-    const kidney = withNc.structures.find((s) => s.id === "kidney-left");
-    expect(kidney?.region).toBe("abdomen");
-    expect(kidney?.sourceLicense).toBe("CC BY-NC 4.0");
     expect(
       withNc.structures.find((s) => s.id === "cochlea-right")?.sourceLicense,
     ).toBe("CC BY-NC-SA 4.0");
-    expect(withNc.info.attribution).toContain("lissiecowley");
+    expect(withNc.info.attribution).toContain("Dundee");
     expect(withNc.info.models.map((m) => m.id)).toContain("non-commercial");
+    // Only the inner ear is non-commercial now (the kidney is the Atlas's).
+    expect(nonCommercialManifest.map((e) => e.name).sort()).toEqual([
+      "Cochlea.l",
+      "Cochlea.r",
+      "Vestibule.l",
+      "Vestibule.r",
+    ]);
+  });
+
+  it("has the Human Reference Atlas kidney in both bodies, non-commercial models on or off", () => {
+    for (const nonCommercial of [true, false]) {
+      const dataset = createZAnatomyDataset({ nonCommercial });
+      expect(dataset.info.models.map((m) => m.id)).toContain("kidney");
+      for (const sex of ["male", "female"] as const) {
+        const d = datasetForSex(dataset, sex);
+        const kidney = d.structures.find((s) => s.id === "kidney-left");
+        expect(kidney?.region, sex).toBe("abdomen");
+        expect(kidney?.system, sex).toBe("urinary");
+        expect(kidney?.sourceLicense, sex).toBe("CC BY 4.0");
+        for (const part of [
+          "renal-pelvis-right",
+          "renal-cortex-left",
+          "renal-pyramids-right",
+          "minor-calyces-left",
+          "hilum-of-kidney-right",
+        ])
+          expect(
+            d.structures.find((s) => s.id === part)?.parentId,
+            `${part} (${sex})`,
+          ).toBe(part.endsWith("left") ? "kidney-left" : "kidney-right");
+      }
+      // The hilar end of the renal vein joins Z-Anatomy's renal vein.
+      expect(dataset.meshMap["Renal vein.l"]).toBe("renal-vein-left");
+      expect(dataset.meshMap["Left renal vein"]).toBe("renal-vein-left");
+      expect(dataset.info.credits).not.toMatch(/lissiecowley/);
+    }
   });
 
   it("leaves every non-commercial model out with one switch", () => {
@@ -551,13 +586,7 @@ describe("the Z-Anatomy whole-body dataset", () => {
 
   it("keeps the non-commercially licensed models out of the other files", () => {
     const names = manifest.map((entry) => entry.name);
-    for (const banned of [
-      /^Kidney\b/,
-      /^Renal pelvis/,
-      /^Intrarenal/,
-      /^Cochlea\./,
-      /^Vestibule\./,
-    ])
+    for (const banned of [/^Intrarenal/, /^Cochlea\./, /^Vestibule\./])
       expect(
         names.filter((n) => banned.test(n)),
         String(banned),
