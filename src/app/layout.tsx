@@ -1,30 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import {
-  Frank_Ruhl_Libre,
-  IBM_Plex_Sans_Hebrew,
-  Noto_Serif_Hebrew,
-} from "next/font/google";
+import { IBM_Plex_Sans_Hebrew, Miriam_Libre } from "next/font/google";
 import { AnatomyDataProvider } from "@/components/providers/AnatomyDataProvider";
 import { ProgressProvider } from "@/components/providers/ProgressProvider";
 import { SettingsProvider } from "@/components/providers/SettingsProvider";
 import "./globals.css";
 
-// Serif for structure names and titles (atlas labels), sans for the UI.
-// Frank Ruhl Libre sets Latin only; Hebrew falls through to Noto Serif Hebrew
-// (Frank Ruhl's Hebrew read like "David"; user, 2026-10-08).
-const frank = Frank_Ruhl_Libre({
-  variable: "--font-frank",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  // The generated metric fallback (local Times New Roman, no unicode-range)
-  // would catch Hebrew before Noto Serif Hebrew does.
-  adjustFontFallback: false,
-});
-
-const notoSerifHebrew = Noto_Serif_Hebrew({
-  variable: "--font-serif-hebrew",
-  subsets: ["hebrew"],
-  weight: ["400", "500", "600"],
+// Miriam Libre for structure names, titles and the wordmark (user's pick,
+// 2026-10-08, after Frank Ruhl's Hebrew read like "David"); sans for the UI.
+// One family that has both Hebrew and Latin: this Next's font loader ships
+// every subset of a font, so a Latin-only face can't hand Hebrew to another.
+const miriam = Miriam_Libre({
+  variable: "--font-miriam",
+  subsets: ["hebrew", "latin"],
 });
 
 const plex = IBM_Plex_Sans_Hebrew({
@@ -61,7 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="he"
       dir="rtl"
-      className={`${frank.variable} ${notoSerifHebrew.variable} ${plex.variable} h-full antialiased`}
+      className={`${miriam.variable} ${plex.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <body className="min-h-full font-sans">

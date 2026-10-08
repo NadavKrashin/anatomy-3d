@@ -24,7 +24,7 @@ export function StructureProgressList({
   return (
     <section className="flex flex-col gap-3">
       <div className="flex items-center justify-between gap-2">
-        <h2 className="text-ink font-serif text-[20px]">{title}</h2>
+        <h2 className="text-ink font-title text-[20px]">{title}</h2>
         {action}
       </div>
       {items.length === 0 ? (
@@ -41,7 +41,7 @@ export function StructureProgressList({
                 >
                   <StructureLabel
                     structureId={item.structureId}
-                    className="group-hover:[&_bdi]:text-scrub flex-1 font-serif text-[17px]"
+                    className="group-hover:[&_bdi]:text-scrub font-title flex-1 text-[17px]"
                   />
                   <div
                     className="flex w-28 items-center gap-2"

@@ -18,7 +18,7 @@ function NameLink({ structure }: { structure: AnatomicalStructure }) {
     <button
       type="button"
       onClick={() => useViewerStore.getState().select(structure.id)}
-      className="text-ink decoration-rule hover:decoration-ink min-h-8 text-start font-serif text-[16px] underline underline-offset-4"
+      className="text-ink decoration-rule hover:decoration-ink font-title min-h-8 text-start text-[16px] underline underline-offset-4"
     >
       <TermText name={primary} showVerification={false} />
     </button>

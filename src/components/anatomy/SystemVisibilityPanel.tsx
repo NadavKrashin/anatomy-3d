@@ -18,7 +18,7 @@ export function SystemVisibilityPanel({ className }: { className?: string }) {
 
   return (
     <nav aria-label={t.viewer.systems} className={clsx("w-52", className)}>
-      <h2 className="text-graphite mb-2 px-3 font-serif text-[15px]">
+      <h2 className="text-graphite font-title mb-2 px-3 text-[15px]">
         {t.viewer.legend}
       </h2>
       <ul>

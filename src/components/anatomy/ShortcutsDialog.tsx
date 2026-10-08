@@ -44,7 +44,7 @@ export function ShortcutsDialog({
       className="sheet text-ink m-auto w-[min(92vw,360px)] p-0 shadow-[var(--shadow-pop)] backdrop:bg-[#18222d]/30"
     >
       <div className="flex items-center justify-between px-5 pt-4 pb-1">
-        <h2 className="font-serif text-[19px]">{t.viewer.shortcuts}</h2>
+        <h2 className="font-title text-[19px]">{t.viewer.shortcuts}</h2>
         <IconButton
           label={t.viewer.close}
           icon={<X />}

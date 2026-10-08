@@ -22,8 +22,8 @@
   --color-caution: #8a5a00;
 
   --font-sans: var(--font-plex), ui-sans-serif, system-ui, sans-serif;
-  --font-serif:
-    var(--font-frank), var(--font-serif-hebrew), ui-serif, Georgia, serif;
+  /* Names, titles, the wordmark. */
+  --font-title: var(--font-miriam), ui-sans-serif, system-ui, sans-serif;
 
   --shadow-float:
     0 1px 2px rgb(24 34 45 / 0.06), 0 12px 32px -12px rgb(24 34 45 / 0.18);

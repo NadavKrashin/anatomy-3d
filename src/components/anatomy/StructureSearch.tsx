@@ -28,7 +28,7 @@ function SearchResult({ structure }: { structure: AnatomicalStructure }) {
         <TermText
           name={primary}
           showVerification={false}
-          className="text-ink truncate font-serif text-[16px]"
+          className="text-ink font-title truncate text-[16px]"
         />
         {secondary && (
           <TermText

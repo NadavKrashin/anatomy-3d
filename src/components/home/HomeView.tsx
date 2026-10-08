@@ -43,7 +43,7 @@ export function HomeView() {
     >
       <div className="grid items-start gap-12 pt-4 md:grid-cols-[1.15fr_1fr] md:gap-16 md:pt-12">
         <section className="flex flex-col gap-6">
-          <h1 className="text-ink font-serif text-[40px] leading-[1.1] font-medium md:text-[48px]">
+          <h1 className="text-ink font-title text-[40px] leading-[1.1] font-medium md:text-[48px]">
             {t.home.welcomeTitle}
           </h1>
           <p className="text-graphite max-w-[46ch] text-[17px] leading-relaxed">
@@ -68,7 +68,7 @@ export function HomeView() {
         <section aria-labelledby="contents-heading">
           <h2
             id="contents-heading"
-            className="text-graphite mb-3 font-serif text-[19px]"
+            className="text-graphite font-title mb-3 text-[19px]"
           >
             {t.home.whatToStudy}
           </h2>
@@ -83,7 +83,7 @@ export function HomeView() {
                   }
                   className="group flex items-baseline justify-between gap-4 py-3.5"
                 >
-                  <span className="text-ink group-hover:text-scrub font-serif text-[20px] transition-colors">
+                  <span className="text-ink group-hover:text-scrub font-title text-[20px] transition-colors">
                     {t.regions[region]}
                   </span>
                   <span className="text-faint text-[14px] tabular-nums">

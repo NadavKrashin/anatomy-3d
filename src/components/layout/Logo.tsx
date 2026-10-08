@@ -14,7 +14,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
     <Link
       href="/"
       aria-label={t.appName}
-      className="text-ink flex shrink-0 items-center font-serif text-[22px] leading-none font-medium"
+      className="text-ink font-title flex shrink-0 items-center text-[22px] leading-none font-medium"
     >
       {compact && (
         <Image

@@ -802,14 +802,19 @@ the camera's own (the canvas is `touch-none`), so the page never needs to
 zoom; text sizes already meet the design's minimums. Separately, phones had
 no page links at all (MainNav was hidden below `lg`/`md`), hence `NavMenu`.
 
-## 2026-10-08 — Hebrew serif: Noto Serif Hebrew behind Frank Ruhl's Latin
+## 2026-10-08 — Title font: Miriam Libre, one family for Hebrew and Latin
 
-The user found the Hebrew titles too much like "David". Compared on the
-app's own titles: Frank Ruhl, Noto Serif Hebrew, Bona Nova, Suez One,
-Miriam Libre, Rubik, Heebo, Assistant, Secular One, Bellefair. Noto Serif
-Hebrew keeps a serif (structure names stay atlas labels, distinct from the
-Plex UI sans) with modern, even strokes. English/Latin names keep Frank
-Ruhl, which the user didn't object to. Frank Ruhl is loaded with the Latin
-subset only and `adjustFontFallback: false` — its generated metric fallback
-(local Times New Roman, no unicode-range) would otherwise draw Hebrew before
-the stack reaches Noto.
+The user found the Hebrew titles too much like "David" (Frank Ruhl Libre's
+Hebrew). First attempt: Frank Ruhl for Latin only, Noto Serif Hebrew behind
+it. It **never showed**: this Next's font loader (Turbopack) ships every
+subset of a Google font whatever `subsets` says, and adds the Times New Roman
+metric fallback whatever `adjustFontFallback` says, so Frank Ruhl kept
+drawing the Hebrew. Lesson: with `next/font/google` here, a font stack can't
+split scripts between two families — pick one family that has both.
+
+The user then chose from the real home page rendered in nine fonts (Rubik,
+Heebo, Assistant, Secular One, Varela Round, Miriam Libre, IBM Plex Sans
+Hebrew, Noto Serif Hebrew, Frank Ruhl): **Miriam Libre**. It replaces Frank
+Ruhl for English/Latin names too, so the utility was renamed from
+`font-serif` to `font-title` (it is no longer a serif). The app icon's "אור"
+is set in it as well.

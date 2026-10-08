@@ -75,7 +75,7 @@ function LoadingOverlay() {
       data-viewer-loading=""
     >
       <div className="flex w-56 flex-col items-center gap-3">
-        <p className="text-graphite font-serif text-[17px]">
+        <p className="text-graphite font-title text-[17px]">
           {t.viewer.loading}
         </p>
         <div

@@ -65,7 +65,7 @@ so after every commit the docs must describe the code as it is.
 ## UI
 
 - Follow `docs/DESIGN.md`: tokens from `globals.css` (`plate`, `sheet`, `ink`,
-  `graphite`, `rule`, `scrub`…), serif (`font-serif`) for names/titles, sans for
+  `graphite`, `rule`, `scrub`…), `font-title` (Miriam Libre) for names/titles, sans for
   UI; sentence case; lists with hairline rules instead of card grids; quiet
   controls (`IconButton`, `Button`, `Segmented` in `components/ui`). Avoid the
   generic defaults listed there (all-caps eyebrows, "A · B" strings, arrows on

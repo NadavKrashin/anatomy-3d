@@ -4,7 +4,7 @@
  *   npx tsx scripts/brand/render-icons.ts
  *
  * The mark is the app's own atlas label: a teal plate, a pin with a leader
- * line, and "אור" set on the line in Noto Serif Hebrew (loaded from Google
+ * line, and "אור" set on the line in Miriam Libre, the title font (loaded from Google
  * Fonts, so this needs network). Every file is full-bleed and keeps the mark
  * inside the maskable safe zone (the middle 80% circle), so iOS and Android
  * can round or crop it. docs/DESIGN.md → "App icon".
@@ -26,7 +26,7 @@ const MARK = `
     <circle cx="58" cy="182" r="21" fill="${INK}" fill-opacity="0.33"/>
     <circle cx="58" cy="182" r="11.5" fill="${INK}"/>
     <text x="149" y="126" text-anchor="middle" direction="rtl"
-      font-family="Noto Serif Hebrew" font-weight="600" font-size="86"
+      font-family="Miriam Libre" font-weight="600" font-size="86"
       fill="${INK}">אור</text>
   </g>
 </svg>`;
@@ -46,14 +46,14 @@ async function main() {
         viewport: { width: size, height: size },
       });
       await page.setContent(
-        `<html><head><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@600&display=block"></head>
+        `<html><head><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@600&display=block"></head>
          <body style="margin:0">${MARK}</body></html>`,
       );
       await page.evaluate(() => document.fonts.ready);
       const ok = await page.evaluate(() =>
-        document.fonts.check('600 86px "Noto Serif Hebrew"', "אור"),
+        document.fonts.check('600 86px "Miriam Libre"', "אור"),
       );
-      if (!ok) throw new Error("Noto Serif Hebrew did not load");
+      if (!ok) throw new Error("Miriam Libre did not load");
       await mkdir(path.dirname(file), { recursive: true });
       await page.screenshot({ path: file, omitBackground: false });
       await page.close();

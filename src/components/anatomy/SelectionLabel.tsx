@@ -35,7 +35,7 @@ function Label({
           <TermText
             name={primary}
             showVerification={false}
-            className="text-ink bg-sheet/90 rounded-md px-2 py-0.5 font-serif text-[15px] shadow-[0_1px_2px_rgb(24_34_45/0.12)]"
+            className="text-ink bg-sheet/90 font-title rounded-md px-2 py-0.5 text-[15px] shadow-[0_1px_2px_rgb(24_34_45/0.12)]"
           />
         </span>
       </div>

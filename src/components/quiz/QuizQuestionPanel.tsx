@@ -31,12 +31,12 @@ export function QuizQuestionPanel() {
         {question.type === "find" ? (
           <div className="flex flex-col gap-1">
             <p className="text-graphite text-[14px]">{t.quiz.findPrompt}</p>
-            <h2 className="font-serif text-[26px] leading-tight font-medium">
+            <h2 className="font-title text-[26px] leading-tight font-medium">
               <StructureLabel structureId={question.structureId} />
             </h2>
           </div>
         ) : (
-          <h2 className="font-serif text-[24px] leading-tight font-medium">
+          <h2 className="font-title text-[24px] leading-tight font-medium">
             {t.quiz.identifyPrompt}
           </h2>
         )}

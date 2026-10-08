@@ -43,7 +43,7 @@ export function ProgressView() {
 
   return (
     <PageShell>
-      <h1 className="text-ink font-serif text-[40px] leading-tight font-medium">
+      <h1 className="text-ink font-title text-[40px] leading-tight font-medium">
         {t.progress.title}
       </h1>
       {status === "error" && (
@@ -67,7 +67,7 @@ export function ProgressView() {
               >
                 <dt className="text-graphite text-[15px]">{label}</dt>
                 <dd
-                  className="text-ink font-serif text-[22px] tabular-nums"
+                  className="text-ink font-title text-[22px] tabular-nums"
                   dir="ltr"
                 >
                   {value}

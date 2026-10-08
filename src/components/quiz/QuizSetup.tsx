@@ -39,7 +39,7 @@ export function QuizSetup({
     >
       <div className="flex flex-col gap-6">
         <header className="flex flex-col gap-3">
-          <h1 className="text-ink font-serif text-[40px] leading-tight font-medium">
+          <h1 className="text-ink font-title text-[40px] leading-tight font-medium">
             {t.quiz.setupTitle}
           </h1>
           <p className="text-graphite max-w-[44ch] text-[16px]">

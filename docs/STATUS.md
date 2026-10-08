@@ -2,7 +2,7 @@
 
 > Living document. **Update it with every commit that changes the code, not
 > just at the end of a session** — it must always match the code as it is.
-> Last updated: 2026-10-08 (rename to Or's Anatomy, app icon, Hebrew title font, phone zoom/nav fix).
+> Last updated: 2026-10-08 (rename to Or's Anatomy, app icon, Miriam Libre titles, phone zoom/nav fix).
 
 ## Orientation (read in this order)
 
@@ -56,6 +56,7 @@ Expected today: **211 unit/component tests, 42 e2e checks, all passing; CI green
 | 2026-10-05 | Course-site notes can't be copied or reworded (site terms); the user shared **her own summary** (Word, her own words) to use for **descriptions and names**. Her text is shown verbatim; her Hebrew names win over the site's.                                                                                                                                                                                                 |
 | 2026-10-07 | Priority 2 reviewed: **merge to `main`**, then **priority 3**, then **priority 4** (the kidney).                                                                                                                                                                                                                                                                                                                               |
 | 2026-10-08 | Priority 3 reviewed (and the clearance-check fix that moved the ansa and left phrenic nerve): **merge to `main`**, then **priority 4** (the kidney).                                                                                                                                                                                                                                                                           |
+| 2026-10-08 | **Title font: Miriam Libre** (picked from the home page in nine fonts) for names, titles and the wordmark, Hebrew and English; she didn't like the serif Hebrew fonts.                                                                                                                                                                                                                                                         |
 | 2026-10-08 | **App renamed "Or's Anatomy"** (Hebrew "האנטומיה של אור") — supersedes "no name in the UI" (2026-10-04) for the app name. Wants **a logo for the phone home screen**, a **Hebrew title font less like "David"** (Frank Ruhl's Hebrew), and the **phone fixed**: the page zoomed in and the nav buttons disappeared. She uses the app on her **phone** too, not only iPad/laptop.                                               |
 | 2026-10-08 | Priority 4 reviewed (the Atlas kidney): **merge to `main`**. The scrotum's boxy shape is fine as it is — **don't reshape it** (asked after seeing it on her phone).                                                                                                                                                                                                                                                            |
 | 2026-10-07 | **Replace the non-commercial kidney** with the Human Reference Atlas male kidney (CC BY 4.0), as **priority 4** (last) of `docs/HANDMADE_MODELS_PROMPT.md`, for the priority-2 session to do after priority 3. The inner ear stays non-commercial for now. Drag fix: **merge to `main`**.                                                                                                                                      |
@@ -810,7 +811,8 @@ verify` green (209), `e2e:smoke` green (40); review shots for every new
   label (pin + line + "אור") in cream on the teal plate, rendered by
   `scripts/brand/render-icons.ts` to `src/app/icon.png`, `apple-icon.png`,
   `favicon.ico` and `public/icons/` (192/512, also maskable). Hebrew serif
-  now **Noto Serif Hebrew** (Frank Ruhl Libre kept for Latin). Phone fixes:
+  "Noto Serif Hebrew" (Frank Ruhl kept for Latin) — never took effect, see
+  next entry. Phone fixes:
   form fields are 16px on touch screens and the viewport caps zoom at 1 (iOS
   zoomed into the 15px search box and stayed zoomed, pushing the top strip's
   buttons off screen), no double-tap zoom; phones had **no page links at all**
@@ -820,3 +822,8 @@ verify` green (209), `e2e:smoke` green (40); review shots for every new
   `verify` green (211), `e2e:smoke` green (42, incl. phone menu + 16px
   search); the first e2e run timed out once on the quiz-summary screenshot
   (60 s, software WebGL), the rerun passed. CI green.
+- **2026-10-08 · title font** — the Noto change never showed (Next's font
+  loader ships every subset, so Frank Ruhl still drew the Hebrew). The user
+  picked **Miriam Libre** from real-page previews; it now sets all names,
+  titles and the wordmark (`font-serif` renamed `font-title`), and the icon's
+  "אור". DECISIONS.md → "Title font".

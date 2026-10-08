@@ -33,11 +33,11 @@ export function StructureHeader({
           />
           {t.systems[structure.system]}, {t.regions[structure.region]}
         </p>
-        <h2 className="text-ink font-serif text-[26px] leading-[1.15] font-medium">
+        <h2 className="text-ink font-title text-[26px] leading-[1.15] font-medium">
           <TermText name={primary} />
         </h2>
         {secondary && (
-          <p className="text-graphite mt-1 font-serif text-[18px] leading-snug">
+          <p className="text-graphite font-title mt-1 text-[18px] leading-snug">
             <TermText name={secondary} />
           </p>
         )}

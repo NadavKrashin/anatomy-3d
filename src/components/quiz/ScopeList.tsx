@@ -43,7 +43,7 @@ function ScopeOption({
       />
       <span
         className={clsx(
-          "flex-1 font-serif text-[18px]",
+          "font-title flex-1 text-[18px]",
           selected ? "text-ink" : "text-graphite",
         )}
       >
@@ -76,7 +76,7 @@ export function ScopeList({ scopes, selectedId, onSelect }: ScopeListProps) {
 
   return (
     <fieldset className="flex flex-col gap-6">
-      <legend className="text-graphite mb-3 font-serif text-[19px]">
+      <legend className="text-graphite font-title mb-3 text-[19px]">
         {t.quiz.scope}
       </legend>
       {groups.map((group) => (

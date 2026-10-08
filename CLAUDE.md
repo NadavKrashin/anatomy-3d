@@ -66,7 +66,7 @@ streamed model files (CC BY-SA).
 - Light "plate" theme with the tokens in `src/app/globals.css` (`plate`,
   `sheet`, `ink`, `graphite`, `faint`, `rule`, `wash`, `scrub`, `correct`,
   `wrong`). Never hard-code other colours in components; never go dark.
-- `font-serif` (Frank Ruhl Libre) for structure names/titles; sans (IBM Plex
+- `font-title` (Miriam Libre) for structure names/titles; sans (IBM Plex
   Sans Hebrew) for UI. Sentence case. **No** all-caps/letter-spaced labels,
   "A · B" strings, "Name — fragment" labels, arrows on buttons, card grids,
   big-number stat tiles, gradients as decoration.

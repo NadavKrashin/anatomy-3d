@@ -22,7 +22,7 @@ Utilities: `sheet` (floating surface), `shadow-[var(--shadow-float)]`,
 
 ## Type
 
-- `font-serif` (Frank Ruhl Libre) for structure names, page titles, the
+- `font-title` (Miriam Libre) for structure names, page titles, the
   wordmark, list items that are anatomical names.
 - Default sans (IBM Plex Sans Hebrew) for UI and body.
 - Sizes in use: 13 / 14 / 15 / 17–20 / 22–28 / 40–48 px. Sentence case.

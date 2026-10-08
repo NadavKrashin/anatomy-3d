@@ -32,7 +32,7 @@ export function StructureRelations({
             <button
               type="button"
               onClick={() => useViewerStore.getState().select(row.id)}
-              className="hover:bg-wash flex min-h-10 w-full items-center px-2 py-1.5 text-start font-serif text-[16px] transition-colors"
+              className="hover:bg-wash font-title flex min-h-10 w-full items-center px-2 py-1.5 text-start text-[16px] transition-colors"
             >
               <StructureLabel structureId={row.id} />
             </button>

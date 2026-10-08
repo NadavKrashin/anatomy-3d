@@ -38,11 +38,11 @@ palette and the teal selection; always paired with a text label.
 
 Type:
 
-- **Frank Ruhl Libre** (serif, Latin) + **Noto Serif Hebrew** (serif,
-  Hebrew) — structure names, page titles, the wordmark: one `font-serif`
-  stack, Frank Ruhl loaded with the Latin subset only so Hebrew falls through
-  to Noto. Frank Ruhl's Hebrew read like "David" (user, 2026-10-08); Noto
-  Serif Hebrew is a contemporary serif that keeps the atlas-label feel.
+- **Miriam Libre** (Hebrew + Latin, `font-title`) — structure names, page
+  titles, the wordmark. The user's pick (2026-10-08) after Frank Ruhl
+  Libre's Hebrew read like "David"; a modern Miriam, calmer than the UI sans
+  at title sizes. One family for both scripts on purpose (DECISIONS.md →
+  "Title font").
 - **IBM Plex Sans Hebrew** (sans, Hebrew + Latin) — UI, body text, data.
   Clinical, technical, clearly different from the serif.
 - Scale: 13 / 15 / 17 / 21 / 28 / 40 px. Sentence case everywhere. No
@@ -79,7 +79,7 @@ Form fields are 16px on touch screens (iOS zooms into smaller ones).
 ## App icon
 
 The app's own leader label: a pin with a leader line and "אור" set on the
-line, cream (`sheet`) on the teal plate (`scrub`). Full-bleed square, mark
+line in Miriam Libre, cream (`sheet`) on the teal plate (`scrub`). Full-bleed square, mark
 inside the maskable safe zone, so iOS/Android round or crop it. Rendered by
 `scripts/brand/render-icons.ts` (needs network for the font) to
 `src/app/icon.png`, `src/app/apple-icon.png`, `public/icons/icon-{192,512}.png`;

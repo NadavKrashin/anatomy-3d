@@ -45,7 +45,7 @@ export function IdentifyOptions({
               <Kbd>{index + 1}</Kbd>
               <StructureLabel
                 structureId={id}
-                className="flex-1 font-serif text-[17px]"
+                className="font-title flex-1 text-[17px]"
               />
               {isAnswer && (
                 <Check className="text-correct size-4" aria-hidden />

@@ -34,7 +34,7 @@ export function QuizSummary({
         ) : (
           <>
             <div className="-mt-3 flex flex-col gap-1.5">
-              <h2 className="text-ink font-serif text-[28px] leading-tight font-medium">
+              <h2 className="text-ink font-title text-[28px] leading-tight font-medium">
                 {t.quiz.scoreLine(summary.correctFirstTry, summary.total)}
               </h2>
               {summary.correctAfterRetry > 0 && (
@@ -62,7 +62,7 @@ export function QuizSummary({
                     <li key={id}>
                       <Link
                         href={`/explore?structure=${id}`}
-                        className="hover:bg-wash block rounded-lg px-1 py-2.5 font-serif text-[16px]"
+                        className="hover:bg-wash font-title block rounded-lg px-1 py-2.5 text-[16px]"
                       >
                         <StructureLabel structureId={id} />
                       </Link>
